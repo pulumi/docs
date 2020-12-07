@@ -64,6 +64,18 @@ class MyStack : Stack
                     "123.1.0.0/24",
                 },
             },
+            Ipv6 = new Azure.Network.Inputs.ExpressRouteCircuitPeeringIpv6Args
+            {
+                PrimaryPeerAddressPrefix = "2002:db01::/126",
+                SecondaryPeerAddressPrefix = "2003:db01::/126",
+                MicrosoftPeering = new Azure.Network.Inputs.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringArgs
+                {
+                    AdvertisedPublicPrefixes = 
+                    {
+                        "2002:db01::/126",
+                    },
+                },
+            },
         });
     }
 
@@ -121,6 +133,15 @@ func main() {
 					pulumi.String("123.1.0.0/24"),
 				},
 			},
+			Ipv6: &network.ExpressRouteCircuitPeeringIpv6Args{
+				PrimaryPeerAddressPrefix:   pulumi.String("2002:db01::/126"),
+				SecondaryPeerAddressPrefix: pulumi.String("2003:db01::/126"),
+				MicrosoftPeering: &network.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringArgs{
+					AdvertisedPublicPrefixes: pulumi.StringArray{
+						pulumi.String("2002:db01::/126"),
+					},
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -162,6 +183,13 @@ example_express_route_circuit_peering = azure.network.ExpressRouteCircuitPeering
     vlan_id=300,
     microsoft_peering_config=azure.network.ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs(
         advertised_public_prefixes=["123.1.0.0/24"],
+    ),
+    ipv6=azure.network.ExpressRouteCircuitPeeringIpv6Args(
+        primary_peer_address_prefix="2002:db01::/126",
+        secondary_peer_address_prefix="2003:db01::/126",
+        microsoft_peering=azure.network.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringArgs(
+            advertised_public_prefixes=["2002:db01::/126"],
+        ),
     ))
 ```
 
@@ -200,6 +228,13 @@ const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitP
     microsoftPeeringConfig: {
         advertisedPublicPrefixes: ["123.1.0.0/24"],
     },
+    ipv6: {
+        primaryPeerAddressPrefix: "2002:db01::/126",
+        secondaryPeerAddressPrefix: "2003:db01::/126",
+        microsoftPeering: {
+            advertisedPublicPrefixes: ["2002:db01::/126"],
+        },
+    },
 });
 ```
 
@@ -217,7 +252,7 @@ const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitP
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringIpv6Args]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -419,7 +454,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -430,8 +465,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -442,7 +476,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -454,6 +488,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_csharp">
+<a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -475,7 +520,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -537,7 +582,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -548,8 +593,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -560,7 +604,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -572,6 +616,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_go">
+<a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -593,7 +648,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -655,7 +710,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -666,8 +721,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -678,7 +732,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -690,6 +744,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_nodejs">
+<a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -711,7 +776,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,7 +838,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -784,8 +849,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -796,7 +860,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -808,6 +872,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_python">
+<a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,7 +904,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1085,7 +1160,7 @@ Get an existing ExpressRouteCircuitPeering resource's state with the given name,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ExpressRouteCircuitPeering</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringIpv6Args]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ExpressRouteCircuitPeering</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1223,6 +1298,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6_csharp">
+<a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_microsoftpeeringconfig_csharp">
 <a href="#state_microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span> 
@@ -1240,7 +1326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1273,7 +1359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1284,8 +1370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1318,7 +1403,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1374,6 +1459,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6_go">
+<a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_microsoftpeeringconfig_go">
 <a href="#state_microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span> 
@@ -1391,7 +1487,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1424,7 +1520,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1435,8 +1531,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1469,7 +1564,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,6 +1620,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6_nodejs">
+<a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_microsoftpeeringconfig_nodejs">
 <a href="#state_microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span> 
@@ -1542,7 +1648,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1575,7 +1681,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1586,8 +1692,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1620,7 +1725,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1676,6 +1781,17 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6_python">
+<a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `ipv6` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_microsoft_peering_config_python">
 <a href="#state_microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span> 
@@ -1693,7 +1809,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private..
+    <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1726,7 +1842,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the primary link.
+    <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1737,8 +1853,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Express Route Circuit Peering. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1771,7 +1886,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A `/30` subnet for the secondary link.
+    <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1811,6 +1926,406 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 ## Supporting Types
 
 
+<h4 id="expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitPeeringIpv6">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ExpressRouteCircuitPeeringIpv6">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringIpv6Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringIpv6Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.ExpressRouteCircuitPeeringIpv6Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.ExpressRouteCircuitPeeringIpv6.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="microsoftpeering_csharp">
+<a href="#microsoftpeering_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `microsoft_peering` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primarypeeraddressprefix_csharp">
+<a href="#primarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the primary link.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secondarypeeraddressprefix_csharp">
+<a href="#secondarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the secondary link.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routefilterid_csharp">
+<a href="#routefilterid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="microsoftpeering_go">
+<a href="#microsoftpeering_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
+    </dt>
+    <dd>{{% md %}}A `microsoft_peering` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primarypeeraddressprefix_go">
+<a href="#primarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the primary link.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secondarypeeraddressprefix_go">
+<a href="#secondarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the secondary link.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routefilterid_go">
+<a href="#routefilterid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="microsoftpeering_nodejs">
+<a href="#microsoftpeering_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
+    </dt>
+    <dd>{{% md %}}A `microsoft_peering` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primarypeeraddressprefix_nodejs">
+<a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the primary link.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secondarypeeraddressprefix_nodejs">
+<a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the secondary link.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routefilterid_nodejs">
+<a href="#routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="microsoft_peering_python">
+<a href="#microsoft_peering_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `microsoft_peering` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="primary_peer_address_prefix_python">
+<a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the primary link.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secondary_peer_address_prefix_python">
+<a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A subnet for the secondary link.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="route_filter_id_python">
+<a href="#route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitPeeringIpv6MicrosoftPeering">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ExpressRouteCircuitPeeringIpv6MicrosoftPeering">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringIpv6MicrosoftPeeringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advertisedpublicprefixes_csharp">
+<a href="#advertisedpublicprefixes_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customerasn_csharp">
+<a href="#customerasn_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routingregistryname_csharp">
+<a href="#routingregistryname_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advertisedpublicprefixes_go">
+<a href="#advertisedpublicprefixes_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customerasn_go">
+<a href="#customerasn_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routingregistryname_go">
+<a href="#routingregistryname_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advertisedpublicprefixes_nodejs">
+<a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customerasn_nodejs">
+<a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routingregistryname_nodejs">
+<a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advertised_public_prefixes_python">
+<a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customer_asn_python">
+<a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routing_registry_name_python">
+<a href="#routing_registry_name_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>registry_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig">output</a> API doc for this type.
@@ -1837,7 +2352,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Advertised Public Prefixes
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1848,7 +2363,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The CustomerASN of the peering
+    <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1859,7 +2374,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The RoutingRegistryName of the configuration
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd>
 
 </dl>
@@ -1877,7 +2392,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Advertised Public Prefixes
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1888,7 +2403,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The CustomerASN of the peering
+    <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1899,7 +2414,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The RoutingRegistryName of the configuration
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd>
 
 </dl>
@@ -1917,7 +2432,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Advertised Public Prefixes
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1928,7 +2443,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The CustomerASN of the peering
+    <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1939,7 +2454,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The RoutingRegistryName of the configuration
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd>
 
 </dl>
@@ -1957,7 +2472,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Advertised Public Prefixes
+    <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1968,7 +2483,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The CustomerASN of the peering
+    <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1979,7 +2494,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The RoutingRegistryName of the configuration
+    <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd>
 
 </dl>

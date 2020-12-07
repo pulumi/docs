@@ -207,7 +207,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VpnServerConfiguration">VpnServerConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VpnServerConfiguration">VpnServerConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusArgs]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -469,6 +469,17 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="radius_csharp">
+<a href="#radius_csharp" style="color: inherit; text-decoration: inherit;">Radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="radiusserver_csharp">
 <a href="#radiusserver_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
 </span> 
@@ -476,7 +487,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -597,6 +608,17 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="radius_go">
+<a href="#radius_go" style="color: inherit; text-decoration: inherit;">Radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="radiusserver_go">
 <a href="#radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
 </span> 
@@ -604,7 +626,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -725,6 +747,17 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="radius_nodejs">
+<a href="#radius_nodejs" style="color: inherit; text-decoration: inherit;">radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="radiusserver_nodejs">
 <a href="#radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
 </span> 
@@ -732,7 +765,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -853,6 +886,17 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="radius_python">
+<a href="#radius_python" style="color: inherit; text-decoration: inherit;">radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="radius_server_python">
 <a href="#radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
 </span> 
@@ -860,7 +904,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -983,7 +1027,7 @@ Get an existing VpnServerConfiguration resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> VpnServerConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusArgs]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> VpnServerConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1165,6 +1209,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_radius_csharp">
+<a href="#state_radius_csharp" style="color: inherit; text-decoration: inherit;">Radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_radiusserver_csharp">
 <a href="#state_radiusserver_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
 </span> 
@@ -1172,7 +1227,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1293,6 +1348,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_radius_go">
+<a href="#state_radius_go" style="color: inherit; text-decoration: inherit;">Radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_radiusserver_go">
 <a href="#state_radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
 </span> 
@@ -1300,7 +1366,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1421,6 +1487,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_radius_nodejs">
+<a href="#state_radius_nodejs" style="color: inherit; text-decoration: inherit;">radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_radiusserver_nodejs">
 <a href="#state_radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
 </span> 
@@ -1428,7 +1505,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1549,6 +1626,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_radius_python">
+<a href="#state_radius_python" style="color: inherit; text-decoration: inherit;">radius</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `radius` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_radius_server_python">
 <a href="#state_radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
 </span> 
@@ -1556,7 +1644,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2461,6 +2549,318 @@ The following state arguments are supported:
 
 
 
+<h4 id="vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadius">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadius">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VpnServerConfigurationRadiusArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadius.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serverrootcertificates_csharp">
+<a href="#serverrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientrootcertificates_csharp">
+<a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servers_csharp">
+<a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serverrootcertificates_go">
+<a href="#serverrootcertificates_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientrootcertificates_go">
+<a href="#clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servers_go">
+<a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serverrootcertificates_nodejs">
+<a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientrootcertificates_nodejs">
+<a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servers_nodejs">
+<a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_root_certificates_python">
+<a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_root_certificates_python">
+<a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servers_python">
+<a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `server` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vpnserverconfigurationradiusclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusClientRootCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusClientRootCertificate">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusClientRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusClientRootCertificateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VpnServerConfigurationRadiusClientRootCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusClientRootCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Thumbprint of the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Thumbprint of the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Thumbprint of the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Thumbprint of the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServer">output</a> API doc for this type.
@@ -2808,6 +3208,140 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vpnserverconfigurationradiusserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServerRootCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServerRootCertificate">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerRootCertificateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VpnServerConfigurationRadiusServerRootCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServerRootCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertdata_csharp">
+<a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Public Key Data associated with the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertdata_go">
+<a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Public Key Data associated with the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertdata_nodejs">
+<a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Public Key Data associated with the Certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A name used to uniquely identify this certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
 
 </dl>

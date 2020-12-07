@@ -288,6 +288,17 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
+        <span id="dpdtimeoutseconds_csharp">
+<a href="#dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="egressbytestransferred_csharp">
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -361,6 +372,17 @@ for this connection.
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">List&lt;Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="localazureipaddressenabled_csharp">
+<a href="#localazureipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use private local Azure IP for the connection.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -541,6 +563,17 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
+        <span id="dpdtimeoutseconds_go">
+<a href="#dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="egressbytestransferred_go">
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -614,6 +647,17 @@ for this connection.
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">[]Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="localazureipaddressenabled_go">
+<a href="#localazureipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use private local Azure IP for the connection.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -794,6 +838,17 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
+        <span id="dpdtimeoutseconds_nodejs">
+<a href="#dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="egressbytestransferred_nodejs">
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -867,6 +922,17 @@ for this connection.
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="localazureipaddressenabled_nodejs">
+<a href="#localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Use private local Azure IP for the connection.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1047,6 +1113,17 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
+        <span id="dpd_timeout_seconds_python">
+<a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span> 
@@ -1120,6 +1197,17 @@ for this connection.
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">Sequence[Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="local_azure_ip_address_enabled_python">
+<a href="#local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use private local Azure IP for the connection.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

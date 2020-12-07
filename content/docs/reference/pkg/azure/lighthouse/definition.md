@@ -32,7 +32,7 @@ class MyStack : Stack
         }));
         var example = new Azure.Lighthouse.Definition("example", new Azure.Lighthouse.DefinitionArgs
         {
-            Description = "This is a lighthouse definition created via Terraform",
+            Description = "This is a lighthouse definition created IaC",
             ManagingTenantId = "00000000-0000-0000-0000-000000000000",
             Authorizations = 
             {
@@ -70,7 +70,7 @@ func main() {
 			return err
 		}
 		_, err = lighthouse.NewDefinition(ctx, "example", &lighthouse.DefinitionArgs{
-			Description:      pulumi.String("This is a lighthouse definition created via Terraform"),
+			Description:      pulumi.String("This is a lighthouse definition created IaC"),
 			ManagingTenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
 			Authorizations: lighthouse.DefinitionAuthorizationArray{
 				&lighthouse.DefinitionAuthorizationArgs{
@@ -96,7 +96,7 @@ import pulumi_azure as azure
 
 contributor = azure.authorization.get_role_definition(role_definition_id="b24988ac-6180-42a0-ab88-20f7382dd24c")
 example = azure.lighthouse.Definition("example",
-    description="This is a lighthouse definition created via Terraform",
+    description="This is a lighthouse definition created IaC",
     managing_tenant_id="00000000-0000-0000-0000-000000000000",
     authorizations=[azure.lighthouse.DefinitionAuthorizationArgs(
         principal_id="00000000-0000-0000-0000-000000000000",
@@ -116,7 +116,7 @@ const contributor = azure.authorization.getRoleDefinition({
     roleDefinitionId: "b24988ac-6180-42a0-ab88-20f7382dd24c",
 });
 const example = new azure.lighthouse.Definition("example", {
-    description: "This is a lighthouse definition created via Terraform",
+    description: "This is a lighthouse definition created IaC",
     managingTenantId: "00000000-0000-0000-0000-000000000000",
     authorizations: [{
         principalId: "00000000-0000-0000-0000-000000000000",

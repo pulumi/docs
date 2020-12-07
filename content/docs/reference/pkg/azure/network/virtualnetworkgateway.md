@@ -369,7 +369,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGateway">VirtualNetworkGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayVpnClientConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGateway">VirtualNetworkGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_route</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayCustomRouteArgs]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayVpnClientConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -622,6 +622,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customroute_csharp">
+<a href="#customroute_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultlocalnetworkgatewayid_csharp">
 <a href="#defaultlocalnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -678,7 +688,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressenabled_csharp">
+<a href="#privateipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,6 +827,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customroute_go">
+<a href="#customroute_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultlocalnetworkgatewayid_go">
 <a href="#defaultlocalnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -861,7 +893,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressenabled_go">
+<a href="#privateipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -988,6 +1032,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customroute_nodejs">
+<a href="#customroute_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultlocalnetworkgatewayid_nodejs">
 <a href="#defaultlocalnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -1044,7 +1098,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressenabled_nodejs">
+<a href="#privateipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1171,6 +1237,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="custom_route_python">
+<a href="#custom_route_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="default_local_network_gateway_id_python">
 <a href="#default_local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span> 
@@ -1227,7 +1303,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_enabled_python">
+<a href="#private_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1365,7 +1453,7 @@ Get an existing VirtualNetworkGateway resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayVpnClientConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_route</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayCustomRouteArgs]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayVpnClientConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1505,6 +1593,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customroute_csharp">
+<a href="#state_customroute_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultlocalnetworkgatewayid_csharp">
 <a href="#state_defaultlocalnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -1574,7 +1672,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privateipaddressenabled_csharp">
+<a href="#state_privateipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1688,6 +1798,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customroute_go">
+<a href="#state_customroute_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultlocalnetworkgatewayid_go">
 <a href="#state_defaultlocalnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -1757,7 +1877,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privateipaddressenabled_go">
+<a href="#state_privateipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1871,6 +2003,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customroute_nodejs">
+<a href="#state_customroute_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultlocalnetworkgatewayid_nodejs">
 <a href="#state_defaultlocalnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -1940,7 +2082,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privateipaddressenabled_nodejs">
+<a href="#state_privateipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2054,6 +2208,16 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_custom_route_python">
+<a href="#state_custom_route_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_default_local_network_gateway_id_python">
 <a href="#state_default_local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span> 
@@ -2123,7 +2287,19 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_private_ip_address_enabled_python">
+<a href="#state_private_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2413,6 +2589,96 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
 
 
 
+<h4 id="virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayCustomRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayCustomRoute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayCustomRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayCustomRouteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayCustomRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualNetworkGatewayCustomRoute.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_csharp">
+<a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_go">
+<a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_nodejs">
+<a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_prefixes_python">
+<a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayIpConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayIpConfiguration">output</a> API doc for this type.
@@ -2465,7 +2731,8 @@ network can contain at most a single Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2522,7 +2789,8 @@ network can contain at most a single Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2579,7 +2847,8 @@ network can contain at most a single Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2636,7 +2905,8 @@ network can contain at most a single Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3219,7 +3489,8 @@ Values `SSTP` and `IkeV2` are incompatible with the use of
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3247,7 +3518,8 @@ Values `SSTP` and `IkeV2` are incompatible with the use of
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3275,7 +3547,8 @@ Values `SSTP` and `IkeV2` are incompatible with the use of
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3303,7 +3576,8 @@ Values `SSTP` and `IkeV2` are incompatible with the use of
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3349,7 +3623,8 @@ Values `SSTP` and `IkeV2` are incompatible with the use of
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3360,7 +3635,10 @@ Values `SSTP` and `IkeV2` are incompatible with the use of
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
+    <dd>{{% md %}}The public certificate of the root certificate
+authority. The certificate must be provided in Base-64 encoded X.509 format
+(PEM). In particular, this argument *must not* include the
+`-----BEGIN CERTIFICATE-----` or `-----END CERTIFICATE-----` markers.
 revoked.
 {{% /md %}}</dd>
 
@@ -3379,7 +3657,8 @@ revoked.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3390,7 +3669,10 @@ revoked.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
+    <dd>{{% md %}}The public certificate of the root certificate
+authority. The certificate must be provided in Base-64 encoded X.509 format
+(PEM). In particular, this argument *must not* include the
+`-----BEGIN CERTIFICATE-----` or `-----END CERTIFICATE-----` markers.
 revoked.
 {{% /md %}}</dd>
 
@@ -3409,7 +3691,8 @@ revoked.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3420,7 +3703,10 @@ revoked.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
+    <dd>{{% md %}}The public certificate of the root certificate
+authority. The certificate must be provided in Base-64 encoded X.509 format
+(PEM). In particular, this argument *must not* include the
+`-----BEGIN CERTIFICATE-----` or `-----END CERTIFICATE-----` markers.
 revoked.
 {{% /md %}}</dd>
 
@@ -3439,7 +3725,8 @@ revoked.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
+    <dd>{{% md %}}A user-defined name of the IP configuration. Defaults to
+`vnetGatewayConfig`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3450,7 +3737,10 @@ revoked.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
+    <dd>{{% md %}}The public certificate of the root certificate
+authority. The certificate must be provided in Base-64 encoded X.509 format
+(PEM). In particular, this argument *must not* include the
+`-----BEGIN CERTIFICATE-----` or `-----END CERTIFICATE-----` markers.
 revoked.
 {{% /md %}}</dd>
 
