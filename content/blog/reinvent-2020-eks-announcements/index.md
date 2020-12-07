@@ -1,5 +1,5 @@
 ---
-title: "re:invent 2020 EKS Feature Releases"
+title: "re:Invent 2020 EKS Feature Releases"
 date: 2020-12-07
 meta_desc: "A recap of the re:invent 2020 EKS announcements and their impacts"
 meta_image: reinvent-2020.png
