@@ -322,6 +322,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="customdomainverificationid_csharp">
+<a href="#customdomainverificationid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain<wbr>Verification<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultsitehostname_csharp">
 <a href="#defaultsitehostname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Site<wbr>Hostname</a>
 </span> 
@@ -521,6 +532,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getappserviceconnectionstring">[]Get<wbr>App<wbr>Service<wbr>Connection<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="customdomainverificationid_go">
+<a href="#customdomainverificationid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain<wbr>Verification<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -728,6 +750,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="customdomainverificationid_nodejs">
+<a href="#customdomainverificationid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain<wbr>Verification<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultsitehostname_nodejs">
 <a href="#defaultsitehostname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Site<wbr>Hostname</a>
 </span> 
@@ -927,6 +960,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getappserviceconnectionstring">Sequence[Get<wbr>App<wbr>Service<wbr>Connection<wbr>String]</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="custom_domain_verification_id_python">
+<a href="#custom_domain_verification_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain_<wbr>verification_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
 {{% /md %}}</dd>
 
     <dt class="property-"

@@ -541,7 +541,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>
@@ -757,7 +758,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>
@@ -973,7 +975,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>
@@ -1189,7 +1192,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>
@@ -2051,7 +2055,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>
@@ -2355,7 +2360,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>
@@ -2659,7 +2665,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>
@@ -2963,7 +2970,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
+> **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
 {{% /md %}}</dd>
 
 </dl>

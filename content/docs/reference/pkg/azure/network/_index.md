@@ -96,6 +96,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="getvirtualhub" title="GetVirtualHub"><span class="symbol function"></span>GetVirtualHub</a></li>
     <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="symbol function"></span>GetVirtualNetwork</a></li>
     <li><a href="getvirtualnetworkgateway" title="GetVirtualNetworkGateway"><span class="symbol function"></span>GetVirtualNetworkGateway</a></li>
+    <li><a href="getvirtualwan" title="GetVirtualWan"><span class="symbol function"></span>GetVirtualWan</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -107,7 +108,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.32.0</dd>
+	<dd>3.33.0</dd>
 </dl>
 
 

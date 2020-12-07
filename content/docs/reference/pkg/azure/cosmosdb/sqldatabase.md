@@ -325,7 +325,8 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -346,8 +347,7 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -386,7 +386,8 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -407,8 +408,7 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -447,7 +447,8 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -468,8 +469,7 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -508,7 +508,8 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -529,8 +530,7 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -764,7 +764,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -796,8 +797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -825,7 +825,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -857,8 +858,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -886,7 +886,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -918,8 +919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -947,7 +947,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -979,8 +980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The throughput of SQL database (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

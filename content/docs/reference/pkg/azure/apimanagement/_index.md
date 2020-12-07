@@ -33,6 +33,7 @@ Explore the resources and functions of the apimanagement module in the Azure pac
     <li><a href="logger" title="Logger"><span class="symbol resource"></span>Logger</a></li>
     <li><a href="namedvalue" title="NamedValue"><span class="symbol resource"></span>NamedValue</a></li>
     <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="symbol resource"></span>OpenIdConnectProvider</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
     <li><a href="productapi" title="ProductApi"><span class="symbol resource"></span>ProductApi</a></li>
     <li><a href="productgroup" title="ProductGroup"><span class="symbol resource"></span>ProductGroup</a></li>
@@ -62,7 +63,7 @@ Explore the resources and functions of the apimanagement module in the Azure pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.32.0</dd>
+	<dd>3.33.0</dd>
 </dl>
 
 

@@ -775,6 +775,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="outboundpublicipaddresses_csharp">
+<a href="#outboundpublicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -791,6 +802,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="outboundpublicipaddresses_go">
+<a href="#outboundpublicipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -809,6 +831,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="outboundpublicipaddresses_nodejs">
+<a href="#outboundpublicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -825,6 +858,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="outbound_public_ip_addresses_python">
+<a href="#outbound_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>public_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -846,7 +890,7 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">outbound_public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1006,6 +1050,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_outboundpublicipaddresses_csharp">
+<a href="#state_outboundpublicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -1097,6 +1152,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_outboundpublicipaddresses_go">
+<a href="#state_outboundpublicipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1196,6 +1262,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_outboundpublicipaddresses_nodejs">
+<a href="#state_outboundpublicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -1287,6 +1364,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_outbound_public_ip_addresses_python">
+<a href="#state_outbound_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>public_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

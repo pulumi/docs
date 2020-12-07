@@ -311,6 +311,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="outboundpublicipaddresses_csharp">
+<a href="#outboundpublicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -379,6 +390,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name to identify on the Git repository.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="outboundpublicipaddresses_go">
+<a href="#outboundpublicipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -455,6 +477,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="outboundpublicipaddresses_nodejs">
+<a href="#outboundpublicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -523,6 +556,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name to identify on the Git repository.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="outbound_public_ip_addresses_python">
+<a href="#outbound_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>public_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd>
 
     <dt class="property-"

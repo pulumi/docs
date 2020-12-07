@@ -325,7 +325,8 @@ The GremlinDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -386,7 +387,8 @@ The GremlinDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -447,7 +449,8 @@ The GremlinDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -508,7 +511,8 @@ The GremlinDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -764,7 +768,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -825,7 +830,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -886,7 +892,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -947,7 +954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlindatabaseautoscalesettings">Gremlin<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

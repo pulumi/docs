@@ -288,6 +288,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="customroutes_csharp">
+<a href="#customroutes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultlocalnetworkgatewayid_csharp">
 <a href="#defaultlocalnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -365,6 +375,17 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="privateipaddressenabled_csharp">
+<a href="#privateipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -462,6 +483,16 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
+        <span id="customroutes_go">
+<a href="#customroutes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultlocalnetworkgatewayid_go">
 <a href="#defaultlocalnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -539,6 +570,17 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="privateipaddressenabled_go">
+<a href="#privateipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -636,6 +678,16 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
+        <span id="customroutes_nodejs">
+<a href="#customroutes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultlocalnetworkgatewayid_nodejs">
 <a href="#defaultlocalnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -713,6 +765,17 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="privateipaddressenabled_nodejs">
+<a href="#privateipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -810,6 +873,16 @@ for this Virtual Network Gateway.
 
     <dt class="property-"
             title="">
+        <span id="custom_routes_python">
+<a href="#custom_routes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="default_local_network_gateway_id_python">
 <a href="#default_local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span> 
@@ -887,6 +960,17 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="private_ip_address_enabled_python">
+<a href="#private_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1148,6 +1232,96 @@ through BGP peering.
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
 on the on-premises VPN devices.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getvirtualnetworkgatewaycustomroute">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayCustomRoute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetVirtualNetworkGatewayCustomRoute">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayCustomRoute.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="addressprefixes_csharp">
+<a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="addressprefixes_go">
+<a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="addressprefixes_nodejs">
+<a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="address_prefixes_python">
+<a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
 {{% /md %}}</dd>
 
 </dl>

@@ -436,7 +436,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -575,7 +575,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -714,7 +714,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -853,7 +853,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1548,7 +1548,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1757,7 +1757,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1966,7 +1966,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2175,7 +2175,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>

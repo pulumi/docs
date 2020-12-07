@@ -423,7 +423,8 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -539,7 +540,8 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -655,7 +657,8 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -771,7 +774,8 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1071,7 +1075,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1187,7 +1192,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1303,7 +1309,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1419,7 +1426,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -41,7 +41,7 @@ class MyStack : Stack
             Location = exampleResourceGroup.Location,
             ResourceGroupName = exampleResourceGroup.Name,
             PublisherName = "My Company",
-            PublisherEmail = "company@terraform.io",
+            PublisherEmail = "company@mycompany.io",
             SkuName = "Developer_1",
         });
         var exampleApi = new Azure.ApiManagement.Api("exampleApi", new Azure.ApiManagement.ApiArgs
@@ -159,7 +159,7 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			PublisherName:     pulumi.String("My Company"),
-			PublisherEmail:    pulumi.String("company@terraform.io"),
+			PublisherEmail:    pulumi.String("company@mycompany.io"),
 			SkuName:           pulumi.String("Developer_1"),
 		})
 		if err != nil {
@@ -258,7 +258,7 @@ example_service = azure.apimanagement.Service("exampleService",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     publisher_name="My Company",
-    publisher_email="company@terraform.io",
+    publisher_email="company@mycompany.io",
     sku_name="Developer_1")
 example_api = azure.apimanagement.Api("exampleApi",
     resource_group_name=example_resource_group.name,
@@ -338,7 +338,7 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
     publisherName: "My Company",
-    publisherEmail: "company@terraform.io",
+    publisherEmail: "company@mycompany.io",
     skuName: "Developer_1",
 });
 const exampleApi = new azure.apimanagement.Api("exampleApi", {
