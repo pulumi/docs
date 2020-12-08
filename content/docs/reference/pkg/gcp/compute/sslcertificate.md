@@ -23,6 +23,260 @@ To get more information about SslCertificate, see:
 > **Warning:** All arguments including `certificate` and `private_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Ssl Certificate Basic
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.SSLCertificate("default", new Gcp.Compute.SSLCertificateArgs
+        {
+            NamePrefix = "my-certificate-",
+            Description = "a description",
+            PrivateKey = File.ReadAllText("path/to/private.key"),
+            Certificate = File.ReadAllText("path/to/certificate.crt"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.SSLCertificate("default",
+    name_prefix="my-certificate-",
+    description="a description",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const _default = new gcp.compute.SSLCertificate("default", {
+    namePrefix: "my-certificate-",
+    description: "a description",
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+```
+
+{{% /example %}}
+
+### Ssl Certificate Target Https Proxies
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Using with Target HTTPS Proxies
+        //
+        // SSL certificates cannot be updated after creation. In order to apply
+        // the specified configuration, the provider will destroy the existing
+        // resource and create a replacement. Example:
+        var defaultSSLCertificate = new Gcp.Compute.SSLCertificate("defaultSSLCertificate", new Gcp.Compute.SSLCertificateArgs
+        {
+            NamePrefix = "my-certificate-",
+            PrivateKey = File.ReadAllText("path/to/private.key"),
+            Certificate = File.ReadAllText("path/to/certificate.crt"),
+        });
+        var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+        {
+            RequestPath = "/",
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+        });
+        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+        {
+            PortName = "http",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                defaultHttpHealthCheck.Id,
+            },
+        });
+        var defaultURLMap = new Gcp.Compute.URLMap("defaultURLMap", new Gcp.Compute.URLMapArgs
+        {
+            Description = "a description",
+            DefaultService = defaultBackendService.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.URLMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.URLMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = defaultBackendService.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.URLMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/*",
+                            },
+                            Service = defaultBackendService.Id,
+                        },
+                    },
+                },
+            },
+        });
+        var defaultTargetHttpsProxy = new Gcp.Compute.TargetHttpsProxy("defaultTargetHttpsProxy", new Gcp.Compute.TargetHttpsProxyArgs
+        {
+            UrlMap = defaultURLMap.Id,
+            SslCertificates = 
+            {
+                defaultSSLCertificate.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+# Using with Target HTTPS Proxies
+#
+# SSL certificates cannot be updated after creation. In order to apply
+# the specified configuration, the provider will destroy the existing
+# resource and create a replacement. Example:
+default_ssl_certificate = gcp.compute.SSLCertificate("defaultSSLCertificate",
+    name_prefix="my-certificate-",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_http_health_check.id])
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    description="a description",
+    default_service=default_backend_service.id,
+    host_rules=[gcp.compute.URLMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.URLMapPathMatcherArgs(
+        name="allpaths",
+        default_service=default_backend_service.id,
+        path_rules=[gcp.compute.URLMapPathMatcherPathRuleArgs(
+            paths=["/*"],
+            service=default_backend_service.id,
+        )],
+    )])
+default_target_https_proxy = gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy",
+    url_map=default_url_map.id,
+    ssl_certificates=[default_ssl_certificate.id])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+// Using with Target HTTPS Proxies
+//
+// SSL certificates cannot be updated after creation. In order to apply
+// the specified configuration, the provider will destroy the existing
+// resource and create a replacement. Example:
+const defaultSSLCertificate = new gcp.compute.SSLCertificate("defaultSSLCertificate", {
+    namePrefix: "my-certificate-",
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultHttpHealthCheck.id],
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    description: "a description",
+    defaultService: defaultBackendService.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.id,
+        pathRules: [{
+            paths: ["/*"],
+            service: defaultBackendService.id,
+        }],
+    }],
+});
+const defaultTargetHttpsProxy = new gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy", {
+    urlMap: defaultURLMap.id,
+    sslCertificates: [defaultSSLCertificate.id],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SSLCertificate Resource {#create}
@@ -1360,6 +1614,24 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+SslCertificate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default projects/{{project}}/global/sslCertificates/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{name}}
+```
 
 
 

@@ -14,6 +14,95 @@ Get the serial port output from a Compute Instance. For more information see
 the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serial = Output.Create(Gcp.Compute.GetInstanceSerialPort.InvokeAsync(new Gcp.Compute.GetInstanceSerialPortArgs
+        {
+            Instance = "my-instance",
+            Zone = "us-central1-a",
+            Port = 1,
+        }));
+        this.SerialOut = serial.Apply(serial => serial.Contents);
+    }
+
+    [Output("serialOut")]
+    public Output<string> SerialOut { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "us-central1-a"
+		serial, err := compute.GetInstanceSerialPort(ctx, &compute.GetInstanceSerialPortArgs{
+			Instance: "my-instance",
+			Zone:     &opt0,
+			Port:     1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("serialOut", serial.Contents)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+serial = gcp.compute.get_instance_serial_port(instance="my-instance",
+    zone="us-central1-a",
+    port=1)
+pulumi.export("serialOut", serial.contents)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serial = gcp.compute.getInstanceSerialPort({
+    instance: "my-instance",
+    zone: "us-central1-a",
+    port: 1,
+});
+export const serialOut = serial.then(serial => serial.contents);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetInstanceSerialPort {#using}
 

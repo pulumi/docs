@@ -18,6 +18,252 @@ To get more information about MetricDescriptor, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/custom-metrics/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Monitoring Metric Descriptor Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic = new Gcp.Monitoring.MetricDescriptor("basic", new Gcp.Monitoring.MetricDescriptorArgs
+        {
+            Description = "Daily sales records from all branch stores.",
+            DisplayName = "metric-descriptor",
+            Labels = 
+            {
+                new Gcp.Monitoring.Inputs.MetricDescriptorLabelArgs
+                {
+                    Description = "The ID of the store.",
+                    Key = "store_id",
+                    ValueType = "STRING",
+                },
+            },
+            LaunchStage = "BETA",
+            Metadata = new Gcp.Monitoring.Inputs.MetricDescriptorMetadataArgs
+            {
+                IngestDelay = "30s",
+                SamplePeriod = "60s",
+            },
+            MetricKind = "GAUGE",
+            Type = "custom.googleapis.com/stores/daily_sales",
+            Unit = "{USD}",
+            ValueType = "DOUBLE",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := monitoring.NewMetricDescriptor(ctx, "basic", &monitoring.MetricDescriptorArgs{
+			Description: pulumi.String("Daily sales records from all branch stores."),
+			DisplayName: pulumi.String("metric-descriptor"),
+			Labels: monitoring.MetricDescriptorLabelArray{
+				&monitoring.MetricDescriptorLabelArgs{
+					Description: pulumi.String("The ID of the store."),
+					Key:         pulumi.String("store_id"),
+					ValueType:   pulumi.String("STRING"),
+				},
+			},
+			LaunchStage: pulumi.String("BETA"),
+			Metadata: &monitoring.MetricDescriptorMetadataArgs{
+				IngestDelay:  pulumi.String("30s"),
+				SamplePeriod: pulumi.String("60s"),
+			},
+			MetricKind: pulumi.String("GAUGE"),
+			Type:       pulumi.String("custom.googleapis.com/stores/daily_sales"),
+			Unit:       pulumi.String("{USD}"),
+			ValueType:  pulumi.String("DOUBLE"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.monitoring.MetricDescriptor("basic",
+    description="Daily sales records from all branch stores.",
+    display_name="metric-descriptor",
+    labels=[gcp.monitoring.MetricDescriptorLabelArgs(
+        description="The ID of the store.",
+        key="store_id",
+        value_type="STRING",
+    )],
+    launch_stage="BETA",
+    metadata=gcp.monitoring.MetricDescriptorMetadataArgs(
+        ingest_delay="30s",
+        sample_period="60s",
+    ),
+    metric_kind="GAUGE",
+    type="custom.googleapis.com/stores/daily_sales",
+    unit="{USD}",
+    value_type="DOUBLE")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.monitoring.MetricDescriptor("basic", {
+    description: "Daily sales records from all branch stores.",
+    displayName: "metric-descriptor",
+    labels: [{
+        description: "The ID of the store.",
+        key: "store_id",
+        valueType: "STRING",
+    }],
+    launchStage: "BETA",
+    metadata: {
+        ingestDelay: "30s",
+        samplePeriod: "60s",
+    },
+    metricKind: "GAUGE",
+    type: "custom.googleapis.com/stores/daily_sales",
+    unit: "{USD}",
+    valueType: "DOUBLE",
+});
+```
+
+{{% /example %}}
+
+### Monitoring Metric Descriptor Alert
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var withAlert = new Gcp.Monitoring.MetricDescriptor("withAlert", new Gcp.Monitoring.MetricDescriptorArgs
+        {
+            Description = "Daily sales records from all branch stores.",
+            DisplayName = "metric-descriptor",
+            MetricKind = "GAUGE",
+            Type = "custom.googleapis.com/stores/daily_sales",
+            Unit = "{USD}",
+            ValueType = "DOUBLE",
+        });
+        var alertPolicy = new Gcp.Monitoring.AlertPolicy("alertPolicy", new Gcp.Monitoring.AlertPolicyArgs
+        {
+            Combiner = "OR",
+            Conditions = 
+            {
+                new Gcp.Monitoring.Inputs.AlertPolicyConditionArgs
+                {
+                    ConditionThreshold = new Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdArgs
+                    {
+                        Comparison = "COMPARISON_GT",
+                        Duration = "60s",
+                        Filter = withAlert.Type.Apply(type => $"metric.type=\"{type}\" AND resource.type=\"gce_instance\""),
+                    },
+                    DisplayName = "test condition",
+                },
+            },
+            DisplayName = "metric-descriptor",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+with_alert = gcp.monitoring.MetricDescriptor("withAlert",
+    description="Daily sales records from all branch stores.",
+    display_name="metric-descriptor",
+    metric_kind="GAUGE",
+    type="custom.googleapis.com/stores/daily_sales",
+    unit="{USD}",
+    value_type="DOUBLE")
+alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
+    combiner="OR",
+    conditions=[gcp.monitoring.AlertPolicyConditionArgs(
+        condition_threshold=gcp.monitoring.AlertPolicyConditionConditionThresholdArgs(
+            comparison="COMPARISON_GT",
+            duration="60s",
+            filter=with_alert.type.apply(lambda type: f"metric.type=\"{type}\" AND resource.type=\"gce_instance\""),
+        ),
+        display_name="test condition",
+    )],
+    display_name="metric-descriptor")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const withAlert = new gcp.monitoring.MetricDescriptor("with_alert", {
+    description: "Daily sales records from all branch stores.",
+    displayName: "metric-descriptor",
+    metricKind: "GAUGE",
+    type: "custom.googleapis.com/stores/daily_sales",
+    unit: "{USD}",
+    valueType: "DOUBLE",
+});
+const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
+    combiner: "OR",
+    conditions: [{
+        conditionThreshold: {
+            comparison: "COMPARISON_GT",
+            duration: "60s",
+            filter: pulumi.interpolate`metric.type="${withAlert.type}" AND resource.type="gce_instance"`,
+        },
+        displayName: "test condition",
+    }],
+    displayName: "metric-descriptor",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MetricDescriptor Resource {#create}
@@ -2057,6 +2303,16 @@ Possible values are `STRING`, `BOOL`, and `INT64`.
 
 
 
+
+
+## Import
+
+
+MetricDescriptor can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/metricDescriptor:MetricDescriptor default {{name}}
+```
 
 
 

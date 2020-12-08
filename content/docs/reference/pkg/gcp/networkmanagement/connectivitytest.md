@@ -20,6 +20,466 @@ To get more information about ConnectivityTest, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/network-intelligence-center/docs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Network Management Connectivity Test Instances
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Gcp.Compute.Network("vpc", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var debian9 = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var source = new Gcp.Compute.Instance("source", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = debian9.Apply(debian9 => debian9.Id),
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = vpc.Id,
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                },
+            },
+        });
+        var destination = new Gcp.Compute.Instance("destination", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = debian9.Apply(debian9 => debian9.Id),
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = vpc.Id,
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                },
+            },
+        });
+        var instance_test = new Gcp.NetworkManagement.ConnectivityTest("instance-test", new Gcp.NetworkManagement.ConnectivityTestArgs
+        {
+            Source = new Gcp.NetworkManagement.Inputs.ConnectivityTestSourceArgs
+            {
+                Instance = source.Id,
+            },
+            Destination = new Gcp.NetworkManagement.Inputs.ConnectivityTestDestinationArgs
+            {
+                Instance = destination.Id,
+            },
+            Protocol = "TCP",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := compute.NewNetwork(ctx, "vpc", nil)
+		if err != nil {
+			return err
+		}
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debian9, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		source, err := compute.NewInstance(ctx, "source", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String(debian9.Id),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: vpc.ID(),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		destination, err := compute.NewInstance(ctx, "destination", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String(debian9.Id),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: vpc.ID(),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networkmanagement.NewConnectivityTest(ctx, "instance_test", &networkmanagement.ConnectivityTestArgs{
+			Source: &networkmanagement.ConnectivityTestSourceArgs{
+				Instance: source.ID(),
+			},
+			Destination: &networkmanagement.ConnectivityTestDestinationArgs{
+				Instance: destination.ID(),
+			},
+			Protocol: pulumi.String("TCP"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vpc = gcp.compute.Network("vpc")
+debian9 = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+source = gcp.compute.Instance("source",
+    machine_type="e2-medium",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image=debian9.id,
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network=vpc.id,
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+    )])
+destination = gcp.compute.Instance("destination",
+    machine_type="e2-medium",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image=debian9.id,
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network=vpc.id,
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+    )])
+instance_test = gcp.networkmanagement.ConnectivityTest("instance-test",
+    source=gcp.networkmanagement.ConnectivityTestSourceArgs(
+        instance=source.id,
+    ),
+    destination=gcp.networkmanagement.ConnectivityTestDestinationArgs(
+        instance=destination.id,
+    ),
+    protocol="TCP")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vpc = new gcp.compute.Network("vpc", {});
+const debian9 = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const source = new gcp.compute.Instance("source", {
+    machineType: "e2-medium",
+    bootDisk: {
+        initializeParams: {
+            image: debian9.then(debian9 => debian9.id),
+        },
+    },
+    networkInterfaces: [{
+        network: vpc.id,
+        accessConfigs: [{}],
+    }],
+});
+const destination = new gcp.compute.Instance("destination", {
+    machineType: "e2-medium",
+    bootDisk: {
+        initializeParams: {
+            image: debian9.then(debian9 => debian9.id),
+        },
+    },
+    networkInterfaces: [{
+        network: vpc.id,
+        accessConfigs: [{}],
+    }],
+});
+const instance_test = new gcp.networkmanagement.ConnectivityTest("instance-test", {
+    source: {
+        instance: source.id,
+    },
+    destination: {
+        instance: destination.id,
+    },
+    protocol: "TCP",
+});
+```
+
+{{% /example %}}
+
+### Network Management Connectivity Test Addresses
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Gcp.Compute.Network("vpc", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var subnet = new Gcp.Compute.Subnetwork("subnet", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/16",
+            Region = "us-central1",
+            Network = vpc.Id,
+        });
+        var source_addr = new Gcp.Compute.Address("source-addr", new Gcp.Compute.AddressArgs
+        {
+            Subnetwork = subnet.Id,
+            AddressType = "INTERNAL",
+            Address = "10.0.42.42",
+            Region = "us-central1",
+        });
+        var dest_addr = new Gcp.Compute.Address("dest-addr", new Gcp.Compute.AddressArgs
+        {
+            Subnetwork = subnet.Id,
+            AddressType = "INTERNAL",
+            Address = "10.0.43.43",
+            Region = "us-central1",
+        });
+        var address_test = new Gcp.NetworkManagement.ConnectivityTest("address-test", new Gcp.NetworkManagement.ConnectivityTestArgs
+        {
+            Source = new Gcp.NetworkManagement.Inputs.ConnectivityTestSourceArgs
+            {
+                IpAddress = source_addr.IPAddress,
+                ProjectId = source_addr.Project,
+                Network = vpc.Id,
+                NetworkType = "GCP_NETWORK",
+            },
+            Destination = new Gcp.NetworkManagement.Inputs.ConnectivityTestDestinationArgs
+            {
+                IpAddress = dest_addr.IPAddress,
+                ProjectId = dest_addr.Project,
+                Network = vpc.Id,
+            },
+            Protocol = "UDP",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := compute.NewNetwork(ctx, "vpc", nil)
+		if err != nil {
+			return err
+		}
+		subnet, err := compute.NewSubnetwork(ctx, "subnet", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewAddress(ctx, "source_addr", &compute.AddressArgs{
+			Subnetwork:  subnet.ID(),
+			AddressType: pulumi.String("INTERNAL"),
+			Address:     pulumi.String("10.0.42.42"),
+			Region:      pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewAddress(ctx, "dest_addr", &compute.AddressArgs{
+			Subnetwork:  subnet.ID(),
+			AddressType: pulumi.String("INTERNAL"),
+			Address:     pulumi.String("10.0.43.43"),
+			Region:      pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networkmanagement.NewConnectivityTest(ctx, "address_test", &networkmanagement.ConnectivityTestArgs{
+			Source: &networkmanagement.ConnectivityTestSourceArgs{
+				IpAddress:   source_addr.Address,
+				ProjectId:   source_addr.Project,
+				Network:     vpc.ID(),
+				NetworkType: pulumi.String("GCP_NETWORK"),
+			},
+			Destination: &networkmanagement.ConnectivityTestDestinationArgs{
+				IpAddress: dest_addr.Address,
+				ProjectId: dest_addr.Project,
+				Network:   vpc.ID(),
+			},
+			Protocol: pulumi.String("UDP"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vpc = gcp.compute.Network("vpc")
+subnet = gcp.compute.Subnetwork("subnet",
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1",
+    network=vpc.id)
+source_addr = gcp.compute.Address("source-addr",
+    subnetwork=subnet.id,
+    address_type="INTERNAL",
+    address="10.0.42.42",
+    region="us-central1")
+dest_addr = gcp.compute.Address("dest-addr",
+    subnetwork=subnet.id,
+    address_type="INTERNAL",
+    address="10.0.43.43",
+    region="us-central1")
+address_test = gcp.networkmanagement.ConnectivityTest("address-test",
+    source=gcp.networkmanagement.ConnectivityTestSourceArgs(
+        ip_address=source_addr.address,
+        project_id=source_addr.project,
+        network=vpc.id,
+        network_type="GCP_NETWORK",
+    ),
+    destination=gcp.networkmanagement.ConnectivityTestDestinationArgs(
+        ip_address=dest_addr.address,
+        project_id=dest_addr.project,
+        network=vpc.id,
+    ),
+    protocol="UDP")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vpc = new gcp.compute.Network("vpc", {});
+const subnet = new gcp.compute.Subnetwork("subnet", {
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+    network: vpc.id,
+});
+const source_addr = new gcp.compute.Address("source-addr", {
+    subnetwork: subnet.id,
+    addressType: "INTERNAL",
+    address: "10.0.42.42",
+    region: "us-central1",
+});
+const dest_addr = new gcp.compute.Address("dest-addr", {
+    subnetwork: subnet.id,
+    addressType: "INTERNAL",
+    address: "10.0.43.43",
+    region: "us-central1",
+});
+const address_test = new gcp.networkmanagement.ConnectivityTest("address-test", {
+    source: {
+        ipAddress: source_addr.address,
+        projectId: source_addr.project,
+        network: vpc.id,
+        networkType: "GCP_NETWORK",
+    },
+    destination: {
+        ipAddress: dest_addr.address,
+        projectId: dest_addr.project,
+        network: vpc.id,
+    },
+    protocol: "UDP",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConnectivityTest Resource {#create}
@@ -2127,6 +2587,24 @@ project.
 
 
 
+
+
+## Import
+
+
+ConnectivityTest can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:networkmanagement/connectivityTest:ConnectivityTest default projects/{{project}}/locations/global/connectivityTests/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:networkmanagement/connectivityTest:ConnectivityTest default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:networkmanagement/connectivityTest:ConnectivityTest default {{name}}
+```
 
 
 

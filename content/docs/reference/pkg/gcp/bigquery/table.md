@@ -14,6 +14,260 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 [the official documentation](https://cloud.google.com/bigquery/docs/) and
 [API](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultDataset = new Gcp.BigQuery.Dataset("defaultDataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "foo",
+            FriendlyName = "test",
+            Description = "This is a test description",
+            Location = "EU",
+            DefaultTableExpirationMs = 3600000,
+            Labels = 
+            {
+                { "env", "default" },
+            },
+        });
+        var defaultTable = new Gcp.BigQuery.Table("defaultTable", new Gcp.BigQuery.TableArgs
+        {
+            DatasetId = defaultDataset.DatasetId,
+            TableId = "bar",
+            TimePartitioning = new Gcp.BigQuery.Inputs.TableTimePartitioningArgs
+            {
+                Type = "DAY",
+            },
+            Labels = 
+            {
+                { "env", "default" },
+            },
+            Schema = @"[
+  {
+    ""name"": ""permalink"",
+    ""type"": ""STRING"",
+    ""mode"": ""NULLABLE"",
+    ""description"": ""The Permalink""
+  },
+  {
+    ""name"": ""state"",
+    ""type"": ""STRING"",
+    ""mode"": ""NULLABLE"",
+    ""description"": ""State where the head office is located""
+  }
+]
+",
+        });
+        var sheet = new Gcp.BigQuery.Table("sheet", new Gcp.BigQuery.TableArgs
+        {
+            DatasetId = defaultDataset.DatasetId,
+            TableId = "sheet",
+            ExternalDataConfiguration = new Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs
+            {
+                Autodetect = true,
+                SourceFormat = "GOOGLE_SHEETS",
+                GoogleSheetsOptions = new Gcp.BigQuery.Inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs
+                {
+                    SkipLeadingRows = 1,
+                },
+                SourceUris = 
+                {
+                    "https://docs.google.com/spreadsheets/d/123456789012345",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultDataset, err := bigquery.NewDataset(ctx, "defaultDataset", &bigquery.DatasetArgs{
+			DatasetId:                pulumi.String("foo"),
+			FriendlyName:             pulumi.String("test"),
+			Description:              pulumi.String("This is a test description"),
+			Location:                 pulumi.String("EU"),
+			DefaultTableExpirationMs: pulumi.Int(3600000),
+			Labels: pulumi.StringMap{
+				"env": pulumi.String("default"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewTable(ctx, "defaultTable", &bigquery.TableArgs{
+			DatasetId: defaultDataset.DatasetId,
+			TableId:   pulumi.String("bar"),
+			TimePartitioning: &bigquery.TableTimePartitioningArgs{
+				Type: pulumi.String("DAY"),
+			},
+			Labels: pulumi.StringMap{
+				"env": pulumi.String("default"),
+			},
+			Schema: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "[\n", "  {\n", "    \"name\": \"permalink\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\",\n", "    \"description\": \"The Permalink\"\n", "  },\n", "  {\n", "    \"name\": \"state\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\",\n", "    \"description\": \"State where the head office is located\"\n", "  }\n", "]\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewTable(ctx, "sheet", &bigquery.TableArgs{
+			DatasetId: defaultDataset.DatasetId,
+			TableId:   pulumi.String("sheet"),
+			ExternalDataConfiguration: &bigquery.TableExternalDataConfigurationArgs{
+				Autodetect:   pulumi.Bool(true),
+				SourceFormat: pulumi.String("GOOGLE_SHEETS"),
+				GoogleSheetsOptions: &bigquery.TableExternalDataConfigurationGoogleSheetsOptionsArgs{
+					SkipLeadingRows: pulumi.Int(1),
+				},
+				SourceUris: pulumi.StringArray{
+					pulumi.String("https://docs.google.com/spreadsheets/d/123456789012345"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_dataset = gcp.bigquery.Dataset("defaultDataset",
+    dataset_id="foo",
+    friendly_name="test",
+    description="This is a test description",
+    location="EU",
+    default_table_expiration_ms=3600000,
+    labels={
+        "env": "default",
+    })
+default_table = gcp.bigquery.Table("defaultTable",
+    dataset_id=default_dataset.dataset_id,
+    table_id="bar",
+    time_partitioning=gcp.bigquery.TableTimePartitioningArgs(
+        type="DAY",
+    ),
+    labels={
+        "env": "default",
+    },
+    schema="""[
+  {
+    "name": "permalink",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Permalink"
+  },
+  {
+    "name": "state",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "State where the head office is located"
+  }
+]
+""")
+sheet = gcp.bigquery.Table("sheet",
+    dataset_id=default_dataset.dataset_id,
+    table_id="sheet",
+    external_data_configuration=gcp.bigquery.TableExternalDataConfigurationArgs(
+        autodetect=True,
+        source_format="GOOGLE_SHEETS",
+        google_sheets_options=gcp.bigquery.TableExternalDataConfigurationGoogleSheetsOptionsArgs(
+            skip_leading_rows=1,
+        ),
+        source_uris=["https://docs.google.com/spreadsheets/d/123456789012345"],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultDataset = new gcp.bigquery.Dataset("defaultDataset", {
+    datasetId: "foo",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "EU",
+    defaultTableExpirationMs: 3600000,
+    labels: {
+        env: "default",
+    },
+});
+const defaultTable = new gcp.bigquery.Table("defaultTable", {
+    datasetId: defaultDataset.datasetId,
+    tableId: "bar",
+    timePartitioning: {
+        type: "DAY",
+    },
+    labels: {
+        env: "default",
+    },
+    schema: `[
+  {
+    "name": "permalink",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Permalink"
+  },
+  {
+    "name": "state",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "State where the head office is located"
+  }
+]
+`,
+});
+const sheet = new gcp.bigquery.Table("sheet", {
+    datasetId: defaultDataset.datasetId,
+    tableId: "sheet",
+    externalDataConfiguration: {
+        autodetect: true,
+        sourceFormat: "GOOGLE_SHEETS",
+        googleSheetsOptions: {
+            skipLeadingRows: 1,
+        },
+        sourceUris: ["https://docs.google.com/spreadsheets/d/123456789012345"],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Table Resource {#create}
@@ -2948,7 +3202,7 @@ and format of the table.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
-"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
+"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC"
 and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
@@ -3094,7 +3348,7 @@ and format of the table.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
-"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
+"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC"
 and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
@@ -3240,7 +3494,7 @@ and format of the table.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
-"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
+"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC"
 and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
@@ -3386,7 +3640,7 @@ and format of the table.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
-"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
+"CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC"
 and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
@@ -5093,6 +5347,16 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 
 
+
+
+## Import
+
+
+BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id`, e.g.
+
+```sh
+ $ pulumi import gcp:bigquery/table:Table default gcp-project/foo/bar
+```
 
 
 

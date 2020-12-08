@@ -20,6 +20,282 @@ To get more information about ServicePerimeters, see:
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Access Context Manager Service Perimeters Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+        var service_perimeter = new Gcp.AccessContextManager.ServicePerimeters("service-perimeter", new Gcp.AccessContextManager.ServicePerimetersArgs
+        {
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            ServicePerimeters = 
+            {
+                new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterArgs
+                {
+                    Name = access_policy.Name.Apply(name => $"accessPolicies/{name}/servicePerimeters/"),
+                    Status = new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterStatusArgs
+                    {
+                        RestrictedServices = 
+                        {
+                            "storage.googleapis.com",
+                        },
+                    },
+                    Title = "",
+                },
+                new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterArgs
+                {
+                    Name = access_policy.Name.Apply(name => $"accessPolicies/{name}/servicePerimeters/"),
+                    Status = new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterStatusArgs
+                    {
+                        RestrictedServices = 
+                        {
+                            "bigtable.googleapis.com",
+                        },
+                    },
+                    Title = "",
+                },
+            },
+        });
+        var access_level = new Gcp.AccessContextManager.AccessLevel("access-level", new Gcp.AccessContextManager.AccessLevelArgs
+        {
+            Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
+            {
+                Conditions = 
+                {
+                    new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
+                    {
+                        DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
+                        {
+                            OsConstraints = 
+                            {
+                                new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
+                                {
+                                    OsType = "DESKTOP_CHROME_OS",
+                                },
+                            },
+                            RequireScreenLock = false,
+                        },
+                        Regions = 
+                        {
+                            "CH",
+                            "IT",
+                            "US",
+                        },
+                    },
+                },
+            },
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            Title = "chromeos_no_lock",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/accesscontextmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access_policy", &accesscontextmanager.AccessPolicyArgs{
+			Parent: pulumi.String("organizations/123456789"),
+			Title:  pulumi.String("my policy"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewServicePerimeters(ctx, "service_perimeter", &accesscontextmanager.ServicePerimetersArgs{
+			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+			}).(pulumi.StringOutput),
+			ServicePerimeters: accesscontextmanager.ServicePerimetersServicePerimeterArray{
+				&accesscontextmanager.ServicePerimetersServicePerimeterArgs{
+					Name: access_policy.Name.ApplyT(func(name string) (string, error) {
+						return fmt.Sprintf("%v%v%v", "accessPolicies/", name, "/servicePerimeters/"), nil
+					}).(pulumi.StringOutput),
+					Status: &accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs{
+						RestrictedServices: pulumi.StringArray{
+							pulumi.String("storage.googleapis.com"),
+						},
+					},
+					Title: pulumi.String(""),
+				},
+				&accesscontextmanager.ServicePerimetersServicePerimeterArgs{
+					Name: access_policy.Name.ApplyT(func(name string) (string, error) {
+						return fmt.Sprintf("%v%v%v", "accessPolicies/", name, "/servicePerimeters/"), nil
+					}).(pulumi.StringOutput),
+					Status: &accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs{
+						RestrictedServices: pulumi.StringArray{
+							pulumi.String("bigtable.googleapis.com"),
+						},
+					},
+					Title: pulumi.String(""),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewAccessLevel(ctx, "access_level", &accesscontextmanager.AccessLevelArgs{
+			Basic: &accesscontextmanager.AccessLevelBasicArgs{
+				Conditions: accesscontextmanager.AccessLevelBasicConditionArray{
+					&accesscontextmanager.AccessLevelBasicConditionArgs{
+						DevicePolicy: &accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs{
+							OsConstraints: accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArray{
+								&accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs{
+									OsType: pulumi.String("DESKTOP_CHROME_OS"),
+								},
+							},
+							RequireScreenLock: pulumi.Bool(false),
+						},
+						Regions: pulumi.StringArray{
+							pulumi.String("CH"),
+							pulumi.String("IT"),
+							pulumi.String("US"),
+						},
+					},
+				},
+			},
+			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+			}).(pulumi.StringOutput),
+			Title: pulumi.String("chromeos_no_lock"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+service_perimeter = gcp.accesscontextmanager.ServicePerimeters("service-perimeter",
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    service_perimeters=[
+        gcp.accesscontextmanager.ServicePerimetersServicePerimeterArgs(
+            name=access_policy.name.apply(lambda name: f"accessPolicies/{name}/servicePerimeters/"),
+            status=gcp.accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs(
+                restricted_services=["storage.googleapis.com"],
+            ),
+            title="",
+        ),
+        gcp.accesscontextmanager.ServicePerimetersServicePerimeterArgs(
+            name=access_policy.name.apply(lambda name: f"accessPolicies/{name}/servicePerimeters/"),
+            status=gcp.accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs(
+                restricted_services=["bigtable.googleapis.com"],
+            ),
+            title="",
+        ),
+    ])
+access_level = gcp.accesscontextmanager.AccessLevel("access-level",
+    basic=gcp.accesscontextmanager.AccessLevelBasicArgs(
+        conditions=[gcp.accesscontextmanager.AccessLevelBasicConditionArgs(
+            device_policy={
+                "osConstraints": [{
+                    "osType": "DESKTOP_CHROME_OS",
+                }],
+                "requireScreenLock": False,
+            },
+            regions=[
+                "CH",
+                "IT",
+                "US",
+            ],
+        )],
+    ),
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    title="chromeos_no_lock")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+const service_perimeter = new gcp.accesscontextmanager.ServicePerimeters("service-perimeter", {
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    servicePerimeters: [
+        {
+            name: pulumi.interpolate`accessPolicies/${access_policy.name}/servicePerimeters/`,
+            status: {
+                restrictedServices: ["storage.googleapis.com"],
+            },
+            title: "",
+        },
+        {
+            name: pulumi.interpolate`accessPolicies/${access_policy.name}/servicePerimeters/`,
+            status: {
+                restrictedServices: ["bigtable.googleapis.com"],
+            },
+            title: "",
+        },
+    ],
+});
+const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
+    basic: {
+        conditions: [{
+            devicePolicy: {
+                osConstraints: [{
+                    osType: "DESKTOP_CHROME_OS",
+                }],
+                requireScreenLock: false,
+            },
+            regions: [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    title: "chromeos_no_lock",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServicePerimeters Resource {#create}
@@ -2105,6 +2381,20 @@ list of APIs specified in 'allowedServices'.
 
 
 
+
+
+## Import
+
+
+ServicePerimeters can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/servicePerimeters:ServicePerimeters default {{parent}}/servicePerimeters
+```
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/servicePerimeters:ServicePerimeters default {{parent}}
+```
 
 
 

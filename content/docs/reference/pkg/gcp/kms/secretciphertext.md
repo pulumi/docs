@@ -26,6 +26,197 @@ To get more information about SecretCiphertext, see:
 > **Warning:** All arguments including `plaintext` and `additional_authenticated_data` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Kms Secret Ciphertext Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var cryptokey = new Gcp.Kms.CryptoKey("cryptokey", new Gcp.Kms.CryptoKeyArgs
+        {
+            KeyRing = keyring.Id,
+            RotationPeriod = "100000s",
+        });
+        var myPassword = new Gcp.Kms.SecretCiphertext("myPassword", new Gcp.Kms.SecretCiphertextArgs
+        {
+            CryptoKey = cryptokey.Id,
+            Plaintext = "my-secret-password",
+        });
+        var instance = new Gcp.Compute.Instance("instance", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            Zone = "us-central1-a",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = "debian-cloud/debian-9",
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = "default",
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                },
+            },
+            Metadata = 
+            {
+                { "password", myPassword.Ciphertext },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		cryptokey, err := kms.NewCryptoKey(ctx, "cryptokey", &kms.CryptoKeyArgs{
+			KeyRing:        keyring.ID(),
+			RotationPeriod: pulumi.String("100000s"),
+		})
+		if err != nil {
+			return err
+		}
+		myPassword, err := kms.NewSecretCiphertext(ctx, "myPassword", &kms.SecretCiphertextArgs{
+			CryptoKey: cryptokey.ID(),
+			Plaintext: pulumi.String("my-secret-password"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "instance", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			Zone:        pulumi.String("us-central1-a"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String("debian-cloud/debian-9"),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+				},
+			},
+			Metadata: pulumi.StringMap{
+				"password": myPassword.Ciphertext,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+cryptokey = gcp.kms.CryptoKey("cryptokey",
+    key_ring=keyring.id,
+    rotation_period="100000s")
+my_password = gcp.kms.SecretCiphertext("myPassword",
+    crypto_key=cryptokey.id,
+    plaintext="my-secret-password")
+instance = gcp.compute.Instance("instance",
+    machine_type="e2-medium",
+    zone="us-central1-a",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image="debian-cloud/debian-9",
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network="default",
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+    )],
+    metadata={
+        "password": my_password.ciphertext,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const cryptokey = new gcp.kms.CryptoKey("cryptokey", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+const myPassword = new gcp.kms.SecretCiphertext("myPassword", {
+    cryptoKey: cryptokey.id,
+    plaintext: "my-secret-password",
+});
+const instance = new gcp.compute.Instance("instance", {
+    machineType: "e2-medium",
+    zone: "us-central1-a",
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    networkInterfaces: [{
+        network: "default",
+        accessConfigs: [{}],
+    }],
+    metadata: {
+        password: myPassword.ciphertext,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecretCiphertext Resource {#create}
@@ -851,6 +1042,12 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
 
 
 
+
+
+## Import
+
+
+This resource does not support import.
 
 
 

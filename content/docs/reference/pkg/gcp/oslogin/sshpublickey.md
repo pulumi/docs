@@ -14,10 +14,72 @@ The SSH public key information associated with a Google account.
 
 To get more information about SSHPublicKey, see:
 
-* [API documentation](https://cloud.google.com/compute/docs/oslogin/rest)
+* [API documentation](https://cloud.google.com/compute/docs/oslogin/rest/v1/users.sshPublicKeys)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/oslogin)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Os Login Ssh Key Basic
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var me = Output.Create(Gcp.Organizations.GetClientOpenIdUserInfo.InvokeAsync());
+        var cache = new Gcp.OsLogin.SshPublicKey("cache", new Gcp.OsLogin.SshPublicKeyArgs
+        {
+            User = me.Apply(me => me.Email),
+            Key = File.ReadAllText("path/to/id_rsa.pub"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+me = gcp.organizations.get_client_open_id_user_info()
+cache = gcp.oslogin.SshPublicKey("cache",
+    user=me.email,
+    key=(lambda path: open(path).read())("path/to/id_rsa.pub"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const me = gcp.organizations.getClientOpenIdUserInfo({});
+const cache = new gcp.oslogin.SshPublicKey("cache", {
+    user: me.then(me => me.email),
+    key: fs.readFileSync("path/to/id_rsa.pub"),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SshPublicKey Resource {#create}
@@ -907,6 +969,20 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+SSHPublicKey can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:oslogin/sshPublicKey:SshPublicKey default users/{{user}}/sshPublicKeys/{{fingerprint}}
+```
+
+```sh
+ $ pulumi import gcp:oslogin/sshPublicKey:SshPublicKey default {{user}}/{{fingerprint}}
+```
 
 
 

@@ -12,6 +12,111 @@ meta_desc: "Explore the IamAuditConfig resource of the organizations module, inc
 
 Allows management of audit logging config for a given service for a Google Cloud Platform Organization.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Gcp.Organizations.IamAuditConfig("config", new Gcp.Organizations.IamAuditConfigArgs
+        {
+            AuditLogConfigs = 
+            {
+                new Gcp.Organizations.Inputs.IamAuditConfigAuditLogConfigArgs
+                {
+                    ExemptedMembers = 
+                    {
+                        "user:joebloggs@hashicorp.com",
+                    },
+                    LogType = "DATA_READ",
+                },
+            },
+            OrgId = "your-organization-id",
+            Service = "allServices",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := organizations.NewIamAuditConfig(ctx, "config", &organizations.IamAuditConfigArgs{
+			AuditLogConfigs: organizations.IamAuditConfigAuditLogConfigArray{
+				&organizations.IamAuditConfigAuditLogConfigArgs{
+					ExemptedMembers: pulumi.StringArray{
+						pulumi.String("user:joebloggs@hashicorp.com"),
+					},
+					LogType: pulumi.String("DATA_READ"),
+				},
+			},
+			OrgId:   pulumi.String("your-organization-id"),
+			Service: pulumi.String("allServices"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+config = gcp.organizations.IamAuditConfig("config",
+    audit_log_configs=[gcp.organizations.IamAuditConfigAuditLogConfigArgs(
+        exempted_members=["user:joebloggs@hashicorp.com"],
+        log_type="DATA_READ",
+    )],
+    org_id="your-organization-id",
+    service="allServices")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const config = new gcp.organizations.IamAuditConfig("config", {
+    auditLogConfigs: [{
+        exemptedMembers: ["user:joebloggs@hashicorp.com"],
+        logType: "DATA_READ",
+    }],
+    orgId: "your-organization-id",
+    service: "allServices",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IamAuditConfig Resource {#create}
@@ -973,6 +1078,16 @@ Each entry can have one of the following values:
 
 
 
+
+
+## Import
+
+
+IAM audit config imports use the identifier of the resource in question and the service, e.g.
+
+```sh
+ $ pulumi import gcp:organizations/iamAuditConfig:IamAuditConfig config "your-organization-id foo.googleapis.com"
+```
 
 
 

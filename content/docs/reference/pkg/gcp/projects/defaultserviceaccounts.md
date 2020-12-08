@@ -17,6 +17,84 @@ this is not recommended for production environments as per [Google's documentati
 See the [Organization documentation](https://cloud.google.com/resource-manager/docs/quickstarts) for more details.
 > This resource works on a best-effort basis, as no API formally describes the default service accounts. If the default service accounts change their name or additional service accounts are added, this resource will need to be updated.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Projects.DefaultServiceAccounts("myProject", new Gcp.Projects.DefaultServiceAccountsArgs
+        {
+            Action = "DELETE",
+            Project = "my-project-id",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewDefaultServiceAccounts(ctx, "myProject", &projects.DefaultServiceAccountsArgs{
+			Action:  pulumi.String("DELETE"),
+			Project: pulumi.String("my-project-id"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.projects.DefaultServiceAccounts("myProject",
+    action="DELETE",
+    project="my-project-id")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
+    action: "DELETE",
+    project: "my-project-id",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DefaultServiceAccounts Resource {#create}
@@ -818,6 +896,12 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+This resource does not support import
 
 
 

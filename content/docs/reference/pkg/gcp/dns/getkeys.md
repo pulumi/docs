@@ -15,6 +15,114 @@ Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more informati
 and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Gcp.Dns.ManagedZone("foo", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "foo.bar.",
+            DnssecConfig = new Gcp.Dns.Inputs.ManagedZoneDnssecConfigArgs
+            {
+                State = "on",
+                NonExistence = "nsec3",
+            },
+        });
+        var fooDnsKeys = foo.Id.Apply(id => Gcp.Dns.GetKeys.InvokeAsync(new Gcp.Dns.GetKeysArgs
+        {
+            ManagedZone = id,
+        }));
+        this.FooDnsDsRecord = fooDnsKeys.Apply(fooDnsKeys => fooDnsKeys.KeySigningKeys[0].DsRecord);
+    }
+
+    [Output("fooDnsDsRecord")]
+    public Output<string> FooDnsDsRecord { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := dns.NewManagedZone(ctx, "foo", &dns.ManagedZoneArgs{
+			DnsName: pulumi.String("foo.bar."),
+			DnssecConfig: &dns.ManagedZoneDnssecConfigArgs{
+				State:        pulumi.String("on"),
+				NonExistence: pulumi.String("nsec3"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("fooDnsDsRecord", fooDnsKeys.ApplyT(func(fooDnsKeys dns.GetKeysResult) (string, error) {
+			return fooDnsKeys.KeySigningKeys[0].DsRecord, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foo = gcp.dns.ManagedZone("foo",
+    dns_name="foo.bar.",
+    dnssec_config=gcp.dns.ManagedZoneDnssecConfigArgs(
+        state="on",
+        non_existence="nsec3",
+    ))
+foo_dns_keys = foo.id.apply(lambda id: gcp.dns.get_keys(managed_zone=id))
+pulumi.export("fooDnsDsRecord", foo_dns_keys.key_signing_keys[0].ds_record)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foo = new gcp.dns.ManagedZone("foo", {
+    dnsName: "foo.bar.",
+    dnssecConfig: {
+        state: "on",
+        nonExistence: "nsec3",
+    },
+});
+const fooDnsKeys = foo.id.apply(id => gcp.dns.getKeys({
+    managedZone: id,
+}));
+export const fooDnsDsRecord = fooDnsKeys.keySigningKeys[0].dsRecord;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetKeys {#using}
 

@@ -20,6 +20,1211 @@ To get more information about Tag, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Data Catalog Entry Tag Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
+        {
+            EntryGroupId = "my_entry_group",
+        });
+        var entry = new Gcp.DataCatalog.Entry("entry", new Gcp.DataCatalog.EntryArgs
+        {
+            EntryGroup = entryGroup.Id,
+            EntryId = "my_entry",
+            UserSpecifiedType = "my_custom_type",
+            UserSpecifiedSystem = "SomethingExternal",
+        });
+        var tagTemplate = new Gcp.DataCatalog.TagTemplate("tagTemplate", new Gcp.DataCatalog.TagTemplateArgs
+        {
+            TagTemplateId = "my_template",
+            Region = "us-central1",
+            DisplayName = "Demo Tag Template",
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "source",
+                    DisplayName = "Source of data asset",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "STRING",
+                    },
+                    IsRequired = true,
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "num_rows",
+                    DisplayName = "Number of rows in the data asset",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "DOUBLE",
+                    },
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "pii_type",
+                    DisplayName = "PII type",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
+                        {
+                            AllowedValues = 
+                            {
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "EMAIL",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "SOCIAL SECURITY NUMBER",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "NONE",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            ForceDelete = false,
+        });
+        var basicTag = new Gcp.DataCatalog.Tag("basicTag", new Gcp.DataCatalog.TagArgs
+        {
+            Parent = entry.Id,
+            Template = tagTemplate.Id,
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagFieldArgs
+                {
+                    FieldName = "source",
+                    StringValue = "my-string",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
+			EntryGroupId: pulumi.String("my_entry_group"),
+		})
+		if err != nil {
+			return err
+		}
+		entry, err := datacatalog.NewEntry(ctx, "entry", &datacatalog.EntryArgs{
+			EntryGroup:          entryGroup.ID(),
+			EntryId:             pulumi.String("my_entry"),
+			UserSpecifiedType:   pulumi.String("my_custom_type"),
+			UserSpecifiedSystem: pulumi.String("SomethingExternal"),
+		})
+		if err != nil {
+			return err
+		}
+		tagTemplate, err := datacatalog.NewTagTemplate(ctx, "tagTemplate", &datacatalog.TagTemplateArgs{
+			TagTemplateId: pulumi.String("my_template"),
+			Region:        pulumi.String("us-central1"),
+			DisplayName:   pulumi.String("Demo Tag Template"),
+			Fields: datacatalog.TagTemplateFieldArray{
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("source"),
+					DisplayName: pulumi.String("Source of data asset"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("STRING"),
+					},
+					IsRequired: pulumi.Bool(true),
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("num_rows"),
+					DisplayName: pulumi.String("Number of rows in the data asset"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("DOUBLE"),
+					},
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("pii_type"),
+					DisplayName: pulumi.String("PII type"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
+							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("EMAIL"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("NONE"),
+								},
+							},
+						},
+					},
+				},
+			},
+			ForceDelete: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datacatalog.NewTag(ctx, "basicTag", &datacatalog.TagArgs{
+			Parent:   entry.ID(),
+			Template: tagTemplate.ID(),
+			Fields: datacatalog.TagFieldArray{
+				&datacatalog.TagFieldArgs{
+					FieldName:   pulumi.String("source"),
+					StringValue: pulumi.String("my-string"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_entry_group")
+entry = gcp.datacatalog.Entry("entry",
+    entry_group=entry_group.id,
+    entry_id="my_entry",
+    user_specified_type="my_custom_type",
+    user_specified_system="SomethingExternal")
+tag_template = gcp.datacatalog.TagTemplate("tagTemplate",
+    tag_template_id="my_template",
+    region="us-central1",
+    display_name="Demo Tag Template",
+    fields=[
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="source",
+            display_name="Source of data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="STRING",
+            ),
+            is_required=True,
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="num_rows",
+            display_name="Number of rows in the data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="DOUBLE",
+            ),
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="pii_type",
+            display_name="PII type",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                enum_type=gcp.datacatalog.TagTemplateFieldTypeEnumTypeArgs(
+                    allowed_values=[
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="EMAIL",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="SOCIAL SECURITY NUMBER",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="NONE",
+                        ),
+                    ],
+                ),
+            ),
+        ),
+    ],
+    force_delete=False)
+basic_tag = gcp.datacatalog.Tag("basicTag",
+    parent=entry.id,
+    template=tag_template.id,
+    fields=[gcp.datacatalog.TagFieldArgs(
+        field_name="source",
+        string_value="my-string",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_entry_group"});
+const entry = new gcp.datacatalog.Entry("entry", {
+    entryGroup: entryGroup.id,
+    entryId: "my_entry",
+    userSpecifiedType: "my_custom_type",
+    userSpecifiedSystem: "SomethingExternal",
+});
+const tagTemplate = new gcp.datacatalog.TagTemplate("tagTemplate", {
+    tagTemplateId: "my_template",
+    region: "us-central1",
+    displayName: "Demo Tag Template",
+    fields: [
+        {
+            fieldId: "source",
+            displayName: "Source of data asset",
+            type: {
+                primitiveType: "STRING",
+            },
+            isRequired: true,
+        },
+        {
+            fieldId: "num_rows",
+            displayName: "Number of rows in the data asset",
+            type: {
+                primitiveType: "DOUBLE",
+            },
+        },
+        {
+            fieldId: "pii_type",
+            displayName: "PII type",
+            type: {
+                enumType: {
+                    allowedValues: [
+                        {
+                            displayName: "EMAIL",
+                        },
+                        {
+                            displayName: "SOCIAL SECURITY NUMBER",
+                        },
+                        {
+                            displayName: "NONE",
+                        },
+                    ],
+                },
+            },
+        },
+    ],
+    forceDelete: "false",
+});
+const basicTag = new gcp.datacatalog.Tag("basicTag", {
+    parent: entry.id,
+    template: tagTemplate.id,
+    fields: [{
+        fieldName: "source",
+        stringValue: "my-string",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Data Catalog Entry Group Tag
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
+        {
+            EntryGroupId = "my_entry_group",
+        });
+        var firstEntry = new Gcp.DataCatalog.Entry("firstEntry", new Gcp.DataCatalog.EntryArgs
+        {
+            EntryGroup = entryGroup.Id,
+            EntryId = "first_entry",
+            UserSpecifiedType = "my_custom_type",
+            UserSpecifiedSystem = "SomethingExternal",
+        });
+        var secondEntry = new Gcp.DataCatalog.Entry("secondEntry", new Gcp.DataCatalog.EntryArgs
+        {
+            EntryGroup = entryGroup.Id,
+            EntryId = "second_entry",
+            UserSpecifiedType = "another_custom_type",
+            UserSpecifiedSystem = "SomethingElseExternal",
+        });
+        var tagTemplate = new Gcp.DataCatalog.TagTemplate("tagTemplate", new Gcp.DataCatalog.TagTemplateArgs
+        {
+            TagTemplateId = "my_template",
+            Region = "us-central1",
+            DisplayName = "Demo Tag Template",
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "source",
+                    DisplayName = "Source of data asset",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "STRING",
+                    },
+                    IsRequired = true,
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "num_rows",
+                    DisplayName = "Number of rows in the data asset",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "DOUBLE",
+                    },
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "pii_type",
+                    DisplayName = "PII type",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
+                        {
+                            AllowedValues = 
+                            {
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "EMAIL",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "SOCIAL SECURITY NUMBER",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "NONE",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            ForceDelete = false,
+        });
+        var entryGroupTag = new Gcp.DataCatalog.Tag("entryGroupTag", new Gcp.DataCatalog.TagArgs
+        {
+            Parent = entryGroup.Id,
+            Template = tagTemplate.Id,
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagFieldArgs
+                {
+                    FieldName = "source",
+                    StringValue = "my-string",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
+			EntryGroupId: pulumi.String("my_entry_group"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datacatalog.NewEntry(ctx, "firstEntry", &datacatalog.EntryArgs{
+			EntryGroup:          entryGroup.ID(),
+			EntryId:             pulumi.String("first_entry"),
+			UserSpecifiedType:   pulumi.String("my_custom_type"),
+			UserSpecifiedSystem: pulumi.String("SomethingExternal"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datacatalog.NewEntry(ctx, "secondEntry", &datacatalog.EntryArgs{
+			EntryGroup:          entryGroup.ID(),
+			EntryId:             pulumi.String("second_entry"),
+			UserSpecifiedType:   pulumi.String("another_custom_type"),
+			UserSpecifiedSystem: pulumi.String("SomethingElseExternal"),
+		})
+		if err != nil {
+			return err
+		}
+		tagTemplate, err := datacatalog.NewTagTemplate(ctx, "tagTemplate", &datacatalog.TagTemplateArgs{
+			TagTemplateId: pulumi.String("my_template"),
+			Region:        pulumi.String("us-central1"),
+			DisplayName:   pulumi.String("Demo Tag Template"),
+			Fields: datacatalog.TagTemplateFieldArray{
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("source"),
+					DisplayName: pulumi.String("Source of data asset"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("STRING"),
+					},
+					IsRequired: pulumi.Bool(true),
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("num_rows"),
+					DisplayName: pulumi.String("Number of rows in the data asset"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("DOUBLE"),
+					},
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("pii_type"),
+					DisplayName: pulumi.String("PII type"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
+							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("EMAIL"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("NONE"),
+								},
+							},
+						},
+					},
+				},
+			},
+			ForceDelete: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datacatalog.NewTag(ctx, "entryGroupTag", &datacatalog.TagArgs{
+			Parent:   entryGroup.ID(),
+			Template: tagTemplate.ID(),
+			Fields: datacatalog.TagFieldArray{
+				&datacatalog.TagFieldArgs{
+					FieldName:   pulumi.String("source"),
+					StringValue: pulumi.String("my-string"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_entry_group")
+first_entry = gcp.datacatalog.Entry("firstEntry",
+    entry_group=entry_group.id,
+    entry_id="first_entry",
+    user_specified_type="my_custom_type",
+    user_specified_system="SomethingExternal")
+second_entry = gcp.datacatalog.Entry("secondEntry",
+    entry_group=entry_group.id,
+    entry_id="second_entry",
+    user_specified_type="another_custom_type",
+    user_specified_system="SomethingElseExternal")
+tag_template = gcp.datacatalog.TagTemplate("tagTemplate",
+    tag_template_id="my_template",
+    region="us-central1",
+    display_name="Demo Tag Template",
+    fields=[
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="source",
+            display_name="Source of data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="STRING",
+            ),
+            is_required=True,
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="num_rows",
+            display_name="Number of rows in the data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="DOUBLE",
+            ),
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="pii_type",
+            display_name="PII type",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                enum_type=gcp.datacatalog.TagTemplateFieldTypeEnumTypeArgs(
+                    allowed_values=[
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="EMAIL",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="SOCIAL SECURITY NUMBER",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="NONE",
+                        ),
+                    ],
+                ),
+            ),
+        ),
+    ],
+    force_delete=False)
+entry_group_tag = gcp.datacatalog.Tag("entryGroupTag",
+    parent=entry_group.id,
+    template=tag_template.id,
+    fields=[gcp.datacatalog.TagFieldArgs(
+        field_name="source",
+        string_value="my-string",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_entry_group"});
+const firstEntry = new gcp.datacatalog.Entry("firstEntry", {
+    entryGroup: entryGroup.id,
+    entryId: "first_entry",
+    userSpecifiedType: "my_custom_type",
+    userSpecifiedSystem: "SomethingExternal",
+});
+const secondEntry = new gcp.datacatalog.Entry("secondEntry", {
+    entryGroup: entryGroup.id,
+    entryId: "second_entry",
+    userSpecifiedType: "another_custom_type",
+    userSpecifiedSystem: "SomethingElseExternal",
+});
+const tagTemplate = new gcp.datacatalog.TagTemplate("tagTemplate", {
+    tagTemplateId: "my_template",
+    region: "us-central1",
+    displayName: "Demo Tag Template",
+    fields: [
+        {
+            fieldId: "source",
+            displayName: "Source of data asset",
+            type: {
+                primitiveType: "STRING",
+            },
+            isRequired: true,
+        },
+        {
+            fieldId: "num_rows",
+            displayName: "Number of rows in the data asset",
+            type: {
+                primitiveType: "DOUBLE",
+            },
+        },
+        {
+            fieldId: "pii_type",
+            displayName: "PII type",
+            type: {
+                enumType: {
+                    allowedValues: [
+                        {
+                            displayName: "EMAIL",
+                        },
+                        {
+                            displayName: "SOCIAL SECURITY NUMBER",
+                        },
+                        {
+                            displayName: "NONE",
+                        },
+                    ],
+                },
+            },
+        },
+    ],
+    forceDelete: "false",
+});
+const entryGroupTag = new gcp.datacatalog.Tag("entryGroupTag", {
+    parent: entryGroup.id,
+    template: tagTemplate.id,
+    fields: [{
+        fieldName: "source",
+        stringValue: "my-string",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Data Catalog Entry Tag Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
+        {
+            EntryGroupId = "my_entry_group",
+        });
+        var entry = new Gcp.DataCatalog.Entry("entry", new Gcp.DataCatalog.EntryArgs
+        {
+            EntryGroup = entryGroup.Id,
+            EntryId = "my_entry",
+            UserSpecifiedType = "my_custom_type",
+            UserSpecifiedSystem = "SomethingExternal",
+            Schema = @"{
+  ""columns"": [
+    {
+      ""column"": ""first_name"",
+      ""description"": ""First name"",
+      ""mode"": ""REQUIRED"",
+      ""type"": ""STRING""
+    },
+    {
+      ""column"": ""last_name"",
+      ""description"": ""Last name"",
+      ""mode"": ""REQUIRED"",
+      ""type"": ""STRING""
+    },
+    {
+      ""column"": ""address"",
+      ""description"": ""Address"",
+      ""mode"": ""REPEATED"",
+      ""subcolumns"": [
+        {
+          ""column"": ""city"",
+          ""description"": ""City"",
+          ""mode"": ""NULLABLE"",
+          ""type"": ""STRING""
+        },
+        {
+          ""column"": ""state"",
+          ""description"": ""State"",
+          ""mode"": ""NULLABLE"",
+          ""type"": ""STRING""
+        }
+      ],
+      ""type"": ""RECORD""
+    }
+  ]
+}
+",
+        });
+        var tagTemplate = new Gcp.DataCatalog.TagTemplate("tagTemplate", new Gcp.DataCatalog.TagTemplateArgs
+        {
+            TagTemplateId = "my_template",
+            Region = "us-central1",
+            DisplayName = "Demo Tag Template",
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "source",
+                    DisplayName = "Source of data asset",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "STRING",
+                    },
+                    IsRequired = true,
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "num_rows",
+                    DisplayName = "Number of rows in the data asset",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "DOUBLE",
+                    },
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    FieldId = "pii_type",
+                    DisplayName = "PII type",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
+                        {
+                            AllowedValues = 
+                            {
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "EMAIL",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "SOCIAL SECURITY NUMBER",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "NONE",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            ForceDelete = false,
+        });
+        var basicTag = new Gcp.DataCatalog.Tag("basicTag", new Gcp.DataCatalog.TagArgs
+        {
+            Parent = entry.Id,
+            Template = tagTemplate.Id,
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagFieldArgs
+                {
+                    FieldName = "source",
+                    StringValue = "my-string",
+                },
+                new Gcp.DataCatalog.Inputs.TagFieldArgs
+                {
+                    FieldName = "num_rows",
+                    DoubleValue = 5,
+                },
+                new Gcp.DataCatalog.Inputs.TagFieldArgs
+                {
+                    FieldName = "pii_type",
+                    EnumValue = "EMAIL",
+                },
+            },
+            Column = "address",
+        });
+        var second_tag = new Gcp.DataCatalog.Tag("second-tag", new Gcp.DataCatalog.TagArgs
+        {
+            Parent = entry.Id,
+            Template = tagTemplate.Id,
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagFieldArgs
+                {
+                    FieldName = "source",
+                    StringValue = "my-string",
+                },
+                new Gcp.DataCatalog.Inputs.TagFieldArgs
+                {
+                    FieldName = "pii_type",
+                    EnumValue = "NONE",
+                },
+            },
+            Column = "first_name",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
+			EntryGroupId: pulumi.String("my_entry_group"),
+		})
+		if err != nil {
+			return err
+		}
+		entry, err := datacatalog.NewEntry(ctx, "entry", &datacatalog.EntryArgs{
+			EntryGroup:          entryGroup.ID(),
+			EntryId:             pulumi.String("my_entry"),
+			UserSpecifiedType:   pulumi.String("my_custom_type"),
+			UserSpecifiedSystem: pulumi.String("SomethingExternal"),
+			Schema:              pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"columns\": [\n", "    {\n", "      \"column\": \"first_name\",\n", "      \"description\": \"First name\",\n", "      \"mode\": \"REQUIRED\",\n", "      \"type\": \"STRING\"\n", "    },\n", "    {\n", "      \"column\": \"last_name\",\n", "      \"description\": \"Last name\",\n", "      \"mode\": \"REQUIRED\",\n", "      \"type\": \"STRING\"\n", "    },\n", "    {\n", "      \"column\": \"address\",\n", "      \"description\": \"Address\",\n", "      \"mode\": \"REPEATED\",\n", "      \"subcolumns\": [\n", "        {\n", "          \"column\": \"city\",\n", "          \"description\": \"City\",\n", "          \"mode\": \"NULLABLE\",\n", "          \"type\": \"STRING\"\n", "        },\n", "        {\n", "          \"column\": \"state\",\n", "          \"description\": \"State\",\n", "          \"mode\": \"NULLABLE\",\n", "          \"type\": \"STRING\"\n", "        }\n", "      ],\n", "      \"type\": \"RECORD\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		tagTemplate, err := datacatalog.NewTagTemplate(ctx, "tagTemplate", &datacatalog.TagTemplateArgs{
+			TagTemplateId: pulumi.String("my_template"),
+			Region:        pulumi.String("us-central1"),
+			DisplayName:   pulumi.String("Demo Tag Template"),
+			Fields: datacatalog.TagTemplateFieldArray{
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("source"),
+					DisplayName: pulumi.String("Source of data asset"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("STRING"),
+					},
+					IsRequired: pulumi.Bool(true),
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("num_rows"),
+					DisplayName: pulumi.String("Number of rows in the data asset"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("DOUBLE"),
+					},
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					FieldId:     pulumi.String("pii_type"),
+					DisplayName: pulumi.String("PII type"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
+							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("EMAIL"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("NONE"),
+								},
+							},
+						},
+					},
+				},
+			},
+			ForceDelete: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datacatalog.NewTag(ctx, "basicTag", &datacatalog.TagArgs{
+			Parent:   entry.ID(),
+			Template: tagTemplate.ID(),
+			Fields: datacatalog.TagFieldArray{
+				&datacatalog.TagFieldArgs{
+					FieldName:   pulumi.String("source"),
+					StringValue: pulumi.String("my-string"),
+				},
+				&datacatalog.TagFieldArgs{
+					FieldName:   pulumi.String("num_rows"),
+					DoubleValue: pulumi.Float64(5),
+				},
+				&datacatalog.TagFieldArgs{
+					FieldName: pulumi.String("pii_type"),
+					EnumValue: pulumi.String("EMAIL"),
+				},
+			},
+			Column: pulumi.String("address"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datacatalog.NewTag(ctx, "second_tag", &datacatalog.TagArgs{
+			Parent:   entry.ID(),
+			Template: tagTemplate.ID(),
+			Fields: datacatalog.TagFieldArray{
+				&datacatalog.TagFieldArgs{
+					FieldName:   pulumi.String("source"),
+					StringValue: pulumi.String("my-string"),
+				},
+				&datacatalog.TagFieldArgs{
+					FieldName: pulumi.String("pii_type"),
+					EnumValue: pulumi.String("NONE"),
+				},
+			},
+			Column: pulumi.String("first_name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_entry_group")
+entry = gcp.datacatalog.Entry("entry",
+    entry_group=entry_group.id,
+    entry_id="my_entry",
+    user_specified_type="my_custom_type",
+    user_specified_system="SomethingExternal",
+    schema="""{
+  "columns": [
+    {
+      "column": "first_name",
+      "description": "First name",
+      "mode": "REQUIRED",
+      "type": "STRING"
+    },
+    {
+      "column": "last_name",
+      "description": "Last name",
+      "mode": "REQUIRED",
+      "type": "STRING"
+    },
+    {
+      "column": "address",
+      "description": "Address",
+      "mode": "REPEATED",
+      "subcolumns": [
+        {
+          "column": "city",
+          "description": "City",
+          "mode": "NULLABLE",
+          "type": "STRING"
+        },
+        {
+          "column": "state",
+          "description": "State",
+          "mode": "NULLABLE",
+          "type": "STRING"
+        }
+      ],
+      "type": "RECORD"
+    }
+  ]
+}
+""")
+tag_template = gcp.datacatalog.TagTemplate("tagTemplate",
+    tag_template_id="my_template",
+    region="us-central1",
+    display_name="Demo Tag Template",
+    fields=[
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="source",
+            display_name="Source of data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="STRING",
+            ),
+            is_required=True,
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="num_rows",
+            display_name="Number of rows in the data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="DOUBLE",
+            ),
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="pii_type",
+            display_name="PII type",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                enum_type=gcp.datacatalog.TagTemplateFieldTypeEnumTypeArgs(
+                    allowed_values=[
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="EMAIL",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="SOCIAL SECURITY NUMBER",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="NONE",
+                        ),
+                    ],
+                ),
+            ),
+        ),
+    ],
+    force_delete=False)
+basic_tag = gcp.datacatalog.Tag("basicTag",
+    parent=entry.id,
+    template=tag_template.id,
+    fields=[
+        gcp.datacatalog.TagFieldArgs(
+            field_name="source",
+            string_value="my-string",
+        ),
+        gcp.datacatalog.TagFieldArgs(
+            field_name="num_rows",
+            double_value=5,
+        ),
+        gcp.datacatalog.TagFieldArgs(
+            field_name="pii_type",
+            enum_value="EMAIL",
+        ),
+    ],
+    column="address")
+second_tag = gcp.datacatalog.Tag("second-tag",
+    parent=entry.id,
+    template=tag_template.id,
+    fields=[
+        gcp.datacatalog.TagFieldArgs(
+            field_name="source",
+            string_value="my-string",
+        ),
+        gcp.datacatalog.TagFieldArgs(
+            field_name="pii_type",
+            enum_value="NONE",
+        ),
+    ],
+    column="first_name")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_entry_group"});
+const entry = new gcp.datacatalog.Entry("entry", {
+    entryGroup: entryGroup.id,
+    entryId: "my_entry",
+    userSpecifiedType: "my_custom_type",
+    userSpecifiedSystem: "SomethingExternal",
+    schema: `{
+  "columns": [
+    {
+      "column": "first_name",
+      "description": "First name",
+      "mode": "REQUIRED",
+      "type": "STRING"
+    },
+    {
+      "column": "last_name",
+      "description": "Last name",
+      "mode": "REQUIRED",
+      "type": "STRING"
+    },
+    {
+      "column": "address",
+      "description": "Address",
+      "mode": "REPEATED",
+      "subcolumns": [
+        {
+          "column": "city",
+          "description": "City",
+          "mode": "NULLABLE",
+          "type": "STRING"
+        },
+        {
+          "column": "state",
+          "description": "State",
+          "mode": "NULLABLE",
+          "type": "STRING"
+        }
+      ],
+      "type": "RECORD"
+    }
+  ]
+}
+`,
+});
+const tagTemplate = new gcp.datacatalog.TagTemplate("tagTemplate", {
+    tagTemplateId: "my_template",
+    region: "us-central1",
+    displayName: "Demo Tag Template",
+    fields: [
+        {
+            fieldId: "source",
+            displayName: "Source of data asset",
+            type: {
+                primitiveType: "STRING",
+            },
+            isRequired: true,
+        },
+        {
+            fieldId: "num_rows",
+            displayName: "Number of rows in the data asset",
+            type: {
+                primitiveType: "DOUBLE",
+            },
+        },
+        {
+            fieldId: "pii_type",
+            displayName: "PII type",
+            type: {
+                enumType: {
+                    allowedValues: [
+                        {
+                            displayName: "EMAIL",
+                        },
+                        {
+                            displayName: "SOCIAL SECURITY NUMBER",
+                        },
+                        {
+                            displayName: "NONE",
+                        },
+                    ],
+                },
+            },
+        },
+    ],
+    forceDelete: "false",
+});
+const basicTag = new gcp.datacatalog.Tag("basicTag", {
+    parent: entry.id,
+    template: tagTemplate.id,
+    fields: [
+        {
+            fieldName: "source",
+            stringValue: "my-string",
+        },
+        {
+            fieldName: "num_rows",
+            doubleValue: 5,
+        },
+        {
+            fieldName: "pii_type",
+            enumValue: "EMAIL",
+        },
+    ],
+    column: "address",
+});
+const second_tag = new gcp.datacatalog.Tag("second-tag", {
+    parent: entry.id,
+    template: tagTemplate.id,
+    fields: [
+        {
+            fieldName: "source",
+            stringValue: "my-string",
+        },
+        {
+            fieldName: "pii_type",
+            enumValue: "NONE",
+        },
+    ],
+    column: "first_name",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Tag Resource {#create}
@@ -1509,6 +2714,16 @@ within a tag do not have to be sequential.
 
 
 
+
+
+## Import
+
+
+Tag can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datacatalog/tag:Tag default {{name}}
+```
 
 
 

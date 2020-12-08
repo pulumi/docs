@@ -18,6 +18,156 @@ To get more information about EntryGroup, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Data Catalog Entry Group Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basicEntryGroup = new Gcp.DataCatalog.EntryGroup("basicEntryGroup", new Gcp.DataCatalog.EntryGroupArgs
+        {
+            EntryGroupId = "my_group",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datacatalog.NewEntryGroup(ctx, "basicEntryGroup", &datacatalog.EntryGroupArgs{
+			EntryGroupId: pulumi.String("my_group"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_entry_group = gcp.datacatalog.EntryGroup("basicEntryGroup", entry_group_id="my_group")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicEntryGroup = new gcp.datacatalog.EntryGroup("basic_entry_group", {
+    entryGroupId: "my_group",
+});
+```
+
+{{% /example %}}
+
+### Data Catalog Entry Group Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basicEntryGroup = new Gcp.DataCatalog.EntryGroup("basicEntryGroup", new Gcp.DataCatalog.EntryGroupArgs
+        {
+            Description = "example entry group",
+            DisplayName = "entry group",
+            EntryGroupId = "my_group",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datacatalog.NewEntryGroup(ctx, "basicEntryGroup", &datacatalog.EntryGroupArgs{
+			Description:  pulumi.String("example entry group"),
+			DisplayName:  pulumi.String("entry group"),
+			EntryGroupId: pulumi.String("my_group"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_entry_group = gcp.datacatalog.EntryGroup("basicEntryGroup",
+    description="example entry group",
+    display_name="entry group",
+    entry_group_id="my_group")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicEntryGroup = new gcp.datacatalog.EntryGroup("basic_entry_group", {
+    description: "example entry group",
+    displayName: "entry group",
+    entryGroupId: "my_group",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EntryGroup Resource {#create}
@@ -1019,6 +1169,16 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+EntryGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datacatalog/entryGroup:EntryGroup default {{name}}
+```
 
 
 

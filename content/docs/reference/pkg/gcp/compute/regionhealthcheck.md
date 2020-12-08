@@ -28,6 +28,1308 @@ To get more information about RegionHealthCheck, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Region Health Check Tcp
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck("tcp-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "tcp_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TcpHealthCheck: &compute.RegionHealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check",
+    check_interval_sec=1,
+    tcp_health_check=gcp.compute.RegionHealthCheckTcpHealthCheckArgs(
+        port=80,
+    ),
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-health-check", {
+    checkIntervalSec: 1,
+    tcpHealthCheck: {
+        port: 80,
+    },
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Tcp Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck("tcp-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via tcp",
+            HealthyThreshold = 4,
+            TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+            {
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                Request = "ARE YOU HEALTHY?",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "tcp_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via tcp"),
+			HealthyThreshold: pulumi.Int(4),
+			TcpHealthCheck: &compute.RegionHealthCheckTcpHealthCheckArgs{
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				Request:           pulumi.String("ARE YOU HEALTHY?"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check",
+    check_interval_sec=1,
+    description="Health check via tcp",
+    healthy_threshold=4,
+    tcp_health_check=gcp.compute.RegionHealthCheckTcpHealthCheckArgs(
+        port_name="health-check-port",
+        port_specification="USE_NAMED_PORT",
+        proxy_header="NONE",
+        request="ARE YOU HEALTHY?",
+        response="I AM HEALTHY",
+    ),
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via tcp",
+    healthyThreshold: 4,
+    tcpHealthCheck: {
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        request: "ARE YOU HEALTHY?",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Ssl
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck("ssl-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+            {
+                Port = 443,
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "ssl_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			SslHealthCheck: &compute.RegionHealthCheckSslHealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check",
+    check_interval_sec=1,
+    ssl_health_check=gcp.compute.RegionHealthCheckSslHealthCheckArgs(
+        port=443,
+    ),
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-health-check", {
+    checkIntervalSec: 1,
+    sslHealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Ssl Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck("ssl-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via ssl",
+            HealthyThreshold = 4,
+            SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+            {
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                Request = "ARE YOU HEALTHY?",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "ssl_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via ssl"),
+			HealthyThreshold: pulumi.Int(4),
+			SslHealthCheck: &compute.RegionHealthCheckSslHealthCheckArgs{
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				Request:           pulumi.String("ARE YOU HEALTHY?"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check",
+    check_interval_sec=1,
+    description="Health check via ssl",
+    healthy_threshold=4,
+    ssl_health_check=gcp.compute.RegionHealthCheckSslHealthCheckArgs(
+        port_name="health-check-port",
+        port_specification="USE_NAMED_PORT",
+        proxy_header="NONE",
+        request="ARE YOU HEALTHY?",
+        response="I AM HEALTHY",
+    ),
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via ssl",
+    healthyThreshold: 4,
+    sslHealthCheck: {
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        request: "ARE YOU HEALTHY?",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Http
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http_region_health_check = new Gcp.Compute.RegionHealthCheck("http-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "http_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
+    check_interval_sec=1,
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        port=80,
+    ),
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
+    checkIntervalSec: 1,
+    httpHealthCheck: {
+        port: 80,
+    },
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Http Logs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http_region_health_check = new Gcp.Compute.RegionHealthCheck("http-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            TimeoutSec = 1,
+            CheckIntervalSec = 1,
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+            LogConfig = new Gcp.Compute.Inputs.RegionHealthCheckLogConfigArgs
+            {
+                Enable = true,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "http_region_health_check", &compute.RegionHealthCheckArgs{
+			TimeoutSec:       pulumi.Int(1),
+			CheckIntervalSec: pulumi.Int(1),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+			LogConfig: &compute.RegionHealthCheckLogConfigArgs{
+				Enable: pulumi.Bool(true),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
+    timeout_sec=1,
+    check_interval_sec=1,
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        port=80,
+    ),
+    log_config=gcp.compute.RegionHealthCheckLogConfigArgs(
+        enable=True,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
+    timeoutSec: 1,
+    checkIntervalSec: 1,
+    httpHealthCheck: {
+        port: "80",
+    },
+    logConfig: {
+        enable: true,
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Http Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http_region_health_check = new Gcp.Compute.RegionHealthCheck("http-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via http",
+            HealthyThreshold = 4,
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "http_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via http"),
+			HealthyThreshold: pulumi.Int(4),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Host:              pulumi.String("1.2.3.4"),
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				RequestPath:       pulumi.String("/mypath"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
+    check_interval_sec=1,
+    description="Health check via http",
+    healthy_threshold=4,
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        host="1.2.3.4",
+        port_name="health-check-port",
+        port_specification="USE_NAMED_PORT",
+        proxy_header="NONE",
+        request_path="/mypath",
+        response="I AM HEALTHY",
+    ),
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via http",
+    healthyThreshold: 4,
+    httpHealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Https
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var https_region_health_check = new Gcp.Compute.RegionHealthCheck("https-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+            {
+                Port = 443,
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "https_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			HttpsHealthCheck: &compute.RegionHealthCheckHttpsHealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-check",
+    check_interval_sec=1,
+    https_health_check=gcp.compute.RegionHealthCheckHttpsHealthCheckArgs(
+        port=443,
+    ),
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const https_region_health_check = new gcp.compute.RegionHealthCheck("https-region-health-check", {
+    checkIntervalSec: 1,
+    httpsHealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Https Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var https_region_health_check = new Gcp.Compute.RegionHealthCheck("https-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via https",
+            HealthyThreshold = 4,
+            HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "https_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via https"),
+			HealthyThreshold: pulumi.Int(4),
+			HttpsHealthCheck: &compute.RegionHealthCheckHttpsHealthCheckArgs{
+				Host:              pulumi.String("1.2.3.4"),
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				RequestPath:       pulumi.String("/mypath"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-check",
+    check_interval_sec=1,
+    description="Health check via https",
+    healthy_threshold=4,
+    https_health_check=gcp.compute.RegionHealthCheckHttpsHealthCheckArgs(
+        host="1.2.3.4",
+        port_name="health-check-port",
+        port_specification="USE_NAMED_PORT",
+        proxy_header="NONE",
+        request_path="/mypath",
+        response="I AM HEALTHY",
+    ),
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const https_region_health_check = new gcp.compute.RegionHealthCheck("https-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via https",
+    healthyThreshold: 4,
+    httpsHealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Http2
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http2_region_health_check = new Gcp.Compute.RegionHealthCheck("http2-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+            {
+                Port = 443,
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "http2_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Http2HealthCheck: &compute.RegionHealthCheckHttp2HealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-check",
+    check_interval_sec=1,
+    http2_health_check=gcp.compute.RegionHealthCheckHttp2HealthCheckArgs(
+        port=443,
+    ),
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-region-health-check", {
+    checkIntervalSec: 1,
+    http2HealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Http2 Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http2_region_health_check = new Gcp.Compute.RegionHealthCheck("http2-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via http2",
+            HealthyThreshold = 4,
+            Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "http2_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			Description:      pulumi.String("Health check via http2"),
+			HealthyThreshold: pulumi.Int(4),
+			Http2HealthCheck: &compute.RegionHealthCheckHttp2HealthCheckArgs{
+				Host:              pulumi.String("1.2.3.4"),
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+				ProxyHeader:       pulumi.String("NONE"),
+				RequestPath:       pulumi.String("/mypath"),
+				Response:          pulumi.String("I AM HEALTHY"),
+			},
+			TimeoutSec:         pulumi.Int(1),
+			UnhealthyThreshold: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-check",
+    check_interval_sec=1,
+    description="Health check via http2",
+    healthy_threshold=4,
+    http2_health_check=gcp.compute.RegionHealthCheckHttp2HealthCheckArgs(
+        host="1.2.3.4",
+        port_name="health-check-port",
+        port_specification="USE_NAMED_PORT",
+        proxy_header="NONE",
+        request_path="/mypath",
+        response="I AM HEALTHY",
+    ),
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via http2",
+    healthyThreshold: 4,
+    http2HealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Grpc
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var grpc_region_health_check = new Gcp.Compute.RegionHealthCheck("grpc-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            GrpcHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckGrpcHealthCheckArgs
+            {
+                Port = 443,
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "grpc_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			GrpcHealthCheck: &compute.RegionHealthCheckGrpcHealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+grpc_region_health_check = gcp.compute.RegionHealthCheck("grpc-region-health-check",
+    check_interval_sec=1,
+    grpc_health_check=gcp.compute.RegionHealthCheckGrpcHealthCheckArgs(
+        port=443,
+    ),
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const grpc_region_health_check = new gcp.compute.RegionHealthCheck("grpc-region-health-check", {
+    checkIntervalSec: 1,
+    grpcHealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+### Region Health Check Grpc Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var grpc_region_health_check = new Gcp.Compute.RegionHealthCheck("grpc-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            GrpcHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckGrpcHealthCheckArgs
+            {
+                GrpcServiceName = "testservice",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "grpc_region_health_check", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			GrpcHealthCheck: &compute.RegionHealthCheckGrpcHealthCheckArgs{
+				GrpcServiceName:   pulumi.String("testservice"),
+				PortName:          pulumi.String("health-check-port"),
+				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+			},
+			TimeoutSec: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+grpc_region_health_check = gcp.compute.RegionHealthCheck("grpc-region-health-check",
+    check_interval_sec=1,
+    grpc_health_check=gcp.compute.RegionHealthCheckGrpcHealthCheckArgs(
+        grpc_service_name="testservice",
+        port_name="health-check-port",
+        port_specification="USE_NAMED_PORT",
+    ),
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const grpc_region_health_check = new gcp.compute.RegionHealthCheck("grpc-region-health-check", {
+    checkIntervalSec: 1,
+    grpcHealthCheck: {
+        grpcServiceName: "testservice",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+    },
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegionHealthCheck Resource {#create}
@@ -4713,6 +6015,28 @@ can only be ASCII.
 
 
 
+
+
+## Import
+
+
+RegionHealthCheck can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default projects/{{project}}/regions/{{region}}/healthChecks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionHealthCheck:RegionHealthCheck default {{name}}
+```
 
 
 

@@ -19,6 +19,197 @@ To get more information about GameServerDeploymentRollout, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Game Service Deployment Rollout Basic
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultGameServerDeployment = new Gcp.GameServices.GameServerDeployment("defaultGameServerDeployment", new Gcp.GameServices.GameServerDeploymentArgs
+        {
+            DeploymentId = "tf-test-deployment",
+            Description = "a deployment description",
+        });
+        var defaultGameServerConfig = new Gcp.GameServices.GameServerConfig("defaultGameServerConfig", new Gcp.GameServices.GameServerConfigArgs
+        {
+            ConfigId = "tf-test-config",
+            DeploymentId = defaultGameServerDeployment.DeploymentId,
+            Description = "a config description",
+            FleetConfigs = 
+            {
+                new Gcp.GameServices.Inputs.GameServerConfigFleetConfigArgs
+                {
+                    Name = "some-non-guid",
+                    FleetSpec = JsonSerializer.Serialize(new Dictionary<string, object?>
+                    {
+                        { "replicas", 1 },
+                        { "scheduling", "Packed" },
+                        { "template", new Dictionary<string, object?>
+                        {
+                            { "metadata", new Dictionary<string, object?>
+                            {
+                                { "name", "tf-test-game-server-template" },
+                            } },
+                            { "spec", new Dictionary<string, object?>
+                            {
+                                { "ports", new[]
+                                    {
+                                        new Dictionary<string, object?>
+                                        {
+                                            { "name", "default" },
+                                            { "portPolicy", "Dynamic" },
+                                            { "containerPort", 7654 },
+                                            { "protocol", "UDP" },
+                                        },
+                                    }
+                                 },
+                                { "template", new Dictionary<string, object?>
+                                {
+                                    { "spec", new Dictionary<string, object?>
+                                    {
+                                        { "containers", new[]
+                                            {
+                                                new Dictionary<string, object?>
+                                                {
+                                                    { "name", "simple-udp-server" },
+                                                    { "image", "gcr.io/agones-images/udp-server:0.14" },
+                                                },
+                                            }
+                                         },
+                                    } },
+                                } },
+                            } },
+                        } },
+                    }),
+                },
+            },
+        });
+        var defaultGameServerDeploymentRollout = new Gcp.GameServices.GameServerDeploymentRollout("defaultGameServerDeploymentRollout", new Gcp.GameServices.GameServerDeploymentRolloutArgs
+        {
+            DeploymentId = defaultGameServerDeployment.DeploymentId,
+            DefaultGameServerConfig = defaultGameServerConfig.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_gcp as gcp
+
+default_game_server_deployment = gcp.gameservices.GameServerDeployment("defaultGameServerDeployment",
+    deployment_id="tf-test-deployment",
+    description="a deployment description")
+default_game_server_config = gcp.gameservices.GameServerConfig("defaultGameServerConfig",
+    config_id="tf-test-config",
+    deployment_id=default_game_server_deployment.deployment_id,
+    description="a config description",
+    fleet_configs=[gcp.gameservices.GameServerConfigFleetConfigArgs(
+        name="some-non-guid",
+        fleet_spec=json.dumps({
+            "replicas": 1,
+            "scheduling": "Packed",
+            "template": {
+                "metadata": {
+                    "name": "tf-test-game-server-template",
+                },
+                "spec": {
+                    "ports": [{
+                        "name": "default",
+                        "portPolicy": "Dynamic",
+                        "containerPort": 7654,
+                        "protocol": "UDP",
+                    }],
+                    "template": {
+                        "spec": {
+                            "containers": [{
+                                "name": "simple-udp-server",
+                                "image": "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    )])
+default_game_server_deployment_rollout = gcp.gameservices.GameServerDeploymentRollout("defaultGameServerDeploymentRollout",
+    deployment_id=default_game_server_deployment.deployment_id,
+    default_game_server_config=default_game_server_config.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGameServerDeployment = new gcp.gameservices.GameServerDeployment("defaultGameServerDeployment", {
+    deploymentId: "tf-test-deployment",
+    description: "a deployment description",
+});
+const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGameServerConfig", {
+    configId: "tf-test-config",
+    deploymentId: defaultGameServerDeployment.deploymentId,
+    description: "a config description",
+    fleetConfigs: [{
+        name: "some-non-guid",
+        fleetSpec: JSON.stringify({
+            replicas: 1,
+            scheduling: "Packed",
+            template: {
+                metadata: {
+                    name: "tf-test-game-server-template",
+                },
+                spec: {
+                    ports: [{
+                        name: "default",
+                        portPolicy: "Dynamic",
+                        containerPort: 7654,
+                        protocol: "UDP",
+                    }],
+                    template: {
+                        spec: {
+                            containers: [{
+                                name: "simple-udp-server",
+                                image: "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    }],
+});
+const defaultGameServerDeploymentRollout = new gcp.gameservices.GameServerDeploymentRollout("defaultGameServerDeploymentRollout", {
+    deploymentId: defaultGameServerDeployment.deploymentId,
+    defaultGameServerConfig: defaultGameServerConfig.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GameServerDeploymentRollout Resource {#create}
@@ -1206,6 +1397,24 @@ Structure is documented below.
 
 
 
+
+
+## Import
+
+
+GameServerDeploymentRollout can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout default projects/{{project}}/locations/global/gameServerDeployments/{{deployment_id}}/rollout
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout default {{project}}/{{deployment_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout default {{deployment_id}}
+```
 
 
 

@@ -13,6 +13,1968 @@ meta_desc: "Explore the RegionUrlMap resource of the compute module, including e
 UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Region Url Map Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.RegionHealthCheck("default", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            Region = "us-central1",
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+                RequestPath = "/",
+            },
+        });
+        var login = new Gcp.Compute.RegionBackendService("login", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                @default.Id,
+            },
+        });
+        var home = new Gcp.Compute.RegionBackendService("home", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                @default.Id,
+            },
+        });
+        var regionurlmap = new Gcp.Compute.RegionUrlMap("regionurlmap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Region = "us-central1",
+            Description = "a description",
+            DefaultService = home.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = home.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/home",
+                            },
+                            Service = home.Id,
+                        },
+                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/login",
+                            },
+                            Service = login.Id,
+                        },
+                    },
+                },
+            },
+            Tests = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapTestArgs
+                {
+                    Service = home.Id,
+                    Host = "hi.com",
+                    Path = "/home",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "_default", &compute.RegionHealthCheckArgs{
+			Region:           pulumi.String("us-central1"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port:        pulumi.Int(80),
+				RequestPath: pulumi.String("/"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		login, err := compute.NewRegionBackendService(ctx, "login", &compute.RegionBackendServiceArgs{
+			Region:     pulumi.String("us-central1"),
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				_default.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
+			Region:     pulumi.String("us-central1"),
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				_default.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionUrlMap(ctx, "regionurlmap", &compute.RegionUrlMapArgs{
+			Region:         pulumi.String("us-central1"),
+			Description:    pulumi.String("a description"),
+			DefaultService: home.ID(),
+			HostRules: compute.RegionUrlMapHostRuleArray{
+				&compute.RegionUrlMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+				&compute.RegionUrlMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: home.ID(),
+					PathRules: compute.RegionUrlMapPathMatcherPathRuleArray{
+						&compute.RegionUrlMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/home"),
+							},
+							Service: home.ID(),
+						},
+						&compute.RegionUrlMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/login"),
+							},
+							Service: login.ID(),
+						},
+					},
+				},
+			},
+			Tests: compute.RegionUrlMapTestArray{
+				&compute.RegionUrlMapTestArgs{
+					Service: home.ID(),
+					Host:    pulumi.String("hi.com"),
+					Path:    pulumi.String("/home"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default",
+    region="us-central1",
+    check_interval_sec=1,
+    timeout_sec=1,
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        port=80,
+        request_path="/",
+    ))
+login = gcp.compute.RegionBackendService("login",
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.id])
+home = gcp.compute.RegionBackendService("home",
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.id])
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    region="us-central1",
+    description="a description",
+    default_service=home.id,
+    host_rules=[gcp.compute.RegionUrlMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.RegionUrlMapPathMatcherArgs(
+        name="allpaths",
+        default_service=home.id,
+        path_rules=[
+            gcp.compute.RegionUrlMapPathMatcherPathRuleArgs(
+                paths=["/home"],
+                service=home.id,
+            ),
+            gcp.compute.RegionUrlMapPathMatcherPathRuleArgs(
+                paths=["/login"],
+                service=login.id,
+            ),
+        ],
+    )],
+    tests=[gcp.compute.RegionUrlMapTestArgs(
+        service=home.id,
+        host="hi.com",
+        path="/home",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.compute.RegionHealthCheck("default", {
+    region: "us-central1",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    httpHealthCheck: {
+        port: 80,
+        requestPath: "/",
+    },
+});
+const login = new gcp.compute.RegionBackendService("login", {
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [_default.id],
+});
+const home = new gcp.compute.RegionBackendService("home", {
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [_default.id],
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    region: "us-central1",
+    description: "a description",
+    defaultService: home.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: home.id,
+        pathRules: [
+            {
+                paths: ["/home"],
+                service: home.id,
+            },
+            {
+                paths: ["/login"],
+                service: login.id,
+            },
+        ],
+    }],
+    tests: [{
+        service: home.id,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Region Url Map L7 Ilb Path
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.RegionHealthCheck("default", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var home = new Gcp.Compute.RegionBackendService("home", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                @default.Id,
+            },
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+        });
+        var regionurlmap = new Gcp.Compute.RegionUrlMap("regionurlmap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Description = "a description",
+            DefaultService = home.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = home.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/home",
+                            },
+                            RouteAction = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionArgs
+                            {
+                                CorsPolicy = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs
+                                {
+                                    AllowCredentials = true,
+                                    AllowHeaders = 
+                                    {
+                                        "Allowed content",
+                                    },
+                                    AllowMethods = 
+                                    {
+                                        "GET",
+                                    },
+                                    AllowOrigins = 
+                                    {
+                                        "Allowed origin",
+                                    },
+                                    ExposeHeaders = 
+                                    {
+                                        "Exposed header",
+                                    },
+                                    MaxAge = 30,
+                                    Disabled = false,
+                                },
+                                FaultInjectionPolicy = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs
+                                {
+                                    Abort = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs
+                                    {
+                                        HttpStatus = 234,
+                                        Percentage = 5.6,
+                                    },
+                                    Delay = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs
+                                    {
+                                        FixedDelay = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs
+                                        {
+                                            Seconds = "0",
+                                            Nanos = 50000,
+                                        },
+                                        Percentage = 7.8,
+                                    },
+                                },
+                                RequestMirrorPolicy = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs
+                                {
+                                    BackendService = home.Id,
+                                },
+                                RetryPolicy = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs
+                                {
+                                    NumRetries = 4,
+                                    PerTryTimeout = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs
+                                    {
+                                        Seconds = "30",
+                                    },
+                                    RetryConditions = 
+                                    {
+                                        "5xx",
+                                        "deadline-exceeded",
+                                    },
+                                },
+                                Timeout = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs
+                                {
+                                    Seconds = "20",
+                                    Nanos = 750000000,
+                                },
+                                UrlRewrite = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs
+                                {
+                                    HostRewrite = "A replacement header",
+                                    PathPrefixRewrite = "A replacement path",
+                                },
+                                WeightedBackendServices = 
+                                {
+                                    new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs
+                                    {
+                                        BackendService = home.Id,
+                                        Weight = 400,
+                                        HeaderAction = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs
+                                        {
+                                            RequestHeadersToRemoves = 
+                                            {
+                                                "RemoveMe",
+                                            },
+                                            RequestHeadersToAdds = 
+                                            {
+                                                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs
+                                                {
+                                                    HeaderName = "AddMe",
+                                                    HeaderValue = "MyValue",
+                                                    Replace = true,
+                                                },
+                                            },
+                                            ResponseHeadersToRemoves = 
+                                            {
+                                                "RemoveMe",
+                                            },
+                                            ResponseHeadersToAdds = 
+                                            {
+                                                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs
+                                                {
+                                                    HeaderName = "AddMe",
+                                                    HeaderValue = "MyValue",
+                                                    Replace = false,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            Tests = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapTestArgs
+                {
+                    Service = home.Id,
+                    Host = "hi.com",
+                    Path = "/home",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "_default", &compute.RegionHealthCheckArgs{
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				_default.ID(),
+			}),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionUrlMap(ctx, "regionurlmap", &compute.RegionUrlMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: home.ID(),
+			HostRules: compute.RegionUrlMapHostRuleArray{
+				&compute.RegionUrlMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+				&compute.RegionUrlMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: home.ID(),
+					PathRules: compute.RegionUrlMapPathMatcherPathRuleArray{
+						&compute.RegionUrlMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/home"),
+							},
+							RouteAction: &compute.RegionUrlMapPathMatcherPathRuleRouteActionArgs{
+								CorsPolicy: &compute.RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs{
+									AllowCredentials: pulumi.Bool(true),
+									AllowHeaders: pulumi.StringArray{
+										pulumi.String("Allowed content"),
+									},
+									AllowMethods: pulumi.StringArray{
+										pulumi.String("GET"),
+									},
+									AllowOrigins: pulumi.StringArray{
+										pulumi.String("Allowed origin"),
+									},
+									ExposeHeaders: pulumi.StringArray{
+										pulumi.String("Exposed header"),
+									},
+									MaxAge:   pulumi.Int(30),
+									Disabled: pulumi.Bool(false),
+								},
+								FaultInjectionPolicy: &compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs{
+									Abort: &compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs{
+										HttpStatus: pulumi.Int(234),
+										Percentage: pulumi.Float64(5.6),
+									},
+									Delay: &compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs{
+										FixedDelay: &compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs{
+											Seconds: pulumi.String("0"),
+											Nanos:   pulumi.Int(50000),
+										},
+										Percentage: pulumi.Float64(7.8),
+									},
+								},
+								RequestMirrorPolicy: &compute.RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs{
+									BackendService: home.ID(),
+								},
+								RetryPolicy: &compute.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs{
+									NumRetries: pulumi.Int(4),
+									PerTryTimeout: &compute.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs{
+										Seconds: pulumi.String("30"),
+									},
+									RetryConditions: pulumi.StringArray{
+										pulumi.String("5xx"),
+										pulumi.String("deadline-exceeded"),
+									},
+								},
+								Timeout: &compute.RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs{
+									Seconds: pulumi.String("20"),
+									Nanos:   pulumi.Int(750000000),
+								},
+								UrlRewrite: &compute.RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs{
+									HostRewrite:       pulumi.String("A replacement header"),
+									PathPrefixRewrite: pulumi.String("A replacement path"),
+								},
+								WeightedBackendServices: compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArray{
+									&compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs{
+										BackendService: home.ID(),
+										Weight:         pulumi.Int(400),
+										HeaderAction: &compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs{
+											RequestHeadersToRemoves: pulumi.StringArray{
+												pulumi.String("RemoveMe"),
+											},
+											RequestHeadersToAdds: compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArray{
+												&compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs{
+													HeaderName:  pulumi.String("AddMe"),
+													HeaderValue: pulumi.String("MyValue"),
+													Replace:     pulumi.Bool(true),
+												},
+											},
+											ResponseHeadersToRemoves: pulumi.StringArray{
+												pulumi.String("RemoveMe"),
+											},
+											ResponseHeadersToAdds: compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArray{
+												&compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs{
+													HeaderName:  pulumi.String("AddMe"),
+													HeaderValue: pulumi.String("MyValue"),
+													Replace:     pulumi.Bool(false),
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Tests: compute.RegionUrlMapTestArray{
+				&compute.RegionUrlMapTestArgs{
+					Service: home.ID(),
+					Host:    pulumi.String("hi.com"),
+					Path:    pulumi.String("/home"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+    port=80,
+))
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.id],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.id,
+    host_rules=[gcp.compute.RegionUrlMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.RegionUrlMapPathMatcherArgs(
+        name="allpaths",
+        default_service=home.id,
+        path_rules=[gcp.compute.RegionUrlMapPathMatcherPathRuleArgs(
+            paths=["/home"],
+            route_action=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionArgs(
+                cors_policy=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs(
+                    allow_credentials=True,
+                    allow_headers=["Allowed content"],
+                    allow_methods=["GET"],
+                    allow_origins=["Allowed origin"],
+                    expose_headers=["Exposed header"],
+                    max_age=30,
+                    disabled=False,
+                ),
+                fault_injection_policy=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs(
+                    abort=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs(
+                        http_status=234,
+                        percentage=5.6,
+                    ),
+                    delay=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs(
+                        fixed_delay=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs(
+                            seconds="0",
+                            nanos=50000,
+                        ),
+                        percentage=7.8,
+                    ),
+                ),
+                request_mirror_policy=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs(
+                    backend_service=home.id,
+                ),
+                retry_policy={
+                    "numRetries": 4,
+                    "perTryTimeout": {
+                        "seconds": 30,
+                    },
+                    "retryConditions": [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                timeout=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs(
+                    seconds="20",
+                    nanos=750000000,
+                ),
+                url_rewrite=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs(
+                    host_rewrite="A replacement header",
+                    path_prefix_rewrite="A replacement path",
+                ),
+                weighted_backend_services=[gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs(
+                    backend_service=home.id,
+                    weight=400,
+                    header_action={
+                        "requestHeadersToRemoves": ["RemoveMe"],
+                        "requestHeadersToAdds": [{
+                            "headerName": "AddMe",
+                            "headerValue": "MyValue",
+                            "replace": True,
+                        }],
+                        "responseHeadersToRemoves": ["RemoveMe"],
+                        "responseHeadersToAdds": [{
+                            "headerName": "AddMe",
+                            "headerValue": "MyValue",
+                            "replace": False,
+                        }],
+                    },
+                )],
+            ),
+        )],
+    )],
+    tests=[gcp.compute.RegionUrlMapTestArgs(
+        service=home.id,
+        host="hi.com",
+        path="/home",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.compute.RegionHealthCheck("default", {httpHealthCheck: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [_default.id],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: home.id,
+        pathRules: [{
+            paths: ["/home"],
+            routeAction: {
+                corsPolicy: {
+                    allowCredentials: true,
+                    allowHeaders: ["Allowed content"],
+                    allowMethods: ["GET"],
+                    allowOrigins: ["Allowed origin"],
+                    exposeHeaders: ["Exposed header"],
+                    maxAge: 30,
+                    disabled: false,
+                },
+                faultInjectionPolicy: {
+                    abort: {
+                        httpStatus: 234,
+                        percentage: 5.6,
+                    },
+                    delay: {
+                        fixedDelay: {
+                            seconds: 0,
+                            nanos: 50000,
+                        },
+                        percentage: 7.8,
+                    },
+                },
+                requestMirrorPolicy: {
+                    backendService: home.id,
+                },
+                retryPolicy: {
+                    numRetries: 4,
+                    perTryTimeout: {
+                        seconds: 30,
+                    },
+                    retryConditions: [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                timeout: {
+                    seconds: 20,
+                    nanos: 750000000,
+                },
+                urlRewrite: {
+                    hostRewrite: "A replacement header",
+                    pathPrefixRewrite: "A replacement path",
+                },
+                weightedBackendServices: [{
+                    backendService: home.id,
+                    weight: 400,
+                    headerAction: {
+                        requestHeadersToRemoves: ["RemoveMe"],
+                        requestHeadersToAdds: [{
+                            headerName: "AddMe",
+                            headerValue: "MyValue",
+                            replace: true,
+                        }],
+                        responseHeadersToRemoves: ["RemoveMe"],
+                        responseHeadersToAdds: [{
+                            headerName: "AddMe",
+                            headerValue: "MyValue",
+                            replace: false,
+                        }],
+                    },
+                }],
+            },
+        }],
+    }],
+    tests: [{
+        service: home.id,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Region Url Map L7 Ilb Path Partial
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.RegionHealthCheck("default", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var home = new Gcp.Compute.RegionBackendService("home", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                @default.Id,
+            },
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+        });
+        var regionurlmap = new Gcp.Compute.RegionUrlMap("regionurlmap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Description = "a description",
+            DefaultService = home.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = home.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/home",
+                            },
+                            RouteAction = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionArgs
+                            {
+                                RetryPolicy = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs
+                                {
+                                    NumRetries = 4,
+                                    PerTryTimeout = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs
+                                    {
+                                        Seconds = "30",
+                                    },
+                                    RetryConditions = 
+                                    {
+                                        "5xx",
+                                        "deadline-exceeded",
+                                    },
+                                },
+                                Timeout = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs
+                                {
+                                    Seconds = "20",
+                                    Nanos = 750000000,
+                                },
+                                UrlRewrite = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs
+                                {
+                                    HostRewrite = "A replacement header",
+                                    PathPrefixRewrite = "A replacement path",
+                                },
+                                WeightedBackendServices = 
+                                {
+                                    new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs
+                                    {
+                                        BackendService = home.Id,
+                                        Weight = 400,
+                                        HeaderAction = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs
+                                        {
+                                            ResponseHeadersToAdds = 
+                                            {
+                                                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs
+                                                {
+                                                    HeaderName = "AddMe",
+                                                    HeaderValue = "MyValue",
+                                                    Replace = false,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            Tests = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapTestArgs
+                {
+                    Service = home.Id,
+                    Host = "hi.com",
+                    Path = "/home",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "_default", &compute.RegionHealthCheckArgs{
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				_default.ID(),
+			}),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionUrlMap(ctx, "regionurlmap", &compute.RegionUrlMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: home.ID(),
+			HostRules: compute.RegionUrlMapHostRuleArray{
+				&compute.RegionUrlMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+				&compute.RegionUrlMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: home.ID(),
+					PathRules: compute.RegionUrlMapPathMatcherPathRuleArray{
+						&compute.RegionUrlMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/home"),
+							},
+							RouteAction: &compute.RegionUrlMapPathMatcherPathRuleRouteActionArgs{
+								RetryPolicy: &compute.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs{
+									NumRetries: pulumi.Int(4),
+									PerTryTimeout: &compute.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs{
+										Seconds: pulumi.String("30"),
+									},
+									RetryConditions: pulumi.StringArray{
+										pulumi.String("5xx"),
+										pulumi.String("deadline-exceeded"),
+									},
+								},
+								Timeout: &compute.RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs{
+									Seconds: pulumi.String("20"),
+									Nanos:   pulumi.Int(750000000),
+								},
+								UrlRewrite: &compute.RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs{
+									HostRewrite:       pulumi.String("A replacement header"),
+									PathPrefixRewrite: pulumi.String("A replacement path"),
+								},
+								WeightedBackendServices: compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArray{
+									&compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs{
+										BackendService: home.ID(),
+										Weight:         pulumi.Int(400),
+										HeaderAction: &compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs{
+											ResponseHeadersToAdds: compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArray{
+												&compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs{
+													HeaderName:  pulumi.String("AddMe"),
+													HeaderValue: pulumi.String("MyValue"),
+													Replace:     pulumi.Bool(false),
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Tests: compute.RegionUrlMapTestArray{
+				&compute.RegionUrlMapTestArgs{
+					Service: home.ID(),
+					Host:    pulumi.String("hi.com"),
+					Path:    pulumi.String("/home"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+    port=80,
+))
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.id],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.id,
+    host_rules=[gcp.compute.RegionUrlMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.RegionUrlMapPathMatcherArgs(
+        name="allpaths",
+        default_service=home.id,
+        path_rules=[gcp.compute.RegionUrlMapPathMatcherPathRuleArgs(
+            paths=["/home"],
+            route_action=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionArgs(
+                retry_policy={
+                    "numRetries": 4,
+                    "perTryTimeout": {
+                        "seconds": 30,
+                    },
+                    "retryConditions": [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                timeout=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs(
+                    seconds="20",
+                    nanos=750000000,
+                ),
+                url_rewrite=gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs(
+                    host_rewrite="A replacement header",
+                    path_prefix_rewrite="A replacement path",
+                ),
+                weighted_backend_services=[gcp.compute.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs(
+                    backend_service=home.id,
+                    weight=400,
+                    header_action={
+                        "responseHeadersToAdds": [{
+                            "headerName": "AddMe",
+                            "headerValue": "MyValue",
+                            "replace": False,
+                        }],
+                    },
+                )],
+            ),
+        )],
+    )],
+    tests=[gcp.compute.RegionUrlMapTestArgs(
+        service=home.id,
+        host="hi.com",
+        path="/home",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.compute.RegionHealthCheck("default", {httpHealthCheck: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [_default.id],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: home.id,
+        pathRules: [{
+            paths: ["/home"],
+            routeAction: {
+                retryPolicy: {
+                    numRetries: 4,
+                    perTryTimeout: {
+                        seconds: 30,
+                    },
+                    retryConditions: [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                timeout: {
+                    seconds: 20,
+                    nanos: 750000000,
+                },
+                urlRewrite: {
+                    hostRewrite: "A replacement header",
+                    pathPrefixRewrite: "A replacement path",
+                },
+                weightedBackendServices: [{
+                    backendService: home.id,
+                    weight: 400,
+                    headerAction: {
+                        responseHeadersToAdds: [{
+                            headerName: "AddMe",
+                            headerValue: "MyValue",
+                            replace: false,
+                        }],
+                    },
+                }],
+            },
+        }],
+    }],
+    tests: [{
+        service: home.id,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Region Url Map L7 Ilb Route
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.RegionHealthCheck("default", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var home = new Gcp.Compute.RegionBackendService("home", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                @default.Id,
+            },
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+        });
+        var regionurlmap = new Gcp.Compute.RegionUrlMap("regionurlmap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Description = "a description",
+            DefaultService = home.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = home.Id,
+                    RouteRules = 
+                    {
+                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleArgs
+                        {
+                            Priority = 1,
+                            HeaderAction = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleHeaderActionArgs
+                            {
+                                RequestHeadersToRemoves = 
+                                {
+                                    "RemoveMe2",
+                                },
+                                RequestHeadersToAdds = 
+                                {
+                                    new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs
+                                    {
+                                        HeaderName = "AddSomethingElse",
+                                        HeaderValue = "MyOtherValue",
+                                        Replace = true,
+                                    },
+                                },
+                                ResponseHeadersToRemoves = 
+                                {
+                                    "RemoveMe3",
+                                },
+                                ResponseHeadersToAdds = 
+                                {
+                                    new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs
+                                    {
+                                        HeaderName = "AddMe",
+                                        HeaderValue = "MyValue",
+                                        Replace = false,
+                                    },
+                                },
+                            },
+                            MatchRules = 
+                            {
+                                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs
+                                {
+                                    FullPathMatch = "a full path",
+                                    HeaderMatches = 
+                                    {
+                                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs
+                                        {
+                                            HeaderName = "someheader",
+                                            ExactMatch = "match this exactly",
+                                            InvertMatch = true,
+                                        },
+                                    },
+                                    IgnoreCase = true,
+                                    MetadataFilters = 
+                                    {
+                                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs
+                                        {
+                                            FilterMatchCriteria = "MATCH_ANY",
+                                            FilterLabels = 
+                                            {
+                                                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs
+                                                {
+                                                    Name = "PLANET",
+                                                    Value = "MARS",
+                                                },
+                                            },
+                                        },
+                                    },
+                                    QueryParameterMatches = 
+                                    {
+                                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs
+                                        {
+                                            Name = "a query parameter",
+                                            PresentMatch = true,
+                                        },
+                                    },
+                                },
+                            },
+                            UrlRedirect = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs
+                            {
+                                HostRedirect = "A host",
+                                HttpsRedirect = false,
+                                PathRedirect = "some/path",
+                                RedirectResponseCode = "TEMPORARY_REDIRECT",
+                                StripQuery = true,
+                            },
+                        },
+                    },
+                },
+            },
+            Tests = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapTestArgs
+                {
+                    Service = home.Id,
+                    Host = "hi.com",
+                    Path = "/home",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "_default", &compute.RegionHealthCheckArgs{
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				_default.ID(),
+			}),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionUrlMap(ctx, "regionurlmap", &compute.RegionUrlMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: home.ID(),
+			HostRules: compute.RegionUrlMapHostRuleArray{
+				&compute.RegionUrlMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+				&compute.RegionUrlMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: home.ID(),
+					RouteRules: compute.RegionUrlMapPathMatcherRouteRuleArray{
+						&compute.RegionUrlMapPathMatcherRouteRuleArgs{
+							Priority: pulumi.Int(1),
+							HeaderAction: &compute.RegionUrlMapPathMatcherRouteRuleHeaderActionArgs{
+								RequestHeadersToRemoves: pulumi.StringArray{
+									pulumi.String("RemoveMe2"),
+								},
+								RequestHeadersToAdds: compute.RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArray{
+									&compute.RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs{
+										HeaderName:  pulumi.String("AddSomethingElse"),
+										HeaderValue: pulumi.String("MyOtherValue"),
+										Replace:     pulumi.Bool(true),
+									},
+								},
+								ResponseHeadersToRemoves: pulumi.StringArray{
+									pulumi.String("RemoveMe3"),
+								},
+								ResponseHeadersToAdds: compute.RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArray{
+									&compute.RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs{
+										HeaderName:  pulumi.String("AddMe"),
+										HeaderValue: pulumi.String("MyValue"),
+										Replace:     pulumi.Bool(false),
+									},
+								},
+							},
+							MatchRules: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleArray{
+								&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs{
+									FullPathMatch: pulumi.String("a full path"),
+									HeaderMatches: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArray{
+										&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs{
+											HeaderName:  pulumi.String("someheader"),
+											ExactMatch:  pulumi.String("match this exactly"),
+											InvertMatch: pulumi.Bool(true),
+										},
+									},
+									IgnoreCase: pulumi.Bool(true),
+									MetadataFilters: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArray{
+										&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs{
+											FilterMatchCriteria: pulumi.String("MATCH_ANY"),
+											FilterLabels: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArray{
+												&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs{
+													Name:  pulumi.String("PLANET"),
+													Value: pulumi.String("MARS"),
+												},
+											},
+										},
+									},
+									QueryParameterMatches: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArray{
+										&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs{
+											Name:         pulumi.String("a query parameter"),
+											PresentMatch: pulumi.Bool(true),
+										},
+									},
+								},
+							},
+							UrlRedirect: &compute.RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs{
+								HostRedirect:         pulumi.String("A host"),
+								HttpsRedirect:        pulumi.Bool(false),
+								PathRedirect:         pulumi.String("some/path"),
+								RedirectResponseCode: pulumi.String("TEMPORARY_REDIRECT"),
+								StripQuery:           pulumi.Bool(true),
+							},
+						},
+					},
+				},
+			},
+			Tests: compute.RegionUrlMapTestArray{
+				&compute.RegionUrlMapTestArgs{
+					Service: home.ID(),
+					Host:    pulumi.String("hi.com"),
+					Path:    pulumi.String("/home"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+    port=80,
+))
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.id],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.id,
+    host_rules=[gcp.compute.RegionUrlMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.RegionUrlMapPathMatcherArgs(
+        name="allpaths",
+        default_service=home.id,
+        route_rules=[gcp.compute.RegionUrlMapPathMatcherRouteRuleArgs(
+            priority=1,
+            header_action={
+                "requestHeadersToRemoves": ["RemoveMe2"],
+                "requestHeadersToAdds": [{
+                    "headerName": "AddSomethingElse",
+                    "headerValue": "MyOtherValue",
+                    "replace": True,
+                }],
+                "responseHeadersToRemoves": ["RemoveMe3"],
+                "responseHeadersToAdds": [{
+                    "headerName": "AddMe",
+                    "headerValue": "MyValue",
+                    "replace": False,
+                }],
+            },
+            match_rules=[gcp.compute.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs(
+                full_path_match="a full path",
+                header_matches=[gcp.compute.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs(
+                    header_name="someheader",
+                    exact_match="match this exactly",
+                    invert_match=True,
+                )],
+                ignore_case=True,
+                metadata_filters=[{
+                    "filterMatchCriteria": "MATCH_ANY",
+                    "filterLabels": [{
+                        "name": "PLANET",
+                        "value": "MARS",
+                    }],
+                }],
+                query_parameter_matches=[gcp.compute.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
+                    name="a query parameter",
+                    present_match=True,
+                )],
+            )],
+            url_redirect=gcp.compute.RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs(
+                host_redirect="A host",
+                https_redirect=False,
+                path_redirect="some/path",
+                redirect_response_code="TEMPORARY_REDIRECT",
+                strip_query=True,
+            ),
+        )],
+    )],
+    tests=[gcp.compute.RegionUrlMapTestArgs(
+        service=home.id,
+        host="hi.com",
+        path="/home",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.compute.RegionHealthCheck("default", {httpHealthCheck: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [_default.id],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: home.id,
+        routeRules: [{
+            priority: 1,
+            headerAction: {
+                requestHeadersToRemoves: ["RemoveMe2"],
+                requestHeadersToAdds: [{
+                    headerName: "AddSomethingElse",
+                    headerValue: "MyOtherValue",
+                    replace: true,
+                }],
+                responseHeadersToRemoves: ["RemoveMe3"],
+                responseHeadersToAdds: [{
+                    headerName: "AddMe",
+                    headerValue: "MyValue",
+                    replace: false,
+                }],
+            },
+            matchRules: [{
+                fullPathMatch: "a full path",
+                headerMatches: [{
+                    headerName: "someheader",
+                    exactMatch: "match this exactly",
+                    invertMatch: true,
+                }],
+                ignoreCase: true,
+                metadataFilters: [{
+                    filterMatchCriteria: "MATCH_ANY",
+                    filterLabels: [{
+                        name: "PLANET",
+                        value: "MARS",
+                    }],
+                }],
+                queryParameterMatches: [{
+                    name: "a query parameter",
+                    presentMatch: true,
+                }],
+            }],
+            urlRedirect: {
+                hostRedirect: "A host",
+                httpsRedirect: false,
+                pathRedirect: "some/path",
+                redirectResponseCode: "TEMPORARY_REDIRECT",
+                stripQuery: true,
+            },
+        }],
+    }],
+    tests: [{
+        service: home.id,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Region Url Map L7 Ilb Route Partial
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.RegionHealthCheck("default", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var home = new Gcp.Compute.RegionBackendService("home", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                @default.Id,
+            },
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+        });
+        var regionurlmap = new Gcp.Compute.RegionUrlMap("regionurlmap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Description = "a description",
+            DefaultService = home.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = home.Id,
+                    RouteRules = 
+                    {
+                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleArgs
+                        {
+                            Priority = 1,
+                            Service = home.Id,
+                            HeaderAction = new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleHeaderActionArgs
+                            {
+                                RequestHeadersToRemoves = 
+                                {
+                                    "RemoveMe2",
+                                },
+                            },
+                            MatchRules = 
+                            {
+                                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs
+                                {
+                                    FullPathMatch = "a full path",
+                                    HeaderMatches = 
+                                    {
+                                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs
+                                        {
+                                            HeaderName = "someheader",
+                                            ExactMatch = "match this exactly",
+                                            InvertMatch = true,
+                                        },
+                                    },
+                                    QueryParameterMatches = 
+                                    {
+                                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs
+                                        {
+                                            Name = "a query parameter",
+                                            PresentMatch = true,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            Tests = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapTestArgs
+                {
+                    Service = home.Id,
+                    Host = "hi.com",
+                    Path = "/home",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionHealthCheck(ctx, "_default", &compute.RegionHealthCheckArgs{
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				_default.ID(),
+			}),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionUrlMap(ctx, "regionurlmap", &compute.RegionUrlMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: home.ID(),
+			HostRules: compute.RegionUrlMapHostRuleArray{
+				&compute.RegionUrlMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+				&compute.RegionUrlMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: home.ID(),
+					RouteRules: compute.RegionUrlMapPathMatcherRouteRuleArray{
+						&compute.RegionUrlMapPathMatcherRouteRuleArgs{
+							Priority: pulumi.Int(1),
+							Service:  home.ID(),
+							HeaderAction: &compute.RegionUrlMapPathMatcherRouteRuleHeaderActionArgs{
+								RequestHeadersToRemoves: pulumi.StringArray{
+									pulumi.String("RemoveMe2"),
+								},
+							},
+							MatchRules: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleArray{
+								&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs{
+									FullPathMatch: pulumi.String("a full path"),
+									HeaderMatches: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArray{
+										&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs{
+											HeaderName:  pulumi.String("someheader"),
+											ExactMatch:  pulumi.String("match this exactly"),
+											InvertMatch: pulumi.Bool(true),
+										},
+									},
+									QueryParameterMatches: compute.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArray{
+										&compute.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs{
+											Name:         pulumi.String("a query parameter"),
+											PresentMatch: pulumi.Bool(true),
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Tests: compute.RegionUrlMapTestArray{
+				&compute.RegionUrlMapTestArgs{
+					Service: home.ID(),
+					Host:    pulumi.String("hi.com"),
+					Path:    pulumi.String("/home"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+    port=80,
+))
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.id],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.id,
+    host_rules=[gcp.compute.RegionUrlMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.RegionUrlMapPathMatcherArgs(
+        name="allpaths",
+        default_service=home.id,
+        route_rules=[gcp.compute.RegionUrlMapPathMatcherRouteRuleArgs(
+            priority=1,
+            service=home.id,
+            header_action={
+                "requestHeadersToRemoves": ["RemoveMe2"],
+            },
+            match_rules=[gcp.compute.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs(
+                full_path_match="a full path",
+                header_matches=[gcp.compute.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs(
+                    header_name="someheader",
+                    exact_match="match this exactly",
+                    invert_match=True,
+                )],
+                query_parameter_matches=[gcp.compute.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
+                    name="a query parameter",
+                    present_match=True,
+                )],
+            )],
+        )],
+    )],
+    tests=[gcp.compute.RegionUrlMapTestArgs(
+        service=home.id,
+        host="hi.com",
+        path="/home",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.compute.RegionHealthCheck("default", {httpHealthCheck: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [_default.id],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: home.id,
+        routeRules: [{
+            priority: 1,
+            service: home.id,
+            headerAction: {
+                requestHeadersToRemoves: ["RemoveMe2"],
+            },
+            matchRules: [{
+                fullPathMatch: "a full path",
+                headerMatches: [{
+                    headerName: "someheader",
+                    exactMatch: "match this exactly",
+                    invertMatch: true,
+                }],
+                queryParameterMatches: [{
+                    name: "a query parameter",
+                    presentMatch: true,
+                }],
+            }],
+        }],
+    }],
+    tests: [{
+        service: home.id,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegionUrlMap Resource {#create}
@@ -13252,6 +15214,28 @@ This field is required to ensure an empty block is not set. The normal default v
 
 
 
+
+
+## Import
+
+
+RegionUrlMap can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionUrlMap:RegionUrlMap default projects/{{project}}/regions/{{region}}/urlMaps/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionUrlMap:RegionUrlMap default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionUrlMap:RegionUrlMap default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionUrlMap:RegionUrlMap default {{name}}
+```
 
 
 

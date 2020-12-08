@@ -18,6 +18,351 @@ To get more information about StoredInfoType, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-stored-infotypes)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dlp Stored Info Type Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic = new Gcp.DataLoss.PreventionStoredInfoType("basic", new Gcp.DataLoss.PreventionStoredInfoTypeArgs
+        {
+            Description = "Description",
+            DisplayName = "Displayname",
+            Parent = "projects/my-project-name",
+            Regex = new Gcp.DataLoss.Inputs.PreventionStoredInfoTypeRegexArgs
+            {
+                GroupIndexes = 
+                {
+                    2,
+                },
+                Pattern = "patient",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.dataloss.PreventionStoredInfoType("basic",
+    description="Description",
+    display_name="Displayname",
+    parent="projects/my-project-name",
+    regex=gcp.dataloss.PreventionStoredInfoTypeRegexArgs(
+        group_indexes=[2],
+        pattern="patient",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.dataloss.PreventionStoredInfoType("basic", {
+    description: "Description",
+    displayName: "Displayname",
+    parent: "projects/my-project-name",
+    regex: {
+        groupIndexes: [2],
+        pattern: "patient",
+    },
+});
+```
+
+{{% /example %}}
+
+### Dlp Stored Info Type Dictionary
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dictionary = new Gcp.DataLoss.PreventionStoredInfoType("dictionary", new Gcp.DataLoss.PreventionStoredInfoTypeArgs
+        {
+            Description = "Description",
+            Dictionary = new Gcp.DataLoss.Inputs.PreventionStoredInfoTypeDictionaryArgs
+            {
+                WordList = new Gcp.DataLoss.Inputs.PreventionStoredInfoTypeDictionaryWordListArgs
+                {
+                    Words = 
+                    {
+                        "word",
+                        "word2",
+                    },
+                },
+            },
+            DisplayName = "Displayname",
+            Parent = "projects/my-project-name",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dataloss.NewPreventionStoredInfoType(ctx, "dictionary", &dataloss.PreventionStoredInfoTypeArgs{
+			Description: pulumi.String("Description"),
+			Dictionary: &dataloss.PreventionStoredInfoTypeDictionaryArgs{
+				WordList: &dataloss.PreventionStoredInfoTypeDictionaryWordListArgs{
+					Words: pulumi.StringArray{
+						pulumi.String("word"),
+						pulumi.String("word2"),
+					},
+				},
+			},
+			DisplayName: pulumi.String("Displayname"),
+			Parent:      pulumi.String("projects/my-project-name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dictionary = gcp.dataloss.PreventionStoredInfoType("dictionary",
+    description="Description",
+    dictionary=gcp.dataloss.PreventionStoredInfoTypeDictionaryArgs(
+        word_list=gcp.dataloss.PreventionStoredInfoTypeDictionaryWordListArgs(
+            words=[
+                "word",
+                "word2",
+            ],
+        ),
+    ),
+    display_name="Displayname",
+    parent="projects/my-project-name")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dictionary = new gcp.dataloss.PreventionStoredInfoType("dictionary", {
+    description: "Description",
+    dictionary: {
+        wordList: {
+            words: [
+                "word",
+                "word2",
+            ],
+        },
+    },
+    displayName: "Displayname",
+    parent: "projects/my-project-name",
+});
+```
+
+{{% /example %}}
+
+### Dlp Stored Info Type Large Custom Dictionary
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+            ForceDestroy = true,
+        });
+        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("./test-fixtures/dlp/words.txt"),
+        });
+        var large = new Gcp.DataLoss.PreventionStoredInfoType("large", new Gcp.DataLoss.PreventionStoredInfoTypeArgs
+        {
+            Parent = "projects/my-project-name",
+            Description = "Description",
+            DisplayName = "Displayname",
+            LargeCustomDictionary = new Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryArgs
+            {
+                CloudStorageFileSet = new Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs
+                {
+                    Url = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"gs://{bucketName}/{objectName}";
+                    }),
+                },
+                OutputPath = new Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs
+                {
+                    Path = bucket.Name.Apply(name => $"gs://{name}/output/dictionary.txt"),
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+			ForceDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		object, err := storage.NewBucketObject(ctx, "object", &storage.BucketObjectArgs{
+			Bucket: bucket.Name,
+			Source: pulumi.NewFileAsset("./test-fixtures/dlp/words.txt"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dataloss.NewPreventionStoredInfoType(ctx, "large", &dataloss.PreventionStoredInfoTypeArgs{
+			Parent:      pulumi.String("projects/my-project-name"),
+			Description: pulumi.String("Description"),
+			DisplayName: pulumi.String("Displayname"),
+			LargeCustomDictionary: &dataloss.PreventionStoredInfoTypeLargeCustomDictionaryArgs{
+				CloudStorageFileSet: &dataloss.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs{
+					Url: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+						bucketName := _args[0].(string)
+						objectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "gs://", bucketName, "/", objectName), nil
+					}).(pulumi.StringOutput),
+				},
+				OutputPath: &dataloss.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs{
+					Path: bucket.Name.ApplyT(func(name string) (string, error) {
+						return fmt.Sprintf("%v%v%v", "gs://", name, "/output/dictionary.txt"), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket", force_destroy=True)
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/dlp/words.txt"))
+large = gcp.dataloss.PreventionStoredInfoType("large",
+    parent="projects/my-project-name",
+    description="Description",
+    display_name="Displayname",
+    large_custom_dictionary=gcp.dataloss.PreventionStoredInfoTypeLargeCustomDictionaryArgs(
+        cloud_storage_file_set=gcp.dataloss.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs(
+            url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"gs://{bucket_name}/{object_name}"),
+        ),
+        output_path=gcp.dataloss.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs(
+            path=bucket.name.apply(lambda name: f"gs://{name}/output/dictionary.txt"),
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {forceDestroy: true});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/dlp/words.txt"),
+});
+const large = new gcp.dataloss.PreventionStoredInfoType("large", {
+    parent: "projects/my-project-name",
+    description: "Description",
+    displayName: "Displayname",
+    largeCustomDictionary: {
+        cloudStorageFileSet: {
+            url: pulumi.interpolate`gs://${bucket.name}/${object.name}`,
+        },
+        outputPath: {
+            path: pulumi.interpolate`gs://${bucket.name}/output/dictionary.txt`,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PreventionStoredInfoType Resource {#create}
@@ -2393,6 +2738,20 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 
 
+
+
+## Import
+
+
+StoredInfoType can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType default {{parent}}/storedInfoTypes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType default {{parent}}/{{name}}
+```
 
 
 

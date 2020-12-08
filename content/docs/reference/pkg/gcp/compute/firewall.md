@@ -29,6 +29,154 @@ To get more information about Firewall, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Firewall Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var defaultFirewall = new Gcp.Compute.Firewall("defaultFirewall", new Gcp.Compute.FirewallArgs
+        {
+            Network = defaultNetwork.Name,
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "icmp",
+                },
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "80",
+                        "8080",
+                        "1000-2000",
+                    },
+                },
+            },
+            SourceTags = 
+            {
+                "web",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFirewall(ctx, "defaultFirewall", &compute.FirewallArgs{
+			Network: defaultNetwork.Name,
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("icmp"),
+				},
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+						pulumi.String("8080"),
+						pulumi.String("1000-2000"),
+					},
+				},
+			},
+			SourceTags: pulumi.StringArray{
+				pulumi.String("web"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_firewall = gcp.compute.Firewall("defaultFirewall",
+    network=default_network.name,
+    allows=[
+        gcp.compute.FirewallAllowArgs(
+            protocol="icmp",
+        ),
+        gcp.compute.FirewallAllowArgs(
+            protocol="tcp",
+            ports=[
+                "80",
+                "8080",
+                "1000-2000",
+            ],
+        ),
+    ],
+    source_tags=["web"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
+    network: defaultNetwork.name,
+    allows: [
+        {
+            protocol: "icmp",
+        },
+        {
+            protocol: "tcp",
+            ports: [
+                "80",
+                "8080",
+                "1000-2000",
+            ],
+        },
+    ],
+    sourceTags: ["web"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Firewall Resource {#create}
@@ -3086,6 +3234,24 @@ Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 
 
 
+
+
+## Import
+
+
+Firewall can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default projects/{{project}}/global/firewalls/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default {{name}}
+```
 
 
 

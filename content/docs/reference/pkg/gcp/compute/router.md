@@ -18,6 +18,153 @@ To get more information about Router, see:
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Router Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobarNetwork = new Gcp.Compute.Network("foobarNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var foobarRouter = new Gcp.Compute.Router("foobarRouter", new Gcp.Compute.RouterArgs
+        {
+            Network = foobarNetwork.Name,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 64514,
+                AdvertiseMode = "CUSTOM",
+                AdvertisedGroups = 
+                {
+                    "ALL_SUBNETS",
+                },
+                AdvertisedIpRanges = 
+                {
+                    new Gcp.Compute.Inputs.RouterBgpAdvertisedIpRangeArgs
+                    {
+                        Range = "1.2.3.4",
+                    },
+                    new Gcp.Compute.Inputs.RouterBgpAdvertisedIpRangeArgs
+                    {
+                        Range = "6.7.0.0/16",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foobarNetwork, err := compute.NewNetwork(ctx, "foobarNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouter(ctx, "foobarRouter", &compute.RouterArgs{
+			Network: foobarNetwork.Name,
+			Bgp: &compute.RouterBgpArgs{
+				Asn:           pulumi.Int(64514),
+				AdvertiseMode: pulumi.String("CUSTOM"),
+				AdvertisedGroups: pulumi.StringArray{
+					pulumi.String("ALL_SUBNETS"),
+				},
+				AdvertisedIpRanges: compute.RouterBgpAdvertisedIpRangeArray{
+					&compute.RouterBgpAdvertisedIpRangeArgs{
+						Range: pulumi.String("1.2.3.4"),
+					},
+					&compute.RouterBgpAdvertisedIpRangeArgs{
+						Range: pulumi.String("6.7.0.0/16"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foobar_network = gcp.compute.Network("foobarNetwork", auto_create_subnetworks=False)
+foobar_router = gcp.compute.Router("foobarRouter",
+    network=foobar_network.name,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=64514,
+        advertise_mode="CUSTOM",
+        advertised_groups=["ALL_SUBNETS"],
+        advertised_ip_ranges=[
+            {
+                "range": "1.2.3.4",
+            },
+            {
+                "range": "6.7.0.0/16",
+            },
+        ],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foobarNetwork = new gcp.compute.Network("foobarNetwork", {autoCreateSubnetworks: false});
+const foobarRouter = new gcp.compute.Router("foobarRouter", {
+    network: foobarNetwork.name,
+    bgp: {
+        asn: 64514,
+        advertiseMode: "CUSTOM",
+        advertisedGroups: ["ALL_SUBNETS"],
+        advertisedIpRanges: [
+            {
+                range: "1.2.3.4",
+            },
+            {
+                range: "6.7.0.0/16",
+            },
+        ],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Router Resource {#create}
@@ -1653,6 +1800,28 @@ CIDR-formatted string.
 
 
 
+
+
+## Import
+
+
+Router can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/router:Router default projects/{{project}}/regions/{{region}}/routers/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/router:Router default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/router:Router default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/router:Router default {{name}}
+```
 
 
 

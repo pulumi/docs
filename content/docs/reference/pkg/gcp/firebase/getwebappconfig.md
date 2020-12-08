@@ -20,6 +20,7 @@ To get more information about WebApp, see:
 
 
 
+
 ## Using GetWebAppConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

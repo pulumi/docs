@@ -15,6 +15,216 @@ Manages a VM instance resource within GCE. For more information see
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.Instance("default", new Gcp.Compute.InstanceArgs
+        {
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = "debian-cloud/debian-9",
+                },
+            },
+            MachineType = "e2-medium",
+            Metadata = 
+            {
+                { "foo", "bar" },
+            },
+            MetadataStartupScript = "echo hi > /test.txt",
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                    Network = "default",
+                },
+            },
+            ScratchDisks = 
+            {
+                new Gcp.Compute.Inputs.InstanceScratchDiskArgs
+                {
+                    Interface = "SCSI",
+                },
+            },
+            ServiceAccount = new Gcp.Compute.Inputs.InstanceServiceAccountArgs
+            {
+                Scopes = 
+                {
+                    "userinfo-email",
+                    "compute-ro",
+                    "storage-ro",
+                },
+            },
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+            Zone = "us-central1-a",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewInstance(ctx, "_default", &compute.InstanceArgs{
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String("debian-cloud/debian-9"),
+				},
+			},
+			MachineType: pulumi.String("e2-medium"),
+			Metadata: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			MetadataStartupScript: pulumi.String("echo hi > /test.txt"),
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+					Network: pulumi.String("default"),
+				},
+			},
+			ScratchDisks: compute.InstanceScratchDiskArray{
+				&compute.InstanceScratchDiskArgs{
+					Interface: pulumi.String("SCSI"),
+				},
+			},
+			ServiceAccount: &compute.InstanceServiceAccountArgs{
+				Scopes: pulumi.StringArray{
+					pulumi.String("userinfo-email"),
+					pulumi.String("compute-ro"),
+					pulumi.String("storage-ro"),
+				},
+			},
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+				pulumi.String("bar"),
+			},
+			Zone: pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.Instance("default",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image="debian-cloud/debian-9",
+        ),
+    ),
+    machine_type="e2-medium",
+    metadata={
+        "foo": "bar",
+    },
+    metadata_startup_script="echo hi > /test.txt",
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+        network="default",
+    )],
+    scratch_disks=[gcp.compute.InstanceScratchDiskArgs(
+        interface="SCSI",
+    )],
+    service_account=gcp.compute.InstanceServiceAccountArgs(
+        scopes=[
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    ),
+    tags=[
+        "foo",
+        "bar",
+    ],
+    zone="us-central1-a")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultInstance = new gcp.compute.Instance("default", {
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    machineType: "e2-medium",
+    metadata: {
+        foo: "bar",
+    },
+    metadataStartupScript: "echo hi > /test.txt",
+    networkInterfaces: [{
+        accessConfigs: [{}],
+        network: "default",
+    }],
+    // Local SSD disk
+    scratchDisks: [{
+        interface: "SCSI",
+    }],
+    serviceAccount: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+    tags: [
+        "foo",
+        "bar",
+    ],
+    zone: "us-central1-a",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -6600,6 +6810,26 @@ default Google Compute Engine service account is used.
 
 
 
+
+
+## Import
+
+
+Instances can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/instance:Instance default projects/{{project}}/zones/{{zone}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instance:Instance default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instance:Instance default {{name}}
+```
+
+ [custom-vm-types]https://cloud.google.com/dataproc/docs/concepts/compute/custom-machine-types [network-tier]https://cloud.google.com/network-tiers/docs/overview [extended-custom-vm-type]https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#extendedmemory
 
 
 

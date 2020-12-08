@@ -15,6 +15,90 @@ Allows management of Organization policies for a Google Folder. For more informa
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy = Output.Create(Gcp.Folder.GetOrganizationPolicy.InvokeAsync(new Gcp.Folder.GetOrganizationPolicyArgs
+        {
+            Folder = "folders/folderid",
+            Constraint = "constraints/compute.trustedImageProjects",
+        }));
+        this.Version = policy.Apply(policy => policy.Version);
+    }
+
+    [Output("version")]
+    public Output<string> Version { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		policy, err := folder.LookupOrganizationPolicy(ctx, &folder.LookupOrganizationPolicyArgs{
+			Folder:     "folders/folderid",
+			Constraint: "constraints/compute.trustedImageProjects",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("version", policy.Version)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+policy = gcp.folder.get_organization_policy(folder="folders/folderid",
+    constraint="constraints/compute.trustedImageProjects")
+pulumi.export("version", policy.version)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const policy = gcp.folder.getOrganizationPolicy({
+    folder: "folders/folderid",
+    constraint: "constraints/compute.trustedImageProjects",
+});
+export const version = policy.then(policy => policy.version);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetOrganizationPolicy {#using}
 

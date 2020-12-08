@@ -1732,6 +1732,24 @@ unambiguously computed to derive the payload.
 
 
 
+## Import
+
+
+Occurrence can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:containeranalysis/occurence:Occurence default projects/{{project}}/occurrences/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:containeranalysis/occurence:Occurence default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:containeranalysis/occurence:Occurence default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

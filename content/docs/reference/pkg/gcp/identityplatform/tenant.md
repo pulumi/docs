@@ -19,6 +19,84 @@ the marketplace prior to using this resource.
 You must [enable multi-tenancy](https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart) via
 the Cloud Console prior to creating tenants.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Tenant Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tenant = new Gcp.IdentityPlatform.Tenant("tenant", new Gcp.IdentityPlatform.TenantArgs
+        {
+            AllowPasswordSignup = true,
+            DisplayName = "tenant",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/identityplatform"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := identityplatform.NewTenant(ctx, "tenant", &identityplatform.TenantArgs{
+			AllowPasswordSignup: pulumi.Bool(true),
+			DisplayName:         pulumi.String("tenant"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant",
+    allow_password_signup=True,
+    display_name="tenant")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {
+    allowPasswordSignup: true,
+    displayName: "tenant",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Tenant Resource {#create}
@@ -1020,6 +1098,24 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Tenant can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default projects/{{project}}/tenants/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default {{name}}
+```
 
 
 

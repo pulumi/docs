@@ -27,6 +27,90 @@ On import, the `secret` value will not be retrieved.
 > **Warning:** All arguments including `secret` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Storage Hmac Key
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-svc-acc",
+        });
+        var key = new Gcp.Storage.HmacKey("key", new Gcp.Storage.HmacKeyArgs
+        {
+            ServiceAccountEmail = serviceAccount.Email,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		serviceAccount, err := serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
+			AccountId: pulumi.String("my-svc-acc"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewHmacKey(ctx, "key", &storage.HmacKeyArgs{
+			ServiceAccountEmail: serviceAccount.Email,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+service_account = gcp.service_account.Account("serviceAccount", account_id="my-svc-acc")
+key = gcp.storage.HmacKey("key", service_account_email=service_account.email)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serviceAccount = new gcp.serviceAccount.Account("serviceAccount", {accountId: "my-svc-acc"});
+const key = new gcp.storage.HmacKey("key", {serviceAccountEmail: serviceAccount.email});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HmacKey Resource {#create}
@@ -1116,6 +1200,24 @@ Possible values are `ACTIVE` and `INACTIVE`.
 
 
 
+
+
+## Import
+
+
+HmacKey can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:storage/hmacKey:HmacKey default projects/{{project}}/hmacKeys/{{access_id}}
+```
+
+```sh
+ $ pulumi import gcp:storage/hmacKey:HmacKey default {{project}}/{{access_id}}
+```
+
+```sh
+ $ pulumi import gcp:storage/hmacKey:HmacKey default {{access_id}}
+```
 
 
 

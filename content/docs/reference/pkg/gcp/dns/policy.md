@@ -19,6 +19,192 @@ To get more information about Policy, see:
 * How-to Guides
     * [Using DNS server policies](https://cloud.google.com/dns/zones/#using-dns-server-policies)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dns Policy Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network_1 = new Gcp.Compute.Network("network-1", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var network_2 = new Gcp.Compute.Network("network-2", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var example_policy = new Gcp.Dns.Policy("example-policy", new Gcp.Dns.PolicyArgs
+        {
+            EnableInboundForwarding = true,
+            EnableLogging = true,
+            AlternativeNameServerConfig = new Gcp.Dns.Inputs.PolicyAlternativeNameServerConfigArgs
+            {
+                TargetNameServers = 
+                {
+                    new Gcp.Dns.Inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs
+                    {
+                        Ipv4Address = "172.16.1.10",
+                        ForwardingPath = "private",
+                    },
+                    new Gcp.Dns.Inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs
+                    {
+                        Ipv4Address = "172.16.1.20",
+                    },
+                },
+            },
+            Networks = 
+            {
+                new Gcp.Dns.Inputs.PolicyNetworkArgs
+                {
+                    NetworkUrl = network_1.Id,
+                },
+                new Gcp.Dns.Inputs.PolicyNetworkArgs
+                {
+                    NetworkUrl = network_2.Id,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "network_1", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetwork(ctx, "network_2", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewPolicy(ctx, "example_policy", &dns.PolicyArgs{
+			EnableInboundForwarding: pulumi.Bool(true),
+			EnableLogging:           pulumi.Bool(true),
+			AlternativeNameServerConfig: &dns.PolicyAlternativeNameServerConfigArgs{
+				TargetNameServers: dns.PolicyAlternativeNameServerConfigTargetNameServerArray{
+					&dns.PolicyAlternativeNameServerConfigTargetNameServerArgs{
+						Ipv4Address:    pulumi.String("172.16.1.10"),
+						ForwardingPath: pulumi.String("private"),
+					},
+					&dns.PolicyAlternativeNameServerConfigTargetNameServerArgs{
+						Ipv4Address: pulumi.String("172.16.1.20"),
+					},
+				},
+			},
+			Networks: dns.PolicyNetworkArray{
+				&dns.PolicyNetworkArgs{
+					NetworkUrl: network_1.ID(),
+				},
+				&dns.PolicyNetworkArgs{
+					NetworkUrl: network_2.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
+network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
+example_policy = gcp.dns.Policy("example-policy",
+    enable_inbound_forwarding=True,
+    enable_logging=True,
+    alternative_name_server_config=gcp.dns.PolicyAlternativeNameServerConfigArgs(
+        target_name_servers=[
+            gcp.dns.PolicyAlternativeNameServerConfigTargetNameServerArgs(
+                ipv4_address="172.16.1.10",
+                forwarding_path="private",
+            ),
+            gcp.dns.PolicyAlternativeNameServerConfigTargetNameServerArgs(
+                ipv4_address="172.16.1.20",
+            ),
+        ],
+    ),
+    networks=[
+        gcp.dns.PolicyNetworkArgs(
+            network_url=network_1.id,
+        ),
+        gcp.dns.PolicyNetworkArgs(
+            network_url=network_2.id,
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network_1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
+const network_2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
+const example_policy = new gcp.dns.Policy("example-policy", {
+    enableInboundForwarding: true,
+    enableLogging: true,
+    alternativeNameServerConfig: {
+        targetNameServers: [
+            {
+                ipv4Address: "172.16.1.10",
+                forwardingPath: "private",
+            },
+            {
+                ipv4Address: "172.16.1.20",
+            },
+        ],
+    },
+    networks: [
+        {
+            networkUrl: network_1.id,
+        },
+        {
+            networkUrl: network_2.id,
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}
@@ -1508,6 +1694,24 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 
 
 
+
+
+## Import
+
+
+Policy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dns/policy:Policy default projects/{{project}}/policies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/policy:Policy default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/policy:Policy default {{name}}
+```
 
 
 

@@ -18,6 +18,93 @@ To get more information about DomainMapping, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### App Engine Domain Mapping Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var domainMapping = new Gcp.AppEngine.DomainMapping("domainMapping", new Gcp.AppEngine.DomainMappingArgs
+        {
+            DomainName = "verified-domain.com",
+            SslSettings = new Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs
+            {
+                SslManagementType = "AUTOMATIC",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := appengine.NewDomainMapping(ctx, "domainMapping", &appengine.DomainMappingArgs{
+			DomainName: pulumi.String("verified-domain.com"),
+			SslSettings: &appengine.DomainMappingSslSettingsArgs{
+				SslManagementType: pulumi.String("AUTOMATIC"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+domain_mapping = gcp.appengine.DomainMapping("domainMapping",
+    domain_name="verified-domain.com",
+    ssl_settings=gcp.appengine.DomainMappingSslSettingsArgs(
+        ssl_management_type="AUTOMATIC",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
+    domainName: "verified-domain.com",
+    sslSettings: {
+        sslManagementType: "AUTOMATIC",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainMapping Resource {#create}
@@ -1441,6 +1528,24 @@ field will be left empty. To remove SSL support while there is still a pending m
 
 
 
+
+
+## Import
+
+
+DomainMapping can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/domainMapping:DomainMapping default apps/{{project}}/domainMappings/{{domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{project}}/{{domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{domain_name}}
+```
 
 
 

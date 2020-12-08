@@ -25,6 +25,110 @@ To get more information about Reservation, see:
 * How-to Guides
     * [Reserving zonal resources](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Reservation Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gceReservation = new Gcp.Compute.Reservation("gceReservation", new Gcp.Compute.ReservationArgs
+        {
+            SpecificReservation = new Gcp.Compute.Inputs.ReservationSpecificReservationArgs
+            {
+                Count = 1,
+                InstanceProperties = new Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesArgs
+                {
+                    MachineType = "n2-standard-2",
+                    MinCpuPlatform = "Intel Cascade Lake",
+                },
+            },
+            Zone = "us-central1-a",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewReservation(ctx, "gceReservation", &compute.ReservationArgs{
+			SpecificReservation: &compute.ReservationSpecificReservationArgs{
+				Count: pulumi.Int(1),
+				InstanceProperties: &compute.ReservationSpecificReservationInstancePropertiesArgs{
+					MachineType:    pulumi.String("n2-standard-2"),
+					MinCpuPlatform: pulumi.String("Intel Cascade Lake"),
+				},
+			},
+			Zone: pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+gce_reservation = gcp.compute.Reservation("gceReservation",
+    specific_reservation=gcp.compute.ReservationSpecificReservationArgs(
+        count=1,
+        instance_properties=gcp.compute.ReservationSpecificReservationInstancePropertiesArgs(
+            machine_type="n2-standard-2",
+            min_cpu_platform="Intel Cascade Lake",
+        ),
+    ),
+    zone="us-central1-a")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const gceReservation = new gcp.compute.Reservation("gce_reservation", {
+    specificReservation: {
+        count: 1,
+        instanceProperties: {
+            machineType: "n2-standard-2",
+            minCpuPlatform: "Intel Cascade Lake",
+        },
+    },
+    zone: "us-central1-a",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Reservation Resource {#create}
@@ -2164,6 +2268,28 @@ Possible values are `SCSI` and `NVME`.
 
 
 
+
+
+## Import
+
+
+Reservation can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/reservation:Reservation default projects/{{project}}/zones/{{zone}}/reservations/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/reservation:Reservation default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/reservation:Reservation default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/reservation:Reservation default {{name}}
+```
 
 
 

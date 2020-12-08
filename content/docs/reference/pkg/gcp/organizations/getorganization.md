@@ -12,6 +12,78 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 
 Get information about a Google Cloud Organization. Note that you must have the `roles/resourcemanager.organizationViewer` role (or equivalent permissions) at the organization level to use this datasource.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const org = gcp.organizations.getOrganization({
+    domain: "example.com",
+});
+const sales = new gcp.organizations.Folder("sales", {
+    displayName: "Sales",
+    parent: org.then(org => org.name),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+org = gcp.organizations.get_organization(domain="example.com")
+sales = gcp.organizations.Folder("sales",
+    display_name="Sales",
+    parent=org.name)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var org = Output.Create(Gcp.Organizations.GetOrganization.InvokeAsync(new Gcp.Organizations.GetOrganizationArgs
+        {
+            Domain = "example.com",
+        }));
+        var sales = new Gcp.Organizations.Folder("sales", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Sales",
+            Parent = org.Apply(org => org.Name),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "example.com"
+		org, err := organizations.GetOrganization(ctx, &organizations.GetOrganizationArgs{
+			Domain: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = organizations.NewFolder(ctx, "sales", &organizations.FolderArgs{
+			DisplayName: pulumi.String("Sales"),
+			Parent:      pulumi.String(org.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
 
 
 ## Using GetOrganization {#using}

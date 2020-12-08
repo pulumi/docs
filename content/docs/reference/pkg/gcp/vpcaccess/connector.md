@@ -18,6 +18,88 @@ To get more information about Connector, see:
 * How-to Guides
     * [Configuring Serverless VPC Access](https://cloud.google.com/vpc/docs/configure-serverless-vpc-access)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VPC Access Connector
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connector = new Gcp.VpcAccess.Connector("connector", new Gcp.VpcAccess.ConnectorArgs
+        {
+            IpCidrRange = "10.8.0.0/28",
+            Network = "default",
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/vpcaccess"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := vpcaccess.NewConnector(ctx, "connector", &vpcaccess.ConnectorArgs{
+			IpCidrRange: pulumi.String("10.8.0.0/28"),
+			Network:     pulumi.String("default"),
+			Region:      pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+connector = gcp.vpcaccess.Connector("connector",
+    ip_cidr_range="10.8.0.0/28",
+    network="default",
+    region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const connector = new gcp.vpcaccess.Connector("connector", {
+    ipCidrRange: "10.8.0.0/28",
+    network: "default",
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connector Resource {#create}
@@ -1267,6 +1349,28 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Connector can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default projects/{{project}}/locations/{{region}}/connectors/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default {{name}}
+```
 
 
 

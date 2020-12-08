@@ -15,6 +15,178 @@ Represents a machine learning solution.
 A model can have multiple versions, each of which is a deployed, trained model
 ready to receive prediction requests. The model itself is just a container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Ml Model Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
+        {
+            Description = "My model",
+            Regions = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/ml"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ml.NewEngineModel(ctx, "_default", &ml.EngineModelArgs{
+			Description: pulumi.String("My model"),
+			Regions:     pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.ml.EngineModel("default",
+    description="My model",
+    regions="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultEngineModel = new gcp.ml.EngineModel("default", {
+    description: "My model",
+    regions: "us-central1",
+});
+```
+
+{{% /example %}}
+
+### Ml Model Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
+        {
+            Description = "My model",
+            Labels = 
+            {
+                { "my_model", "foo" },
+            },
+            OnlinePredictionConsoleLogging = true,
+            OnlinePredictionLogging = true,
+            Regions = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/ml"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ml.NewEngineModel(ctx, "_default", &ml.EngineModelArgs{
+			Description: pulumi.String("My model"),
+			Labels: pulumi.StringMap{
+				"my_model": pulumi.String("foo"),
+			},
+			OnlinePredictionConsoleLogging: pulumi.Bool(true),
+			OnlinePredictionLogging:        pulumi.Bool(true),
+			Regions:                        pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.ml.EngineModel("default",
+    description="My model",
+    labels={
+        "my_model": "foo",
+    },
+    online_prediction_console_logging=True,
+    online_prediction_logging=True,
+    regions="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultEngineModel = new gcp.ml.EngineModel("default", {
+    description: "My model",
+    labels: {
+        my_model: "foo",
+    },
+    onlinePredictionConsoleLogging: true,
+    onlinePredictionLogging: true,
+    regions: "us-central1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EngineModel Resource {#create}
@@ -1296,6 +1468,24 @@ Currently only one region per model is supported
 
 
 
+
+
+## Import
+
+
+Model can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:ml/engineModel:EngineModel default projects/{{project}}/models/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:ml/engineModel:EngineModel default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:ml/engineModel:EngineModel default {{name}}
+```
 
 
 

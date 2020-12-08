@@ -15,6 +15,92 @@ Manages a Cloud Router interface. For more information see
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/routers).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new Gcp.Compute.RouterInterface("foobar", new Gcp.Compute.RouterInterfaceArgs
+        {
+            IpRange = "169.254.1.1/30",
+            Region = "us-central1",
+            Router = "router-1",
+            VpnTunnel = "tunnel-1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRouterInterface(ctx, "foobar", &compute.RouterInterfaceArgs{
+			IpRange:   pulumi.String("169.254.1.1/30"),
+			Region:    pulumi.String("us-central1"),
+			Router:    pulumi.String("router-1"),
+			VpnTunnel: pulumi.String("tunnel-1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foobar = gcp.compute.RouterInterface("foobar",
+    ip_range="169.254.1.1/30",
+    region="us-central1",
+    router="router-1",
+    vpn_tunnel="tunnel-1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foobar = new gcp.compute.RouterInterface("foobar", {
+    ipRange: "169.254.1.1/30",
+    region: "us-central1",
+    router: "router-1",
+    vpnTunnel: "tunnel-1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RouterInterface Resource {#create}
@@ -1168,6 +1254,16 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
 
 
 
+
+
+## Import
+
+
+Router interfaces can be imported using the `region`, `router`, and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:compute/routerInterface:RouterInterface foobar us-central1/router-1/interface-1
+```
 
 
 

@@ -18,6 +18,902 @@ To get more information about InspectTemplate, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-templates-inspect)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dlp Inspect Template Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic = new Gcp.DataLoss.PreventionInspectTemplate("basic", new Gcp.DataLoss.PreventionInspectTemplateArgs
+        {
+            Description = "My description",
+            DisplayName = "display_name",
+            InspectConfig = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigArgs
+            {
+                InfoTypes = 
+                {
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs
+                    {
+                        Name = "EMAIL_ADDRESS",
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs
+                    {
+                        Name = "PERSON_NAME",
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs
+                    {
+                        Name = "LAST_NAME",
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs
+                    {
+                        Name = "DOMAIN_NAME",
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs
+                    {
+                        Name = "PHONE_NUMBER",
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs
+                    {
+                        Name = "FIRST_NAME",
+                    },
+                },
+                Limits = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigLimitsArgs
+                {
+                    MaxFindingsPerInfoType = 
+                    {
+                        
+                        {
+                            { "infoType", 
+                            {
+                                { "name", "PERSON_NAME" },
+                            } },
+                            { "maxFindings", "75" },
+                        },
+                        
+                        {
+                            { "infoType", 
+                            {
+                                { "name", "LAST_NAME" },
+                            } },
+                            { "maxFindings", "80" },
+                        },
+                    },
+                    MaxFindingsPerItem = 10,
+                    MaxFindingsPerRequest = 50,
+                },
+                MinLikelihood = "UNLIKELY",
+                RuleSets = 
+                {
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetArgs
+                    {
+                        InfoTypes = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "EMAIL_ADDRESS",
+                            },
+                        },
+                        Rules = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs
+                            {
+                                ExclusionRule = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs
+                                {
+                                    MatchingType = "MATCHING_TYPE_FULL_MATCH",
+                                    Regex = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs
+                                    {
+                                        Pattern = ".+@example.com",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetArgs
+                    {
+                        InfoTypes = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "EMAIL_ADDRESS",
+                            },
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "DOMAIN_NAME",
+                            },
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "PHONE_NUMBER",
+                            },
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "PERSON_NAME",
+                            },
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "FIRST_NAME",
+                            },
+                        },
+                        Rules = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs
+                            {
+                                ExclusionRule = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs
+                                {
+                                    Dictionary = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs
+                                    {
+                                        WordList = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs
+                                        {
+                                            Words = 
+                                            {
+                                                "TEST",
+                                            },
+                                        },
+                                    },
+                                    MatchingType = "MATCHING_TYPE_PARTIAL_MATCH",
+                                },
+                            },
+                        },
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetArgs
+                    {
+                        InfoTypes = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "PERSON_NAME",
+                            },
+                        },
+                        Rules = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs
+                            {
+                                HotwordRule = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs
+                                {
+                                    HotwordRegex = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs
+                                    {
+                                        Pattern = "patient",
+                                    },
+                                    LikelihoodAdjustment = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs
+                                    {
+                                        FixedLikelihood = "VERY_LIKELY",
+                                    },
+                                    Proximity = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs
+                                    {
+                                        WindowBefore = 50,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            Parent = "projects/my-project-name",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dataloss.NewPreventionInspectTemplate(ctx, "basic", &dataloss.PreventionInspectTemplateArgs{
+			Description: pulumi.String("My description"),
+			DisplayName: pulumi.String("display_name"),
+			InspectConfig: &dataloss.PreventionInspectTemplateInspectConfigArgs{
+				InfoTypes: dataloss.PreventionInspectTemplateInspectConfigInfoTypeArray{
+					&dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs{
+						Name: pulumi.String("EMAIL_ADDRESS"),
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs{
+						Name: pulumi.String("PERSON_NAME"),
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs{
+						Name: pulumi.String("LAST_NAME"),
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs{
+						Name: pulumi.String("DOMAIN_NAME"),
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs{
+						Name: pulumi.String("PHONE_NUMBER"),
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs{
+						Name: pulumi.String("FIRST_NAME"),
+					},
+				},
+				Limits: &dataloss.PreventionInspectTemplateInspectConfigLimitsArgs{
+					MaxFindingsPerInfoType: pulumi.MapArray{
+						pulumi.Map{
+							"infoType": pulumi.StringMap{
+								"name": pulumi.String("PERSON_NAME"),
+							},
+							"maxFindings": pulumi.String("75"),
+						},
+						pulumi.Map{
+							"infoType": pulumi.StringMap{
+								"name": pulumi.String("LAST_NAME"),
+							},
+							"maxFindings": pulumi.String("80"),
+						},
+					},
+					MaxFindingsPerItem:    pulumi.Int(10),
+					MaxFindingsPerRequest: pulumi.Int(50),
+				},
+				MinLikelihood: pulumi.String("UNLIKELY"),
+				RuleSets: dataloss.PreventionInspectTemplateInspectConfigRuleSetArray{
+					&dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs{
+						InfoTypes: dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("EMAIL_ADDRESS"),
+							},
+						},
+						Rules: dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs{
+								ExclusionRule: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs{
+									MatchingType: pulumi.String("MATCHING_TYPE_FULL_MATCH"),
+									Regex: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs{
+										Pattern: pulumi.String(".+@example.com"),
+									},
+								},
+							},
+						},
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs{
+						InfoTypes: dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("EMAIL_ADDRESS"),
+							},
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("DOMAIN_NAME"),
+							},
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("PHONE_NUMBER"),
+							},
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("PERSON_NAME"),
+							},
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("FIRST_NAME"),
+							},
+						},
+						Rules: dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs{
+								ExclusionRule: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs{
+									Dictionary: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs{
+										WordList: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs{
+											Words: pulumi.StringArray{
+												pulumi.String("TEST"),
+											},
+										},
+									},
+									MatchingType: pulumi.String("MATCHING_TYPE_PARTIAL_MATCH"),
+								},
+							},
+						},
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs{
+						InfoTypes: dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("PERSON_NAME"),
+							},
+						},
+						Rules: dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs{
+								HotwordRule: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs{
+									HotwordRegex: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs{
+										Pattern: pulumi.String("patient"),
+									},
+									LikelihoodAdjustment: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs{
+										FixedLikelihood: pulumi.String("VERY_LIKELY"),
+									},
+									Proximity: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs{
+										WindowBefore: pulumi.Int(50),
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Parent: pulumi.String("projects/my-project-name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.dataloss.PreventionInspectTemplate("basic",
+    description="My description",
+    display_name="display_name",
+    inspect_config=gcp.dataloss.PreventionInspectTemplateInspectConfigArgs(
+        info_types=[
+            gcp.dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs(
+                name="EMAIL_ADDRESS",
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs(
+                name="PERSON_NAME",
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs(
+                name="LAST_NAME",
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs(
+                name="DOMAIN_NAME",
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs(
+                name="PHONE_NUMBER",
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs(
+                name="FIRST_NAME",
+            ),
+        ],
+        limits=gcp.dataloss.PreventionInspectTemplateInspectConfigLimitsArgs(
+            max_findings_per_info_type=[
+                {
+                    "infoType": {
+                        "name": "PERSON_NAME",
+                    },
+                    "maxFindings": "75",
+                },
+                {
+                    "infoType": {
+                        "name": "LAST_NAME",
+                    },
+                    "maxFindings": "80",
+                },
+            ],
+            max_findings_per_item=10,
+            max_findings_per_request=50,
+        ),
+        min_likelihood="UNLIKELY",
+        rule_sets=[
+            gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs(
+                info_types=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                    name="EMAIL_ADDRESS",
+                )],
+                rules=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs(
+                    exclusion_rule=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs(
+                        matching_type="MATCHING_TYPE_FULL_MATCH",
+                        regex=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs(
+                            pattern=".+@example.com",
+                        ),
+                    ),
+                )],
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs(
+                info_types=[
+                    gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                        name="EMAIL_ADDRESS",
+                    ),
+                    gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                        name="DOMAIN_NAME",
+                    ),
+                    gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                        name="PHONE_NUMBER",
+                    ),
+                    gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                        name="PERSON_NAME",
+                    ),
+                    gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                        name="FIRST_NAME",
+                    ),
+                ],
+                rules=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs(
+                    exclusion_rule=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs(
+                        dictionary=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs(
+                            word_list=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs(
+                                words=["TEST"],
+                            ),
+                        ),
+                        matching_type="MATCHING_TYPE_PARTIAL_MATCH",
+                    ),
+                )],
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs(
+                info_types=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                    name="PERSON_NAME",
+                )],
+                rules=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs(
+                    hotword_rule=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs(
+                        hotword_regex=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs(
+                            pattern="patient",
+                        ),
+                        likelihood_adjustment=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs(
+                            fixed_likelihood="VERY_LIKELY",
+                        ),
+                        proximity=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs(
+                            window_before=50,
+                        ),
+                    ),
+                )],
+            ),
+        ],
+    ),
+    parent="projects/my-project-name")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.dataloss.PreventionInspectTemplate("basic", {
+    description: "My description",
+    displayName: "display_name",
+    inspectConfig: {
+        infoTypes: [
+            {
+                name: "EMAIL_ADDRESS",
+            },
+            {
+                name: "PERSON_NAME",
+            },
+            {
+                name: "LAST_NAME",
+            },
+            {
+                name: "DOMAIN_NAME",
+            },
+            {
+                name: "PHONE_NUMBER",
+            },
+            {
+                name: "FIRST_NAME",
+            },
+        ],
+        limits: {
+            maxFindingsPerInfoTypes: [
+                {
+                    infoType: {
+                        name: "PERSON_NAME",
+                    },
+                    maxFindings: 75,
+                },
+                {
+                    infoType: {
+                        name: "LAST_NAME",
+                    },
+                    maxFindings: 80,
+                },
+            ],
+            maxFindingsPerItem: 10,
+            maxFindingsPerRequest: 50,
+        },
+        minLikelihood: "UNLIKELY",
+        ruleSets: [
+            {
+                infoTypes: [{
+                    name: "EMAIL_ADDRESS",
+                }],
+                rules: [{
+                    exclusionRule: {
+                        matchingType: "MATCHING_TYPE_FULL_MATCH",
+                        regex: {
+                            pattern: ".+@example.com",
+                        },
+                    },
+                }],
+            },
+            {
+                infoTypes: [
+                    {
+                        name: "EMAIL_ADDRESS",
+                    },
+                    {
+                        name: "DOMAIN_NAME",
+                    },
+                    {
+                        name: "PHONE_NUMBER",
+                    },
+                    {
+                        name: "PERSON_NAME",
+                    },
+                    {
+                        name: "FIRST_NAME",
+                    },
+                ],
+                rules: [{
+                    exclusionRule: {
+                        dictionary: {
+                            wordList: {
+                                words: ["TEST"],
+                            },
+                        },
+                        matchingType: "MATCHING_TYPE_PARTIAL_MATCH",
+                    },
+                }],
+            },
+            {
+                infoTypes: [{
+                    name: "PERSON_NAME",
+                }],
+                rules: [{
+                    hotwordRule: {
+                        hotwordRegex: {
+                            pattern: "patient",
+                        },
+                        likelihoodAdjustment: {
+                            fixedLikelihood: "VERY_LIKELY",
+                        },
+                        proximity: {
+                            windowBefore: 50,
+                        },
+                    },
+                }],
+            },
+        ],
+    },
+    parent: "projects/my-project-name",
+});
+```
+
+{{% /example %}}
+
+### Dlp Inspect Template Custom Type
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom = new Gcp.DataLoss.PreventionInspectTemplate("custom", new Gcp.DataLoss.PreventionInspectTemplateArgs
+        {
+            Description = "My description",
+            DisplayName = "display_name",
+            InspectConfig = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigArgs
+            {
+                CustomInfoTypes = 
+                {
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs
+                    {
+                        InfoType = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs
+                        {
+                            Name = "MY_CUSTOM_TYPE",
+                        },
+                        Likelihood = "UNLIKELY",
+                        Regex = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs
+                        {
+                            Pattern = "test*",
+                        },
+                    },
+                },
+                InfoTypes = 
+                {
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs
+                    {
+                        Name = "EMAIL_ADDRESS",
+                    },
+                },
+                Limits = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigLimitsArgs
+                {
+                    MaxFindingsPerItem = 10,
+                    MaxFindingsPerRequest = 50,
+                },
+                MinLikelihood = "UNLIKELY",
+                RuleSets = 
+                {
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetArgs
+                    {
+                        InfoTypes = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "EMAIL_ADDRESS",
+                            },
+                        },
+                        Rules = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs
+                            {
+                                ExclusionRule = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs
+                                {
+                                    MatchingType = "MATCHING_TYPE_FULL_MATCH",
+                                    Regex = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs
+                                    {
+                                        Pattern = ".+@example.com",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetArgs
+                    {
+                        InfoTypes = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs
+                            {
+                                Name = "MY_CUSTOM_TYPE",
+                            },
+                        },
+                        Rules = 
+                        {
+                            new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs
+                            {
+                                HotwordRule = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs
+                                {
+                                    HotwordRegex = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs
+                                    {
+                                        Pattern = "example*",
+                                    },
+                                    LikelihoodAdjustment = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs
+                                    {
+                                        FixedLikelihood = "VERY_LIKELY",
+                                    },
+                                    Proximity = new Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs
+                                    {
+                                        WindowBefore = 50,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            Parent = "projects/my-project-name",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dataloss.NewPreventionInspectTemplate(ctx, "custom", &dataloss.PreventionInspectTemplateArgs{
+			Description: pulumi.String("My description"),
+			DisplayName: pulumi.String("display_name"),
+			InspectConfig: &dataloss.PreventionInspectTemplateInspectConfigArgs{
+				CustomInfoTypes: dataloss.PreventionInspectTemplateInspectConfigCustomInfoTypeArray{
+					&dataloss.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs{
+						InfoType: &dataloss.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs{
+							Name: pulumi.String("MY_CUSTOM_TYPE"),
+						},
+						Likelihood: pulumi.String("UNLIKELY"),
+						Regex: &dataloss.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs{
+							Pattern: pulumi.String("test*"),
+						},
+					},
+				},
+				InfoTypes: dataloss.PreventionInspectTemplateInspectConfigInfoTypeArray{
+					&dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs{
+						Name: pulumi.String("EMAIL_ADDRESS"),
+					},
+				},
+				Limits: &dataloss.PreventionInspectTemplateInspectConfigLimitsArgs{
+					MaxFindingsPerItem:    pulumi.Int(10),
+					MaxFindingsPerRequest: pulumi.Int(50),
+				},
+				MinLikelihood: pulumi.String("UNLIKELY"),
+				RuleSets: dataloss.PreventionInspectTemplateInspectConfigRuleSetArray{
+					&dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs{
+						InfoTypes: dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("EMAIL_ADDRESS"),
+							},
+						},
+						Rules: dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs{
+								ExclusionRule: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs{
+									MatchingType: pulumi.String("MATCHING_TYPE_FULL_MATCH"),
+									Regex: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs{
+										Pattern: pulumi.String(".+@example.com"),
+									},
+								},
+							},
+						},
+					},
+					&dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs{
+						InfoTypes: dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs{
+								Name: pulumi.String("MY_CUSTOM_TYPE"),
+							},
+						},
+						Rules: dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArray{
+							&dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs{
+								HotwordRule: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs{
+									HotwordRegex: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs{
+										Pattern: pulumi.String("example*"),
+									},
+									LikelihoodAdjustment: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs{
+										FixedLikelihood: pulumi.String("VERY_LIKELY"),
+									},
+									Proximity: &dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs{
+										WindowBefore: pulumi.Int(50),
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Parent: pulumi.String("projects/my-project-name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom = gcp.dataloss.PreventionInspectTemplate("custom",
+    description="My description",
+    display_name="display_name",
+    inspect_config=gcp.dataloss.PreventionInspectTemplateInspectConfigArgs(
+        custom_info_types=[gcp.dataloss.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(
+            info_type=gcp.dataloss.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs(
+                name="MY_CUSTOM_TYPE",
+            ),
+            likelihood="UNLIKELY",
+            regex=gcp.dataloss.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs(
+                pattern="test*",
+            ),
+        )],
+        info_types=[gcp.dataloss.PreventionInspectTemplateInspectConfigInfoTypeArgs(
+            name="EMAIL_ADDRESS",
+        )],
+        limits=gcp.dataloss.PreventionInspectTemplateInspectConfigLimitsArgs(
+            max_findings_per_item=10,
+            max_findings_per_request=50,
+        ),
+        min_likelihood="UNLIKELY",
+        rule_sets=[
+            gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs(
+                info_types=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                    name="EMAIL_ADDRESS",
+                )],
+                rules=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs(
+                    exclusion_rule=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs(
+                        matching_type="MATCHING_TYPE_FULL_MATCH",
+                        regex=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs(
+                            pattern=".+@example.com",
+                        ),
+                    ),
+                )],
+            ),
+            gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetArgs(
+                info_types=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(
+                    name="MY_CUSTOM_TYPE",
+                )],
+                rules=[gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleArgs(
+                    hotword_rule=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs(
+                        hotword_regex=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs(
+                            pattern="example*",
+                        ),
+                        likelihood_adjustment=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs(
+                            fixed_likelihood="VERY_LIKELY",
+                        ),
+                        proximity=gcp.dataloss.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs(
+                            window_before=50,
+                        ),
+                    ),
+                )],
+            ),
+        ],
+    ),
+    parent="projects/my-project-name")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
+    description: "My description",
+    displayName: "display_name",
+    inspectConfig: {
+        customInfoTypes: [{
+            infoType: {
+                name: "MY_CUSTOM_TYPE",
+            },
+            likelihood: "UNLIKELY",
+            regex: {
+                pattern: "test*",
+            },
+        }],
+        infoTypes: [{
+            name: "EMAIL_ADDRESS",
+        }],
+        limits: {
+            maxFindingsPerItem: 10,
+            maxFindingsPerRequest: 50,
+        },
+        minLikelihood: "UNLIKELY",
+        ruleSets: [
+            {
+                infoTypes: [{
+                    name: "EMAIL_ADDRESS",
+                }],
+                rules: [{
+                    exclusionRule: {
+                        matchingType: "MATCHING_TYPE_FULL_MATCH",
+                        regex: {
+                            pattern: ".+@example.com",
+                        },
+                    },
+                }],
+            },
+            {
+                infoTypes: [{
+                    name: "MY_CUSTOM_TYPE",
+                }],
+                rules: [{
+                    hotwordRule: {
+                        hotwordRegex: {
+                            pattern: "example*",
+                        },
+                        likelihoodAdjustment: {
+                            fixedLikelihood: "VERY_LIKELY",
+                        },
+                        proximity: {
+                            windowBefore: 50,
+                        },
+                    },
+                }],
+            },
+        ],
+    },
+    parent: "projects/my-project-name",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PreventionInspectTemplate Resource {#create}
@@ -4825,6 +5721,20 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 
 
+
+
+## Import
+
+
+InspectTemplate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate default {{parent}}/inspectTemplates/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate default {{parent}}/{{name}}
+```
 
 
 

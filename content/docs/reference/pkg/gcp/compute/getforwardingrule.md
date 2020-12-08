@@ -13,6 +13,80 @@ meta_desc: "Explore the GetForwardingRule function of the compute module, includ
 Get a forwarding rule within GCE from its name.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_forwarding_rule = Output.Create(Gcp.Compute.GetForwardingRule.InvokeAsync(new Gcp.Compute.GetForwardingRuleArgs
+        {
+            Name = "forwarding-rule-us-east1",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.LookupForwardingRule(ctx, &compute.LookupForwardingRuleArgs{
+			Name: "forwarding-rule-us-east1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_forwarding_rule = gcp.compute.get_forwarding_rule(name="forwarding-rule-us-east1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_forwarding_rule = pulumi.output(gcp.compute.getForwardingRule({
+    name: "forwarding-rule-us-east1",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetForwardingRule {#using}
 

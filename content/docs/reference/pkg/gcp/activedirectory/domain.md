@@ -18,6 +18,93 @@ To get more information about Domain, see:
 * How-to Guides
     * [Managed Microsoft Active Directory Quickstart](https://cloud.google.com/managed-microsoft-ad/docs/quickstarts)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Active Directory Domain Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ad_domain = new Gcp.ActiveDirectory.Domain("ad-domain", new Gcp.ActiveDirectory.DomainArgs
+        {
+            DomainName = "tfgen.org.com",
+            Locations = 
+            {
+                "us-central1",
+            },
+            ReservedIpRange = "192.168.255.0/24",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/activedirectory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := activedirectory.NewDomain(ctx, "ad_domain", &activedirectory.DomainArgs{
+			DomainName: pulumi.String("tfgen.org.com"),
+			Locations: pulumi.StringArray{
+				pulumi.String("us-central1"),
+			},
+			ReservedIpRange: pulumi.String("192.168.255.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ad_domain = gcp.activedirectory.Domain("ad-domain",
+    domain_name="tfgen.org.com",
+    locations=["us-central1"],
+    reserved_ip_range="192.168.255.0/24")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
+    domainName: "tfgen.org.com",
+    locations: ["us-central1"],
+    reservedIpRange: "192.168.255.0/24",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Domain Resource {#create}
@@ -1315,6 +1402,16 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
 
 
 
+
+
+## Import
+
+
+Domain can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:activedirectory/domain:Domain default {{name}}
+```
 
 
 

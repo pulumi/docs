@@ -18,6 +18,165 @@ To get more information about Endpoint, see:
 * How-to Guides
     * [Configuring an endpoint](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_an_endpoint)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Service Directory Endpoint Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleNamespace = new Gcp.ServiceDirectory.Namespace("exampleNamespace", new Gcp.ServiceDirectory.NamespaceArgs
+        {
+            NamespaceId = "example-namespace",
+            Location = "us-central1",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var exampleService = new Gcp.ServiceDirectory.Service("exampleService", new Gcp.ServiceDirectory.ServiceArgs
+        {
+            ServiceId = "example-service",
+            Namespace = exampleNamespace.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var exampleEndpoint = new Gcp.ServiceDirectory.Endpoint("exampleEndpoint", new Gcp.ServiceDirectory.EndpointArgs
+        {
+            EndpointId = "example-endpoint",
+            Service = exampleService.Id,
+            Metadata = 
+            {
+                { "stage", "prod" },
+                { "region", "us-central1" },
+            },
+            Address = "1.2.3.4",
+            Port = 5353,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/servicedirectory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleNamespace, err := servicedirectory.NewNamespace(ctx, "exampleNamespace", &servicedirectory.NamespaceArgs{
+			NamespaceId: pulumi.String("example-namespace"),
+			Location:    pulumi.String("us-central1"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		exampleService, err := servicedirectory.NewService(ctx, "exampleService", &servicedirectory.ServiceArgs{
+			ServiceId: pulumi.String("example-service"),
+			Namespace: exampleNamespace.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = servicedirectory.NewEndpoint(ctx, "exampleEndpoint", &servicedirectory.EndpointArgs{
+			EndpointId: pulumi.String("example-endpoint"),
+			Service:    exampleService.ID(),
+			Metadata: pulumi.StringMap{
+				"stage":  pulumi.String("prod"),
+				"region": pulumi.String("us-central1"),
+			},
+			Address: pulumi.String("1.2.3.4"),
+			Port:    pulumi.Int(5353),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
+    namespace_id="example-namespace",
+    location="us-central1",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+example_service = gcp.servicedirectory.Service("exampleService",
+    service_id="example-service",
+    namespace=example_namespace.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+example_endpoint = gcp.servicedirectory.Endpoint("exampleEndpoint",
+    endpoint_id="example-endpoint",
+    service=example_service.id,
+    metadata={
+        "stage": "prod",
+        "region": "us-central1",
+    },
+    address="1.2.3.4",
+    port=5353,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
+    namespaceId: "example-namespace",
+    location: "us-central1",
+}, {
+    provider: google_beta,
+});
+const exampleService = new gcp.servicedirectory.Service("exampleService", {
+    serviceId: "example-service",
+    namespace: exampleNamespace.id,
+}, {
+    provider: google_beta,
+});
+const exampleEndpoint = new gcp.servicedirectory.Endpoint("exampleEndpoint", {
+    endpointId: "example-endpoint",
+    service: exampleService.id,
+    metadata: {
+        stage: "prod",
+        region: "us-central1",
+    },
+    address: "1.2.3.4",
+    port: 5353,
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Endpoint Resource {#create}
@@ -1035,6 +1194,24 @@ range of [0, 65535]. If unspecified, the default is 0.
 
 
 
+
+
+## Import
+
+
+Endpoint can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:servicedirectory/endpoint:Endpoint default projects/{{project}}/locations/{{location}}/namespaces/{{namespace_id}}/services/{{service_id}}/endpoints/{{endpoint_id}}
+```
+
+```sh
+ $ pulumi import gcp:servicedirectory/endpoint:Endpoint default {{project}}/{{location}}/{{namespace_id}}/{{service_id}}/{{endpoint_id}}
+```
+
+```sh
+ $ pulumi import gcp:servicedirectory/endpoint:Endpoint default {{location}}/{{namespace_id}}/{{service_id}}/{{endpoint_id}}
+```
 
 
 

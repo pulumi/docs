@@ -18,6 +18,173 @@ in the provider configuration. Otherwise the Cloud Identity API will return a 40
 Your account must have the `serviceusage.services.use` permission on the
 `billing_project` you defined.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloud Identity Group Membership User
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @group = new Gcp.CloudIdentity.Group("group", new Gcp.CloudIdentity.GroupArgs
+        {
+            DisplayName = "my-identity-group",
+            Parent = "customers/A01b123xz",
+            GroupKey = new Gcp.CloudIdentity.Inputs.GroupGroupKeyArgs
+            {
+                Id = "my-identity-group@example.com",
+            },
+            Labels = 
+            {
+                { "cloudidentity.googleapis.com/groups.discussion_forum", "" },
+            },
+        });
+        var cloudIdentityGroupMembershipBasic = new Gcp.CloudIdentity.GroupMembership("cloudIdentityGroupMembershipBasic", new Gcp.CloudIdentity.GroupMembershipArgs
+        {
+            Group = @group.Id,
+            PreferredMemberKey = new Gcp.CloudIdentity.Inputs.GroupMembershipPreferredMemberKeyArgs
+            {
+                Id = "cloud_identity_user@example.com",
+            },
+            Roles = 
+            {
+                new Gcp.CloudIdentity.Inputs.GroupMembershipRoleArgs
+                {
+                    Name = "MEMBER",
+                },
+                new Gcp.CloudIdentity.Inputs.GroupMembershipRoleArgs
+                {
+                    Name = "MANAGER",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		group, err := cloudidentity.NewGroup(ctx, "group", &cloudidentity.GroupArgs{
+			DisplayName: pulumi.String("my-identity-group"),
+			Parent:      pulumi.String("customers/A01b123xz"),
+			GroupKey: &cloudidentity.GroupGroupKeyArgs{
+				Id: pulumi.String("my-identity-group@example.com"),
+			},
+			Labels: pulumi.StringMap{
+				"cloudidentity.googleapis.com/groups.discussion_forum": pulumi.String(""),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudidentity.NewGroupMembership(ctx, "cloudIdentityGroupMembershipBasic", &cloudidentity.GroupMembershipArgs{
+			Group: group.ID(),
+			PreferredMemberKey: &cloudidentity.GroupMembershipPreferredMemberKeyArgs{
+				Id: pulumi.String("cloud_identity_user@example.com"),
+			},
+			Roles: cloudidentity.GroupMembershipRoleArray{
+				&cloudidentity.GroupMembershipRoleArgs{
+					Name: pulumi.String("MEMBER"),
+				},
+				&cloudidentity.GroupMembershipRoleArgs{
+					Name: pulumi.String("MANAGER"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+group = gcp.cloudidentity.Group("group",
+    display_name="my-identity-group",
+    parent="customers/A01b123xz",
+    group_key=gcp.cloudidentity.GroupGroupKeyArgs(
+        id="my-identity-group@example.com",
+    ),
+    labels={
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    })
+cloud_identity_group_membership_basic = gcp.cloudidentity.GroupMembership("cloudIdentityGroupMembershipBasic",
+    group=group.id,
+    preferred_member_key=gcp.cloudidentity.GroupMembershipPreferredMemberKeyArgs(
+        id="cloud_identity_user@example.com",
+    ),
+    roles=[
+        gcp.cloudidentity.GroupMembershipRoleArgs(
+            name="MEMBER",
+        ),
+        gcp.cloudidentity.GroupMembershipRoleArgs(
+            name="MANAGER",
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const group = new gcp.cloudidentity.Group("group", {
+    displayName: "my-identity-group",
+    parent: "customers/A01b123xz",
+    groupKey: {
+        id: "my-identity-group@example.com",
+    },
+    labels: {
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    },
+});
+const cloudIdentityGroupMembershipBasic = new gcp.cloudidentity.GroupMembership("cloudIdentityGroupMembershipBasic", {
+    group: group.id,
+    preferredMemberKey: {
+        id: "cloud_identity_user@example.com",
+    },
+    roles: [
+        {
+            name: "MEMBER",
+        },
+        {
+            name: "MANAGER",
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GroupMembership Resource {#create}
@@ -234,7 +401,6 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -289,7 +455,6 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,7 +509,6 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,7 +563,6 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,7 +1001,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -938,7 +1100,6 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1038,7 +1199,6 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,7 +1298,6 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1659,6 +1818,16 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 
 
 
+
+
+## Import
+
+
+GroupMembership can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudidentity/groupMembership:GroupMembership default {{name}}
+```
 
 
 

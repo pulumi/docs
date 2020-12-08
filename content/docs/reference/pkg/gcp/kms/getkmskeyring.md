@@ -19,6 +19,84 @@ A KeyRing is a grouping of CryptoKeys for organizational purposes. A KeyRing bel
 and resides in a specific location.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myKeyRing = Output.Create(Gcp.Kms.GetKMSKeyRing.InvokeAsync(new Gcp.Kms.GetKMSKeyRingArgs
+        {
+            Location = "us-central1",
+            Name = "my-key-ring",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kms.GetKMSKeyRing(ctx, &kms.GetKMSKeyRingArgs{
+			Location: "us-central1",
+			Name:     "my-key-ring",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_key_ring = gcp.kms.get_kms_key_ring(location="us-central1",
+    name="my-key-ring")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
+    location: "us-central1",
+    name: "my-key-ring",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetKMSKeyRing {#using}
 
