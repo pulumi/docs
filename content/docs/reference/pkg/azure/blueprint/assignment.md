@@ -268,7 +268,7 @@ example_assignment = azure.blueprint.Assignment("exampleAssignment",
       }
     }
 """,
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             operator,
             owner,
         ]))

@@ -202,7 +202,7 @@ example_dataset_data_lake_gen2 = azure.datashare.DatasetDataLakeGen2("exampleDat
     storage_account_id=example_storage / account_account["id"],
     file_system_name=example_data_lake_gen2_filesystem.name,
     file_path="myfile.txt",
-    opts=ResourceOptions(depends_on=[example_assignment]))
+    opts=pulumi.ResourceOptions(depends_on=[example_assignment]))
 ```
 
 {{% /example %}}
