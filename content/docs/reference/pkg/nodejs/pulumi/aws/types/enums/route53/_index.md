@@ -3,7 +3,7 @@ title: "Module types/enums/route53"
 title_tag: "Module types/enums/route53 | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/route53"
 meta_desc: "Explore members of the enums/route53 module in the @pulumi/aws package."
-git_sha: "fbc6ab50703a2a173ec5f3800d282dc130df7d38"
+git_sha: "47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="RecordType" data-link-title="RecordType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/types/enums/route53/index.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/types/enums/route53/index.ts#L20">
         type <strong>RecordType</strong>
     </a>
 </h3>

@@ -10,7 +10,7 @@ require (
 )
 
 replace (
+	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 	github.com/pulumi/pulumi/pkg/v2 => ../../../pulumi/pkg
 	github.com/pulumi/pulumi/sdk/v2 => ../../../pulumi/sdk
-	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 )
