@@ -4,7 +4,7 @@ allow_long_title: True
 authors: ["joe-duffy"]
 tags: ["Docker", "Kubernetes"]
 meta_desc: "Go from Dockerfile to a fully running containerized service on your cloud of choice using infrastructure as code."
-date: "2020-12-04"
+date: "2020-12-08"
 meta_image: "containers.png"
 ---
 
