@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationSubnetGroup"
-title_tag: "Resource ReplicationSubnetGroup | Module dms | Package AWS"
+title_tag: "aws.dms.ReplicationSubnetGroup"
 meta_desc: "Explore the ReplicationSubnetGroup resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS (Data Migration Service) replication subnet group resource. DMS replication subnet groups can be created, updated, deleted, and imported."
 ---
 

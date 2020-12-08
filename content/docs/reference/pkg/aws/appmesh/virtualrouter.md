@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualRouter"
-title_tag: "Resource VirtualRouter | Module appmesh | Package AWS"
+title_tag: "aws.appmesh.VirtualRouter"
 meta_desc: "Explore the VirtualRouter resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh virtual router resource."
 ---
 

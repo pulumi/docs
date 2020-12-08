@@ -1,7 +1,7 @@
 
 ---
 title: "SubnetGroup"
-title_tag: "Resource SubnetGroup | Module rds | Package AWS"
+title_tag: "aws.rds.SubnetGroup"
 meta_desc: "Explore the SubnetGroup resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS DB subnet group resource."
 ---
 

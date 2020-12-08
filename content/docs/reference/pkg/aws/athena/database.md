@@ -1,7 +1,7 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Module athena | Package AWS"
+title_tag: "aws.athena.Database"
 meta_desc: "Explore the Database resource of the athena module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Athena database."
 ---
 

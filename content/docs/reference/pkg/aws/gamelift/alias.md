@@ -1,7 +1,7 @@
 
 ---
 title: "Alias"
-title_tag: "Resource Alias | Module gamelift | Package AWS"
+title_tag: "aws.gamelift.Alias"
 meta_desc: "Explore the Alias resource of the gamelift module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Gamelift Alias resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "HealthCheck"
-title_tag: "Resource HealthCheck | Module route53 | Package AWS"
+title_tag: "aws.route53.HealthCheck"
 meta_desc: "Explore the HealthCheck resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route53 health check."
 ---
 

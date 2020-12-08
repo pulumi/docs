@@ -1,7 +1,7 @@
 
 ---
 title: "HttpNamespace"
-title_tag: "Resource HttpNamespace | Module servicediscovery | Package AWS"
+title_tag: "aws.servicediscovery.HttpNamespace"
 meta_desc: "Explore the HttpNamespace resource of the servicediscovery module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

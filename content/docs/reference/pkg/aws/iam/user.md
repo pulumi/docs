@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module iam | Package AWS"
+title_tag: "aws.iam.User"
 meta_desc: "Explore the User resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM user."
 ---
 

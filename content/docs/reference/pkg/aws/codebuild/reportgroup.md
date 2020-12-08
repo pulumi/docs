@@ -1,7 +1,7 @@
 
 ---
 title: "ReportGroup"
-title_tag: "Resource ReportGroup | Module codebuild | Package AWS"
+title_tag: "aws.codebuild.ReportGroup"
 meta_desc: "Explore the ReportGroup resource of the codebuild module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeBuild Report Groups Resource."
 ---
 

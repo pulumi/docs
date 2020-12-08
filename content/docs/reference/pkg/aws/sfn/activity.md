@@ -1,7 +1,7 @@
 
 ---
 title: "Activity"
-title_tag: "Resource Activity | Module sfn | Package AWS"
+title_tag: "aws.sfn.Activity"
 meta_desc: "Explore the Activity resource of the sfn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Step Function Activity resource"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SubnetGroup"
-title_tag: "Resource SubnetGroup | Module redshift | Package AWS"
+title_tag: "aws.redshift.SubnetGroup"
 meta_desc: "Explore the SubnetGroup resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud (Amazon VPC) when creating Amazon Redshift subnet group."
 ---
 

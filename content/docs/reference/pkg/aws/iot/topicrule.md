@@ -1,7 +1,7 @@
 
 ---
 title: "TopicRule"
-title_tag: "Resource TopicRule | Module iot | Package AWS"
+title_tag: "aws.iot.TopicRule"
 meta_desc: "Explore the TopicRule resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

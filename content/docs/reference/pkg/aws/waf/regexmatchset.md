@@ -1,7 +1,7 @@
 
 ---
 title: "RegexMatchSet"
-title_tag: "Resource RegexMatchSet | Module waf | Package AWS"
+title_tag: "aws.waf.RegexMatchSet"
 meta_desc: "Explore the RegexMatchSet resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regex Match Set Resource"
 ---
 

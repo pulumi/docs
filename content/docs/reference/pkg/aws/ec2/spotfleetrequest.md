@@ -1,7 +1,7 @@
 
 ---
 title: "SpotFleetRequest"
-title_tag: "Resource SpotFleetRequest | Module ec2 | Package AWS"
+title_tag: "aws.ec2.SpotFleetRequest"
 meta_desc: "Explore the SpotFleetRequest resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot"
 ---
 

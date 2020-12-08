@@ -1,7 +1,7 @@
 
 ---
 title: "NatGateway"
-title_tag: "Resource NatGateway | Module ec2 | Package AWS"
+title_tag: "aws.ec2.NatGateway"
 meta_desc: "Explore the NatGateway resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a VPC NAT Gateway."
 ---
 

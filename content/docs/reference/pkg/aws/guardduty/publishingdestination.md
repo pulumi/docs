@@ -1,7 +1,7 @@
 
 ---
 title: "PublishingDestination"
-title_tag: "Resource PublishingDestination | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.PublishingDestination"
 meta_desc: "Explore the PublishingDestination resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a GuardDuty PublishingDestination. Requires an existing GuardDuty Detector."
 ---
 

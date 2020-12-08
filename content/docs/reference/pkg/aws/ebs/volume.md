@@ -1,7 +1,7 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Module ebs | Package AWS"
+title_tag: "aws.ebs.Volume"
 meta_desc: "Explore the Volume resource of the ebs module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a single EBS volume."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "VpcAssociationAuthorization"
-title_tag: "Resource VpcAssociationAuthorization | Module route53 | Package AWS"
+title_tag: "aws.route53.VpcAssociationAuthorization"
 meta_desc: "Explore the VpcAssociationAuthorization resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Authorizes a VPC in a peer account to be associated with a local Route53 Hosted Zone."
 ---
 

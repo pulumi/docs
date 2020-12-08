@@ -1,7 +1,7 @@
 
 ---
 title: "SigningProfilePermission"
-title_tag: "Resource SigningProfilePermission | Module signer | Package AWS"
+title_tag: "aws.signer.SigningProfilePermission"
 meta_desc: "Explore the SigningProfilePermission resource of the signer module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Signer Signing Profile Permission. That is, a cross-account permission for a signing profile."
 ---
 

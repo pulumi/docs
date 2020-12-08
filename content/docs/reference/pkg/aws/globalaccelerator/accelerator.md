@@ -1,7 +1,7 @@
 
 ---
 title: "Accelerator"
-title_tag: "Resource Accelerator | Module globalaccelerator | Package AWS"
+title_tag: "aws.globalaccelerator.Accelerator"
 meta_desc: "Explore the Accelerator resource of the globalaccelerator module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Global Accelerator accelerator."
 ---
 

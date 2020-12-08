@@ -1,7 +1,7 @@
 
 ---
 title: "TargetGroup"
-title_tag: "Resource TargetGroup | Module elasticloadbalancingv2 | Package AWS"
+title_tag: "aws.elasticloadbalancingv2.TargetGroup"
 meta_desc: "Explore the TargetGroup resource of the elasticloadbalancingv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Target Group resource for use with Load Balancer resources."
 ---
 

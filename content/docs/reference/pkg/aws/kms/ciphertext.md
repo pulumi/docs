@@ -1,7 +1,7 @@
 
 ---
 title: "Ciphertext"
-title_tag: "Resource Ciphertext | Module kms | Package AWS"
+title_tag: "aws.kms.Ciphertext"
 meta_desc: "Explore the Ciphertext resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. The KMS ciphertext resource allows you to encrypt plaintext into ciphertext"
 ---
 

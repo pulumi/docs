@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceGroup"
-title_tag: "Resource ResourceGroup | Module inspector | Package AWS"
+title_tag: "aws.inspector.ResourceGroup"
 meta_desc: "Explore the ResourceGroup resource of the inspector module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Amazon Inspector resource group resource."
 ---
 

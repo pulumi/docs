@@ -1,7 +1,7 @@
 
 ---
 title: "ParameterGroup"
-title_tag: "Resource ParameterGroup | Module rds | Package AWS"
+title_tag: "aws.rds.ParameterGroup"
 meta_desc: "Explore the ParameterGroup resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS DB parameter group resource .Documentation of the available parameters for various RDS engines can be found at:"
 ---
 

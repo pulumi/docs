@@ -1,7 +1,7 @@
 
 ---
 title: "ConditionalForwader"
-title_tag: "Resource ConditionalForwader | Module directoryservice | Package AWS"
+title_tag: "aws.directoryservice.ConditionalForwader"
 meta_desc: "Explore the ConditionalForwader resource of the directoryservice module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service."
 ---
 

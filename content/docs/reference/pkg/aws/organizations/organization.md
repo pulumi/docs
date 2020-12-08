@@ -1,7 +1,7 @@
 
 ---
 title: "Organization"
-title_tag: "Resource Organization | Module organizations | Package AWS"
+title_tag: "aws.organizations.Organization"
 meta_desc: "Explore the Organization resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Trigger"
-title_tag: "Resource Trigger | Module codecommit | Package AWS"
+title_tag: "aws.codecommit.Trigger"
 meta_desc: "Explore the Trigger resource of the codecommit module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeCommit Trigger Resource."
 ---
 

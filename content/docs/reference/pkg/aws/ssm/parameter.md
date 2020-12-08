@@ -1,7 +1,7 @@
 
 ---
 title: "Parameter"
-title_tag: "Resource Parameter | Module ssm | Package AWS"
+title_tag: "aws.ssm.Parameter"
 meta_desc: "Explore the Parameter resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SSM Parameter resource."
 ---
 

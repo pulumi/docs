@@ -1,7 +1,7 @@
 
 ---
 title: "Snapshot"
-title_tag: "Resource Snapshot | Module rds | Package AWS"
+title_tag: "aws.rds.Snapshot"
 meta_desc: "Explore the Snapshot resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an RDS database instance snapshot. For managing RDS database cluster snapshots, see the `aws.rds.ClusterSnapshot` resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AccessPoint"
-title_tag: "Resource AccessPoint | Module efs | Package AWS"
+title_tag: "aws.efs.AccessPoint"
 meta_desc: "Explore the AccessPoint resource of the efs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic File System (EFS) access point."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PatchBaseline"
-title_tag: "Resource PatchBaseline | Module ssm | Package AWS"
+title_tag: "aws.ssm.PatchBaseline"
 meta_desc: "Explore the PatchBaseline resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SSM Patch Baseline resource"
 ---
 

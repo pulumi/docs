@@ -1,7 +1,7 @@
 
 ---
 title: "KeyPair"
-title_tag: "Resource KeyPair | Module lightsail | Package AWS"
+title_tag: "aws.lightsail.KeyPair"
 meta_desc: "Explore the KeyPair resource of the lightsail module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Lightsail Key Pair, for use with Lightsail Instances. These key pairs"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "InfrastructureConfiguration"
-title_tag: "Resource InfrastructureConfiguration | Module imagebuilder | Package AWS"
+title_tag: "aws.imagebuilder.InfrastructureConfiguration"
 meta_desc: "Explore the InfrastructureConfiguration resource of the imagebuilder module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Image Builder Infrastructure Configuration."
 ---
 

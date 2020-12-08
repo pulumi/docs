@@ -1,7 +1,7 @@
 
 ---
 title: "ResolverQueryLogConfigAssociation"
-title_tag: "Resource ResolverQueryLogConfigAssociation | Module route53 | Package AWS"
+title_tag: "aws.route53.ResolverQueryLogConfigAssociation"
 meta_desc: "Explore the ResolverQueryLogConfigAssociation resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route 53 Resolver query logging configuration association resource."
 ---
 

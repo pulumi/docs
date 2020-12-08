@@ -1,7 +1,7 @@
 
 ---
 title: "RouteTable"
-title_tag: "Resource RouteTable | Module ec2transitgateway | Package AWS"
+title_tag: "aws.ec2transitgateway.RouteTable"
 meta_desc: "Explore the RouteTable resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Transit Gateway Route Table."
 ---
 

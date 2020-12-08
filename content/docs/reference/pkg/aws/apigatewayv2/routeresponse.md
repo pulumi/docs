@@ -1,7 +1,7 @@
 
 ---
 title: "RouteResponse"
-title_tag: "Resource RouteResponse | Module apigatewayv2 | Package AWS"
+title_tag: "aws.apigatewayv2.RouteResponse"
 meta_desc: "Explore the RouteResponse resource of the apigatewayv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon API Gateway Version 2 route response."
 ---
 

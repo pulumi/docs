@@ -1,7 +1,7 @@
 
 ---
 title: "Repository"
-title_tag: "Resource Repository | Module codeartifact | Package AWS"
+title_tag: "aws.codeartifact.Repository"
 meta_desc: "Explore the Repository resource of the codeartifact module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeArtifact Repository Resource."
 ---
 

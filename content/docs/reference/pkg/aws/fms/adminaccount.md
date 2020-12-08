@@ -1,7 +1,7 @@
 
 ---
 title: "AdminAccount"
-title_tag: "Resource AdminAccount | Module fms | Package AWS"
+title_tag: "aws.fms.AdminAccount"
 meta_desc: "Explore the AdminAccount resource of the fms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to associate/disassociate an AWS Firewall Manager administrator account. This operation must be performed in the `us-east-1` region."
 ---
 

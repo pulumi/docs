@@ -1,7 +1,7 @@
 
 ---
 title: "LaunchConfiguration"
-title_tag: "Resource LaunchConfiguration | Module ec2 | Package AWS"
+title_tag: "aws.ec2.LaunchConfiguration"
 meta_desc: "Explore the LaunchConfiguration resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a new launch configuration, used for autoscaling groups."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Listener"
-title_tag: "Resource Listener | Module globalaccelerator | Package AWS"
+title_tag: "aws.globalaccelerator.Listener"
 meta_desc: "Explore the Listener resource of the globalaccelerator module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Global Accelerator listener."
 ---
 

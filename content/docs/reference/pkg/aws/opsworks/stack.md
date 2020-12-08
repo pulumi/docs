@@ -1,7 +1,7 @@
 
 ---
 title: "Stack"
-title_tag: "Resource Stack | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.Stack"
 meta_desc: "Explore the Stack resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks stack resource."
 ---
 

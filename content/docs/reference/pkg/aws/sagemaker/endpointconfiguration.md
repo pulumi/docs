@@ -1,7 +1,7 @@
 
 ---
 title: "EndpointConfiguration"
-title_tag: "Resource EndpointConfiguration | Module sagemaker | Package AWS"
+title_tag: "aws.sagemaker.EndpointConfiguration"
 meta_desc: "Explore the EndpointConfiguration resource of the sagemaker module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SageMaker endpoint configuration resource."
 ---
 

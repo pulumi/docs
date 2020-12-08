@@ -1,7 +1,7 @@
 
 ---
 title: "VpcIpv4CidrBlockAssociation"
-title_tag: "Resource VpcIpv4CidrBlockAssociation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcIpv4CidrBlockAssociation"
 meta_desc: "Explore the VpcIpv4CidrBlockAssociation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to associate additional IPv4 CIDR blocks with a VPC."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "WebAclAssociation"
-title_tag: "Resource WebAclAssociation | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.WebAclAssociation"
 meta_desc: "Explore the WebAclAssociation resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an association with WAF Regional Web ACL."
 ---
 

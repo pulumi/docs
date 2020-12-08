@@ -1,7 +1,7 @@
 
 ---
 title: "GroupMembership"
-title_tag: "Resource GroupMembership | Module iam | Package AWS"
+title_tag: "aws.iam.GroupMembership"
 meta_desc: "Explore the GroupMembership resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **WARNING:** Multiple aws.iam.GroupMembership resources with the same group name will produce inconsistent behavior!"
 ---
 

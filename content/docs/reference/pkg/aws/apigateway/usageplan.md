@@ -1,7 +1,7 @@
 
 ---
 title: "UsagePlan"
-title_tag: "Resource UsagePlan | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.UsagePlan"
 meta_desc: "Explore the UsagePlan resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Usage Plan."
 ---
 

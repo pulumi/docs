@@ -1,7 +1,7 @@
 
 ---
 title: "SourceCredential"
-title_tag: "Resource SourceCredential | Module codebuild | Package AWS"
+title_tag: "aws.codebuild.SourceCredential"
 meta_desc: "Explore the SourceCredential resource of the codebuild module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeBuild Source Credentials Resource."
 ---
 

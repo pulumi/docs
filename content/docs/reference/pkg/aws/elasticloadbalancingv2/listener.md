@@ -1,7 +1,7 @@
 
 ---
 title: "Listener"
-title_tag: "Resource Listener | Module elasticloadbalancingv2 | Package AWS"
+title_tag: "aws.elasticloadbalancingv2.Listener"
 meta_desc: "Explore the Listener resource of the elasticloadbalancingv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener resource."
 ---
 

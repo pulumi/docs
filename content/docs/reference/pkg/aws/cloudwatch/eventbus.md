@@ -1,7 +1,7 @@
 
 ---
 title: "EventBus"
-title_tag: "Resource EventBus | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.EventBus"
 meta_desc: "Explore the EventBus resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EventBridge event bus resource."
 ---
 

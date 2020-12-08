@@ -1,7 +1,7 @@
 
 ---
 title: "DataCatalogEncryptionSettings"
-title_tag: "Resource DataCatalogEncryptionSettings | Module glue | Package AWS"
+title_tag: "aws.glue.DataCatalogEncryptionSettings"
 meta_desc: "Explore the DataCatalogEncryptionSettings resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Data Catalog Encryption Settings resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Pipeline"
-title_tag: "Resource Pipeline | Module datapipeline | Package AWS"
+title_tag: "aws.datapipeline.Pipeline"
 meta_desc: "Explore the Pipeline resource of the datapipeline module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Data Pipeline resource."
 ---
 

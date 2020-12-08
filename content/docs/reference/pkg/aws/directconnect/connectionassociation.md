@@ -1,7 +1,7 @@
 
 ---
 title: "ConnectionAssociation"
-title_tag: "Resource ConnectionAssociation | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.ConnectionAssociation"
 meta_desc: "Explore the ConnectionAssociation resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Associates a Direct Connect Connection with a LAG."
 ---
 

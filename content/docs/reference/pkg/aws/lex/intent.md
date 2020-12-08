@@ -1,7 +1,7 @@
 
 ---
 title: "Intent"
-title_tag: "Resource Intent | Module lex | Package AWS"
+title_tag: "aws.lex.Intent"
 meta_desc: "Explore the Intent resource of the lex module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Amazon Lex Intent resource. For more information see"
 ---
 

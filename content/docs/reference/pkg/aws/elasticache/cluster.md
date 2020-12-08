@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module elasticache | Package AWS"
+title_tag: "aws.elasticache.Cluster"
 meta_desc: "Explore the Cluster resource of the elasticache module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ElastiCache Cluster resource, which manages a Memcached cluster or Redis instance."
 ---
 

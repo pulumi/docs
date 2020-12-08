@@ -1,7 +1,7 @@
 
 ---
 title: "ReceiptRuleSet"
-title_tag: "Resource ReceiptRuleSet | Module ses | Package AWS"
+title_tag: "aws.ses.ReceiptRuleSet"
 meta_desc: "Explore the ReceiptRuleSet resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SES receipt rule set resource"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Model"
-title_tag: "Resource Model | Module sagemaker | Package AWS"
+title_tag: "aws.sagemaker.Model"
 meta_desc: "Explore the Model resource of the sagemaker module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SageMaker model resource."
 ---
 

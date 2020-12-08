@@ -1,7 +1,7 @@
 
 ---
 title: "OrganizationAdminAccount"
-title_tag: "Resource OrganizationAdminAccount | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.OrganizationAdminAccount"
 meta_desc: "Explore the OrganizationAdminAccount resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a GuardDuty Organization Admin Account. The AWS account utilizing this resource must be an Organizations primary account. More information about Organizations support in GuardDuty can be found in the [GuardDuty User Guide](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html)."
 ---
 

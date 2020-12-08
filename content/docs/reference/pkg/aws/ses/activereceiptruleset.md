@@ -1,7 +1,7 @@
 
 ---
 title: "ActiveReceiptRuleSet"
-title_tag: "Resource ActiveReceiptRuleSet | Module ses | Package AWS"
+title_tag: "aws.ses.ActiveReceiptRuleSet"
 meta_desc: "Explore the ActiveReceiptRuleSet resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to designate the active SES receipt rule set"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceGroup"
-title_tag: "Resource InstanceGroup | Module emr | Package AWS"
+title_tag: "aws.emr.InstanceGroup"
 meta_desc: "Explore the InstanceGroup resource of the emr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic MapReduce Cluster Instance Group configuration."
 ---
 

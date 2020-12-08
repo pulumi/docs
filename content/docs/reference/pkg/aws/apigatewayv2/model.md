@@ -1,7 +1,7 @@
 
 ---
 title: "Model"
-title_tag: "Resource Model | Module apigatewayv2 | Package AWS"
+title_tag: "aws.apigatewayv2.Model"
 meta_desc: "Explore the Model resource of the apigatewayv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon API Gateway Version 2 [model](https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models)."
 ---
 

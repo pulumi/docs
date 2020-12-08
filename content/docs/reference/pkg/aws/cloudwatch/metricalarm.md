@@ -1,7 +1,7 @@
 
 ---
 title: "MetricAlarm"
-title_tag: "Resource MetricAlarm | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.MetricAlarm"
 meta_desc: "Explore the MetricAlarm resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Metric Alarm resource."
 ---
 

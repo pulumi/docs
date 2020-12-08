@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module codedeploy | Package AWS"
+title_tag: "aws.codedeploy.Application"
 meta_desc: "Explore the Application resource of the codedeploy module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeDeploy application to be used as a basis for deployments"
 ---
 

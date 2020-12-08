@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceShare"
-title_tag: "Resource ResourceShare | Module ram | Package AWS"
+title_tag: "aws.ram.ResourceShare"
 meta_desc: "Explore the ResourceShare resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Resource Access Manager (RAM) Resource Share. To associate principals with the share, see the `aws.ram.PrincipalAssociation` resource. To associate resources with the share, see the `aws.ram.ResourceAssociation` resource."
 ---
 

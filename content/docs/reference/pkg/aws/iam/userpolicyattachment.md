@@ -1,7 +1,7 @@
 
 ---
 title: "UserPolicyAttachment"
-title_tag: "Resource UserPolicyAttachment | Module iam | Package AWS"
+title_tag: "aws.iam.UserPolicyAttachment"
 meta_desc: "Explore the UserPolicyAttachment resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches a Managed IAM Policy to an IAM user"
 ---
 

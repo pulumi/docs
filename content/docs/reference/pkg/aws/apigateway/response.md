@@ -1,7 +1,7 @@
 
 ---
 title: "Response"
-title_tag: "Resource Response | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.Response"
 meta_desc: "Explore the Response resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Gateway Response for a REST API Gateway."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SamplingRule"
-title_tag: "Resource SamplingRule | Module xray | Package AWS"
+title_tag: "aws.xray.SamplingRule"
 meta_desc: "Explore the SamplingRule resource of the xray module, including examples, input properties, output properties, lookup functions, and supporting types. Creates and manages an AWS XRay Sampling Rule."
 ---
 

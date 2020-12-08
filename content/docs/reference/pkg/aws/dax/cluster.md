@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module dax | Package AWS"
+title_tag: "aws.dax.Cluster"
 meta_desc: "Explore the Cluster resource of the dax module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DAX Cluster resource."
 ---
 

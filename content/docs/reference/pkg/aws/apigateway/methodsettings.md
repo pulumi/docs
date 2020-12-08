@@ -1,7 +1,7 @@
 
 ---
 title: "MethodSettings"
-title_tag: "Resource MethodSettings | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.MethodSettings"
 meta_desc: "Explore the MethodSettings resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Method Settings, e.g. logging or monitoring."
 ---
 

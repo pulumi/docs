@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationTemplate"
-title_tag: "Resource ConfigurationTemplate | Module elasticbeanstalk | Package AWS"
+title_tag: "aws.elasticbeanstalk.ConfigurationTemplate"
 meta_desc: "Explore the ConfigurationTemplate resource of the elasticbeanstalk module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Beanstalk Configuration Template, which are associated with"
 ---
 

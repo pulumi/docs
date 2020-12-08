@@ -1,7 +1,7 @@
 
 ---
 title: "Status"
-title_tag: "Resource Status | Module meta/v1 | Package Kubernetes"
+title_tag: "kubernetes.meta/v1.Status"
 meta_desc: "Explore the Status resource of the meta/v1 module, including examples, input properties, output properties, lookup functions, and supporting types. Status is a return value for calls that don&#39;t return other objects."
 ---
 
@@ -14,6 +14,7 @@ Status is a return value for calls that don't return other objects.
 
 
 
+
 ## Create a Status Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -23,7 +24,7 @@ Status is a return value for calls that don't return other objects.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/meta/v1/#pulumi_kubernetes.meta/v1.Status">Status</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[Dict[StatusDetails]]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ListMeta]]</span> = None<span class="p">, </span><span class="nx">reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/meta/v1/#pulumi_kubernetes.meta/v1.Status">Status</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.StatusDetailsArgs]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">, </span><span class="nx">reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -382,7 +383,7 @@ The Status resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetails">Dict[Status<wbr>Details]</a></span>
+        <span class="property-type"><a href="#statusdetails">Status<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
 
@@ -402,7 +403,7 @@ The Status resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Dict[List<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
@@ -1163,7 +1164,7 @@ Examples:
 <a href="#causes_python" style="color: inherit; text-decoration: inherit;">causes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscause">List[Status<wbr>Cause]</a></span>
+        <span class="property-type"><a href="#statuscause">Status<wbr>Cause<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.{{% /md %}}</dd>
 
@@ -1219,6 +1220,8 @@ Examples:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

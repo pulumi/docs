@@ -1,7 +1,7 @@
 
 ---
 title: "TableItem"
-title_tag: "Resource TableItem | Module dynamodb | Package AWS"
+title_tag: "aws.dynamodb.TableItem"
 meta_desc: "Explore the TableItem resource of the dynamodb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DynamoDB table item resource"
 ---
 

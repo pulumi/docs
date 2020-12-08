@@ -1,7 +1,7 @@
 
 ---
 title: "PolicyAttachment"
-title_tag: "Resource PolicyAttachment | Module iot | Package AWS"
+title_tag: "aws.iot.PolicyAttachment"
 meta_desc: "Explore the PolicyAttachment resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IoT policy attachment."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.Instance"
 meta_desc: "Explore the Instance resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks instance resource."
 ---
 

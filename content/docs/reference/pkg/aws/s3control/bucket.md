@@ -1,7 +1,7 @@
 
 ---
 title: "Bucket"
-title_tag: "Resource Bucket | Module s3control | Package AWS"
+title_tag: "aws.s3control.Bucket"
 meta_desc: "Explore the Bucket resource of the s3control module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage an S3 Control Bucket."
 ---
 

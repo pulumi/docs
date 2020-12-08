@@ -1,7 +1,7 @@
 
 ---
 title: "MountTarget"
-title_tag: "Resource MountTarget | Module efs | Package AWS"
+title_tag: "aws.efs.MountTarget"
 meta_desc: "Explore the MountTarget resource of the efs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic File System (EFS) mount target."
 ---
 

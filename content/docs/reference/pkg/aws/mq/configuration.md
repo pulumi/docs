@@ -1,7 +1,7 @@
 
 ---
 title: "Configuration"
-title_tag: "Resource Configuration | Module mq | Package AWS"
+title_tag: "aws.mq.Configuration"
 meta_desc: "Explore the Configuration resource of the mq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an MQ Configuration Resource."
 ---
 

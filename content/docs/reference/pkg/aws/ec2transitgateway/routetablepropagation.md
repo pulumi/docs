@@ -1,7 +1,7 @@
 
 ---
 title: "RouteTablePropagation"
-title_tag: "Resource RouteTablePropagation | Module ec2transitgateway | Package AWS"
+title_tag: "aws.ec2transitgateway.RouteTablePropagation"
 meta_desc: "Explore the RouteTablePropagation resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Transit Gateway Route Table propagation."
 ---
 

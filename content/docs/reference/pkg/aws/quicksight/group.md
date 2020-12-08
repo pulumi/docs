@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module quicksight | Package AWS"
+title_tag: "aws.quicksight.Group"
 meta_desc: "Explore the Group resource of the quicksight module, including examples, input properties, output properties, lookup functions, and supporting types. Resource for managing QuickSight Group"
 ---
 

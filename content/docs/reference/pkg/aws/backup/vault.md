@@ -1,7 +1,7 @@
 
 ---
 title: "Vault"
-title_tag: "Resource Vault | Module backup | Package AWS"
+title_tag: "aws.backup.Vault"
 meta_desc: "Explore the Vault resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Backup vault resource."
 ---
 

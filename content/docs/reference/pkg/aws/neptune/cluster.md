@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module neptune | Package AWS"
+title_tag: "aws.neptune.Cluster"
 meta_desc: "Explore the Cluster resource of the neptune module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Neptune Cluster Resource. A Cluster Resource defines attributes that are"
 ---
 

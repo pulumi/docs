@@ -1,7 +1,7 @@
 
 ---
 title: "Resolver"
-title_tag: "Resource Resolver | Module appsync | Package AWS"
+title_tag: "aws.appsync.Resolver"
 meta_desc: "Explore the Resolver resource of the appsync module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AppSync Resolver."
 ---
 

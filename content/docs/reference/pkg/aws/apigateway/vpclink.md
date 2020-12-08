@@ -1,7 +1,7 @@
 
 ---
 title: "VpcLink"
-title_tag: "Resource VpcLink | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.VpcLink"
 meta_desc: "Explore the VpcLink resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway VPC Link."
 ---
 

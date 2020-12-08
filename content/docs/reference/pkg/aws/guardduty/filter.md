@@ -1,7 +1,7 @@
 
 ---
 title: "Filter"
-title_tag: "Resource Filter | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.Filter"
 meta_desc: "Explore the Filter resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a GuardDuty filter."
 ---
 

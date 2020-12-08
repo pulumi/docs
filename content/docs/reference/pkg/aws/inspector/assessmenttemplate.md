@@ -1,7 +1,7 @@
 
 ---
 title: "AssessmentTemplate"
-title_tag: "Resource AssessmentTemplate | Module inspector | Package AWS"
+title_tag: "aws.inspector.AssessmentTemplate"
 meta_desc: "Explore the AssessmentTemplate resource of the inspector module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Inspector assessment template"
 ---
 

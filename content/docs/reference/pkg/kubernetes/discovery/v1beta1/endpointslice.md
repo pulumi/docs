@@ -1,7 +1,7 @@
 
 ---
 title: "EndpointSlice"
-title_tag: "Resource EndpointSlice | Module discovery.k8s.io/v1beta1 | Package Kubernetes"
+title_tag: "kubernetes.discovery.k8s.io/v1beta1.EndpointSlice"
 meta_desc: "Explore the EndpointSlice resource of the discovery.k8s.io/v1beta1 module, including examples, input properties, output properties, lookup functions, and supporting types. EndpointSlice represents a subset of the endpoints that implement a service. For a given service there may be multiple EndpointSlice objects, selected by labels, which must be joined to produce the full set of endpoints."
 ---
 
@@ -14,6 +14,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
 
 
 
+
 ## Create a EndpointSlice Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -23,7 +24,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/discovery/v1beta1/#pulumi_kubernetes.discovery/v1beta1.EndpointSlice">EndpointSlice</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[Endpoint]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ObjectMeta]]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[EndpointPort]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/discovery/v1beta1/#pulumi_kubernetes.discovery/v1beta1.EndpointSlice">EndpointSlice</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[_discovery_k8s_io_v1beta1.EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[_discovery_k8s_io_v1beta1.EndpointPortArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -352,7 +353,7 @@ The EndpointSlice resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">List[Endpoint]</a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
 
@@ -362,7 +363,7 @@ The EndpointSlice resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
 
@@ -372,7 +373,7 @@ The EndpointSlice resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointport">List[Endpoint<wbr>Port]</a></span>
+        <span class="property-type"><a href="#endpointport">Endpoint<wbr>Port<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.{{% /md %}}</dd>
 
@@ -514,7 +515,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodename_csharp">
+<a href="#nodename_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -540,7 +551,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * topology.kubernetes.io/zone: the value indicates the zone where the
   endpoint is located. This should match the corresponding node label.
 * topology.kubernetes.io/region: the value indicates the region where the
-  endpoint is located. This should match the corresponding node label.{{% /md %}}</dd>
+  endpoint is located. This should match the corresponding node label.
+This field is deprecated and will be removed in future api versions.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -577,7 +589,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodename_go">
+<a href="#nodename_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -603,7 +625,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * topology.kubernetes.io/zone: the value indicates the zone where the
   endpoint is located. This should match the corresponding node label.
 * topology.kubernetes.io/region: the value indicates the region where the
-  endpoint is located. This should match the corresponding node label.{{% /md %}}</dd>
+  endpoint is located. This should match the corresponding node label.
+This field is deprecated and will be removed in future api versions.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -640,7 +663,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodename_nodejs">
+<a href="#nodename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -666,7 +699,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * topology.kubernetes.io/zone: the value indicates the zone where the
   endpoint is located. This should match the corresponding node label.
 * topology.kubernetes.io/region: the value indicates the region where the
-  endpoint is located. This should match the corresponding node label.{{% /md %}}</dd>
+  endpoint is located. This should match the corresponding node label.
+This field is deprecated and will be removed in future api versions.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -681,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.{{% /md %}}</dd>
 
@@ -691,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconditions">Dict[Endpoint<wbr>Conditions]</a></span>
+        <span class="property-type"><a href="#endpointconditions">Endpoint<wbr>Conditions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}conditions contains information about the current status of the endpoint.{{% /md %}}</dd>
 
@@ -703,7 +737,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+    <dd>{{% md %}}hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -711,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_ref_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}targetRef is a reference to a Kubernetes object that represents this endpoint.{{% /md %}}</dd>
 
@@ -721,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topology_python" style="color: inherit; text-decoration: inherit;">topology</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}topology contains arbitrary topology information associated with the endpoint. These key/value pairs must conform with the label format. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels Topology may include a maximum of 16 key/value pairs. This includes, but is not limited to the following well known keys: * kubernetes.io/hostname: the value indicates the hostname of the node
   where the endpoint is located. This should match the corresponding
@@ -729,7 +773,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * topology.kubernetes.io/zone: the value indicates the zone where the
   endpoint is located. This should match the corresponding node label.
 * topology.kubernetes.io/region: the value indicates the region where the
-  endpoint is located. This should match the corresponding node label.{{% /md %}}</dd>
+  endpoint is located. This should match the corresponding node label.
+This field is deprecated and will be removed in future api versions.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -761,7 +806,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready.{{% /md %}}</dd>
+    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serving_csharp">
+<a href="#serving_csharp" style="color: inherit; text-decoration: inherit;">Serving</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminating_csharp">
+<a href="#terminating_csharp" style="color: inherit; text-decoration: inherit;">Terminating</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -778,7 +843,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready.{{% /md %}}</dd>
+    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serving_go">
+<a href="#serving_go" style="color: inherit; text-decoration: inherit;">Serving</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminating_go">
+<a href="#terminating_go" style="color: inherit; text-decoration: inherit;">Terminating</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -795,7 +880,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready.{{% /md %}}</dd>
+    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serving_nodejs">
+<a href="#serving_nodejs" style="color: inherit; text-decoration: inherit;">serving</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminating_nodejs">
+<a href="#terminating_nodejs" style="color: inherit; text-decoration: inherit;">terminating</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -812,7 +917,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready.{{% /md %}}</dd>
+    <dd>{{% md %}}ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serving_python">
+<a href="#serving_python" style="color: inherit; text-decoration: inherit;">serving</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminating_python">
+<a href="#terminating_python" style="color: inherit; text-decoration: inherit;">terminating</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1266,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1877,7 +2002,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -1931,7 +2056,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -1965,7 +2090,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -1975,7 +2100,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2007,7 +2132,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2655,6 +2780,8 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

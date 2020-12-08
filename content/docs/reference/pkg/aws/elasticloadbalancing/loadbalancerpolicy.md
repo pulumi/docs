@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancerPolicy"
-title_tag: "Resource LoadBalancerPolicy | Module elasticloadbalancing | Package AWS"
+title_tag: "aws.elasticloadbalancing.LoadBalancerPolicy"
 meta_desc: "Explore the LoadBalancerPolicy resource of the elasticloadbalancing module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a load balancer policy, which can be attached to an ELB listener or backend server."
 ---
 

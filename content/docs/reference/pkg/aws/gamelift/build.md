@@ -1,7 +1,7 @@
 
 ---
 title: "Build"
-title_tag: "Resource Build | Module gamelift | Package AWS"
+title_tag: "aws.gamelift.Build"
 meta_desc: "Explore the Build resource of the gamelift module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Gamelift Build resource."
 ---
 

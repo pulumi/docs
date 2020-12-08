@@ -1,7 +1,7 @@
 
 ---
 title: "EventSubscription"
-title_tag: "Resource EventSubscription | Module neptune | Package AWS"
+title_tag: "aws.neptune.EventSubscription"
 meta_desc: "Explore the EventSubscription resource of the neptune module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

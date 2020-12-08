@@ -1,7 +1,7 @@
 
 ---
 title: "ServerCertificate"
-title_tag: "Resource ServerCertificate | Module iam | Package AWS"
+title_tag: "aws.iam.ServerCertificate"
 meta_desc: "Explore the ServerCertificate resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM Server Certificate resource to upload Server Certificates."
 ---
 

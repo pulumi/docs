@@ -1,7 +1,7 @@
 
 ---
 title: "ParameterGroup"
-title_tag: "Resource ParameterGroup | Module elasticache | Package AWS"
+title_tag: "aws.elasticache.ParameterGroup"
 meta_desc: "Explore the ParameterGroup resource of the elasticache module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ElastiCache parameter group resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ScheduledAction"
-title_tag: "Resource ScheduledAction | Module appautoscaling | Package AWS"
+title_tag: "aws.appautoscaling.ScheduledAction"
 meta_desc: "Explore the ScheduledAction resource of the appautoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Application AutoScaling ScheduledAction resource."
 ---
 

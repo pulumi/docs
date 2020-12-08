@@ -1,7 +1,7 @@
 
 ---
 title: "Portfolio"
-title_tag: "Resource Portfolio | Module servicecatalog | Package AWS"
+title_tag: "aws.servicecatalog.Portfolio"
 meta_desc: "Explore the Portfolio resource of the servicecatalog module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a Service Catalog Portfolio."
 ---
 

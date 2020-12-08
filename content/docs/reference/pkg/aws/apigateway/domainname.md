@@ -1,7 +1,7 @@
 
 ---
 title: "DomainName"
-title_tag: "Resource DomainName | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.DomainName"
 meta_desc: "Explore the DomainName resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Registers a custom domain name for use with AWS API Gateway. Additional information about this functionality"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "CatalogTable"
-title_tag: "Resource CatalogTable | Module glue | Package AWS"
+title_tag: "aws.glue.CatalogTable"
 meta_desc: "Explore the CatalogTable resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Catalog Table Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality."
 ---
 

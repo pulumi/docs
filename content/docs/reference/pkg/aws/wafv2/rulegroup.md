@@ -1,7 +1,7 @@
 
 ---
 title: "RuleGroup"
-title_tag: "Resource RuleGroup | Module wafv2 | Package AWS"
+title_tag: "aws.wafv2.RuleGroup"
 meta_desc: "Explore the RuleGroup resource of the wafv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a WAFv2 Rule Group resource."
 ---
 

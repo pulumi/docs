@@ -1,7 +1,7 @@
 
 ---
 title: "ListenerRule"
-title_tag: "Resource ListenerRule | Module elasticloadbalancingv2 | Package AWS"
+title_tag: "aws.elasticloadbalancingv2.ListenerRule"
 meta_desc: "Explore the ListenerRule resource of the elasticloadbalancingv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener Rule resource."
 ---
 

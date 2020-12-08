@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationVersion"
-title_tag: "Resource ApplicationVersion | Module elasticbeanstalk | Package AWS"
+title_tag: "aws.elasticbeanstalk.ApplicationVersion"
 meta_desc: "Explore the ApplicationVersion resource of the elasticbeanstalk module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Beanstalk Application Version Resource. Elastic Beanstalk allows"
 ---
 

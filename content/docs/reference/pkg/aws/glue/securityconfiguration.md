@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityConfiguration"
-title_tag: "Resource SecurityConfiguration | Module glue | Package AWS"
+title_tag: "aws.glue.SecurityConfiguration"
 meta_desc: "Explore the SecurityConfiguration resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Glue Security Configuration."
 ---
 

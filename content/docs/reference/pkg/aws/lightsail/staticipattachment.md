@@ -1,7 +1,7 @@
 
 ---
 title: "StaticIpAttachment"
-title_tag: "Resource StaticIpAttachment | Module lightsail | Package AWS"
+title_tag: "aws.lightsail.StaticIpAttachment"
 meta_desc: "Explore the StaticIpAttachment resource of the lightsail module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a static IP address attachment - relationship between a Lightsail static IP &amp; Lightsail instance."
 ---
 

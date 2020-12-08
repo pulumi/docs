@@ -1,7 +1,7 @@
 
 ---
 title: "VpcPeeringConnectionAccepter"
-title_tag: "Resource VpcPeeringConnectionAccepter | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcPeeringConnectionAccepter"
 meta_desc: "Explore the VpcPeeringConnectionAccepter resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage the accepter&#39;s side of a VPC Peering Connection."
 ---
 

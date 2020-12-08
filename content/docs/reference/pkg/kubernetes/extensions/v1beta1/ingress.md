@@ -1,7 +1,7 @@
 
 ---
 title: "Ingress"
-title_tag: "Resource Ingress | Module extensions/v1beta1 | Package Kubernetes"
+title_tag: "kubernetes.extensions/v1beta1.Ingress"
 meta_desc: "Explore the Ingress resource of the extensions/v1beta1 module, including examples, input properties, output properties, lookup functions, and supporting types. Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc. "
 ---
 
@@ -29,6 +29,7 @@ by setting the 'customTimeouts' option on the resource.
 
 
 
+
 ## Create a Ingress Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -38,7 +39,7 @@ by setting the 'customTimeouts' option on the resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/extensions/v1beta1/#pulumi_kubernetes.extensions/v1beta1.Ingress">Ingress</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ObjectMeta]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[Dict[IngressSpec]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/extensions/v1beta1/#pulumi_kubernetes.extensions/v1beta1.Ingress">Ingress</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_extensions_v1beta1.IngressSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,7 +298,7 @@ The Ingress resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -307,7 +308,7 @@ The Ingress resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressspec">Dict[Ingress<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#ingressspec">Ingress<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -426,7 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressstatus">Dict[Ingress<wbr>Status]</a></span>
+        <span class="property-type"><a href="#ingressstatus">Ingress<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -608,7 +609,7 @@ Implementations are required to support all path types. Defaults to Implementati
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressbackend">Dict[Ingress<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd>
 
@@ -721,7 +722,7 @@ Implementations are required to support all path types. Defaults to Implementati
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpingresspath">List[HTTPIngress<wbr>Path]</a></span>
+        <span class="property-type"><a href="#httpingresspath">HTTPIngress<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of paths that map requests to backends.{{% /md %}}</dd>
 
@@ -874,7 +875,7 @@ Implementations are required to support all path types. Defaults to Implementati
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">integer | string</span>
+        <span class="property-type">Union[int, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
 
@@ -884,7 +885,7 @@ Implementations are required to support all path types. Defaults to Implementati
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typedlocalobjectreference">Dict[Typed<wbr>Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.{{% /md %}}</dd>
 
@@ -1035,7 +1036,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpingressrulevalue">Dict[HTTPIngress<wbr>Rule<wbr>Value]</a></span>
+        <span class="property-type"><a href="#httpingressrulevalue">HTTPIngress<wbr>Rule<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1208,7 +1209,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressbackend">Dict[Ingress<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A default backend capable of servicing requests that don't match any rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.{{% /md %}}</dd>
 
@@ -1228,7 +1229,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressrule">List[Ingress<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#ingressrule">Ingress<wbr>Rule<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.{{% /md %}}</dd>
 
@@ -1238,7 +1239,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresstls">List[Ingress<wbr>TLS]</a></span>
+        <span class="property-type"><a href="#ingresstls">Ingress<wbr>TLSArgs]]</a></span>
     </dt>
     <dd>{{% md %}}TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.{{% /md %}}</dd>
 
@@ -1321,7 +1322,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstatus">Dict[Load<wbr>Balancer<wbr>Status]</a></span>
+        <span class="property-type"><a href="#loadbalancerstatus">Load<wbr>Balancer<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}LoadBalancer contains the current status of the load-balancer.{{% /md %}}</dd>
 
@@ -1434,7 +1435,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.{{% /md %}}</dd>
 
@@ -1490,6 +1491,16 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
     </dt>
     <dd>{{% md %}}IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers){{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portstatus">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Port<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Ports is a list of records of service ports If used, every port defined in the service should have an entry in it{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1516,6 +1527,16 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portstatus">Port<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Ports is a list of records of service ports If used, every port defined in the service should have an entry in it{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1544,6 +1565,16 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
     </dt>
     <dd>{{% md %}}IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers){{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portstatus">core.v1.<wbr>Port<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}Ports is a list of records of service ports If used, every port defined in the service should have an entry in it{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1570,6 +1601,16 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portstatus">Port<wbr>Status<wbr>Args]]</a></span>
+    </dt>
+    <dd>{{% md %}}Ports is a list of records of service ports If used, every port defined in the service should have an entry in it{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1650,7 +1691,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceringress">List[Load<wbr>Balancer<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#loadbalanceringress">Load<wbr>Balancer<wbr>Ingress<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.{{% /md %}}</dd>
 
@@ -1903,7 +1944,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2514,7 +2555,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -2568,7 +2609,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -2602,7 +2643,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -2612,7 +2653,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2644,7 +2685,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2974,6 +3015,181 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
+<h4 id="portstatus">Port<wbr>Status</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PortStatus">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/extensions/v1beta1?tab=doc#PortStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Port is the port number of the service port of which status is recorded here{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+  CamelCase names
+- cloud provider specific error values must have names that comply with the
+  format foo.example.com/CamelCase.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Port is the port number of the service port of which status is recorded here{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+  CamelCase names
+- cloud provider specific error values must have names that comply with the
+  format foo.example.com/CamelCase.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Port is the port number of the service port of which status is recorded here{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+  CamelCase names
+- cloud provider specific error values must have names that comply with the
+  format foo.example.com/CamelCase.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Port is the port number of the service port of which status is recorded here{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+  CamelCase names
+- cloud provider specific error values must have names that comply with the
+  format foo.example.com/CamelCase.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TypedLocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TypedLocalObjectReference">output</a> API doc for this type.
@@ -3132,6 +3348,8 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

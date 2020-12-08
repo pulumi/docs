@@ -1,7 +1,7 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module iot | Package AWS"
+title_tag: "aws.iot.Policy"
 meta_desc: "Explore the Policy resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IoT policy."
 ---
 

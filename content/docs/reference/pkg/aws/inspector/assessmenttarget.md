@@ -1,7 +1,7 @@
 
 ---
 title: "AssessmentTarget"
-title_tag: "Resource AssessmentTarget | Module inspector | Package AWS"
+title_tag: "aws.inspector.AssessmentTarget"
 meta_desc: "Explore the AssessmentTarget resource of the inspector module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Inspector assessment target"
 ---
 

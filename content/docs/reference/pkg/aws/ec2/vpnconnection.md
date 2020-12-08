@@ -1,7 +1,7 @@
 
 ---
 title: "VpnConnection"
-title_tag: "Resource VpnConnection | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpnConnection"
 meta_desc: "Explore the VpnConnection resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 VPN connection. These objects can be connected to customer gateways, and allow you to establish tunnels between your network and Amazon."
 ---
 

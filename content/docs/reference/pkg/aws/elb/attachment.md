@@ -1,7 +1,7 @@
 
 ---
 title: "Attachment"
-title_tag: "Resource Attachment | Module elb | Package AWS"
+title_tag: "aws.elb.Attachment"
 meta_desc: "Explore the Attachment resource of the elb module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches an EC2 instance to an Elastic Load Balancer (ELB). For attaching resources with Application Load Balancer (ALB) or Network Load Balancer (NLB), see the `aws.lb.TargetGroupAttachment` resource."
 ---
 

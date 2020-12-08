@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityGroup"
-title_tag: "Resource SecurityGroup | Module ec2 | Package AWS"
+title_tag: "aws.ec2.SecurityGroup"
 meta_desc: "Explore the SecurityGroup resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a security group resource."
 ---
 

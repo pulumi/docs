@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module cloudhsmv2 | Package AWS"
+title_tag: "aws.cloudhsmv2.Cluster"
 meta_desc: "Explore the Cluster resource of the cloudhsmv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Amazon CloudHSM v2 cluster."
 ---
 

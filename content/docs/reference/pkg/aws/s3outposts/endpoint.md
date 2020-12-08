@@ -1,7 +1,7 @@
 
 ---
 title: "Endpoint"
-title_tag: "Resource Endpoint | Module s3outposts | Package AWS"
+title_tag: "aws.s3outposts.Endpoint"
 meta_desc: "Explore the Endpoint resource of the s3outposts module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage an S3 Outposts Endpoint."
 ---
 

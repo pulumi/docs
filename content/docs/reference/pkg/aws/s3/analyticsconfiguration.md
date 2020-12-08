@@ -1,7 +1,7 @@
 
 ---
 title: "AnalyticsConfiguration"
-title_tag: "Resource AnalyticsConfiguration | Module s3 | Package AWS"
+title_tag: "aws.s3.AnalyticsConfiguration"
 meta_desc: "Explore the AnalyticsConfiguration resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a S3 bucket [analytics configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) resource."
 ---
 

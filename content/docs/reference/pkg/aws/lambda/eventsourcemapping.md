@@ -1,7 +1,7 @@
 
 ---
 title: "EventSourceMapping"
-title_tag: "Resource EventSourceMapping | Module lambda | Package AWS"
+title_tag: "aws.lambda.EventSourceMapping"
 meta_desc: "Explore the EventSourceMapping resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS."
 ---
 

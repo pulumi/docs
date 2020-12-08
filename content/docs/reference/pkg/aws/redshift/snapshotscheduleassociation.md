@@ -1,7 +1,7 @@
 
 ---
 title: "SnapshotScheduleAssociation"
-title_tag: "Resource SnapshotScheduleAssociation | Module redshift | Package AWS"
+title_tag: "aws.redshift.SnapshotScheduleAssociation"
 meta_desc: "Explore the SnapshotScheduleAssociation resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

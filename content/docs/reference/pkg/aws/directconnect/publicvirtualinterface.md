@@ -1,7 +1,7 @@
 
 ---
 title: "PublicVirtualInterface"
-title_tag: "Resource PublicVirtualInterface | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.PublicVirtualInterface"
 meta_desc: "Explore the PublicVirtualInterface resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Direct Connect public virtual interface resource."
 ---
 

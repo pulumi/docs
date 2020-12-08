@@ -1,7 +1,7 @@
 
 ---
 title: "LogStream"
-title_tag: "Resource LogStream | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.LogStream"
 meta_desc: "Explore the LogStream resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Log Stream resource."
 ---
 

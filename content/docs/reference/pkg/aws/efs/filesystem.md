@@ -1,7 +1,7 @@
 
 ---
 title: "FileSystem"
-title_tag: "Resource FileSystem | Module efs | Package AWS"
+title_tag: "aws.efs.FileSystem"
 meta_desc: "Explore the FileSystem resource of the efs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic File System (EFS) File System resource."
 ---
 

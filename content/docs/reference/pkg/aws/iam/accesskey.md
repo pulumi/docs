@@ -1,7 +1,7 @@
 
 ---
 title: "AccessKey"
-title_tag: "Resource AccessKey | Module iam | Package AWS"
+title_tag: "aws.iam.AccessKey"
 meta_desc: "Explore the AccessKey resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user."
 ---
 

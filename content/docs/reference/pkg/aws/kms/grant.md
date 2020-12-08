@@ -1,7 +1,7 @@
 
 ---
 title: "Grant"
-title_tag: "Resource Grant | Module kms | Package AWS"
+title_tag: "aws.kms.Grant"
 meta_desc: "Explore the Grant resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource-based access control mechanism for a KMS customer master key."
 ---
 
