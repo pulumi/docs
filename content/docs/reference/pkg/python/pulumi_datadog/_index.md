@@ -37,6 +37,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_datadog.AwaitableGetPermissionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">AwaitableGetPermissionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.AwaitableGetPermissionsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_datadog.AwaitableGetRoleResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">AwaitableGetRoleResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.AwaitableGetRoleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_datadog.AwaitableGetSyntheticsLocationsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">AwaitableGetSyntheticsLocationsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locations</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.AwaitableGetSyntheticsLocationsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1205,6 +1215,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_datadog.GetPermissionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">GetPermissionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.GetPermissionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPermissions.</p>
+<dl class="py method">
+<dt id="pulumi_datadog.GetPermissionsResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_datadog.GetPermissionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_datadog.GetRoleResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">GetRoleResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.GetRoleResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRole.</p>
+<dl class="py method">
+<dt id="pulumi_datadog.GetRoleResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_datadog.GetRoleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_datadog.GetSyntheticsLocationsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">GetSyntheticsLocationsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locations</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.GetSyntheticsLocationsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSyntheticsLocations.</p>
@@ -2306,6 +2340,116 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_datadog.Role">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[Sequence[Union[RolePermissionArgs, Mapping[str, Any], Awaitable[Union[RolePermissionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[RolePermissionArgs, Mapping[str, Any], Awaitable[Union[RolePermissionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.Role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Datadog role resource. This can be used to create and manage Datadog roles.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">get_permissions</span><span class="p">()</span>
+<span class="c1"># Create a new Datadog role</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">datadog</span><span class="o">.</span><span class="n">RolePermissionArgs</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;monitorsDowntime&quot;</span><span class="p">],</span>
+        <span class="p">),</span>
+        <span class="n">datadog</span><span class="o">.</span><span class="n">RolePermissionArgs</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;monitorsWrite&quot;</span><span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<p>Roles can be imported using their ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import datadog:index/role:Role example_role <span class="m">000000</span>-0000-0000-0000-000000000000
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the role.</p></li>
+<li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'RolePermissionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Set of objects containing the permission ID and the name of the permissions granted to this role.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_datadog.Role.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[Sequence[Union[RolePermissionArgs, Mapping[str, Any], Awaitable[Union[RolePermissionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[RolePermissionArgs, Mapping[str, Any], Awaitable[Union[RolePermissionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_count</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.role.Role<a class="headerlink" href="#pulumi_datadog.Role.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the role.</p></li>
+<li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'RolePermissionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Set of objects containing the permission ID and the name of the permissions granted to this role.</p></li>
+<li><p><strong>user_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of users that have this role.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Role.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.Role.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the role.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Role.permissions">
+<em class="property">property </em><code class="sig-name descname">permissions</code><a class="headerlink" href="#pulumi_datadog.Role.permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of objects containing the permission ID and the name of the permissions granted to this role.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Role.user_count">
+<em class="property">property </em><code class="sig-name descname">user_count</code><a class="headerlink" href="#pulumi_datadog.Role.user_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of users that have this role.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Role.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.Role.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Role.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.Role.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_datadog.ScreenBoard">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">ScreenBoard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">height</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ScreenBoardTemplateVariableArgs, Mapping[str, Any], Awaitable[Union[ScreenBoardTemplateVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ScreenBoardTemplateVariableArgs, Mapping[str, Any], Awaitable[Union[ScreenBoardTemplateVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">widgets</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ScreenBoardWidgetArgs, Mapping[str, Any], Awaitable[Union[ScreenBoardWidgetArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ScreenBoardWidgetArgs, Mapping[str, Any], Awaitable[Union[ScreenBoardWidgetArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">width</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.ScreenBoard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog screenboard resource. This can be used to create and manage Datadog screenboards.</p>
@@ -3182,7 +3326,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
 
-<span class="n">test_tcp</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTest</span><span class="p">(</span><span class="s2">&quot;testTcp&quot;</span><span class="p">,</span>
+<span class="n">test_dns</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTest</span><span class="p">(</span><span class="s2">&quot;testDns&quot;</span><span class="p">,</span>
     <span class="n">assertions</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span>
         <span class="s2">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -3587,6 +3731,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">get_monitor</span><span class="p">(</span><span class="n">monitor_tags_filters</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;foo:bar&quot;</span><span class="p">],</span>
     <span class="n">name_filter</span><span class="o">=</span><span class="s2">&quot;My awesome monitor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_datadog.get_permissions">
+<code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">get_permissions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.get_permissions.AwaitableGetPermissionsResult<a class="headerlink" href="#pulumi_datadog.get_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve the list of Datadog permissions by name and their corresponding ID, for use in the role resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
+
+<span class="n">permissions</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">get_permissions</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_datadog.get_role">
+<code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">get_role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.get_role.AwaitableGetRoleResult<a class="headerlink" href="#pulumi_datadog.get_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve information about an existing role for use in other resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;Datadog Standard Role&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>

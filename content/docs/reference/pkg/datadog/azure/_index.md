@@ -23,7 +23,7 @@ Explore the resources and functions of the azure module in the Datadog package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.11.0</dd>
+	<dd>2.12.0</dd>
 </dl>
 
 
