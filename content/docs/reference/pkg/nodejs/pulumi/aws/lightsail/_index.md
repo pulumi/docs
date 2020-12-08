@@ -3,7 +3,7 @@ title: "Module lightsail"
 title_tag: "Module lightsail | Package @pulumi/aws | Node.js SDK"
 linktitle: "lightsail"
 meta_desc: "Explore members of the lightsail module in the @pulumi/aws package."
-git_sha: "47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9"
+git_sha: "915e8c946f2e4ea320451268dae8af053d158698"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L28">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ const domainTest = new aws.lightsail.Domain("domain_test", {
 ```
 
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -95,14 +95,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -113,7 +113,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the Lightsail domain
 
 <h4 class="pdoc-member-header" id="Domain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L63">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L63">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ The ARN of the Lightsail domain
 The name of the Lightsail domain to manage
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -147,7 +147,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L91">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -238,7 +238,7 @@ Lightsail Instances can be imported using their name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L168"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L168"> <b>constructor</b></a>
 </h4>
 
 
@@ -252,7 +252,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L101">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L101">method <b>get</b></a>
 </h4>
 
 
@@ -263,14 +263,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L91">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L91">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L112">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L112">method <b>isInstance</b></a>
 </h4>
 
 
@@ -281,7 +281,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L122">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L122">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the Lightsail instance (matches `id`).
 
 <h4 class="pdoc-member-header" id="Instance-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L127">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L127">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ The Availability Zone in which to create your
 instance (see list below)
 
 <h4 class="pdoc-member-header" id="Instance-blueprintId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L131">property <b>blueprintId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L131">property <b>blueprintId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blueprintId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ instance (see list below)
 The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 
 <h4 class="pdoc-member-header" id="Instance-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L135">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L135">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -314,12 +314,12 @@ The ID for a virtual private server image. A list of available blueprint IDs can
 The bundle of specification information (see list below)
 
 <h4 class="pdoc-member-header" id="Instance-cpuCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L136">property <b>cpuCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L136">property <b>cpuCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cpuCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L145">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L145">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ The timestamp when the instance was created.
 * `userData`
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L91">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -341,17 +341,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-ipv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L146">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L146">property <b>ipv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6Address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-isStaticIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L147">property <b>isStaticIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L147">property <b>isStaticIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isStaticIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-keyPairName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L152">property <b>keyPairName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L152">property <b>keyPairName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyPairName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -360,7 +360,7 @@ The name of your key pair. Created in the
 Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -368,22 +368,22 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.
 
 <h4 class="pdoc-member-header" id="Instance-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L157">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L157">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-publicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L158">property <b>publicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L158">property <b>publicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-ramSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L159">property <b>ramSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L159">property <b>ramSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ramSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L163">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ The name of the Lightsail Instance. Names be unique within each AWS Region in yo
 A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L91">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L91">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -400,7 +400,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L167">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L167">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -408,12 +408,12 @@ deployments.
 launch script to configure server with additional user data
 
 <h4 class="pdoc-member-header" id="Instance-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L168">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L168">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KeyPair" data-link-title="KeyPair">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L49">
         Resource <strong>KeyPair</strong>
     </a>
 </h3>
@@ -462,7 +462,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lgKeyPair", {publicKey: fs.readFile
 Lightsail Key Pairs cannot be imported, because the private and public key are only available on initial creation.
 
 <h4 class="pdoc-member-header" id="KeyPair-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -476,7 +476,7 @@ Create a KeyPair resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KeyPair-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -487,14 +487,14 @@ Get an existing KeyPair resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KeyPair-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KeyPair-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -505,7 +505,7 @@ Returns true if the given object is an instance of KeyPair.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KeyPair-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L80">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L80">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the Lightsail key pair
 
 <h4 class="pdoc-member-header" id="KeyPair-encryptedFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L85">property <b>encryptedFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L85">property <b>encryptedFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptedFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -522,7 +522,7 @@ The MD5 public key fingerprint for the encrypted
 private key
 
 <h4 class="pdoc-member-header" id="KeyPair-encryptedPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L91">property <b>encryptedPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L91">property <b>encryptedPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptedPrivateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -532,7 +532,7 @@ encrypted with the given `pgpKey`. This is only populated when creating a new
 key and `pgpKey` is supplied
 
 <h4 class="pdoc-member-header" id="KeyPair-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L95">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L95">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ key and `pgpKey` is supplied
 The MD5 public key fingerprint as specified in section 4 of RFC 4716.
 
 <h4 class="pdoc-member-header" id="KeyPair-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -549,7 +549,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KeyPair-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,12 +558,12 @@ The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
 
 <h4 class="pdoc-member-header" id="KeyPair-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L101">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L101">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyPair-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L106">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L106">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -572,7 +572,7 @@ An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
 
 <h4 class="pdoc-member-header" id="KeyPair-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L111">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L111">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -581,7 +581,7 @@ the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgpKey` is provided
 
 <h4 class="pdoc-member-header" id="KeyPair-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L116">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L116">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ The public key material. This public key will be
 imported into Lightsail
 
 <h4 class="pdoc-member-header" id="KeyPair-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -599,7 +599,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StaticIp" data-link-title="StaticIp">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L21">
         Resource <strong>StaticIp</strong>
     </a>
 </h3>
@@ -620,7 +620,7 @@ const test = new aws.lightsail.StaticIp("test", {});
 ```
 
 <h4 class="pdoc-member-header" id="StaticIp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -634,7 +634,7 @@ Create a StaticIp resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StaticIp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -645,14 +645,14 @@ Get an existing StaticIp resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StaticIp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StaticIp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -663,7 +663,7 @@ Returns true if the given object is an instance of StaticIp.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StaticIp-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L52">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L52">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -671,7 +671,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the Lightsail static IP
 
 <h4 class="pdoc-member-header" id="StaticIp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -680,7 +680,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StaticIp-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L56">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L56">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -688,7 +688,7 @@ deployments and may be missing (undefined) during planning phases.
 The allocated static IP address
 
 <h4 class="pdoc-member-header" id="StaticIp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -696,7 +696,7 @@ The allocated static IP address
 The name for the allocated static IP
 
 <h4 class="pdoc-member-header" id="StaticIp-supportCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L64">property <b>supportCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L64">property <b>supportCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -704,7 +704,7 @@ The name for the allocated static IP
 The support code.
 
 <h4 class="pdoc-member-header" id="StaticIp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -713,7 +713,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StaticIpAttachment" data-link-title="StaticIpAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">
         Resource <strong>StaticIpAttachment</strong>
     </a>
 </h3>
@@ -744,7 +744,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("testStaticI
 ```
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -758,7 +758,7 @@ Create a StaticIpAttachment resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -769,14 +769,14 @@ Get an existing StaticIpAttachment resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -787,7 +787,7 @@ Returns true if the given object is an instance of StaticIpAttachment.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -796,7 +796,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L62">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L62">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Lightsail instance to attach the IP to
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L66">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L66">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ The name of the Lightsail instance to attach the IP to
 The allocated static IP address
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-staticIpName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L70">property <b>staticIpName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L70">property <b>staticIpName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>staticIpName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ The allocated static IP address
 The name of the allocated static IP
 
 <h4 class="pdoc-member-header" id="StaticIpAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -832,7 +832,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L115">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -842,7 +842,7 @@ deployments.
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L119">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L119">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -850,7 +850,7 @@ The set of arguments for constructing a Domain resource.
 The name of the Lightsail domain to manage
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L101">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -860,7 +860,7 @@ The name of the Lightsail domain to manage
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L105">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L105">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ Input properties used for looking up and filtering Domain resources.
 The ARN of the Lightsail domain
 
 <h4 class="pdoc-member-header" id="DomainState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/domain.ts#L109">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/domain.ts#L109">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -876,7 +876,7 @@ The ARN of the Lightsail domain
 The name of the Lightsail domain to manage
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L296">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L296">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -886,7 +886,7 @@ The name of the Lightsail domain to manage
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L301">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L301">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -895,7 +895,7 @@ The Availability Zone in which to create your
 instance (see list below)
 
 <h4 class="pdoc-member-header" id="InstanceArgs-blueprintId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L305">property <b>blueprintId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L305">property <b>blueprintId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueprintId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -903,7 +903,7 @@ instance (see list below)
 The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 
 <h4 class="pdoc-member-header" id="InstanceArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L309">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L309">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -911,7 +911,7 @@ The ID for a virtual private server image. A list of available blueprint IDs can
 The bundle of specification information (see list below)
 
 <h4 class="pdoc-member-header" id="InstanceArgs-keyPairName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L314">property <b>keyPairName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L314">property <b>keyPairName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPairName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -920,7 +920,7 @@ The name of your key pair. Created in the
 Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L318">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L318">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -928,7 +928,7 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L322">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L322">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -936,7 +936,7 @@ The name of the Lightsail Instance. Names be unique within each AWS Region in yo
 A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L326">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L326">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -944,7 +944,7 @@ A map of tags to assign to the resource. To create a key-only tag, use an empty 
 launch script to configure server with additional user data
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L240">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -954,7 +954,7 @@ launch script to configure server with additional user data
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L244">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L244">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -962,7 +962,7 @@ Input properties used for looking up and filtering Instance resources.
 The ARN of the Lightsail instance (matches `id`).
 
 <h4 class="pdoc-member-header" id="InstanceState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L249">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L249">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -971,7 +971,7 @@ The Availability Zone in which to create your
 instance (see list below)
 
 <h4 class="pdoc-member-header" id="InstanceState-blueprintId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L253">property <b>blueprintId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L253">property <b>blueprintId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueprintId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ instance (see list below)
 The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 
 <h4 class="pdoc-member-header" id="InstanceState-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L257">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L257">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -987,12 +987,12 @@ The ID for a virtual private server image. A list of available blueprint IDs can
 The bundle of specification information (see list below)
 
 <h4 class="pdoc-member-header" id="InstanceState-cpuCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L258">property <b>cpuCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L258">property <b>cpuCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L267">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L267">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1005,17 +1005,17 @@ The timestamp when the instance was created.
 * `userData`
 
 <h4 class="pdoc-member-header" id="InstanceState-ipv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L268">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L268">property <b>ipv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-isStaticIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L269">property <b>isStaticIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L269">property <b>isStaticIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isStaticIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-keyPairName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L274">property <b>keyPairName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L274">property <b>keyPairName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPairName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ The name of your key pair. Created in the
 Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L278">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L278">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,22 +1032,22 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.
 
 <h4 class="pdoc-member-header" id="InstanceState-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L279">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L279">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-publicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L280">property <b>publicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L280">property <b>publicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-ramSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L281">property <b>ramSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L281">property <b>ramSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L285">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L285">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1055,7 +1055,7 @@ The name of the Lightsail Instance. Names be unique within each AWS Region in yo
 A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value.
 
 <h4 class="pdoc-member-header" id="InstanceState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L289">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L289">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1063,12 +1063,12 @@ A map of tags to assign to the resource. To create a key-only tag, use an empty 
 launch script to configure server with additional user data
 
 <h4 class="pdoc-member-header" id="InstanceState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/instance.ts#L290">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/instance.ts#L290">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KeyPairArgs" data-link-title="KeyPairArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L211">
         interface <strong>KeyPairArgs</strong>
     </a>
 </h3>
@@ -1078,7 +1078,7 @@ launch script to configure server with additional user data
 The set of arguments for constructing a KeyPair resource.
 
 <h4 class="pdoc-member-header" id="KeyPairArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L216">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,12 +1087,12 @@ The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
 
 <h4 class="pdoc-member-header" id="KeyPairArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L217">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L217">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyPairArgs-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L222">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L222">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
 
 <h4 class="pdoc-member-header" id="KeyPairArgs-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L227">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L227">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1110,7 +1110,7 @@ The public key material. This public key will be
 imported into Lightsail
 
 <h3 class="pdoc-module-header" id="KeyPairState" data-link-title="KeyPairState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L165">
         interface <strong>KeyPairState</strong>
     </a>
 </h3>
@@ -1120,7 +1120,7 @@ imported into Lightsail
 Input properties used for looking up and filtering KeyPair resources.
 
 <h4 class="pdoc-member-header" id="KeyPairState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L169">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L169">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1128,7 +1128,7 @@ Input properties used for looking up and filtering KeyPair resources.
 The ARN of the Lightsail key pair
 
 <h4 class="pdoc-member-header" id="KeyPairState-encryptedFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L174">property <b>encryptedFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L174">property <b>encryptedFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptedFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1137,7 +1137,7 @@ The MD5 public key fingerprint for the encrypted
 private key
 
 <h4 class="pdoc-member-header" id="KeyPairState-encryptedPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L180">property <b>encryptedPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L180">property <b>encryptedPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptedPrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ encrypted with the given `pgpKey`. This is only populated when creating a new
 key and `pgpKey` is supplied
 
 <h4 class="pdoc-member-header" id="KeyPairState-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L184">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L184">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ key and `pgpKey` is supplied
 The MD5 public key fingerprint as specified in section 4 of RFC 4716.
 
 <h4 class="pdoc-member-header" id="KeyPairState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1164,12 +1164,12 @@ The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
 
 <h4 class="pdoc-member-header" id="KeyPairState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L190">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L190">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyPairState-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L195">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L195">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1178,7 +1178,7 @@ An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
 
 <h4 class="pdoc-member-header" id="KeyPairState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L200">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L200">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgpKey` is provided
 
 <h4 class="pdoc-member-header" id="KeyPairState-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/keyPair.ts#L205">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/keyPair.ts#L205">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1196,7 +1196,7 @@ The public key material. This public key will be
 imported into Lightsail
 
 <h3 class="pdoc-module-header" id="StaticIpArgs" data-link-title="StaticIpArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L125">
         interface <strong>StaticIpArgs</strong>
     </a>
 </h3>
@@ -1206,7 +1206,7 @@ imported into Lightsail
 The set of arguments for constructing a StaticIp resource.
 
 <h4 class="pdoc-member-header" id="StaticIpArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1214,7 +1214,7 @@ The set of arguments for constructing a StaticIp resource.
 The name for the allocated static IP
 
 <h3 class="pdoc-module-header" id="StaticIpAttachmentArgs" data-link-title="StaticIpAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L131">
         interface <strong>StaticIpAttachmentArgs</strong>
     </a>
 </h3>
@@ -1224,7 +1224,7 @@ The name for the allocated static IP
 The set of arguments for constructing a StaticIpAttachment resource.
 
 <h4 class="pdoc-member-header" id="StaticIpAttachmentArgs-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L135">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L135">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1232,7 +1232,7 @@ The set of arguments for constructing a StaticIpAttachment resource.
 The name of the Lightsail instance to attach the IP to
 
 <h4 class="pdoc-member-header" id="StaticIpAttachmentArgs-staticIpName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L139">property <b>staticIpName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L139">property <b>staticIpName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticIpName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1240,7 +1240,7 @@ The name of the Lightsail instance to attach the IP to
 The name of the allocated static IP
 
 <h3 class="pdoc-module-header" id="StaticIpAttachmentState" data-link-title="StaticIpAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L113">
         interface <strong>StaticIpAttachmentState</strong>
     </a>
 </h3>
@@ -1250,7 +1250,7 @@ The name of the allocated static IP
 Input properties used for looking up and filtering StaticIpAttachment resources.
 
 <h4 class="pdoc-member-header" id="StaticIpAttachmentState-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L117">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L117">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ Input properties used for looking up and filtering StaticIpAttachment resources.
 The name of the Lightsail instance to attach the IP to
 
 <h4 class="pdoc-member-header" id="StaticIpAttachmentState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L121">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L121">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ The name of the Lightsail instance to attach the IP to
 The allocated static IP address
 
 <h4 class="pdoc-member-header" id="StaticIpAttachmentState-staticIpName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIpAttachment.ts#L125">property <b>staticIpName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIpAttachment.ts#L125">property <b>staticIpName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticIpName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1274,7 @@ The allocated static IP address
 The name of the allocated static IP
 
 <h3 class="pdoc-module-header" id="StaticIpState" data-link-title="StaticIpState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L103">
         interface <strong>StaticIpState</strong>
     </a>
 </h3>
@@ -1284,7 +1284,7 @@ The name of the allocated static IP
 Input properties used for looking up and filtering StaticIp resources.
 
 <h4 class="pdoc-member-header" id="StaticIpState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L107">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L107">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1292,7 +1292,7 @@ Input properties used for looking up and filtering StaticIp resources.
 The ARN of the Lightsail static IP
 
 <h4 class="pdoc-member-header" id="StaticIpState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L111">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L111">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1300,7 +1300,7 @@ The ARN of the Lightsail static IP
 The allocated static IP address
 
 <h4 class="pdoc-member-header" id="StaticIpState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1308,7 +1308,7 @@ The allocated static IP address
 The name for the allocated static IP
 
 <h4 class="pdoc-member-header" id="StaticIpState-supportCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lightsail/staticIp.ts#L119">property <b>supportCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/lightsail/staticIp.ts#L119">property <b>supportCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

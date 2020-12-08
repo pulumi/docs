@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/aws | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/aws package."
-git_sha: "47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9"
+git_sha: "915e8c946f2e4ea320451268dae8af053d158698"
 block_external_search_index: true
 ---
 
