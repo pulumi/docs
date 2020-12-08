@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,7 +114,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -183,7 +183,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -245,7 +245,7 @@ const example = pulumi.output(azuread.getServicePrincipal({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServicePrincipal<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#LookupServicePrincipalArgs">LookupServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#LookupServicePrincipalResult">LookupServicePrincipalResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServicePrincipal<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#LookupServicePrincipalArgs">LookupServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#LookupServicePrincipalResult">LookupServicePrincipalResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServicePrincipal` in the Go SDK.
 
@@ -772,7 +772,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetServicePrincipalAppRole">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#GetServicePrincipalAppRole">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetServicePrincipalAppRole.html">output</a> API doc for this type.
@@ -1082,7 +1082,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetServicePrincipalOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetServicePrincipalOauth2Permission">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#GetServicePrincipalOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#GetServicePrincipalOauth2Permission">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.GetServicePrincipalOauth2PermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetServicePrincipalOauth2Permission.html">output</a> API doc for this type.

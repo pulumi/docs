@@ -15,7 +15,9 @@ A Pulumi package for creating and managing azuread cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="applicationapprole" title="ApplicationAppRole"><span class="symbol resource"></span>ApplicationAppRole</a></li>
     <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="symbol resource"></span>ApplicationCertificate</a></li>
+    <li><a href="applicationoauth2permission" title="ApplicationOAuth2Permission"><span class="symbol resource"></span>ApplicationOAuth2Permission</a></li>
     <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
@@ -47,7 +49,7 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 	<dt>Version</dt>
-	<dd>2.6.1</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -58,7 +60,7 @@ A Pulumi package for creating and managing azuread cloud resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.html" title="Pulumi.AzureAD">Pulumi.AzureAD</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#" title="azuread">azuread</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#" title="azuread">azuread</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#" title="@pulumi/azuread">@pulumi/azuread</a></dd>
