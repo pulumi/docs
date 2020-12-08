@@ -49,7 +49,7 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.0.1</dd>
 </dl>
 
 
