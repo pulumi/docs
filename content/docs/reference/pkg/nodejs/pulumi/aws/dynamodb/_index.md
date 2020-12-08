@@ -3,7 +3,7 @@ title: "Module dynamodb"
 title_tag: "Module dynamodb | Package @pulumi/aws | Node.js SDK"
 linktitle: "dynamodb"
 meta_desc: "Explore members of the dynamodb module in the @pulumi/aws package."
-git_sha: "fbc6ab50703a2a173ec5f3800d282dc130df7d38"
+git_sha: "47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9"
 block_external_search_index: true
 ---
 
@@ -47,7 +47,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="GlobalTable" data-link-title="GlobalTable">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L73">
         Resource <strong>GlobalTable</strong>
     </a>
 </h3>
@@ -119,7 +119,7 @@ DynamoDB Global Tables can be imported using the global table name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="GlobalTable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -133,7 +133,7 @@ Create a GlobalTable resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GlobalTable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L83">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L83">method <b>get</b></a>
 </h4>
 
 
@@ -144,14 +144,14 @@ Get an existing GlobalTable resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GlobalTable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L73">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GlobalTable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L94">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L94">method <b>isInstance</b></a>
 </h4>
 
 
@@ -162,7 +162,7 @@ Returns true if the given object is an instance of GlobalTable.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GlobalTable-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L104">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L104">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the DynamoDB Global Table
 
 <h4 class="pdoc-member-header" id="GlobalTable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -179,7 +179,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GlobalTable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the global table. Must match underlying DynamoDB Table names in all regions.
 
 <h4 class="pdoc-member-header" id="GlobalTable-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L112">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L112">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GlobalTableReplica'>GlobalTableReplica</a>[]&gt;;</code></pre>
@@ -195,7 +195,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
 Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 
 <h4 class="pdoc-member-header" id="GlobalTable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L73">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L73">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -204,7 +204,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Table" data-link-title="Table">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L97">
         Resource <strong>Table</strong>
     </a>
 </h3>
@@ -300,7 +300,7 @@ DynamoDB tables can be imported using the `name`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Table-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L208"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L208"> <b>constructor</b></a>
 </h4>
 
 
@@ -314,7 +314,7 @@ Create a Table resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L107">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L107">method <b>get</b></a>
 </h4>
 
 
@@ -325,14 +325,14 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Table-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L97">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L97">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L118">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L118">method <b>isInstance</b></a>
 </h4>
 
 
@@ -343,7 +343,7 @@ Returns true if the given object is an instance of Table.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Table-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L160">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L160">method <b>onEvent</b></a>
 </h4>
 
 
@@ -357,7 +357,7 @@ In order to receive events the [Table] must have been created with the `streamEn
 value as well as an appropriate `streamViewType`.
 
 <h4 class="pdoc-member-header" id="Table-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L128">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L128">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ value as well as an appropriate `streamViewType`.
 The arn of the table
 
 <h4 class="pdoc-member-header" id="Table-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L132">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L132">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableAttribute'>TableAttribute</a>[]&gt;;</code></pre>
@@ -373,7 +373,7 @@ The arn of the table
 List of nested attribute definitions. Only required for `hashKey` and `rangeKey` attributes. Each attribute has two properties:
 
 <h4 class="pdoc-member-header" id="Table-billingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L136">property <b>billingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L136">property <b>billingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ List of nested attribute definitions. Only required for `hashKey` and `rangeKey`
 Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
 
 <h4 class="pdoc-member-header" id="Table-globalSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L142">property <b>globalSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L142">property <b>globalSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>globalSecondaryIndexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableGlobalSecondaryIndex'>TableGlobalSecondaryIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ subject to the normal limits on the number of GSIs, projected
 attributes, etc.
 
 <h4 class="pdoc-member-header" id="Table-hashKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L147">property <b>hashKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L147">property <b>hashKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +400,7 @@ The name of the hash key in the index; must be
 defined as an attribute in the resource.
 
 <h4 class="pdoc-member-header" id="Table-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L97">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L97">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -409,7 +409,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Table-localSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L153">property <b>localSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L153">property <b>localSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>localSecondaryIndexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableLocalSecondaryIndex'>TableLocalSecondaryIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ these can only be allocated *at creation* so you cannot change this
 definition after you have created the resource.
 
 <h4 class="pdoc-member-header" id="Table-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ definition after you have created the resource.
 The name of the index
 
 <h4 class="pdoc-member-header" id="Table-pointInTimeRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L161">property <b>pointInTimeRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L161">property <b>pointInTimeRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pointInTimeRecovery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TablePointInTimeRecovery'>TablePointInTimeRecovery</a>&gt;;</code></pre>
@@ -435,7 +435,7 @@ The name of the index
 Point-in-time recovery options.
 
 <h4 class="pdoc-member-header" id="Table-rangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L165">property <b>rangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L165">property <b>rangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rangeKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -443,7 +443,7 @@ Point-in-time recovery options.
 The name of the range key; must be defined
 
 <h4 class="pdoc-member-header" id="Table-readCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L169">property <b>readCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L169">property <b>readCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -451,7 +451,7 @@ The name of the range key; must be defined
 The number of read units for this index. Must be set if billingMode is set to PROVISIONED.
 
 <h4 class="pdoc-member-header" id="Table-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L173">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L173">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableReplica'>TableReplica</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -459,7 +459,7 @@ The number of read units for this index. Must be set if billingMode is set to PR
 Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 
 <h4 class="pdoc-member-header" id="Table-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L177">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L177">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverSideEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableServerSideEncryption'>TableServerSideEncryption</a>&gt;;</code></pre>
@@ -467,7 +467,7 @@ Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](htt
 Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 
 <h4 class="pdoc-member-header" id="Table-streamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L181">property <b>streamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L181">property <b>streamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -475,7 +475,7 @@ Encryption at rest options. AWS DynamoDB tables are automatically encrypted at r
 The ARN of the Table Stream. Only available when `streamEnabled = true`
 
 <h4 class="pdoc-member-header" id="Table-streamEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L185">property <b>streamEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L185">property <b>streamEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ The ARN of the Table Stream. Only available when `streamEnabled = true`
 Indicates whether Streams are to be enabled (true) or disabled (false).
 
 <h4 class="pdoc-member-header" id="Table-streamLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L192">property <b>streamLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L192">property <b>streamLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -494,7 +494,7 @@ table name and this field is guaranteed to be unique.
 It can be used for creating CloudWatch Alarms. Only available when `streamEnabled = true`
 
 <h4 class="pdoc-member-header" id="Table-streamViewType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L196">property <b>streamViewType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L196">property <b>streamViewType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamViewType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ It can be used for creating CloudWatch Alarms. Only available when `streamEnable
 When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 
 <h4 class="pdoc-member-header" id="Table-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ When an item in the table is modified, StreamViewType determines what informatio
 A map of tags to populate on the created table.
 
 <h4 class="pdoc-member-header" id="Table-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L204">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L204">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableTtl'>TableTtl</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ A map of tags to populate on the created table.
 Defines ttl, has two properties, and can only be specified once:
 
 <h4 class="pdoc-member-header" id="Table-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L97">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L97">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -527,7 +527,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Table-writeCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L208">property <b>writeCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L208">property <b>writeCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writeCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -535,7 +535,7 @@ deployments.
 The number of write units for this index. Must be set if billingMode is set to PROVISIONED.
 
 <h3 class="pdoc-module-header" id="TableItem" data-link-title="TableItem">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L46">
         Resource <strong>TableItem</strong>
     </a>
 </h3>
@@ -581,7 +581,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
 DynamoDB table items cannot be imported.
 
 <h4 class="pdoc-member-header" id="TableItem-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -595,7 +595,7 @@ Create a TableItem resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TableItem-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -606,14 +606,14 @@ Get an existing TableItem resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TableItem-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TableItem-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -624,7 +624,7 @@ Returns true if the given object is an instance of TableItem.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TableItem-hashKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L77">property <b>hashKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L77">property <b>hashKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Hash key to use for lookups and identification of the item
 
 <h4 class="pdoc-member-header" id="TableItem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -641,7 +641,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TableItem-item">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L82">property <b>item</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L82">property <b>item</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>item: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ JSON representation of a map of attribute name/value pairs, one for each attribu
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 
 <h4 class="pdoc-member-header" id="TableItem-rangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L86">property <b>rangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L86">property <b>rangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rangeKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ Only the primary key attributes are required; you can optionally provide other a
 Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 
 <h4 class="pdoc-member-header" id="TableItem-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L90">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L90">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -666,7 +666,7 @@ Range key to use for lookups and identification of the item. Required if there i
 The name of the table to contain the item.
 
 <h4 class="pdoc-member-header" id="TableItem-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -677,7 +677,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getTable" data-link-title="getTable">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L22">
         Function <strong>getTable</strong>
     </a>
 </h3>
@@ -702,7 +702,7 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetTableArgs" data-link-title="GetTableArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L40">
         interface <strong>GetTableArgs</strong>
     </a>
 </h3>
@@ -712,7 +712,7 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 A collection of arguments for invoking getTable.
 
 <h4 class="pdoc-member-header" id="GetTableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L44">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -720,17 +720,17 @@ A collection of arguments for invoking getTable.
 The name of the DynamoDB table.
 
 <h4 class="pdoc-member-header" id="GetTableArgs-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L45">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L45">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTableServerSideEncryption'>inputs.dynamodb.GetTableServerSideEncryption</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L46">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L46">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetTableResult" data-link-title="GetTableResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L52">
         interface <strong>GetTableResult</strong>
     </a>
 </h3>
@@ -740,32 +740,32 @@ The name of the DynamoDB table.
 A collection of values returned by getTable.
 
 <h4 class="pdoc-member-header" id="GetTableResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L53">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L54">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L54">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableAttribute'>GetTableAttribute</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-billingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L55">property <b>billingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L55">property <b>billingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-globalSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L56">property <b>globalSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L56">property <b>globalSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalSecondaryIndexes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableGlobalSecondaryIndex'>GetTableGlobalSecondaryIndex</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-hashKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L57">property <b>hashKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L57">property <b>hashKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -773,77 +773,77 @@ A collection of values returned by getTable.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTableResult-localSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L62">property <b>localSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L62">property <b>localSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localSecondaryIndexes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableLocalSecondaryIndex'>GetTableLocalSecondaryIndex</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-pointInTimeRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L64">property <b>pointInTimeRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L64">property <b>pointInTimeRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointInTimeRecovery: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTablePointInTimeRecovery'>GetTablePointInTimeRecovery</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-rangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L65">property <b>rangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L65">property <b>rangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rangeKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-readCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L66">property <b>readCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L66">property <b>readCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L67">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L67">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableReplica'>GetTableReplica</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L68">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L68">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableServerSideEncryption'>GetTableServerSideEncryption</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-streamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L69">property <b>streamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L69">property <b>streamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-streamEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L70">property <b>streamEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L70">property <b>streamEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-streamLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L71">property <b>streamLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L71">property <b>streamLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamLabel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-streamViewType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L72">property <b>streamViewType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L72">property <b>streamViewType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamViewType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L74">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L74">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableTtl'>GetTableTtl</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTableResult-writeCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/getTable.ts#L75">property <b>writeCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/getTable.ts#L75">property <b>writeCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GlobalTableArgs" data-link-title="GlobalTableArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L170">
         interface <strong>GlobalTableArgs</strong>
     </a>
 </h3>
@@ -853,7 +853,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a GlobalTable resource.
 
 <h4 class="pdoc-member-header" id="GlobalTableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L174">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ The set of arguments for constructing a GlobalTable resource.
 The name of the global table. Must match underlying DynamoDB Table names in all regions.
 
 <h4 class="pdoc-member-header" id="GlobalTableArgs-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L178">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L178">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GlobalTableReplica'>GlobalTableReplica</a>&gt;[]&gt;;</code></pre>
@@ -869,7 +869,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
 Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 
 <h3 class="pdoc-module-header" id="GlobalTableState" data-link-title="GlobalTableState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L152">
         interface <strong>GlobalTableState</strong>
     </a>
 </h3>
@@ -879,7 +879,7 @@ Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 Input properties used for looking up and filtering GlobalTable resources.
 
 <h4 class="pdoc-member-header" id="GlobalTableState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L156">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L156">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -887,7 +887,7 @@ Input properties used for looking up and filtering GlobalTable resources.
 The ARN of the DynamoDB Global Table
 
 <h4 class="pdoc-member-header" id="GlobalTableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L160">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -895,7 +895,7 @@ The ARN of the DynamoDB Global Table
 The name of the global table. Must match underlying DynamoDB Table names in all regions.
 
 <h4 class="pdoc-member-header" id="GlobalTableState-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/globalTable.ts#L164">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/globalTable.ts#L164">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GlobalTableReplica'>GlobalTableReplica</a>&gt;[]&gt;;</code></pre>
@@ -903,7 +903,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
 Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 
 <h3 class="pdoc-module-header" id="TableArgs" data-link-title="TableArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L373">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L373">
         interface <strong>TableArgs</strong>
     </a>
 </h3>
@@ -913,7 +913,7 @@ Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 The set of arguments for constructing a Table resource.
 
 <h4 class="pdoc-member-header" id="TableArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L377">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L377">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableAttribute'>TableAttribute</a>&gt;[]&gt;;</code></pre>
@@ -921,7 +921,7 @@ The set of arguments for constructing a Table resource.
 List of nested attribute definitions. Only required for `hashKey` and `rangeKey` attributes. Each attribute has two properties:
 
 <h4 class="pdoc-member-header" id="TableArgs-billingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L381">property <b>billingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L381">property <b>billingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -929,7 +929,7 @@ List of nested attribute definitions. Only required for `hashKey` and `rangeKey`
 Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
 
 <h4 class="pdoc-member-header" id="TableArgs-globalSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L387">property <b>globalSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L387">property <b>globalSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalSecondaryIndexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableGlobalSecondaryIndex'>TableGlobalSecondaryIndex</a>&gt;[]&gt;;</code></pre>
@@ -939,7 +939,7 @@ subject to the normal limits on the number of GSIs, projected
 attributes, etc.
 
 <h4 class="pdoc-member-header" id="TableArgs-hashKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L392">property <b>hashKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L392">property <b>hashKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -948,7 +948,7 @@ The name of the hash key in the index; must be
 defined as an attribute in the resource.
 
 <h4 class="pdoc-member-header" id="TableArgs-localSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L398">property <b>localSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L398">property <b>localSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localSecondaryIndexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableLocalSecondaryIndex'>TableLocalSecondaryIndex</a>&gt;[]&gt;;</code></pre>
@@ -958,7 +958,7 @@ these can only be allocated *at creation* so you cannot change this
 definition after you have created the resource.
 
 <h4 class="pdoc-member-header" id="TableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L402">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L402">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -966,7 +966,7 @@ definition after you have created the resource.
 The name of the index
 
 <h4 class="pdoc-member-header" id="TableArgs-pointInTimeRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L406">property <b>pointInTimeRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L406">property <b>pointInTimeRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointInTimeRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TablePointInTimeRecovery'>TablePointInTimeRecovery</a>&gt;;</code></pre>
@@ -974,7 +974,7 @@ The name of the index
 Point-in-time recovery options.
 
 <h4 class="pdoc-member-header" id="TableArgs-rangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L410">property <b>rangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L410">property <b>rangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rangeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -982,7 +982,7 @@ Point-in-time recovery options.
 The name of the range key; must be defined
 
 <h4 class="pdoc-member-header" id="TableArgs-readCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L414">property <b>readCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L414">property <b>readCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -990,7 +990,7 @@ The name of the range key; must be defined
 The number of read units for this index. Must be set if billingMode is set to PROVISIONED.
 
 <h4 class="pdoc-member-header" id="TableArgs-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L418">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L418">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableReplica'>TableReplica</a>&gt;[]&gt;;</code></pre>
@@ -998,7 +998,7 @@ The number of read units for this index. Must be set if billingMode is set to PR
 Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 
 <h4 class="pdoc-member-header" id="TableArgs-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L422">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L422">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableServerSideEncryption'>TableServerSideEncryption</a>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](htt
 Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 
 <h4 class="pdoc-member-header" id="TableArgs-streamEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L426">property <b>streamEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L426">property <b>streamEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ Encryption at rest options. AWS DynamoDB tables are automatically encrypted at r
 Indicates whether Streams are to be enabled (true) or disabled (false).
 
 <h4 class="pdoc-member-header" id="TableArgs-streamViewType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L430">property <b>streamViewType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L430">property <b>streamViewType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamViewType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1022,7 @@ Indicates whether Streams are to be enabled (true) or disabled (false).
 When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 
 <h4 class="pdoc-member-header" id="TableArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L434">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L434">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ When an item in the table is modified, StreamViewType determines what informatio
 A map of tags to populate on the created table.
 
 <h4 class="pdoc-member-header" id="TableArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L438">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L438">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableTtl'>TableTtl</a>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ A map of tags to populate on the created table.
 Defines ttl, has two properties, and can only be specified once:
 
 <h4 class="pdoc-member-header" id="TableArgs-writeCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L442">property <b>writeCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L442">property <b>writeCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1046,38 +1046,38 @@ Defines ttl, has two properties, and can only be specified once:
 The number of write units for this index. Must be set if billingMode is set to PROVISIONED.
 
 <h3 class="pdoc-module-header" id="TableEvent" data-link-title="TableEvent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L70">
         interface <strong>TableEvent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TableEvent</span></code></pre>
 <h4 class="pdoc-member-header" id="TableEvent-Records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L71">property <b>Records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L71">property <b>Records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Records: <a href='#TableEventRecord'>TableEventRecord</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="TableEventHandler" data-link-title="TableEventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L95">
         type <strong>TableEventHandler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> TableEventHandler = lambda.EventHandler&lt;<a href='#TableEvent'>TableEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TableEventRecord" data-link-title="TableEventRecord">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L74">
         interface <strong>TableEventRecord</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TableEventRecord</span></code></pre>
 <h4 class="pdoc-member-header" id="TableEventRecord-awsRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L75">property <b>awsRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L75">property <b>awsRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventRecord-dynamodb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L76">property <b>dynamodb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L76">property <b>dynamodb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamodb: {
@@ -1090,27 +1090,27 @@ The number of write units for this index. Must be set if billingMode is set to P
     StreamViewType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</code></pre>
 <h4 class="pdoc-member-header" id="TableEventRecord-eventID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L85">property <b>eventID</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L85">property <b>eventID</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventRecord-eventName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L86">property <b>eventName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L86">property <b>eventName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventName: <span class='s2'>"INSERT"</span> | <span class='s2'>"MODIFY"</span> | <span class='s2'>"REMOVE"</span>;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventRecord-eventSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L87">property <b>eventSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L87">property <b>eventSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventRecord-eventVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L88">property <b>eventVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L88">property <b>eventVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventRecord-userIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L89">property <b>userIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L89">property <b>userIdentity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdentity: {
@@ -1118,21 +1118,21 @@ The number of write units for this index. Must be set if billingMode is set to P
     Type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</code></pre>
 <h3 class="pdoc-module-header" id="TableEventSubscription" data-link-title="TableEventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">
         class <strong>TableEventSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TableEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="TableEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TableEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, table: Table, handler: <a href='#TableEventHandler'>TableEventHandler</a>, args: <a href='#TableEventSubscriptionArgs'>TableEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TableEventSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>getData</b></a>
 </h4>
 
 
@@ -1143,14 +1143,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="TableEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TableEventSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>initialize</b></a>
 </h4>
 
 
@@ -1162,7 +1162,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="TableEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1173,7 +1173,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TableEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -1188,27 +1188,27 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="TableEventSubscription-eventSourceMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L99">property <b>eventSourceMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L99">property <b>eventSourceMapping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventSourceMapping: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSourceMapping'>EventSourceMapping</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventSubscription-func">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>func: LambdaFunction;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventSubscription-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventSubscription-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L98">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L98">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>table: Table;</code></pre>
 <h4 class="pdoc-member-header" id="TableEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L97">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1217,7 +1217,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TableEventSubscriptionArgs" data-link-title="TableEventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L26">
         interface <strong>TableEventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -1228,7 +1228,7 @@ Arguments to control the event rule subscription.  Currently empty, but still de
 future need.
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-batchSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L30">property <b>batchSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L30">property <b>batchSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1236,7 +1236,7 @@ future need.
 The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB.
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-bisectBatchOnFunctionError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L35">property <b>bisectBatchOnFunctionError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L35">property <b>bisectBatchOnFunctionError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bisectBatchOnFunctionError?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1244,7 +1244,7 @@ The largest number of records that Lambda will retrieve from your event source a
 If the function returns an error, split the batch in two and retry. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-destinationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L40">property <b>destinationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L40">property <b>destinationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventSourceMappingDestinationConfig'>EventSourceMappingDestinationConfig</a>&gt;;</code></pre>
@@ -1252,7 +1252,7 @@ If the function returns an error, split the batch in two and retry. Defaults to 
 An Amazon SQS queue or Amazon SNS topic destination for failed records.
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-maximumBatchingWindowInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L47">property <b>maximumBatchingWindowInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L47">property <b>maximumBatchingWindowInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumBatchingWindowInSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1262,7 +1262,7 @@ until either maximum_batching_window_in_seconds expires or batch_size has been m
 are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-maximumRecordAgeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L52">property <b>maximumRecordAgeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L52">property <b>maximumRecordAgeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRecordAgeInSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1270,7 +1270,7 @@ are available in the stream. If the batch it reads from the stream only has one 
 The maximum age of a record that Lambda sends to a function for processing. Minimum of `60`, maximum and default of `604800`
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-maximumRetryAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L57">property <b>maximumRetryAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L57">property <b>maximumRetryAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRetryAttempts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1278,7 +1278,7 @@ The maximum age of a record that Lambda sends to a function for processing. Mini
 The maximum number of times to retry when the function returns an error. Minimum of `0`, maximum and default of `10000`.
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-parallelizationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L62">property <b>parallelizationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L62">property <b>parallelizationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parallelizationFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1286,7 +1286,7 @@ The maximum number of times to retry when the function returns an error. Minimum
 The number of batches to process from each shard concurrently. Minimum and default of `1`, maximum of `10`
 
 <h4 class="pdoc-member-header" id="TableEventSubscriptionArgs-startingPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/dynamodbMixins.ts#L67">property <b>startingPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/dynamodbMixins.ts#L67">property <b>startingPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startingPosition: <span class='s2'>"TRIM_HORIZON"</span> | <span class='s2'>"LATEST"</span>;</code></pre>
@@ -1294,7 +1294,7 @@ The number of batches to process from each shard concurrently. Minimum and defau
 The position in the stream where AWS Lambda should start reading. Must be one of either `TRIM_HORIZON` or `LATEST`.
 
 <h3 class="pdoc-module-header" id="TableItemArgs" data-link-title="TableItemArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L161">
         interface <strong>TableItemArgs</strong>
     </a>
 </h3>
@@ -1304,7 +1304,7 @@ The position in the stream where AWS Lambda should start reading. Must be one of
 The set of arguments for constructing a TableItem resource.
 
 <h4 class="pdoc-member-header" id="TableItemArgs-hashKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L165">property <b>hashKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L165">property <b>hashKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1312,7 +1312,7 @@ The set of arguments for constructing a TableItem resource.
 Hash key to use for lookups and identification of the item
 
 <h4 class="pdoc-member-header" id="TableItemArgs-item">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L170">property <b>item</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L170">property <b>item</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>item: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ JSON representation of a map of attribute name/value pairs, one for each attribu
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 
 <h4 class="pdoc-member-header" id="TableItemArgs-rangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L174">property <b>rangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L174">property <b>rangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rangeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1329,7 +1329,7 @@ Only the primary key attributes are required; you can optionally provide other a
 Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 
 <h4 class="pdoc-member-header" id="TableItemArgs-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L178">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L178">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ Range key to use for lookups and identification of the item. Required if there i
 The name of the table to contain the item.
 
 <h3 class="pdoc-module-header" id="TableItemState" data-link-title="TableItemState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L138">
         interface <strong>TableItemState</strong>
     </a>
 </h3>
@@ -1347,7 +1347,7 @@ The name of the table to contain the item.
 Input properties used for looking up and filtering TableItem resources.
 
 <h4 class="pdoc-member-header" id="TableItemState-hashKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L142">property <b>hashKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L142">property <b>hashKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ Input properties used for looking up and filtering TableItem resources.
 Hash key to use for lookups and identification of the item
 
 <h4 class="pdoc-member-header" id="TableItemState-item">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L147">property <b>item</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L147">property <b>item</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>item?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1364,7 +1364,7 @@ JSON representation of a map of attribute name/value pairs, one for each attribu
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 
 <h4 class="pdoc-member-header" id="TableItemState-rangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L151">property <b>rangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L151">property <b>rangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rangeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1372,7 +1372,7 @@ Only the primary key attributes are required; you can optionally provide other a
 Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 
 <h4 class="pdoc-member-header" id="TableItemState-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/tableItem.ts#L155">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/tableItem.ts#L155">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1380,7 +1380,7 @@ Range key to use for lookups and identification of the item. Required if there i
 The name of the table to contain the item.
 
 <h3 class="pdoc-module-header" id="TableState" data-link-title="TableState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L283">
         interface <strong>TableState</strong>
     </a>
 </h3>
@@ -1390,7 +1390,7 @@ The name of the table to contain the item.
 Input properties used for looking up and filtering Table resources.
 
 <h4 class="pdoc-member-header" id="TableState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L287">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L287">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1398,7 +1398,7 @@ Input properties used for looking up and filtering Table resources.
 The arn of the table
 
 <h4 class="pdoc-member-header" id="TableState-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L291">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L291">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableAttribute'>TableAttribute</a>&gt;[]&gt;;</code></pre>
@@ -1406,7 +1406,7 @@ The arn of the table
 List of nested attribute definitions. Only required for `hashKey` and `rangeKey` attributes. Each attribute has two properties:
 
 <h4 class="pdoc-member-header" id="TableState-billingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L295">property <b>billingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L295">property <b>billingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1414,7 +1414,7 @@ List of nested attribute definitions. Only required for `hashKey` and `rangeKey`
 Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
 
 <h4 class="pdoc-member-header" id="TableState-globalSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L301">property <b>globalSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L301">property <b>globalSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalSecondaryIndexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableGlobalSecondaryIndex'>TableGlobalSecondaryIndex</a>&gt;[]&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ subject to the normal limits on the number of GSIs, projected
 attributes, etc.
 
 <h4 class="pdoc-member-header" id="TableState-hashKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L306">property <b>hashKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L306">property <b>hashKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1433,7 +1433,7 @@ The name of the hash key in the index; must be
 defined as an attribute in the resource.
 
 <h4 class="pdoc-member-header" id="TableState-localSecondaryIndexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L312">property <b>localSecondaryIndexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L312">property <b>localSecondaryIndexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localSecondaryIndexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableLocalSecondaryIndex'>TableLocalSecondaryIndex</a>&gt;[]&gt;;</code></pre>
@@ -1443,7 +1443,7 @@ these can only be allocated *at creation* so you cannot change this
 definition after you have created the resource.
 
 <h4 class="pdoc-member-header" id="TableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L316">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L316">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1451,7 +1451,7 @@ definition after you have created the resource.
 The name of the index
 
 <h4 class="pdoc-member-header" id="TableState-pointInTimeRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L320">property <b>pointInTimeRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L320">property <b>pointInTimeRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointInTimeRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TablePointInTimeRecovery'>TablePointInTimeRecovery</a>&gt;;</code></pre>
@@ -1459,7 +1459,7 @@ The name of the index
 Point-in-time recovery options.
 
 <h4 class="pdoc-member-header" id="TableState-rangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L324">property <b>rangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L324">property <b>rangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rangeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1467,7 +1467,7 @@ Point-in-time recovery options.
 The name of the range key; must be defined
 
 <h4 class="pdoc-member-header" id="TableState-readCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L328">property <b>readCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L328">property <b>readCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1475,7 +1475,7 @@ The name of the range key; must be defined
 The number of read units for this index. Must be set if billingMode is set to PROVISIONED.
 
 <h4 class="pdoc-member-header" id="TableState-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L332">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L332">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableReplica'>TableReplica</a>&gt;[]&gt;;</code></pre>
@@ -1483,7 +1483,7 @@ The number of read units for this index. Must be set if billingMode is set to PR
 Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 
 <h4 class="pdoc-member-header" id="TableState-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L336">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L336">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableServerSideEncryption'>TableServerSideEncryption</a>&gt;;</code></pre>
@@ -1491,7 +1491,7 @@ Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](htt
 Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 
 <h4 class="pdoc-member-header" id="TableState-streamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L340">property <b>streamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L340">property <b>streamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1499,7 +1499,7 @@ Encryption at rest options. AWS DynamoDB tables are automatically encrypted at r
 The ARN of the Table Stream. Only available when `streamEnabled = true`
 
 <h4 class="pdoc-member-header" id="TableState-streamEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L344">property <b>streamEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L344">property <b>streamEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1507,7 +1507,7 @@ The ARN of the Table Stream. Only available when `streamEnabled = true`
 Indicates whether Streams are to be enabled (true) or disabled (false).
 
 <h4 class="pdoc-member-header" id="TableState-streamLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L351">property <b>streamLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L351">property <b>streamLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1518,7 +1518,7 @@ table name and this field is guaranteed to be unique.
 It can be used for creating CloudWatch Alarms. Only available when `streamEnabled = true`
 
 <h4 class="pdoc-member-header" id="TableState-streamViewType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L355">property <b>streamViewType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L355">property <b>streamViewType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamViewType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1526,7 +1526,7 @@ It can be used for creating CloudWatch Alarms. Only available when `streamEnable
 When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 
 <h4 class="pdoc-member-header" id="TableState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L359">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L359">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1534,7 +1534,7 @@ When an item in the table is modified, StreamViewType determines what informatio
 A map of tags to populate on the created table.
 
 <h4 class="pdoc-member-header" id="TableState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L363">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L363">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableTtl'>TableTtl</a>&gt;;</code></pre>
@@ -1542,7 +1542,7 @@ A map of tags to populate on the created table.
 Defines ttl, has two properties, and can only be specified once:
 
 <h4 class="pdoc-member-header" id="TableState-writeCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/dynamodb/table.ts#L367">property <b>writeCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/47a59f2f0096d53e2d9718fbe9e89a72c1f1bdc9/sdk/nodejs/dynamodb/table.ts#L367">property <b>writeCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
