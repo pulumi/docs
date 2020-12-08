@@ -37,3 +37,7 @@ You can install and manage the CNI plugin with the Amazon EKS console, CLI, and 
 Spot Instances are deeply discounted On-Demand EC2 instances. EKS now supports using Spot Instances with EKS managed node groups. If you are running batch process such as ETL with Apache Spark or stateless endpoint, Spot Instances are a cost-effective way for managing surge requests in EKS.
 
 Previously, to use Spot Instances, you had to manually configure EC2 Auto Scaling groups and upgrade the Spot nodes to the current version of Kubernetes. You can now set capacity type as SPOT and the EC2 instance types when creating a managed node group. The managed node group will provision and manage Spot nodes automatically according to best practices. You can create the node group through the EKS console, the EKS API, and eksctl. To learn more about configuring EKS node groups with Spot Instance, read the [blog](https://aws.amazon.com/blogs/containers/amazon-eks-now-supports-provisioning-and-managing-ec2-spot-instances-in-managed-node-groups/).
+
+{{% notes %}}
+Want some hands-on training with EKS? Join our workshop on Thursday, December 10th where you will create a production-ready EKS cluster, install add-ons to prepare your cluster for developers, and finally ship an application to your cluster. [Register Now]({{< relref "/resources/building-a-kubernetes-platform-in-amazon-eks" >}})
+{{% /notes %}}
