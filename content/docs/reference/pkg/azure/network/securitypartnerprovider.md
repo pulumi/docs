@@ -161,7 +161,7 @@ example_security_partner_provider = azure.network.SecurityPartnerProvider("examp
     tags={
         "ENV": "Prod",
     },
-    opts=ResourceOptions(depends_on=[example_vpn_gateway]))
+    opts=pulumi.ResourceOptions(depends_on=[example_vpn_gateway]))
 ```
 
 {{% /example %}}
