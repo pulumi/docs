@@ -1,7 +1,7 @@
 
 ---
 title: "AggregateAuthorization"
-title_tag: "Resource AggregateAuthorization | Module cfg | Package AWS"
+title_tag: "aws.cfg.AggregateAuthorization"
 meta_desc: "Explore the AggregateAuthorization resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Config Aggregate Authorization"
 ---
 

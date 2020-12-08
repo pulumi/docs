@@ -1,7 +1,7 @@
 
 ---
 title: "FlowLog"
-title_tag: "Resource FlowLog | Module ec2 | Package AWS"
+title_tag: "aws.ec2.FlowLog"
 meta_desc: "Explore the FlowLog resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network"
 ---
 

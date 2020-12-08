@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Module applicationloadbalancing | Package AWS"
+title_tag: "aws.applicationloadbalancing.LoadBalancer"
 meta_desc: "Explore the LoadBalancer resource of the applicationloadbalancing module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer resource."
 ---
 

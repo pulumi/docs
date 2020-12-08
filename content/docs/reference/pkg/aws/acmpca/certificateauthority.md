@@ -1,7 +1,7 @@
 
 ---
 title: "CertificateAuthority"
-title_tag: "Resource CertificateAuthority | Module acmpca | Package AWS"
+title_tag: "aws.acmpca.CertificateAuthority"
 meta_desc: "Explore the CertificateAuthority resource of the acmpca module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities)."
 ---
 

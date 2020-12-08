@@ -1,7 +1,7 @@
 
 ---
 title: "EfsLocation"
-title_tag: "Resource EfsLocation | Module datasync | Package AWS"
+title_tag: "aws.datasync.EfsLocation"
 meta_desc: "Explore the EfsLocation resource of the datasync module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS DataSync EFS Location."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "S3Location"
-title_tag: "Resource S3Location | Module datasync | Package AWS"
+title_tag: "aws.datasync.S3Location"
 meta_desc: "Explore the S3Location resource of the datasync module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an S3 Location within AWS DataSync."
 ---
 

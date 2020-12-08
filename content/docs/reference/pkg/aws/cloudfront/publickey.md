@@ -1,7 +1,7 @@
 
 ---
 title: "PublicKey"
-title_tag: "Resource PublicKey | Module cloudfront | Package AWS"
+title_tag: "aws.cloudfront.PublicKey"
 meta_desc: "Explore the PublicKey resource of the cloudfront module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

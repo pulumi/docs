@@ -1,7 +1,7 @@
 
 ---
 title: "TrafficMirrorFilter"
-title_tag: "Resource TrafficMirrorFilter | Module ec2 | Package AWS"
+title_tag: "aws.ec2.TrafficMirrorFilter"
 meta_desc: "Explore the TrafficMirrorFilter resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Traffic mirror filter.  "
 ---
 

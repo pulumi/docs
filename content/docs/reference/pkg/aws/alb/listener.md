@@ -1,7 +1,7 @@
 
 ---
 title: "Listener"
-title_tag: "Resource Listener | Module alb | Package AWS"
+title_tag: "aws.alb.Listener"
 meta_desc: "Explore the Listener resource of the alb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener resource."
 ---
 

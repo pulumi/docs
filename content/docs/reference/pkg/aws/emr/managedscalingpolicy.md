@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedScalingPolicy"
-title_tag: "Resource ManagedScalingPolicy | Module emr | Package AWS"
+title_tag: "aws.emr.ManagedScalingPolicy"
 meta_desc: "Explore the ManagedScalingPolicy resource of the emr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Managed Scaling policy for EMR Cluster. With Amazon EMR versions 5.30.0 and later (except for Amazon EMR 6.0.0), you can enable EMR managed scaling to automatically increase or decrease the number of instances or units in your cluster based on workload. See [Using EMR Managed Scaling in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-scaling.html) for more information."
 ---
 

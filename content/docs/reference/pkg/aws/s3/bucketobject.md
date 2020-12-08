@@ -1,7 +1,7 @@
 
 ---
 title: "BucketObject"
-title_tag: "Resource BucketObject | Module s3 | Package AWS"
+title_tag: "aws.s3.BucketObject"
 meta_desc: "Explore the BucketObject resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a S3 bucket object resource."
 ---
 

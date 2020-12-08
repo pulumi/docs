@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigGroup"
-title_tag: "Resource ConfigGroup | Module yaml | Package Kubernetes"
+title_tag: "kubernetes.yaml.ConfigGroup"
 meta_desc: "Explore the ConfigGroup resource of the yaml module, including examples, input properties, output properties, lookup functions, and supporting types. ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text"
 ---
 
@@ -17,6 +17,7 @@ may be supplied using any of the following methods:
 2. Using a file pattern or a list of file patterns:
 3. Using a literal string containing YAML, or a list of such strings:
 4. Any combination of files, patterns, or YAML strings:
+
 
 {{% examples %}}
 ## Example Usage
@@ -969,7 +970,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | List[str]</span>
+        <span class="property-type">Union[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -979,7 +980,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#objs_python" style="color: inherit; text-decoration: inherit;">objs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi:pulumi:Any | List[Any]</span>
+        <span class="property-type">Union[Any, Sequence[Any]]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -999,7 +1000,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
 
@@ -1009,7 +1010,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#yaml_python" style="color: inherit; text-decoration: inherit;">yaml</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | List[str]</span>
+        <span class="property-type">Union[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -1174,6 +1175,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

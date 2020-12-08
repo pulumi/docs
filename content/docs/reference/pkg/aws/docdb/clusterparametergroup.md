@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterParameterGroup"
-title_tag: "Resource ClusterParameterGroup | Module docdb | Package AWS"
+title_tag: "aws.docdb.ClusterParameterGroup"
 meta_desc: "Explore the ClusterParameterGroup resource of the docdb module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a DocumentDB Cluster Parameter Group"
 ---
 

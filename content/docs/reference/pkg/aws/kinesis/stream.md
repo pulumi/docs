@@ -1,7 +1,7 @@
 
 ---
 title: "Stream"
-title_tag: "Resource Stream | Module kinesis | Package AWS"
+title_tag: "aws.kinesis.Stream"
 meta_desc: "Explore the Stream resource of the kinesis module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that"
 ---
 

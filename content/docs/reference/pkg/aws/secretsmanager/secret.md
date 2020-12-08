@@ -1,7 +1,7 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Module secretsmanager | Package AWS"
+title_tag: "aws.secretsmanager.Secret"
 meta_desc: "Explore the Secret resource of the secretsmanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS Secrets Manager secret metadata. To manage secret rotation, see the `aws.secretsmanager.SecretRotation` resource. To manage a secret value, see the `aws.secretsmanager.SecretVersion` resource."
 ---
 

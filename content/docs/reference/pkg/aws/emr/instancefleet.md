@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceFleet"
-title_tag: "Resource InstanceFleet | Module emr | Package AWS"
+title_tag: "aws.emr.InstanceFleet"
 meta_desc: "Explore the InstanceFleet resource of the emr module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

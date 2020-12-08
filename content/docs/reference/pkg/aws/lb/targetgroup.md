@@ -1,7 +1,7 @@
 
 ---
 title: "TargetGroup"
-title_tag: "Resource TargetGroup | Module lb | Package AWS"
+title_tag: "aws.lb.TargetGroup"
 meta_desc: "Explore the TargetGroup resource of the lb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Target Group resource for use with Load Balancer resources."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "KeyPair"
-title_tag: "Resource KeyPair | Module ec2 | Package AWS"
+title_tag: "aws.ec2.KeyPair"
 meta_desc: "Explore the KeyPair resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an [EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) resource. A key pair is used to control login access to EC2 instances."
 ---
 

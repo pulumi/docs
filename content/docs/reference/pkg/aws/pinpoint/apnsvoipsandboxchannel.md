@@ -1,7 +1,7 @@
 
 ---
 title: "ApnsVoipSandboxChannel"
-title_tag: "Resource ApnsVoipSandboxChannel | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.ApnsVoipSandboxChannel"
 meta_desc: "Explore the ApnsVoipSandboxChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint APNs VoIP Sandbox Channel resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "TopicPolicy"
-title_tag: "Resource TopicPolicy | Module sns | Package AWS"
+title_tag: "aws.sns.TopicPolicy"
 meta_desc: "Explore the TopicPolicy resource of the sns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SNS topic policy resource"
 ---
 

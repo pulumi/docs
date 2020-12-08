@@ -1,7 +1,7 @@
 
 ---
 title: "MethodResponse"
-title_tag: "Resource MethodResponse | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.MethodResponse"
 meta_desc: "Explore the MethodResponse resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an HTTP Method Response for an API Gateway Resource."
 ---
 

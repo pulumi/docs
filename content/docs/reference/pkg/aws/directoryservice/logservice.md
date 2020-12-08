@@ -1,7 +1,7 @@
 
 ---
 title: "LogService"
-title_tag: "Resource LogService | Module directoryservice | Package AWS"
+title_tag: "aws.directoryservice.LogService"
 meta_desc: "Explore the LogService resource of the directoryservice module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch."
 ---
 

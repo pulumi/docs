@@ -1,7 +1,7 @@
 
 ---
 title: "SubnetGroup"
-title_tag: "Resource SubnetGroup | Module dax | Package AWS"
+title_tag: "aws.dax.SubnetGroup"
 meta_desc: "Explore the SubnetGroup resource of the dax module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DAX Subnet Group resource."
 ---
 

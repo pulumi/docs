@@ -1,7 +1,7 @@
 
 ---
 title: "CertificateSigningRequestList"
-title_tag: "Resource CertificateSigningRequestList | Module certificates.k8s.io/v1beta1 | Package Kubernetes"
+title_tag: "kubernetes.certificates.k8s.io/v1beta1.CertificateSigningRequestList"
 meta_desc: "Explore the CertificateSigningRequestList resource of the certificates.k8s.io/v1beta1 module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
@@ -22,7 +22,7 @@ meta_desc: "Explore the CertificateSigningRequestList resource of the certificat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/certificates/v1beta1/#pulumi_kubernetes.certificates/v1beta1.CertificateSigningRequestList">CertificateSigningRequestList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[List[CertificateSigningRequest]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ListMeta]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/certificates/v1beta1/#pulumi_kubernetes.certificates/v1beta1.CertificateSigningRequestList">CertificateSigningRequestList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[Sequence[_certificates_k8s_io_v1beta1.CertificateSigningRequestArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -281,7 +281,7 @@ The CertificateSigningRequestList resource accepts the following [input]({{< rel
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequest">List[Certificate<wbr>Signing<wbr>Request]</a></span>
+        <span class="property-type"><a href="#certificatesigningrequest">Certificate<wbr>Signing<wbr>Request<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -291,7 +291,7 @@ The CertificateSigningRequestList resource accepts the following [input]({{< rel
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Dict[List<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -532,7 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestspec">Dict[Certificate<wbr>Signing<wbr>Request<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The certificate request itself and any additional information.{{% /md %}}</dd>
 
@@ -542,7 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequeststatus">Dict[Certificate<wbr>Signing<wbr>Request<wbr>Status]</a></span>
+        <span class="property-type"><a href="#certificatesigningrequeststatus">Certificate<wbr>Signing<wbr>Request<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Derived information about the request.{{% /md %}}</dd>
 
@@ -1191,7 +1191,7 @@ Valid values are:
 <a href="#extra_python" style="color: inherit; text-decoration: inherit;">extra</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Extra information about the requesting user. See user.Info interface for details.{{% /md %}}</dd>
 
@@ -1201,7 +1201,7 @@ Valid values are:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Group information about the requesting user. See user.Info interface for details.{{% /md %}}</dd>
 
@@ -1237,7 +1237,7 @@ Distribution of trust for signers happens out of band. You can select on this fi
 <a href="#usages_python" style="color: inherit; text-decoration: inherit;">usages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
@@ -1395,7 +1395,7 @@ Valid values are:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestcondition">List[Certificate<wbr>Signing<wbr>Request<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestcondition">Certificate<wbr>Signing<wbr>Request<wbr>Condition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to the request, such as approval or denial.{{% /md %}}</dd>
 
@@ -1859,7 +1859,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2470,7 +2470,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -2524,7 +2524,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -2558,7 +2558,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -2568,7 +2568,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2600,7 +2600,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2925,6 +2925,8 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ComputeEnvironment"
-title_tag: "Resource ComputeEnvironment | Module batch | Package AWS"
+title_tag: "aws.batch.ComputeEnvironment"
 meta_desc: "Explore the ComputeEnvironment resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a AWS Batch compute environment. Compute environments contain the Amazon ECS container instances that are used to run containerized batch jobs."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Fleet"
-title_tag: "Resource Fleet | Module worklink | Package AWS"
+title_tag: "aws.worklink.Fleet"
 meta_desc: "Explore the Fleet resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

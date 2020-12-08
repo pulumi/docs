@@ -1,7 +1,7 @@
 
 ---
 title: "JobQueue"
-title_tag: "Resource JobQueue | Module batch | Package AWS"
+title_tag: "aws.batch.JobQueue"
 meta_desc: "Explore the JobQueue resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Batch Job Queue resource."
 ---
 

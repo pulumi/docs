@@ -1,7 +1,7 @@
 
 ---
 title: "DeliveryChannel"
-title_tag: "Resource DeliveryChannel | Module cfg | Package AWS"
+title_tag: "aws.cfg.DeliveryChannel"
 meta_desc: "Explore the DeliveryChannel resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Config Delivery Channel."
 ---
 

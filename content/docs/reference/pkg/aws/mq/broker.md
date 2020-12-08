@@ -1,7 +1,7 @@
 
 ---
 title: "Broker"
-title_tag: "Resource Broker | Module mq | Package AWS"
+title_tag: "aws.mq.Broker"
 meta_desc: "Explore the Broker resource of the mq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an MQ Broker Resource. This resources also manages users for the broker."
 ---
 

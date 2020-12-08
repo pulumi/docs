@@ -1,7 +1,7 @@
 
 ---
 title: "SubnetGroup"
-title_tag: "Resource SubnetGroup | Module elasticache | Package AWS"
+title_tag: "aws.elasticache.SubnetGroup"
 meta_desc: "Explore the SubnetGroup resource of the elasticache module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ElastiCache Subnet Group resource."
 ---
 

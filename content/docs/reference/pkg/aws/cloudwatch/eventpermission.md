@@ -1,7 +1,7 @@
 
 ---
 title: "EventPermission"
-title_tag: "Resource EventPermission | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.EventPermission"
 meta_desc: "Explore the EventPermission resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create an EventBridge permission to support cross-account events in the current account default event bus."
 ---
 

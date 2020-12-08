@@ -1,7 +1,7 @@
 
 ---
 title: "Target"
-title_tag: "Resource Target | Module appautoscaling | Package AWS"
+title_tag: "aws.appautoscaling.Target"
 meta_desc: "Explore the Target resource of the appautoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Application AutoScaling ScalableTarget resource. To manage policies which get attached to the target, see the `aws.appautoscaling.Policy` resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "UserPolicy"
-title_tag: "Resource UserPolicy | Module iam | Package AWS"
+title_tag: "aws.iam.UserPolicy"
 meta_desc: "Explore the UserPolicy resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM policy attached to a user."
 ---
 

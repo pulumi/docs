@@ -1,7 +1,7 @@
 
 ---
 title: "NodejsAppLayer"
-title_tag: "Resource NodejsAppLayer | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.NodejsAppLayer"
 meta_desc: "Explore the NodejsAppLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks NodeJS application layer resource."
 ---
 

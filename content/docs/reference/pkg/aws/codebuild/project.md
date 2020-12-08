@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module codebuild | Package AWS"
+title_tag: "aws.codebuild.Project"
 meta_desc: "Explore the Project resource of the codebuild module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g. the &#34;rebuild every time a code change is pushed&#34; option in the CodeBuild web console)."
 ---
 

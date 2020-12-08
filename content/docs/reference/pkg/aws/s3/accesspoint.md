@@ -1,7 +1,7 @@
 
 ---
 title: "AccessPoint"
-title_tag: "Resource AccessPoint | Module s3 | Package AWS"
+title_tag: "aws.s3.AccessPoint"
 meta_desc: "Explore the AccessPoint resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage an S3 Access Point."
 ---
 

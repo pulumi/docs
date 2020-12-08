@@ -1,7 +1,7 @@
 
 ---
 title: "LifecyclePolicy"
-title_tag: "Resource LifecyclePolicy | Module dlm | Package AWS"
+title_tag: "aws.dlm.LifecyclePolicy"
 meta_desc: "Explore the LifecyclePolicy resource of the dlm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a [Data Lifecycle Manager (DLM) lifecycle policy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) for managing snapshots."
 ---
 

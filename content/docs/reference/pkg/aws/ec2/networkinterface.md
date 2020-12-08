@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkInterface"
-title_tag: "Resource NetworkInterface | Module ec2 | Package AWS"
+title_tag: "aws.ec2.NetworkInterface"
 meta_desc: "Explore the NetworkInterface resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic network interface (ENI) resource."
 ---
 

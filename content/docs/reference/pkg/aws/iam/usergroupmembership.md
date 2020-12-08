@@ -1,7 +1,7 @@
 
 ---
 title: "UserGroupMembership"
-title_tag: "Resource UserGroupMembership | Module iam | Package AWS"
+title_tag: "aws.iam.UserGroupMembership"
 meta_desc: "Explore the UserGroupMembership resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource for adding an [IAM User](https://www.terraform.io/docs/providers/aws/r/iam_user.html) to [IAM Groups](https://www.terraform.io/docs/providers/aws/r/iam_group.html). This"
 ---
 

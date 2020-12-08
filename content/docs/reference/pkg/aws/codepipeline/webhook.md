@@ -1,7 +1,7 @@
 
 ---
 title: "Webhook"
-title_tag: "Resource Webhook | Module codepipeline | Package AWS"
+title_tag: "aws.codepipeline.Webhook"
 meta_desc: "Explore the Webhook resource of the codepipeline module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodePipeline Webhook."
 ---
 

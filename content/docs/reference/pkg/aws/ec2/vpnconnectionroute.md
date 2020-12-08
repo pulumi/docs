@@ -1,7 +1,7 @@
 
 ---
 title: "VpnConnectionRoute"
-title_tag: "Resource VpnConnectionRoute | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpnConnectionRoute"
 meta_desc: "Explore the VpnConnectionRoute resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a static route between a VPN connection and a customer gateway."
 ---
 

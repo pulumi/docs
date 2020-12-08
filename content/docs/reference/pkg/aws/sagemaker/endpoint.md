@@ -1,7 +1,7 @@
 
 ---
 title: "Endpoint"
-title_tag: "Resource Endpoint | Module sagemaker | Package AWS"
+title_tag: "aws.sagemaker.Endpoint"
 meta_desc: "Explore the Endpoint resource of the sagemaker module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SageMaker Endpoint resource."
 ---
 

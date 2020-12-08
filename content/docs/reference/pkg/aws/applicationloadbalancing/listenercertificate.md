@@ -1,7 +1,7 @@
 
 ---
 title: "ListenerCertificate"
-title_tag: "Resource ListenerCertificate | Module applicationloadbalancing | Package AWS"
+title_tag: "aws.applicationloadbalancing.ListenerCertificate"
 meta_desc: "Explore the ListenerCertificate resource of the applicationloadbalancing module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener Certificate resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DomainIdentity"
-title_tag: "Resource DomainIdentity | Module ses | Package AWS"
+title_tag: "aws.ses.DomainIdentity"
 meta_desc: "Explore the DomainIdentity resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SES domain identity resource"
 ---
 

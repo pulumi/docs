@@ -1,7 +1,7 @@
 
 ---
 title: "NfsFileShare"
-title_tag: "Resource NfsFileShare | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.NfsFileShare"
 meta_desc: "Explore the NfsFileShare resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway NFS File Share."
 ---
 

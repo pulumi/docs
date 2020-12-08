@@ -1,7 +1,7 @@
 
 ---
 title: "SnapshotCopy"
-title_tag: "Resource SnapshotCopy | Module ebs | Package AWS"
+title_tag: "aws.ebs.SnapshotCopy"
 meta_desc: "Explore the SnapshotCopy resource of the ebs module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Snapshot of a snapshot."
 ---
 

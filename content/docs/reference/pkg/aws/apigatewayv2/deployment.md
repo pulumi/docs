@@ -1,7 +1,7 @@
 
 ---
 title: "Deployment"
-title_tag: "Resource Deployment | Module apigatewayv2 | Package AWS"
+title_tag: "aws.apigatewayv2.Deployment"
 meta_desc: "Explore the Deployment resource of the apigatewayv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon API Gateway Version 2 deployment."
 ---
 

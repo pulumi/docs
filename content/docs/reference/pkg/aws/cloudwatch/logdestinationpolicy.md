@@ -1,7 +1,7 @@
 
 ---
 title: "LogDestinationPolicy"
-title_tag: "Resource LogDestinationPolicy | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.LogDestinationPolicy"
 meta_desc: "Explore the LogDestinationPolicy resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Logs destination policy resource."
 ---
 

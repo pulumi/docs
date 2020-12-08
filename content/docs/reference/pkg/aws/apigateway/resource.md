@@ -1,7 +1,7 @@
 
 ---
 title: "Resource"
-title_tag: "Resource Resource | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.Resource"
 meta_desc: "Explore the Resource resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Resource."
 ---
 

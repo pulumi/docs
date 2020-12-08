@@ -1,7 +1,7 @@
 
 ---
 title: "HostedTransitVirtualInterface"
-title_tag: "Resource HostedTransitVirtualInterface | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.HostedTransitVirtualInterface"
 meta_desc: "Explore the HostedTransitVirtualInterface resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Direct Connect hosted transit virtual interface resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Zone"
-title_tag: "Resource Zone | Module route53 | Package AWS"
+title_tag: "aws.route53.Zone"
 meta_desc: "Explore the Zone resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Route53 Hosted Zone."
 ---
 

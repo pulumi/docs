@@ -1,7 +1,7 @@
 
 ---
 title: "AvailabilityZoneGroup"
-title_tag: "Resource AvailabilityZoneGroup | Module ec2 | Package AWS"
+title_tag: "aws.ec2.AvailabilityZoneGroup"
 meta_desc: "Explore the AvailabilityZoneGroup resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Availability Zone Group, such as updating its opt-in status."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "RolePolicyAttachment"
-title_tag: "Resource RolePolicyAttachment | Module iam | Package AWS"
+title_tag: "aws.iam.RolePolicyAttachment"
 meta_desc: "Explore the RolePolicyAttachment resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches a Managed IAM Policy to an IAM role"
 ---
 

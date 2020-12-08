@@ -1,7 +1,7 @@
 
 ---
 title: "Stack"
-title_tag: "Resource Stack | Module cloudformation | Package AWS"
+title_tag: "aws.cloudformation.Stack"
 meta_desc: "Explore the Stack resource of the cloudformation module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudFormation Stack resource."
 ---
 

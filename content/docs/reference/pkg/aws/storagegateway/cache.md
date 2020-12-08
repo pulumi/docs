@@ -1,7 +1,7 @@
 
 ---
 title: "Cache"
-title_tag: "Resource Cache | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.Cache"
 meta_desc: "Explore the Cache resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway cache."
 ---
 

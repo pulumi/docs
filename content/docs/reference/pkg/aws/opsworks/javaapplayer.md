@@ -1,7 +1,7 @@
 
 ---
 title: "JavaAppLayer"
-title_tag: "Resource JavaAppLayer | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.JavaAppLayer"
 meta_desc: "Explore the JavaAppLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks Java application layer resource."
 ---
 

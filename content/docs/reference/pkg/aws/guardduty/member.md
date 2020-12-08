@@ -1,7 +1,7 @@
 
 ---
 title: "Member"
-title_tag: "Resource Member | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.Member"
 meta_desc: "Explore the Member resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the `aws.guardduty.InviteAccepter` resource."
 ---
 

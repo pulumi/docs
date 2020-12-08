@@ -1,7 +1,7 @@
 
 ---
 title: "DefaultSubnet"
-title_tag: "Resource DefaultSubnet | Module ec2 | Package AWS"
+title_tag: "aws.ec2.DefaultSubnet"
 meta_desc: "Explore the DefaultSubnet resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a [default AWS VPC subnet](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics)"
 ---
 

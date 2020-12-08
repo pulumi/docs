@@ -1,7 +1,7 @@
 
 ---
 title: "Table"
-title_tag: "Resource Table | Module dynamodb | Package AWS"
+title_tag: "aws.dynamodb.Table"
 meta_desc: "Explore the Table resource of the dynamodb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DynamoDB table resource"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Rule"
-title_tag: "Resource Rule | Module cfg | Package AWS"
+title_tag: "aws.cfg.Rule"
 meta_desc: "Explore the Rule resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Config Rule."
 ---
 

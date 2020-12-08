@@ -1,7 +1,7 @@
 
 ---
 title: "VpnGatewayRoutePropagation"
-title_tag: "Resource VpnGatewayRoutePropagation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpnGatewayRoutePropagation"
 meta_desc: "Explore the VpnGatewayRoutePropagation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Requests automatic route propagation between a VPN gateway and a route table."
 ---
 

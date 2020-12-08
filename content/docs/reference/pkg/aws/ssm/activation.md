@@ -1,7 +1,7 @@
 
 ---
 title: "Activation"
-title_tag: "Resource Activation | Module ssm | Package AWS"
+title_tag: "aws.ssm.Activation"
 meta_desc: "Explore the Activation resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command."
 ---
 

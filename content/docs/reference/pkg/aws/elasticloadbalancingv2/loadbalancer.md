@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Module elasticloadbalancingv2 | Package AWS"
+title_tag: "aws.elasticloadbalancingv2.LoadBalancer"
 meta_desc: "Explore the LoadBalancer resource of the elasticloadbalancingv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer resource."
 ---
 

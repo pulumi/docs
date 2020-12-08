@@ -1,7 +1,7 @@
 
 ---
 title: "DefaultKmsKey"
-title_tag: "Resource DefaultKmsKey | Module ebs | Package AWS"
+title_tag: "aws.ebs.DefaultKmsKey"
 meta_desc: "Explore the DefaultKmsKey resource of the ebs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage the default customer master key (CMK) that your AWS account uses to encrypt EBS volumes."
 ---
 

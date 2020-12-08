@@ -1,7 +1,7 @@
 
 ---
 title: "LogResourcePolicy"
-title_tag: "Resource LogResourcePolicy | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.LogResourcePolicy"
 meta_desc: "Explore the LogResourcePolicy resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a CloudWatch log resource policy."
 ---
 

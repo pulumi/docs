@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module eks | Package AWS"
+title_tag: "aws.eks.Cluster"
 meta_desc: "Explore the Cluster resource of the eks module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EKS Cluster."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module simpledb | Package AWS"
+title_tag: "aws.simpledb.Domain"
 meta_desc: "Explore the Domain resource of the simpledb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SimpleDB domain resource"
 ---
 

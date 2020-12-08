@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module glue | Package AWS"
+title_tag: "aws.glue.Connection"
 meta_desc: "Explore the Connection resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Connection resource."
 ---
 

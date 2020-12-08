@@ -1,7 +1,7 @@
 
 ---
 title: "Subnet"
-title_tag: "Resource Subnet | Module ec2 | Package AWS"
+title_tag: "aws.ec2.Subnet"
 meta_desc: "Explore the Subnet resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an VPC subnet resource."
 ---
 

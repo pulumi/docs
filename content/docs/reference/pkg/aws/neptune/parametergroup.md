@@ -1,7 +1,7 @@
 
 ---
 title: "ParameterGroup"
-title_tag: "Resource ParameterGroup | Module neptune | Package AWS"
+title_tag: "aws.neptune.ParameterGroup"
 meta_desc: "Explore the ParameterGroup resource of the neptune module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Neptune Parameter Group"
 ---
 

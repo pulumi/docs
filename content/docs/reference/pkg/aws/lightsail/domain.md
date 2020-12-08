@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module lightsail | Package AWS"
+title_tag: "aws.lightsail.Domain"
 meta_desc: "Explore the Domain resource of the lightsail module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a domain resource for the specified domain (e.g., example.com)."
 ---
 

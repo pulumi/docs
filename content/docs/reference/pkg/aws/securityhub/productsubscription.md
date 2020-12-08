@@ -1,7 +1,7 @@
 
 ---
 title: "ProductSubscription"
-title_tag: "Resource ProductSubscription | Module securityhub | Package AWS"
+title_tag: "aws.securityhub.ProductSubscription"
 meta_desc: "Explore the ProductSubscription resource of the securityhub module, including examples, input properties, output properties, lookup functions, and supporting types. Subscribes to a Security Hub product."
 ---
 

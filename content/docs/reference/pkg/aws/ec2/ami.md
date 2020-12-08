@@ -1,7 +1,7 @@
 
 ---
 title: "Ami"
-title_tag: "Resource Ami | Module ec2 | Package AWS"
+title_tag: "aws.ec2.Ami"
 meta_desc: "Explore the Ami resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. The AMI resource allows the creation and management of a completely-custom"
 ---
 

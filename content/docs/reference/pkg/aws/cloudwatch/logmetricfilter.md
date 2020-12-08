@@ -1,7 +1,7 @@
 
 ---
 title: "LogMetricFilter"
-title_tag: "Resource LogMetricFilter | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.LogMetricFilter"
 meta_desc: "Explore the LogMetricFilter resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Log Metric Filter resource."
 ---
 

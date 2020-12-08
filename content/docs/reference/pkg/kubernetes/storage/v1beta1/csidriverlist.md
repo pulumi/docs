@@ -1,7 +1,7 @@
 
 ---
 title: "CSIDriverList"
-title_tag: "Resource CSIDriverList | Module storage.k8s.io/v1beta1 | Package Kubernetes"
+title_tag: "kubernetes.storage.k8s.io/v1beta1.CSIDriverList"
 meta_desc: "Explore the CSIDriverList resource of the storage.k8s.io/v1beta1 module, including examples, input properties, output properties, lookup functions, and supporting types. CSIDriverList is a collection of CSIDriver objects."
 ---
 
@@ -14,6 +14,7 @@ CSIDriverList is a collection of CSIDriver objects.
 
 
 
+
 ## Create a CSIDriverList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -23,7 +24,7 @@ CSIDriverList is a collection of CSIDriver objects.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage/v1beta1/#pulumi_kubernetes.storage/v1beta1.CSIDriverList">CSIDriverList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[List[CSIDriver]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ListMeta]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage/v1beta1/#pulumi_kubernetes.storage/v1beta1.CSIDriverList">CSIDriverList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[Sequence[_storage_k8s_io_v1beta1.CSIDriverArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +283,7 @@ The CSIDriverList resource accepts the following [input]({{< relref "/docs/intro
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csidriver">List[CSIDriver]</a></span>
+        <span class="property-type"><a href="#csidriver">CSIDriver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}items is the list of CSIDriver{{% /md %}}</dd>
 
@@ -292,7 +293,7 @@ The CSIDriverList resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Dict[List<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -493,7 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csidriverspec">Dict[CSIDriver<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#csidriverspec">CSIDriver<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification of the CSI Driver.{{% /md %}}</dd>
 
@@ -503,7 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object metadata. metadata.Name indicates the name of the CSI driver that this object refers to; it MUST be the same name returned by the CSI GetPluginName() call for that driver. The driver name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -564,6 +565,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requiresrepublish_csharp">
+<a href="#requiresrepublish_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
+
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="storagecapacity_csharp">
 <a href="#storagecapacity_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
 </span> 
@@ -577,6 +592,26 @@ The check can be enabled immediately when deploying a driver. In that case, prov
 Alternatively, the driver can be deployed with the field unset or false and it can be flipped later when storage capacity information has been published.
 
 This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tokenrequests_csharp">
+<a href="#tokenrequests_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tokenrequest">List&lt;Token<wbr>Request<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}TokenRequests indicates the CSI driver needs pods' service account tokens it is mounting volume for to do necessary authentication. Kubelet will pass the tokens in VolumeContext in the CSI NodePublishVolume calls. The CSI driver should parse and validate the following VolumeContext: "csi.storage.k8s.io/serviceAccount.tokens": {
+  "<audience>": {
+    "token": <token>,
+    "expirationTimestamp": <expiration timestamp in RFC3339>,
+  },
+  ...
+}
+
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -630,6 +665,20 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requiresrepublish_go">
+<a href="#requiresrepublish_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
+
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="storagecapacity_go">
 <a href="#storagecapacity_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
 </span> 
@@ -643,6 +692,26 @@ The check can be enabled immediately when deploying a driver. In that case, prov
 Alternatively, the driver can be deployed with the field unset or false and it can be flipped later when storage capacity information has been published.
 
 This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tokenrequests_go">
+<a href="#tokenrequests_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tokenrequest">[]Token<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}TokenRequests indicates the CSI driver needs pods' service account tokens it is mounting volume for to do necessary authentication. Kubelet will pass the tokens in VolumeContext in the CSI NodePublishVolume calls. The CSI driver should parse and validate the following VolumeContext: "csi.storage.k8s.io/serviceAccount.tokens": {
+  "<audience>": {
+    "token": <token>,
+    "expirationTimestamp": <expiration timestamp in RFC3339>,
+  },
+  ...
+}
+
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -696,6 +765,20 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requiresrepublish_nodejs">
+<a href="#requiresrepublish_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
+
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="storagecapacity_nodejs">
 <a href="#storagecapacity_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Capacity</a>
 </span> 
@@ -709,6 +792,26 @@ The check can be enabled immediately when deploying a driver. In that case, prov
 Alternatively, the driver can be deployed with the field unset or false and it can be flipped later when storage capacity information has been published.
 
 This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tokenrequests_nodejs">
+<a href="#tokenrequests_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tokenrequest">Token<wbr>Request[]</a></span>
+    </dt>
+    <dd>{{% md %}}TokenRequests indicates the CSI driver needs pods' service account tokens it is mounting volume for to do necessary authentication. Kubelet will pass the tokens in VolumeContext in the CSI NodePublishVolume calls. The CSI driver should parse and validate the following VolumeContext: "csi.storage.k8s.io/serviceAccount.tokens": {
+  "<audience>": {
+    "token": <token>,
+    "expirationTimestamp": <expiration timestamp in RFC3339>,
+  },
+  ...
+}
+
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -762,6 +865,20 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requires_republish_python">
+<a href="#requires_republish_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
+
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="storage_capacity_python">
 <a href="#storage_capacity_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>capacity</a>
 </span> 
@@ -778,11 +895,31 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
     <dt class="property-optional"
             title="Optional">
+        <span id="token_requests_python">
+<a href="#token_requests_python" style="color: inherit; text-decoration: inherit;">token_<wbr>requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tokenrequest">Token<wbr>Request<wbr>Args]]</a></span>
+    </dt>
+    <dd>{{% md %}}TokenRequests indicates the CSI driver needs pods' service account tokens it is mounting volume for to do necessary authentication. Kubelet will pass the tokens in VolumeContext in the CSI NodePublishVolume calls. The CSI driver should parse and validate the following VolumeContext: "csi.storage.k8s.io/serviceAccount.tokens": {
+  "<audience>": {
+    "token": <token>,
+    "expirationTimestamp": <expiration timestamp in RFC3339>,
+  },
+  ...
+}
+
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
+
+This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="volume_lifecycle_modes_python">
 <a href="#volume_lifecycle_modes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>lifecycle_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.{{% /md %}}</dd>
 
@@ -1246,7 +1383,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1857,7 +1994,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -1911,7 +2048,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -1945,7 +2082,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -1955,7 +2092,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -1987,7 +2124,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2312,6 +2449,131 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 </dl>
 {{% /choosable %}}
+
+
+
+
+
+<h4 id="tokenrequest">Token<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TokenRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TokenRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/storage/v1beta1?tab=doc#TokenRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/storage/v1beta1?tab=doc#TokenRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="audience_csharp">
+<a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationseconds_csharp">
+<a href="#expirationseconds_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="audience_go">
+<a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationseconds_go">
+<a href="#expirationseconds_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="audience_nodejs">
+<a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationseconds_nodejs">
+<a href="#expirationseconds_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="audience_python">
+<a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiration_seconds_python">
+<a href="#expiration_seconds_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
 
 
 

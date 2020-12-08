@@ -1,7 +1,7 @@
 
 ---
 title: "SnapshotCreateVolumePermission"
-title_tag: "Resource SnapshotCreateVolumePermission | Module ec2 | Package AWS"
+title_tag: "aws.ec2.SnapshotCreateVolumePermission"
 meta_desc: "Explore the SnapshotCreateVolumePermission resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Adds permission to create volumes off of a given EBS Snapshot."
 ---
 

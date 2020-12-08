@@ -1,7 +1,7 @@
 
 ---
 title: "IpSet"
-title_tag: "Resource IpSet | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.IpSet"
 meta_desc: "Explore the IpSet resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regional IPSet Resource for use with Application Load Balancer."
 ---
 

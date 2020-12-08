@@ -1,7 +1,7 @@
 
 ---
 title: "RecorderStatus"
-title_tag: "Resource RecorderStatus | Module cfg | Package AWS"
+title_tag: "aws.cfg.RecorderStatus"
 meta_desc: "Explore the RecorderStatus resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Manages status (recording / stopped) of an AWS Config Configuration Recorder."
 ---
 

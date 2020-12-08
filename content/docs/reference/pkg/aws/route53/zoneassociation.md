@@ -1,7 +1,7 @@
 
 ---
 title: "ZoneAssociation"
-title_tag: "Resource ZoneAssociation | Module route53 | Package AWS"
+title_tag: "aws.route53.ZoneAssociation"
 meta_desc: "Explore the ZoneAssociation resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones. See the `aws.route53.VpcAssociationAuthorization` resource for setting up cross-account associations."
 ---
 

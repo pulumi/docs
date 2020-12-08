@@ -1,7 +1,7 @@
 
 ---
 title: "Alias"
-title_tag: "Resource Alias | Module lambda | Package AWS"
+title_tag: "aws.lambda.Alias"
 meta_desc: "Explore the Alias resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version."
 ---
 

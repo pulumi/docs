@@ -1,7 +1,7 @@
 
 ---
 title: "EventSubscription"
-title_tag: "Resource EventSubscription | Module redshift | Package AWS"
+title_tag: "aws.redshift.EventSubscription"
 meta_desc: "Explore the EventSubscription resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Redshift event subscription resource."
 ---
 

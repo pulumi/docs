@@ -1,7 +1,7 @@
 
 ---
 title: "EmailChannel"
-title_tag: "Resource EmailChannel | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.EmailChannel"
 meta_desc: "Explore the EmailChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint Email Channel resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SmbFileShare"
-title_tag: "Resource SmbFileShare | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.SmbFileShare"
 meta_desc: "Explore the SmbFileShare resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway SMB File Share."
 ---
 

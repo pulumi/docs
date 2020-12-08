@@ -1,7 +1,7 @@
 
 ---
 title: "DataSource"
-title_tag: "Resource DataSource | Module appsync | Package AWS"
+title_tag: "aws.appsync.DataSource"
 meta_desc: "Explore the DataSource resource of the appsync module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AppSync DataSource."
 ---
 

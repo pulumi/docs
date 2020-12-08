@@ -1,7 +1,7 @@
 
 ---
 title: "LocationFsxWindows"
-title_tag: "Resource LocationFsxWindows | Module datasync | Package AWS"
+title_tag: "aws.datasync.LocationFsxWindows"
 meta_desc: "Explore the LocationFsxWindows resource of the datasync module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS DataSync FSx Windows Location."
 ---
 

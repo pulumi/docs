@@ -1,7 +1,7 @@
 
 ---
 title: "SmsPreferences"
-title_tag: "Resource SmsPreferences | Module sns | Package AWS"
+title_tag: "aws.sns.SmsPreferences"
 meta_desc: "Explore the SmsPreferences resource of the sns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a way to set SNS SMS preferences."
 ---
 

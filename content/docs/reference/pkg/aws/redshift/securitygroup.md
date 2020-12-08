@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityGroup"
-title_tag: "Resource SecurityGroup | Module redshift | Package AWS"
+title_tag: "aws.redshift.SecurityGroup"
 meta_desc: "Explore the SecurityGroup resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters"
 ---
 

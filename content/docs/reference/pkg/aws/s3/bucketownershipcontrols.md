@@ -1,7 +1,7 @@
 
 ---
 title: "BucketOwnershipControls"
-title_tag: "Resource BucketOwnershipControls | Module s3 | Package AWS"
+title_tag: "aws.s3.BucketOwnershipControls"
 meta_desc: "Explore the BucketOwnershipControls resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

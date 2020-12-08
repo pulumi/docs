@@ -1,7 +1,7 @@
 
 ---
 title: "HorizontalPodAutoscaler"
-title_tag: "Resource HorizontalPodAutoscaler | Module autoscaling/v2beta1 | Package Kubernetes"
+title_tag: "kubernetes.autoscaling/v2beta1.HorizontalPodAutoscaler"
 meta_desc: "Explore the HorizontalPodAutoscaler resource of the autoscaling/v2beta1 module, including examples, input properties, output properties, lookup functions, and supporting types. HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified."
 ---
 
@@ -14,6 +14,7 @@ HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, wh
 
 
 
+
 ## Create a HorizontalPodAutoscaler Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -23,7 +24,7 @@ HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, wh
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/autoscaling/v2beta1/#pulumi_kubernetes.autoscaling/v2beta1.HorizontalPodAutoscaler">HorizontalPodAutoscaler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ObjectMeta]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[Dict[HorizontalPodAutoscalerSpec]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/autoscaling/v2beta1/#pulumi_kubernetes.autoscaling/v2beta1.HorizontalPodAutoscaler">HorizontalPodAutoscaler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_autoscaling_v2beta1.HorizontalPodAutoscalerSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +283,7 @@ The HorizontalPodAutoscaler resource accepts the following [input]({{< relref "/
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -292,7 +293,7 @@ The HorizontalPodAutoscaler resource accepts the following [input]({{< relref "/
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalerspec">Dict[Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd>
 
@@ -411,7 +412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalerstatus">Dict[Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status]</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd>
 
@@ -429,6 +430,412 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 ## Supporting Types
+
+
+<h4 id="containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ContainerResourceMetricSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ContainerResourceMetricSource">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/autoscaling/v2beta1?tab=doc#ContainerResourceMetricSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/autoscaling/v2beta1?tab=doc#ContainerResourceMetricSourceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_csharp">
+<a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetaverageutilization_csharp">
+<a href="#targetaverageutilization_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetaveragevalue_csharp">
+<a href="#targetaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_go">
+<a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetaverageutilization_go">
+<a href="#targetaverageutilization_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetaveragevalue_go">
+<a href="#targetaveragevalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_nodejs">
+<a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetaverageutilization_nodejs">
+<a href="#targetaverageutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetaveragevalue_nodejs">
+<a href="#targetaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_python">
+<a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_average_utilization_python">
+<a href="#target_average_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_average_value_python">
+<a href="#target_average_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ContainerResourceMetricStatus">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/autoscaling/v2beta1?tab=doc#ContainerResourceMetricStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_csharp">
+<a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentaveragevalue_csharp">
+<a href="#currentaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="currentaverageutilization_csharp">
+<a href="#currentaverageutilization_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_go">
+<a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentaveragevalue_go">
+<a href="#currentaveragevalue_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="currentaverageutilization_go">
+<a href="#currentaverageutilization_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_nodejs">
+<a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentaveragevalue_nodejs">
+<a href="#currentaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="currentaverageutilization_nodejs">
+<a href="#currentaverageutilization_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="container_python">
+<a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="current_average_value_python">
+<a href="#current_average_value_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="current_average_utilization_python">
+<a href="#current_average_utilization_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>utilization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</h4>
@@ -766,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_selector_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
 
@@ -989,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_selector_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
 
@@ -1415,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_target_ref_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>target_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
 
@@ -1425,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricspec">List[Metric<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#metricspec">Metric<wbr>Spec<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd>
 
@@ -1668,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalercondition">List[Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
 
@@ -1698,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_metrics_python" style="color: inherit; text-decoration: inherit;">current_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstatus">List[Metric<wbr>Status]</a></span>
+        <span class="property-type"><a href="#metricstatus">Metric<wbr>Status<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
 
@@ -1831,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">List[Label<wbr>Selector<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
 
@@ -1841,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_labels_python" style="color: inherit; text-decoration: inherit;">match_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
 
@@ -2004,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
 
@@ -2257,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2321,7 +2728,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresource_csharp">
+<a href="#containerresource_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2378,7 +2795,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresource_go">
+<a href="#containerresource_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2435,7 +2862,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresource_nodejs">
+<a href="#containerresource_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2492,7 +2929,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_resource_python">
+<a href="#container_resource_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2500,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricsource">Dict[External<wbr>Metric<wbr>Source]</a></span>
+        <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
 
@@ -2510,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricsource">Dict[Object<wbr>Metric<wbr>Source]</a></span>
+        <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
 
@@ -2520,7 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricsource">Dict[Pods<wbr>Metric<wbr>Source]</a></span>
+        <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
 
@@ -2530,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricsource">Dict[Resource<wbr>Metric<wbr>Source]</a></span>
+        <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
@@ -2564,7 +3011,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresource_csharp">
+<a href="#containerresource_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2621,7 +3078,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresource_go">
+<a href="#containerresource_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2678,7 +3145,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresource_nodejs">
+<a href="#containerresource_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2735,7 +3212,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_resource_python">
+<a href="#container_resource_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2743,7 +3230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricstatus">Dict[External<wbr>Metric<wbr>Status]</a></span>
+        <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
 
@@ -2753,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricstatus">Dict[Object<wbr>Metric<wbr>Status]</a></span>
+        <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
 
@@ -2763,7 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricstatus">Dict[Pods<wbr>Metric<wbr>Status]</a></span>
+        <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
 
@@ -2773,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricstatus">Dict[Resource<wbr>Metric<wbr>Status]</a></span>
+        <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
@@ -3354,7 +3841,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -3408,7 +3895,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -3442,7 +3929,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -3452,7 +3939,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -3484,7 +3971,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -3733,7 +4220,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
 
@@ -3763,7 +4250,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
 
@@ -3986,7 +4473,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
 
@@ -4006,7 +4493,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
 
@@ -4452,7 +4939,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
 
@@ -4615,7 +5102,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
 
@@ -4947,6 +5434,8 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

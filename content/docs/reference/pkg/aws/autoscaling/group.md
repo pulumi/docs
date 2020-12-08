@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module autoscaling | Package AWS"
+title_tag: "aws.autoscaling.Group"
 meta_desc: "Explore the Group resource of the autoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

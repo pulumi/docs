@@ -1,7 +1,7 @@
 
 ---
 title: "BucketPublicAccessBlock"
-title_tag: "Resource BucketPublicAccessBlock | Module s3 | Package AWS"
+title_tag: "aws.s3.BucketPublicAccessBlock"
 meta_desc: "Explore the BucketPublicAccessBlock resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html)."
 ---
 

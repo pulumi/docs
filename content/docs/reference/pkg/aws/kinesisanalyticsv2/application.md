@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module kinesisanalyticsv2 | Package AWS"
+title_tag: "aws.kinesisanalyticsv2.Application"
 meta_desc: "Explore the Application resource of the kinesisanalyticsv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Kinesis Analytics v2 Application."
 ---
 

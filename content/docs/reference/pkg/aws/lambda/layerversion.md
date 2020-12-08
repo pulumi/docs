@@ -1,7 +1,7 @@
 
 ---
 title: "LayerVersion"
-title_tag: "Resource LayerVersion | Module lambda | Package AWS"
+title_tag: "aws.lambda.LayerVersion"
 meta_desc: "Explore the LayerVersion resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions."
 ---
 

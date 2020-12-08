@@ -1,7 +1,7 @@
 
 ---
 title: "EventDestination"
-title_tag: "Resource EventDestination | Module ses | Package AWS"
+title_tag: "aws.ses.EventDestination"
 meta_desc: "Explore the EventDestination resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SES event destination"
 ---
 

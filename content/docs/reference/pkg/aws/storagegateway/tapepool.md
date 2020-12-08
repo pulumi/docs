@@ -1,7 +1,7 @@
 
 ---
 title: "TapePool"
-title_tag: "Resource TapePool | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.TapePool"
 meta_desc: "Explore the TapePool resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway Tape Pool."
 ---
 

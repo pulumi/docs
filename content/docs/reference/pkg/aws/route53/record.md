@@ -1,7 +1,7 @@
 
 ---
 title: "Record"
-title_tag: "Resource Record | Module route53 | Package AWS"
+title_tag: "aws.route53.Record"
 meta_desc: "Explore the Record resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route53 record resource."
 ---
 

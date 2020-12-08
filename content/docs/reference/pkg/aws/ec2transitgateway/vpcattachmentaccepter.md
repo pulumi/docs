@@ -1,7 +1,7 @@
 
 ---
 title: "VpcAttachmentAccepter"
-title_tag: "Resource VpcAttachmentAccepter | Module ec2transitgateway | Package AWS"
+title_tag: "aws.ec2transitgateway.VpcAttachmentAccepter"
 meta_desc: "Explore the VpcAttachmentAccepter resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages the accepter&#39;s side of an EC2 Transit Gateway VPC Attachment."
 ---
 

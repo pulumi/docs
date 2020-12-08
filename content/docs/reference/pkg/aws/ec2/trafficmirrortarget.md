@@ -1,7 +1,7 @@
 
 ---
 title: "TrafficMirrorTarget"
-title_tag: "Resource TrafficMirrorTarget | Module ec2 | Package AWS"
+title_tag: "aws.ec2.TrafficMirrorTarget"
 meta_desc: "Explore the TrafficMirrorTarget resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Traffic mirror target.  "
 ---
 

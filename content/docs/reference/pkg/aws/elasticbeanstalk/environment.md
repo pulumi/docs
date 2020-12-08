@@ -1,7 +1,7 @@
 
 ---
 title: "Environment"
-title_tag: "Resource Environment | Module elasticbeanstalk | Package AWS"
+title_tag: "aws.elasticbeanstalk.Environment"
 meta_desc: "Explore the Environment resource of the elasticbeanstalk module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Beanstalk Environment Resource. Elastic Beanstalk allows"
 ---
 

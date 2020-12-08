@@ -1,7 +1,7 @@
 
 ---
 title: "Proxy"
-title_tag: "Resource Proxy | Module rds | Package AWS"
+title_tag: "aws.rds.Proxy"
 meta_desc: "Explore the Proxy resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS DB proxy resource. For additional information, see the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html)."
 ---
 

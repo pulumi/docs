@@ -1,7 +1,7 @@
 
 ---
 title: "DelegationSet"
-title_tag: "Resource DelegationSet | Module route53 | Package AWS"
+title_tag: "aws.route53.DelegationSet"
 meta_desc: "Explore the DelegationSet resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a [Route53 Delegation Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API-actions-by-function.html#actions-by-function-reusable-delegation-sets) resource."
 ---
 

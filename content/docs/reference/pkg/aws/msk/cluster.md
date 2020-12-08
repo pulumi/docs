@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module msk | Package AWS"
+title_tag: "aws.msk.Cluster"
 meta_desc: "Explore the Cluster resource of the msk module, including examples, input properties, output properties, lookup functions, and supporting types. Manages AWS Managed Streaming for Kafka cluster"
 ---
 

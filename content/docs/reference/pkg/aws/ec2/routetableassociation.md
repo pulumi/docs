@@ -1,7 +1,7 @@
 
 ---
 title: "RouteTableAssociation"
-title_tag: "Resource RouteTableAssociation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.RouteTableAssociation"
 meta_desc: "Explore the RouteTableAssociation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create an association between a route table and a subnet or a route table and an"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "LocationSmb"
-title_tag: "Resource LocationSmb | Module datasync | Package AWS"
+title_tag: "aws.datasync.LocationSmb"
 meta_desc: "Explore the LocationSmb resource of the datasync module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a SMB Location within AWS DataSync."
 ---
 

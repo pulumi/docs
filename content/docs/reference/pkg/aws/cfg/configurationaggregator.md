@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationAggregator"
-title_tag: "Resource ConfigurationAggregator | Module cfg | Package AWS"
+title_tag: "aws.cfg.ConfigurationAggregator"
 meta_desc: "Explore the ConfigurationAggregator resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Config Configuration Aggregator"
 ---
 

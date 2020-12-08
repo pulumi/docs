@@ -1,7 +1,7 @@
 
 ---
 title: "RegexPatternSet"
-title_tag: "Resource RegexPatternSet | Module waf | Package AWS"
+title_tag: "aws.waf.RegexPatternSet"
 meta_desc: "Explore the RegexPatternSet resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regex Pattern Set Resource"
 ---
 

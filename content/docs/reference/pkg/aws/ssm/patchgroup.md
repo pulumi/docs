@@ -1,7 +1,7 @@
 
 ---
 title: "PatchGroup"
-title_tag: "Resource PatchGroup | Module ssm | Package AWS"
+title_tag: "aws.ssm.PatchGroup"
 meta_desc: "Explore the PatchGroup resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SSM Patch Group resource"
 ---
 

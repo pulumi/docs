@@ -1,7 +1,7 @@
 
 ---
 title: "SubnetGroup"
-title_tag: "Resource SubnetGroup | Module neptune | Package AWS"
+title_tag: "aws.neptune.SubnetGroup"
 meta_desc: "Explore the SubnetGroup resource of the neptune module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Neptune subnet group resource."
 ---
 

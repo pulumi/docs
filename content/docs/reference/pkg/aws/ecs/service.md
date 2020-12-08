@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module ecs | Package AWS"
+title_tag: "aws.ecs.Service"
 meta_desc: "Explore the Service resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **Note:** To prevent a race condition during service deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicy`; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the `DRAINING` state."
 ---
 

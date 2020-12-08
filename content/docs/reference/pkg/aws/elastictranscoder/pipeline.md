@@ -1,7 +1,7 @@
 
 ---
 title: "Pipeline"
-title_tag: "Resource Pipeline | Module elastictranscoder | Package AWS"
+title_tag: "aws.elastictranscoder.Pipeline"
 meta_desc: "Explore the Pipeline resource of the elastictranscoder module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Transcoder pipeline resource."
 ---
 

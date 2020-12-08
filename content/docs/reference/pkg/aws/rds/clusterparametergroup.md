@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterParameterGroup"
-title_tag: "Resource ClusterParameterGroup | Module rds | Package AWS"
+title_tag: "aws.rds.ClusterParameterGroup"
 meta_desc: "Explore the ClusterParameterGroup resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS DB cluster parameter group resource. Documentation of the available parameters for various Aurora engines can be found at:"
 ---
 

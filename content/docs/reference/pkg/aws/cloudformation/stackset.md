@@ -1,7 +1,7 @@
 
 ---
 title: "StackSet"
-title_tag: "Resource StackSet | Module cloudformation | Package AWS"
+title_tag: "aws.cloudformation.StackSet"
 meta_desc: "Explore the StackSet resource of the cloudformation module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a CloudFormation StackSet. StackSets allow CloudFormation templates to be easily deployed across multiple accounts and regions via StackSet Instances (`aws.cloudformation.StackSetInstance` resource). Additional information about StackSets can be found in the [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)."
 ---
 

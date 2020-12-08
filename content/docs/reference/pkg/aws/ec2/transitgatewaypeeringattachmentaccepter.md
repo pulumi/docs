@@ -1,7 +1,7 @@
 
 ---
 title: "TransitGatewayPeeringAttachmentAccepter"
-title_tag: "Resource TransitGatewayPeeringAttachmentAccepter | Module ec2 | Package AWS"
+title_tag: "aws.ec2.TransitGatewayPeeringAttachmentAccepter"
 meta_desc: "Explore the TransitGatewayPeeringAttachmentAccepter resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages the accepter&#39;s side of an EC2 Transit Gateway Peering Attachment."
 ---
 

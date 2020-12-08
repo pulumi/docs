@@ -1,7 +1,7 @@
 
 ---
 title: "GatewayAssociationProposal"
-title_tag: "Resource GatewayAssociationProposal | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.GatewayAssociationProposal"
 meta_desc: "Explore the GatewayAssociationProposal resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the `aws.directconnect.GatewayAssociation` resource."
 ---
 

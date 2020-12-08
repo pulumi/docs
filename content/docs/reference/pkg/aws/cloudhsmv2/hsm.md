@@ -1,7 +1,7 @@
 
 ---
 title: "Hsm"
-title_tag: "Resource Hsm | Module cloudhsmv2 | Package AWS"
+title_tag: "aws.cloudhsmv2.Hsm"
 meta_desc: "Explore the Hsm resource of the cloudhsmv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an HSM module in Amazon CloudHSM v2 cluster."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "OriginAccessIdentity"
-title_tag: "Resource OriginAccessIdentity | Module cloudfront | Package AWS"
+title_tag: "aws.cloudfront.OriginAccessIdentity"
 meta_desc: "Explore the OriginAccessIdentity resource of the cloudfront module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Amazon CloudFront origin access identity."
 ---
 

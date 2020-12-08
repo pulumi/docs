@@ -1,7 +1,7 @@
 
 ---
 title: "StoredIscsiVolume"
-title_tag: "Resource StoredIscsiVolume | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.StoredIscsiVolume"
 meta_desc: "Explore the StoredIscsiVolume resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway stored iSCSI volume."
 ---
 
