@@ -20,6 +20,10 @@ between different environments by merging or directly committing changes.
 
 Let's see how to get started -- it's easy!
 
+{{% notes type="info" %}}
+Pulumi Team Pro customers can try the new streamlined [CI/CD Integration Assistant with GitHub Actions]({{< relref "docs/intro/console/extensions/ci-cd-integration-assistant" >}})
+{{% /notes %}}
+
 ## Pre-Requisites
 
 Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you
