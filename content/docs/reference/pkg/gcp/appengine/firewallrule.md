@@ -958,6 +958,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+FirewallRule can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/firewallRule:FirewallRule default apps/{{project}}/firewall/ingressRules/{{priority}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/firewallRule:FirewallRule default {{project}}/{{priority}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/firewallRule:FirewallRule default {{priority}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

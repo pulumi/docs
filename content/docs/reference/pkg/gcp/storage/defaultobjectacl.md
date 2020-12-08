@@ -667,6 +667,12 @@ Omitting the field is the same as providing an empty list.
 
 
 
+## Import
+
+
+This resource does not support import.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

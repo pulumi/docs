@@ -3019,6 +3019,16 @@ The most recent time at which the device accessed the gateway specified in last_
 
 
 
+## Import
+
+
+Device can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:iot/device:Device default {{registry}}/devices/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

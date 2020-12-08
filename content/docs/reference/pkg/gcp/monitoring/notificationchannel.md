@@ -1713,6 +1713,16 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 
 
 
+## Import
+
+
+NotificationChannel can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/notificationChannel:NotificationChannel default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

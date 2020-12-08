@@ -1182,6 +1182,32 @@ is not provided, the provider project is used.
 
 
 
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* {{project}}/{{name}} * {{name}} (project is taken from provider project) IAM member imports use space-delimited identifiers; the resource in question, the role, and the account, e.g.
+
+```sh
+ $ pulumi import gcp:spanner/instanceIAMMember:InstanceIAMMember instance "project-name/instance-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:spanner/instanceIAMMember:InstanceIAMMember instance "project-name/instance-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:spanner/instanceIAMMember:InstanceIAMMember instance project-name/instance-name
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

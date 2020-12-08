@@ -1458,6 +1458,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+NetworkEndpointGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default projects/{{project}}/zones/{{zone}}/networkEndpointGroups/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

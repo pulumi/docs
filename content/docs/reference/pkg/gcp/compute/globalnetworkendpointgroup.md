@@ -1082,6 +1082,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+GlobalNetworkEndpointGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup default projects/{{project}}/global/networkEndpointGroups/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

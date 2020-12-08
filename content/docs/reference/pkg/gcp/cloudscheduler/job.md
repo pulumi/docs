@@ -3234,6 +3234,28 @@ Values greater than 5 and negative values are not allowed.
 
 
 
+## Import
+
+
+Job can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudscheduler/job:Job default projects/{{project}}/locations/{{region}}/jobs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudscheduler/job:Job default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudscheduler/job:Job default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudscheduler/job:Job default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

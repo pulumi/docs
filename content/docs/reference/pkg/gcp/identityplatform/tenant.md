@@ -1022,6 +1022,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Tenant can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default projects/{{project}}/tenants/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

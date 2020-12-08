@@ -3694,6 +3694,28 @@ encryption key that protects this resource.
 
 
 
+## Import
+
+
+Disk can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/disk:Disk default projects/{{project}}/zones/{{zone}}/disks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/disk:Disk default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/disk:Disk default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/disk:Disk default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

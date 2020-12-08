@@ -222,7 +222,15 @@ The BucketIAMBinding resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -275,7 +283,15 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -328,7 +344,15 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -381,7 +405,15 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -707,7 +739,15 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -771,7 +811,15 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -835,7 +883,15 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -899,7 +955,15 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identities that will be granted the privilege in `role`.
+Each entry can have one of the following values:
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+* **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com.
+* **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+* **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+* **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1109,6 +1173,32 @@ Structure is documented below.
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* b/{{name}} * {{name}} Any variables not passed in the import command will be taken from the provider configuration. Cloud Storage bucket IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:storage/bucketIAMBinding:BucketIAMBinding editor "b/{{bucket}} roles/storage.objectViewer user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:storage/bucketIAMBinding:BucketIAMBinding editor "b/{{bucket}} roles/storage.objectViewer"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:storage/bucketIAMBinding:BucketIAMBinding editor b/{{bucket}}
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

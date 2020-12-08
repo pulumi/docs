@@ -1742,6 +1742,20 @@ A base64-encoded string.
 
 
 
+## Import
+
+
+Hl7V2Store can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:healthcare/hl7Store:Hl7Store default {{dataset}}/hl7V2Stores/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:healthcare/hl7Store:Hl7Store default {{dataset}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1279,6 +1279,16 @@ Possible values are `ASCENDING` and `DESCENDING`.
 
 
 
+## Import
+
+
+Index can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:firestore/index:Index default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

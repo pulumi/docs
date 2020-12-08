@@ -1027,6 +1027,24 @@ If it is not provided, the provider region is used.
 
 
 
+## Import
+
+
+SourceRepresentationInstance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default projects/{{project}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

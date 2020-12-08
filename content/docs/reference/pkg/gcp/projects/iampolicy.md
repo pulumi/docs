@@ -770,6 +770,44 @@ will not be inferred from the provider.
 
 
 
+## Import
+
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `project_id`, role, and member e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMPolicy:IAMPolicy my_project "your-project-id roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `project_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMPolicy:IAMPolicy my_project "your-project-id roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `project_id`.
+
+```sh
+ $ pulumi import gcp:projects/iAMPolicy:IAMPolicy my_project your-project-id
+```
+
+ IAM audit config imports use the identifier of the resource in question and the service, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMPolicy:IAMPolicy my_project "your-project-id foo.googleapis.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

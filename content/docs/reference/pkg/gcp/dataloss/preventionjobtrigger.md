@@ -4039,6 +4039,20 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 
 
+## Import
+
+
+JobTrigger can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dataloss/preventionJobTrigger:PreventionJobTrigger default {{parent}}/jobTriggers/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dataloss/preventionJobTrigger:PreventionJobTrigger default {{parent}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

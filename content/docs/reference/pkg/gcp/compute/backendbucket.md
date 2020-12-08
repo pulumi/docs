@@ -1375,6 +1375,24 @@ header. The actual headers served in responses will not be altered.
 
 
 
+## Import
+
+
+BackendBucket can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/backendBucket:BackendBucket default projects/{{project}}/global/backendBuckets/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/backendBucket:BackendBucket default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/backendBucket:BackendBucket default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

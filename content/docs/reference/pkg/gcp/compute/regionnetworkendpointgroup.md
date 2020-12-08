@@ -1989,6 +1989,28 @@ will parse them to { function = "function1" } and { function = "function2" } res
 
 
 
+## Import
+
+
+RegionNetworkEndpointGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default projects/{{project}}/regions/{{region}}/networkEndpointGroups/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

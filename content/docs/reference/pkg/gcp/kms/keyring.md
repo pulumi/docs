@@ -833,6 +833,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+KeyRing can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:kms/keyRing:KeyRing default projects/{{project}}/locations/{{location}}/keyRings/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/keyRing:KeyRing default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/keyRing:KeyRing default {{location}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -958,6 +958,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Namespace can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:servicedirectory/namespace:Namespace default projects/{{project}}/locations/{{location}}/namespaces/{{namespace_id}}
+```
+
+```sh
+ $ pulumi import gcp:servicedirectory/namespace:Namespace default {{project}}/{{location}}/{{namespace_id}}
+```
+
+```sh
+ $ pulumi import gcp:servicedirectory/namespace:Namespace default {{location}}/{{namespace_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

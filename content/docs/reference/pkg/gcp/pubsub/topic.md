@@ -1089,6 +1089,24 @@ and is not a valid configuration.
 
 
 
+## Import
+
+
+Topic can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:pubsub/topic:Topic default projects/{{project}}/topics/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/topic:Topic default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/topic:Topic default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1317,6 +1317,16 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
 
 
 
+## Import
+
+
+Domain can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:activedirectory/domain:Domain default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

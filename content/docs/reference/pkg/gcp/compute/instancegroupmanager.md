@@ -3178,6 +3178,28 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
 
 
+## Import
+
+
+Instance group managers can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupManager:InstanceGroupManager appserver projects/{{project}}/zones/{{zone}}/instanceGroupManagers/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupManager:InstanceGroupManager appserver {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupManager:InstanceGroupManager appserver {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupManager:InstanceGroupManager appserver {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

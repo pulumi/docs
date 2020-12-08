@@ -932,6 +932,16 @@ write a filter.
 
 
 
+## Import
+
+
+Billing account logging exclusions can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:logging/billingAccountExclusion:BillingAccountExclusion my_exclusion billingAccounts/my-billing_account/exclusions/my-exclusion
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -2058,6 +2058,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Route can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/route:Route default projects/{{project}}/global/routes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/route:Route default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/route:Route default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

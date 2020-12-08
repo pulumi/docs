@@ -940,6 +940,16 @@ used.
 
 
 
+## Import
+
+
+Project-level logging exclusions can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:logging/projectExclusion:ProjectExclusion my_exclusion projects/my-project/exclusions/my-exclusion
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

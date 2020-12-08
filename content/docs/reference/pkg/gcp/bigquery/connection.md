@@ -1598,6 +1598,16 @@ Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 
 
 
+## Import
+
+
+Connection can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigquery/connection:Connection default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

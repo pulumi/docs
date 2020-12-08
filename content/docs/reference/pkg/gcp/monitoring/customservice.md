@@ -1041,6 +1041,16 @@ https://cloud.google.com/apis/design/resource_names.
 
 
 
+## Import
+
+
+Service can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/customService:CustomService default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

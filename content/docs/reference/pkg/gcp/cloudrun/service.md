@@ -5019,6 +5019,24 @@ false when RevisionName is non-empty.
 
 
 
+## Import
+
+
+Service can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default locations/{{location}}/namespaces/{{project}}/services/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

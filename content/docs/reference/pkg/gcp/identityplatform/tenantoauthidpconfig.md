@@ -1179,6 +1179,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+TenantOauthIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default projects/{{project}}/tenants/{{tenant}}/oauthIdpConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default {{project}}/{{tenant}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default {{tenant}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

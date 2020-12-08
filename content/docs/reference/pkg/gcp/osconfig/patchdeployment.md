@@ -7066,6 +7066,24 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 
 
 
+## Import
+
+
+PatchDeployment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:osconfig/patchDeployment:PatchDeployment default projects/{{project}}/patchDeployments/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:osconfig/patchDeployment:PatchDeployment default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:osconfig/patchDeployment:PatchDeployment default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

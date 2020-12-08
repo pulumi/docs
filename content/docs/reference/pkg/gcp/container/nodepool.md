@@ -4117,6 +4117,20 @@ parallel. Can be set to 0 or greater.
 
 
 
+## Import
+
+
+Node pools can be imported using the `project`, `zone`, `cluster` and `name`. If the project is omitted, the default provider value will be used. Examples
+
+```sh
+ $ pulumi import gcp:container/nodePool:NodePool mainpool my-gcp-project/us-east1-a/my-cluster/main-pool
+```
+
+```sh
+ $ pulumi import gcp:container/nodePool:NodePool mainpool us-east1-a/my-cluster/main-pool
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

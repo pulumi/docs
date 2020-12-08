@@ -2097,6 +2097,24 @@ only on primary workers, the cluster will use primary workers only and no second
 
 
 
+## Import
+
+
+AutoscalingPolicy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default projects/{{project}}/locations/{{location}}/autoscalingPolicies/{{policy_id}}
+```
+
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default {{project}}/{{location}}/{{policy_id}}
+```
+
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default {{location}}/{{policy_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -7655,6 +7655,24 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 
 
+## Import
+
+
+GuestPolicies can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default projects/{{project}}/guestPolicies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

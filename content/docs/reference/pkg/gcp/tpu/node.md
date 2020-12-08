@@ -1971,6 +1971,28 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
 
 
 
+## Import
+
+
+Node can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:tpu/node:Node default projects/{{project}}/locations/{{zone}}/nodes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:tpu/node:Node default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:tpu/node:Node default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:tpu/node:Node default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

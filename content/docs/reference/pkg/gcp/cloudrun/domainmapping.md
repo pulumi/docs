@@ -2237,6 +2237,24 @@ has given such a warning.
 
 
 
+## Import
+
+
+DomainMapping can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default locations/{{location}}/namespaces/{{project}}/domainmappings/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

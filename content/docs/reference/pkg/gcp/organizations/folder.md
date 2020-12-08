@@ -1027,6 +1027,20 @@ Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
 
 
 
+## Import
+
+
+Folders can be imported using the folder's id, e.g. # Both syntaxes are valid
+
+```sh
+ $ pulumi import gcp:organizations/folder:Folder department1 1234567
+```
+
+```sh
+ $ pulumi import gcp:organizations/folder:Folder department1 folders/1234567
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

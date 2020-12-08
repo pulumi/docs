@@ -2039,6 +2039,24 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 
 
 
+## Import
+
+
+GameServerConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerConfig:GameServerConfig default projects/{{project}}/locations/{{location}}/gameServerDeployments/{{deployment_id}}/configs/{{config_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerConfig:GameServerConfig default {{project}}/{{location}}/{{deployment_id}}/{{config_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerConfig:GameServerConfig default {{location}}/{{deployment_id}}/{{config_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

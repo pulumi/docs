@@ -1857,6 +1857,28 @@ Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SE
 
 
 
+## Import
+
+
+NodeTemplate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default projects/{{project}}/regions/{{region}}/nodeTemplates/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

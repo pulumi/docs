@@ -1106,6 +1106,20 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 
 
 
+## Import
+
+
+DicomStore can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:healthcare/dicomStore:DicomStore default {{dataset}}/dicomStores/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:healthcare/dicomStore:DicomStore default {{dataset}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

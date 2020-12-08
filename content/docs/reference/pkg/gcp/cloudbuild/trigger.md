@@ -6591,6 +6591,24 @@ described at https://github.com/google/re2/wiki/Syntax
 
 
 
+## Import
+
+
+Trigger can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudbuild/trigger:Trigger default projects/{{project}}/triggers/{{trigger_id}}
+```
+
+```sh
+ $ pulumi import gcp:cloudbuild/trigger:Trigger default {{project}}/{{trigger_id}}
+```
+
+```sh
+ $ pulumi import gcp:cloudbuild/trigger:Trigger default {{trigger_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

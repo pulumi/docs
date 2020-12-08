@@ -1251,6 +1251,28 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Instance IAM resources can be imported using the project, table name, role and/or member.
+
+```sh
+ $ pulumi import gcp:bigtable/tableIamBinding:TableIamBinding editor "projects/{project}/tables/{table}"
+```
+
+```sh
+ $ pulumi import gcp:bigtable/tableIamBinding:TableIamBinding editor "projects/{project}/tables/{table} roles/editor"
+```
+
+```sh
+ $ pulumi import gcp:bigtable/tableIamBinding:TableIamBinding editor "projects/{project}/tables/{table} roles/editor user:jane@example.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

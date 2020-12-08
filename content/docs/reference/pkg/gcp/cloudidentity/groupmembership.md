@@ -1661,6 +1661,16 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 
 
 
+## Import
+
+
+GroupMembership can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudidentity/groupMembership:GroupMembership default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

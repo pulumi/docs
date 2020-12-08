@@ -14,6 +14,7 @@ Get an active folder within GCP by `display_name` and `parent`.
 
 
 
+
 ## Using GetActiveFolder {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

@@ -661,6 +661,20 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Dashboard can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/dashboard:Dashboard default project/{{project}}/dashboards/{{dashboard_id}}
+```
+
+```sh
+ $ pulumi import gcp:monitoring/dashboard:Dashboard default {{dashboard_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

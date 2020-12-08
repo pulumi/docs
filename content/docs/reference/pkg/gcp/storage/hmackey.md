@@ -1118,6 +1118,24 @@ Possible values are `ACTIVE` and `INACTIVE`.
 
 
 
+## Import
+
+
+HmacKey can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:storage/hmacKey:HmacKey default projects/{{project}}/hmacKeys/{{access_id}}
+```
+
+```sh
+ $ pulumi import gcp:storage/hmacKey:HmacKey default {{project}}/{{access_id}}
+```
+
+```sh
+ $ pulumi import gcp:storage/hmacKey:HmacKey default {{access_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -14,6 +14,7 @@ Get info about a Region Google Compute SSL Certificate from its name.
 
 
 
+
 ## Using GetRegionSslCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

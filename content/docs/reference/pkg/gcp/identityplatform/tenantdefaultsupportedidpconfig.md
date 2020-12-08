@@ -1171,6 +1171,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+TenantDefaultSupportedIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig default projects/{{project}}/tenants/{{tenant}}/defaultSupportedIdpConfigs/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig default {{project}}/{{tenant}}/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig default {{tenant}}/{{idp_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

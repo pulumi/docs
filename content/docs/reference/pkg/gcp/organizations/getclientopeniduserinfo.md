@@ -24,6 +24,7 @@ receive an error otherwise.
 
 
 
+
 ## Using GetClientOpenIdUserInfo {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

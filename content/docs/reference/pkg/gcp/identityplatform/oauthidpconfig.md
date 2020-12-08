@@ -1091,6 +1091,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+OauthIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default projects/{{project}}/oauthIdpConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

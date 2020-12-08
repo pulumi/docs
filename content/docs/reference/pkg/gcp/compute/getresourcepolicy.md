@@ -14,6 +14,7 @@ Provide access to a Resource Policy's attributes. For more information see [the 
 
 
 
+
 ## Using GetResourcePolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

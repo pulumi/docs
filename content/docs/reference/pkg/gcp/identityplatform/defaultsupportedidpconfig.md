@@ -1083,6 +1083,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+DefaultSupportedIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default projects/{{project}}/defaultSupportedIdpConfigs/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default {{project}}/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default {{idp_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

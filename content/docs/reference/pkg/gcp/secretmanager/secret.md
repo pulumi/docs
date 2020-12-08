@@ -1403,6 +1403,24 @@ Structure is documented below.
 
 
 
+## Import
+
+
+Secret can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:secretmanager/secret:Secret default projects/{{project}}/secrets/{{secret_id}}
+```
+
+```sh
+ $ pulumi import gcp:secretmanager/secret:Secret default {{project}}/{{secret_id}}
+```
+
+```sh
+ $ pulumi import gcp:secretmanager/secret:Secret default {{secret_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

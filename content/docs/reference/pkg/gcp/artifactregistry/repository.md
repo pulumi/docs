@@ -1429,6 +1429,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Repository can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default projects/{{project}}/locations/{{location}}/repositories/{{repository_id}}
+```
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default {{project}}/{{location}}/{{repository_id}}
+```
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default {{location}}/{{repository_id}}
+```
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default {{repository_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

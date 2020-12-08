@@ -2734,6 +2734,16 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 
 
 
+## Import
+
+
+UptimeCheckConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/uptimeCheckConfig:UptimeCheckConfig default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

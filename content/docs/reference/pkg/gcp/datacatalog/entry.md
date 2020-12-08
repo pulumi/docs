@@ -2708,6 +2708,16 @@ The size of the file, in bytes.
 
 
 
+## Import
+
+
+Entry can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datacatalog/entry:Entry default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1031,6 +1031,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Database can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default projects/{{project}}/instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default {{project}}/{{instance}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default {{instance}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

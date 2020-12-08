@@ -1477,6 +1477,16 @@ Possible values are `OWNER` and `READER`.
 
 
 
+## Import
+
+
+DefaultObjectAccessControl can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:storage/defaultObjectAccessControl:DefaultObjectAccessControl default {{bucket}}/{{entity}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

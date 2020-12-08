@@ -14,6 +14,7 @@ Use this data source to get information about a Google Cloud Folder.
 
 
 
+
 ## Using GetFolder {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

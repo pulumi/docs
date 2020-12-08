@@ -1417,6 +1417,16 @@ and must be in the form of `identitysources/{identity_source_id}`.
 
 
 
+## Import
+
+
+Group can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudidentity/group:Group default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

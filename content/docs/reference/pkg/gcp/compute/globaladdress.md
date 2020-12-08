@@ -1790,6 +1790,24 @@ Possible values are `VPC_PEERING`.
 
 
 
+## Import
+
+
+GlobalAddress can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/globalAddress:GlobalAddress default projects/{{project}}/global/addresses/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalAddress:GlobalAddress default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalAddress:GlobalAddress default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

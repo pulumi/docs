@@ -1351,6 +1351,24 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
 
 
 
+## Import
+
+
+AppProfile can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default projects/{{project}}/instances/{{instance}}/appProfiles/{{app_profile_id}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default {{project}}/{{instance}}/{{app_profile_id}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default {{instance}}/{{app_profile_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

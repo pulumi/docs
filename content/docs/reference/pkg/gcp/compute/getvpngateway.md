@@ -14,6 +14,7 @@ Get a VPN gateway within GCE from its name.
 
 
 
+
 ## Using GetVPNGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

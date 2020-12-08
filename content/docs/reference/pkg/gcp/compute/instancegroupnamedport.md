@@ -928,6 +928,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+InstanceGroupNamedPort can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default projects/{{project}}/zones/{{zone}}/instanceGroups/{{group}}/{{port}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{project}}/{{zone}}/{{group}}/{{port}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{zone}}/{{group}}/{{port}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{group}}/{{port}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

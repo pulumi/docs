@@ -735,6 +735,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Projects can be imported using the `project_id`, e.g.
+
+```sh
+ $ pulumi import gcp:projects/usageExportBucket:UsageExportBucket my_project your-project-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -5826,6 +5826,12 @@ attached to each preemptible worker node. Defaults to 0.
 
 
 
+## Import
+
+
+This resource does not support import.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1385,6 +1385,24 @@ for a `DEVELOPMENT` instance.
 
 
 
+## Import
+
+
+Bigtable Instances can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigtable/instance:Instance default projects/{{project}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:bigtable/instance:Instance default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:bigtable/instance:Instance default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

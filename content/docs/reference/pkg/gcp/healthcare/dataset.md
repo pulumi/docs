@@ -933,6 +933,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Dataset can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:healthcare/dataset:Dataset default projects/{{project}}/locations/{{location}}/datasets/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:healthcare/dataset:Dataset default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:healthcare/dataset:Dataset default {{location}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

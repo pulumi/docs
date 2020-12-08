@@ -2107,6 +2107,20 @@ list of APIs specified in 'allowedServices'.
 
 
 
+## Import
+
+
+ServicePerimeters can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/servicePerimeters:ServicePerimeters default {{parent}}/servicePerimeters
+```
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/servicePerimeters:ServicePerimeters default {{parent}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

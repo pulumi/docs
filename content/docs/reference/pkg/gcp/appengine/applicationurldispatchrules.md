@@ -855,6 +855,16 @@ Defaults to matching all domains: "*".
 
 
 
+## Import
+
+
+ApplicationUrlDispatchRules can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules default {{project}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

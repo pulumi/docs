@@ -5095,6 +5095,16 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 
 
+## Import
+
+
+BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id`, e.g.
+
+```sh
+ $ pulumi import gcp:bigquery/table:Table default gcp-project/foo/bar
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -14,6 +14,7 @@ Use this data source to get information about a Google IAM Role.
 
 
 
+
 ## Using GetRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

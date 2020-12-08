@@ -14,6 +14,7 @@ Get info about a Google Compute SSL Certificate from its name.
 
 
 
+
 ## Using GetCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

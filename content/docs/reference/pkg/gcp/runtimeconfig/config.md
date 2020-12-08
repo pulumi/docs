@@ -746,6 +746,22 @@ is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Runtime Configs can be imported using the `name` or full config name, e.g.
+
+```sh
+ $ pulumi import gcp:runtimeconfig/config:Config myconfig myconfig
+```
+
+```sh
+ $ pulumi import gcp:runtimeconfig/config:Config myconfig projects/my-gcp-project/configs/myconfig
+```
+
+ When importing using only the name, the provider project must be set.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

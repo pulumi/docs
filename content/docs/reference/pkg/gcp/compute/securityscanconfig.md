@@ -2146,6 +2146,24 @@ which means the scan will be scheduled to start immediately.
 
 
 
+## Import
+
+
+ScanConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/securityScanConfig:SecurityScanConfig default projects/{{project}}/scanConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/securityScanConfig:SecurityScanConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/securityScanConfig:SecurityScanConfig default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

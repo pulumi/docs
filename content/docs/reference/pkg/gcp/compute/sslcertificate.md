@@ -1362,6 +1362,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+SslCertificate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default projects/{{project}}/global/sslCertificates/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

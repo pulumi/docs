@@ -1510,6 +1510,24 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 
 
 
+## Import
+
+
+Policy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dns/policy:Policy default projects/{{project}}/policies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/policy:Policy default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/policy:Policy default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

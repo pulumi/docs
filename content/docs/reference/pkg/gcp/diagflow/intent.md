@@ -2082,6 +2082,16 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 
 
 
+## Import
+
+
+Intent can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:diagflow/intent:Intent default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

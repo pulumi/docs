@@ -4619,6 +4619,24 @@ can only be ASCII.
 
 
 
+## Import
+
+
+HealthCheck can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/healthCheck:HealthCheck default projects/{{project}}/global/healthChecks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/healthCheck:HealthCheck default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/healthCheck:HealthCheck default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

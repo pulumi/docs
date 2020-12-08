@@ -1280,6 +1280,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+HaVpnGateway can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

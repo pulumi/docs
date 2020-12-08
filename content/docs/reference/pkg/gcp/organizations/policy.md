@@ -1846,6 +1846,18 @@ are inherited, meaning the values set in this Policy are added to the values inh
 
 
 
+## Import
+
+
+Organization Policies can be imported using the `org_id` and the `constraint`, e.g.
+
+```sh
+ $ pulumi import gcp:organizations/policy:Policy services_policy 123456789/constraints/serviceuser.services
+```
+
+ It is all right if the constraint contains a slash, as in the example above.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

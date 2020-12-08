@@ -14,6 +14,7 @@ Get a spanner instance from Google Cloud by its name.
 
 
 
+
 ## Using GetInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

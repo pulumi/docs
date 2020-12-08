@@ -1255,6 +1255,24 @@ Possible values are `NONE` and `PROXY_V1`.
 
 
 
+## Import
+
+
+TargetTcpProxy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default projects/{{project}}/global/targetTcpProxies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

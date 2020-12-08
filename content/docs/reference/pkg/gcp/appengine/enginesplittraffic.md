@@ -979,6 +979,24 @@ Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 
 
 
+## Import
+
+
+ServiceSplitTraffic can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/engineSplitTraffic:EngineSplitTraffic default apps/{{project}}/services/{{service}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/engineSplitTraffic:EngineSplitTraffic default {{project}}/{{service}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/engineSplitTraffic:EngineSplitTraffic default {{service}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

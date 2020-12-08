@@ -1095,7 +1095,7 @@ Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1131,7 +1131,7 @@ it cannot be an IP address from Google Compute Engine.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1167,7 +1167,7 @@ it cannot be an IP address from Google Compute Engine.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1203,7 +1203,7 @@ it cannot be an IP address from Google Compute Engine.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1233,6 +1233,24 @@ it cannot be an IP address from Google Compute Engine.
 
 
 
+
+
+## Import
+
+
+ExternalVpnGateway can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/externalVpnGateway:ExternalVpnGateway default projects/{{project}}/global/externalVpnGateways/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/externalVpnGateway:ExternalVpnGateway default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/externalVpnGateway:ExternalVpnGateway default {{name}}
+```
 
 
 

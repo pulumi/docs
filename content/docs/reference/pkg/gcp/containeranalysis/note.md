@@ -1883,6 +1883,24 @@ example "qa".
 
 
 
+## Import
+
+
+Note can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default projects/{{project}}/notes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

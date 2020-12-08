@@ -1056,6 +1056,16 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Group can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/group:Group default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

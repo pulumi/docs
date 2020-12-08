@@ -1267,6 +1267,28 @@ is not provided, the provider will use a default.
 
 
 
+## Import
+
+
+Job IAM resources can be imported using the project, region, job id, role and/or member.
+
+```sh
+ $ pulumi import gcp:dataproc/jobIAMMember:JobIAMMember editor "projects/{project}/regions/{region}/jobs/{job_id}"
+```
+
+```sh
+ $ pulumi import gcp:dataproc/jobIAMMember:JobIAMMember editor "projects/{project}/regions/{region}/jobs/{job_id} roles/editor"
+```
+
+```sh
+ $ pulumi import gcp:dataproc/jobIAMMember:JobIAMMember editor "projects/{project}/regions/{region}/jobs/{job_id} roles/editor user:jane@example.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

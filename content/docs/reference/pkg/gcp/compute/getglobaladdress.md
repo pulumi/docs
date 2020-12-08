@@ -15,6 +15,7 @@ the official [API](https://cloud.google.com/compute/docs/reference/latest/global
 
 
 
+
 ## Using GetGlobalAddress {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

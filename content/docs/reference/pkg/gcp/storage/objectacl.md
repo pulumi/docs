@@ -833,6 +833,12 @@ Must be set if `predefined_acl` is not.
 
 
 
+## Import
+
+
+This resource does not support import.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

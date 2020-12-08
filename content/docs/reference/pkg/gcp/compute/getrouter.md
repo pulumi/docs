@@ -14,6 +14,7 @@ Get a router within GCE from its name and VPC.
 
 
 
+
 ## Using GetRouter {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

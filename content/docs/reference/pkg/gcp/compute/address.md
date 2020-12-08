@@ -1882,6 +1882,28 @@ GCE_ENDPOINT/DNS_RESOLVER purposes.
 
 
 
+## Import
+
+
+Address can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/address:Address default projects/{{project}}/regions/{{region}}/addresses/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/address:Address default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/address:Address default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/address:Address default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

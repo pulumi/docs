@@ -1044,6 +1044,16 @@ Possible values are `OWNER`, `READER`, and `WRITER`.
 
 
 
+## Import
+
+
+BucketAccessControl can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:storage/bucketAccessControl:BucketAccessControl default {{bucket}}/{{entity}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

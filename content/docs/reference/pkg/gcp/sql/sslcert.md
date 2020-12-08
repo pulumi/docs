@@ -1383,6 +1383,12 @@ is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Since the contents of the certificate cannot be accessed after its creation, this resource cannot be imported.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

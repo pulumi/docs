@@ -1246,6 +1246,28 @@ to the BackendService.
 
 
 
+## Import
+
+
+RegionTargetHttpProxy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default projects/{{project}}/regions/{{region}}/targetHttpProxies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

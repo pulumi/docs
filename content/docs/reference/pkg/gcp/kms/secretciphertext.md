@@ -853,6 +853,12 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
 
 
 
+## Import
+
+
+This resource does not support import.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

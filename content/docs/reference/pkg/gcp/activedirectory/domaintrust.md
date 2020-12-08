@@ -1216,6 +1216,24 @@ Possible values are `FOREST` and `EXTERNAL`.
 
 
 
+## Import
+
+
+DomainTrust can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default projects/{{project}}/locations/global/domains/{{domain}}/{{target_domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default {{project}}/{{domain}}/{{target_domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default {{domain}}/{{target_domain_name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

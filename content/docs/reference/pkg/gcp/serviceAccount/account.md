@@ -1147,6 +1147,16 @@ Defaults to the provider project configuration.
 
 
 
+## Import
+
+
+Service accounts can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:serviceAccount/account:Account my_sa projects/my-project/serviceAccounts/my-sa@my-project.iam.gserviceaccount.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

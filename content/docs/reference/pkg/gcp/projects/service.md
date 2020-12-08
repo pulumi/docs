@@ -828,6 +828,18 @@ If `false` or unset, an error will be generated if any enabled services depend o
 
 
 
+## Import
+
+
+Project services can be imported using the `project_id` and `service`, e.g.
+
+```sh
+ $ pulumi import gcp:projects/service:Service my_project your-project-id/iam.googleapis.com
+```
+
+ Note that unlike other resources that fail if they already exist, `terraform apply` can be successfully used to verify already enabled services. This means that when importing existing resources into Terraform, you can either import the `google_project_service` resources or treat them as new infrastructure and run `terraform apply` to add them to state.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

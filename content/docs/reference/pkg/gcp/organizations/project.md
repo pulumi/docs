@@ -1399,6 +1399,16 @@ without deleting the Project via the Google API.
 
 
 
+## Import
+
+
+Projects can be imported using the `project_id`, e.g.
+
+```sh
+ $ pulumi import gcp:organizations/project:Project my_project your-project-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

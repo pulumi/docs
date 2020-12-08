@@ -16,6 +16,7 @@ and [API](https://cloud.google.com/functions/docs/apis).
 
 
 
+
 ## Using GetFunction {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

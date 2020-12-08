@@ -1432,6 +1432,24 @@ it is connecting to
 
 
 
+## Import
+
+
+TargetGrpcProxy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default projects/{{project}}/global/targetGrpcProxies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

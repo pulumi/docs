@@ -22,6 +22,7 @@ For more information see
 
 
 
+
 ## Using GetDefaultServiceAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

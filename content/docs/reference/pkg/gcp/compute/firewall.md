@@ -3088,6 +3088,24 @@ Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 
 
 
+## Import
+
+
+Firewall can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default projects/{{project}}/global/firewalls/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

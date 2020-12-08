@@ -14,6 +14,7 @@ Use this data source to retrieve default service account for this project
 
 
 
+
 ## Using GetDefaultServiceAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
