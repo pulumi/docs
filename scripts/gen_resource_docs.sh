@@ -4,10 +4,10 @@
 
 set -o nounset -o errexit -o pipefail
 
-# The first argument is the override for the repo for which this script will generate the resource docs. 
+# The first argument is the override for the repo for which this script will generate the resource docs.
 REPO_OVERRIDE=${1:-}
 # Pass a 2nd argument (value does not matter) to indicate that the resource plugin must be installed.
-# The latest release tag (not beta or dev) is used as the version to install the plugin. 
+# The latest release tag (not beta or dev) is used as the version to install the plugin.
 INSTALL_RESOURCE_PLUGIN=${2:-}
 # Pass a 3rd argument to override the resource plugin version installed by this script.
 INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
@@ -58,9 +58,6 @@ generate_docs() {
     popd
 
     EXISTING_SCHEMA_FILE="../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
-    if [ "$provider" = "kubernetes" ]; then
-        EXISTING_SCHEMA_FILE="../pulumi-kubernetes/sdk/schema/schema.json"
-    fi
 
     # Use a previously generated schema.json file if it exists.
     if [ -f "${EXISTING_SCHEMA_FILE}" ]; then
@@ -78,11 +75,7 @@ generate_docs() {
         popd
     fi
 
-    if [ "$provider" = "kubernetes" ]; then
-        SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
-    else
-        SCHEMA_FILE="../../../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
-    fi
+    SCHEMA_FILE="../../../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
 
     OVERLAY_SCHEMA_FILE=""
     if [ -d "${TOOL_RESDOCGEN}/overlays/${provider}" ] && [ -f "${TOOL_RESDOCGEN}/overlays/${provider}/overlays.json" ]; then
