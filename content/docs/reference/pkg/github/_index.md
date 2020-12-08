@@ -14,20 +14,24 @@ A Pulumi package for creating and managing github cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="actionsorganizationsecret" title="ActionsOrganizationSecret"><span class="symbol resource"></span>ActionsOrganizationSecret</a></li>
     <li><a href="actionssecret" title="ActionsSecret"><span class="symbol resource"></span>ActionsSecret</a></li>
     <li><a href="branch" title="Branch"><span class="symbol resource"></span>Branch</a></li>
+    <li><a href="branchdefault" title="BranchDefault"><span class="symbol resource"></span>BranchDefault</a></li>
     <li><a href="branchprotection" title="BranchProtection"><span class="symbol resource"></span>BranchProtection</a></li>
     <li><a href="issuelabel" title="IssueLabel"><span class="symbol resource"></span>IssueLabel</a></li>
     <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
     <li><a href="organizationblock" title="OrganizationBlock"><span class="symbol resource"></span>OrganizationBlock</a></li>
     <li><a href="organizationproject" title="OrganizationProject"><span class="symbol resource"></span>OrganizationProject</a></li>
     <li><a href="organizationwebhook" title="OrganizationWebhook"><span class="symbol resource"></span>OrganizationWebhook</a></li>
+    <li><a href="projectcard" title="ProjectCard"><span class="symbol resource"></span>ProjectCard</a></li>
     <li><a href="projectcolumn" title="ProjectColumn"><span class="symbol resource"></span>ProjectColumn</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="repository" title="Repository"><span class="symbol resource"></span>Repository</a></li>
     <li><a href="repositorycollaborator" title="RepositoryCollaborator"><span class="symbol resource"></span>RepositoryCollaborator</a></li>
     <li><a href="repositorydeploykey" title="RepositoryDeployKey"><span class="symbol resource"></span>RepositoryDeployKey</a></li>
     <li><a href="repositoryfile" title="RepositoryFile"><span class="symbol resource"></span>RepositoryFile</a></li>
+    <li><a href="repositorymilestone" title="RepositoryMilestone"><span class="symbol resource"></span>RepositoryMilestone</a></li>
     <li><a href="repositoryproject" title="RepositoryProject"><span class="symbol resource"></span>RepositoryProject</a></li>
     <li><a href="repositorywebhook" title="RepositoryWebhook"><span class="symbol resource"></span>RepositoryWebhook</a></li>
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
@@ -51,6 +55,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="getrelease" title="GetRelease"><span class="symbol function"></span>GetRelease</a></li>
     <li><a href="getrepositories" title="GetRepositories"><span class="symbol function"></span>GetRepositories</a></li>
     <li><a href="getrepository" title="GetRepository"><span class="symbol function"></span>GetRepository</a></li>
+    <li><a href="getrepositorymilestone" title="GetRepositoryMilestone"><span class="symbol function"></span>GetRepositoryMilestone</a></li>
     <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
 </ul>
@@ -64,7 +69,7 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 
