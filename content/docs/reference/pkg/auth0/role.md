@@ -12,6 +12,7 @@ meta_desc: "Explore the Role resource of the Auth0 package, including examples, 
 
 With this resource, you can created and manage collections of permissions that can be assigned to users, which are otherwise known as roles. Permissions (scopes) are created on auth0_resource_server, then associated with roles and optionally, users using this resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1053,6 +1054,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Client resource of the Auth0 package, including examples
 
 With this resource, you can set up applications that use Auth0 for authentication and configure allowed callback URLs and secrets for these applications. Depending on your plan, you may also configure add-ons to allow your application to call another application's API (such as Firebase and AWS) on behalf of an authenticated user.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6625,6 +6626,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

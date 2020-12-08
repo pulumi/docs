@@ -12,6 +12,7 @@ meta_desc: "Explore the Prompt resource of the Auth0 package, including examples
 
 With this resource, you can manage your Auth0 prompts, including choosing the login experience version.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -613,6 +614,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

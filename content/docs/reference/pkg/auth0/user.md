@@ -12,6 +12,7 @@ meta_desc: "Explore the User resource of the Auth0 package, including examples, 
 
 With this resource, you can manage user identities, including resetting passwords, and creating, provisioning, blocking, and deleting users.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2125,6 +2126,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

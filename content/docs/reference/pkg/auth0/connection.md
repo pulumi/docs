@@ -12,6 +12,7 @@ meta_desc: "Explore the Connection resource of the Auth0 package, including exam
 
 With Auth0, you can define sources of users, otherwise known as connections, which may include identity providers (such as Google or LinkedIn), databases, or passwordless authentication methods. This resource allows you to configure and manage connections to be used with your clients and users.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -183,7 +184,7 @@ const myConnection = new auth0.Connection("my_connection", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -443,6 +444,17 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validation_csharp">
+<a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -536,6 +548,17 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validation_go">
+<a href="#validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
 </dl>
@@ -633,6 +656,17 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validation_nodejs">
+<a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -726,6 +760,17 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validation_python">
+<a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
 </dl>
@@ -827,7 +872,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1029,6 +1074,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validation_csharp">
+<a href="#state_validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1122,6 +1178,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validation_go">
+<a href="#state_validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
 </dl>
@@ -1219,6 +1286,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validation_nodejs">
+<a href="#state_validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1312,6 +1390,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validation_python">
+<a href="#state_validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
 </dl>
@@ -2039,9 +2128,9 @@ The following state arguments are supported:
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map defining the validation options.
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2764,9 +2853,9 @@ The following state arguments are supported:
 <a href="#validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation</a></span>
     </dt>
-    <dd>{{% md %}}A map defining the validation options.
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3489,9 +3578,9 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="#connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation</a></span>
     </dt>
-    <dd>{{% md %}}A map defining the validation options.
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4214,9 +4303,9 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type"><a href="#connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map defining the validation options.
+    <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4994,6 +5083,224 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
+
+
+
+<h4 id="connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsValidation">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsValidationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsValidation.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the `min` and `max` values of username length. `min` and `max` are integers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the `min` and `max` values of username length. `min` and `max` are integers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the `min` and `max` values of username length. `min` and `max` are integers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the `min` and `max` values of username length. `min` and `max` are integers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsValidationUsername">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsValidationUsername">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationUsernameArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationUsernameOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsValidationUsernameArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsValidationUsername.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the EmailTemplate resource of the Auth0 package, including e
 
 With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email templates to customize the look, feel, and sender identities of emails sent by Auth0. Used in conjunction with configured email providers.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1309,6 +1310,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
