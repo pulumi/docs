@@ -20,6 +20,231 @@ Three different resources help you manage your IAM policy for Healthcare dataset
 
 > **Note:** `gcp.healthcare.DatasetIamBinding` resources **can be** used in conjunction with `gcp.healthcare.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_dataset\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const dataset = new gcp.healthcare.DatasetIamPolicy("dataset", {
+    datasetId: "your-dataset-id",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+)])
+dataset = gcp.healthcare.DatasetIamPolicy("dataset",
+    dataset_id="your-dataset-id",
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/editor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var dataset = new Gcp.Healthcare.DatasetIamPolicy("dataset", new Gcp.Healthcare.DatasetIamPolicyArgs
+        {
+            DatasetId = "your-dataset-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewDatasetIamPolicy(ctx, "dataset", &healthcare.DatasetIamPolicyArgs{
+			DatasetId:  pulumi.String("your-dataset-id"),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_healthcare\_dataset\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.healthcare.DatasetIamBinding("dataset", {
+    datasetId: "your-dataset-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dataset = gcp.healthcare.DatasetIamBinding("dataset",
+    dataset_id="your-dataset-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new Gcp.Healthcare.DatasetIamBinding("dataset", new Gcp.Healthcare.DatasetIamBindingArgs
+        {
+            DatasetId = "your-dataset-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcare.NewDatasetIamBinding(ctx, "dataset", &healthcare.DatasetIamBindingArgs{
+			DatasetId: pulumi.String("your-dataset-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_healthcare\_dataset\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.healthcare.DatasetIamMember("dataset", {
+    datasetId: "your-dataset-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dataset = gcp.healthcare.DatasetIamMember("dataset",
+    dataset_id="your-dataset-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new Gcp.Healthcare.DatasetIamMember("dataset", new Gcp.Healthcare.DatasetIamMemberArgs
+        {
+            DatasetId = "your-dataset-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcare.NewDatasetIamMember(ctx, "dataset", &healthcare.DatasetIamMemberArgs{
+			DatasetId: pulumi.String("your-dataset-id"),
+			Member:    pulumi.String("user:jane@example.com"),
+			Role:      pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a DatasetIamMember Resource {#create}
@@ -1105,6 +1330,38 @@ project setting will be used as a fallback.
 
 
 
+
+
+## Import
+
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `dataset_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/datasetIamMember:DatasetIamMember dataset_iam "your-project-id/location-name/dataset-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `dataset_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/datasetIamMember:DatasetIamMember dataset_iam "your-project-id/location-name/dataset-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `dataset_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/datasetIamMember:DatasetIamMember dataset_iam your-project-id/location-name/dataset-name
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

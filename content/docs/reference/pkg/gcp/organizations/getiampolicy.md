@@ -17,9 +17,185 @@ other Google Cloud Platform resources, such as the `gcp.organizations.Project` r
 See the [setIamPolicy docs](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy)
 for a list of these restrictions.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    auditConfigs: [{
+        auditLogConfigs: [
+            {
+                exemptedMembers: ["user:you@domain.com"],
+                logType: "DATA_READ",
+            },
+            {
+                logType: "DATA_WRITE",
+            },
+            {
+                logType: "ADMIN_READ",
+            },
+        ],
+        service: "cloudkms.googleapis.com",
+    }],
+    bindings: [
+        {
+            members: ["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
+            role: "roles/compute.instanceAdmin",
+        },
+        {
+            members: ["user:alice@gmail.com"],
+            role: "roles/storage.objectViewer",
+        },
+    ],
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(audit_configs=[gcp.organizations.GetIAMPolicyAuditConfigArgs(
+        audit_log_configs=[
+            gcp.organizations.GetIAMPolicyAuditConfigAuditLogConfigArgs(
+                exempted_members=["user:you@domain.com"],
+                log_type="DATA_READ",
+            ),
+            gcp.organizations.GetIAMPolicyAuditConfigAuditLogConfigArgs(
+                log_type="DATA_WRITE",
+            ),
+            gcp.organizations.GetIAMPolicyAuditConfigAuditLogConfigArgs(
+                log_type="ADMIN_READ",
+            ),
+        ],
+        service="cloudkms.googleapis.com",
+    )],
+    bindings=[
+        gcp.organizations.GetIAMPolicyBindingArgs(
+            members=["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
+            role="roles/compute.instanceAdmin",
+        ),
+        gcp.organizations.GetIAMPolicyBindingArgs(
+            members=["user:alice@gmail.com"],
+            role="roles/storage.objectViewer",
+        ),
+    ])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            AuditConfigs = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigArgs
+                {
+                    AuditLogConfigs = 
+                    {
+                        new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigAuditLogConfigArgs
+                        {
+                            ExemptedMembers = 
+                            {
+                                "user:you@domain.com",
+                            },
+                            LogType = "DATA_READ",
+                        },
+                        new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigAuditLogConfigArgs
+                        {
+                            LogType = "DATA_WRITE",
+                        },
+                        new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigAuditLogConfigArgs
+                        {
+                            LogType = "ADMIN_READ",
+                        },
+                    },
+                    Service = "cloudkms.googleapis.com",
+                },
+            },
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Members = 
+                    {
+                        "serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com",
+                    },
+                    Role = "roles/compute.instanceAdmin",
+                },
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Members = 
+                    {
+                        "user:alice@gmail.com",
+                    },
+                    Role = "roles/storage.objectViewer",
+                },
+            },
+        }));
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			AuditConfigs: []organizations.GetIAMPolicyAuditConfig{
+				organizations.GetIAMPolicyAuditConfig{
+					AuditLogConfigs: []organizations.GetIAMPolicyAuditConfigAuditLogConfig{
+						organizations.GetIAMPolicyAuditConfigAuditLogConfig{
+							ExemptedMembers: []string{
+								"user:you@domain.com",
+							},
+							LogType: "DATA_READ",
+						},
+						organizations.GetIAMPolicyAuditConfigAuditLogConfig{
+							LogType: "DATA_WRITE",
+						},
+						organizations.GetIAMPolicyAuditConfigAuditLogConfig{
+							LogType: "ADMIN_READ",
+						},
+					},
+					Service: "cloudkms.googleapis.com",
+				},
+			},
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Members: []string{
+						"serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com",
+					},
+					Role: "roles/compute.instanceAdmin",
+				},
+				organizations.GetIAMPolicyBinding{
+					Members: []string{
+						"user:alice@gmail.com",
+					},
+					Role: "roles/storage.objectViewer",
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy
 from another resource is the only way to apply an IAM policy to a resource.
+
 
 
 

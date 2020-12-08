@@ -23,6 +23,563 @@ To get more information about BackendService, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Backend Service Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+        {
+            RequestPath = "/",
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+        });
+        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+        {
+            HealthChecks = 
+            {
+                defaultHttpHealthCheck.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHttpHealthCheck.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.id])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.id]});
+```
+
+{{% /example %}}
+
+### Backend Service Traffic Director Round Robin
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var healthCheck = new Gcp.Compute.HealthCheck("healthCheck", new Gcp.Compute.HealthCheckArgs
+        {
+            HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var @default = new Gcp.Compute.BackendService("default", new Gcp.Compute.BackendServiceArgs
+        {
+            HealthChecks = 
+            {
+                healthCheck.Id,
+            },
+            LoadBalancingScheme = "INTERNAL_SELF_MANAGED",
+            LocalityLbPolicy = "ROUND_ROBIN",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		healthCheck, err := compute.NewHealthCheck(ctx, "healthCheck", &compute.HealthCheckArgs{
+			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendService(ctx, "_default", &compute.BackendServiceArgs{
+			HealthChecks: pulumi.String(pulumi.String{
+				healthCheck.ID(),
+			}),
+			LoadBalancingScheme: pulumi.String("INTERNAL_SELF_MANAGED"),
+			LocalityLbPolicy:    pulumi.String("ROUND_ROBIN"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check=gcp.compute.HealthCheckHttpHealthCheckArgs(
+    port=80,
+),
+opts=pulumi.ResourceOptions(provider=google_beta))
+default = gcp.compute.BackendService("default",
+    health_checks=[health_check.id],
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    locality_lb_policy="ROUND_ROBIN",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {httpHealthCheck: {
+    port: 80,
+}}, {
+    provider: google_beta,
+});
+const _default = new gcp.compute.BackendService("default", {
+    healthChecks: [healthCheck.id],
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    localityLbPolicy: "ROUND_ROBIN",
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Backend Service Traffic Director Ring Hash
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var healthCheck = new Gcp.Compute.HealthCheck("healthCheck", new Gcp.Compute.HealthCheckArgs
+        {
+            HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var @default = new Gcp.Compute.BackendService("default", new Gcp.Compute.BackendServiceArgs
+        {
+            HealthChecks = 
+            {
+                healthCheck.Id,
+            },
+            LoadBalancingScheme = "INTERNAL_SELF_MANAGED",
+            LocalityLbPolicy = "RING_HASH",
+            SessionAffinity = "HTTP_COOKIE",
+            CircuitBreakers = new Gcp.Compute.Inputs.BackendServiceCircuitBreakersArgs
+            {
+                MaxConnections = 10,
+            },
+            ConsistentHash = new Gcp.Compute.Inputs.BackendServiceConsistentHashArgs
+            {
+                HttpCookie = new Gcp.Compute.Inputs.BackendServiceConsistentHashHttpCookieArgs
+                {
+                    Ttl = new Gcp.Compute.Inputs.BackendServiceConsistentHashHttpCookieTtlArgs
+                    {
+                        Seconds = 11,
+                        Nanos = 1111,
+                    },
+                    Name = "mycookie",
+                },
+            },
+            OutlierDetection = new Gcp.Compute.Inputs.BackendServiceOutlierDetectionArgs
+            {
+                ConsecutiveErrors = 2,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		healthCheck, err := compute.NewHealthCheck(ctx, "healthCheck", &compute.HealthCheckArgs{
+			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendService(ctx, "_default", &compute.BackendServiceArgs{
+			HealthChecks: pulumi.String(pulumi.String{
+				healthCheck.ID(),
+			}),
+			LoadBalancingScheme: pulumi.String("INTERNAL_SELF_MANAGED"),
+			LocalityLbPolicy:    pulumi.String("RING_HASH"),
+			SessionAffinity:     pulumi.String("HTTP_COOKIE"),
+			CircuitBreakers: &compute.BackendServiceCircuitBreakersArgs{
+				MaxConnections: pulumi.Int(10),
+			},
+			ConsistentHash: &compute.BackendServiceConsistentHashArgs{
+				HttpCookie: &compute.BackendServiceConsistentHashHttpCookieArgs{
+					Ttl: &compute.BackendServiceConsistentHashHttpCookieTtlArgs{
+						Seconds: pulumi.Int(11),
+						Nanos:   pulumi.Int(1111),
+					},
+					Name: pulumi.String("mycookie"),
+				},
+			},
+			OutlierDetection: &compute.BackendServiceOutlierDetectionArgs{
+				ConsecutiveErrors: pulumi.Int(2),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check=gcp.compute.HealthCheckHttpHealthCheckArgs(
+    port=80,
+),
+opts=pulumi.ResourceOptions(provider=google_beta))
+default = gcp.compute.BackendService("default",
+    health_checks=[health_check.id],
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    locality_lb_policy="RING_HASH",
+    session_affinity="HTTP_COOKIE",
+    circuit_breakers=gcp.compute.BackendServiceCircuitBreakersArgs(
+        max_connections=10,
+    ),
+    consistent_hash=gcp.compute.BackendServiceConsistentHashArgs(
+        http_cookie=gcp.compute.BackendServiceConsistentHashHttpCookieArgs(
+            ttl=gcp.compute.BackendServiceConsistentHashHttpCookieTtlArgs(
+                seconds=11,
+                nanos=1111,
+            ),
+            name="mycookie",
+        ),
+    ),
+    outlier_detection=gcp.compute.BackendServiceOutlierDetectionArgs(
+        consecutive_errors=2,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {httpHealthCheck: {
+    port: 80,
+}}, {
+    provider: google_beta,
+});
+const _default = new gcp.compute.BackendService("default", {
+    healthChecks: [healthCheck.id],
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    localityLbPolicy: "RING_HASH",
+    sessionAffinity: "HTTP_COOKIE",
+    circuitBreakers: {
+        maxConnections: 10,
+    },
+    consistentHash: {
+        httpCookie: {
+            ttl: {
+                seconds: 11,
+                nanos: 1111,
+            },
+            name: "mycookie",
+        },
+    },
+    outlierDetection: {
+        consecutiveErrors: 2,
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Backend Service Network Endpoint
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var externalProxy = new Gcp.Compute.GlobalNetworkEndpointGroup("externalProxy", new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+        {
+            NetworkEndpointType = "INTERNET_FQDN_PORT",
+            DefaultPort = 443,
+        });
+        var proxy = new Gcp.Compute.GlobalNetworkEndpoint("proxy", new Gcp.Compute.GlobalNetworkEndpointArgs
+        {
+            GlobalNetworkEndpointGroup = externalProxy.Id,
+            Fqdn = "test.example.com",
+            Port = externalProxy.DefaultPort,
+        });
+        var @default = new Gcp.Compute.BackendService("default", new Gcp.Compute.BackendServiceArgs
+        {
+            EnableCdn = true,
+            TimeoutSec = 10,
+            ConnectionDrainingTimeoutSec = 10,
+            CustomRequestHeaders = 
+            {
+                proxy.Fqdn.Apply(fqdn => $"host: {fqdn}"),
+            },
+            CustomResponseHeaders = 
+            {
+                "X-Cache-Hit: {cdn_cache_status}",
+            },
+            Backends = 
+            {
+                new Gcp.Compute.Inputs.BackendServiceBackendArgs
+                {
+                    Group = externalProxy.Id,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		externalProxy, err := compute.NewGlobalNetworkEndpointGroup(ctx, "externalProxy", &compute.GlobalNetworkEndpointGroupArgs{
+			NetworkEndpointType: pulumi.String("INTERNET_FQDN_PORT"),
+			DefaultPort:         pulumi.Int(443),
+		})
+		if err != nil {
+			return err
+		}
+		proxy, err := compute.NewGlobalNetworkEndpoint(ctx, "proxy", &compute.GlobalNetworkEndpointArgs{
+			GlobalNetworkEndpointGroup: externalProxy.ID(),
+			Fqdn:                       pulumi.String("test.example.com"),
+			Port:                       externalProxy.DefaultPort,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendService(ctx, "_default", &compute.BackendServiceArgs{
+			EnableCdn:                    pulumi.Bool(true),
+			TimeoutSec:                   pulumi.Int(10),
+			ConnectionDrainingTimeoutSec: pulumi.Int(10),
+			CustomRequestHeaders: pulumi.StringArray{
+				proxy.Fqdn.ApplyT(func(fqdn string) (string, error) {
+					return fmt.Sprintf("%v%v", "host: ", fqdn), nil
+				}).(pulumi.StringOutput),
+			},
+			CustomResponseHeaders: pulumi.StringArray{
+				pulumi.String("X-Cache-Hit: {cdn_cache_status}"),
+			},
+			Backends: compute.BackendServiceBackendArray{
+				&compute.BackendServiceBackendArgs{
+					Group: externalProxy.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+external_proxy = gcp.compute.GlobalNetworkEndpointGroup("externalProxy",
+    network_endpoint_type="INTERNET_FQDN_PORT",
+    default_port=443)
+proxy = gcp.compute.GlobalNetworkEndpoint("proxy",
+    global_network_endpoint_group=external_proxy.id,
+    fqdn="test.example.com",
+    port=external_proxy.default_port)
+default = gcp.compute.BackendService("default",
+    enable_cdn=True,
+    timeout_sec=10,
+    connection_draining_timeout_sec=10,
+    custom_request_headers=[proxy.fqdn.apply(lambda fqdn: f"host: {fqdn}")],
+    custom_response_headers=["X-Cache-Hit: {cdn_cache_status}"],
+    backends=[gcp.compute.BackendServiceBackendArgs(
+        group=external_proxy.id,
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const externalProxy = new gcp.compute.GlobalNetworkEndpointGroup("externalProxy", {
+    networkEndpointType: "INTERNET_FQDN_PORT",
+    defaultPort: "443",
+});
+const proxy = new gcp.compute.GlobalNetworkEndpoint("proxy", {
+    globalNetworkEndpointGroup: externalProxy.id,
+    fqdn: "test.example.com",
+    port: externalProxy.defaultPort,
+});
+const _default = new gcp.compute.BackendService("default", {
+    enableCdn: true,
+    timeoutSec: 10,
+    connectionDrainingTimeoutSec: 10,
+    customRequestHeaders: [pulumi.interpolate`host: ${proxy.fqdn}`],
+    customResponseHeaders: ["X-Cache-Hit: {cdn_cache_status}"],
+    backends: [{
+        group: externalProxy.id,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackendService Resource {#create}
@@ -34,7 +591,7 @@ To get more information about BackendService, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.BackendService">BackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.BackendService">BackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -299,6 +856,18 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customresponseheaders_csharp">
+<a href="#customresponseheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -617,6 +1186,18 @@ requests.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customresponseheaders_go">
+<a href="#customresponseheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -931,6 +1512,18 @@ requests.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customresponseheaders_nodejs">
+<a href="#customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -1241,6 +1834,18 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_response_headers_python">
+<a href="#custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1686,7 +2291,7 @@ Get an existing BackendService resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> BackendService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> BackendService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1904,6 +2509,18 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_customresponseheaders_csharp">
+<a href="#state_customresponseheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2255,6 +2872,18 @@ requests.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customresponseheaders_go">
+<a href="#state_customresponseheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -2602,6 +3231,18 @@ requests.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customresponseheaders_nodejs">
+<a href="#state_customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -2945,6 +3586,18 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_custom_response_headers_python">
+<a href="#state_custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+responses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6704,6 +7357,24 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 
 
+
+
+## Import
+
+
+BackendService can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/backendService:BackendService default projects/{{project}}/global/backendServices/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/backendService:BackendService default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/backendService:BackendService default {{name}}
+```
 
 
 

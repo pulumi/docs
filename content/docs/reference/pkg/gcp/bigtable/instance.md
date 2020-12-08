@@ -14,6 +14,153 @@ Creates a Google Bigtable instance. For more information see
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Production Instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const production_instance = new gcp.bigtable.Instance("production-instance", {
+    clusters: [{
+        clusterId: "tf-instance-cluster",
+        numNodes: 1,
+        storageType: "HDD",
+        zone: "us-central1-b",
+    }],
+    labels: {
+        "my-label": "prod-label",
+    },
+});
+```
+
+{{% /example %}}
+
+### Development Instance
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var development_instance = new Gcp.BigTable.Instance("development-instance", new Gcp.BigTable.InstanceArgs
+        {
+            Clusters = 
+            {
+                new Gcp.BigTable.Inputs.InstanceClusterArgs
+                {
+                    ClusterId = "tf-instance-cluster",
+                    StorageType = "HDD",
+                    Zone = "us-central1-b",
+                },
+            },
+            InstanceType = "DEVELOPMENT",
+            Labels = 
+            {
+                { "my-label", "dev-label" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := bigtable.NewInstance(ctx, "development_instance", &bigtable.InstanceArgs{
+			Clusters: bigtable.InstanceClusterArray{
+				&bigtable.InstanceClusterArgs{
+					ClusterId:   pulumi.String("tf-instance-cluster"),
+					StorageType: pulumi.String("HDD"),
+					Zone:        pulumi.String("us-central1-b"),
+				},
+			},
+			InstanceType: pulumi.String("DEVELOPMENT"),
+			Labels: pulumi.StringMap{
+				"my-label": pulumi.String("dev-label"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+development_instance = gcp.bigtable.Instance("development-instance",
+    clusters=[gcp.bigtable.InstanceClusterArgs(
+        cluster_id="tf-instance-cluster",
+        storage_type="HDD",
+        zone="us-central1-b",
+    )],
+    instance_type="DEVELOPMENT",
+    labels={
+        "my-label": "dev-label",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const development_instance = new gcp.bigtable.Instance("development-instance", {
+    clusters: [{
+        clusterId: "tf-instance-cluster",
+        storageType: "HDD",
+        zone: "us-central1-b",
+    }],
+    instanceType: "DEVELOPMENT",
+    labels: {
+        "my-label": "dev-label",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -1383,6 +1530,24 @@ for a `DEVELOPMENT` instance.
 
 
 
+
+
+## Import
+
+
+Bigtable Instances can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigtable/instance:Instance default projects/{{project}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:bigtable/instance:Instance default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:bigtable/instance:Instance default {{name}}
+```
 
 
 

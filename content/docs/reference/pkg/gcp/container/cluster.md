@@ -18,6 +18,347 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### With A Separately Managed Node Pool (Recommended)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+        {
+            Location = "us-central1",
+            RemoveDefaultNodePool = true,
+            InitialNodeCount = 1,
+            MasterAuth = new Gcp.Container.Inputs.ClusterMasterAuthArgs
+            {
+                Username = "",
+                Password = "",
+                ClientCertificateConfig = new Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs
+                {
+                    IssueClientCertificate = false,
+                },
+            },
+        });
+        var primaryPreemptibleNodes = new Gcp.Container.NodePool("primaryPreemptibleNodes", new Gcp.Container.NodePoolArgs
+        {
+            Location = "us-central1",
+            Cluster = primary.Name,
+            NodeCount = 1,
+            NodeConfig = new Gcp.Container.Inputs.NodePoolNodeConfigArgs
+            {
+                Preemptible = true,
+                MachineType = "e2-medium",
+                Metadata = 
+                {
+                    { "disable-legacy-endpoints", "true" },
+                },
+                OauthScopes = 
+                {
+                    "https://www.googleapis.com/auth/cloud-platform",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+			Location:              pulumi.String("us-central1"),
+			RemoveDefaultNodePool: pulumi.Bool(true),
+			InitialNodeCount:      pulumi.Int(1),
+			MasterAuth: &container.ClusterMasterAuthArgs{
+				Username: pulumi.String(""),
+				Password: pulumi.String(""),
+				ClientCertificateConfig: &container.ClusterMasterAuthClientCertificateConfigArgs{
+					IssueClientCertificate: pulumi.Bool(false),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = container.NewNodePool(ctx, "primaryPreemptibleNodes", &container.NodePoolArgs{
+			Location:  pulumi.String("us-central1"),
+			Cluster:   primary.Name,
+			NodeCount: pulumi.Int(1),
+			NodeConfig: &container.NodePoolNodeConfigArgs{
+				Preemptible: pulumi.Bool(true),
+				MachineType: pulumi.String("e2-medium"),
+				Metadata: pulumi.StringMap{
+					"disable-legacy-endpoints": pulumi.String("true"),
+				},
+				OauthScopes: pulumi.StringArray{
+					pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+primary = gcp.container.Cluster("primary",
+    location="us-central1",
+    remove_default_node_pool=True,
+    initial_node_count=1,
+    master_auth=gcp.container.ClusterMasterAuthArgs(
+        username="",
+        password="",
+        client_certificate_config=gcp.container.ClusterMasterAuthClientCertificateConfigArgs(
+            issue_client_certificate=False,
+        ),
+    ))
+primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
+    location="us-central1",
+    cluster=primary.name,
+    node_count=1,
+    node_config=gcp.container.NodePoolNodeConfigArgs(
+        preemptible=True,
+        machine_type="e2-medium",
+        metadata={
+            "disable-legacy-endpoints": "true",
+        },
+        oauth_scopes=["https://www.googleapis.com/auth/cloud-platform"],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const primary = new gcp.container.Cluster("primary", {
+    location: "us-central1",
+    removeDefaultNodePool: true,
+    initialNodeCount: 1,
+    masterAuth: {
+        username: "",
+        password: "",
+        clientCertificateConfig: {
+            issueClientCertificate: false,
+        },
+    },
+});
+const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNodes", {
+    location: "us-central1",
+    cluster: primary.name,
+    nodeCount: 1,
+    nodeConfig: {
+        preemptible: true,
+        machineType: "e2-medium",
+        metadata: {
+            "disable-legacy-endpoints": "true",
+        },
+        oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+    },
+});
+```
+
+{{% /example %}}
+
+### With The Default Node Pool
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+        {
+            InitialNodeCount = 3,
+            Location = "us-central1-a",
+            MasterAuth = new Gcp.Container.Inputs.ClusterMasterAuthArgs
+            {
+                ClientCertificateConfig = new Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs
+                {
+                    IssueClientCertificate = false,
+                },
+                Password = "",
+                Username = "",
+            },
+            NodeConfig = new Gcp.Container.Inputs.ClusterNodeConfigArgs
+            {
+                Labels = 
+                {
+                    { "foo", "bar" },
+                },
+                Metadata = 
+                {
+                    { "disable-legacy-endpoints", "true" },
+                },
+                OauthScopes = 
+                {
+                    "https://www.googleapis.com/auth/cloud-platform",
+                },
+                Tags = 
+                {
+                    "foo",
+                    "bar",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+			InitialNodeCount: pulumi.Int(3),
+			Location:         pulumi.String("us-central1-a"),
+			MasterAuth: &container.ClusterMasterAuthArgs{
+				ClientCertificateConfig: &container.ClusterMasterAuthClientCertificateConfigArgs{
+					IssueClientCertificate: pulumi.Bool(false),
+				},
+				Password: pulumi.String(""),
+				Username: pulumi.String(""),
+			},
+			NodeConfig: &container.ClusterNodeConfigArgs{
+				Labels: pulumi.StringMap{
+					"foo": pulumi.String("bar"),
+				},
+				Metadata: pulumi.StringMap{
+					"disable-legacy-endpoints": pulumi.String("true"),
+				},
+				OauthScopes: pulumi.StringArray{
+					pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
+				},
+				Tags: pulumi.StringArray{
+					pulumi.String("foo"),
+					pulumi.String("bar"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+primary = gcp.container.Cluster("primary",
+    initial_node_count=3,
+    location="us-central1-a",
+    master_auth=gcp.container.ClusterMasterAuthArgs(
+        client_certificate_config=gcp.container.ClusterMasterAuthClientCertificateConfigArgs(
+            issue_client_certificate=False,
+        ),
+        password="",
+        username="",
+    ),
+    node_config=gcp.container.ClusterNodeConfigArgs(
+        labels={
+            "foo": "bar",
+        },
+        metadata={
+            "disable-legacy-endpoints": "true",
+        },
+        oauth_scopes=["https://www.googleapis.com/auth/cloud-platform"],
+        tags=[
+            "foo",
+            "bar",
+        ],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const primary = new gcp.container.Cluster("primary", {
+    initialNodeCount: 3,
+    location: "us-central1-a",
+    masterAuth: {
+        clientCertificateConfig: {
+            issueClientCertificate: false,
+        },
+        password: "",
+        username: "",
+    },
+    nodeConfig: {
+        labels: {
+            foo: "bar",
+        },
+        metadata: {
+            "disable-legacy-endpoints": "true",
+        },
+        oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+        tags: [
+            "foo",
+            "bar",
+        ],
+    },
+}, { timeouts: {
+    create: "30m",
+    update: "40m",
+} });
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -8966,14 +9307,24 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maintenanceexclusions_csharp">
+<a href="#maintenanceexclusions_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">List&lt;Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurringwindow_csharp">
 <a href="#recurringwindow_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time window for
-recurring maintenance operations.
+    <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd>
 
 </dl>
@@ -8998,14 +9349,24 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maintenanceexclusions_go">
+<a href="#maintenanceexclusions_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">[]Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion</a></span>
+    </dt>
+    <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurringwindow_go">
 <a href="#recurringwindow_go" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}Time window for
-recurring maintenance operations.
+    <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd>
 
 </dl>
@@ -9030,14 +9391,24 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maintenanceexclusions_nodejs">
+<a href="#maintenanceexclusions_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurringwindow_nodejs">
 <a href="#recurringwindow_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}Time window for
-recurring maintenance operations.
+    <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd>
 
 </dl>
@@ -9062,14 +9433,24 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maintenance_exclusions_python">
+<a href="#maintenance_exclusions_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Sequence[Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurring_window_python">
 <a href="#recurring_window_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time window for
-recurring maintenance operations.
+    <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd>
 
 </dl>
@@ -9192,6 +9573,172 @@ recurring maintenance operations.
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustermaintenancepolicymaintenanceexclusion">Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicyMaintenanceExclusion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMaintenancePolicyMaintenanceExclusion">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyMaintenanceExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyMaintenanceExclusionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMaintenancePolicyMaintenanceExclusionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMaintenancePolicyMaintenanceExclusion.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusionname_csharp">
+<a href="#exclusionname_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusionname_go">
+<a href="#exclusionname_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusionname_nodejs">
+<a href="#exclusionname_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusion_name_python">
+<a href="#exclusion_name_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16559,6 +17106,26 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 
 
+
+
+## Import
+
+
+GKE clusters can be imported using the `project` , `location`, and `name`. If the project is omitted, the default provider value will be used. Examples
+
+```sh
+ $ pulumi import gcp:container/cluster:Cluster mycluster projects/my-gcp-project/locations/us-east1-a/clusters/my-cluster
+```
+
+```sh
+ $ pulumi import gcp:container/cluster:Cluster mycluster my-gcp-project/us-east1-a/my-cluster
+```
+
+```sh
+ $ pulumi import gcp:container/cluster:Cluster mycluster us-east1-a/my-cluster
+```
+
+ For example, the following fields will show diffs if set in config- `min_master_version` - `remove_default_node_pool`
 
 
 

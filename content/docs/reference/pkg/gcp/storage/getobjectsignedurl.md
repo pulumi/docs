@@ -13,7 +13,154 @@ meta_desc: "Explore the GetObjectSignedUrl function of the storage module, inclu
 The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account.
 
 For more info about signed URL's is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
+## Full Example
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const getUrl = gcp.storage.getObjectSignedUrl({
+    bucket: "fried_chicken",
+    path: "path/to/file",
+    contentMd5: "pRviqwS4c4OTJRTe03FD1w==",
+    contentType: "text/plain",
+    duration: "2d",
+    credentials: fs.readFileSync("path/to/credentials.json"),
+    extensionHeaders: {
+        "x-goog-if-generation-match": 1,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+get_url = gcp.storage.get_object_signed_url(bucket="fried_chicken",
+    path="path/to/file",
+    content_md5="pRviqwS4c4OTJRTe03FD1w==",
+    content_type="text/plain",
+    duration="2d",
+    credentials=(lambda path: open(path).read())("path/to/credentials.json"),
+    extension_headers={
+        "x-goog-if-generation-match": "1",
+    })
+```
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var getUrl = Output.Create(Gcp.Storage.GetObjectSignedUrl.InvokeAsync(new Gcp.Storage.GetObjectSignedUrlArgs
+        {
+            Bucket = "fried_chicken",
+            Path = "path/to/file",
+            ContentMd5 = "pRviqwS4c4OTJRTe03FD1w==",
+            ContentType = "text/plain",
+            Duration = "2d",
+            Credentials = File.ReadAllText("path/to/credentials.json"),
+            ExtensionHeaders = 
+            {
+                { "x-goog-if-generation-match", "1" },
+            },
+        }));
+    }
+
+}
+```
+
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = Output.Create(Gcp.Storage.GetObjectSignedUrl.InvokeAsync(new Gcp.Storage.GetObjectSignedUrlArgs
+        {
+            Bucket = "install_binaries",
+            Path = "path/to/install_file.bin",
+        }));
+        var vm = new Gcp.Compute.Instance("vm", new Gcp.Compute.InstanceArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.GetObjectSignedUrl(ctx, &storage.GetObjectSignedUrlArgs{
+			Bucket: "install_binaries",
+			Path:   "path/to/install_file.bin",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "vm", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+artifact = gcp.storage.get_object_signed_url(bucket="install_binaries",
+    path="path/to/install_file.bin")
+vm = gcp.compute.Instance("vm")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const artifact = pulumi.output(gcp.storage.getObjectSignedUrl({
+    bucket: "install_binaries",
+    path: "path/to/install_file.bin",
+}, { async: true }));
+const vm = new gcp.compute.Instance("vm", {});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetObjectSignedUrl {#using}

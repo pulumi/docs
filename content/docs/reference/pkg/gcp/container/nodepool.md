@@ -14,6 +14,202 @@ Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see [the official documentation](https://cloud.google.com/container-engine/docs/node-pools)
 and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Using A Separately Managed Node Pool (Recommended)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+        {
+            Location = "us-central1",
+            RemoveDefaultNodePool = true,
+            InitialNodeCount = 1,
+        });
+        var primaryPreemptibleNodes = new Gcp.Container.NodePool("primaryPreemptibleNodes", new Gcp.Container.NodePoolArgs
+        {
+            Location = "us-central1",
+            Cluster = primary.Name,
+            NodeCount = 1,
+            NodeConfig = new Gcp.Container.Inputs.NodePoolNodeConfigArgs
+            {
+                Preemptible = true,
+                MachineType = "e2-medium",
+                OauthScopes = 
+                {
+                    "https://www.googleapis.com/auth/logging.write",
+                    "https://www.googleapis.com/auth/monitoring",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+			Location:              pulumi.String("us-central1"),
+			RemoveDefaultNodePool: pulumi.Bool(true),
+			InitialNodeCount:      pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = container.NewNodePool(ctx, "primaryPreemptibleNodes", &container.NodePoolArgs{
+			Location:  pulumi.String("us-central1"),
+			Cluster:   primary.Name,
+			NodeCount: pulumi.Int(1),
+			NodeConfig: &container.NodePoolNodeConfigArgs{
+				Preemptible: pulumi.Bool(true),
+				MachineType: pulumi.String("e2-medium"),
+				OauthScopes: pulumi.StringArray{
+					pulumi.String("https://www.googleapis.com/auth/logging.write"),
+					pulumi.String("https://www.googleapis.com/auth/monitoring"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+primary = gcp.container.Cluster("primary",
+    location="us-central1",
+    remove_default_node_pool=True,
+    initial_node_count=1)
+primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
+    location="us-central1",
+    cluster=primary.name,
+    node_count=1,
+    node_config=gcp.container.NodePoolNodeConfigArgs(
+        preemptible=True,
+        machine_type="e2-medium",
+        oauth_scopes=[
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const primary = new gcp.container.Cluster("primary", {
+    location: "us-central1",
+    removeDefaultNodePool: true,
+    initialNodeCount: 1,
+});
+const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNodes", {
+    location: "us-central1",
+    cluster: primary.name,
+    nodeCount: 1,
+    nodeConfig: {
+        preemptible: true,
+        machineType: "e2-medium",
+        oauthScopes: [
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+    },
+});
+```
+
+{{% /example %}}
+
+### 2 Node Pools, 1 Separately Managed &#43; The Default Node Pool
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const primary = new gcp.container.Cluster("primary", {
+    location: "us-central1-a",
+    initialNodeCount: 3,
+    nodeLocations: ["us-central1-c"],
+    masterAuth: {
+        username: "",
+        password: "",
+        clientCertificateConfig: {
+            issueClientCertificate: false,
+        },
+    },
+    nodeConfig: {
+        oauthScopes: [
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+        metadata: {
+            "disable-legacy-endpoints": "true",
+        },
+        guestAccelerators: [{
+            type: "nvidia-tesla-k80",
+            count: 1,
+        }],
+    },
+});
+const np = new gcp.container.NodePool("np", {
+    location: "us-central1-a",
+    cluster: primary.name,
+    nodeCount: 3,
+    timeouts: [{
+        create: "30m",
+        update: "20m",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodePool Resource {#create}
@@ -4115,6 +4311,20 @@ parallel. Can be set to 0 or greater.
 
 
 
+
+
+## Import
+
+
+Node pools can be imported using the `project`, `zone`, `cluster` and `name`. If the project is omitted, the default provider value will be used. Examples
+
+```sh
+ $ pulumi import gcp:container/nodePool:NodePool mainpool my-gcp-project/us-east1-a/my-cluster/main-pool
+```
+
+```sh
+ $ pulumi import gcp:container/nodePool:NodePool mainpool us-east1-a/my-cluster/main-pool
+```
 
 
 

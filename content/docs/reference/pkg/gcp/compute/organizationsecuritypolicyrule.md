@@ -1997,6 +1997,20 @@ Example inputs include: ["22"], ["80","443"], and
 
 
 
+## Import
+
+
+OrganizationSecurityPolicyRule can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule default {{policy_id}}/priority/{{priority}}
+```
+
+```sh
+ $ pulumi import gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule default {{policy_id}}/{{priority}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

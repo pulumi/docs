@@ -20,6 +20,517 @@ Three different resources help you manage your IAM policy for Identity-Aware Pro
 
 > **Note:** `gcp.iap.WebTypeComputeIamBinding` resources **can be** used in conjunction with `gcp.iap.WebTypeComputeIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_iap\_web\_type\_compute\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/iap.httpsResourceAccessor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.iap.WebTypeComputeIamPolicy("policy", {
+    project: google_project_service.project_service.project,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/iap.httpsResourceAccessor",
+    members=["user:jane@example.com"],
+)])
+policy = gcp.iap.WebTypeComputeIamPolicy("policy",
+    project=google_project_service["project_service"]["project"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/iap.httpsResourceAccessor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.WebTypeComputeIamPolicy("policy", new Gcp.Iap.WebTypeComputeIamPolicyArgs
+        {
+            Project = google_project_service.Project_service.Project,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iap"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/iap.httpsResourceAccessor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = iap.NewWebTypeComputeIamPolicy(ctx, "policy", &iap.WebTypeComputeIamPolicyArgs{
+			Project:    pulumi.Any(google_project_service.Project_service.Project),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/iap.httpsResourceAccessor",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const policy = new gcp.iap.WebTypeComputeIamPolicy("policy", {
+    project: google_project_service.project_service.project,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/iap.httpsResourceAccessor",
+    members=["user:jane@example.com"],
+    condition=gcp.organizations.GetIAMPolicyBindingConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ),
+)])
+policy = gcp.iap.WebTypeComputeIamPolicy("policy",
+    project=google_project_service["project_service"]["project"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/iap.httpsResourceAccessor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                    Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                    {
+                        Title = "expires_after_2019_12_31",
+                        Description = "Expiring at midnight of 2019-12-31",
+                        Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.WebTypeComputeIamPolicy("policy", new Gcp.Iap.WebTypeComputeIamPolicyArgs
+        {
+            Project = google_project_service.Project_service.Project,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iap"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/iap.httpsResourceAccessor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+					Condition: organizations.GetIAMPolicyBindingCondition{
+						Title:       "expires_after_2019_12_31",
+						Description: "Expiring at midnight of 2019-12-31",
+						Expression:  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = iap.NewWebTypeComputeIamPolicy(ctx, "policy", &iap.WebTypeComputeIamPolicyArgs{
+			Project:    pulumi.Any(google_project_service.Project_service.Project),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+## google\_iap\_web\_type\_compute\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.iap.WebTypeComputeIamBinding("binding", {
+    project: google_project_service.project_service.project,
+    role: "roles/iap.httpsResourceAccessor",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.iap.WebTypeComputeIamBinding("binding",
+    project=google_project_service["project_service"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.WebTypeComputeIamBinding("binding", new Gcp.Iap.WebTypeComputeIamBindingArgs
+        {
+            Project = google_project_service.Project_service.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iap"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := iap.NewWebTypeComputeIamBinding(ctx, "binding", &iap.WebTypeComputeIamBindingArgs{
+			Project: pulumi.Any(google_project_service.Project_service.Project),
+			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.iap.WebTypeComputeIamBinding("binding", {
+    project: google_project_service.project_service.project,
+    role: "roles/iap.httpsResourceAccessor",
+    members: ["user:jane@example.com"],
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.iap.WebTypeComputeIamBinding("binding",
+    project=google_project_service["project_service"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    members=["user:jane@example.com"],
+    condition=gcp.iap.WebTypeComputeIamBindingConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ))
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.WebTypeComputeIamBinding("binding", new Gcp.Iap.WebTypeComputeIamBindingArgs
+        {
+            Project = google_project_service.Project_service.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Iap.Inputs.WebTypeComputeIamBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iap"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := iap.NewWebTypeComputeIamBinding(ctx, "binding", &iap.WebTypeComputeIamBindingArgs{
+			Project: pulumi.Any(google_project_service.Project_service.Project),
+			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Condition: &iap.WebTypeComputeIamBindingConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+## google\_iap\_web\_type\_compute\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.iap.WebTypeComputeIamMember("member", {
+    project: google_project_service.project_service.project,
+    role: "roles/iap.httpsResourceAccessor",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.iap.WebTypeComputeIamMember("member",
+    project=google_project_service["project_service"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.WebTypeComputeIamMember("member", new Gcp.Iap.WebTypeComputeIamMemberArgs
+        {
+            Project = google_project_service.Project_service.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iap"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := iap.NewWebTypeComputeIamMember(ctx, "member", &iap.WebTypeComputeIamMemberArgs{
+			Project: pulumi.Any(google_project_service.Project_service.Project),
+			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
+			Member:  pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.iap.WebTypeComputeIamMember("member", {
+    project: google_project_service.project_service.project,
+    role: "roles/iap.httpsResourceAccessor",
+    member: "user:jane@example.com",
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.iap.WebTypeComputeIamMember("member",
+    project=google_project_service["project_service"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    member="user:jane@example.com",
+    condition=gcp.iap.WebTypeComputeIamMemberConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ))
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.WebTypeComputeIamMember("member", new Gcp.Iap.WebTypeComputeIamMemberArgs
+        {
+            Project = google_project_service.Project_service.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Iap.Inputs.WebTypeComputeIamMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iap"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := iap.NewWebTypeComputeIamMember(ctx, "member", &iap.WebTypeComputeIamMemberArgs{
+			Project: pulumi.Any(google_project_service.Project_service.Project),
+			Role:    pulumi.String("roles/iap.httpsResourceAccessor"),
+			Member:  pulumi.String("user:jane@example.com"),
+			Condition: &iap.WebTypeComputeIamMemberConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a WebTypeComputeIamBinding Resource {#create}
@@ -1117,6 +1628,32 @@ If it is not provided, the project will be parsed from the identifier of the par
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* projects/{{project}}/iap_web/compute * {{project}} Any variables not passed in the import command will be taken from the provider configuration. Identity-Aware Proxy webtypecompute IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:iap/webTypeComputeIamBinding:WebTypeComputeIamBinding editor "projects/{{project}}/iap_web/compute roles/iap.httpsResourceAccessor user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:iap/webTypeComputeIamBinding:WebTypeComputeIamBinding editor "projects/{{project}}/iap_web/compute roles/iap.httpsResourceAccessor"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:iap/webTypeComputeIamBinding:WebTypeComputeIamBinding editor projects/{{project}}/iap_web/compute
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

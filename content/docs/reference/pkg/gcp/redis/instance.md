@@ -18,6 +18,208 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/memorystore/docs/redis/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Redis Instance Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+        {
+            MemorySizeGb = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+			MemorySizeGb: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+cache = gcp.redis.Instance("cache", memory_size_gb=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cache = new gcp.redis.Instance("cache", {
+    memorySizeGb: 1,
+});
+```
+
+{{% /example %}}
+
+### Redis Instance Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+        {
+            Name = "redis-test-network",
+        }));
+        var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+        {
+            Tier = "STANDARD_HA",
+            MemorySizeGb = 1,
+            LocationId = "us-central1-a",
+            AlternativeLocationId = "us-central1-f",
+            AuthorizedNetwork = redis_network.Apply(redis_network => redis_network.Id),
+            RedisVersion = "REDIS_4_0",
+            DisplayName = "Test Instance",
+            ReservedIpRange = "192.168.0.0/29",
+            Labels = 
+            {
+                { "my_key", "my_val" },
+                { "other_key", "other_val" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		redis_network, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+			Name: "redis-test-network",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+			Tier:                  pulumi.String("STANDARD_HA"),
+			MemorySizeGb:          pulumi.Int(1),
+			LocationId:            pulumi.String("us-central1-a"),
+			AlternativeLocationId: pulumi.String("us-central1-f"),
+			AuthorizedNetwork:     pulumi.String(redis_network.Id),
+			RedisVersion:          pulumi.String("REDIS_4_0"),
+			DisplayName:           pulumi.String("Test Instance"),
+			ReservedIpRange:       pulumi.String("192.168.0.0/29"),
+			Labels: pulumi.StringMap{
+				"my_key":    pulumi.String("my_val"),
+				"other_key": pulumi.String("other_val"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+redis_network = gcp.compute.get_network(name="redis-test-network")
+cache = gcp.redis.Instance("cache",
+    tier="STANDARD_HA",
+    memory_size_gb=1,
+    location_id="us-central1-a",
+    alternative_location_id="us-central1-f",
+    authorized_network=redis_network.id,
+    redis_version="REDIS_4_0",
+    display_name="Test Instance",
+    reserved_ip_range="192.168.0.0/29",
+    labels={
+        "my_key": "my_val",
+        "other_key": "other_val",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const redis-network = gcp.compute.getNetwork({
+    name: "redis-test-network",
+});
+const cache = new gcp.redis.Instance("cache", {
+    tier: "STANDARD_HA",
+    memorySizeGb: 1,
+    locationId: "us-central1-a",
+    alternativeLocationId: "us-central1-f",
+    authorizedNetwork: redis_network.then(redis_network => redis_network.id),
+    redisVersion: "REDIS_4_0",
+    displayName: "Test Instance",
+    reservedIpRange: "192.168.0.0/29",
+    labels: {
+        my_key: "my_val",
+        other_key: "other_val",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -2475,6 +2677,28 @@ Possible values are `BASIC` and `STANDARD_HA`.
 
 
 
+
+
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default {{name}}
+```
 
 
 

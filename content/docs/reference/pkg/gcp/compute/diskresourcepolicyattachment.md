@@ -15,6 +15,181 @@ which will be applied to this disk for scheduling snapshot creation.
 
 > **Note:** This resource does not support regional disks (`gcp.compute.RegionDisk`). For regional disks, please refer to the `gcp.compute.RegionDiskResourcePolicyAttachment` resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Disk Resource Policy Attachment Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var ssd = new Gcp.Compute.Disk("ssd", new Gcp.Compute.DiskArgs
+        {
+            Image = myImage.Apply(myImage => myImage.SelfLink),
+            Size = 50,
+            Type = "pd-ssd",
+            Zone = "us-central1-a",
+        });
+        var attachment = new Gcp.Compute.DiskResourcePolicyAttachment("attachment", new Gcp.Compute.DiskResourcePolicyAttachmentArgs
+        {
+            Disk = ssd.Name,
+            Zone = "us-central1-a",
+        });
+        var policy = new Gcp.Compute.ResourcePolicy("policy", new Gcp.Compute.ResourcePolicyArgs
+        {
+            Region = "us-central1",
+            SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+            {
+                Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+                {
+                    DailySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
+                    {
+                        DaysInCycle = 1,
+                        StartTime = "04:00",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		myImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ssd, err := compute.NewDisk(ctx, "ssd", &compute.DiskArgs{
+			Image: pulumi.String(myImage.SelfLink),
+			Size:  pulumi.Int(50),
+			Type:  pulumi.String("pd-ssd"),
+			Zone:  pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewDiskResourcePolicyAttachment(ctx, "attachment", &compute.DiskResourcePolicyAttachmentArgs{
+			Disk: ssd.Name,
+			Zone: pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewResourcePolicy(ctx, "policy", &compute.ResourcePolicyArgs{
+			Region: pulumi.String("us-central1"),
+			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+					DailySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs{
+						DaysInCycle: pulumi.Int(1),
+						StartTime:   pulumi.String("04:00"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+ssd = gcp.compute.Disk("ssd",
+    image=my_image.self_link,
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+attachment = gcp.compute.DiskResourcePolicyAttachment("attachment",
+    disk=ssd.name,
+    zone="us-central1-a")
+policy = gcp.compute.ResourcePolicy("policy",
+    region="us-central1",
+    snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+        schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+            daily_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs(
+                days_in_cycle=1,
+                start_time="04:00",
+            ),
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const ssd = new gcp.compute.Disk("ssd", {
+    image: myImage.then(myImage => myImage.selfLink),
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const attachment = new gcp.compute.DiskResourcePolicyAttachment("attachment", {
+    disk: ssd.name,
+    zone: "us-central1-a",
+});
+const policy = new gcp.compute.ResourcePolicy("policy", {
+    region: "us-central1",
+    snapshotSchedulePolicy: {
+        schedule: {
+            dailySchedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DiskResourcePolicyAttachment Resource {#create}
@@ -832,6 +1007,28 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+DiskResourcePolicyAttachment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default projects/{{project}}/zones/{{zone}}/disks/{{disk}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default {{project}}/{{zone}}/{{disk}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default {{zone}}/{{disk}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default {{disk}}/{{name}}
+```
 
 
 

@@ -20,6 +20,235 @@ Three different resources help you manage IAM policies on bigtable instances. Ea
 
 > **Note:** `gcp.bigtable.InstanceIamBinding` resources **can be** used in conjunction with `gcp.bigtable.InstanceIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_bigtable\_instance\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/bigtable.user",
+        members: ["user:jane@example.com"],
+    }],
+});
+const editor = new gcp.bigtable.InstanceIamPolicy("editor", {
+    project: "your-project",
+    instance: "your-bigtable-instance",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/bigtable.user",
+    members=["user:jane@example.com"],
+)])
+editor = gcp.bigtable.InstanceIamPolicy("editor",
+    project="your-project",
+    instance="your-bigtable-instance",
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/bigtable.user",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var editor = new Gcp.BigTable.InstanceIamPolicy("editor", new Gcp.BigTable.InstanceIamPolicyArgs
+        {
+            Project = "your-project",
+            Instance = "your-bigtable-instance",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/bigtable.user",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = bigtable.NewInstanceIamPolicy(ctx, "editor", &bigtable.InstanceIamPolicyArgs{
+			Project:    pulumi.String("your-project"),
+			Instance:   pulumi.String("your-bigtable-instance"),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_bigtable\_instance\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.bigtable.InstanceIamBinding("editor", {
+    instance: "your-bigtable-instance",
+    members: ["user:jane@example.com"],
+    role: "roles/bigtable.user",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.bigtable.InstanceIamBinding("editor",
+    instance="your-bigtable-instance",
+    members=["user:jane@example.com"],
+    role="roles/bigtable.user")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.BigTable.InstanceIamBinding("editor", new Gcp.BigTable.InstanceIamBindingArgs
+        {
+            Instance = "your-bigtable-instance",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/bigtable.user",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := bigtable.NewInstanceIamBinding(ctx, "editor", &bigtable.InstanceIamBindingArgs{
+			Instance: pulumi.String("your-bigtable-instance"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/bigtable.user"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_bigtable\_instance\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.bigtable.InstanceIamMember("editor", {
+    instance: "your-bigtable-instance",
+    member: "user:jane@example.com",
+    role: "roles/bigtable.user",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.bigtable.InstanceIamMember("editor",
+    instance="your-bigtable-instance",
+    member="user:jane@example.com",
+    role="roles/bigtable.user")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.BigTable.InstanceIamMember("editor", new Gcp.BigTable.InstanceIamMemberArgs
+        {
+            Instance = "your-bigtable-instance",
+            Member = "user:jane@example.com",
+            Role = "roles/bigtable.user",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := bigtable.NewInstanceIamMember(ctx, "editor", &bigtable.InstanceIamMemberArgs{
+			Instance: pulumi.String("your-bigtable-instance"),
+			Member:   pulumi.String("user:jane@example.com"),
+			Role:     pulumi.String("roles/bigtable.user"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a InstanceIamMember Resource {#create}
@@ -1177,6 +1406,28 @@ is not provided, a default will be supplied.
 
 
 
+
+
+## Import
+
+
+Instance IAM resources can be imported using the project, instance name, role and/or member.
+
+```sh
+ $ pulumi import gcp:bigtable/instanceIamMember:InstanceIamMember editor "projects/{project}/instances/{instance}"
+```
+
+```sh
+ $ pulumi import gcp:bigtable/instanceIamMember:InstanceIamMember editor "projects/{project}/instances/{instance} roles/editor"
+```
+
+```sh
+ $ pulumi import gcp:bigtable/instanceIamMember:InstanceIamMember editor "projects/{project}/instances/{instance} roles/editor user:jane@example.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

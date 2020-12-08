@@ -12,6 +12,164 @@ meta_desc: "Explore the AutoscalingPolicy resource of the dataproc module, inclu
 
 Describes an autoscaling policy for Dataproc cluster autoscaler.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dataproc Autoscaling Policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var asp = new Gcp.Dataproc.AutoscalingPolicy("asp", new Gcp.Dataproc.AutoscalingPolicyArgs
+        {
+            PolicyId = "dataproc-policy",
+            Location = "us-central1",
+            WorkerConfig = new Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs
+            {
+                MaxInstances = 3,
+            },
+            BasicAlgorithm = new Gcp.Dataproc.Inputs.AutoscalingPolicyBasicAlgorithmArgs
+            {
+                YarnConfig = new Gcp.Dataproc.Inputs.AutoscalingPolicyBasicAlgorithmYarnConfigArgs
+                {
+                    GracefulDecommissionTimeout = "30s",
+                    ScaleUpFactor = 0.5,
+                    ScaleDownFactor = 0.5,
+                },
+            },
+        });
+        var basic = new Gcp.Dataproc.Cluster("basic", new Gcp.Dataproc.ClusterArgs
+        {
+            Region = "us-central1",
+            ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+            {
+                AutoscalingConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigAutoscalingConfigArgs
+                {
+                    PolicyUri = asp.Name,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		asp, err := dataproc.NewAutoscalingPolicy(ctx, "asp", &dataproc.AutoscalingPolicyArgs{
+			PolicyId: pulumi.String("dataproc-policy"),
+			Location: pulumi.String("us-central1"),
+			WorkerConfig: &dataproc.AutoscalingPolicyWorkerConfigArgs{
+				MaxInstances: pulumi.Int(3),
+			},
+			BasicAlgorithm: &dataproc.AutoscalingPolicyBasicAlgorithmArgs{
+				YarnConfig: &dataproc.AutoscalingPolicyBasicAlgorithmYarnConfigArgs{
+					GracefulDecommissionTimeout: pulumi.String("30s"),
+					ScaleUpFactor:               pulumi.Float64(0.5),
+					ScaleDownFactor:             pulumi.Float64(0.5),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dataproc.NewCluster(ctx, "basic", &dataproc.ClusterArgs{
+			Region: pulumi.String("us-central1"),
+			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
+				AutoscalingConfig: &dataproc.ClusterClusterConfigAutoscalingConfigArgs{
+					PolicyUri: asp.Name,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+asp = gcp.dataproc.AutoscalingPolicy("asp",
+    policy_id="dataproc-policy",
+    location="us-central1",
+    worker_config=gcp.dataproc.AutoscalingPolicyWorkerConfigArgs(
+        max_instances=3,
+    ),
+    basic_algorithm=gcp.dataproc.AutoscalingPolicyBasicAlgorithmArgs(
+        yarn_config=gcp.dataproc.AutoscalingPolicyBasicAlgorithmYarnConfigArgs(
+            graceful_decommission_timeout="30s",
+            scale_up_factor=0.5,
+            scale_down_factor=0.5,
+        ),
+    ))
+basic = gcp.dataproc.Cluster("basic",
+    region="us-central1",
+    cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+        autoscaling_config=gcp.dataproc.ClusterClusterConfigAutoscalingConfigArgs(
+            policy_uri=asp.name,
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const asp = new gcp.dataproc.AutoscalingPolicy("asp", {
+    policyId: "dataproc-policy",
+    location: "us-central1",
+    workerConfig: {
+        maxInstances: 3,
+    },
+    basicAlgorithm: {
+        yarnConfig: {
+            gracefulDecommissionTimeout: "30s",
+            scaleUpFactor: 0.5,
+            scaleDownFactor: 0.5,
+        },
+    },
+});
+const basic = new gcp.dataproc.Cluster("basic", {
+    region: "us-central1",
+    clusterConfig: {
+        autoscalingConfig: {
+            policyUri: asp.name,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AutoscalingPolicy Resource {#create}
@@ -2095,6 +2253,24 @@ only on primary workers, the cluster will use primary workers only and no second
 
 
 
+
+
+## Import
+
+
+AutoscalingPolicy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default projects/{{project}}/locations/{{location}}/autoscalingPolicies/{{policy_id}}
+```
+
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default {{project}}/{{location}}/{{policy_id}}
+```
+
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default {{location}}/{{policy_id}}
+```
 
 
 

@@ -21,6 +21,122 @@ To get more information about ScanConfig, see:
 > **Warning:** All arguments including `authentication.google_account.password` and `authentication.custom_account.password` will be stored in the raw
 state as plain-text.[Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Scan Config Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scannerStaticIp = new Gcp.Compute.Address("scannerStaticIp", new Gcp.Compute.AddressArgs
+        {
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var scan_config = new Gcp.Compute.SecurityScanConfig("scan-config", new Gcp.Compute.SecurityScanConfigArgs
+        {
+            DisplayName = "scan-config",
+            StartingUrls = 
+            {
+                scannerStaticIp.IPAddress.Apply(address => $"http://{address}"),
+            },
+            TargetPlatforms = 
+            {
+                "COMPUTE",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		scannerStaticIp, err := compute.NewAddress(ctx, "scannerStaticIp", nil, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSecurityScanConfig(ctx, "scan_config", &compute.SecurityScanConfigArgs{
+			DisplayName: pulumi.String("scan-config"),
+			StartingUrls: pulumi.StringArray{
+				scannerStaticIp.Address.ApplyT(func(address string) (string, error) {
+					return fmt.Sprintf("%v%v", "http://", address), nil
+				}).(pulumi.StringOutput),
+			},
+			TargetPlatforms: pulumi.StringArray{
+				pulumi.String("COMPUTE"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+scanner_static_ip = gcp.compute.Address("scannerStaticIp", opts=pulumi.ResourceOptions(provider=google_beta))
+scan_config = gcp.compute.SecurityScanConfig("scan-config",
+    display_name="scan-config",
+    starting_urls=[scanner_static_ip.address.apply(lambda address: f"http://{address}")],
+    target_platforms=["COMPUTE"],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const scannerStaticIp = new gcp.compute.Address("scannerStaticIp", {}, {
+    provider: google_beta,
+});
+const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
+    displayName: "scan-config",
+    startingUrls: [pulumi.interpolate`http://${scannerStaticIp.address}`],
+    targetPlatforms: ["COMPUTE"],
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityScanConfig Resource {#create}
@@ -2144,6 +2260,24 @@ which means the scan will be scheduled to start immediately.
 
 
 
+
+
+## Import
+
+
+ScanConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/securityScanConfig:SecurityScanConfig default projects/{{project}}/scanConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/securityScanConfig:SecurityScanConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/securityScanConfig:SecurityScanConfig default {{name}}
+```
 
 
 

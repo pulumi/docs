@@ -33,6 +33,97 @@ To get more information about BucketAccessControl, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/lists)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Storage Bucket Access Control Public Bucket
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var publicRule = new Gcp.Storage.BucketAccessControl("publicRule", new Gcp.Storage.BucketAccessControlArgs
+        {
+            Bucket = bucket.Name,
+            Role = "READER",
+            Entity = "allUsers",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewBucketAccessControl(ctx, "publicRule", &storage.BucketAccessControlArgs{
+			Bucket: bucket.Name,
+			Role:   pulumi.String("READER"),
+			Entity: pulumi.String("allUsers"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+public_rule = gcp.storage.BucketAccessControl("publicRule",
+    bucket=bucket.name,
+    role="READER",
+    entity="allUsers")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const publicRule = new gcp.storage.BucketAccessControl("publicRule", {
+    bucket: bucket.name,
+    role: "READER",
+    entity: "allUsers",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BucketAccessControl Resource {#create}
@@ -1042,6 +1133,16 @@ Possible values are `OWNER`, `READER`, and `WRITER`.
 
 
 
+
+
+## Import
+
+
+BucketAccessControl can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:storage/bucketAccessControl:BucketAccessControl default {{bucket}}/{{entity}}
+```
 
 
 

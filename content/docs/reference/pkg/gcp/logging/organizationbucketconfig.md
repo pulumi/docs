@@ -16,6 +16,108 @@ Manages a organization-level logging bucket config. For more information see
 
 > **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are "_Default" and "_Required".
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Organizations.GetOrganization.InvokeAsync(new Gcp.Organizations.GetOrganizationArgs
+        {
+            Organization = "123456789",
+        }));
+        var basic = new Gcp.Logging.OrganizationBucketConfig("basic", new Gcp.Logging.OrganizationBucketConfigArgs
+        {
+            Organization = @default.Apply(@default => @default.Organization),
+            Location = "global",
+            RetentionDays = 30,
+            BucketId = "_Default",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "123456789"
+		_default, err := organizations.GetOrganization(ctx, &organizations.GetOrganizationArgs{
+			Organization: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = logging.NewOrganizationBucketConfig(ctx, "basic", &logging.OrganizationBucketConfigArgs{
+			Organization:  pulumi.String(_default.Organization),
+			Location:      pulumi.String("global"),
+			RetentionDays: pulumi.Int(30),
+			BucketId:      pulumi.String("_Default"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.organizations.get_organization(organization="123456789")
+basic = gcp.logging.OrganizationBucketConfig("basic",
+    organization=default.organization,
+    location="global",
+    retention_days=30,
+    bucket_id="_Default")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.organizations.getOrganization({
+    organization: "123456789",
+});
+const basic = new gcp.logging.OrganizationBucketConfig("basic", {
+    organization: _default.then(_default => _default.organization),
+    location: "global",
+    retentionDays: 30,
+    bucketId: "_Default",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OrganizationBucketConfig Resource {#create}
@@ -1081,6 +1183,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+This resource can be imported using the following format
+
+```sh
+ $ pulumi import gcp:logging/organizationBucketConfig:OrganizationBucketConfig default organizations/{{organization}}/locations/{{location}}/buckets/{{bucket_id}}
+```
 
 
 

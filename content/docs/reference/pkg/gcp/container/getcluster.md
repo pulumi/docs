@@ -13,6 +13,121 @@ meta_desc: "Explore the GetCluster function of the container module, including e
 Get info about a GKE cluster from its name and location.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myCluster = Output.Create(Gcp.Container.GetCluster.InvokeAsync(new Gcp.Container.GetClusterArgs
+        {
+            Name = "my-cluster",
+            Location = "us-east1-a",
+        }));
+        this.ClusterUsername = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Username);
+        this.ClusterPassword = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Password);
+        this.Endpoint = myCluster.Apply(myCluster => myCluster.Endpoint);
+        this.InstanceGroupUrls = myCluster.Apply(myCluster => myCluster.InstanceGroupUrls);
+        this.NodeConfig = myCluster.Apply(myCluster => myCluster.NodeConfigs);
+        this.NodePools = myCluster.Apply(myCluster => myCluster.NodePools);
+    }
+
+    [Output("clusterUsername")]
+    public Output<string> ClusterUsername { get; set; }
+    [Output("clusterPassword")]
+    public Output<string> ClusterPassword { get; set; }
+    [Output("endpoint")]
+    public Output<string> Endpoint { get; set; }
+    [Output("instanceGroupUrls")]
+    public Output<string> InstanceGroupUrls { get; set; }
+    [Output("nodeConfig")]
+    public Output<string> NodeConfig { get; set; }
+    [Output("nodePools")]
+    public Output<string> NodePools { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "us-east1-a"
+		myCluster, err := container.LookupCluster(ctx, &container.LookupClusterArgs{
+			Name:     "my-cluster",
+			Location: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("clusterUsername", myCluster.MasterAuths[0].Username)
+		ctx.Export("clusterPassword", myCluster.MasterAuths[0].Password)
+		ctx.Export("endpoint", myCluster.Endpoint)
+		ctx.Export("instanceGroupUrls", myCluster.InstanceGroupUrls)
+		ctx.Export("nodeConfig", myCluster.NodeConfigs)
+		ctx.Export("nodePools", myCluster.NodePools)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_cluster = gcp.container.get_cluster(name="my-cluster",
+    location="us-east1-a")
+pulumi.export("clusterUsername", my_cluster.master_auths[0].username)
+pulumi.export("clusterPassword", my_cluster.master_auths[0].password)
+pulumi.export("endpoint", my_cluster.endpoint)
+pulumi.export("instanceGroupUrls", my_cluster.instance_group_urls)
+pulumi.export("nodeConfig", my_cluster.node_configs)
+pulumi.export("nodePools", my_cluster.node_pools)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myCluster = gcp.container.getCluster({
+    name: "my-cluster",
+    location: "us-east1-a",
+});
+export const clusterUsername = myCluster.then(myCluster => myCluster.masterAuths[0].username);
+export const clusterPassword = myCluster.then(myCluster => myCluster.masterAuths[0].password);
+export const endpoint = myCluster.then(myCluster => myCluster.endpoint);
+export const instanceGroupUrls = myCluster.then(myCluster => myCluster.instanceGroupUrls);
+export const nodeConfig = myCluster.then(myCluster => myCluster.nodeConfigs);
+export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetCluster {#using}
 
@@ -4939,6 +5054,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="maintenanceexclusions_csharp">
+<a href="#maintenanceexclusions_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">List&lt;Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="recurringwindows_csharp">
 <a href="#recurringwindows_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Windows</a>
 </span> 
@@ -4961,6 +5086,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">[]Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintenanceexclusions_go">
+<a href="#maintenanceexclusions_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">[]Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4993,6 +5128,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="maintenanceexclusions_nodejs">
+<a href="#maintenanceexclusions_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="recurringwindows_nodejs">
 <a href="#recurringwindows_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Windows</a>
 </span> 
@@ -5015,6 +5160,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintenance_exclusions_python">
+<a href="#maintenance_exclusions_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5138,6 +5293,172 @@ The following output properties are available:
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclustermaintenancepolicymaintenanceexclusion">Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyMaintenanceExclusion">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMaintenancePolicyMaintenanceExclusion">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMaintenancePolicyMaintenanceExclusion.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusionname_csharp">
+<a href="#exclusionname_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusionname_go">
+<a href="#exclusionname_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusionname_nodejs">
+<a href="#exclusionname_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exclusion_name_python">
+<a href="#exclusion_name_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

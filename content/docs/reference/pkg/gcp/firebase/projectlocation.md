@@ -670,6 +670,20 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+ProjectLocation can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:firebase/projectLocation:ProjectLocation default projects/{{project}}
+```
+
+```sh
+ $ pulumi import gcp:firebase/projectLocation:ProjectLocation default {{project}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -20,6 +20,760 @@ To get more information about ManagedZone, see:
 * How-to Guides
     * [Managing Zones](https://cloud.google.com/dns/zones/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dns Managed Zone Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example_zone = new Gcp.Dns.ManagedZone("example-zone", new Gcp.Dns.ManagedZoneArgs
+        {
+            Description = "Example DNS zone",
+            DnsName = "my-domain.com.",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dns.NewManagedZone(ctx, "example_zone", &dns.ManagedZoneArgs{
+			Description: pulumi.String("Example DNS zone"),
+			DnsName:     pulumi.String("my-domain.com."),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_zone = gcp.dns.ManagedZone("example-zone",
+    description="Example DNS zone",
+    dns_name="my-domain.com.",
+    labels={
+        "foo": "bar",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example_zone = new gcp.dns.ManagedZone("example-zone", {
+    description: "Example DNS zone",
+    dnsName: "my-domain.com.",
+    labels: {
+        foo: "bar",
+    },
+});
+```
+
+{{% /example %}}
+
+### Dns Managed Zone Private
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network_1 = new Gcp.Compute.Network("network-1", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var network_2 = new Gcp.Compute.Network("network-2", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var private_zone = new Gcp.Dns.ManagedZone("private-zone", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "private.example.com.",
+            Description = "Example private DNS zone",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            Visibility = "private",
+            PrivateVisibilityConfig = new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigArgs
+            {
+                Networks = 
+                {
+                    new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigNetworkArgs
+                    {
+                        NetworkUrl = network_1.Id,
+                    },
+                    new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigNetworkArgs
+                    {
+                        NetworkUrl = network_2.Id,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "network_1", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetwork(ctx, "network_2", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewManagedZone(ctx, "private_zone", &dns.ManagedZoneArgs{
+			DnsName:     pulumi.String("private.example.com."),
+			Description: pulumi.String("Example private DNS zone"),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			Visibility: pulumi.String("private"),
+			PrivateVisibilityConfig: &dns.ManagedZonePrivateVisibilityConfigArgs{
+				Networks: dns.ManagedZonePrivateVisibilityConfigNetworkArray{
+					&dns.ManagedZonePrivateVisibilityConfigNetworkArgs{
+						NetworkUrl: network_1.ID(),
+					},
+					&dns.ManagedZonePrivateVisibilityConfigNetworkArgs{
+						NetworkUrl: network_2.ID(),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
+network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
+private_zone = gcp.dns.ManagedZone("private-zone",
+    dns_name="private.example.com.",
+    description="Example private DNS zone",
+    labels={
+        "foo": "bar",
+    },
+    visibility="private",
+    private_visibility_config=gcp.dns.ManagedZonePrivateVisibilityConfigArgs(
+        networks=[
+            gcp.dns.ManagedZonePrivateVisibilityConfigNetworkArgs(
+                network_url=network_1.id,
+            ),
+            gcp.dns.ManagedZonePrivateVisibilityConfigNetworkArgs(
+                network_url=network_2.id,
+            ),
+        ],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network_1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
+const network_2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
+const private_zone = new gcp.dns.ManagedZone("private-zone", {
+    dnsName: "private.example.com.",
+    description: "Example private DNS zone",
+    labels: {
+        foo: "bar",
+    },
+    visibility: "private",
+    privateVisibilityConfig: {
+        networks: [
+            {
+                networkUrl: network_1.id,
+            },
+            {
+                networkUrl: network_2.id,
+            },
+        ],
+    },
+});
+```
+
+{{% /example %}}
+
+### Dns Managed Zone Private Forwarding
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network_1 = new Gcp.Compute.Network("network-1", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var network_2 = new Gcp.Compute.Network("network-2", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var private_zone = new Gcp.Dns.ManagedZone("private-zone", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "private.example.com.",
+            Description = "Example private DNS zone",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            Visibility = "private",
+            PrivateVisibilityConfig = new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigArgs
+            {
+                Networks = 
+                {
+                    new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigNetworkArgs
+                    {
+                        NetworkUrl = network_1.Id,
+                    },
+                    new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigNetworkArgs
+                    {
+                        NetworkUrl = network_2.Id,
+                    },
+                },
+            },
+            ForwardingConfig = new Gcp.Dns.Inputs.ManagedZoneForwardingConfigArgs
+            {
+                TargetNameServers = 
+                {
+                    new Gcp.Dns.Inputs.ManagedZoneForwardingConfigTargetNameServerArgs
+                    {
+                        Ipv4Address = "172.16.1.10",
+                    },
+                    new Gcp.Dns.Inputs.ManagedZoneForwardingConfigTargetNameServerArgs
+                    {
+                        Ipv4Address = "172.16.1.20",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "network_1", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetwork(ctx, "network_2", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewManagedZone(ctx, "private_zone", &dns.ManagedZoneArgs{
+			DnsName:     pulumi.String("private.example.com."),
+			Description: pulumi.String("Example private DNS zone"),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			Visibility: pulumi.String("private"),
+			PrivateVisibilityConfig: &dns.ManagedZonePrivateVisibilityConfigArgs{
+				Networks: dns.ManagedZonePrivateVisibilityConfigNetworkArray{
+					&dns.ManagedZonePrivateVisibilityConfigNetworkArgs{
+						NetworkUrl: network_1.ID(),
+					},
+					&dns.ManagedZonePrivateVisibilityConfigNetworkArgs{
+						NetworkUrl: network_2.ID(),
+					},
+				},
+			},
+			ForwardingConfig: &dns.ManagedZoneForwardingConfigArgs{
+				TargetNameServers: dns.ManagedZoneForwardingConfigTargetNameServerArray{
+					&dns.ManagedZoneForwardingConfigTargetNameServerArgs{
+						Ipv4Address: pulumi.String("172.16.1.10"),
+					},
+					&dns.ManagedZoneForwardingConfigTargetNameServerArgs{
+						Ipv4Address: pulumi.String("172.16.1.20"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
+network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
+private_zone = gcp.dns.ManagedZone("private-zone",
+    dns_name="private.example.com.",
+    description="Example private DNS zone",
+    labels={
+        "foo": "bar",
+    },
+    visibility="private",
+    private_visibility_config=gcp.dns.ManagedZonePrivateVisibilityConfigArgs(
+        networks=[
+            gcp.dns.ManagedZonePrivateVisibilityConfigNetworkArgs(
+                network_url=network_1.id,
+            ),
+            gcp.dns.ManagedZonePrivateVisibilityConfigNetworkArgs(
+                network_url=network_2.id,
+            ),
+        ],
+    ),
+    forwarding_config=gcp.dns.ManagedZoneForwardingConfigArgs(
+        target_name_servers=[
+            gcp.dns.ManagedZoneForwardingConfigTargetNameServerArgs(
+                ipv4_address="172.16.1.10",
+            ),
+            gcp.dns.ManagedZoneForwardingConfigTargetNameServerArgs(
+                ipv4_address="172.16.1.20",
+            ),
+        ],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network_1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
+const network_2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
+const private_zone = new gcp.dns.ManagedZone("private-zone", {
+    dnsName: "private.example.com.",
+    description: "Example private DNS zone",
+    labels: {
+        foo: "bar",
+    },
+    visibility: "private",
+    privateVisibilityConfig: {
+        networks: [
+            {
+                networkUrl: network_1.id,
+            },
+            {
+                networkUrl: network_2.id,
+            },
+        ],
+    },
+    forwardingConfig: {
+        targetNameServers: [
+            {
+                ipv4Address: "172.16.1.10",
+            },
+            {
+                ipv4Address: "172.16.1.20",
+            },
+        ],
+    },
+});
+```
+
+{{% /example %}}
+
+### Dns Managed Zone Private Peering
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network_source = new Gcp.Compute.Network("network-source", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var network_target = new Gcp.Compute.Network("network-target", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var peering_zone = new Gcp.Dns.ManagedZone("peering-zone", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "peering.example.com.",
+            Description = "Example private DNS peering zone",
+            Visibility = "private",
+            PrivateVisibilityConfig = new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigArgs
+            {
+                Networks = 
+                {
+                    new Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigNetworkArgs
+                    {
+                        NetworkUrl = network_source.Id,
+                    },
+                },
+            },
+            PeeringConfig = new Gcp.Dns.Inputs.ManagedZonePeeringConfigArgs
+            {
+                TargetNetwork = new Gcp.Dns.Inputs.ManagedZonePeeringConfigTargetNetworkArgs
+                {
+                    NetworkUrl = network_target.Id,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "network_source", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetwork(ctx, "network_target", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewManagedZone(ctx, "peering_zone", &dns.ManagedZoneArgs{
+			DnsName:     pulumi.String("peering.example.com."),
+			Description: pulumi.String("Example private DNS peering zone"),
+			Visibility:  pulumi.String("private"),
+			PrivateVisibilityConfig: &dns.ManagedZonePrivateVisibilityConfigArgs{
+				Networks: dns.ManagedZonePrivateVisibilityConfigNetworkArray{
+					&dns.ManagedZonePrivateVisibilityConfigNetworkArgs{
+						NetworkUrl: network_source.ID(),
+					},
+				},
+			},
+			PeeringConfig: &dns.ManagedZonePeeringConfigArgs{
+				TargetNetwork: &dns.ManagedZonePeeringConfigTargetNetworkArgs{
+					NetworkUrl: network_target.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_source = gcp.compute.Network("network-source", auto_create_subnetworks=False)
+network_target = gcp.compute.Network("network-target", auto_create_subnetworks=False)
+peering_zone = gcp.dns.ManagedZone("peering-zone",
+    dns_name="peering.example.com.",
+    description="Example private DNS peering zone",
+    visibility="private",
+    private_visibility_config=gcp.dns.ManagedZonePrivateVisibilityConfigArgs(
+        networks=[gcp.dns.ManagedZonePrivateVisibilityConfigNetworkArgs(
+            network_url=network_source.id,
+        )],
+    ),
+    peering_config=gcp.dns.ManagedZonePeeringConfigArgs(
+        target_network=gcp.dns.ManagedZonePeeringConfigTargetNetworkArgs(
+            network_url=network_target.id,
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network_source = new gcp.compute.Network("network-source", {autoCreateSubnetworks: false});
+const network_target = new gcp.compute.Network("network-target", {autoCreateSubnetworks: false});
+const peering_zone = new gcp.dns.ManagedZone("peering-zone", {
+    dnsName: "peering.example.com.",
+    description: "Example private DNS peering zone",
+    visibility: "private",
+    privateVisibilityConfig: {
+        networks: [{
+            networkUrl: network_source.id,
+        }],
+    },
+    peeringConfig: {
+        targetNetwork: {
+            networkUrl: network_target.id,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Dns Managed Zone Service Directory
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Gcp.ServiceDirectory.Namespace("example", new Gcp.ServiceDirectory.NamespaceArgs
+        {
+            NamespaceId = "example",
+            Location = "us-central1",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var sd_zone = new Gcp.Dns.ManagedZone("sd-zone", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "services.example.com.",
+            Description = "Example private DNS Service Directory zone",
+            Visibility = "private",
+            ServiceDirectoryConfig = new Gcp.Dns.Inputs.ManagedZoneServiceDirectoryConfigArgs
+            {
+                Namespace = new Gcp.Dns.Inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs
+                {
+                    NamespaceUrl = example.Id,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/servicedirectory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := servicedirectory.NewNamespace(ctx, "example", &servicedirectory.NamespaceArgs{
+			NamespaceId: pulumi.String("example"),
+			Location:    pulumi.String("us-central1"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewManagedZone(ctx, "sd_zone", &dns.ManagedZoneArgs{
+			DnsName:     pulumi.String("services.example.com."),
+			Description: pulumi.String("Example private DNS Service Directory zone"),
+			Visibility:  pulumi.String("private"),
+			ServiceDirectoryConfig: &dns.ManagedZoneServiceDirectoryConfigArgs{
+				Namespace: &dns.ManagedZoneServiceDirectoryConfigNamespaceArgs{
+					NamespaceUrl: example.ID(),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.servicedirectory.Namespace("example",
+    namespace_id="example",
+    location="us-central1",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+sd_zone = gcp.dns.ManagedZone("sd-zone",
+    dns_name="services.example.com.",
+    description="Example private DNS Service Directory zone",
+    visibility="private",
+    service_directory_config=gcp.dns.ManagedZoneServiceDirectoryConfigArgs(
+        namespace=gcp.dns.ManagedZoneServiceDirectoryConfigNamespaceArgs(
+            namespace_url=example.id,
+        ),
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+network = gcp.compute.Network("network", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.servicedirectory.Namespace("example", {
+    namespaceId: "example",
+    location: "us-central1",
+}, {
+    provider: google_beta,
+});
+const sd_zone = new gcp.dns.ManagedZone("sd-zone", {
+    dnsName: "services.example.com.",
+    description: "Example private DNS Service Directory zone",
+    visibility: "private",
+    serviceDirectoryConfig: {
+        namespace: {
+            namespaceUrl: example.id,
+        },
+    },
+}, {
+    provider: google_beta,
+});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedZone Resource {#create}
@@ -3155,6 +3909,24 @@ Ignored for `public` visibility zones.
 
 
 
+
+
+## Import
+
+
+ManagedZone can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dns/managedZone:ManagedZone default projects/{{project}}/managedZones/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/managedZone:ManagedZone default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/managedZone:ManagedZone default {{name}}
+```
 
 
 

@@ -23,6 +23,236 @@ number of nodes in a node group and changes to node group size either
 through provider config or through external changes will cause
 the provider to delete and recreate the node group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Node Group Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var soletenant_tmpl = new Gcp.Compute.NodeTemplate("soletenant-tmpl", new Gcp.Compute.NodeTemplateArgs
+        {
+            Region = "us-central1",
+            NodeType = "n1-node-96-624",
+        });
+        var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
+        {
+            Zone = "us-central1-a",
+            Description = "example google_compute_node_group for the Google Provider",
+            Size = 1,
+            NodeTemplate = soletenant_tmpl.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNodeTemplate(ctx, "soletenant_tmpl", &compute.NodeTemplateArgs{
+			Region:   pulumi.String("us-central1"),
+			NodeType: pulumi.String("n1-node-96-624"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNodeGroup(ctx, "nodes", &compute.NodeGroupArgs{
+			Zone:         pulumi.String("us-central1-a"),
+			Description:  pulumi.String("example google_compute_node_group for the Google Provider"),
+			Size:         pulumi.Int(1),
+			NodeTemplate: soletenant_tmpl.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
+    region="us-central1",
+    node_type="n1-node-96-624")
+nodes = gcp.compute.NodeGroup("nodes",
+    zone="us-central1-a",
+    description="example google_compute_node_group for the Google Provider",
+    size=1,
+    node_template=soletenant_tmpl.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+    region: "us-central1",
+    nodeType: "n1-node-96-624",
+});
+const nodes = new gcp.compute.NodeGroup("nodes", {
+    zone: "us-central1-a",
+    description: "example google_compute_node_group for the Google Provider",
+    size: 1,
+    nodeTemplate: soletenant_tmpl.id,
+});
+```
+
+{{% /example %}}
+
+### Node Group Autoscaling Policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var soletenant_tmpl = new Gcp.Compute.NodeTemplate("soletenant-tmpl", new Gcp.Compute.NodeTemplateArgs
+        {
+            Region = "us-central1",
+            NodeType = "n1-node-96-624",
+        });
+        var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
+        {
+            Zone = "us-central1-a",
+            Description = "example google_compute_node_group for Google Provider",
+            MaintenancePolicy = "RESTART_IN_PLACE",
+            Size = 1,
+            NodeTemplate = soletenant_tmpl.Id,
+            AutoscalingPolicy = new Gcp.Compute.Inputs.NodeGroupAutoscalingPolicyArgs
+            {
+                Mode = "ONLY_SCALE_OUT",
+                MinNodes = 1,
+                MaxNodes = 10,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNodeTemplate(ctx, "soletenant_tmpl", &compute.NodeTemplateArgs{
+			Region:   pulumi.String("us-central1"),
+			NodeType: pulumi.String("n1-node-96-624"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNodeGroup(ctx, "nodes", &compute.NodeGroupArgs{
+			Zone:              pulumi.String("us-central1-a"),
+			Description:       pulumi.String("example google_compute_node_group for Google Provider"),
+			MaintenancePolicy: pulumi.String("RESTART_IN_PLACE"),
+			Size:              pulumi.Int(1),
+			NodeTemplate:      soletenant_tmpl.ID(),
+			AutoscalingPolicy: &compute.NodeGroupAutoscalingPolicyArgs{
+				Mode:     pulumi.String("ONLY_SCALE_OUT"),
+				MinNodes: pulumi.Int(1),
+				MaxNodes: pulumi.Int(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
+    region="us-central1",
+    node_type="n1-node-96-624")
+nodes = gcp.compute.NodeGroup("nodes",
+    zone="us-central1-a",
+    description="example google_compute_node_group for Google Provider",
+    maintenance_policy="RESTART_IN_PLACE",
+    size=1,
+    node_template=soletenant_tmpl.id,
+    autoscaling_policy=gcp.compute.NodeGroupAutoscalingPolicyArgs(
+        mode="ONLY_SCALE_OUT",
+        min_nodes=1,
+        max_nodes=10,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+    region: "us-central1",
+    nodeType: "n1-node-96-624",
+});
+const nodes = new gcp.compute.NodeGroup("nodes", {
+    zone: "us-central1-a",
+    description: "example google_compute_node_group for Google Provider",
+    maintenancePolicy: "RESTART_IN_PLACE",
+    size: 1,
+    nodeTemplate: soletenant_tmpl.id,
+    autoscalingPolicy: {
+        mode: "ONLY_SCALE_OUT",
+        minNodes: 1,
+        maxNodes: 10,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodeGroup Resource {#create}
@@ -1592,6 +1822,28 @@ Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
 
 
 
+
+
+## Import
+
+
+NodeGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default projects/{{project}}/zones/{{zone}}/nodeGroups/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{name}}
+```
 
 
 

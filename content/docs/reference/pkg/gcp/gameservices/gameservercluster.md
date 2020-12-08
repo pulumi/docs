@@ -18,6 +18,51 @@ To get more information about GameServerCluster, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Game Service Cluster Basic
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGameServerCluster = new gcp.gameservices.GameServerCluster("default", {
+    clusterId: "",
+    "google_game_services_realm.default.realm_id": [{
+        connectionInfo: [{
+            gkeClusterReference: [{
+                cluster: "locations/us-west1/clusters/%{agones_cluster}",
+            }],
+            namespace: "default",
+        }],
+    }],
+    realmId: "",
+});
+const defaultRealm = new gcp.gameservices.Realm("default", {
+    description: "Test Game Realm",
+    realmId: "realm",
+    timeZone: "PST8PDT",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GameServerCluster Resource {#create}
@@ -1489,6 +1534,24 @@ GKE cluster.
 
 
 
+
+
+## Import
+
+
+GameServerCluster can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default projects/{{project}}/locations/{{location}}/realms/{{realm_id}}/gameServerClusters/{{cluster_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default {{project}}/{{location}}/{{realm_id}}/{{cluster_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default {{location}}/{{realm_id}}/{{cluster_id}}
+```
 
 
 

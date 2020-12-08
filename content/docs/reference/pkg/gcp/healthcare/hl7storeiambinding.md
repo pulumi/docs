@@ -20,6 +20,231 @@ Three different resources help you manage your IAM policy for Healthcare HL7v2 s
 
 > **Note:** `gcp.healthcare.Hl7StoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.Hl7StoreIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_hl7\_v2\_store\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const hl7V2Store = new gcp.healthcare.Hl7StoreIamPolicy("hl7V2Store", {
+    hl7V2StoreId: "your-hl7-v2-store-id",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+)])
+hl7_v2_store = gcp.healthcare.Hl7StoreIamPolicy("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/editor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamPolicy("hl7V2Store", new Gcp.Healthcare.Hl7StoreIamPolicyArgs
+        {
+            Hl7V2StoreId = "your-hl7-v2-store-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewHl7StoreIamPolicy(ctx, "hl7V2Store", &healthcare.Hl7StoreIamPolicyArgs{
+			Hl7V2StoreId: pulumi.String("your-hl7-v2-store-id"),
+			PolicyData:   pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_healthcare\_hl7\_v2\_store\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hl7V2Store = new gcp.healthcare.Hl7StoreIamBinding("hl7_v2_store", {
+    hl7V2StoreId: "your-hl7-v2-store-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hl7_v2_store = gcp.healthcare.Hl7StoreIamBinding("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamBinding("hl7V2Store", new Gcp.Healthcare.Hl7StoreIamBindingArgs
+        {
+            Hl7V2StoreId = "your-hl7-v2-store-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcare.NewHl7StoreIamBinding(ctx, "hl7V2Store", &healthcare.Hl7StoreIamBindingArgs{
+			Hl7V2StoreId: pulumi.String("your-hl7-v2-store-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_healthcare\_hl7\_v2\_store\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hl7V2Store = new gcp.healthcare.Hl7StoreIamMember("hl7_v2_store", {
+    hl7V2StoreId: "your-hl7-v2-store-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hl7_v2_store = gcp.healthcare.Hl7StoreIamMember("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamMember("hl7V2Store", new Gcp.Healthcare.Hl7StoreIamMemberArgs
+        {
+            Hl7V2StoreId = "your-hl7-v2-store-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcare.NewHl7StoreIamMember(ctx, "hl7V2Store", &healthcare.Hl7StoreIamMemberArgs{
+			Hl7V2StoreId: pulumi.String("your-hl7-v2-store-id"),
+			Member:       pulumi.String("user:jane@example.com"),
+			Role:         pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a Hl7StoreIamBinding Resource {#create}
@@ -1105,6 +1330,34 @@ project setting will be used as a fallback.
 
 
 
+
+
+## Import
+
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `hl7_v2_store_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding hl7_v2_store_iam "your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `hl7_v2_store_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding hl7_v2_store_iam "your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `hl7_v2_store_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding hl7_v2_store_iam your-project-id/location-name/dataset-name/hl7-v2-store-name
+```
 
 
 

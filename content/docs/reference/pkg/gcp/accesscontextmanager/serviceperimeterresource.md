@@ -31,6 +31,144 @@ in the provider configuration. Otherwise the ACM API will return a 403 error.
 Your account must have the `serviceusage.services.use` permission on the
 `billing_project` you defined.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Access Context Manager Service Perimeter Resource Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+        var service_perimeter_resourceServicePerimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter-resourceServicePerimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
+        {
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            Title = "restrict_all",
+            Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+            {
+                RestrictedServices = 
+                {
+                    "storage.googleapis.com",
+                },
+            },
+        });
+        var service_perimeter_resourceServicePerimeterResource = new Gcp.AccessContextManager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource", new Gcp.AccessContextManager.ServicePerimeterResourceArgs
+        {
+            PerimeterName = service_perimeter_resourceServicePerimeter.Name,
+            Resource = "projects/987654321",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/accesscontextmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access_policy", &accesscontextmanager.AccessPolicyArgs{
+			Parent: pulumi.String("organizations/123456789"),
+			Title:  pulumi.String("my policy"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewServicePerimeter(ctx, "service_perimeter_resourceServicePerimeter", &accesscontextmanager.ServicePerimeterArgs{
+			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+			}).(pulumi.StringOutput),
+			Title: pulumi.String("restrict_all"),
+			Status: &accesscontextmanager.ServicePerimeterStatusArgs{
+				RestrictedServices: pulumi.StringArray{
+					pulumi.String("storage.googleapis.com"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewServicePerimeterResource(ctx, "service_perimeter_resourceServicePerimeterResource", &accesscontextmanager.ServicePerimeterResourceArgs{
+			PerimeterName: service_perimeter_resourceServicePerimeter.Name,
+			Resource:      pulumi.String("projects/987654321"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+service_perimeter_resource_service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter-resourceServicePerimeter",
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    title="restrict_all",
+    status=gcp.accesscontextmanager.ServicePerimeterStatusArgs(
+        restricted_services=["storage.googleapis.com"],
+    ))
+service_perimeter_resource_service_perimeter_resource = gcp.accesscontextmanager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource",
+    perimeter_name=service_perimeter_resource_service_perimeter.name,
+    resource="projects/987654321")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+const service_perimeter_resourceServicePerimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter-resourceServicePerimeter", {
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    title: "restrict_all",
+    status: {
+        restrictedServices: ["storage.googleapis.com"],
+    },
+});
+const service_perimeter_resourceServicePerimeterResource = new gcp.accesscontextmanager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource", {
+    perimeterName: service_perimeter_resourceServicePerimeter.name,
+    resource: "projects/987654321",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServicePerimeterResource Resource {#create}
@@ -672,6 +810,16 @@ Format: projects/{project_number}
 
 
 
+
+
+## Import
+
+
+ServicePerimeterResource can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/servicePerimeterResource:ServicePerimeterResource default {{perimeter_name}}/{{resource}}
+```
 
 
 

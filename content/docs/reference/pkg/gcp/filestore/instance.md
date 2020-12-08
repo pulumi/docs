@@ -20,6 +20,320 @@ To get more information about Instance, see:
     * [Use with Kubernetes](https://cloud.google.com/filestore/docs/accessing-fileshares)
     * [Copying Data In/Out](https://cloud.google.com/filestore/docs/copying-data)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Filestore Instance Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Filestore.Instance("instance", new Gcp.Filestore.InstanceArgs
+        {
+            FileShares = new Gcp.Filestore.Inputs.InstanceFileSharesArgs
+            {
+                CapacityGb = 2660,
+                Name = "share1",
+            },
+            Networks = 
+            {
+                new Gcp.Filestore.Inputs.InstanceNetworkArgs
+                {
+                    Modes = 
+                    {
+                        "MODE_IPV4",
+                    },
+                    Network = "default",
+                },
+            },
+            Tier = "PREMIUM",
+            Zone = "us-central1-b",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/filestore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
+			FileShares: &filestore.InstanceFileSharesArgs{
+				CapacityGb: pulumi.Int(2660),
+				Name:       pulumi.String("share1"),
+			},
+			Networks: filestore.InstanceNetworkArray{
+				&filestore.InstanceNetworkArgs{
+					Modes: pulumi.StringArray{
+						pulumi.String("MODE_IPV4"),
+					},
+					Network: pulumi.String("default"),
+				},
+			},
+			Tier: pulumi.String("PREMIUM"),
+			Zone: pulumi.String("us-central1-b"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.filestore.Instance("instance",
+    file_shares=gcp.filestore.InstanceFileSharesArgs(
+        capacity_gb=2660,
+        name="share1",
+    ),
+    networks=[gcp.filestore.InstanceNetworkArgs(
+        modes=["MODE_IPV4"],
+        network="default",
+    )],
+    tier="PREMIUM",
+    zone="us-central1-b")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.filestore.Instance("instance", {
+    fileShares: {
+        capacityGb: 2660,
+        name: "share1",
+    },
+    networks: [{
+        modes: ["MODE_IPV4"],
+        network: "default",
+    }],
+    tier: "PREMIUM",
+    zone: "us-central1-b",
+});
+```
+
+{{% /example %}}
+
+### Filestore Instance Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Filestore.Instance("instance", new Gcp.Filestore.InstanceArgs
+        {
+            Zone = "us-central1-b",
+            Tier = "BASIC_SSD",
+            FileShares = new Gcp.Filestore.Inputs.InstanceFileSharesArgs
+            {
+                CapacityGb = 2660,
+                Name = "share1",
+                NfsExportOptions = 
+                {
+                    new Gcp.Filestore.Inputs.InstanceFileSharesNfsExportOptionArgs
+                    {
+                        IpRanges = 
+                        {
+                            "10.0.0.0/24",
+                        },
+                        AccessMode = "READ_WRITE",
+                        SquashMode = "NO_ROOT_SQUASH",
+                    },
+                    new Gcp.Filestore.Inputs.InstanceFileSharesNfsExportOptionArgs
+                    {
+                        IpRanges = 
+                        {
+                            "10.10.0.0/24",
+                        },
+                        AccessMode = "READ_ONLY",
+                        SquashMode = "ROOT_SQUASH",
+                        AnonUid = 123,
+                        AnonGid = 456,
+                    },
+                },
+            },
+            Networks = 
+            {
+                new Gcp.Filestore.Inputs.InstanceNetworkArgs
+                {
+                    Network = "default",
+                    Modes = 
+                    {
+                        "MODE_IPV4",
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/filestore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
+			Zone: pulumi.String("us-central1-b"),
+			Tier: pulumi.String("BASIC_SSD"),
+			FileShares: &filestore.InstanceFileSharesArgs{
+				CapacityGb: pulumi.Int(2660),
+				Name:       pulumi.String("share1"),
+				NfsExportOptions: filestore.InstanceFileSharesNfsExportOptionArray{
+					&filestore.InstanceFileSharesNfsExportOptionArgs{
+						IpRanges: pulumi.StringArray{
+							pulumi.String("10.0.0.0/24"),
+						},
+						AccessMode: pulumi.String("READ_WRITE"),
+						SquashMode: pulumi.String("NO_ROOT_SQUASH"),
+					},
+					&filestore.InstanceFileSharesNfsExportOptionArgs{
+						IpRanges: pulumi.StringArray{
+							pulumi.String("10.10.0.0/24"),
+						},
+						AccessMode: pulumi.String("READ_ONLY"),
+						SquashMode: pulumi.String("ROOT_SQUASH"),
+						AnonUid:    pulumi.Int(123),
+						AnonGid:    pulumi.Int(456),
+					},
+				},
+			},
+			Networks: filestore.InstanceNetworkArray{
+				&filestore.InstanceNetworkArgs{
+					Network: pulumi.String("default"),
+					Modes: pulumi.StringArray{
+						pulumi.String("MODE_IPV4"),
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.filestore.Instance("instance",
+    zone="us-central1-b",
+    tier="BASIC_SSD",
+    file_shares=gcp.filestore.InstanceFileSharesArgs(
+        capacity_gb=2660,
+        name="share1",
+        nfs_export_options=[
+            gcp.filestore.InstanceFileSharesNfsExportOptionArgs(
+                ip_ranges=["10.0.0.0/24"],
+                access_mode="READ_WRITE",
+                squash_mode="NO_ROOT_SQUASH",
+            ),
+            gcp.filestore.InstanceFileSharesNfsExportOptionArgs(
+                ip_ranges=["10.10.0.0/24"],
+                access_mode="READ_ONLY",
+                squash_mode="ROOT_SQUASH",
+                anon_uid=123,
+                anon_gid=456,
+            ),
+        ],
+    ),
+    networks=[gcp.filestore.InstanceNetworkArgs(
+        network="default",
+        modes=["MODE_IPV4"],
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.filestore.Instance("instance", {
+    zone: "us-central1-b",
+    tier: "BASIC_SSD",
+    fileShares: {
+        capacityGb: 2660,
+        name: "share1",
+        nfsExportOptions: [
+            {
+                ipRanges: ["10.0.0.0/24"],
+                accessMode: "READ_WRITE",
+                squashMode: "NO_ROOT_SQUASH",
+            },
+            {
+                ipRanges: ["10.10.0.0/24"],
+                accessMode: "READ_ONLY",
+                squashMode: "ROOT_SQUASH",
+                anonUid: 123,
+                anonGid: 456,
+            },
+        ],
+    },
+    networks: [{
+        network: "default",
+        modes: ["MODE_IPV4"],
+    }],
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -2145,6 +2459,28 @@ addresses reserved for this instance.
 
 
 
+
+
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default projects/{{project}}/locations/{{zone}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default {{name}}
+```
 
 
 

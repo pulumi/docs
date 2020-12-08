@@ -25,6 +25,88 @@ To get more information about HttpsHealthCheck, see:
 * How-to Guides
     * [Adding Health Checks](https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Https Health Check Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.HttpsHealthCheck("default", new Gcp.Compute.HttpsHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            RequestPath = "/health_check",
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewHttpsHealthCheck(ctx, "_default", &compute.HttpsHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			RequestPath:      pulumi.String("/health_check"),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.HttpsHealthCheck("default",
+    check_interval_sec=1,
+    request_path="/health_check",
+    timeout_sec=1)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
+    checkIntervalSec: 1,
+    requestPath: "/health_check",
+    timeoutSec: 1,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HttpsHealthCheck Resource {#create}
@@ -1666,6 +1748,24 @@ consecutive failures. The default value is 2.
 
 
 
+
+
+## Import
+
+
+HttpsHealthCheck can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/httpsHealthCheck:HttpsHealthCheck default projects/{{project}}/global/httpsHealthChecks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/httpsHealthCheck:HttpsHealthCheck default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/httpsHealthCheck:HttpsHealthCheck default {{name}}
+```
 
 
 

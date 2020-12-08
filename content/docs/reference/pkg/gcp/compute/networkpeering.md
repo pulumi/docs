@@ -20,6 +20,127 @@ to be functional.
 
 > Subnets IP ranges across peered VPC networks cannot overlap.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.Network("default", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var other = new Gcp.Compute.Network("other", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var peering1 = new Gcp.Compute.NetworkPeering("peering1", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = @default.Id,
+            PeerNetwork = other.Id,
+        });
+        var peering2 = new Gcp.Compute.NetworkPeering("peering2", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = other.Id,
+            PeerNetwork = @default.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "_default", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		other, err := compute.NewNetwork(ctx, "other", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetworkPeering(ctx, "peering1", &compute.NetworkPeeringArgs{
+			Network:     _default.ID(),
+			PeerNetwork: other.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetworkPeering(ctx, "peering2", &compute.NetworkPeeringArgs{
+			Network:     other.ID(),
+			PeerNetwork: _default.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.Network("default", auto_create_subnetworks=False)
+other = gcp.compute.Network("other", auto_create_subnetworks=False)
+peering1 = gcp.compute.NetworkPeering("peering1",
+    network=default.id,
+    peer_network=other.id)
+peering2 = gcp.compute.NetworkPeering("peering2",
+    network=other.id,
+    peer_network=default.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
+const other = new gcp.compute.Network("other", {autoCreateSubnetworks: "false"});
+const peering1 = new gcp.compute.NetworkPeering("peering1", {
+    network: _default.id,
+    peerNetwork: other.id,
+});
+const peering2 = new gcp.compute.NetworkPeering("peering2", {
+    network: other.id,
+    peerNetwork: _default.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkPeering Resource {#create}
@@ -1277,6 +1398,16 @@ may belong to a different project.
 
 
 
+
+
+## Import
+
+
+VPC network peerings can be imported using the name and project of the primary network the peering exists in and the name of the network peering
+
+```sh
+ $ pulumi import gcp:compute/networkPeering:NetworkPeering peering_network project-name/network-name/peering-name
+```
 
 
 

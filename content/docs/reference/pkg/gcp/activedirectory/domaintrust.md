@@ -21,6 +21,105 @@ To get more information about DomainTrust, see:
 > **Warning:** All arguments including `trust_handshake_secret` will be stored in the raw
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Active Directory Domain Trust Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ad_domain_trust = new Gcp.ActiveDirectory.DomainTrust("ad-domain-trust", new Gcp.ActiveDirectory.DomainTrustArgs
+        {
+            Domain = "test-managed-ad.com",
+            TargetDnsIpAddresses = 
+            {
+                "10.1.0.100",
+            },
+            TargetDomainName = "example-gcp.com",
+            TrustDirection = "OUTBOUND",
+            TrustHandshakeSecret = "Testing1!",
+            TrustType = "FOREST",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/activedirectory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := activedirectory.NewDomainTrust(ctx, "ad_domain_trust", &activedirectory.DomainTrustArgs{
+			Domain: pulumi.String("test-managed-ad.com"),
+			TargetDnsIpAddresses: pulumi.StringArray{
+				pulumi.String("10.1.0.100"),
+			},
+			TargetDomainName:     pulumi.String("example-gcp.com"),
+			TrustDirection:       pulumi.String("OUTBOUND"),
+			TrustHandshakeSecret: pulumi.String("Testing1!"),
+			TrustType:            pulumi.String("FOREST"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ad_domain_trust = gcp.activedirectory.DomainTrust("ad-domain-trust",
+    domain="test-managed-ad.com",
+    target_dns_ip_addresses=["10.1.0.100"],
+    target_domain_name="example-gcp.com",
+    trust_direction="OUTBOUND",
+    trust_handshake_secret="Testing1!",
+    trust_type="FOREST")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
+    domain: "test-managed-ad.com",
+    targetDnsIpAddresses: ["10.1.0.100"],
+    targetDomainName: "example-gcp.com",
+    trustDirection: "OUTBOUND",
+    trustHandshakeSecret: "Testing1!",
+    trustType: "FOREST",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainTrust Resource {#create}
@@ -1214,6 +1313,24 @@ Possible values are `FOREST` and `EXTERNAL`.
 
 
 
+
+
+## Import
+
+
+DomainTrust can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default projects/{{project}}/locations/global/domains/{{domain}}/{{target_domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default {{project}}/{{domain}}/{{target_domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:activedirectory/domainTrust:DomainTrust default {{domain}}/{{target_domain_name}}
+```
 
 
 

@@ -20,6 +20,255 @@ Three different resources help you manage your IAM policy for Artifact Registry 
 
 > **Note:** `gcp.artifactregistry.RepositoryIamBinding` resources **can be** used in conjunction with `gcp.artifactregistry.RepositoryIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_artifact\_registry\_repository\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.artifactregistry.RepositoryIamPolicy("policy", {
+    project: google_artifact_registry_repository["my-repo"].project,
+    location: google_artifact_registry_repository["my-repo"].location,
+    repository: google_artifact_registry_repository["my-repo"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/viewer",
+    members=["user:jane@example.com"],
+)])
+policy = gcp.artifactregistry.RepositoryIamPolicy("policy",
+    project=google_artifact_registry_repository["my-repo"]["project"],
+    location=google_artifact_registry_repository["my-repo"]["location"],
+    repository=google_artifact_registry_repository["my-repo"]["name"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/viewer",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.ArtifactRegistry.RepositoryIamPolicy("policy", new Gcp.ArtifactRegistry.RepositoryIamPolicyArgs
+        {
+            Project = google_artifact_registry_repository.My_repo.Project,
+            Location = google_artifact_registry_repository.My_repo.Location,
+            Repository = google_artifact_registry_repository.My_repo.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/viewer",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = artifactregistry.NewRepositoryIamPolicy(ctx, "policy", &artifactregistry.RepositoryIamPolicyArgs{
+			Project:    pulumi.Any(google_artifact_registry_repository.My - repo.Project),
+			Location:   pulumi.Any(google_artifact_registry_repository.My - repo.Location),
+			Repository: pulumi.Any(google_artifact_registry_repository.My - repo.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_artifact\_registry\_repository\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.artifactregistry.RepositoryIamBinding("binding", {
+    project: google_artifact_registry_repository["my-repo"].project,
+    location: google_artifact_registry_repository["my-repo"].location,
+    repository: google_artifact_registry_repository["my-repo"].name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.artifactregistry.RepositoryIamBinding("binding",
+    project=google_artifact_registry_repository["my-repo"]["project"],
+    location=google_artifact_registry_repository["my-repo"]["location"],
+    repository=google_artifact_registry_repository["my-repo"]["name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.ArtifactRegistry.RepositoryIamBinding("binding", new Gcp.ArtifactRegistry.RepositoryIamBindingArgs
+        {
+            Project = google_artifact_registry_repository.My_repo.Project,
+            Location = google_artifact_registry_repository.My_repo.Location,
+            Repository = google_artifact_registry_repository.My_repo.Name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := artifactregistry.NewRepositoryIamBinding(ctx, "binding", &artifactregistry.RepositoryIamBindingArgs{
+			Project:    pulumi.Any(google_artifact_registry_repository.My - repo.Project),
+			Location:   pulumi.Any(google_artifact_registry_repository.My - repo.Location),
+			Repository: pulumi.Any(google_artifact_registry_repository.My - repo.Name),
+			Role:       pulumi.String("roles/viewer"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_artifact\_registry\_repository\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.artifactregistry.RepositoryIamMember("member", {
+    project: google_artifact_registry_repository["my-repo"].project,
+    location: google_artifact_registry_repository["my-repo"].location,
+    repository: google_artifact_registry_repository["my-repo"].name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.artifactregistry.RepositoryIamMember("member",
+    project=google_artifact_registry_repository["my-repo"]["project"],
+    location=google_artifact_registry_repository["my-repo"]["location"],
+    repository=google_artifact_registry_repository["my-repo"]["name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.ArtifactRegistry.RepositoryIamMember("member", new Gcp.ArtifactRegistry.RepositoryIamMemberArgs
+        {
+            Project = google_artifact_registry_repository.My_repo.Project,
+            Location = google_artifact_registry_repository.My_repo.Location,
+            Repository = google_artifact_registry_repository.My_repo.Name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := artifactregistry.NewRepositoryIamMember(ctx, "member", &artifactregistry.RepositoryIamMemberArgs{
+			Project:    pulumi.Any(google_artifact_registry_repository.My - repo.Project),
+			Location:   pulumi.Any(google_artifact_registry_repository.My - repo.Location),
+			Repository: pulumi.Any(google_artifact_registry_repository.My - repo.Name),
+			Role:       pulumi.String("roles/viewer"),
+			Member:     pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a RepositoryIamPolicy Resource {#create}
@@ -933,6 +1182,32 @@ If it is not provided, the project will be parsed from the identifier of the par
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* projects/{{project}}/locations/{{location}}/repositories/{{repository}} * {{project}}/{{location}}/{{repository}} * {{location}}/{{repository}} * {{repository}} Any variables not passed in the import command will be taken from the provider configuration. Artifact Registry repository IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:artifactregistry/repositoryIamPolicy:RepositoryIamPolicy editor "projects/{{project}}/locations/{{location}}/repositories/{{repository}} roles/viewer user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:artifactregistry/repositoryIamPolicy:RepositoryIamPolicy editor "projects/{{project}}/locations/{{location}}/repositories/{{repository}} roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:artifactregistry/repositoryIamPolicy:RepositoryIamPolicy editor projects/{{project}}/locations/{{location}}/repositories/{{repository}}
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

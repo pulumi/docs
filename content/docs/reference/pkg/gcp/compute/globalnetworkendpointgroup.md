@@ -23,6 +23,157 @@ To get more information about GlobalNetworkEndpointGroup, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/internet-neg-concepts)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Global Network Endpoint Group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var neg = new Gcp.Compute.GlobalNetworkEndpointGroup("neg", new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+        {
+            DefaultPort = 90,
+            NetworkEndpointType = "INTERNET_FQDN_PORT",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGlobalNetworkEndpointGroup(ctx, "neg", &compute.GlobalNetworkEndpointGroupArgs{
+			DefaultPort:         pulumi.Int(90),
+			NetworkEndpointType: pulumi.String("INTERNET_FQDN_PORT"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
+    default_port=90,
+    network_endpoint_type="INTERNET_FQDN_PORT")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
+    defaultPort: 90,
+    networkEndpointType: "INTERNET_FQDN_PORT",
+});
+```
+
+{{% /example %}}
+
+### Global Network Endpoint Group Ip Address
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var neg = new Gcp.Compute.GlobalNetworkEndpointGroup("neg", new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+        {
+            DefaultPort = 90,
+            NetworkEndpointType = "INTERNET_IP_PORT",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGlobalNetworkEndpointGroup(ctx, "neg", &compute.GlobalNetworkEndpointGroupArgs{
+			DefaultPort:         pulumi.Int(90),
+			NetworkEndpointType: pulumi.String("INTERNET_IP_PORT"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
+    default_port=90,
+    network_endpoint_type="INTERNET_IP_PORT")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
+    defaultPort: 90,
+    networkEndpointType: "INTERNET_IP_PORT",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GlobalNetworkEndpointGroup Resource {#create}
@@ -1080,6 +1231,24 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+GlobalNetworkEndpointGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup default projects/{{project}}/global/networkEndpointGroups/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup default {{name}}
+```
 
 
 

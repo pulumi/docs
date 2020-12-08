@@ -15,6 +15,80 @@ Use this data source to get list of the Cloud Identity Groups under a customer o
 https://cloud.google.com/identity/docs/concepts/overview#groups
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var groups = Output.Create(Gcp.CloudIdentity.GetGroups.InvokeAsync(new Gcp.CloudIdentity.GetGroupsArgs
+        {
+            Parent = "customers/A01b123xz",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudidentity.GetGroups(ctx, &cloudidentity.GetGroupsArgs{
+			Parent: "customers/A01b123xz",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+groups = gcp.cloudidentity.get_groups(parent="customers/A01b123xz")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const groups = pulumi.output(gcp.cloudidentity.getGroups({
+    parent: "customers/A01b123xz",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetGroups {#using}
 

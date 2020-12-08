@@ -19,6 +19,127 @@ Manages a billing account logging sink. For more information see
 the credentials used with this provider. [IAM roles granted on a billing account](https://cloud.google.com/billing/docs/how-to/billing-access) are separate from the
 typical IAM roles granted on a project.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var log_bucket = new Gcp.Storage.Bucket("log-bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var my_sink = new Gcp.Logging.BillingAccountSink("my-sink", new Gcp.Logging.BillingAccountSinkArgs
+        {
+            Description = "some explaination on what this is",
+            BillingAccount = "ABCDEF-012345-GHIJKL",
+            Destination = log_bucket.Name.Apply(name => $"storage.googleapis.com/{name}"),
+        });
+        var log_writer = new Gcp.Projects.IAMBinding("log-writer", new Gcp.Projects.IAMBindingArgs
+        {
+            Role = "roles/storage.objectCreator",
+            Members = 
+            {
+                my_sink.WriterIdentity,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewBucket(ctx, "log_bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = logging.NewBillingAccountSink(ctx, "my_sink", &logging.BillingAccountSinkArgs{
+			Description:    pulumi.String("some explaination on what this is"),
+			BillingAccount: pulumi.String("ABCDEF-012345-GHIJKL"),
+			Destination: log_bucket.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "storage.googleapis.com/", name), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = projects.NewIAMBinding(ctx, "log_writer", &projects.IAMBindingArgs{
+			Role: pulumi.String("roles/storage.objectCreator"),
+			Members: pulumi.StringArray{
+				my_sink.WriterIdentity,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+log_bucket = gcp.storage.Bucket("log-bucket")
+my_sink = gcp.logging.BillingAccountSink("my-sink",
+    description="some explaination on what this is",
+    billing_account="ABCDEF-012345-GHIJKL",
+    destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"))
+log_writer = gcp.projects.IAMBinding("log-writer",
+    role="roles/storage.objectCreator",
+    members=[my_sink.writer_identity])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const log_bucket = new gcp.storage.Bucket("log-bucket", {});
+const my_sink = new gcp.logging.BillingAccountSink("my-sink", {
+    description: "some explaination on what this is",
+    billingAccount: "ABCDEF-012345-GHIJKL",
+    destination: pulumi.interpolate`storage.googleapis.com/${log_bucket.name}`,
+});
+const log_writer = new gcp.projects.IAMBinding("log-writer", {
+    role: "roles/storage.objectCreator",
+    members: [my_sink.writerIdentity],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BillingAccountSink Resource {#create}
@@ -30,7 +151,7 @@ typical IAM roles granted on a project.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/logging/#pulumi_gcp.logging.BillingAccountSink">BillingAccountSink</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[BillingAccountSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BillingAccountSinkExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/logging/#pulumi_gcp.logging.BillingAccountSink">BillingAccountSink</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[BillingAccountSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BillingAccountSinkExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -222,7 +343,7 @@ The BillingAccountSink resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -265,6 +386,28 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type"><a href="#billingaccountsinkbigqueryoptions">Billing<wbr>Account<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +473,7 @@ write a filter.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -373,6 +516,28 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type"><a href="#billingaccountsinkbigqueryoptions">Billing<wbr>Account<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -438,7 +603,7 @@ write a filter.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -481,6 +646,28 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type"><a href="#billingaccountsinkbigqueryoptions">Billing<wbr>Account<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -546,7 +733,7 @@ write a filter.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -589,6 +776,28 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type"><a href="#billingaccountsinkbigqueryoptions">Billing<wbr>Account<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -774,7 +983,7 @@ Get an existing BillingAccountSink resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[BillingAccountSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BillingAccountSinkExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">writer_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BillingAccountSink</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[BillingAccountSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BillingAccountSinkExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">writer_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BillingAccountSink</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -912,6 +1121,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span> 
@@ -919,7 +1139,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -951,6 +1171,17 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_disabled_csharp">
+<a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1032,6 +1263,17 @@ configured `destination`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span> 
@@ -1039,7 +1281,7 @@ configured `destination`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -1071,6 +1313,17 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_disabled_go">
+<a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1152,6 +1405,17 @@ configured `destination`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
@@ -1159,7 +1423,7 @@ configured `destination`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -1191,6 +1455,17 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_disabled_nodejs">
+<a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1272,6 +1547,17 @@ configured `destination`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
@@ -1279,7 +1565,7 @@ configured `destination`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -1311,6 +1597,17 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_disabled_python">
+<a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1528,7 +1825,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1538,7 +1836,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1579,7 +1878,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1589,7 +1889,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1630,7 +1931,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1640,7 +1942,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1681,7 +1984,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1691,7 +1995,8 @@ write a filter.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1702,6 +2007,16 @@ write a filter.
 
 
 
+
+
+## Import
+
+
+Billing account logging sinks can be imported using this format
+
+```sh
+ $ pulumi import gcp:logging/billingAccountSink:BillingAccountSink my_sink billingAccounts/{{billing_account_id}}/sinks/{{sink_id}}
+```
 
 
 

@@ -33,6 +33,409 @@ To get more information about Environments, see:
   * **Environments create Google Cloud Storage buckets that do not get cleaned up automatically** on environment
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Usage
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
+        {
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test = gcp.composer.Environment("test", region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.composer.Environment("test", {
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+### With GKE and Compute Resource Dependencies
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testNetwork = new Gcp.Compute.Network("testNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var testSubnetwork = new Gcp.Compute.Subnetwork("testSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.2.0.0/16",
+            Region = "us-central1",
+            Network = testNetwork.Id,
+        });
+        var testAccount = new Gcp.ServiceAccount.Account("testAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "composer-env-account",
+            DisplayName = "Test Service Account for Composer Environment",
+        });
+        var composer_worker = new Gcp.Projects.IAMMember("composer-worker", new Gcp.Projects.IAMMemberArgs
+        {
+            Role = "roles/composer.worker",
+            Member = testAccount.Email.Apply(email => $"serviceAccount:{email}"),
+        });
+        var testEnvironment = new Gcp.Composer.Environment("testEnvironment", new Gcp.Composer.EnvironmentArgs
+        {
+            Region = "us-central1",
+            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
+            {
+                NodeCount = 4,
+                NodeConfig = new Gcp.Composer.Inputs.EnvironmentConfigNodeConfigArgs
+                {
+                    Zone = "us-central1-a",
+                    MachineType = "e2-medium",
+                    Network = testNetwork.Id,
+                    Subnetwork = testSubnetwork.Id,
+                    ServiceAccount = testAccount.Name,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                composer_worker,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testNetwork, err := compute.NewNetwork(ctx, "testNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		testSubnetwork, err := compute.NewSubnetwork(ctx, "testSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.2.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     testNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		testAccount, err := serviceAccount.NewAccount(ctx, "testAccount", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("composer-env-account"),
+			DisplayName: pulumi.String("Test Service Account for Composer Environment"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = projects.NewIAMMember(ctx, "composer_worker", &projects.IAMMemberArgs{
+			Role: pulumi.String("roles/composer.worker"),
+			Member: testAccount.Email.ApplyT(func(email string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = composer.NewEnvironment(ctx, "testEnvironment", &composer.EnvironmentArgs{
+			Region: pulumi.String("us-central1"),
+			Config: &composer.EnvironmentConfigArgs{
+				NodeCount: pulumi.Int(4),
+				NodeConfig: &composer.EnvironmentConfigNodeConfigArgs{
+					Zone:           pulumi.String("us-central1-a"),
+					MachineType:    pulumi.String("e2-medium"),
+					Network:        testNetwork.ID(),
+					Subnetwork:     testSubnetwork.ID(),
+					ServiceAccount: testAccount.Name,
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			composer_worker,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test_network = gcp.compute.Network("testNetwork", auto_create_subnetworks=False)
+test_subnetwork = gcp.compute.Subnetwork("testSubnetwork",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=test_network.id)
+test_account = gcp.service_account.Account("testAccount",
+    account_id="composer-env-account",
+    display_name="Test Service Account for Composer Environment")
+composer_worker = gcp.projects.IAMMember("composer-worker",
+    role="roles/composer.worker",
+    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
+test_environment = gcp.composer.Environment("testEnvironment",
+    region="us-central1",
+    config=gcp.composer.EnvironmentConfigArgs(
+        node_count=4,
+        node_config={
+            "zone": "us-central1-a",
+            "machine_type": "e2-medium",
+            "network": test_network.id,
+            "subnetwork": test_subnetwork.id,
+            "service_account": test_account.name,
+        },
+    ),
+    opts=pulumi.ResourceOptions(depends_on=[composer_worker]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const testNetwork = new gcp.compute.Network("testNetwork", {autoCreateSubnetworks: false});
+const testSubnetwork = new gcp.compute.Subnetwork("testSubnetwork", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: testNetwork.id,
+});
+const testAccount = new gcp.serviceAccount.Account("testAccount", {
+    accountId: "composer-env-account",
+    displayName: "Test Service Account for Composer Environment",
+});
+const composer_worker = new gcp.projects.IAMMember("composer-worker", {
+    role: "roles/composer.worker",
+    member: pulumi.interpolate`serviceAccount:${testAccount.email}`,
+});
+const testEnvironment = new gcp.composer.Environment("testEnvironment", {
+    region: "us-central1",
+    config: {
+        nodeCount: 4,
+        nodeConfig: {
+            zone: "us-central1-a",
+            machineType: "e2-medium",
+            network: testNetwork.id,
+            subnetwork: testSubnetwork.id,
+            serviceAccount: testAccount.name,
+        },
+    },
+}, {
+    dependsOn: [composer_worker],
+});
+```
+
+{{% /example %}}
+
+### With Software (Airflow) Config
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
+        {
+            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
+            {
+                SoftwareConfig = new Gcp.Composer.Inputs.EnvironmentConfigSoftwareConfigArgs
+                {
+                    AirflowConfigOverrides = 
+                    {
+                        { "core-loadExample", "True" },
+                    },
+                    EnvVariables = 
+                    {
+                        { "FOO", "bar" },
+                    },
+                    PypiPackages = 
+                    {
+                        { "numpy", "" },
+                        { "scipy", "==1.1.0" },
+                    },
+                },
+            },
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
+			Config: &composer.EnvironmentConfigArgs{
+				SoftwareConfig: &composer.EnvironmentConfigSoftwareConfigArgs{
+					AirflowConfigOverrides: pulumi.StringMap{
+						"core-loadExample": pulumi.String("True"),
+					},
+					EnvVariables: pulumi.StringMap{
+						"FOO": pulumi.String("bar"),
+					},
+					PypiPackages: pulumi.StringMap{
+						"numpy": pulumi.String(""),
+						"scipy": pulumi.String("==1.1.0"),
+					},
+				},
+			},
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test = gcp.composer.Environment("test",
+    config=gcp.composer.EnvironmentConfigArgs(
+        software_config=gcp.composer.EnvironmentConfigSoftwareConfigArgs(
+            airflow_config_overrides={
+                "core-loadExample": "True",
+            },
+            env_variables={
+                "FOO": "bar",
+            },
+            pypi_packages={
+                "numpy": "",
+                "scipy": "==1.1.0",
+            },
+        ),
+    ),
+    region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.composer.Environment("test", {
+    config: {
+        softwareConfig: {
+            airflowConfigOverrides: {
+                "core-load_example": "True",
+            },
+            envVariables: {
+                FOO: "bar",
+            },
+            pypiPackages: {
+                numpy: "",
+                scipy: "==1.1.0",
+            },
+        },
+    },
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}
@@ -3478,6 +3881,24 @@ IP range prefixes should be properly truncated. For example,
 
 
 
+
+
+## Import
+
+
+Environment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:composer/environment:Environment default projects/{{project}}/locations/{{region}}/environments/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:composer/environment:Environment default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:composer/environment:Environment default {{name}}
+```
 
 
 

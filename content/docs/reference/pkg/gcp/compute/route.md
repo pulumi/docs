@@ -39,6 +39,308 @@ To get more information about Route, see:
 * How-to Guides
     * [Using Routes](https://cloud.google.com/vpc/docs/using-routes)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Route Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var defaultRoute = new Gcp.Compute.Route("defaultRoute", new Gcp.Compute.RouteArgs
+        {
+            DestRange = "15.0.0.0/24",
+            Network = defaultNetwork.Name,
+            NextHopIp = "10.132.1.5",
+            Priority = 100,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRoute(ctx, "defaultRoute", &compute.RouteArgs{
+			DestRange: pulumi.String("15.0.0.0/24"),
+			Network:   defaultNetwork.Name,
+			NextHopIp: pulumi.String("10.132.1.5"),
+			Priority:  pulumi.Int(100),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_route = gcp.compute.Route("defaultRoute",
+    dest_range="15.0.0.0/24",
+    network=default_network.name,
+    next_hop_ip="10.132.1.5",
+    priority=100)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultRoute = new gcp.compute.Route("defaultRoute", {
+    destRange: "15.0.0.0/24",
+    network: defaultNetwork.name,
+    nextHopIp: "10.132.1.5",
+    priority: 100,
+});
+```
+
+{{% /example %}}
+
+### Route Ilb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.1.0/24",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        });
+        var hc = new Gcp.Compute.HealthCheck("hc", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var backend = new Gcp.Compute.RegionBackendService("backend", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            HealthChecks = 
+            {
+                hc.Id,
+            },
+        });
+        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Region = "us-central1",
+            LoadBalancingScheme = "INTERNAL",
+            BackendService = backend.Id,
+            AllPorts = true,
+            Network = defaultNetwork.Name,
+            Subnetwork = defaultSubnetwork.Name,
+        });
+        var route_ilb = new Gcp.Compute.Route("route-ilb", new Gcp.Compute.RouteArgs
+        {
+            DestRange = "0.0.0.0/0",
+            Network = defaultNetwork.Name,
+            NextHopIlb = defaultForwardingRule.Id,
+            Priority = 2000,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.1.0/24"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		hc, err := compute.NewHealthCheck(ctx, "hc", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		backend, err := compute.NewRegionBackendService(ctx, "backend", &compute.RegionBackendServiceArgs{
+			Region: pulumi.String("us-central1"),
+			HealthChecks: pulumi.String(pulumi.String{
+				hc.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		defaultForwardingRule, err := compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			Region:              pulumi.String("us-central1"),
+			LoadBalancingScheme: pulumi.String("INTERNAL"),
+			BackendService:      backend.ID(),
+			AllPorts:            pulumi.Bool(true),
+			Network:             defaultNetwork.Name,
+			Subnetwork:          defaultSubnetwork.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRoute(ctx, "route_ilb", &compute.RouteArgs{
+			DestRange:  pulumi.String("0.0.0.0/0"),
+			Network:    defaultNetwork.Name,
+			NextHopIlb: defaultForwardingRule.ID(),
+			Priority:   pulumi.Int(2000),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.1.0/24",
+    region="us-central1",
+    network=default_network.id)
+hc = gcp.compute.HealthCheck("hc",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+        port=80,
+    ))
+backend = gcp.compute.RegionBackendService("backend",
+    region="us-central1",
+    health_checks=[hc.id])
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    load_balancing_scheme="INTERNAL",
+    backend_service=backend.id,
+    all_ports=True,
+    network=default_network.name,
+    subnetwork=default_subnetwork.name)
+route_ilb = gcp.compute.Route("route-ilb",
+    dest_range="0.0.0.0/0",
+    network=default_network.name,
+    next_hop_ilb=default_forwarding_rule.id,
+    priority=2000)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.1.0/24",
+    region: "us-central1",
+    network: defaultNetwork.id,
+});
+const hc = new gcp.compute.HealthCheck("hc", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcpHealthCheck: {
+        port: "80",
+    },
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    region: "us-central1",
+    healthChecks: [hc.id],
+});
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    loadBalancingScheme: "INTERNAL",
+    backendService: backend.id,
+    allPorts: true,
+    network: defaultNetwork.name,
+    subnetwork: defaultSubnetwork.name,
+});
+const route_ilb = new gcp.compute.Route("route-ilb", {
+    destRange: "0.0.0.0/0",
+    network: defaultNetwork.name,
+    nextHopIlb: defaultForwardingRule.id,
+    priority: 2000,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Route Resource {#create}
@@ -2056,6 +2358,24 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Route can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/route:Route default projects/{{project}}/global/routes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/route:Route default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/route:Route default {{name}}
+```
 
 
 

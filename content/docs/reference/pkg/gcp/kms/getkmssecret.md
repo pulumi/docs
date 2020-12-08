@@ -23,6 +23,7 @@ data outside of resource definitions.
 
 
 
+
 ## Using GetKMSSecret {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

@@ -20,6 +20,231 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 
 > **Note:** `gcp.pubsub.SubscriptionIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.SubscriptionIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_pubsub\_subscription\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const editor = new gcp.pubsub.SubscriptionIAMPolicy("editor", {
+    subscription: "your-subscription-name",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+)])
+editor = gcp.pubsub.SubscriptionIAMPolicy("editor",
+    subscription="your-subscription-name",
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/editor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var editor = new Gcp.PubSub.SubscriptionIAMPolicy("editor", new Gcp.PubSub.SubscriptionIAMPolicyArgs
+        {
+            Subscription = "your-subscription-name",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscriptionIAMPolicy(ctx, "editor", &pubsub.SubscriptionIAMPolicyArgs{
+			Subscription: pulumi.String("your-subscription-name"),
+			PolicyData:   pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_pubsub\_subscription\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.pubsub.SubscriptionIAMBinding("editor", {
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+    subscription: "your-subscription-name",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.pubsub.SubscriptionIAMBinding("editor",
+    members=["user:jane@example.com"],
+    role="roles/editor",
+    subscription="your-subscription-name")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.PubSub.SubscriptionIAMBinding("editor", new Gcp.PubSub.SubscriptionIAMBindingArgs
+        {
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+            Subscription = "your-subscription-name",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := pubsub.NewSubscriptionIAMBinding(ctx, "editor", &pubsub.SubscriptionIAMBindingArgs{
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role:         pulumi.String("roles/editor"),
+			Subscription: pulumi.String("your-subscription-name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_pubsub\_subscription\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
+    member: "user:jane@example.com",
+    role: "roles/editor",
+    subscription: "your-subscription-name",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.pubsub.SubscriptionIAMMember("editor",
+    member="user:jane@example.com",
+    role="roles/editor",
+    subscription="your-subscription-name")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.PubSub.SubscriptionIAMMember("editor", new Gcp.PubSub.SubscriptionIAMMemberArgs
+        {
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+            Subscription = "your-subscription-name",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := pubsub.NewSubscriptionIAMMember(ctx, "editor", &pubsub.SubscriptionIAMMemberArgs{
+			Member:       pulumi.String("user:jane@example.com"),
+			Role:         pulumi.String("roles/editor"),
+			Subscription: pulumi.String("your-subscription-name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a SubscriptionIAMBinding Resource {#create}
@@ -1177,6 +1402,28 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Pubsub subscription IAM resources can be imported using the project, subscription name, role and member.
+
+```sh
+ $ pulumi import gcp:pubsub/subscriptionIAMBinding:SubscriptionIAMBinding editor projects/{your-project-id}/subscriptions/{your-subscription-name}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/subscriptionIAMBinding:SubscriptionIAMBinding editor "projects/{your-project-id}/subscriptions/{your-subscription-name} roles/editor"
+```
+
+```sh
+ $ pulumi import gcp:pubsub/subscriptionIAMBinding:SubscriptionIAMBinding editor "projects/{your-project-id}/subscriptions/{your-subscription-name} roles/editor jane@example.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

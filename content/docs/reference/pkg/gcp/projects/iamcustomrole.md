@@ -22,6 +22,109 @@ and
  made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
  by the provider, and new roles cannot share that name.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_custom_role = new Gcp.Projects.IAMCustomRole("my-custom-role", new Gcp.Projects.IAMCustomRoleArgs
+        {
+            Description = "A description",
+            Permissions = 
+            {
+                "iam.roles.list",
+                "iam.roles.create",
+                "iam.roles.delete",
+            },
+            RoleId = "myCustomRole",
+            Title = "My Custom Role",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewIAMCustomRole(ctx, "my_custom_role", &projects.IAMCustomRoleArgs{
+			Description: pulumi.String("A description"),
+			Permissions: pulumi.StringArray{
+				pulumi.String("iam.roles.list"),
+				pulumi.String("iam.roles.create"),
+				pulumi.String("iam.roles.delete"),
+			},
+			RoleId: pulumi.String("myCustomRole"),
+			Title:  pulumi.String("My Custom Role"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_custom_role = gcp.projects.IAMCustomRole("my-custom-role",
+    description="A description",
+    permissions=[
+        "iam.roles.list",
+        "iam.roles.create",
+        "iam.roles.delete",
+    ],
+    role_id="myCustomRole",
+    title="My Custom Role")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_custom_role = new gcp.projects.IAMCustomRole("my-custom-role", {
+    description: "A description",
+    permissions: [
+        "iam.roles.list",
+        "iam.roles.create",
+        "iam.roles.delete",
+    ],
+    roleId: "myCustomRole",
+    title: "My Custom Role",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IAMCustomRole Resource {#create}
@@ -1199,6 +1302,16 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
 
 
 
+
+
+## Import
+
+
+Customized IAM project role can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMCustomRole:IAMCustomRole my-custom-role projects/my-project/roles/myCustomRole
+```
 
 
 

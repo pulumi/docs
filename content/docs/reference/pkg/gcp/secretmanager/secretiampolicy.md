@@ -20,6 +20,243 @@ Three different resources help you manage your IAM policy for Secret Manager Sec
 
 > **Note:** `gcp.secretmanager.SecretIamBinding` resources **can be** used in conjunction with `gcp.secretmanager.SecretIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_secret\_manager\_secret\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/secretmanager.secretAccessor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.secretmanager.SecretIamPolicy("policy", {
+    project: google_secret_manager_secret["secret-basic"].project,
+    secretId: google_secret_manager_secret["secret-basic"].secret_id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/secretmanager.secretAccessor",
+    members=["user:jane@example.com"],
+)])
+policy = gcp.secretmanager.SecretIamPolicy("policy",
+    project=google_secret_manager_secret["secret-basic"]["project"],
+    secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/secretmanager.secretAccessor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.SecretManager.SecretIamPolicy("policy", new Gcp.SecretManager.SecretIamPolicyArgs
+        {
+            Project = google_secret_manager_secret.Secret_basic.Project,
+            SecretId = google_secret_manager_secret.Secret_basic.Secret_id,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/secretmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/secretmanager.secretAccessor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = secretmanager.NewSecretIamPolicy(ctx, "policy", &secretmanager.SecretIamPolicyArgs{
+			Project:    pulumi.Any(google_secret_manager_secret.Secret - basic.Project),
+			SecretId:   pulumi.Any(google_secret_manager_secret.Secret - basic.Secret_id),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_secret\_manager\_secret\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.secretmanager.SecretIamBinding("binding", {
+    project: google_secret_manager_secret["secret-basic"].project,
+    secretId: google_secret_manager_secret["secret-basic"].secret_id,
+    role: "roles/secretmanager.secretAccessor",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.secretmanager.SecretIamBinding("binding",
+    project=google_secret_manager_secret["secret-basic"]["project"],
+    secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
+    role="roles/secretmanager.secretAccessor",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.SecretManager.SecretIamBinding("binding", new Gcp.SecretManager.SecretIamBindingArgs
+        {
+            Project = google_secret_manager_secret.Secret_basic.Project,
+            SecretId = google_secret_manager_secret.Secret_basic.Secret_id,
+            Role = "roles/secretmanager.secretAccessor",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/secretmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := secretmanager.NewSecretIamBinding(ctx, "binding", &secretmanager.SecretIamBindingArgs{
+			Project:  pulumi.Any(google_secret_manager_secret.Secret - basic.Project),
+			SecretId: pulumi.Any(google_secret_manager_secret.Secret - basic.Secret_id),
+			Role:     pulumi.String("roles/secretmanager.secretAccessor"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_secret\_manager\_secret\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.secretmanager.SecretIamMember("member", {
+    project: google_secret_manager_secret["secret-basic"].project,
+    secretId: google_secret_manager_secret["secret-basic"].secret_id,
+    role: "roles/secretmanager.secretAccessor",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.secretmanager.SecretIamMember("member",
+    project=google_secret_manager_secret["secret-basic"]["project"],
+    secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
+    role="roles/secretmanager.secretAccessor",
+    member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.SecretManager.SecretIamMember("member", new Gcp.SecretManager.SecretIamMemberArgs
+        {
+            Project = google_secret_manager_secret.Secret_basic.Project,
+            SecretId = google_secret_manager_secret.Secret_basic.Secret_id,
+            Role = "roles/secretmanager.secretAccessor",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/secretmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := secretmanager.NewSecretIamMember(ctx, "member", &secretmanager.SecretIamMemberArgs{
+			Project:  pulumi.Any(google_secret_manager_secret.Secret - basic.Project),
+			SecretId: pulumi.Any(google_secret_manager_secret.Secret - basic.Secret_id),
+			Role:     pulumi.String("roles/secretmanager.secretAccessor"),
+			Member:   pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a SecretIamPolicy Resource {#create}
@@ -829,6 +1066,32 @@ If it is not provided, the project will be parsed from the identifier of the par
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* projects/{{project}}/secrets/{{secret_id}} * {{project}}/{{secret_id}} * {{secret_id}} Any variables not passed in the import command will be taken from the provider configuration. Secret Manager secret IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:secretmanager/secretIamPolicy:SecretIamPolicy editor "projects/{{project}}/secrets/{{secret_id}} roles/secretmanager.secretAccessor user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:secretmanager/secretIamPolicy:SecretIamPolicy editor "projects/{{project}}/secrets/{{secret_id}} roles/secretmanager.secretAccessor"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:secretmanager/secretIamPolicy:SecretIamPolicy editor projects/{{project}}/secrets/{{secret_id}}
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

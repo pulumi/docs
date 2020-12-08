@@ -22,6 +22,97 @@ To get more information about Service, see:
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Monitoring Service Custom
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom = new Gcp.Monitoring.CustomService("custom", new Gcp.Monitoring.CustomServiceArgs
+        {
+            DisplayName = "My Custom Service custom-srv",
+            ServiceId = "custom-srv",
+            Telemetry = new Gcp.Monitoring.Inputs.CustomServiceTelemetryArgs
+            {
+                ResourceName = "//product.googleapis.com/foo/foo/services/test",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := monitoring.NewCustomService(ctx, "custom", &monitoring.CustomServiceArgs{
+			DisplayName: pulumi.String("My Custom Service custom-srv"),
+			ServiceId:   pulumi.String("custom-srv"),
+			Telemetry: &monitoring.CustomServiceTelemetryArgs{
+				ResourceName: pulumi.String("//product.googleapis.com/foo/foo/services/test"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom = gcp.monitoring.CustomService("custom",
+    display_name="My Custom Service custom-srv",
+    service_id="custom-srv",
+    telemetry=gcp.monitoring.CustomServiceTelemetryArgs(
+        resource_name="//product.googleapis.com/foo/foo/services/test",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom = new gcp.monitoring.CustomService("custom", {
+    displayName: "My Custom Service custom-srv",
+    serviceId: "custom-srv",
+    telemetry: {
+        resourceName: "//product.googleapis.com/foo/foo/services/test",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomService Resource {#create}
@@ -1039,6 +1130,16 @@ https://cloud.google.com/apis/design/resource_names.
 
 
 
+
+
+## Import
+
+
+Service can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/customService:CustomService default {{name}}
+```
 
 
 

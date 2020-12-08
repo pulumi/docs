@@ -18,6 +18,191 @@ To get more information about Device, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/iot/docs/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloudiot Device Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registry = new Gcp.Iot.Registry("registry", new Gcp.Iot.RegistryArgs
+        {
+        });
+        var test_device = new Gcp.Iot.Device("test-device", new Gcp.Iot.DeviceArgs
+        {
+            Registry = registry.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		registry, err := iot.NewRegistry(ctx, "registry", nil)
+		if err != nil {
+			return err
+		}
+		_, err = iot.NewDevice(ctx, "test_device", &iot.DeviceArgs{
+			Registry: registry.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+registry = gcp.iot.Registry("registry")
+test_device = gcp.iot.Device("test-device", registry=registry.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const registry = new gcp.iot.Registry("registry", {});
+const test_device = new gcp.iot.Device("test-device", {registry: registry.id});
+```
+
+{{% /example %}}
+
+### Cloudiot Device Full
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registry = new Gcp.Iot.Registry("registry", new Gcp.Iot.RegistryArgs
+        {
+        });
+        var test_device = new Gcp.Iot.Device("test-device", new Gcp.Iot.DeviceArgs
+        {
+            Registry = registry.Id,
+            Credentials = 
+            {
+                new Gcp.Iot.Inputs.DeviceCredentialArgs
+                {
+                    PublicKey = new Gcp.Iot.Inputs.DeviceCredentialPublicKeyArgs
+                    {
+                        Format = "RSA_PEM",
+                        Key = File.ReadAllText("test-fixtures/rsa_public.pem"),
+                    },
+                },
+            },
+            Blocked = false,
+            LogLevel = "INFO",
+            Metadata = 
+            {
+                { "test_key_1", "test_value_1" },
+            },
+            GatewayConfig = new Gcp.Iot.Inputs.DeviceGatewayConfigArgs
+            {
+                GatewayType = "NON_GATEWAY",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+registry = gcp.iot.Registry("registry")
+test_device = gcp.iot.Device("test-device",
+    registry=registry.id,
+    credentials=[gcp.iot.DeviceCredentialArgs(
+        public_key={
+            "format": "RSA_PEM",
+            "key": (lambda path: open(path).read())("test-fixtures/rsa_public.pem"),
+        },
+    )],
+    blocked=False,
+    log_level="INFO",
+    metadata={
+        "test_key_1": "test_value_1",
+    },
+    gateway_config=gcp.iot.DeviceGatewayConfigArgs(
+        gateway_type="NON_GATEWAY",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const registry = new gcp.iot.Registry("registry", {});
+const test_device = new gcp.iot.Device("test-device", {
+    registry: registry.id,
+    credentials: [{
+        publicKey: {
+            format: "RSA_PEM",
+            key: fs.readFileSync("test-fixtures/rsa_public.pem"),
+        },
+    }],
+    blocked: false,
+    logLevel: "INFO",
+    metadata: {
+        test_key_1: "test_value_1",
+    },
+    gatewayConfig: {
+        gatewayType: "NON_GATEWAY",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Device Resource {#create}
@@ -3017,6 +3202,16 @@ The most recent time at which the device accessed the gateway specified in last_
 
 
 
+
+
+## Import
+
+
+Device can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:iot/device:Device default {{registry}}/devices/{{name}}
+```
 
 
 

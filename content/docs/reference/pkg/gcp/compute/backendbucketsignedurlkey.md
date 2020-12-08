@@ -21,6 +21,136 @@ To get more information about BackendBucketSignedUrlKey, see:
 > **Warning:** All arguments including `key_value` will be stored in the raw
 state as plain-text.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Backend Bucket Signed Url Key
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var urlSignature = new Random.RandomId("urlSignature", new Random.RandomIdArgs
+        {
+            ByteLength = 16,
+        });
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+            Location = "EU",
+        });
+        var testBackend = new Gcp.Compute.BackendBucket("testBackend", new Gcp.Compute.BackendBucketArgs
+        {
+            Description = "Contains beautiful images",
+            BucketName = bucket.Name,
+            EnableCdn = true,
+        });
+        var backendKey = new Gcp.Compute.BackendBucketSignedUrlKey("backendKey", new Gcp.Compute.BackendBucketSignedUrlKeyArgs
+        {
+            KeyValue = urlSignature.B64Url,
+            BackendBucket = testBackend.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		urlSignature, err := random.NewRandomId(ctx, "urlSignature", &random.RandomIdArgs{
+			ByteLength: pulumi.Int(16),
+		})
+		if err != nil {
+			return err
+		}
+		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+			Location: pulumi.String("EU"),
+		})
+		if err != nil {
+			return err
+		}
+		testBackend, err := compute.NewBackendBucket(ctx, "testBackend", &compute.BackendBucketArgs{
+			Description: pulumi.String("Contains beautiful images"),
+			BucketName:  bucket.Name,
+			EnableCdn:   pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendBucketSignedUrlKey(ctx, "backendKey", &compute.BackendBucketSignedUrlKeyArgs{
+			KeyValue:      urlSignature.B64Url,
+			BackendBucket: testBackend.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+url_signature = random.RandomId("urlSignature", byte_length=16)
+bucket = gcp.storage.Bucket("bucket", location="EU")
+test_backend = gcp.compute.BackendBucket("testBackend",
+    description="Contains beautiful images",
+    bucket_name=bucket.name,
+    enable_cdn=True)
+backend_key = gcp.compute.BackendBucketSignedUrlKey("backendKey",
+    key_value=url_signature.b64_url,
+    backend_bucket=test_backend.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const urlSignature = new random.RandomId("urlSignature", {byteLength: 16});
+const bucket = new gcp.storage.Bucket("bucket", {location: "EU"});
+const testBackend = new gcp.compute.BackendBucket("testBackend", {
+    description: "Contains beautiful images",
+    bucketName: bucket.name,
+    enableCdn: true,
+});
+const backendKey = new gcp.compute.BackendBucketSignedUrlKey("backendKey", {
+    keyValue: urlSignature.b64Url,
+    backendBucket: testBackend.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackendBucketSignedUrlKey Resource {#create}
@@ -846,6 +976,12 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+This resource does not support import.
 
 
 

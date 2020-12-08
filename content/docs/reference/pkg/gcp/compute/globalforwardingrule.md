@@ -18,6 +18,752 @@ balancing.
 For more information, see
 https://cloud.google.com/compute/docs/load-balancing/http/
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Global Forwarding Rule Http
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+        {
+            RequestPath = "/",
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+        });
+        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+        {
+            PortName = "http",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                defaultHttpHealthCheck.Id,
+            },
+        });
+        var defaultURLMap = new Gcp.Compute.URLMap("defaultURLMap", new Gcp.Compute.URLMapArgs
+        {
+            Description = "a description",
+            DefaultService = defaultBackendService.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.URLMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.URLMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = defaultBackendService.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.URLMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/*",
+                            },
+                            Service = defaultBackendService.Id,
+                        },
+                    },
+                },
+            },
+        });
+        var defaultTargetHttpProxy = new Gcp.Compute.TargetHttpProxy("defaultTargetHttpProxy", new Gcp.Compute.TargetHttpProxyArgs
+        {
+            Description = "a description",
+            UrlMap = defaultURLMap.Id,
+        });
+        var defaultGlobalForwardingRule = new Gcp.Compute.GlobalForwardingRule("defaultGlobalForwardingRule", new Gcp.Compute.GlobalForwardingRuleArgs
+        {
+            Target = defaultTargetHttpProxy.Id,
+            PortRange = "80",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			PortName:   pulumi.String("http"),
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHttpHealthCheck.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		defaultURLMap, err := compute.NewURLMap(ctx, "defaultURLMap", &compute.URLMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: defaultBackendService.ID(),
+			HostRules: compute.URLMapHostRuleArray{
+				&compute.URLMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.URLMapPathMatcherArray{
+				&compute.URLMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: defaultBackendService.ID(),
+					PathRules: compute.URLMapPathMatcherPathRuleArray{
+						&compute.URLMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/*"),
+							},
+							Service: defaultBackendService.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultTargetHttpProxy, err := compute.NewTargetHttpProxy(ctx, "defaultTargetHttpProxy", &compute.TargetHttpProxyArgs{
+			Description: pulumi.String("a description"),
+			UrlMap:      defaultURLMap.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewGlobalForwardingRule(ctx, "defaultGlobalForwardingRule", &compute.GlobalForwardingRuleArgs{
+			Target:    defaultTargetHttpProxy.ID(),
+			PortRange: pulumi.String("80"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_http_health_check.id])
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    description="a description",
+    default_service=default_backend_service.id,
+    host_rules=[gcp.compute.URLMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.URLMapPathMatcherArgs(
+        name="allpaths",
+        default_service=default_backend_service.id,
+        path_rules=[gcp.compute.URLMapPathMatcherPathRuleArgs(
+            paths=["/*"],
+            service=default_backend_service.id,
+        )],
+    )])
+default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy",
+    description="a description",
+    url_map=default_url_map.id)
+default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
+    target=default_target_http_proxy.id,
+    port_range="80")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultHttpHealthCheck.id],
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    description: "a description",
+    defaultService: defaultBackendService.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.id,
+        pathRules: [{
+            paths: ["/*"],
+            service: defaultBackendService.id,
+        }],
+    }],
+});
+const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {
+    description: "a description",
+    urlMap: defaultURLMap.id,
+});
+const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
+    target: defaultTargetHttpProxy.id,
+    portRange: "80",
+});
+```
+
+{{% /example %}}
+
+### Global Forwarding Rule Internal
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debianImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var instanceTemplate = new Gcp.Compute.InstanceTemplate("instanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+        {
+            MachineType = "e2-medium",
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+                {
+                    Network = "default",
+                },
+            },
+            Disks = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+                {
+                    SourceImage = debianImage.Apply(debianImage => debianImage.SelfLink),
+                    AutoDelete = true,
+                    Boot = true,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var igm = new Gcp.Compute.InstanceGroupManager("igm", new Gcp.Compute.InstanceGroupManagerArgs
+        {
+            Versions = 
+            {
+                new Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs
+                {
+                    InstanceTemplate = instanceTemplate.Id,
+                    Name = "primary",
+                },
+            },
+            BaseInstanceName = "internal-glb",
+            Zone = "us-central1-f",
+            TargetSize = 1,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+        {
+            PortName = "http",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            LoadBalancingScheme = "INTERNAL_SELF_MANAGED",
+            Backends = 
+            {
+                new Gcp.Compute.Inputs.BackendServiceBackendArgs
+                {
+                    Group = igm.InstanceGroup,
+                    BalancingMode = "RATE",
+                    CapacityScaler = 0.4,
+                    MaxRatePerInstance = 50,
+                },
+            },
+            HealthChecks = 
+            {
+                defaultHealthCheck.Id,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultURLMap = new Gcp.Compute.URLMap("defaultURLMap", new Gcp.Compute.URLMapArgs
+        {
+            Description = "a description",
+            DefaultService = defaultBackendService.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.URLMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.URLMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = defaultBackendService.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.URLMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/*",
+                            },
+                            Service = defaultBackendService.Id,
+                        },
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultTargetHttpProxy = new Gcp.Compute.TargetHttpProxy("defaultTargetHttpProxy", new Gcp.Compute.TargetHttpProxyArgs
+        {
+            Description = "a description",
+            UrlMap = defaultURLMap.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultGlobalForwardingRule = new Gcp.Compute.GlobalForwardingRule("defaultGlobalForwardingRule", new Gcp.Compute.GlobalForwardingRuleArgs
+        {
+            Target = defaultTargetHttpProxy.Id,
+            PortRange = "80",
+            LoadBalancingScheme = "INTERNAL_SELF_MANAGED",
+            IpAddress = "0.0.0.0",
+            MetadataFilters = 
+            {
+                new Gcp.Compute.Inputs.GlobalForwardingRuleMetadataFilterArgs
+                {
+                    FilterMatchCriteria = "MATCH_ANY",
+                    FilterLabels = 
+                    {
+                        new Gcp.Compute.Inputs.GlobalForwardingRuleMetadataFilterFilterLabelArgs
+                        {
+                            Name = "PLANET",
+                            Value = "MARS",
+                        },
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debianImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		instanceTemplate, err := compute.NewInstanceTemplate(ctx, "instanceTemplate", &compute.InstanceTemplateArgs{
+			MachineType: pulumi.String("e2-medium"),
+			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+				&compute.InstanceTemplateNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+				},
+			},
+			Disks: compute.InstanceTemplateDiskArray{
+				&compute.InstanceTemplateDiskArgs{
+					SourceImage: pulumi.String(debianImage.SelfLink),
+					AutoDelete:  pulumi.Bool(true),
+					Boot:        pulumi.Bool(true),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		igm, err := compute.NewInstanceGroupManager(ctx, "igm", &compute.InstanceGroupManagerArgs{
+			Versions: compute.InstanceGroupManagerVersionArray{
+				&compute.InstanceGroupManagerVersionArgs{
+					InstanceTemplate: instanceTemplate.ID(),
+					Name:             pulumi.String("primary"),
+				},
+			},
+			BaseInstanceName: pulumi.String("internal-glb"),
+			Zone:             pulumi.String("us-central1-f"),
+			TargetSize:       pulumi.Int(1),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			PortName:            pulumi.String("http"),
+			Protocol:            pulumi.String("HTTP"),
+			TimeoutSec:          pulumi.Int(10),
+			LoadBalancingScheme: pulumi.String("INTERNAL_SELF_MANAGED"),
+			Backends: compute.BackendServiceBackendArray{
+				&compute.BackendServiceBackendArgs{
+					Group:              igm.InstanceGroup,
+					BalancingMode:      pulumi.String("RATE"),
+					CapacityScaler:     pulumi.Float64(0.4),
+					MaxRatePerInstance: pulumi.Float64(50),
+				},
+			},
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHealthCheck.ID(),
+			}),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultURLMap, err := compute.NewURLMap(ctx, "defaultURLMap", &compute.URLMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: defaultBackendService.ID(),
+			HostRules: compute.URLMapHostRuleArray{
+				&compute.URLMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.URLMapPathMatcherArray{
+				&compute.URLMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: defaultBackendService.ID(),
+					PathRules: compute.URLMapPathMatcherPathRuleArray{
+						&compute.URLMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/*"),
+							},
+							Service: defaultBackendService.ID(),
+						},
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultTargetHttpProxy, err := compute.NewTargetHttpProxy(ctx, "defaultTargetHttpProxy", &compute.TargetHttpProxyArgs{
+			Description: pulumi.String("a description"),
+			UrlMap:      defaultURLMap.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewGlobalForwardingRule(ctx, "defaultGlobalForwardingRule", &compute.GlobalForwardingRuleArgs{
+			Target:              defaultTargetHttpProxy.ID(),
+			PortRange:           pulumi.String("80"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_SELF_MANAGED"),
+			IpAddress:           pulumi.String("0.0.0.0"),
+			MetadataFilters: compute.GlobalForwardingRuleMetadataFilterArray{
+				&compute.GlobalForwardingRuleMetadataFilterArgs{
+					FilterMatchCriteria: pulumi.String("MATCH_ANY"),
+					FilterLabels: compute.GlobalForwardingRuleMetadataFilterFilterLabelArray{
+						&compute.GlobalForwardingRuleMetadataFilterFilterLabelArgs{
+							Name:  pulumi.String("PLANET"),
+							Value: pulumi.String("MARS"),
+						},
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    machine_type="e2-medium",
+    network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+        network="default",
+    )],
+    disks=[gcp.compute.InstanceTemplateDiskArgs(
+        source_image=debian_image.self_link,
+        auto_delete=True,
+        boot=True,
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+igm = gcp.compute.InstanceGroupManager("igm",
+    versions=[gcp.compute.InstanceGroupManagerVersionArgs(
+        instance_template=instance_template.id,
+        name="primary",
+    )],
+    base_instance_name="internal-glb",
+    zone="us-central1-f",
+    target_size=1,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+        port=80,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    backends=[gcp.compute.BackendServiceBackendArgs(
+        group=igm.instance_group,
+        balancing_mode="RATE",
+        capacity_scaler=0.4,
+        max_rate_per_instance=50,
+    )],
+    health_checks=[default_health_check.id],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    description="a description",
+    default_service=default_backend_service.id,
+    host_rules=[gcp.compute.URLMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.URLMapPathMatcherArgs(
+        name="allpaths",
+        default_service=default_backend_service.id,
+        path_rules=[gcp.compute.URLMapPathMatcherPathRuleArgs(
+            paths=["/*"],
+            service=default_backend_service.id,
+        )],
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy",
+    description="a description",
+    url_map=default_url_map.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
+    target=default_target_http_proxy.id,
+    port_range="80",
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    ip_address="0.0.0.0",
+    metadata_filters=[gcp.compute.GlobalForwardingRuleMetadataFilterArgs(
+        filter_match_criteria="MATCH_ANY",
+        filter_labels=[gcp.compute.GlobalForwardingRuleMetadataFilterFilterLabelArgs(
+            name="PLANET",
+            value="MARS",
+        )],
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    machineType: "e2-medium",
+    networkInterfaces: [{
+        network: "default",
+    }],
+    disks: [{
+        sourceImage: debianImage.then(debianImage => debianImage.selfLink),
+        autoDelete: true,
+        boot: true,
+    }],
+}, {
+    provider: google_beta,
+});
+const igm = new gcp.compute.InstanceGroupManager("igm", {
+    versions: [{
+        instanceTemplate: instanceTemplate.id,
+        name: "primary",
+    }],
+    baseInstanceName: "internal-glb",
+    zone: "us-central1-f",
+    targetSize: 1,
+}, {
+    provider: google_beta,
+});
+const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcpHealthCheck: {
+        port: "80",
+    },
+}, {
+    provider: google_beta,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    backends: [{
+        group: igm.instanceGroup,
+        balancingMode: "RATE",
+        capacityScaler: 0.4,
+        maxRatePerInstance: 50,
+    }],
+    healthChecks: [defaultHealthCheck.id],
+}, {
+    provider: google_beta,
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    description: "a description",
+    defaultService: defaultBackendService.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.id,
+        pathRules: [{
+            paths: ["/*"],
+            service: defaultBackendService.id,
+        }],
+    }],
+}, {
+    provider: google_beta,
+});
+const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {
+    description: "a description",
+    urlMap: defaultURLMap.id,
+}, {
+    provider: google_beta,
+});
+const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
+    target: defaultTargetHttpProxy.id,
+    portRange: "80",
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    ipAddress: "0.0.0.0",
+    metadataFilters: [{
+        filterMatchCriteria: "MATCH_ANY",
+        filterLabels: [{
+            name: "PLANET",
+            value: "MARS",
+        }],
+    }],
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GlobalForwardingRule Resource {#create}
@@ -2569,6 +3315,24 @@ length of 1024 characters.
 
 
 
+
+
+## Import
+
+
+GlobalForwardingRule can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/globalForwardingRule:GlobalForwardingRule default projects/{{project}}/global/forwardingRules/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalForwardingRule:GlobalForwardingRule default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalForwardingRule:GlobalForwardingRule default {{name}}
+```
 
 
 

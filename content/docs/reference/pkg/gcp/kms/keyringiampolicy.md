@@ -20,6 +20,543 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 
 > **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_kms\_key\_ring\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+)])
+key_ring = gcp.kms.KeyRingIAMPolicy("keyRing",
+    key_ring_id=keyring.id,
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/editor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var keyRing = new Gcp.Kms.KeyRingIAMPolicy("keyRing", new Gcp.Kms.KeyRingIAMPolicyArgs
+        {
+            KeyRingId = keyring.Id,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.NewKeyRingIAMPolicy(ctx, "keyRing", &kms.KeyRingIAMPolicyArgs{
+			KeyRingId:  keyring.ID(),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+    condition=gcp.organizations.GetIAMPolicyBindingConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ),
+)])
+key_ring = gcp.kms.KeyRingIAMPolicy("keyRing",
+    key_ring_id=keyring.id,
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/editor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                    Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                    {
+                        Title = "expires_after_2019_12_31",
+                        Description = "Expiring at midnight of 2019-12-31",
+                        Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                    },
+                },
+            },
+        }));
+        var keyRing = new Gcp.Kms.KeyRingIAMPolicy("keyRing", new Gcp.Kms.KeyRingIAMPolicyArgs
+        {
+            KeyRingId = keyring.Id,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+					Condition: organizations.GetIAMPolicyBindingCondition{
+						Title:       "expires_after_2019_12_31",
+						Description: "Expiring at midnight of 2019-12-31",
+						Expression:  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.NewKeyRingIAMPolicy(ctx, "keyRing", &kms.KeyRingIAMPolicyArgs{
+			KeyRingId:  keyring.ID(),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_kms\_key\_ring\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMBinding("keyRing",
+    key_ring_id="your-key-ring-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMBinding("keyRing", new Gcp.Kms.KeyRingIAMBindingArgs
+        {
+            KeyRingId = "your-key-ring-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kms.NewKeyRingIAMBinding(ctx, "keyRing", &kms.KeyRingIAMBindingArgs{
+			KeyRingId: pulumi.String("your-key-ring-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMBinding("keyRing",
+    condition=gcp.kms.KeyRingIAMBindingConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    key_ring_id="your-key-ring-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMBinding("keyRing", new Gcp.Kms.KeyRingIAMBindingArgs
+        {
+            Condition = new Gcp.Kms.Inputs.KeyRingIAMBindingConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            KeyRingId = "your-key-ring-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kms.NewKeyRingIAMBinding(ctx, "keyRing", &kms.KeyRingIAMBindingArgs{
+			Condition: &kms.KeyRingIAMBindingConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			KeyRingId: pulumi.String("your-key-ring-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_kms\_key\_ring\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMMember("keyRing",
+    key_ring_id="your-key-ring-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMMember("keyRing", new Gcp.Kms.KeyRingIAMMemberArgs
+        {
+            KeyRingId = "your-key-ring-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kms.NewKeyRingIAMMember(ctx, "keyRing", &kms.KeyRingIAMMemberArgs{
+			KeyRingId: pulumi.String("your-key-ring-id"),
+			Member:    pulumi.String("user:jane@example.com"),
+			Role:      pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMMember("keyRing",
+    condition=gcp.kms.KeyRingIAMMemberConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    key_ring_id="your-key-ring-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMMember("keyRing", new Gcp.Kms.KeyRingIAMMemberArgs
+        {
+            Condition = new Gcp.Kms.Inputs.KeyRingIAMMemberConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            KeyRingId = "your-key-ring-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kms.NewKeyRingIAMMember(ctx, "keyRing", &kms.KeyRingIAMMemberArgs{
+			Condition: &kms.KeyRingIAMMemberConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			KeyRingId: pulumi.String("your-key-ring-id"),
+			Member:    pulumi.String("user:jane@example.com"),
+			Role:      pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a KeyRingIAMPolicy Resource {#create}
@@ -765,6 +1302,34 @@ a `gcp.organizations.getIAMPolicy` data source.
 
 
 
+
+
+## Import
+
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `key_ring_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `key_ring_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `key_ring_id`, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam your-project-id/location-name/key-ring-name
+```
 
 
 

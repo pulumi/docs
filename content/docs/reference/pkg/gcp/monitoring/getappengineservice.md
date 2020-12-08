@@ -25,6 +25,190 @@ To get more information about Service, see:
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Monitoring App Engine Service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+        });
+        var myapp = new Gcp.AppEngine.StandardAppVersion("myapp", new Gcp.AppEngine.StandardAppVersionArgs
+        {
+            VersionId = "v1",
+            Service = "myapp",
+            Runtime = "nodejs10",
+            Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+                    }),
+                },
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            DeleteServiceOnDestroy = false,
+        });
+        var srv = myapp.Service.Apply(service => Gcp.Monitoring.GetAppEngineService.InvokeAsync(new Gcp.Monitoring.GetAppEngineServiceArgs
+        {
+            ModuleId = service,
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		object, err := storage.NewBucketObject(ctx, "object", &storage.BucketObjectArgs{
+			Bucket: bucket.Name,
+			Source: pulumi.NewFileAsset("./test-fixtures/appengine/hello-world.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		myapp, err := appengine.NewStandardAppVersion(ctx, "myapp", &appengine.StandardAppVersionArgs{
+			VersionId: pulumi.String("v1"),
+			Service:   pulumi.String("myapp"),
+			Runtime:   pulumi.String("nodejs10"),
+			Entrypoint: &appengine.StandardAppVersionEntrypointArgs{
+				Shell: pulumi.String("node ./app.js"),
+			},
+			Deployment: &appengine.StandardAppVersionDeploymentArgs{
+				Zip: &appengine.StandardAppVersionDeploymentZipArgs{
+					SourceUrl: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+						bucketName := _args[0].(string)
+						objectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", bucketName, "/", objectName), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			EnvVariables: pulumi.StringMap{
+				"port": pulumi.String("8080"),
+			},
+			DeleteServiceOnDestroy: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp = gcp.appengine.StandardAppVersion("myapp",
+    version_id="v1",
+    service="myapp",
+    runtime="nodejs10",
+    entrypoint=gcp.appengine.StandardAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.StandardAppVersionDeploymentArgs(
+        zip=gcp.appengine.StandardAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
+    env_variables={
+        "port": "8080",
+    },
+    delete_service_on_destroy=False)
+srv = myapp.service.apply(lambda service: gcp.monitoring.get_app_engine_service(module_id=service))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myapp = new gcp.appengine.StandardAppVersion("myapp", {
+    versionId: "v1",
+    service: "myapp",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    deleteServiceOnDestroy: false,
+});
+const srv = myapp.service.apply(service => gcp.monitoring.getAppEngineService({
+    moduleId: service,
+}));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetAppEngineService {#using}
 

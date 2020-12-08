@@ -844,6 +844,20 @@ is attached to. The format is
 
 
 
+## Import
+
+
+Client can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:iap/client:Client default {{brand}}/identityAwareProxyClients/{{client_id}}
+```
+
+```sh
+ $ pulumi import gcp:iap/client:Client default {{brand}}/{{client_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

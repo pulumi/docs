@@ -20,6 +20,231 @@ Three different resources help you manage your IAM policy for Cloud Endpoints Se
 
 > **Note:** `gcp.endpoints.ServiceIamBinding` resources **can be** used in conjunction with `gcp.endpoints.ServiceIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_endpoints\_service\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.endpoints.ServiceIamPolicy("policy", {
+    serviceName: google_endpoints_service.endpoints_service.service_name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/viewer",
+    members=["user:jane@example.com"],
+)])
+policy = gcp.endpoints.ServiceIamPolicy("policy",
+    service_name=google_endpoints_service["endpoints_service"]["service_name"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/viewer",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Endpoints.ServiceIamPolicy("policy", new Gcp.Endpoints.ServiceIamPolicyArgs
+        {
+            ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/endpoints"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/viewer",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = endpoints.NewServiceIamPolicy(ctx, "policy", &endpoints.ServiceIamPolicyArgs{
+			ServiceName: pulumi.Any(google_endpoints_service.Endpoints_service.Service_name),
+			PolicyData:  pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_endpoints\_service\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.endpoints.ServiceIamBinding("binding", {
+    serviceName: google_endpoints_service.endpoints_service.service_name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.endpoints.ServiceIamBinding("binding",
+    service_name=google_endpoints_service["endpoints_service"]["service_name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Endpoints.ServiceIamBinding("binding", new Gcp.Endpoints.ServiceIamBindingArgs
+        {
+            ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/endpoints"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := endpoints.NewServiceIamBinding(ctx, "binding", &endpoints.ServiceIamBindingArgs{
+			ServiceName: pulumi.Any(google_endpoints_service.Endpoints_service.Service_name),
+			Role:        pulumi.String("roles/viewer"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_endpoints\_service\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.endpoints.ServiceIamMember("member", {
+    serviceName: google_endpoints_service.endpoints_service.service_name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.endpoints.ServiceIamMember("member",
+    service_name=google_endpoints_service["endpoints_service"]["service_name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Endpoints.ServiceIamMember("member", new Gcp.Endpoints.ServiceIamMemberArgs
+        {
+            ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/endpoints"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := endpoints.NewServiceIamMember(ctx, "member", &endpoints.ServiceIamMemberArgs{
+			ServiceName: pulumi.Any(google_endpoints_service.Endpoints_service.Service_name),
+			Role:        pulumi.String("roles/viewer"),
+			Member:      pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a ServiceIamMember Resource {#create}
@@ -1081,6 +1306,32 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* services/{{serviceName}} * {{serviceName}} Any variables not passed in the import command will be taken from the provider configuration. Cloud Endpoints service IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:endpoints/serviceIamMember:ServiceIamMember editor "services/{{serviceName}} roles/viewer user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:endpoints/serviceIamMember:ServiceIamMember editor "services/{{serviceName}} roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:endpoints/serviceIamMember:ServiceIamMember editor services/{{serviceName}}
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

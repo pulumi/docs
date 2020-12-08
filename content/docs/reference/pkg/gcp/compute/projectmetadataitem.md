@@ -15,6 +15,84 @@ a project in GCE. Using `gcp.compute.ProjectMetadataItem` lets you
 manage a single key/value setting in the provider rather than the entire
 project metadata map.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.ProjectMetadataItem("default", new Gcp.Compute.ProjectMetadataItemArgs
+        {
+            Key = "my_metadata",
+            Value = "my_value",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewProjectMetadataItem(ctx, "_default", &compute.ProjectMetadataItemArgs{
+			Key:   pulumi.String("my_metadata"),
+			Value: pulumi.String("my_value"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.ProjectMetadataItem("default",
+    key="my_metadata",
+    value="my_value")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultProjectMetadataItem = new gcp.compute.ProjectMetadataItem("default", {
+    key: "my_metadata",
+    value: "my_value",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProjectMetadataItem Resource {#create}
@@ -736,6 +814,16 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Project metadata items can be imported using the `key`, e.g.
+
+```sh
+ $ pulumi import gcp:compute/projectMetadataItem:ProjectMetadataItem default my_metadata
+```
 
 
 

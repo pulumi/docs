@@ -44,6 +44,228 @@ For more information see
 [the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Pub/Sub Notifications
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gcsAccount = Output.Create(Gcp.Storage.GetProjectServiceAccount.InvokeAsync());
+        var binding = new Gcp.PubSub.TopicIAMBinding("binding", new Gcp.PubSub.TopicIAMBindingArgs
+        {
+            Topic = google_pubsub_topic.Topic.Name,
+            Role = "roles/pubsub.publisher",
+            Members = 
+            {
+                gcsAccount.Apply(gcsAccount => $"serviceAccount:{gcsAccount.EmailAddress}"),
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		gcsAccount, err := storage.GetProjectServiceAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewTopicIAMBinding(ctx, "binding", &pubsub.TopicIAMBindingArgs{
+			Topic: pulumi.Any(google_pubsub_topic.Topic.Name),
+			Role:  pulumi.String("roles/pubsub.publisher"),
+			Members: pulumi.StringArray{
+				pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", gcsAccount.EmailAddress)),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+gcs_account = gcp.storage.get_project_service_account()
+binding = gcp.pubsub.TopicIAMBinding("binding",
+    topic=google_pubsub_topic["topic"]["name"],
+    role="roles/pubsub.publisher",
+    members=[f"serviceAccount:{gcs_account.email_address}"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
+const binding = new gcp.pubsub.TopicIAMBinding("binding", {
+    topic: google_pubsub_topic.topic.name,
+    role: "roles/pubsub.publisher",
+    members: [gcsAccount.then(gcsAccount => `serviceAccount:${gcsAccount.emailAddress}`)],
+});
+```
+
+{{% /example %}}
+
+### Cloud KMS Keys
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gcsAccount = Output.Create(Gcp.Storage.GetProjectServiceAccount.InvokeAsync());
+        var binding = new Gcp.Kms.CryptoKeyIAMBinding("binding", new Gcp.Kms.CryptoKeyIAMBindingArgs
+        {
+            CryptoKeyId = "your-crypto-key-id",
+            Role = "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+            Members = 
+            {
+                gcsAccount.Apply(gcsAccount => $"serviceAccount:{gcsAccount.EmailAddress}"),
+            },
+        });
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+            Encryption = new Gcp.Storage.Inputs.BucketEncryptionArgs
+            {
+                DefaultKmsKeyName = "your-crypto-key-id",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                binding,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		gcsAccount, err := storage.GetProjectServiceAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		binding, err := kms.NewCryptoKeyIAMBinding(ctx, "binding", &kms.CryptoKeyIAMBindingArgs{
+			CryptoKeyId: pulumi.String("your-crypto-key-id"),
+			Role:        pulumi.String("roles/cloudkms.cryptoKeyEncrypterDecrypter"),
+			Members: pulumi.StringArray{
+				pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", gcsAccount.EmailAddress)),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+			Encryption: &storage.BucketEncryptionArgs{
+				DefaultKmsKeyName: pulumi.String("your-crypto-key-id"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			binding,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+gcs_account = gcp.storage.get_project_service_account()
+binding = gcp.kms.CryptoKeyIAMBinding("binding",
+    crypto_key_id="your-crypto-key-id",
+    role="roles/cloudkms.cryptoKeyEncrypterDecrypter",
+    members=[f"serviceAccount:{gcs_account.email_address}"])
+bucket = gcp.storage.Bucket("bucket", encryption=gcp.storage.BucketEncryptionArgs(
+    default_kms_key_name="your-crypto-key-id",
+),
+opts=pulumi.ResourceOptions(depends_on=[binding]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
+const binding = new gcp.kms.CryptoKeyIAMBinding("binding", {
+    cryptoKeyId: "your-crypto-key-id",
+    role: "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+    members: [gcsAccount.then(gcsAccount => `serviceAccount:${gcsAccount.emailAddress}`)],
+});
+const bucket = new gcp.storage.Bucket("bucket", {encryption: {
+    defaultKmsKeyName: "your-crypto-key-id",
+}}, {
+    dependsOn: [binding],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetProjectServiceAccount {#using}
 
