@@ -67,6 +67,24 @@ class MyStack : Stack
             MacAddress = "FA:16:3E:1B:6D:32",
             Hypervisor = "azure",
         });
+        // MANAGED Purchased Pool
+        var testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq2 = new F5BigIP.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2", new F5BigIP.CommonLicenseManageBigIqArgs
+        {
+            BigiqAddress = @var.Bigiq,
+            BigiqUser = @var.Bigiq_un,
+            BigiqPassword = @var.Bigiq_pw,
+            LicensePoolname = "purchased_pool_name",
+            AssignmentType = "MANAGED",
+        });
+        // UNMANAGED Purchased Pool
+        var testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 = new F5BigIP.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3", new F5BigIP.CommonLicenseManageBigIqArgs
+        {
+            BigiqAddress = @var.Bigiq,
+            BigiqUser = @var.Bigiq_un,
+            BigiqPassword = @var.Bigiq_pw,
+            LicensePoolname = "purchased_pool_name",
+            AssignmentType = "UNMANAGED",
+        });
     }
 
 }
@@ -129,6 +147,26 @@ func main() {
 		if err != nil {
 			return err
 		}
+		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq2", &f5bigip.CommonLicenseManageBigIqArgs{
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
+			LicensePoolname: pulumi.String("purchased_pool_name"),
+			AssignmentType:  pulumi.String("MANAGED"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3", &f5bigip.CommonLicenseManageBigIqArgs{
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
+			LicensePoolname: pulumi.String("purchased_pool_name"),
+			AssignmentType:  pulumi.String("UNMANAGED"),
+		})
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
@@ -173,6 +211,20 @@ test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_bi
     assignment_type="UNREACHABLE",
     mac_address="FA:16:3E:1B:6D:32",
     hypervisor="azure")
+# MANAGED Purchased Pool
+test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_big_iq2 = f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2",
+    bigiq_address=var["bigiq"],
+    bigiq_user=var["bigiq_un"],
+    bigiq_password=var["bigiq_pw"],
+    license_poolname="purchased_pool_name",
+    assignment_type="MANAGED")
+# UNMANAGED Purchased Pool
+test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_big_iq3 = f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3",
+    bigiq_address=var["bigiq"],
+    bigiq_user=var["bigiq_un"],
+    bigiq_password=var["bigiq_pw"],
+    license_poolname="purchased_pool_name",
+    assignment_type="UNMANAGED")
 ```
 
 {{% /example %}}
@@ -218,6 +270,22 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
     assignmentType: "UNREACHABLE",
     macAddress: "FA:16:3E:1B:6D:32",
     hypervisor: "azure",
+});
+// MANAGED Purchased Pool
+const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq2 = new f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2", {
+    bigiqAddress: _var.bigiq,
+    bigiqUser: _var.bigiq_un,
+    bigiqPassword: _var.bigiq_pw,
+    licensePoolname: "purchased_pool_name",
+    assignmentType: "MANAGED",
+});
+// UNMANAGED Purchased Pool
+const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 = new f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3", {
+    bigiqAddress: _var.bigiq,
+    bigiqUser: _var.bigiq_un,
+    bigiqPassword: _var.bigiq_pw,
+    licensePoolname: "purchased_pool_name",
+    assignmentType: "UNMANAGED",
 });
 ```
 

@@ -41,7 +41,7 @@ class MyStack : Stack
             Forcehttp10response = "disabled",
             IdleTimeout = 300,
             MaxheaderSize = 32768,
-            Name = "sjfasthttpprofile",
+            Name = "/Common/sjfasthttpprofile",
         });
     }
 
@@ -72,7 +72,7 @@ func main() {
 			Forcehttp10response:         pulumi.String("disabled"),
 			IdleTimeout:                 pulumi.Int(300),
 			MaxheaderSize:               pulumi.Int(32768),
-			Name:                        pulumi.String("sjfasthttpprofile"),
+			Name:                        pulumi.String("/Common/sjfasthttpprofile"),
 		})
 		if err != nil {
 			return err
@@ -100,7 +100,7 @@ sjfasthttpprofile = f5bigip.ltm.ProfileFastHttp("sjfasthttpprofile",
     forcehttp10response="disabled",
     idle_timeout=300,
     maxheader_size=32768,
-    name="sjfasthttpprofile")
+    name="/Common/sjfasthttpprofile")
 ```
 
 {{% /example %}}
@@ -122,7 +122,7 @@ const sjfasthttpprofile = new f5bigip.ltm.ProfileFastHttp("sjfasthttpprofile", {
     forcehttp10response: "disabled",
     idleTimeout: 300,
     maxheaderSize: 32768,
-    name: "sjfasthttpprofile",
+    name: "/Common/sjfasthttpprofile",
 });
 ```
 

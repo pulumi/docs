@@ -389,6 +389,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">assignment_type</span><span class="o">=</span><span class="s2">&quot;UNREACHABLE&quot;</span><span class="p">,</span>
     <span class="n">mac_address</span><span class="o">=</span><span class="s2">&quot;FA:16:3E:1B:6D:32&quot;</span><span class="p">,</span>
     <span class="n">hypervisor</span><span class="o">=</span><span class="s2">&quot;azure&quot;</span><span class="p">)</span>
+<span class="c1"># MANAGED Purchased Pool</span>
+<span class="n">test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_big_iq2</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">CommonLicenseManageBigIq</span><span class="p">(</span><span class="s2">&quot;testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2&quot;</span><span class="p">,</span>
+    <span class="n">bigiq_address</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;bigiq&quot;</span><span class="p">],</span>
+    <span class="n">bigiq_user</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;bigiq_un&quot;</span><span class="p">],</span>
+    <span class="n">bigiq_password</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;bigiq_pw&quot;</span><span class="p">],</span>
+    <span class="n">license_poolname</span><span class="o">=</span><span class="s2">&quot;purchased_pool_name&quot;</span><span class="p">,</span>
+    <span class="n">assignment_type</span><span class="o">=</span><span class="s2">&quot;MANAGED&quot;</span><span class="p">)</span>
+<span class="c1"># UNMANAGED Purchased Pool</span>
+<span class="n">test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_big_iq3</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">CommonLicenseManageBigIq</span><span class="p">(</span><span class="s2">&quot;testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3&quot;</span><span class="p">,</span>
+    <span class="n">bigiq_address</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;bigiq&quot;</span><span class="p">],</span>
+    <span class="n">bigiq_user</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;bigiq_un&quot;</span><span class="p">],</span>
+    <span class="n">bigiq_password</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;bigiq_pw&quot;</span><span class="p">],</span>
+    <span class="n">license_poolname</span><span class="o">=</span><span class="s2">&quot;purchased_pool_name&quot;</span><span class="p">,</span>
+    <span class="n">assignment_type</span><span class="o">=</span><span class="s2">&quot;UNMANAGED&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -663,6 +677,74 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_f5bigip.Do.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.Do.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_f5bigip.EventServiceDiscovery">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.</code><code class="sig-name descname">EventServiceDiscovery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nodes</span><span class="p">:</span> <span class="n">Union[Sequence[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any], Awaitable[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any], Awaitable[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">taskid</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.EventServiceDiscovery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a EventServiceDiscovery resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] taskid: Name of the partition/tenant</p>
+<dl class="py method">
+<dt id="pulumi_f5bigip.EventServiceDiscovery.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nodes</span><span class="p">:</span> <span class="n">Union[Sequence[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any], Awaitable[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any], Awaitable[Union[EventServiceDiscoveryNodeArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">taskid</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_f5bigip.event_service_discovery.EventServiceDiscovery<a class="headerlink" href="#pulumi_f5bigip.EventServiceDiscovery.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EventServiceDiscovery resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>taskid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the partition/tenant</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_f5bigip.EventServiceDiscovery.taskid">
+<em class="property">property </em><code class="sig-name descname">taskid</code><a class="headerlink" href="#pulumi_f5bigip.EventServiceDiscovery.taskid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the partition/tenant</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_f5bigip.EventServiceDiscovery.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.EventServiceDiscovery.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_f5bigip.EventServiceDiscovery.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.EventServiceDiscovery.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

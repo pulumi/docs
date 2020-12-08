@@ -15,6 +15,11 @@ Explore the resources and functions of the ssl module in the f5 BIG-IP package.
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,7 +29,7 @@ Explore the resources and functions of the ssl module in the f5 BIG-IP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.5.2</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

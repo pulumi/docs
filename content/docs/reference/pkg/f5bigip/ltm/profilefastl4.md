@@ -39,7 +39,6 @@ class MyStack : Stack
             IptosToserver = "pass-through",
             KeepaliveInterval = "disabled",
             Name = "/Common/sjfastl4profile",
-            Partition = "Common",
         });
     }
 
@@ -69,7 +68,6 @@ func main() {
 			IptosToserver:         pulumi.String("pass-through"),
 			KeepaliveInterval:     pulumi.String("disabled"),
 			Name:                  pulumi.String("/Common/sjfastl4profile"),
-			Partition:             pulumi.String("Common"),
 		})
 		if err != nil {
 			return err
@@ -95,8 +93,7 @@ profile_fastl4 = f5bigip.ltm.ProfileFastL4("profileFastl4",
     iptos_toclient="pass-through",
     iptos_toserver="pass-through",
     keepalive_interval="disabled",
-    name="/Common/sjfastl4profile",
-    partition="Common")
+    name="/Common/sjfastl4profile")
 ```
 
 {{% /example %}}
@@ -117,7 +114,6 @@ const profileFastl4 = new f5bigip.ltm.ProfileFastL4("profile_fastl4", {
     iptosToserver: "pass-through",
     keepaliveInterval: "disabled", //This cannot take enabled
     name: "/Common/sjfastl4profile",
-    partition: "Common",
 });
 ```
 

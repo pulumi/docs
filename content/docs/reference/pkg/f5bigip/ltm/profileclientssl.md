@@ -33,7 +33,6 @@ class MyStack : Stack
             Ciphers = "DEFAULT",
             DefaultsFrom = "/Common/clientssl",
             Name = "/Common/test-ClientSsl",
-            Partition = "Common",
         });
     }
 
@@ -58,7 +57,6 @@ func main() {
 			Ciphers:      pulumi.String("DEFAULT"),
 			DefaultsFrom: pulumi.String("/Common/clientssl"),
 			Name:         pulumi.String("/Common/test-ClientSsl"),
-			Partition:    pulumi.String("Common"),
 		})
 		if err != nil {
 			return err
@@ -79,8 +77,7 @@ test__client_ssl = f5bigip.ltm.ProfileClientSsl("test-ClientSsl",
     authenticate="always",
     ciphers="DEFAULT",
     defaults_from="/Common/clientssl",
-    name="/Common/test-ClientSsl",
-    partition="Common")
+    name="/Common/test-ClientSsl")
 ```
 
 {{% /example %}}
@@ -96,7 +93,6 @@ const test_ClientSsl = new f5bigip.ltm.ProfileClientSsl("test-ClientSsl", {
     ciphers: "DEFAULT",
     defaultsFrom: "/Common/clientssl",
     name: "/Common/test-ClientSsl",
-    partition: "Common",
 });
 ```
 
@@ -793,7 +789,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -804,7 +800,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1364,7 +1360,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1375,7 +1371,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1935,7 +1931,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1946,7 +1942,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2506,7 +2502,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2517,7 +2513,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3283,7 +3279,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3294,7 +3290,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3854,7 +3850,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3865,7 +3861,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4425,7 +4421,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4436,7 +4432,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4996,7 +4992,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5007,7 +5003,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
+    <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
