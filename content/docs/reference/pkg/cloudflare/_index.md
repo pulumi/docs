@@ -21,6 +21,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="accessrule" title="AccessRule"><span class="symbol resource"></span>AccessRule</a></li>
     <li><a href="accessservicetoken" title="AccessServiceToken"><span class="symbol resource"></span>AccessServiceToken</a></li>
     <li><a href="accountmember" title="AccountMember"><span class="symbol resource"></span>AccountMember</a></li>
+    <li><a href="apitoken" title="ApiToken"><span class="symbol resource"></span>ApiToken</a></li>
     <li><a href="argo" title="Argo"><span class="symbol resource"></span>Argo</a></li>
     <li><a href="authenticatedoriginpulls" title="AuthenticatedOriginPulls"><span class="symbol resource"></span>AuthenticatedOriginPulls</a></li>
     <li><a href="authenticatedoriginpullscertificate" title="AuthenticatedOriginPullsCertificate"><span class="symbol resource"></span>AuthenticatedOriginPullsCertificate</a></li>
@@ -55,16 +56,19 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="workerskv" title="WorkersKv"><span class="symbol resource"></span>WorkersKv</a></li>
     <li><a href="workerskvnamespace" title="WorkersKvNamespace"><span class="symbol resource"></span>WorkersKvNamespace</a></li>
     <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
+    <li><a href="zonednssec" title="ZoneDnssec"><span class="symbol resource"></span>ZoneDnssec</a></li>
     <li><a href="zonelockdown" title="ZoneLockdown"><span class="symbol resource"></span>ZoneLockdown</a></li>
     <li><a href="zonesettingsoverride" title="ZoneSettingsOverride"><span class="symbol resource"></span>ZoneSettingsOverride</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getapitokenpermissiongroups" title="GetApiTokenPermissionGroups"><span class="symbol function"></span>GetApiTokenPermissionGroups</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getwafgroups" title="GetWafGroups"><span class="symbol function"></span>GetWafGroups</a></li>
     <li><a href="getwafpackages" title="GetWafPackages"><span class="symbol function"></span>GetWafPackages</a></li>
     <li><a href="getwafrules" title="GetWafRules"><span class="symbol function"></span>GetWafRules</a></li>
+    <li><a href="getzonednssec" title="GetZoneDnssec"><span class="symbol function"></span>GetZoneDnssec</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
@@ -77,7 +81,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
+	<dd>2.9.0</dd>
 </dl>
 
 

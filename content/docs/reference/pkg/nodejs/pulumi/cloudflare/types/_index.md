@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/cloudflare | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/cloudflare package."
-git_sha: "ad00fca86bcb72e7bf7125bacc18544a982b2943"
+git_sha: "8864280c0e85dd11db171220ffa684e2472a9ab8"
 block_external_search_index: true
 ---
 
