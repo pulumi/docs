@@ -43,7 +43,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,7 +103,7 @@ export const accountId = current.then(current => current.clientId);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClientConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetClientConfigResult">GetClientConfigResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClientConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#GetClientConfigResult">GetClientConfigResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -158,16 +158,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="subscriptionid_csharp">
-<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_csharp">
@@ -215,16 +205,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="subscriptionid_go">
-<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -274,16 +254,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="subscriptionid_nodejs">
-<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_nodejs">
@@ -331,16 +301,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="subscription_id_python">
-<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The &#34;subscription_id&#34; attribute will be removed in version 1.0 of the provider. If you are using this attribute, you should instead use the &#34;azurerm_client_config&#34; data source from the AzureRM provider{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
