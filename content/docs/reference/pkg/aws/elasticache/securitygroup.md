@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityGroup"
-title_tag: "Resource SecurityGroup | Module elasticache | Package AWS"
+title_tag: "aws.elasticache.SecurityGroup"
 meta_desc: "Explore the SecurityGroup resource of the elasticache module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ElastiCache Security Group to control access to one or more cache"
 ---
 

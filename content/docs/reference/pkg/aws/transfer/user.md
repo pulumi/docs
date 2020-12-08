@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module transfer | Package AWS"
+title_tag: "aws.transfer.User"
 meta_desc: "Explore the User resource of the transfer module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the `aws.transfer.SshKey` resource."
 ---
 

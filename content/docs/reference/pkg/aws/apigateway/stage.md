@@ -1,7 +1,7 @@
 
 ---
 title: "Stage"
-title_tag: "Resource Stage | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.Stage"
 meta_desc: "Explore the Stage resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Stage."
 ---
 

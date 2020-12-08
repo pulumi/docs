@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterParameterGroup"
-title_tag: "Resource ClusterParameterGroup | Module neptune | Package AWS"
+title_tag: "aws.neptune.ClusterParameterGroup"
 meta_desc: "Explore the ClusterParameterGroup resource of the neptune module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Neptune Cluster Parameter Group"
 ---
 

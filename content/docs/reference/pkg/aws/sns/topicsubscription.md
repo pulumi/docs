@@ -1,7 +1,7 @@
 
 ---
 title: "TopicSubscription"
-title_tag: "Resource TopicSubscription | Module sns | Package AWS"
+title_tag: "aws.sns.TopicSubscription"
 meta_desc: "Explore the TopicSubscription resource of the sns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource for subscribing to SNS topics. Requires that an SNS topic exist for the subscription to attach to."
 ---
 

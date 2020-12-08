@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkAcl"
-title_tag: "Resource NetworkAcl | Module ec2 | Package AWS"
+title_tag: "aws.ec2.NetworkAcl"
 meta_desc: "Explore the NetworkAcl resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an network ACL resource. You might set up network ACLs with rules similar"
 ---
 

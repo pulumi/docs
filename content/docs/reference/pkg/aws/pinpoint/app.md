@@ -1,7 +1,7 @@
 
 ---
 title: "App"
-title_tag: "Resource App | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.App"
 meta_desc: "Explore the App resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint App resource."
 ---
 

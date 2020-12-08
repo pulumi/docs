@@ -1,7 +1,7 @@
 
 ---
 title: "TaskDefinition"
-title_tag: "Resource TaskDefinition | Module ecs | Package AWS"
+title_tag: "aws.ecs.TaskDefinition"
 meta_desc: "Explore the TaskDefinition resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a revision of an ECS task definition to be used in `aws.ecs.Service`."
 ---
 

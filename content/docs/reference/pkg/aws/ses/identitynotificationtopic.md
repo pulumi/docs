@@ -1,7 +1,7 @@
 
 ---
 title: "IdentityNotificationTopic"
-title_tag: "Resource IdentityNotificationTopic | Module ses | Package AWS"
+title_tag: "aws.ses.IdentityNotificationTopic"
 meta_desc: "Explore the IdentityNotificationTopic resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Resource for managing SES Identity Notification Topics"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PrincipalAssociation"
-title_tag: "Resource PrincipalAssociation | Module ram | Package AWS"
+title_tag: "aws.ram.PrincipalAssociation"
 meta_desc: "Explore the PrincipalAssociation resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Access Manager (RAM) principal association. Depending if [RAM Sharing with AWS Organizations is enabled](https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs), the RAM behavior with different principal types changes."
 ---
 

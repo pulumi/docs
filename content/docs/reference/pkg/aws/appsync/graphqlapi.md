@@ -1,7 +1,7 @@
 
 ---
 title: "GraphQLApi"
-title_tag: "Resource GraphQLApi | Module appsync | Package AWS"
+title_tag: "aws.appsync.GraphQLApi"
 meta_desc: "Explore the GraphQLApi resource of the appsync module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AppSync GraphQL API."
 ---
 

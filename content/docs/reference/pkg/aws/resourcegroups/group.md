@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module resourcegroups | Package AWS"
+title_tag: "aws.resourcegroups.Group"
 meta_desc: "Explore the Group resource of the resourcegroups module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Group."
 ---
 

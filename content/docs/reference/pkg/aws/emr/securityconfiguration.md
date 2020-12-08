@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityConfiguration"
-title_tag: "Resource SecurityConfiguration | Module emr | Package AWS"
+title_tag: "aws.emr.SecurityConfiguration"
 meta_desc: "Explore the SecurityConfiguration resource of the emr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS EMR Security Configurations"
 ---
 

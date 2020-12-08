@@ -1,7 +1,7 @@
 
 ---
 title: "SlotType"
-title_tag: "Resource SlotType | Module lex | Package AWS"
+title_tag: "aws.lex.SlotType"
 meta_desc: "Explore the SlotType resource of the lex module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Amazon Lex Slot Type resource. For more information see"
 ---
 

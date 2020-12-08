@@ -1,7 +1,7 @@
 
 ---
 title: "Alias"
-title_tag: "Resource Alias | Module kms | Package AWS"
+title_tag: "aws.kms.Alias"
 meta_desc: "Explore the Alias resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,"
 ---
 

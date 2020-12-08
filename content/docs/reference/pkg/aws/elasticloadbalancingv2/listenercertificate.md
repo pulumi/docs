@@ -1,7 +1,7 @@
 
 ---
 title: "ListenerCertificate"
-title_tag: "Resource ListenerCertificate | Module elasticloadbalancingv2 | Package AWS"
+title_tag: "aws.elasticloadbalancingv2.ListenerCertificate"
 meta_desc: "Explore the ListenerCertificate resource of the elasticloadbalancingv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener Certificate resource."
 ---
 

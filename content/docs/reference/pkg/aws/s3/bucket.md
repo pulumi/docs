@@ -1,7 +1,7 @@
 
 ---
 title: "Bucket"
-title_tag: "Resource Bucket | Module s3 | Package AWS"
+title_tag: "aws.s3.Bucket"
 meta_desc: "Explore the Bucket resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a S3 bucket resource."
 ---
 

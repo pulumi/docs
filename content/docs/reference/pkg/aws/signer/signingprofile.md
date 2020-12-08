@@ -1,7 +1,7 @@
 
 ---
 title: "SigningProfile"
-title_tag: "Resource SigningProfile | Module signer | Package AWS"
+title_tag: "aws.signer.SigningProfile"
 meta_desc: "Explore the SigningProfile resource of the signer module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Signer Signing Profile. A signing profile contains information about the code signing configuration parameters that can be used by a given code signing user."
 ---
 

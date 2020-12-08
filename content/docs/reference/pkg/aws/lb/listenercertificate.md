@@ -1,7 +1,7 @@
 
 ---
 title: "ListenerCertificate"
-title_tag: "Resource ListenerCertificate | Module lb | Package AWS"
+title_tag: "aws.lb.ListenerCertificate"
 meta_desc: "Explore the ListenerCertificate resource of the lb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener Certificate resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Plan"
-title_tag: "Resource Plan | Module backup | Package AWS"
+title_tag: "aws.backup.Plan"
 meta_desc: "Explore the Plan resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Backup plan resource."
 ---
 

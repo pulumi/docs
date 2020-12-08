@@ -1,7 +1,7 @@
 
 ---
 title: "Channel"
-title_tag: "Resource Channel | Module mediapackage | Package AWS"
+title_tag: "aws.mediapackage.Channel"
 meta_desc: "Explore the Channel resource of the mediapackage module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Elemental MediaPackage Channel."
 ---
 

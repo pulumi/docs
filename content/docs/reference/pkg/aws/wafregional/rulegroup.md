@@ -1,7 +1,7 @@
 
 ---
 title: "RuleGroup"
-title_tag: "Resource RuleGroup | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.RuleGroup"
 meta_desc: "Explore the RuleGroup resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regional Rule Group Resource"
 ---
 

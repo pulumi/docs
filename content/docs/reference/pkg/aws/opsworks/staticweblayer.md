@@ -1,7 +1,7 @@
 
 ---
 title: "StaticWebLayer"
-title_tag: "Resource StaticWebLayer | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.StaticWebLayer"
 meta_desc: "Explore the StaticWebLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks static web server layer resource."
 ---
 

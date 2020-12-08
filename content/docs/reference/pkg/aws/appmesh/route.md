@@ -1,7 +1,7 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Module appmesh | Package AWS"
+title_tag: "aws.appmesh.Route"
 meta_desc: "Explore the Route resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh route resource."
 ---
 

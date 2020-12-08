@@ -1,7 +1,7 @@
 
 ---
 title: "AdmChannel"
-title_tag: "Resource AdmChannel | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.AdmChannel"
 meta_desc: "Explore the AdmChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint ADM (Amazon Device Messaging) Channel resource."
 ---
 

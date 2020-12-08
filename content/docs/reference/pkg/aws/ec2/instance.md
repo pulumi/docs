@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module ec2 | Package AWS"
+title_tag: "aws.ec2.Instance"
 meta_desc: "Explore the Instance resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EC2 instance resource. This allows instances to be created, updated,"
 ---
 

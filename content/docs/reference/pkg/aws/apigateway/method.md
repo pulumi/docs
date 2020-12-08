@@ -1,7 +1,7 @@
 
 ---
 title: "Method"
-title_tag: "Resource Method | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.Method"
 meta_desc: "Explore the Method resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a HTTP Method for an API Gateway Resource."
 ---
 

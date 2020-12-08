@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationTask"
-title_tag: "Resource ReplicationTask | Module dms | Package AWS"
+title_tag: "aws.dms.ReplicationTask"
 meta_desc: "Explore the ReplicationTask resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS (Data Migration Service) replication task resource. DMS replication tasks can be created, updated, deleted, and imported."
 ---
 

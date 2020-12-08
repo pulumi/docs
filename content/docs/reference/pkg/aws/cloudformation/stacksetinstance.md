@@ -1,7 +1,7 @@
 
 ---
 title: "StackSetInstance"
-title_tag: "Resource StackSetInstance | Module cloudformation | Package AWS"
+title_tag: "aws.cloudformation.StackSetInstance"
 meta_desc: "Explore the StackSetInstance resource of the cloudformation module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a CloudFormation StackSet Instance. Instances are managed in the account and region of the StackSet after the target account permissions have been configured. Additional information about StackSets can be found in the [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module xray | Package AWS"
+title_tag: "aws.xray.Group"
 meta_desc: "Explore the Group resource of the xray module, including examples, input properties, output properties, lookup functions, and supporting types. Creates and manages an AWS XRay Group."
 ---
 

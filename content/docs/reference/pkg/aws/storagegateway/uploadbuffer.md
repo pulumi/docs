@@ -1,7 +1,7 @@
 
 ---
 title: "UploadBuffer"
-title_tag: "Resource UploadBuffer | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.UploadBuffer"
 meta_desc: "Explore the UploadBuffer resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway upload buffer."
 ---
 

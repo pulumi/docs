@@ -1,7 +1,7 @@
 
 ---
 title: "OptionGroup"
-title_tag: "Resource OptionGroup | Module rds | Package AWS"
+title_tag: "aws.rds.OptionGroup"
 meta_desc: "Explore the OptionGroup resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS DB option group resource. Documentation of the available options for various RDS engines can be found at:"
 ---
 

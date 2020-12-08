@@ -1,7 +1,7 @@
 
 ---
 title: "OrganizationalUnit"
-title_tag: "Resource OrganizationalUnit | Module organizations | Package AWS"
+title_tag: "aws.organizations.OrganizationalUnit"
 meta_desc: "Explore the OrganizationalUnit resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create an organizational unit."
 ---
 

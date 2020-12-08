@@ -1,7 +1,7 @@
 
 ---
 title: "AmiLaunchPermission"
-title_tag: "Resource AmiLaunchPermission | Module ec2 | Package AWS"
+title_tag: "aws.ec2.AmiLaunchPermission"
 meta_desc: "Explore the AmiLaunchPermission resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Adds launch permission to Amazon Machine Image (AMI) from another AWS account."
 ---
 

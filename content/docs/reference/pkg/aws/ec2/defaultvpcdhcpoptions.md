@@ -1,7 +1,7 @@
 
 ---
 title: "DefaultVpcDhcpOptions"
-title_tag: "Resource DefaultVpcDhcpOptions | Module ec2 | Package AWS"
+title_tag: "aws.ec2.DefaultVpcDhcpOptions"
 meta_desc: "Explore the DefaultVpcDhcpOptions resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage the [default AWS DHCP Options Set](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS)"
 ---
 

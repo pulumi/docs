@@ -1,7 +1,7 @@
 
 ---
 title: "Container"
-title_tag: "Resource Container | Module mediastore | Package AWS"
+title_tag: "aws.mediastore.Container"
 meta_desc: "Explore the Container resource of the mediastore module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a MediaStore Container."
 ---
 

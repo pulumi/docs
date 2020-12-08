@@ -1,7 +1,7 @@
 
 ---
 title: "EmailIdentity"
-title_tag: "Resource EmailIdentity | Module ses | Package AWS"
+title_tag: "aws.ses.EmailIdentity"
 meta_desc: "Explore the EmailIdentity resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SES email identity resource"
 ---
 

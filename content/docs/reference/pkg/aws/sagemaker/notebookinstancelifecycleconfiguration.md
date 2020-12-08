@@ -1,7 +1,7 @@
 
 ---
 title: "NotebookInstanceLifecycleConfiguration"
-title_tag: "Resource NotebookInstanceLifecycleConfiguration | Module sagemaker | Package AWS"
+title_tag: "aws.sagemaker.NotebookInstanceLifecycleConfiguration"
 meta_desc: "Explore the NotebookInstanceLifecycleConfiguration resource of the sagemaker module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a lifecycle configuration for SageMaker Notebook Instances."
 ---
 

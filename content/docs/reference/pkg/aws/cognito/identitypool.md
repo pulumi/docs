@@ -1,7 +1,7 @@
 
 ---
 title: "IdentityPool"
-title_tag: "Resource IdentityPool | Module cognito | Package AWS"
+title_tag: "aws.cognito.IdentityPool"
 meta_desc: "Explore the IdentityPool resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Cognito Identity Pool."
 ---
 

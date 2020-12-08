@@ -1,7 +1,7 @@
 
 ---
 title: "ListenerRule"
-title_tag: "Resource ListenerRule | Module lb | Package AWS"
+title_tag: "aws.lb.ListenerRule"
 meta_desc: "Explore the ListenerRule resource of the lb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener Rule resource."
 ---
 

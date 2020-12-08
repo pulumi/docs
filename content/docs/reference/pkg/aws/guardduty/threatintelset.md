@@ -1,7 +1,7 @@
 
 ---
 title: "ThreatIntelSet"
-title_tag: "Resource ThreatIntelSet | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.ThreatIntelSet"
 meta_desc: "Explore the ThreatIntelSet resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a GuardDuty ThreatIntelSet."
 ---
 

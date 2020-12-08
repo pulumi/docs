@@ -1,7 +1,7 @@
 
 ---
 title: "NotebookInstance"
-title_tag: "Resource NotebookInstance | Module sagemaker | Package AWS"
+title_tag: "aws.sagemaker.NotebookInstance"
 meta_desc: "Explore the NotebookInstance resource of the sagemaker module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sagemaker Notebook Instance resource."
 ---
 

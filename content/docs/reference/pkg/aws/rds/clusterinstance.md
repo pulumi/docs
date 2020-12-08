@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterInstance"
-title_tag: "Resource ClusterInstance | Module rds | Package AWS"
+title_tag: "aws.rds.ClusterInstance"
 meta_desc: "Explore the ClusterInstance resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS Cluster Instance Resource. A Cluster Instance Resource defines"
 ---
 

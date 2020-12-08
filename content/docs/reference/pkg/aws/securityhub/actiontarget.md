@@ -1,7 +1,7 @@
 
 ---
 title: "ActionTarget"
-title_tag: "Resource ActionTarget | Module securityhub | Package AWS"
+title_tag: "aws.securityhub.ActionTarget"
 meta_desc: "Explore the ActionTarget resource of the securityhub module, including examples, input properties, output properties, lookup functions, and supporting types. Creates Security Hub custom action."
 ---
 

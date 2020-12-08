@@ -1,7 +1,7 @@
 
 ---
 title: "WebsiteCertificateAuthorityAssociation"
-title_tag: "Resource WebsiteCertificateAuthorityAssociation | Module worklink | Package AWS"
+title_tag: "aws.worklink.WebsiteCertificateAuthorityAssociation"
 meta_desc: "Explore the WebsiteCertificateAuthorityAssociation resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SamlProvider"
-title_tag: "Resource SamlProvider | Module iam | Package AWS"
+title_tag: "aws.iam.SamlProvider"
 meta_desc: "Explore the SamlProvider resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM SAML provider."
 ---
 

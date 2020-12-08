@@ -1,7 +1,7 @@
 
 ---
 title: "ProvisionedConcurrencyConfig"
-title_tag: "Resource ProvisionedConcurrencyConfig | Module lambda | Package AWS"
+title_tag: "aws.lambda.ProvisionedConcurrencyConfig"
 meta_desc: "Explore the ProvisionedConcurrencyConfig resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Lambda Provisioned Concurrency Configuration."
 ---
 

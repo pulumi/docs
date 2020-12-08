@@ -1,7 +1,7 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module iam | Package AWS"
+title_tag: "aws.iam.Policy"
 meta_desc: "Explore the Policy resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM policy."
 ---
 

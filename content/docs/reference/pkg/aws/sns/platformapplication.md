@@ -1,7 +1,7 @@
 
 ---
 title: "PlatformApplication"
-title_tag: "Resource PlatformApplication | Module sns | Package AWS"
+title_tag: "aws.sns.PlatformApplication"
 meta_desc: "Explore the PlatformApplication resource of the sns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SNS platform application resource"
 ---
 

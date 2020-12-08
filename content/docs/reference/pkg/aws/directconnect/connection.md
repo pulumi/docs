@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.Connection"
 meta_desc: "Explore the Connection resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Connection of Direct Connect."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Trigger"
-title_tag: "Resource Trigger | Module glue | Package AWS"
+title_tag: "aws.glue.Trigger"
 meta_desc: "Explore the Trigger resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Glue Trigger resource."
 ---
 

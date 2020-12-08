@@ -1,7 +1,7 @@
 
 ---
 title: "Component"
-title_tag: "Resource Component | Module imagebuilder | Package AWS"
+title_tag: "aws.imagebuilder.Component"
 meta_desc: "Explore the Component resource of the imagebuilder module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Image Builder Component."
 ---
 

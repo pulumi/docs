@@ -1,7 +1,7 @@
 
 ---
 title: "ContainerPolicy"
-title_tag: "Resource ContainerPolicy | Module mediastore | Package AWS"
+title_tag: "aws.mediastore.ContainerPolicy"
 meta_desc: "Explore the ContainerPolicy resource of the mediastore module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a MediaStore Container Policy."
 ---
 

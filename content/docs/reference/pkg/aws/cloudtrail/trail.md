@@ -1,7 +1,7 @@
 
 ---
 title: "Trail"
-title_tag: "Resource Trail | Module cloudtrail | Package AWS"
+title_tag: "aws.cloudtrail.Trail"
 meta_desc: "Explore the Trail resource of the cloudtrail module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudTrail resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "BgpPeer"
-title_tag: "Resource BgpPeer | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.BgpPeer"
 meta_desc: "Explore the BgpPeer resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Direct Connect BGP peer resource."
 ---
 

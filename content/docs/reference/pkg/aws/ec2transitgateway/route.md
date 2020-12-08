@@ -1,7 +1,7 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Module ec2transitgateway | Package AWS"
+title_tag: "aws.ec2transitgateway.Route"
 meta_desc: "Explore the Route resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Transit Gateway Route."
 ---
 

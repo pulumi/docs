@@ -1,7 +1,7 @@
 
 ---
 title: "Crawler"
-title_tag: "Resource Crawler | Module glue | Package AWS"
+title_tag: "aws.glue.Crawler"
 meta_desc: "Explore the Crawler resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "FirehoseDeliveryStream"
-title_tag: "Resource FirehoseDeliveryStream | Module kinesis | Package AWS"
+title_tag: "aws.kinesis.FirehoseDeliveryStream"
 meta_desc: "Explore the FirehoseDeliveryStream resource of the kinesis module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift."
 ---
 

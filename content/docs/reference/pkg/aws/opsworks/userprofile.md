@@ -1,7 +1,7 @@
 
 ---
 title: "UserProfile"
-title_tag: "Resource UserProfile | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.UserProfile"
 meta_desc: "Explore the UserProfile resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks User Profile resource."
 ---
 

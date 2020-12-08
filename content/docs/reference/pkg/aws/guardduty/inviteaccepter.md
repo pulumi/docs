@@ -1,7 +1,7 @@
 
 ---
 title: "InviteAccepter"
-title_tag: "Resource InviteAccepter | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.InviteAccepter"
 meta_desc: "Explore the InviteAccepter resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct primary account on read, and disassociate with the primary account upon removal."
 ---
 

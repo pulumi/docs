@@ -1,7 +1,7 @@
 
 ---
 title: "Webhook"
-title_tag: "Resource Webhook | Module codebuild | Package AWS"
+title_tag: "aws.codebuild.Webhook"
 meta_desc: "Explore the Webhook resource of the codebuild module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild service to trigger builds from source code repositories. Depending on the source type of the CodeBuild project, the CodeBuild service may also automatically create and delete the actual repository webhook as well."
 ---
 

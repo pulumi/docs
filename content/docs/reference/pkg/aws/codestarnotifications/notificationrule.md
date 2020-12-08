@@ -1,7 +1,7 @@
 
 ---
 title: "NotificationRule"
-title_tag: "Resource NotificationRule | Module codestarnotifications | Package AWS"
+title_tag: "aws.codestarnotifications.NotificationRule"
 meta_desc: "Explore the NotificationRule resource of the codestarnotifications module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeStar Notifications Rule."
 ---
 

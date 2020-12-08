@@ -1,7 +1,7 @@
 
 ---
 title: "BucketPolicy"
-title_tag: "Resource BucketPolicy | Module s3 | Package AWS"
+title_tag: "aws.s3.BucketPolicy"
 meta_desc: "Explore the BucketPolicy resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches a policy to an S3 bucket resource."
 ---
 

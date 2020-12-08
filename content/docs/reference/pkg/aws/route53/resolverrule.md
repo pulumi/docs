@@ -1,7 +1,7 @@
 
 ---
 title: "ResolverRule"
-title_tag: "Resource ResolverRule | Module route53 | Package AWS"
+title_tag: "aws.route53.ResolverRule"
 meta_desc: "Explore the ResolverRule resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route53 Resolver rule."
 ---
 

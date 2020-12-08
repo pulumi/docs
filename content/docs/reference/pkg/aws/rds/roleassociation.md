@@ -1,7 +1,7 @@
 
 ---
 title: "RoleAssociation"
-title_tag: "Resource RoleAssociation | Module rds | Package AWS"
+title_tag: "aws.rds.RoleAssociation"
 meta_desc: "Explore the RoleAssociation resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an RDS DB Instance association with an IAM Role. Example use cases:"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "RestApi"
-title_tag: "Resource RestApi | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.RestApi"
 meta_desc: "Explore the RestApi resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway REST API."
 ---
 

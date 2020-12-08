@@ -1,7 +1,7 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Module iam | Package AWS"
+title_tag: "aws.iam.SshKey"
 meta_desc: "Explore the SshKey resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Uploads an SSH public key and associates it with the specified IAM user."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Permission"
-title_tag: "Resource Permission | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.Permission"
 meta_desc: "Explore the Permission resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks permission resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Endpoint"
-title_tag: "Resource Endpoint | Module dms | Package AWS"
+title_tag: "aws.dms.Endpoint"
 meta_desc: "Explore the Endpoint resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS (Data Migration Service) endpoint resource. DMS endpoints can be created, updated, deleted, and imported."
 ---
 

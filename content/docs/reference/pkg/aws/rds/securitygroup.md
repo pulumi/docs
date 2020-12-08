@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityGroup"
-title_tag: "Resource SecurityGroup | Module rds | Package AWS"
+title_tag: "aws.rds.SecurityGroup"
 meta_desc: "Explore the SecurityGroup resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS security group resource. This is only for DB instances in the"
 ---
 

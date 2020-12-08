@@ -1,7 +1,7 @@
 
 ---
 title: "SnapshotSchedule"
-title_tag: "Resource SnapshotSchedule | Module redshift | Package AWS"
+title_tag: "aws.redshift.SnapshotSchedule"
 meta_desc: "Explore the SnapshotSchedule resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 

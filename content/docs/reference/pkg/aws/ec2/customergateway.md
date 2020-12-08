@@ -1,7 +1,7 @@
 
 ---
 title: "CustomerGateway"
-title_tag: "Resource CustomerGateway | Module ec2 | Package AWS"
+title_tag: "aws.ec2.CustomerGateway"
 meta_desc: "Explore the CustomerGateway resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC."
 ---
 

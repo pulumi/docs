@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module emr | Package AWS"
+title_tag: "aws.emr.Cluster"
 meta_desc: "Explore the Cluster resource of the emr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic MapReduce Cluster, a web service that makes it easy to"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "VpnGatewayAttachment"
-title_tag: "Resource VpnGatewayAttachment | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpnGatewayAttachment"
 meta_desc: "Explore the VpnGatewayAttachment resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Virtual Private Gateway attachment resource, allowing for an existing"
 ---
 

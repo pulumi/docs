@@ -1,7 +1,7 @@
 
 ---
 title: "IpSet"
-title_tag: "Resource IpSet | Module wafv2 | Package AWS"
+title_tag: "aws.wafv2.IpSet"
 meta_desc: "Explore the IpSet resource of the wafv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAFv2 IP Set Resource"
 ---
 

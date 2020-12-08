@@ -1,7 +1,7 @@
 
 ---
 title: "FunctionEventInvokeConfig"
-title_tag: "Resource FunctionEventInvokeConfig | Module lambda | Package AWS"
+title_tag: "aws.lambda.FunctionEventInvokeConfig"
 meta_desc: "Explore the FunctionEventInvokeConfig resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html)."
 ---
 

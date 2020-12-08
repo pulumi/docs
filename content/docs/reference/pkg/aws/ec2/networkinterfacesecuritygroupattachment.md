@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkInterfaceSecurityGroupAttachment"
-title_tag: "Resource NetworkInterfaceSecurityGroupAttachment | Module ec2 | Package AWS"
+title_tag: "aws.ec2.NetworkInterfaceSecurityGroupAttachment"
 meta_desc: "Explore the NetworkInterfaceSecurityGroupAttachment resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. This resource attaches a security group to an Elastic Network Interface (ENI)."
 ---
 

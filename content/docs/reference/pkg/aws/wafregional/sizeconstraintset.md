@@ -1,7 +1,7 @@
 
 ---
 title: "SizeConstraintSet"
-title_tag: "Resource SizeConstraintSet | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.SizeConstraintSet"
 meta_desc: "Explore the SizeConstraintSet resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regional Size Constraint Set Resource for use with Application Load Balancer."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Integration"
-title_tag: "Resource Integration | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.Integration"
 meta_desc: "Explore the Integration resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an HTTP Method Integration for an API Gateway Integration."
 ---
 

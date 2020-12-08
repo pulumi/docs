@@ -1,7 +1,7 @@
 
 ---
 title: "LifecycleHook"
-title_tag: "Resource LifecycleHook | Module autoscaling | Package AWS"
+title_tag: "aws.autoscaling.LifecycleHook"
 meta_desc: "Explore the LifecycleHook resource of the autoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AutoScaling Lifecycle Hook resource."
 ---
 

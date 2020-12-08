@@ -1,7 +1,7 @@
 
 ---
 title: "ThingPrincipalAttachment"
-title_tag: "Resource ThingPrincipalAttachment | Module iot | Package AWS"
+title_tag: "aws.iot.ThingPrincipalAttachment"
 meta_desc: "Explore the ThingPrincipalAttachment resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches Principal to AWS IoT Thing."
 ---
 

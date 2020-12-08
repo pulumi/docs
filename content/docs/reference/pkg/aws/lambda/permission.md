@@ -1,7 +1,7 @@
 
 ---
 title: "Permission"
-title_tag: "Resource Permission | Module lambda | Package AWS"
+title_tag: "aws.lambda.Permission"
 meta_desc: "Explore the Permission resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Gives an external source (like a CloudWatch Event Rule, SNS, or S3) permission to access the Lambda function."
 ---
 

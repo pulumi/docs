@@ -1,7 +1,7 @@
 
 ---
 title: "ImagePipeline"
-title_tag: "Resource ImagePipeline | Module imagebuilder | Package AWS"
+title_tag: "aws.imagebuilder.ImagePipeline"
 meta_desc: "Explore the ImagePipeline resource of the imagebuilder module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Image Builder Image Pipeline."
 ---
 

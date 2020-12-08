@@ -1,7 +1,7 @@
 
 ---
 title: "Partition"
-title_tag: "Resource Partition | Module glue | Package AWS"
+title_tag: "aws.glue.Partition"
 meta_desc: "Explore the Partition resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Partition Resource."
 ---
 

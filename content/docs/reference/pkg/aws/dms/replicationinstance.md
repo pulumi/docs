@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationInstance"
-title_tag: "Resource ReplicationInstance | Module dms | Package AWS"
+title_tag: "aws.dms.ReplicationInstance"
 meta_desc: "Explore the ReplicationInstance resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported."
 ---
 

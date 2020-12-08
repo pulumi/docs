@@ -1,7 +1,7 @@
 
 ---
 title: "Analyzer"
-title_tag: "Resource Analyzer | Module accessanalyzer | Package AWS"
+title_tag: "aws.accessanalyzer.Analyzer"
 meta_desc: "Explore the Analyzer resource of the accessanalyzer module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Access Analyzer Analyzer. More information can be found in the [Access Analyzer User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html)."
 ---
 

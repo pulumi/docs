@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module workspaces | Package AWS"
+title_tag: "aws.workspaces.Workspace"
 meta_desc: "Explore the Workspace resource of the workspaces module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a workspace in [AWS Workspaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) Service"
 ---
 

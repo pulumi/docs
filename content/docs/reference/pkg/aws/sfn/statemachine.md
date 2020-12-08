@@ -1,7 +1,7 @@
 
 ---
 title: "StateMachine"
-title_tag: "Resource StateMachine | Module sfn | Package AWS"
+title_tag: "aws.sfn.StateMachine"
 meta_desc: "Explore the StateMachine resource of the sfn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Step Function State Machine resource"
 ---
 

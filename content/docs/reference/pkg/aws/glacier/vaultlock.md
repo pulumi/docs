@@ -1,7 +1,7 @@
 
 ---
 title: "VaultLock"
-title_tag: "Resource VaultLock | Module glacier | Package AWS"
+title_tag: "aws.glacier.VaultLock"
 meta_desc: "Explore the VaultLock resource of the glacier module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Glacier Vault Lock. You can refer to the [Glacier Developer Guide](https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock.html) for a full explanation of the Glacier Vault Lock functionality."
 ---
 

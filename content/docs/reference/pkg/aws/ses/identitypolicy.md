@@ -1,7 +1,7 @@
 
 ---
 title: "IdentityPolicy"
-title_tag: "Resource IdentityPolicy | Module ses | Package AWS"
+title_tag: "aws.ses.IdentityPolicy"
 meta_desc: "Explore the IdentityPolicy resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a SES Identity Policy. More information about SES Sending Authorization Policies can be found in the [SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html)."
 ---
 

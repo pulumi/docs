@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module servicediscovery | Package AWS"
+title_tag: "aws.servicediscovery.Service"
 meta_desc: "Explore the Service resource of the servicediscovery module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Service Discovery Service resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Gateway"
-title_tag: "Resource Gateway | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.Gateway"
 meta_desc: "Explore the Gateway resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceLinkedRole"
-title_tag: "Resource ServiceLinkedRole | Module iam | Package AWS"
+title_tag: "aws.iam.ServiceLinkedRole"
 meta_desc: "Explore the ServiceLinkedRole resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an [IAM service-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)."
 ---
 

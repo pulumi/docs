@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationGroup"
-title_tag: "Resource ReplicationGroup | Module elasticache | Package AWS"
+title_tag: "aws.elasticache.ReplicationGroup"
 meta_desc: "Explore the ReplicationGroup resource of the elasticache module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ElastiCache Replication Group resource."
 ---
 

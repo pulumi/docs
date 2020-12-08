@@ -1,7 +1,7 @@
 
 ---
 title: "Model"
-title_tag: "Resource Model | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.Model"
 meta_desc: "Explore the Model resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Model for a REST API Gateway."
 ---
 

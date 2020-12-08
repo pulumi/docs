@@ -1,7 +1,7 @@
 
 ---
 title: "ImageRecipe"
-title_tag: "Resource ImageRecipe | Module imagebuilder | Package AWS"
+title_tag: "aws.imagebuilder.ImageRecipe"
 meta_desc: "Explore the ImageRecipe resource of the imagebuilder module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Image Builder Image Recipe."
 ---
 

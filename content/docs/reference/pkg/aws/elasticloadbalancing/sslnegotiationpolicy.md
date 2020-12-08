@@ -1,7 +1,7 @@
 
 ---
 title: "SslNegotiationPolicy"
-title_tag: "Resource SslNegotiationPolicy | Module elasticloadbalancing | Package AWS"
+title_tag: "aws.elasticloadbalancing.SslNegotiationPolicy"
 meta_desc: "Explore the SslNegotiationPolicy resource of the elasticloadbalancing module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a load balancer SSL negotiation policy, which allows an ELB to control the ciphers and protocols that are supported during SSL negotiations between a client and a load balancer."
 ---
 

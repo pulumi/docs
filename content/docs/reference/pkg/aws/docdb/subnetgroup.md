@@ -1,7 +1,7 @@
 
 ---
 title: "SubnetGroup"
-title_tag: "Resource SubnetGroup | Module docdb | Package AWS"
+title_tag: "aws.docdb.SubnetGroup"
 meta_desc: "Explore the SubnetGroup resource of the docdb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an DocumentDB subnet group resource."
 ---
 

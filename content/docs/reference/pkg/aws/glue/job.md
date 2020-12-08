@@ -1,7 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module glue | Package AWS"
+title_tag: "aws.glue.Job"
 meta_desc: "Explore the Job resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Job resource."
 ---
 

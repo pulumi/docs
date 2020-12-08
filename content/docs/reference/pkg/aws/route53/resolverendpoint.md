@@ -1,7 +1,7 @@
 
 ---
 title: "ResolverEndpoint"
-title_tag: "Resource ResolverEndpoint | Module route53 | Package AWS"
+title_tag: "aws.route53.ResolverEndpoint"
 meta_desc: "Explore the ResolverEndpoint resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route 53 Resolver endpoint resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Preset"
-title_tag: "Resource Preset | Module elastictranscoder | Package AWS"
+title_tag: "aws.elastictranscoder.Preset"
 meta_desc: "Explore the Preset resource of the elastictranscoder module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Transcoder preset resource."
 ---
 

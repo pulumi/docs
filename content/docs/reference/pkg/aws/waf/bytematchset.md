@@ -1,7 +1,7 @@
 
 ---
 title: "ByteMatchSet"
-title_tag: "Resource ByteMatchSet | Module waf | Package AWS"
+title_tag: "aws.waf.ByteMatchSet"
 meta_desc: "Explore the ByteMatchSet resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Byte Match Set Resource"
 ---
 

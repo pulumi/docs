@@ -1,7 +1,7 @@
 
 ---
 title: "DeploymentConfig"
-title_tag: "Resource DeploymentConfig | Module codedeploy | Package AWS"
+title_tag: "aws.codedeploy.DeploymentConfig"
 meta_desc: "Explore the DeploymentConfig resource of the codedeploy module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeDeploy deployment config for an application"
 ---
 

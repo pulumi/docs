@@ -1,7 +1,7 @@
 
 ---
 title: "RoleAlias"
-title_tag: "Resource RoleAlias | Module iot | Package AWS"
+title_tag: "aws.iot.RoleAlias"
 meta_desc: "Explore the RoleAlias resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IoT role alias."
 ---
 

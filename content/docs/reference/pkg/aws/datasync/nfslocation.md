@@ -1,7 +1,7 @@
 
 ---
 title: "NfsLocation"
-title_tag: "Resource NfsLocation | Module datasync | Package AWS"
+title_tag: "aws.datasync.NfsLocation"
 meta_desc: "Explore the NfsLocation resource of the datasync module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an NFS Location within AWS DataSync."
 ---
 

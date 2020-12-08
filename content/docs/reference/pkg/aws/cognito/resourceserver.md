@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceServer"
-title_tag: "Resource ResourceServer | Module cognito | Package AWS"
+title_tag: "aws.cognito.ResourceServer"
 meta_desc: "Explore the ResourceServer resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cognito Resource Server."
 ---
 

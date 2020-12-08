@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module elasticsearch | Package AWS"
+title_tag: "aws.elasticsearch.Domain"
 meta_desc: "Explore the Domain resource of the elasticsearch module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Elasticsearch Domain."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SpotDatafeedSubscription"
-title_tag: "Resource SpotDatafeedSubscription | Module ec2 | Package AWS"
+title_tag: "aws.ec2.SpotDatafeedSubscription"
 meta_desc: "Explore the SpotDatafeedSubscription resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **Note:** There is only a single subscription allowed per account."
 ---
 

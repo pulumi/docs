@@ -1,7 +1,7 @@
 
 ---
 title: "RemediationConfiguration"
-title_tag: "Resource RemediationConfiguration | Module cfg | Package AWS"
+title_tag: "aws.cfg.RemediationConfiguration"
 meta_desc: "Explore the RemediationConfiguration resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Config Remediation Configuration."
 ---
 

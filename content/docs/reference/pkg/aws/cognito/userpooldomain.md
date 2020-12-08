@@ -1,7 +1,7 @@
 
 ---
 title: "UserPoolDomain"
-title_tag: "Resource UserPoolDomain | Module cognito | Package AWS"
+title_tag: "aws.cognito.UserPoolDomain"
 meta_desc: "Explore the UserPoolDomain resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cognito User Pool Domain resource."
 ---
 

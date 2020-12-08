@@ -1,7 +1,7 @@
 
 ---
 title: "QueryLog"
-title_tag: "Resource QueryLog | Module route53 | Package AWS"
+title_tag: "aws.route53.QueryLog"
 meta_desc: "Explore the QueryLog resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route53 query logging configuration resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "CodeRepository"
-title_tag: "Resource CodeRepository | Module sagemaker | Package AWS"
+title_tag: "aws.sagemaker.CodeRepository"
 meta_desc: "Explore the CodeRepository resource of the sagemaker module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

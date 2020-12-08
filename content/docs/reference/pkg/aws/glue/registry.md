@@ -1,7 +1,7 @@
 
 ---
 title: "Registry"
-title_tag: "Resource Registry | Module glue | Package AWS"
+title_tag: "aws.glue.Registry"
 meta_desc: "Explore the Registry resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Registry resource."
 ---
 

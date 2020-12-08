@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module swf | Package AWS"
+title_tag: "aws.swf.Domain"
 meta_desc: "Explore the Domain resource of the swf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SWF Domain resource."
 ---
 

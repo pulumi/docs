@@ -1,7 +1,7 @@
 
 ---
 title: "DefaultRouteTable"
-title_tag: "Resource DefaultRouteTable | Module ec2 | Package AWS"
+title_tag: "aws.ec2.DefaultRouteTable"
 meta_desc: "Explore the DefaultRouteTable resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a Default VPC Routing Table."
 ---
 

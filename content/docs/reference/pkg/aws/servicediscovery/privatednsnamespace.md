@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateDnsNamespace"
-title_tag: "Resource PrivateDnsNamespace | Module servicediscovery | Package AWS"
+title_tag: "aws.servicediscovery.PrivateDnsNamespace"
 meta_desc: "Explore the PrivateDnsNamespace resource of the servicediscovery module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Service Discovery Private DNS Namespace resource."
 ---
 

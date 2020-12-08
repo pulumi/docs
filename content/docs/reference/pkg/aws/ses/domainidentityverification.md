@@ -1,7 +1,7 @@
 
 ---
 title: "DomainIdentityVerification"
-title_tag: "Resource DomainIdentityVerification | Module ses | Package AWS"
+title_tag: "aws.ses.DomainIdentityVerification"
 meta_desc: "Explore the DomainIdentityVerification resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a successful verification of an SES domain identity."
 ---
 

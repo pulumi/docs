@@ -1,7 +1,7 @@
 
 ---
 title: "ListenerPolicy"
-title_tag: "Resource ListenerPolicy | Module elasticloadbalancing | Package AWS"
+title_tag: "aws.elasticloadbalancing.ListenerPolicy"
 meta_desc: "Explore the ListenerPolicy resource of the elasticloadbalancing module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches a load balancer policy to an ELB Listener."
 ---
 
