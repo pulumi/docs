@@ -411,7 +411,7 @@ import * as awsx from "@pulumi/awsx";
 const vpc = new awsx.ec2.Vpc("custom", { /*...*/ });
 
 // Allocate a security group and then a series of rules:
-const sg = new awsx.ec2.SecurityGroup("sg", { vpc });
+const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
 
 // 1) inbound SSH traffic on port 22 from a specific IP address
 sg.createIngressRule("ssh-access", {
