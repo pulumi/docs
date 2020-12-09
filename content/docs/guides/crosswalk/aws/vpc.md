@@ -119,7 +119,7 @@ The following code creates a new VPC using all default settings:
 import * as awsx from "@pulumi/awsx";
 
 // Allocate a new VPC with the default settings:
-const vpc = new awsx.ec2.Vpc("custom");
+const vpc = new awsx.ec2.Vpc("custom", {});
 
 // Export a few resulting fields to make them easy to use:
 export const vpcId = vpc.id;
