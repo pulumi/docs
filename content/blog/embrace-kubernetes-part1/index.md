@@ -62,7 +62,7 @@ We often make decisions for personally motivated reasons and that’s as true of
 
 ### Do You Have the Resources?
 
-The next question to ask is if your company has the engineering resources to support a Kubernetes initiative. Implementing Kubernetes is complex and takes a long time. Companies such as Netflix have very large operations departments but most other companies don’t.
+The next question to ask is if your company has the engineering resources to support a Kubernetes initiative. Implementing Kubernetes is complex and takes a long time. Companies such as Netflix have very large operations departments but most other companies don’t. It is typically better to start by identifying an isolated project to prove out the expected benefits of Kubernetes before betting the entire farm on it. That said, don't underestimate how much effort even these smaller projects will take, especially when it comes to getting up to speed.
 
 #### Do you have the people?
 
