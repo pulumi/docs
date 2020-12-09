@@ -76,7 +76,7 @@ Finally, when something goes wrong, you need a subject matter expert to fix it. 
 
 Because you’re dedicating several people to Kubernetes, you may be increasing your technical debt in other areas. Do you still have people available to handle bugs and other support issues? The costs here can be seriously mitigated by adopting a managed Kubernetes service from a major cloud vendor, but the opportunity cost is real either way.
 
-#### Can you afford the extra infrastructure?
+#### Can you afford the migration costs?
 
 As with any large migration, moving from your current system to Kubernetes needs to happen cautiously. You’re not simply going to destroy your existing infrastructure. Instead, you’ll probably want to adopt a side-by-side approach and slowly move your applications across. In other words, for quite a while, you’ll need to support two infrastructures rather than one.
 
