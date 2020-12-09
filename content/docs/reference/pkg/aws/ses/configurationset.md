@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationSet"
-title_tag: "Resource ConfigurationSet | Module ses | Package AWS"
+title_tag: "aws.ses.ConfigurationSet"
 meta_desc: "Explore the ConfigurationSet resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SES configuration set resource"
 ---
 

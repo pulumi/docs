@@ -1,7 +1,7 @@
 
 ---
 title: "GcmChannel"
-title_tag: "Resource GcmChannel | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.GcmChannel"
 meta_desc: "Explore the GcmChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint GCM Channel resource."
 ---
 

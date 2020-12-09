@@ -1,7 +1,7 @@
 
 ---
 title: "RepositoryPermissionsPolicy"
-title_tag: "Resource RepositoryPermissionsPolicy | Module codeartifact | Package AWS"
+title_tag: "aws.codeartifact.RepositoryPermissionsPolicy"
 meta_desc: "Explore the RepositoryPermissionsPolicy resource of the codeartifact module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeArtifact Repostory Permissions Policy Resource."
 ---
 

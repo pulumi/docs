@@ -1,7 +1,7 @@
 
 ---
 title: "DistributionConfiguration"
-title_tag: "Resource DistributionConfiguration | Module imagebuilder | Package AWS"
+title_tag: "aws.imagebuilder.DistributionConfiguration"
 meta_desc: "Explore the DistributionConfiguration resource of the imagebuilder module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Image Builder Distribution Configuration."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DevEndpoint"
-title_tag: "Resource DevEndpoint | Module glue | Package AWS"
+title_tag: "aws.glue.DevEndpoint"
 meta_desc: "Explore the DevEndpoint resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Development Endpoint resource."
 ---
 

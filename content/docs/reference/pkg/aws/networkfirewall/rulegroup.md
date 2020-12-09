@@ -1,7 +1,7 @@
 
 ---
 title: "RuleGroup"
-title_tag: "Resource RuleGroup | Module networkfirewall | Package AWS"
+title_tag: "aws.networkfirewall.RuleGroup"
 meta_desc: "Explore the RuleGroup resource of the networkfirewall module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Network Firewall Rule Group Resource"
 ---
 

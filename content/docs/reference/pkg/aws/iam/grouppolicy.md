@@ -1,7 +1,7 @@
 
 ---
 title: "GroupPolicy"
-title_tag: "Resource GroupPolicy | Module iam | Package AWS"
+title_tag: "aws.iam.GroupPolicy"
 meta_desc: "Explore the GroupPolicy resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM policy attached to a group."
 ---
 

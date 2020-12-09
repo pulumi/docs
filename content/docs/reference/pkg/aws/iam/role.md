@@ -1,7 +1,7 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Module iam | Package AWS"
+title_tag: "aws.iam.Role"
 meta_desc: "Explore the Role resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM role."
 ---
 

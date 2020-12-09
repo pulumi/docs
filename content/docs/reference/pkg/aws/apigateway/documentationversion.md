@@ -1,7 +1,7 @@
 
 ---
 title: "DocumentationVersion"
-title_tag: "Resource DocumentationVersion | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.DocumentationVersion"
 meta_desc: "Explore the DocumentationVersion resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage an API Gateway Documentation Version."
 ---
 

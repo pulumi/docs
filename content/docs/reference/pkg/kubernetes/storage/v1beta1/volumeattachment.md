@@ -1,7 +1,7 @@
 
 ---
 title: "VolumeAttachment"
-title_tag: "Resource VolumeAttachment | Module storage.k8s.io/v1beta1 | Package Kubernetes"
+title_tag: "kubernetes.storage.k8s.io/v1beta1.VolumeAttachment"
 meta_desc: "Explore the VolumeAttachment resource of the storage.k8s.io/v1beta1 module, including examples, input properties, output properties, lookup functions, and supporting types. VolumeAttachment captures the intent to attach or detach the specified volume to/from the specified node."
 ---
 
@@ -16,6 +16,7 @@ VolumeAttachment objects are non-namespaced.
 
 
 
+
 ## Create a VolumeAttachment Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -25,7 +26,7 @@ VolumeAttachment objects are non-namespaced.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage/v1beta1/#pulumi_kubernetes.storage/v1beta1.VolumeAttachment">VolumeAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ObjectMeta]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[Dict[VolumeAttachmentSpec]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage/v1beta1/#pulumi_kubernetes.storage/v1beta1.VolumeAttachment">VolumeAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_storage_k8s_io_v1beta1.VolumeAttachmentSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -284,7 +285,7 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachmentspec">Dict[Volume<wbr>Attachment<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#volumeattachmentspec">Volume<wbr>Attachment<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.{{% /md %}}</dd>
 
@@ -294,7 +295,7 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -413,7 +414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachmentstatus">Dict[Volume<wbr>Attachment<wbr>Status]</a></span>
+        <span class="property-type"><a href="#volumeattachmentstatus">Volume<wbr>Attachment<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Status of the VolumeAttachment request. Populated by the entity completing the attach or detach operation, i.e. the external-attacher.{{% /md %}}</dd>
 
@@ -1454,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_expand_secret_ref_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>expand_<wbr>secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd>
 
@@ -1464,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_publish_secret_ref_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>publish_<wbr>secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd>
 
@@ -1484,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_publish_secret_ref_python" style="color: inherit; text-decoration: inherit;">node_<wbr>publish_<wbr>secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd>
 
@@ -1494,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_stage_secret_ref_python" style="color: inherit; text-decoration: inherit;">node_<wbr>stage_<wbr>secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd>
 
@@ -1514,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_attributes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Attributes of the volume to publish.{{% /md %}}</dd>
 
@@ -1747,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitors_python" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -1787,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -2000,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional: points to a secret object containing parameters used to connect to OpenStack.{{% /md %}}</dd>
 
@@ -2233,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_wwns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>wwns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional: FC target worldwide names (WWNs){{% /md %}}</dd>
 
@@ -2243,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wwids_python" style="color: inherit; text-decoration: inherit;">wwids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.{{% /md %}}</dd>
 
@@ -2466,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional: Extra command options if any.{{% /md %}}</dd>
 
@@ -2486,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.{{% /md %}}</dd>
 
@@ -3601,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).{{% /md %}}</dd>
 
@@ -3621,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CHAP Secret for iSCSI target and initiator authentication{{% /md %}}</dd>
 
@@ -3997,7 +3998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -4273,7 +4274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_selector_terms_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector_<wbr>terms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">List[Node<wbr>Selector<wbr>Term]</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of node selector terms. The terms are ORed.{{% /md %}}</dd>
 
@@ -4436,7 +4437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
 
@@ -4549,7 +4550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">List[Node<wbr>Selector<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's labels.{{% /md %}}</dd>
 
@@ -4559,7 +4560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_fields_python" style="color: inherit; text-decoration: inherit;">match_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">List[Node<wbr>Selector<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's fields.{{% /md %}}</dd>
 
@@ -5140,7 +5141,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -5194,7 +5195,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -5228,7 +5229,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -5238,7 +5239,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -5270,7 +5271,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -6865,7 +6866,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#access_modes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}AccessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes{{% /md %}}</dd>
 
@@ -6875,7 +6876,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#aws_elastic_block_store_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>elastic_<wbr>block_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awselasticblockstorevolumesource">Dict[AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd>
 
@@ -6885,7 +6886,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#azure_disk_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurediskvolumesource">Dict[Azure<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.{{% /md %}}</dd>
 
@@ -6895,7 +6896,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#azure_file_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilepersistentvolumesource">Dict[Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#azurefilepersistentvolumesource">Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AzureFile represents an Azure File Service mount on the host and bind mount to the pod.{{% /md %}}</dd>
 
@@ -6905,7 +6906,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity{{% /md %}}</dd>
 
@@ -6915,7 +6916,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cephfs_python" style="color: inherit; text-decoration: inherit;">cephfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cephfspersistentvolumesource">Dict[Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#cephfspersistentvolumesource">Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CephFS represents a Ceph FS mount on the host that shares a pod's lifetime{{% /md %}}</dd>
 
@@ -6925,7 +6926,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cinder_python" style="color: inherit; text-decoration: inherit;">cinder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cinderpersistentvolumesource">Dict[Cinder<wbr>Persistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#cinderpersistentvolumesource">Cinder<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd>
 
@@ -6935,7 +6936,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#claim_ref_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ClaimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim. Expected to be non-nil when bound. claim.VolumeName is the authoritative bind between PV and PVC. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding{{% /md %}}</dd>
 
@@ -6945,7 +6946,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#csi_python" style="color: inherit; text-decoration: inherit;">csi</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csipersistentvolumesource">Dict[CSIPersistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#csipersistentvolumesource">CSIPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CSI represents storage that is handled by an external CSI driver (Beta feature).{{% /md %}}</dd>
 
@@ -6955,7 +6956,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fc_python" style="color: inherit; text-decoration: inherit;">fc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fcvolumesource">Dict[FCVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#fcvolumesource">FCVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.{{% /md %}}</dd>
 
@@ -6965,7 +6966,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#flex_volume_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexpersistentvolumesource">Dict[Flex<wbr>Persistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#flexpersistentvolumesource">Flex<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.{{% /md %}}</dd>
 
@@ -6975,7 +6976,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#flocker_python" style="color: inherit; text-decoration: inherit;">flocker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flockervolumesource">Dict[Flocker<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#flockervolumesource">Flocker<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running{{% /md %}}</dd>
 
@@ -6985,7 +6986,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#gce_persistent_disk_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcepersistentdiskvolumesource">Dict[GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd>
 
@@ -6995,7 +6996,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#glusterfs_python" style="color: inherit; text-decoration: inherit;">glusterfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfspersistentvolumesource">Dict[Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#glusterfspersistentvolumesource">Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://examples.k8s.io/volumes/glusterfs/README.md{{% /md %}}</dd>
 
@@ -7005,7 +7006,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpathvolumesource">Dict[Host<wbr>Path<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd>
 
@@ -7015,7 +7016,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#iscsi_python" style="color: inherit; text-decoration: inherit;">iscsi</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsipersistentvolumesource">Dict[ISCSIPersistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#iscsipersistentvolumesource">ISCSIPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.{{% /md %}}</dd>
 
@@ -7025,7 +7026,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localvolumesource">Dict[Local<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#localvolumesource">Local<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Local represents directly-attached storage with node affinity{{% /md %}}</dd>
 
@@ -7035,7 +7036,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options{{% /md %}}</dd>
 
@@ -7045,7 +7046,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#nfs_python" style="color: inherit; text-decoration: inherit;">nfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsvolumesource">Dict[NFSVolume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#nfsvolumesource">NFSVolume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NFS represents an NFS mount on the host. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd>
 
@@ -7055,7 +7056,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#node_affinity_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumenodeaffinity">Dict[Volume<wbr>Node<wbr>Affinity]</a></span>
+        <span class="property-type"><a href="#volumenodeaffinity">Volume<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NodeAffinity defines constraints that limit what nodes this volume can be accessed from. This field influences the scheduling of pods that use this volume.{{% /md %}}</dd>
 
@@ -7075,7 +7076,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#photon_persistent_disk_python" style="color: inherit; text-decoration: inherit;">photon_<wbr>persistent_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Dict[Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine{{% /md %}}</dd>
 
@@ -7085,7 +7086,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#portworx_volume_python" style="color: inherit; text-decoration: inherit;">portworx_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portworxvolumesource">Dict[Portworx<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#portworxvolumesource">Portworx<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PortworxVolume represents a portworx volume attached and mounted on kubelets host machine{{% /md %}}</dd>
 
@@ -7095,7 +7096,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#quobyte_python" style="color: inherit; text-decoration: inherit;">quobyte</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quobytevolumesource">Dict[Quobyte<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#quobytevolumesource">Quobyte<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Quobyte represents a Quobyte mount on the host that shares a pod's lifetime{{% /md %}}</dd>
 
@@ -7105,7 +7106,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#rbd_python" style="color: inherit; text-decoration: inherit;">rbd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbdpersistentvolumesource">Dict[RBDPersistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#rbdpersistentvolumesource">RBDPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md{{% /md %}}</dd>
 
@@ -7115,7 +7116,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#scale_io_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>io</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleiopersistentvolumesource">Dict[Scale<wbr>IOPersistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#scaleiopersistentvolumesource">Scale<wbr>IOPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd>
 
@@ -7135,7 +7136,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storageos_python" style="color: inherit; text-decoration: inherit;">storageos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageospersistentvolumesource">Dict[Storage<wbr>OSPersistent<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#storageospersistentvolumesource">Storage<wbr>OSPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md{{% /md %}}</dd>
 
@@ -7155,7 +7156,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#vsphere_volume_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Dict[Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
+        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine{{% /md %}}</dd>
 
@@ -8027,7 +8028,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#monitors_python" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -8077,7 +8078,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -8450,7 +8451,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.{{% /md %}}</dd>
 
@@ -8876,7 +8877,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.{{% /md %}}</dd>
 
@@ -9009,7 +9010,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#inline_volume_spec_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>volume_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumespec">Dict[Persistent<wbr>Volume<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#persistentvolumespec">Persistent<wbr>Volume<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd>
 
@@ -9182,7 +9183,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachmentsource">Dict[Volume<wbr>Attachment<wbr>Source]</a></span>
+        <span class="property-type"><a href="#volumeattachmentsource">Volume<wbr>Attachment<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source represents the volume that should be attached.{{% /md %}}</dd>
 
@@ -9365,7 +9366,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#attach_error_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeerror">Dict[Volume<wbr>Error]</a></span>
+        <span class="property-type"><a href="#volumeerror">Volume<wbr>Error<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.{{% /md %}}</dd>
 
@@ -9375,7 +9376,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#attachment_metadata_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.{{% /md %}}</dd>
 
@@ -9385,7 +9386,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#detach_error_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeerror">Dict[Volume<wbr>Error]</a></span>
+        <span class="property-type"><a href="#volumeerror">Volume<wbr>Error<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.{{% /md %}}</dd>
 
@@ -9591,7 +9592,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselector">Dict[Node<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#nodeselector">Node<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required specifies hard node constraints that must be met.{{% /md %}}</dd>
 
@@ -9800,6 +9801,8 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

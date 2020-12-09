@@ -1,7 +1,7 @@
 
 ---
 title: "LustreFileSystem"
-title_tag: "Resource LustreFileSystem | Module fsx | Package AWS"
+title_tag: "aws.fsx.LustreFileSystem"
 meta_desc: "Explore the LustreFileSystem resource of the fsx module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a FSx Lustre File System. See the [FSx Lustre Guide](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html) for more information."
 ---
 

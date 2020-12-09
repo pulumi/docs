@@ -1,7 +1,7 @@
 
 ---
 title: "Ledger"
-title_tag: "Resource Ledger | Module qldb | Package AWS"
+title_tag: "aws.qldb.Ledger"
 meta_desc: "Explore the Ledger resource of the qldb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Quantum Ledger Database (QLDB) resource"
 ---
 

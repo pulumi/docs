@@ -1,7 +1,7 @@
 
 ---
 title: "SpotInstanceRequest"
-title_tag: "Resource SpotInstanceRequest | Module ec2 | Package AWS"
+title_tag: "aws.ec2.SpotInstanceRequest"
 meta_desc: "Explore the SpotInstanceRequest resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EC2 Spot Instance Request resource. This allows instances to be"
 ---
 

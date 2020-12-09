@@ -1,7 +1,7 @@
 
 ---
 title: "ParameterGroup"
-title_tag: "Resource ParameterGroup | Module redshift | Package AWS"
+title_tag: "aws.redshift.ParameterGroup"
 meta_desc: "Explore the ParameterGroup resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Redshift Cluster parameter group resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Document"
-title_tag: "Resource Document | Module ssm | Package AWS"
+title_tag: "aws.ssm.Document"
 meta_desc: "Explore the Document resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SSM Document resource"
 ---
 

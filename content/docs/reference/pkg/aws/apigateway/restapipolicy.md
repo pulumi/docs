@@ -1,7 +1,7 @@
 
 ---
 title: "RestApiPolicy"
-title_tag: "Resource RestApiPolicy | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.RestApiPolicy"
 meta_desc: "Explore the RestApiPolicy resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

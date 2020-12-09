@@ -1,7 +1,7 @@
 
 ---
 title: "BucketNotification"
-title_tag: "Resource BucketNotification | Module s3 | Package AWS"
+title_tag: "aws.s3.BucketNotification"
 meta_desc: "Explore the BucketNotification resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a S3 Bucket Notification Configuration. For additional information, see the [Configuring S3 Event Notifications section in the Amazon S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html)."
 ---
 

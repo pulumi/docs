@@ -1,7 +1,7 @@
 
 ---
 title: "FargateProfile"
-title_tag: "Resource FargateProfile | Module eks | Package AWS"
+title_tag: "aws.eks.FargateProfile"
 meta_desc: "Explore the FargateProfile resource of the eks module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EKS Fargate Profile."
 ---
 

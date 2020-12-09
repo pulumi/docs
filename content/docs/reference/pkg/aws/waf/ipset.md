@@ -1,7 +1,7 @@
 
 ---
 title: "IpSet"
-title_tag: "Resource IpSet | Module waf | Package AWS"
+title_tag: "aws.waf.IpSet"
 meta_desc: "Explore the IpSet resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF IPSet Resource"
 ---
 

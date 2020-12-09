@@ -1,7 +1,7 @@
 
 ---
 title: "BasePathMapping"
-title_tag: "Resource BasePathMapping | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.BasePathMapping"
 meta_desc: "Explore the BasePathMapping resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Connects a custom domain name registered via `aws.apigateway.DomainName`"
 ---
 

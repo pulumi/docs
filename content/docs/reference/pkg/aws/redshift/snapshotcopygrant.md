@@ -1,7 +1,7 @@
 
 ---
 title: "SnapshotCopyGrant"
-title_tag: "Resource SnapshotCopyGrant | Module redshift | Package AWS"
+title_tag: "aws.redshift.SnapshotCopyGrant"
 meta_desc: "Explore the SnapshotCopyGrant resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region."
 ---
 

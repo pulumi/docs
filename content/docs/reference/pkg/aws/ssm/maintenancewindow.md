@@ -1,7 +1,7 @@
 
 ---
 title: "MaintenanceWindow"
-title_tag: "Resource MaintenanceWindow | Module ssm | Package AWS"
+title_tag: "aws.ssm.MaintenanceWindow"
 meta_desc: "Explore the MaintenanceWindow resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SSM Maintenance Window resource"
 ---
 

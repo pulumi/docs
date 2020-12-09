@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterEndpoint"
-title_tag: "Resource ClusterEndpoint | Module rds | Package AWS"
+title_tag: "aws.rds.ClusterEndpoint"
 meta_desc: "Explore the ClusterEndpoint resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an RDS Aurora Cluster Endpoint."
 ---
 

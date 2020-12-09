@@ -1,7 +1,7 @@
 
 ---
 title: "VaultNotifications"
-title_tag: "Resource VaultNotifications | Module backup | Package AWS"
+title_tag: "aws.backup.VaultNotifications"
 meta_desc: "Explore the VaultNotifications resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Backup vault notifications resource."
 ---
 

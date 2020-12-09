@@ -1,7 +1,7 @@
 
 ---
 title: "Notification"
-title_tag: "Resource Notification | Module autoscaling | Package AWS"
+title_tag: "aws.autoscaling.Notification"
 meta_desc: "Explore the Notification resource of the autoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AutoScaling Group with Notification support, via SNS Topics. Each of"
 ---
 

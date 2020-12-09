@@ -1,7 +1,7 @@
 
 ---
 title: "BotAlias"
-title_tag: "Resource BotAlias | Module lex | Package AWS"
+title_tag: "aws.lex.BotAlias"
 meta_desc: "Explore the BotAlias resource of the lex module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Amazon Lex Bot Alias resource. For more information see"
 ---
 

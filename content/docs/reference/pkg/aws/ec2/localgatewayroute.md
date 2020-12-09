@@ -1,7 +1,7 @@
 
 ---
 title: "LocalGatewayRoute"
-title_tag: "Resource LocalGatewayRoute | Module ec2 | Package AWS"
+title_tag: "aws.ec2.LocalGatewayRoute"
 meta_desc: "Explore the LocalGatewayRoute resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Local Gateway Route. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing)."
 ---
 

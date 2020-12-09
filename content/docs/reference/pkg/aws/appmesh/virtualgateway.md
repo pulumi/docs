@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualGateway"
-title_tag: "Resource VirtualGateway | Module appmesh | Package AWS"
+title_tag: "aws.appmesh.VirtualGateway"
 meta_desc: "Explore the VirtualGateway resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh virtual gateway resource."
 ---
 

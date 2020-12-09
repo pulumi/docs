@@ -1,7 +1,7 @@
 
 ---
 title: "CertificateValidation"
-title_tag: "Resource CertificateValidation | Module acm | Package AWS"
+title_tag: "aws.acm.CertificateValidation"
 meta_desc: "Explore the CertificateValidation resource of the acm module, including examples, input properties, output properties, lookup functions, and supporting types. This resource represents a successful validation of an ACM certificate in concert"
 ---
 

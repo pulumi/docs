@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.Account"
 meta_desc: "Explore the Account resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a settings of an API Gateway Account. Settings is applied region-wide per `provider` block."
 ---
 

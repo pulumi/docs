@@ -1,7 +1,7 @@
 
 ---
 title: "ResolverRuleAssociation"
-title_tag: "Resource ResolverRuleAssociation | Module route53 | Package AWS"
+title_tag: "aws.route53.ResolverRuleAssociation"
 meta_desc: "Explore the ResolverRuleAssociation resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route53 Resolver rule association."
 ---
 

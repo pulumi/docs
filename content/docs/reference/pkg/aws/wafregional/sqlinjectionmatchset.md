@@ -1,7 +1,7 @@
 
 ---
 title: "SqlInjectionMatchSet"
-title_tag: "Resource SqlInjectionMatchSet | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.SqlInjectionMatchSet"
 meta_desc: "Explore the SqlInjectionMatchSet resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer."
 ---
 

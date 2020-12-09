@@ -1,7 +1,7 @@
 
 ---
 title: "NamedQuery"
-title_tag: "Resource NamedQuery | Module athena | Package AWS"
+title_tag: "aws.athena.NamedQuery"
 meta_desc: "Explore the NamedQuery resource of the athena module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Athena Named Query resource."
 ---
 

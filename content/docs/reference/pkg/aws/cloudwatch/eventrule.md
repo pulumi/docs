@@ -1,7 +1,7 @@
 
 ---
 title: "EventRule"
-title_tag: "Resource EventRule | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.EventRule"
 meta_desc: "Explore the EventRule resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EventBridge Rule resource."
 ---
 

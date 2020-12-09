@@ -1,7 +1,7 @@
 
 ---
 title: "IpGroup"
-title_tag: "Resource IpGroup | Module workspaces | Package AWS"
+title_tag: "aws.workspaces.IpGroup"
 meta_desc: "Explore the IpGroup resource of the workspaces module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IP access control group in AWS WorkSpaces Service"
 ---
 

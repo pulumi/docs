@@ -1,7 +1,7 @@
 
 ---
 title: "Repository"
-title_tag: "Resource Repository | Module ecr | Package AWS"
+title_tag: "aws.ecr.Repository"
 meta_desc: "Explore the Repository resource of the ecr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Container Registry Repository."
 ---
 

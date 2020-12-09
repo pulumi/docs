@@ -1,7 +1,7 @@
 
 ---
 title: "Repository"
-title_tag: "Resource Repository | Module codecommit | Package AWS"
+title_tag: "aws.codecommit.Repository"
 meta_desc: "Explore the Repository resource of the codecommit module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeCommit Repository Resource."
 ---
 

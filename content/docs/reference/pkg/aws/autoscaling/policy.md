@@ -1,7 +1,7 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module autoscaling | Package AWS"
+title_tag: "aws.autoscaling.Policy"
 meta_desc: "Explore the Policy resource of the autoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AutoScaling Scaling Policy resource."
 ---
 

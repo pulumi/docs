@@ -1,7 +1,7 @@
 
 ---
 title: "Task"
-title_tag: "Resource Task | Module datasync | Package AWS"
+title_tag: "aws.datasync.Task"
 meta_desc: "Explore the Task resource of the datasync module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GangliaLayer"
-title_tag: "Resource GangliaLayer | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.GangliaLayer"
 meta_desc: "Explore the GangliaLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks Ganglia layer resource."
 ---
 

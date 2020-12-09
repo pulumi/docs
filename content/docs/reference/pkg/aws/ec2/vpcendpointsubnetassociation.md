@@ -1,7 +1,7 @@
 
 ---
 title: "VpcEndpointSubnetAssociation"
-title_tag: "Resource VpcEndpointSubnetAssociation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcEndpointSubnetAssociation"
 meta_desc: "Explore the VpcEndpointSubnetAssociation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create an association between a VPC endpoint and a subnet."
 ---
 

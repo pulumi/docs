@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceProfile"
-title_tag: "Resource InstanceProfile | Module iam | Package AWS"
+title_tag: "aws.iam.InstanceProfile"
 meta_desc: "Explore the InstanceProfile resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM instance profile."
 ---
 

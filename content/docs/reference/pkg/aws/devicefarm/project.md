@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module devicefarm | Package AWS"
+title_tag: "aws.devicefarm.Project"
 meta_desc: "Explore the Project resource of the devicefarm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS Device Farm Projects."
 ---
 

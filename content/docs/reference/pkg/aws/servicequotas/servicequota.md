@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceQuota"
-title_tag: "Resource ServiceQuota | Module servicequotas | Package AWS"
+title_tag: "aws.servicequotas.ServiceQuota"
 meta_desc: "Explore the ServiceQuota resource of the servicequotas module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an individual Service Quota."
 ---
 

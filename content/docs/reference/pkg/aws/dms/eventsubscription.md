@@ -1,7 +1,7 @@
 
 ---
 title: "EventSubscription"
-title_tag: "Resource EventSubscription | Module dms | Package AWS"
+title_tag: "aws.dms.EventSubscription"
 meta_desc: "Explore the EventSubscription resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS (Data Migration Service) event subscription resource."
 ---
 

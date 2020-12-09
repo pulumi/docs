@@ -1,7 +1,7 @@
 
 ---
 title: "TargetGroupAttachment"
-title_tag: "Resource TargetGroupAttachment | Module lb | Package AWS"
+title_tag: "aws.lb.TargetGroupAttachment"
 meta_desc: "Explore the TargetGroupAttachment resource of the lb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides the ability to register instances and containers with an Application Load Balancer (ALB) or Network Load Balancer (NLB) target group. For attaching resources with Elastic Load Balancer (ELB), see the `aws.elb.Attachment` resource."
 ---
 

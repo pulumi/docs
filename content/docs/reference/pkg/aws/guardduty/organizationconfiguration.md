@@ -1,7 +1,7 @@
 
 ---
 title: "OrganizationConfiguration"
-title_tag: "Resource OrganizationConfiguration | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.OrganizationConfiguration"
 meta_desc: "Explore the OrganizationConfiguration resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Manages the GuardDuty Organization Configuration in the current AWS Region. The AWS account utilizing this resource must have been assigned as a delegated Organization administrator account, e.g. via the `aws.guardduty.OrganizationAdminAccount` resource. More information about Organizations support in GuardDuty can be found in the [GuardDuty User Guide](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html)."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module lightsail | Package AWS"
+title_tag: "aws.lightsail.Instance"
 meta_desc: "Explore the Instance resource of the lightsail module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Lightsail Instance. Amazon Lightsail is a service to provide easy virtual private servers"
 ---
 

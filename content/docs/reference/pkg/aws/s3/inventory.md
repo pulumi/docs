@@ -1,7 +1,7 @@
 
 ---
 title: "Inventory"
-title_tag: "Resource Inventory | Module s3 | Package AWS"
+title_tag: "aws.s3.Inventory"
 meta_desc: "Explore the Inventory resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource."
 ---
 

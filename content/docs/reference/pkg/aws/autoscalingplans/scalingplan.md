@@ -1,7 +1,7 @@
 
 ---
 title: "ScalingPlan"
-title_tag: "Resource ScalingPlan | Module autoscalingplans | Package AWS"
+title_tag: "aws.autoscalingplans.ScalingPlan"
 meta_desc: "Explore the ScalingPlan resource of the autoscalingplans module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Auto Scaling scaling plan."
 ---
 

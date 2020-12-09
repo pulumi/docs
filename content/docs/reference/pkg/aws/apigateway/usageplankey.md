@@ -1,7 +1,7 @@
 
 ---
 title: "UsagePlanKey"
-title_tag: "Resource UsagePlanKey | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.UsagePlanKey"
 meta_desc: "Explore the UsagePlanKey resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Usage Plan Key."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigFile"
-title_tag: "Resource ConfigFile | Module yaml | Package Kubernetes"
+title_tag: "kubernetes.yaml.ConfigFile"
 meta_desc: "Explore the ConfigFile resource of the yaml module, including examples, input properties, output properties, lookup functions, and supporting types. ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text"
 ---
 
@@ -17,6 +17,7 @@ may be supplied using any of the following methods:
 2. Using a file pattern or a list of file patterns:
 3. Using a literal string containing YAML, or a list of such strings:
 4. Any combination of files, patterns, or YAML strings:
+
 
 {{% examples %}}
 ## Example Usage
@@ -620,7 +621,7 @@ The ConfigFile resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
 
@@ -785,6 +786,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

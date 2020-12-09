@@ -1,7 +1,7 @@
 
 ---
 title: "SizeConstraintSet"
-title_tag: "Resource SizeConstraintSet | Module waf | Package AWS"
+title_tag: "aws.waf.SizeConstraintSet"
 meta_desc: "Explore the SizeConstraintSet resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Size Constraint Set Resource"
 ---
 

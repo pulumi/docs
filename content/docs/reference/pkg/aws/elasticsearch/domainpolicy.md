@@ -1,7 +1,7 @@
 
 ---
 title: "DomainPolicy"
-title_tag: "Resource DomainPolicy | Module elasticsearch | Package AWS"
+title_tag: "aws.elasticsearch.DomainPolicy"
 meta_desc: "Explore the DomainPolicy resource of the elasticsearch module, including examples, input properties, output properties, lookup functions, and supporting types. Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)"
 ---
 

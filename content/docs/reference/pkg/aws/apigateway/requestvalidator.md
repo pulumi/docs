@@ -1,7 +1,7 @@
 
 ---
 title: "RequestValidator"
-title_tag: "Resource RequestValidator | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.RequestValidator"
 meta_desc: "Explore the RequestValidator resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an API Gateway Request Validator."
 ---
 

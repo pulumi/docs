@@ -1,7 +1,7 @@
 
 ---
 title: "Protection"
-title_tag: "Resource Protection | Module shield | Package AWS"
+title_tag: "aws.shield.Protection"
 meta_desc: "Explore the Protection resource of the shield module, including examples, input properties, output properties, lookup functions, and supporting types. Enables AWS Shield Advanced for a specific AWS resource."
 ---
 

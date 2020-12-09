@@ -1,7 +1,7 @@
 
 ---
 title: "Endpoint"
-title_tag: "Resource Endpoint | Module ec2clientvpn | Package AWS"
+title_tag: "aws.ec2clientvpn.Endpoint"
 meta_desc: "Explore the Endpoint resource of the ec2clientvpn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the"
 ---
 

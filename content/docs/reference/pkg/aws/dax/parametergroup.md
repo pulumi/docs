@@ -1,7 +1,7 @@
 
 ---
 title: "ParameterGroup"
-title_tag: "Resource ParameterGroup | Module dax | Package AWS"
+title_tag: "aws.dax.ParameterGroup"
 meta_desc: "Explore the ParameterGroup resource of the dax module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DAX Parameter Group resource."
 ---
 

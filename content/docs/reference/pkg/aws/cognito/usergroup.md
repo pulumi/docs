@@ -1,7 +1,7 @@
 
 ---
 title: "UserGroup"
-title_tag: "Resource UserGroup | Module cognito | Package AWS"
+title_tag: "aws.cognito.UserGroup"
 meta_desc: "Explore the UserGroup resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cognito User Group resource."
 ---
 

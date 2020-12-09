@@ -1,7 +1,7 @@
 
 ---
 title: "LogDestination"
-title_tag: "Resource LogDestination | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.LogDestination"
 meta_desc: "Explore the LogDestination resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Logs destination resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PolicyAttachment"
-title_tag: "Resource PolicyAttachment | Module organizations | Package AWS"
+title_tag: "aws.organizations.PolicyAttachment"
 meta_desc: "Explore the PolicyAttachment resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit."
 ---
 

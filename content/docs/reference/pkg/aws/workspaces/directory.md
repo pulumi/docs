@@ -1,7 +1,7 @@
 
 ---
 title: "Directory"
-title_tag: "Resource Directory | Module workspaces | Package AWS"
+title_tag: "aws.workspaces.Directory"
 meta_desc: "Explore the Directory resource of the workspaces module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WorkSpaces directory in AWS WorkSpaces Service."
 ---
 

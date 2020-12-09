@@ -1,7 +1,7 @@
 
 ---
 title: "ApnsChannel"
-title_tag: "Resource ApnsChannel | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.ApnsChannel"
 meta_desc: "Explore the ApnsChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint APNs Channel resource."
 ---
 

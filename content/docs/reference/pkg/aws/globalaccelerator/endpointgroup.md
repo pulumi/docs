@@ -1,7 +1,7 @@
 
 ---
 title: "EndpointGroup"
-title_tag: "Resource EndpointGroup | Module globalaccelerator | Package AWS"
+title_tag: "aws.globalaccelerator.EndpointGroup"
 meta_desc: "Explore the EndpointGroup resource of the globalaccelerator module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Global Accelerator endpoint group."
 ---
 

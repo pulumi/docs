@@ -1,7 +1,7 @@
 
 ---
 title: "GlobalCluster"
-title_tag: "Resource GlobalCluster | Module rds | Package AWS"
+title_tag: "aws.rds.GlobalCluster"
 meta_desc: "Explore the GlobalCluster resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem."
 ---
 

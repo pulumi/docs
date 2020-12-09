@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationResponse"
-title_tag: "Resource IntegrationResponse | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.IntegrationResponse"
 meta_desc: "Explore the IntegrationResponse resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an HTTP Method Integration Response for an API Gateway Resource."
 ---
 

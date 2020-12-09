@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module quicksight | Package AWS"
+title_tag: "aws.quicksight.User"
 meta_desc: "Explore the User resource of the quicksight module, including examples, input properties, output properties, lookup functions, and supporting types. Resource for managing QuickSight User"
 ---
 

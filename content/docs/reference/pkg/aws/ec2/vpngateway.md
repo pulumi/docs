@@ -1,7 +1,7 @@
 
 ---
 title: "VpnGateway"
-title_tag: "Resource VpnGateway | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpnGateway"
 meta_desc: "Explore the VpnGateway resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a VPC VPN Gateway."
 ---
 

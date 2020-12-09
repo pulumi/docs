@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module rds | Package AWS"
+title_tag: "aws.rds.Cluster"
 meta_desc: "Explore the Cluster resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a [RDS Aurora Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html). To manage cluster instances that inherit configuration from the cluster (when not running the cluster in `serverless` engine mode), see the `aws.rds.ClusterInstance` resource. To manage non-Aurora databases (e.g. MySQL, PostgreSQL, SQL Server, etc.), see the `aws.rds.Instance` resource."
 ---
 

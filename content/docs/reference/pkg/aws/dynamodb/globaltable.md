@@ -1,7 +1,7 @@
 
 ---
 title: "GlobalTable"
-title_tag: "Resource GlobalTable | Module dynamodb | Package AWS"
+title_tag: "aws.dynamodb.GlobalTable"
 meta_desc: "Explore the GlobalTable resource of the dynamodb module, including examples, input properties, output properties, lookup functions, and supporting types. Manages [DynamoDB Global Tables V1 (version 2017.11.29)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html). These are layered on top of existing DynamoDB Tables."
 ---
 

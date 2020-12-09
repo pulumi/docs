@@ -1,7 +1,7 @@
 
 ---
 title: "CustomResourceDefinition"
-title_tag: "Resource CustomResourceDefinition | Module apiextensions.k8s.io/v1beta1 | Package Kubernetes"
+title_tag: "kubernetes.apiextensions.k8s.io/v1beta1.CustomResourceDefinition"
 meta_desc: "Explore the CustomResourceDefinition resource of the apiextensions.k8s.io/v1beta1 module, including examples, input properties, output properties, lookup functions, and supporting types. CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format &lt;.spec.name&gt;.&lt;.spec.group&gt;. Deprecated in v1.16, planned for removal in v1.22. Use apiextensions.k8s.io/v1 CustomResourceDefinition instead."
 ---
 
@@ -14,6 +14,7 @@ CustomResourceDefinition represents a resource that should be exposed on the API
 
 
 
+
 ## Create a CustomResourceDefinition Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -23,7 +24,7 @@ CustomResourceDefinition represents a resource that should be exposed on the API
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiextensions/v1beta1/#pulumi_kubernetes.apiextensions/v1beta1.CustomResourceDefinition">CustomResourceDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ObjectMeta]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomResourceDefinitionSpec]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiextensions/v1beta1/#pulumi_kubernetes.apiextensions/v1beta1.CustomResourceDefinition">CustomResourceDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_apiextensions_k8s_io_v1beta1.CustomResourceDefinitionSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +283,7 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionspec">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}spec describes how the user wants the resources to appear{{% /md %}}</dd>
 
@@ -292,7 +293,7 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -411,7 +412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionstatus">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Status]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}status indicates the actual state of the CustomResourceDefinition{{% /md %}}</dd>
 
@@ -860,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversion_review_versions_python" style="color: inherit; text-decoration: inherit;">conversion_<wbr>review_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail. Defaults to `["v1beta1"]`.{{% /md %}}</dd>
 
@@ -870,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_client_config_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>client_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Dict[Webhook<wbr>Client<wbr>Config]</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}webhookClientConfig is the instructions for how to call the webhook if strategy is `Webhook`. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd>
 
@@ -1366,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.{{% /md %}}</dd>
 
@@ -1386,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#short_names_python" style="color: inherit; text-decoration: inherit;">short_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.{{% /md %}}</dd>
 
@@ -1759,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Names]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}names specify the resource and kind names for the custom resource.{{% /md %}}</dd>
 
@@ -1779,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_printer_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>printer_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">List[Custom<wbr>Resource<wbr>Column<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If present, this field configures columns for all versions. Top-level and per-version columns are mutually exclusive. If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd>
 
@@ -1789,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversion_python" style="color: inherit; text-decoration: inherit;">conversion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">Dict[Custom<wbr>Resource<wbr>Conversion]</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd>
 
@@ -1809,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subresources_python" style="color: inherit; text-decoration: inherit;">subresources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Dict[Custom<wbr>Resource<wbr>Subresources]</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources the defined custom resource has. If present, this field configures subresources for all versions. Top-level and per-version subresources are mutually exclusive.{{% /md %}}</dd>
 
@@ -1819,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Dict[Custom<wbr>Resource<wbr>Validation]</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}validation describes the schema used for validation and pruning of the custom resource. If present, this validation schema is used to validate all versions. Top-level and per-version schemas are mutually exclusive.{{% /md %}}</dd>
 
@@ -1839,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionversion">List[Custom<wbr>Resource<wbr>Definition<wbr>Version]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}versions is the list of all API versions of the defined custom resource. Optional if `version` is specified. The name of the first item in the `versions` list must match the `version` field if `version` and `versions` are both specified. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.{{% /md %}}</dd>
 
@@ -1982,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accepted_names_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Names]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.{{% /md %}}</dd>
 
@@ -1992,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stored_versions_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.{{% /md %}}</dd>
 
@@ -2002,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitioncondition">List[Custom<wbr>Resource<wbr>Definition<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}conditions indicate state for particular aspects of a CustomResourceDefinition{{% /md %}}</dd>
 
@@ -2325,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_printer_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>printer_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">List[Custom<wbr>Resource<wbr>Column<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. Top-level and per-version columns are mutually exclusive. Per-version columns must not all be set to identical values (top-level columns should be used instead). If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd>
 
@@ -2355,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Dict[Custom<wbr>Resource<wbr>Validation]</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation and pruning of this version of the custom resource. Top-level and per-version schemas are mutually exclusive. Per-version schemas must not all be set to identical values (top-level validation schema should be used instead).{{% /md %}}</dd>
 
@@ -2365,7 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subresources_python" style="color: inherit; text-decoration: inherit;">subresources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Dict[Custom<wbr>Resource<wbr>Subresources]</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have. Top-level and per-version subresources are mutually exclusive. Per-version subresources must not all be set to identical values (top-level subresources should be used instead).{{% /md %}}</dd>
 
@@ -2641,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">Dict[Custom<wbr>Resource<wbr>Subresource<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd>
 
@@ -2651,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.{{% /md %}}</dd>
 
@@ -2734,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#open_apiv3_schema_python" style="color: inherit; text-decoration: inherit;">open_<wbr>apiv3_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">Dict[JSONSchema<wbr>Props]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd>
 
@@ -4325,7 +4326,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additional_items_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[JSONSchema<wbr>Props] | boolean</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, bool]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4335,7 +4336,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[JSONSchema<wbr>Props] | boolean</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, bool]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4345,7 +4346,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4355,7 +4356,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4365,7 +4366,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. CustomResourceDefinitions with defaults must be created using the v1 (or newer) CustomResourceDefinition API.{{% /md %}}</dd>
 
@@ -4375,7 +4376,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4385,7 +4386,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[JSONSchema<wbr>Props] | List[str]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, Sequence[str]]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4405,7 +4406,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#enum_python" style="color: inherit; text-decoration: inherit;">enum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4415,7 +4416,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4445,7 +4446,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#external_docs_python" style="color: inherit; text-decoration: inherit;">external_<wbr>docs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">Dict[External<wbr>Documentation]</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4477,7 +4478,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[JSONSchema<wbr>Props] | List[Any]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, Sequence[Any]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4577,7 +4578,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">Dict[JSONSchema<wbr>Props]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4597,7 +4598,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#one_of_python" style="color: inherit; text-decoration: inherit;">one_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4617,7 +4618,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#pattern_properties_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4627,7 +4628,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4637,7 +4638,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4706,7 +4707,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#x_kubernetes_list_map_keys_python" style="color: inherit; text-decoration: inherit;">x_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-map-keys annotates an array with the x-kubernetes-list-type `map` by specifying the keys used as the index of the map.
 
@@ -5013,7 +5014,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -5624,7 +5625,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -5678,7 +5679,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -5712,7 +5713,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -5722,7 +5723,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -5754,7 +5755,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -6465,7 +6466,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Dict[Service<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -6493,6 +6494,8 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

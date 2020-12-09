@@ -1,7 +1,7 @@
 
 ---
 title: "AccountPasswordPolicy"
-title_tag: "Resource AccountPasswordPolicy | Module iam | Package AWS"
+title_tag: "aws.iam.AccountPasswordPolicy"
 meta_desc: "Explore the AccountPasswordPolicy resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **Note:** There is only a single policy allowed per AWS account. An existing policy will be lost when using this resource as an effect of this limitation."
 ---
 

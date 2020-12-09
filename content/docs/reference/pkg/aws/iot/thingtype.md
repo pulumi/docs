@@ -1,7 +1,7 @@
 
 ---
 title: "ThingType"
-title_tag: "Resource ThingType | Module iot | Package AWS"
+title_tag: "aws.iot.ThingType"
 meta_desc: "Explore the ThingType resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. Creates and manages an AWS IoT Thing Type."
 ---
 

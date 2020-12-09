@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module securityhub | Package AWS"
+title_tag: "aws.securityhub.Account"
 meta_desc: "Explore the Account resource of the securityhub module, including examples, input properties, output properties, lookup functions, and supporting types. Enables Security Hub for this AWS account."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PersistentVolumeClaim"
-title_tag: "Resource PersistentVolumeClaim | Module core/v1 | Package Kubernetes"
+title_tag: "kubernetes.core/v1.PersistentVolumeClaim"
 meta_desc: "Explore the PersistentVolumeClaim resource of the core/v1 module, including examples, input properties, output properties, lookup functions, and supporting types. PersistentVolumeClaim is a user&#39;s request for and claim to a persistent volume"
 ---
 
@@ -14,6 +14,7 @@ PersistentVolumeClaim is a user's request for and claim to a persistent volume
 
 
 
+
 ## Create a PersistentVolumeClaim Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -23,7 +24,7 @@ PersistentVolumeClaim is a user's request for and claim to a persistent volume
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.PersistentVolumeClaim">PersistentVolumeClaim</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ObjectMeta]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[Dict[PersistentVolumeClaimSpec]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/core/v1/#pulumi_kubernetes.core/v1.PersistentVolumeClaim">PersistentVolumeClaim</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_core_v1.PersistentVolumeClaimSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +283,7 @@ The PersistentVolumeClaim resource accepts the following [input]({{< relref "/do
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -292,7 +293,7 @@ The PersistentVolumeClaim resource accepts the following [input]({{< relref "/do
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">Dict[Persistent<wbr>Volume<wbr>Claim<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimspec">Persistent<wbr>Volume<wbr>Claim<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd>
 
@@ -411,7 +412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimstatus">Dict[Persistent<wbr>Volume<wbr>Claim<wbr>Status]</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimstatus">Persistent<wbr>Volume<wbr>Claim<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd>
 
@@ -533,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">List[Label<wbr>Selector<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
 
@@ -543,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_labels_python" style="color: inherit; text-decoration: inherit;">match_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
 
@@ -706,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
 
@@ -959,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1570,7 +1571,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -1624,7 +1625,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -1658,7 +1659,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -1668,7 +1669,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -1700,7 +1701,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2346,7 +2347,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot - Beta) * An existing PVC (PersistentVolumeClaim) * An existing custom resource/object that implements data population (Alpha) In order to use VolumeSnapshot object types, the appropriate feature gate must be enabled (VolumeSnapshotDataSource or AnyVolumeDataSource) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the specified data source is not supported, the volume will not be created and the failure will be reported as an event. In the future, we plan to support more data source types and the behavior of the provisioner may change.{{% /md %}}</dd>
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2423,7 +2424,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot - Beta) * An existing PVC (PersistentVolumeClaim) * An existing custom resource/object that implements data population (Alpha) In order to use VolumeSnapshot object types, the appropriate feature gate must be enabled (VolumeSnapshotDataSource or AnyVolumeDataSource) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the specified data source is not supported, the volume will not be created and the failure will be reported as an event. In the future, we plan to support more data source types and the behavior of the provisioner may change.{{% /md %}}</dd>
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2500,7 +2501,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot - Beta) * An existing PVC (PersistentVolumeClaim) * An existing custom resource/object that implements data population (Alpha) In order to use VolumeSnapshot object types, the appropriate feature gate must be enabled (VolumeSnapshotDataSource or AnyVolumeDataSource) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the specified data source is not supported, the volume will not be created and the failure will be reported as an event. In the future, we plan to support more data source types and the behavior of the provisioner may change.{{% /md %}}</dd>
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2565,7 +2566,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#access_modes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1{{% /md %}}</dd>
 
@@ -2575,9 +2576,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typedlocalobjectreference">Dict[Typed<wbr>Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot - Beta) * An existing PVC (PersistentVolumeClaim) * An existing custom resource/object that implements data population (Alpha) In order to use VolumeSnapshot object types, the appropriate feature gate must be enabled (VolumeSnapshotDataSource or AnyVolumeDataSource) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the specified data source is not supported, the volume will not be created and the failure will be reported as an event. In the future, we plan to support more data source types and the behavior of the provisioner may change.{{% /md %}}</dd>
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2585,7 +2586,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Dict[Resource<wbr>Requirements]</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd>
 
@@ -2595,7 +2596,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A label query over volumes to consider for binding.{{% /md %}}</dd>
 
@@ -2798,7 +2799,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#access_modes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1{{% /md %}}</dd>
 
@@ -2808,7 +2809,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Represents the actual resources of the underlying volume.{{% /md %}}</dd>
 
@@ -2818,7 +2819,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimcondition">List[Persistent<wbr>Volume<wbr>Claim<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimcondition">Persistent<wbr>Volume<wbr>Claim<wbr>Condition<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.{{% /md %}}</dd>
 
@@ -2941,7 +2942,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 
@@ -2951,7 +2952,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 
@@ -3120,6 +3121,8 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

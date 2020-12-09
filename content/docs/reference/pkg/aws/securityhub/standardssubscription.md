@@ -1,7 +1,7 @@
 
 ---
 title: "StandardsSubscription"
-title_tag: "Resource StandardsSubscription | Module securityhub | Package AWS"
+title_tag: "aws.securityhub.StandardsSubscription"
 meta_desc: "Explore the StandardsSubscription resource of the securityhub module, including examples, input properties, output properties, lookup functions, and supporting types. Subscribes to a Security Hub standard."
 ---
 

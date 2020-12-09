@@ -1,7 +1,7 @@
 
 ---
 title: "IdentityPoolRoleAttachment"
-title_tag: "Resource IdentityPoolRoleAttachment | Module cognito | Package AWS"
+title_tag: "aws.cognito.IdentityPoolRoleAttachment"
 meta_desc: "Explore the IdentityPoolRoleAttachment resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Cognito Identity Pool Roles Attachment."
 ---
 

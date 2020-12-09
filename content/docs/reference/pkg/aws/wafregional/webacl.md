@@ -1,7 +1,7 @@
 
 ---
 title: "WebAcl"
-title_tag: "Resource WebAcl | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.WebAcl"
 meta_desc: "Explore the WebAcl resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regional Web ACL Resource for use with Application Load Balancer."
 ---
 

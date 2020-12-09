@@ -1,7 +1,7 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Module ec2clientvpn | Package AWS"
+title_tag: "aws.ec2clientvpn.Route"
 meta_desc: "Explore the Route resource of the ec2clientvpn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides additional routes for AWS Client VPN endpoints. For more information on usage, please see the"
 ---
 

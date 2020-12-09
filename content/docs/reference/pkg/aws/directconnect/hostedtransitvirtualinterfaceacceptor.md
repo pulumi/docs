@@ -1,7 +1,7 @@
 
 ---
 title: "HostedTransitVirtualInterfaceAcceptor"
-title_tag: "Resource HostedTransitVirtualInterfaceAcceptor | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.HostedTransitVirtualInterfaceAcceptor"
 meta_desc: "Explore the HostedTransitVirtualInterfaceAcceptor resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage the accepter&#39;s side of a Direct Connect hosted transit virtual interface."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "WorkingStorage"
-title_tag: "Resource WorkingStorage | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.WorkingStorage"
 meta_desc: "Explore the WorkingStorage resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway working storage."
 ---
 

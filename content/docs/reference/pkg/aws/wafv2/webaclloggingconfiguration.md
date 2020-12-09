@@ -1,7 +1,7 @@
 
 ---
 title: "WebAclLoggingConfiguration"
-title_tag: "Resource WebAclLoggingConfiguration | Module wafv2 | Package AWS"
+title_tag: "aws.wafv2.WebAclLoggingConfiguration"
 meta_desc: "Explore the WebAclLoggingConfiguration resource of the wafv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a WAFv2 Web ACL Logging Configuration resource."
 ---
 

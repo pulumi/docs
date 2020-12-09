@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterSnapshot"
-title_tag: "Resource ClusterSnapshot | Module neptune | Package AWS"
+title_tag: "aws.neptune.ClusterSnapshot"
 meta_desc: "Explore the ClusterSnapshot resource of the neptune module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Neptune database cluster snapshot."
 ---
 

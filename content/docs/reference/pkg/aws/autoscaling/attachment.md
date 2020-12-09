@@ -1,7 +1,7 @@
 
 ---
 title: "Attachment"
-title_tag: "Resource Attachment | Module autoscaling | Package AWS"
+title_tag: "aws.autoscaling.Attachment"
 meta_desc: "Explore the Attachment resource of the autoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Auto Scaling Attachment resource."
 ---
 

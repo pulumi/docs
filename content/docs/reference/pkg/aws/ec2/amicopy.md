@@ -1,7 +1,7 @@
 
 ---
 title: "AmiCopy"
-title_tag: "Resource AmiCopy | Module ec2 | Package AWS"
+title_tag: "aws.ec2.AmiCopy"
 meta_desc: "Explore the AmiCopy resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. The &#34;AMI copy&#34; resource allows duplication of an Amazon Machine Image (AMI),"
 ---
 

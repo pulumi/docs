@@ -1,7 +1,7 @@
 
 ---
 title: "Dashboard"
-title_tag: "Resource Dashboard | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.Dashboard"
 meta_desc: "Explore the Dashboard resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Dashboard resource."
 ---
 

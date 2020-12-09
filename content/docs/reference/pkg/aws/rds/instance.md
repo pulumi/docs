@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module rds | Package AWS"
+title_tag: "aws.rds.Instance"
 meta_desc: "Explore the Instance resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS instance resource.  A DB instance is an isolated database"
 ---
 

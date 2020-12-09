@@ -1,7 +1,7 @@
 
 ---
 title: "LoggingConfiguration"
-title_tag: "Resource LoggingConfiguration | Module networkfirewall | Package AWS"
+title_tag: "aws.networkfirewall.LoggingConfiguration"
 meta_desc: "Explore the LoggingConfiguration resource of the networkfirewall module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Network Firewall Logging Configuration Resource"
 ---
 

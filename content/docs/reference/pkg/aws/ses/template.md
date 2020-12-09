@@ -1,7 +1,7 @@
 
 ---
 title: "Template"
-title_tag: "Resource Template | Module ses | Package AWS"
+title_tag: "aws.ses.Template"
 meta_desc: "Explore the Template resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a SES template."
 ---
 

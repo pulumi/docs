@@ -1,7 +1,7 @@
 
 ---
 title: "CachesIscsiVolume"
-title_tag: "Resource CachesIscsiVolume | Module storagegateway | Package AWS"
+title_tag: "aws.storagegateway.CachesIscsiVolume"
 meta_desc: "Explore the CachesIscsiVolume resource of the storagegateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Storage Gateway cached iSCSI volume."
 ---
 

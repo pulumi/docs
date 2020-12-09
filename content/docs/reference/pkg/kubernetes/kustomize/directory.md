@@ -1,7 +1,7 @@
 
 ---
 title: "Directory"
-title_tag: "Resource Directory | Module kustomize | Package Kubernetes"
+title_tag: "kubernetes.kustomize.Directory"
 meta_desc: "Explore the Directory resource of the kustomize module, including examples, input properties, output properties, lookup functions, and supporting types. Directory is a component representing a collection of resources described by a kustomize directory (kustomization)."
 ---
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the Directory resource of the kustomize module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Directory is a component representing a collection of resources described by a kustomize directory (kustomization).
+
 
 {{% examples %}}
 ## Example Usage
@@ -699,7 +700,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
 
@@ -784,6 +785,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

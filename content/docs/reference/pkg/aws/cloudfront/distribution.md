@@ -1,7 +1,7 @@
 
 ---
 title: "Distribution"
-title_tag: "Resource Distribution | Module cloudfront | Package AWS"
+title_tag: "aws.cloudfront.Distribution"
 meta_desc: "Explore the Distribution resource of the cloudfront module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Amazon CloudFront web distribution."
 ---
 

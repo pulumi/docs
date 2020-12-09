@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module docdb | Package AWS"
+title_tag: "aws.docdb.Cluster"
 meta_desc: "Explore the Cluster resource of the docdb module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a DocDB Cluster."
 ---
 

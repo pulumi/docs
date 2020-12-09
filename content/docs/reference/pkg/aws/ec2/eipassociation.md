@@ -1,7 +1,7 @@
 
 ---
 title: "EipAssociation"
-title_tag: "Resource EipAssociation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.EipAssociation"
 meta_desc: "Explore the EipAssociation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS EIP Association as a top level resource, to associate and"
 ---
 

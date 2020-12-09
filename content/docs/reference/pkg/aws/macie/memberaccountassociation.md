@@ -1,7 +1,7 @@
 
 ---
 title: "MemberAccountAssociation"
-title_tag: "Resource MemberAccountAssociation | Module macie | Package AWS"
+title_tag: "aws.macie.MemberAccountAssociation"
 meta_desc: "Explore the MemberAccountAssociation resource of the macie module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **NOTE:** This resource interacts with [Amazon Macie Classic](https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html). Macie Classic cannot be activated in new accounts. See the [FAQ](https://aws.amazon.com/macie/classic-faqs/) for more details."
 ---
 

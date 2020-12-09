@@ -1,7 +1,7 @@
 
 ---
 title: "StaticIp"
-title_tag: "Resource StaticIp | Module lightsail | Package AWS"
+title_tag: "aws.lightsail.StaticIp"
 meta_desc: "Explore the StaticIp resource of the lightsail module, including examples, input properties, output properties, lookup functions, and supporting types. Allocates a static IP address."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Authorizer"
-title_tag: "Resource Authorizer | Module apigatewayv2 | Package AWS"
+title_tag: "aws.apigatewayv2.Authorizer"
 meta_desc: "Explore the Authorizer resource of the apigatewayv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon API Gateway Version 2 authorizer."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "LinkAggregationGroup"
-title_tag: "Resource LinkAggregationGroup | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.LinkAggregationGroup"
 meta_desc: "Explore the LinkAggregationGroup resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Direct Connect LAG. Connections can be added to the LAG via the `aws.directconnect.Connection` and `aws.directconnect.ConnectionAssociation` resources."
 ---
 

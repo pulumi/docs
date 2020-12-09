@@ -1,7 +1,7 @@
 
 ---
 title: "RolePolicy"
-title_tag: "Resource RolePolicy | Module iam | Package AWS"
+title_tag: "aws.iam.RolePolicy"
 meta_desc: "Explore the RolePolicy resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM role inline policy."
 ---
 

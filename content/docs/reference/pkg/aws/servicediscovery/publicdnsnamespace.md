@@ -1,7 +1,7 @@
 
 ---
 title: "PublicDnsNamespace"
-title_tag: "Resource PublicDnsNamespace | Module servicediscovery | Package AWS"
+title_tag: "aws.servicediscovery.PublicDnsNamespace"
 meta_desc: "Explore the PublicDnsNamespace resource of the servicediscovery module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Service Discovery Public DNS Namespace resource."
 ---
 

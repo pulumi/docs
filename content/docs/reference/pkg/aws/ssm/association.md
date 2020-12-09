@@ -1,7 +1,7 @@
 
 ---
 title: "Association"
-title_tag: "Resource Association | Module ssm | Package AWS"
+title_tag: "aws.ssm.Association"
 meta_desc: "Explore the Association resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Associates an SSM Document to an instance or EC2 tag."
 ---
 

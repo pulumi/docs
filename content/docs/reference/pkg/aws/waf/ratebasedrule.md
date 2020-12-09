@@ -1,7 +1,7 @@
 
 ---
 title: "RateBasedRule"
-title_tag: "Resource RateBasedRule | Module waf | Package AWS"
+title_tag: "aws.waf.RateBasedRule"
 meta_desc: "Explore the RateBasedRule resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Rate Based Rule Resource"
 ---
 

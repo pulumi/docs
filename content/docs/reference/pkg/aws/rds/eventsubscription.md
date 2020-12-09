@@ -1,7 +1,7 @@
 
 ---
 title: "EventSubscription"
-title_tag: "Resource EventSubscription | Module rds | Package AWS"
+title_tag: "aws.rds.EventSubscription"
 meta_desc: "Explore the EventSubscription resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DB event subscription resource."
 ---
 

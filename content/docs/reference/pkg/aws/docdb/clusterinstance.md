@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterInstance"
-title_tag: "Resource ClusterInstance | Module docdb | Package AWS"
+title_tag: "aws.docdb.ClusterInstance"
 meta_desc: "Explore the ClusterInstance resource of the docdb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an DocDB Cluster Resource Instance. A Cluster Instance Resource defines"
 ---
 

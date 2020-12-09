@@ -1,7 +1,7 @@
 
 ---
 title: "UserPoolClient"
-title_tag: "Resource UserPoolClient | Module cognito | Package AWS"
+title_tag: "aws.cognito.UserPoolClient"
 meta_desc: "Explore the UserPoolClient resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cognito User Pool Client resource."
 ---
 

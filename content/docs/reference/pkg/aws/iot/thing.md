@@ -1,7 +1,7 @@
 
 ---
 title: "Thing"
-title_tag: "Resource Thing | Module iot | Package AWS"
+title_tag: "aws.iot.Thing"
 meta_desc: "Explore the Thing resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. Creates and manages an AWS IoT Thing."
 ---
 

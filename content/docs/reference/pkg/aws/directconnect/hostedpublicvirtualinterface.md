@@ -1,7 +1,7 @@
 
 ---
 title: "HostedPublicVirtualInterface"
-title_tag: "Resource HostedPublicVirtualInterface | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.HostedPublicVirtualInterface"
 meta_desc: "Explore the HostedPublicVirtualInterface resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Direct Connect hosted public virtual interface resource. This resource represents the allocator&#39;s side of the hosted virtual interface."
 ---
 

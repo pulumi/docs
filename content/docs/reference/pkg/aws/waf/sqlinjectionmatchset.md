@@ -1,7 +1,7 @@
 
 ---
 title: "SqlInjectionMatchSet"
-title_tag: "Resource SqlInjectionMatchSet | Module waf | Package AWS"
+title_tag: "aws.waf.SqlInjectionMatchSet"
 meta_desc: "Explore the SqlInjectionMatchSet resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF SQL Injection Match Set Resource"
 ---
 

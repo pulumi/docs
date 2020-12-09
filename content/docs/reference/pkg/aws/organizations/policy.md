@@ -1,7 +1,7 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module organizations | Package AWS"
+title_tag: "aws.organizations.Policy"
 meta_desc: "Explore the Policy resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage an [AWS Organizations policy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html)."
 ---
 

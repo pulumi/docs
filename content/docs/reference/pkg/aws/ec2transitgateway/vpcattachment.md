@@ -1,7 +1,7 @@
 
 ---
 title: "VpcAttachment"
-title_tag: "Resource VpcAttachment | Module ec2transitgateway | Package AWS"
+title_tag: "aws.ec2transitgateway.VpcAttachment"
 meta_desc: "Explore the VpcAttachment resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide."
 ---
 

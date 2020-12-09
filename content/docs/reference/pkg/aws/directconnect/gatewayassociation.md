@@ -1,7 +1,7 @@
 
 ---
 title: "GatewayAssociation"
-title_tag: "Resource GatewayAssociation | Module directconnect | Package AWS"
+title_tag: "aws.directconnect.GatewayAssociation"
 meta_desc: "Explore the GatewayAssociation resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Associates a Direct Connect Gateway with a VGW or transit gateway."
 ---
 

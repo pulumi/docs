@@ -1,7 +1,7 @@
 
 ---
 title: "Queue"
-title_tag: "Resource Queue | Module mediaconvert | Package AWS"
+title_tag: "aws.mediaconvert.Queue"
 meta_desc: "Explore the Queue resource of the mediaconvert module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Elemental MediaConvert Queue."
 ---
 

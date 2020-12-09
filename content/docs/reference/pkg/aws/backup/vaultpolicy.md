@@ -1,7 +1,7 @@
 
 ---
 title: "VaultPolicy"
-title_tag: "Resource VaultPolicy | Module backup | Package AWS"
+title_tag: "aws.backup.VaultPolicy"
 meta_desc: "Explore the VaultPolicy resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Backup vault policy resource."
 ---
 

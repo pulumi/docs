@@ -1,7 +1,7 @@
 
 ---
 title: "RdsDbInstance"
-title_tag: "Resource RdsDbInstance | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.RdsDbInstance"
 meta_desc: "Explore the RdsDbInstance resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks RDS DB Instance resource."
 ---
 

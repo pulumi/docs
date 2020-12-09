@@ -1,7 +1,7 @@
 
 ---
 title: "Member"
-title_tag: "Resource Member | Module securityhub | Package AWS"
+title_tag: "aws.securityhub.Member"
 meta_desc: "Explore the Member resource of the securityhub module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Security Hub member resource."
 ---
 

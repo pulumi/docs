@@ -1,7 +1,7 @@
 
 ---
 title: "Mesh"
-title_tag: "Resource Mesh | Module appmesh | Package AWS"
+title_tag: "aws.appmesh.Mesh"
 meta_desc: "Explore the Mesh resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh service mesh resource."
 ---
 
