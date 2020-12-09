@@ -12,6 +12,7 @@ meta_desc: "Explore the CustomDomain resource of the Auth0 package, including ex
 
 With Auth0, you can use a custom domain to maintain a consistent user experience. This resource allows you to create and manage a custom domain within your Auth0 tenant.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1160,6 +1161,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the RuleConfig resource of the Auth0 package, including exam
 
 With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage variables that are available to all rules via Auth0's global configuration object. Used in conjunction with configured rules.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -738,6 +739,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
