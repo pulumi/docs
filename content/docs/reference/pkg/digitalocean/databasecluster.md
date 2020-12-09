@@ -200,7 +200,7 @@ class MyStack : Stack
             NodeCount = 1,
             Region = "nyc1",
             Size = "db-s-1vcpu-1gb",
-            Version = "5",
+            Version = "6",
         });
     }
 
@@ -225,7 +225,7 @@ func main() {
 			NodeCount: pulumi.Int(1),
 			Region:    pulumi.String("nyc1"),
 			Size:      pulumi.String("db-s-1vcpu-1gb"),
-			Version:   pulumi.String("5"),
+			Version:   pulumi.String("6"),
 		})
 		if err != nil {
 			return err
@@ -247,7 +247,7 @@ redis_example = digitalocean.DatabaseCluster("redis-example",
     node_count=1,
     region="nyc1",
     size="db-s-1vcpu-1gb",
-    version="5")
+    version="6")
 ```
 
 {{% /example %}}
@@ -262,7 +262,7 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
     nodeCount: 1,
     region: "nyc1",
     size: "db-s-1vcpu-1gb",
-    version: "5",
+    version: "6",
 });
 ```
 
@@ -493,7 +493,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -621,7 +621,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -749,7 +749,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Database<wbr>Slug</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -877,7 +877,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1728,7 +1728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1955,7 +1955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2182,7 +2182,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Database<wbr>Slug</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2409,7 +2409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
+    <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
