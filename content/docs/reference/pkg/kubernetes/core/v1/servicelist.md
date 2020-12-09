@@ -293,7 +293,7 @@ The ServiceList resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
@@ -1121,7 +1121,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portstatus">Port<wbr>Status<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#portstatus">Port<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ports is a list of records of service ports If used, every port defined in the service should have an entry in it{{% /md %}}</dd>
 
@@ -1204,7 +1204,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceringress">Load<wbr>Balancer<wbr>Ingress<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#loadbalanceringress">Load<wbr>Balancer<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.{{% /md %}}</dd>
 
@@ -2166,7 +2166,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2198,7 +2198,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2835,7 +2835,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -2845,7 +2845,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicespec">Service<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicespec">Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the behavior of a service. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -2855,7 +2855,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the service. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -3897,7 +3897,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceport">Service<wbr>Port<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#serviceport">Service<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ports that are exposed by this service. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies{{% /md %}}</dd>
 
@@ -3937,7 +3937,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
 <a href="#session_affinity_config_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sessionaffinityconfig">Session<wbr>Affinity<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sessionaffinityconfig">Session<wbr>Affinity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}sessionAffinityConfig contains the configurations of session affinity.{{% /md %}}</dd>
 
@@ -4070,7 +4070,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Current service state{{% /md %}}</dd>
 
@@ -4080,7 +4080,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstatus">Load<wbr>Balancer<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerstatus">Load<wbr>Balancer<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LoadBalancer contains the current status of the load-balancer, if one is present.{{% /md %}}</dd>
 
@@ -4163,7 +4163,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
 <a href="#client_ip_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientipconfig">Client<wbr>IPConfig<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clientipconfig">Client<wbr>IPConfig<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}clientIP contains the configurations of Client IP based session affinity.{{% /md %}}</dd>
 

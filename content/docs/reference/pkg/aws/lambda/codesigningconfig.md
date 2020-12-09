@@ -458,7 +458,7 @@ The CodeSigningConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
 {{% /md %}}</dd>
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
 <a href="#state_allowed_publishers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>publishers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codesigningconfigallowedpublishers">Code<wbr>Signing<wbr>Config<wbr>Allowed<wbr>Publishers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#codesigningconfigallowedpublishers">Code<wbr>Signing<wbr>Config<wbr>Allowed<wbr>Publishers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
 {{% /md %}}</dd>
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
 {{% /md %}}</dd>

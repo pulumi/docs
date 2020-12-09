@@ -298,7 +298,7 @@ The Ingress resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -308,7 +308,7 @@ The Ingress resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressspec">Ingress<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ingressspec">Ingress<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -427,7 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressstatus">Ingress<wbr>Status]</a></span>
+        <span class="property-type"><a href="#ingressstatus">Ingress<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
@@ -885,7 +885,7 @@ Implementations are required to support all path types. Defaults to Implementati
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.{{% /md %}}</dd>
 
@@ -1036,7 +1036,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpingressrulevalue">HTTPIngress<wbr>Rule<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpingressrulevalue">HTTPIngress<wbr>Rule<wbr>Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A default backend capable of servicing requests that don't match any rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.{{% /md %}}</dd>
 
@@ -1229,7 +1229,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressrule">Ingress<wbr>Rule<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#ingressrule">Ingress<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.{{% /md %}}</dd>
 
@@ -1239,7 +1239,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresstls">Ingress<wbr>TLSArgs]]</a></span>
+        <span class="property-type"><a href="#ingresstls">Ingress<wbr>TLSArgs]</a></span>
     </dt>
     <dd>{{% md %}}TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.{{% /md %}}</dd>
 
@@ -1322,7 +1322,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstatus">Load<wbr>Balancer<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerstatus">Load<wbr>Balancer<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LoadBalancer contains the current status of the load-balancer.{{% /md %}}</dd>
 
@@ -1608,7 +1608,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portstatus">Port<wbr>Status<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#portstatus">Port<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ports is a list of records of service ports If used, every port defined in the service should have an entry in it{{% /md %}}</dd>
 
@@ -1691,7 +1691,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceringress">Load<wbr>Balancer<wbr>Ingress<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#loadbalanceringress">Load<wbr>Balancer<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.{{% /md %}}</dd>
 
@@ -2653,7 +2653,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2685,7 +2685,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
