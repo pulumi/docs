@@ -507,46 +507,47 @@ const server = new aws.ec2.Instance("webserver-www", {
     ami: ami.id,
 });
 ```
+
 This example launches an ec2 instance in the vpc and security group that was created above.
+
 ```bash
 $ pulumi up
 Updating (dev):
-     Type                                    Name                    Status      
- +   pulumi:pulumi:Stack                     crosswalk-dev           created     
- +   ├─ awsx:x:ec2:SecurityGroup             webserver-sg            created     
- +   │  └─ aws:ec2:SecurityGroup             webserver-sg            created     
- +   ├─ awsx:x:ec2:Vpc                       custom                  created     
- +   │  ├─ awsx:x:ec2:Subnet                 custom-public-1         created     
- +   │  │  ├─ aws:ec2:RouteTable             custom-public-1         created     
- +   │  │  ├─ aws:ec2:Subnet                 custom-public-1         created     
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-1         created     
- +   │  │  └─ aws:ec2:Route                  custom-public-1-ig      created     
- +   │  ├─ awsx:x:ec2:NatGateway             custom-1                created     
- +   │  │  ├─ aws:ec2:Eip                    custom-1                created     
- +   │  │  └─ aws:ec2:NatGateway             custom-1                created     
- +   │  ├─ awsx:x:ec2:Subnet                 custom-private-0        created     
- +   │  │  ├─ aws:ec2:RouteTable             custom-private-0        created     
- +   │  │  ├─ aws:ec2:Subnet                 custom-private-0        created     
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-0        created     
- +   │  │  └─ aws:ec2:Route                  custom-private-0-nat-0  created     
- +   │  ├─ awsx:x:ec2:Subnet                 custom-private-1        created     
- +   │  │  ├─ aws:ec2:RouteTable             custom-private-1        created     
- +   │  │  ├─ aws:ec2:Subnet                 custom-private-1        created     
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-1        created     
- +   │  │  └─ aws:ec2:Route                  custom-private-1-nat-1  created     
- +   │  ├─ awsx:x:ec2:Subnet                 custom-public-0         created     
- +   │  │  ├─ aws:ec2:RouteTable             custom-public-0         created     
- +   │  │  ├─ aws:ec2:Subnet                 custom-public-0         created     
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-0         created     
- +   │  │  └─ aws:ec2:Route                  custom-public-0-ig      created     
- +   │  ├─ awsx:x:ec2:NatGateway             custom-0                created     
- +   │  │  ├─ aws:ec2:Eip                    custom-0                created     
- +   │  │  └─ aws:ec2:NatGateway             custom-0                created     
- +   │  ├─ awsx:x:ec2:InternetGateway        custom                  created     
- +   │  │  └─ aws:ec2:InternetGateway        custom                  created     
- +   │  └─ aws:ec2:Vpc                       custom                  created     
- +   └─ aws:ec2:Instance                     webserver-www           created     
- 
+     Type                                    Name                    Status  
+ +   pulumi:pulumi:Stack                     crosswalk-dev           created
+ +   ├─ awsx:x:ec2:SecurityGroup             webserver-sg            created
+ +   │  └─ aws:ec2:SecurityGroup             webserver-sg            created
+ +   ├─ awsx:x:ec2:Vpc                       custom                  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-public-1         created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-public-1         created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-public-1         created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-1         created
+ +   │  │  └─ aws:ec2:Route                  custom-public-1-ig      created
+ +   │  ├─ awsx:x:ec2:NatGateway             custom-1                created
+ +   │  │  ├─ aws:ec2:Eip                    custom-1                created
+ +   │  │  └─ aws:ec2:NatGateway             custom-1                created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-private-0        created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-private-0        created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-private-0        created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-0        created
+ +   │  │  └─ aws:ec2:Route                  custom-private-0-nat-0  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-private-1        created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-private-1        created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-private-1        created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-1        created
+ +   │  │  └─ aws:ec2:Route                  custom-private-1-nat-1  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-public-0         created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-public-0         created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-public-0         created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-0         created
+ +   │  │  └─ aws:ec2:Route                  custom-public-0-ig      created
+ +   │  ├─ awsx:x:ec2:NatGateway             custom-0                created
+ +   │  │  ├─ aws:ec2:Eip                    custom-0                created
+ +   │  │  └─ aws:ec2:NatGateway             custom-0                created
+ +   │  ├─ awsx:x:ec2:InternetGateway        custom                  created
+ +   │  │  └─ aws:ec2:InternetGateway        custom                  created
+ +   │  └─ aws:ec2:Vpc                       custom                  created
+ +   └─ aws:ec2:Instance                     webserver-www           created
 Resources:
     + 34 created
 ```
