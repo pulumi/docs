@@ -86,7 +86,7 @@ Many companies, and startups in particular, have big dreams. They want an infras
 
 For instance, maybe a simpler, native container orchestrator like Amazon's Elastic Container Service (ECS) will be easier to adopt and manage. Or perhaps a PaaS like Heroku, Google AppEngine, or Azure Service Fabric, that is more opinionated and less extensible, but far simpler to get up and running on, is a better, cheaper first step. If you have an event-driven architecture, then one of the many serverless compute technologies may be a better fit.
 
-Architectures have to be shaped over time. You can't simply create your infrastructure once and think you’re finished.Whatever infrastructure you adopt, you need to be able to change and adapt. In five years time, who knows what will be available? Don’t lock yourself into an architecture prematurely.
+Architectures have to be shaped over time. It's never the case that was just create our infrastructure once and then we're done. Whatever infrastructure you adopt, you need to be able to change and adapt as your requirements change and evolve. In five years time, who knows what the world will look like? Betting the farm on Kubernetes too soon and too big could turn out to be an unwise decision in hindsight after you've spent many precious dollars deploying it.
 
 Learn More
 This blog post talked about the many issues to consider before you dive headlong into a Kubernetes project. If you’re curious about just what a small project might look like (using your favorite programming language, whatever that is), check out Pulumi’s Get Started with Kubernetes.
