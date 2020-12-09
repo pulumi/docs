@@ -16,7 +16,7 @@ The point of any technology isn’t the technology itself. When done right, Kube
 
 It very well might be that sticking with and improving the solution you already have offers a better cost/benefit tradeoff. It's easy to fall into the trap of believing that simply adopting a new technology like Kubernetes will instantly solve your hard organizational or technical problems, however, we know that is seldom true.
 
-In this blog post we’ll talk about how to evaluate your own situation to see if Kubernetes is a good fit. We’ll see that the question isn’t that simple to answer and there are a lot of variables to consider. In the next blog post, we’ll talk about a situation where Kubernetes can be a good fit and how to start your first Kubernetes project.
+In this blog post we’ll share some tips and tricks for evaluating your own situation to see if Kubernetes is a good fit. We've learned these from helping hundreds of customers adopt Kubernetes &mdash; in addition to not, when there was a better solution available. We’ll see that the question isn’t that simple to answer and there are a lot of variables to consider. In the next blog post, we’ll talk about a situation where Kubernetes can be a good fit and how to start your first Kubernetes project.
 
 Note that these blog posts assume you already have some familiarity with Kubernetes. If you need some introductory material, the [Kubernetes web site](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) is a good place to start.
 
