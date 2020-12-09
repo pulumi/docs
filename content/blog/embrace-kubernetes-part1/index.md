@@ -56,7 +56,7 @@ Another way to look at this question is to ask yourself where your organization 
 
 We have seen a greater likelihood of success within our own customers that have experience practicing "Cloud Engineering", "DevOps", "Site Reliability Engineering", and/or other more collaborative and engineering-oriented approaches to infrastructure. You might want to evaluate your own organization. A good guide is [DevOps Maturity Model](https://www.atlassian.com/solutions/devops/maturity-model).
 
-### What Are Your Personal Motivations?
+### What Are Your Motivations?
 
  It’s simply a human quality to make decisions for personal reasons and that’s as true of technologies as it is of what car you buy. Kubernetes has a lot of appeal right now. It’s well publicized and companies with a lot of IT credibility, such as Netflix, use it. That alone might persuade some managers to adopt it, thinking that if it’s right for Netflix it’s right for their companies. There are tutorials, YouTube videos and conferences that all say they’ll make it easy for you to adopt Kubernetes, and expertise in Kubernetes is a great way to build your resume. However, none of these reasons are good ones. As we’ll see, there’s no easy road to success with Kubernetes so, to make the right decision, you need to ask yourself some tough questions, put your personal reasons aside, and think about whether it’s in the best interests of your company to use it.
 
