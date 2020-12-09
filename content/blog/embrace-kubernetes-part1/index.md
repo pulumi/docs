@@ -30,7 +30,6 @@ Kubernetes has become increasingly possible over the last few years. In the ZDNe
 
 There are several reasons why Kubernetes is so widely adopted. Here are some of them:
 
-- **Infrastructure as data**. Many configuration management tools treat infrastructure as code. This generally means learning a domain-specific language or a particular programming language. Kubernetes treats infrastructure as data, which means it can be expressed as YAML files. There are pros and cons to using configuration files so you and your team will have to discuss this.
 - **Extensibility**. While Kubernetes comes with a large set of existing resources such as Pods and Secrets, developers can also create their own with custom resource definitions (CRD). They can also write their own Operators, with which they can automate the management of CRDs.
 - **Community support**. The Kubernetes community is large and there are many special interest groups. Also, Kubernetes is housed on a vendor-neutral platform run by the CNCF. The CNCF sponsors CloudNativeCon/KubeCon, which is one of the largest open-source events in the world.
 - **Third-party vendor support**. There are also many third-party vendors that repackage Kubernetes. These are called Kubernetes distributions. They provide opinionated implementations of production-ready Kubernetes. Examples include [Openshift](https://www.openshift.com/), [Rancher](https://rancher.com/) and [VMWare Tanzu](https://tanzu.vmware.com/tanzu).
@@ -80,7 +79,8 @@ Because you’re dedicating several people to Kubernetes, you may be increasing 
 
 As with any large migration, moving from your current system to Kubernetes needs to happen cautiously and gradually over time. You’re not simply going to destroy your existing infrastructure. Instead, you’ll probably want to adopt a side-by-side approach and slowly move your applications across. In other words, for quite a while, you’ll need to support two infrastructures rather than one. This can cost real dollars in addition to engineering time.
 
-### Is Kubernetes More than You Need?
+### What Are We Trying to Achieve, Again?
+
 At the end of the day, it is worth taking a step back to ask ourselves, what were we trying to accomplish and did Kubernetes help us get there. Most likely the motivation for even asking this question included things like: we want to accelerate public cloud adoption (or adopt more public cloud-like technologies on-premises), we want to ship faster, and we want to empower our developers. It is true that, done well and done right, Kubernetes can achieve all of these things. But Kubernetes alone will not &mdash; it takes so much more than just that &mdash; and these can all very well be accomplished without Kubernetes, sometimes quicker and more cheaply.
 Many companies, and startups in particular, have big dreams. They want an infrastructure, such as Kubernetes, that can scale infinitely to support their fast growing user base of their future. It is good to dream big and plan for the future, but it is also often better to start with a simpler solution today and evolve more incrementally over time.
 
@@ -88,9 +88,6 @@ For instance, maybe a simpler, native container orchestrator like Amazon's Elast
 
 Architectures have to be shaped over time. It's never the case that was just create our infrastructure once and then we're done. Whatever infrastructure you adopt, you need to be able to change and adapt as your requirements change and evolve. In five years time, who knows what the world will look like? Betting the farm on Kubernetes too soon and too big could turn out to be an unwise decision in hindsight after you've spent many precious dollars deploying it.
 
-Learn More
-This blog post talked about the many issues to consider before you dive headlong into a Kubernetes project. If you’re curious about just what a small project might look like (using your favorite programming language, whatever that is), check out Pulumi’s Get Started with Kubernetes.
-
 ## Learn More
 
-This blog post talked about the many issues to consider before you dive headlong into a Kubernetes project. If you’re curious about just what a small project might look like (using your favorite programming language, whatever that is), check out Pulumi’s [Get Started with Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}).
+This blog post talked about the many issues to consider before you dive headlong into a Kubernetes project. However, there are just as many reasons to choose Kubernetes for deploying your modern applications. Stay tuned for part 2 where we'll dive deeper into that topic. If you’re curious about just what a small project might look like (using your favorite programming language, whatever that is), check out Pulumi’s [Get Started with Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) and [Pulumi Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), playbooks with built in best practices that make Kubernetes accessible to everyone.
