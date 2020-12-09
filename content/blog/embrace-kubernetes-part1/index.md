@@ -81,7 +81,7 @@ Because you’re dedicating several people to Kubernetes, you may be increasing 
 As with any large migration, moving from your current system to Kubernetes needs to happen cautiously and gradually over time. You’re not simply going to destroy your existing infrastructure. Instead, you’ll probably want to adopt a side-by-side approach and slowly move your applications across. In other words, for quite a while, you’ll need to support two infrastructures rather than one. This can cost real dollars in addition to engineering time.
 
 ### Is Kubernetes More than You Need?
-
+At the end of the day, it is worth taking a step back to ask ourselves, what were we trying to accomplish and did Kubernetes help us get there. Most likely the motivation for even asking this question included things like: we want to accelerate public cloud adoption (or adopt more public cloud-like technologies on-premises), we want to ship faster, and we want to empower our developers. It is true that, done well and done right, Kubernetes can achieve all of these things. But Kubernetes alone will not &mdash; it takes so much more than just that &mdash; and these can all very well be accomplished without Kubernetes, sometimes quicker and more cheaply.
 Many companies, and startups in particular, don’t want to plan for their current user base. They want an infrastructure, such as Kubernetes, that they think will support the million users they see in their future. Does this sort of planning make sense?
 
 Perhaps it’s better to spend your time understanding what your business value is and building up that value. For infrastructure, when you’re starting out, consider off-the-shelf options such as Heroku or serverless compute.
