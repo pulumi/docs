@@ -14,7 +14,7 @@ When you’re considering whether or not to implement Kubernetes, perhaps the fi
 
 The point of any technology isn’t the technology itself. When done right, Kubernetes can reduce the barrier of entry for application developers so they can get features from their machines to your customers as quickly and easily as possible. But do you already have a solution that works well? If you do, why do you want to change it? Making such a radical change in your technology is potentially quite dangerous so what’s your motivation?
 
-It might be wiser to stay with the solution you have and improve it. Also, don't fall into the trap of believing that any technology, not just Kubernetes, will be a magical answer to all your problems, whether organizational or technical. There’s no such thing.
+It very well might be that sticking with and improving the solution you already have offers a better cost/benefit tradeoff. It's easy to fall into the trap of believing that simply adopting a new technology like Kubernetes will instantly solve your hard organizational or technical problems, however, we know that is seldom true.
 
 In this blog post we’ll talk about how to evaluate your own situation to see if Kubernetes is a good fit. We’ll see that the question isn’t that simple to answer and there are a lot of variables to consider. In the next blog post, we’ll talk about a situation where Kubernetes can be a good fit and how to start your first Kubernetes project.
 
