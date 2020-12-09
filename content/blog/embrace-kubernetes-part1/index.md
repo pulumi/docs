@@ -66,7 +66,7 @@ The next question to ask is if your company has the engineering resources to sup
 
 #### Do you have the people?
 
-Kubernetes will demand a team of people who are dedicated to its implementation and support. The implementation itself is quite complex. The Kubernetes architecture involves what is basically a distributed database called etcd, and there are additional layers on top of it. A robust implementation demands a deep understanding of that multi-layer architecture. This complexity is somewhat mitigated by the managed services many cloud providers now offer, but it’s still important to understand what’s going on.
+Kubernetes will demand a team of people who are dedicated to its implementation and support. The implementation itself is quite complex. The Kubernetes architecture is complex with many core concepts, including execution, security, and data models, distributed components to install and manage like etcd, and many additional layers on top. A robust implementation demands a deep understanding of that multi-layer architecture. This complexity is somewhat mitigated by the managed services many cloud providers now offer, but it’s still important to understand what’s going on.
 
 Secondly, the actual interface required to deploy something with Kubernetes is also complex. It can be many thousands of lines of YAML, which often needs to be templated and manipulated with mechanisms that YAML was never designed to use. Take a look at [Why the **** are we templating YAML?](https://leebriggs.co.uk/blog/2019/02/07/why-are-we-templating-yaml.html) for a strong opinion on this matter.
 
