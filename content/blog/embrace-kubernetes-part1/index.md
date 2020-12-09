@@ -78,7 +78,7 @@ Because you’re dedicating several people to Kubernetes, you may be increasing 
 
 #### Can you afford the migration costs?
 
-As with any large migration, moving from your current system to Kubernetes needs to happen cautiously. You’re not simply going to destroy your existing infrastructure. Instead, you’ll probably want to adopt a side-by-side approach and slowly move your applications across. In other words, for quite a while, you’ll need to support two infrastructures rather than one.
+As with any large migration, moving from your current system to Kubernetes needs to happen cautiously and gradually over time. You’re not simply going to destroy your existing infrastructure. Instead, you’ll probably want to adopt a side-by-side approach and slowly move your applications across. In other words, for quite a while, you’ll need to support two infrastructures rather than one. This can cost real dollars in addition to engineering time.
 
 ### Is Kubernetes More than You Need?
 
