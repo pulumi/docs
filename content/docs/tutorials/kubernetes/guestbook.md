@@ -106,7 +106,7 @@ import * as pulumi from "@pulumi/pulumi";
 // Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
 // running on minikube, and if so, create only services of type ClusterIP.
 const config = new pulumi.Config();
-const isMinikube = config.getBoolean("isMinikube");
+const useLoadBalancer = config.getBoolean("useLoadBalancer");
 
 //
 // REDIS LEADER.
@@ -212,7 +212,7 @@ const frontendService = new k8s.core.v1.Service("frontend", {
         name: "frontend",
     },
     spec: {
-        type: isMinikube ? "ClusterIP" : "LoadBalancer",
+        type: useLoadBalancer ? "ClusterIP" : "LoadBalancer",
         ports: [{ port: 80 }],
         selector: frontendDeployment.spec.template.metadata.labels,
     },
@@ -220,7 +220,7 @@ const frontendService = new k8s.core.v1.Service("frontend", {
 
 // Export the frontend IP.
 export let frontendIp: pulumi.Output<string>;
-if (isMinikube) {
+if (useLoadBalancer) {
     frontendIp = frontendService.spec.clusterIP;
 } else {
     frontendIp = frontendService.status.loadBalancer.ingress[0].ip;
@@ -241,7 +241,7 @@ from pulumi_kubernetes.core.v1 import Service, Namespace
 # Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
 # running on minikube, and if so, create only services of type ClusterIP.
 config = pulumi.Config()
-isMinikube = config.get_bool("isMinikube")
+useLoadBalancer = config.get_bool("useLoadBalancer")
 
 redis_leader_labels = {
     "app": "redis-leader",
@@ -394,7 +394,7 @@ frontend_service = Service(
         "labels": frontend_labels,
     },
     spec={
-        "type": "ClusterIP" if isMinikube else "LoadBalancer",
+        "type": "ClusterIP" if useLoadBalancer else "LoadBalancer",
         "ports": [{
             "port": 80
         }],
@@ -402,7 +402,7 @@ frontend_service = Service(
     })
 
 frontend_ip = ""
-if isMinikube:
+if useLoadBalancer:
     frontend_ip = frontend_service.spec.apply(lambda spec: spec.get("cluster_ip", ""))
 else:
     ingress = frontend_service.status.apply(lambda status: status["load_balancer"]["ingress"][0])
@@ -435,7 +435,7 @@ func main() {
 
         // Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
         // running on minikube, and if so, create only services of type ClusterIP.
-        isMinikube := conf.GetBool("isMinikube")
+        useLoadBalancer := conf.GetBool("useLoadBalancer")
 
         redisLeaderLabels := pulumi.StringMap{
             "app": pulumi.String("redis-leader"),
@@ -619,7 +619,7 @@ func main() {
 
         // Frontend Service
         var frontendServiceType string
-        if isMinikube {
+        if useLoadBalancer {
             frontendServiceType = "ClusterIP"
         } else {
             frontendServiceType = "LoadBalancer"
@@ -643,7 +643,7 @@ func main() {
             return err
         }
 
-        if isMinikube {
+        if useLoadBalancer {
             ctx.Export("frontendIP", frontendService.Spec.ApplyT(func(spec *corev1.ServiceSpec) *string {
                 return spec.ClusterIP
             }))
@@ -682,7 +682,7 @@ class Guestbook : Stack
         // specify if we're running on minikube, and if so, create only services of type
         // ClusterIP.
         var config = new Config();
-        var isMiniKube = config.GetBoolean("isMiniKube") ?? false;
+        var useLoadBalancer = config.GetBoolean("useLoadBalancer") ?? false;
 
         //
         // REDIS LEADER.
@@ -906,7 +906,7 @@ class Guestbook : Stack
             },
             Spec = new ServiceSpecArgs
             {
-                Type = isMiniKube ? "ClusterIP" : "LoadBalancer",
+                Type = useLoadBalancer ? "ClusterIP" : "LoadBalancer",
                 Ports =
                 {
                     new ServicePortArgs
@@ -919,7 +919,7 @@ class Guestbook : Stack
             }
         });
 
-        if (isMiniKube)
+        if (useLoadBalancer)
         {
             this.FrontendIp = frontendService.Spec.Apply(spec => spec.ClusterIP);
         }
