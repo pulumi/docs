@@ -34,7 +34,7 @@ There are several reasons why Kubernetes is so widely adopted. Here are some of 
 - **Extensibility**. While Kubernetes comes with a large set of existing resources such as Pods and Secrets, developers can also create their own with custom resource definitions (CRD). They can also write their own Operators, with which they can automate the management of CRDs.
 - **Community support**. The Kubernetes community is large and there are many special interest groups. Also, Kubernetes is housed on a vendor-neutral platform run by the CNCF. The CNCF sponsors CloudNativeCon/KubeCon, which is one of the largest open-source events in the world.
 - **Third-party vendor support**. There are also many third-party vendors that repackage Kubernetes. These are called Kubernetes distributions. They provide opinionated implementations of production-ready Kubernetes. Examples include [Openshift](https://www.openshift.com/), [Rancher](https://rancher.com/) and [VMWare Tanzu](https://tanzu.vmware.com/tanzu).
-- **Frequent releases**. Historically, Kubernetes has had frequent releases, coming every three or four months. Each release adds many new features and innovations.
+- **Frequent releases**. Kubernetes releases often, with a new significant release every three or four months. Each release adds many new features and innovations.
 
 ## Is Kubernetes the Right Choice for You?\
 
