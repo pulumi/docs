@@ -74,7 +74,7 @@ Finally, when something goes wrong, you need a subject matter expert to fix it. 
 
 #### Can you afford the technical debt?
 
-Because you’re dedicating several people to Kubernetes, you may be increasing your technical debt in other areas. Do you still have people available to handle bugs and other support issues?
+Because you’re dedicating several people to Kubernetes, you may be increasing your technical debt in other areas. Do you still have people available to handle bugs and other support issues? The costs here can be seriously mitigated by adopting a managed Kubernetes service from a major cloud vendor, but the opportunity cost is real either way.
 
 #### Can you afford the extra infrastructure?
 
