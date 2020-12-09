@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/azuread | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/azuread package."
-git_sha: "c1b2da227778191e30509fba2bf4f7b757acaebf"
+git_sha: "df3f2fe7bd4d2dfd64d730943855f821fe610ab0"
 block_external_search_index: true
 ---
 
@@ -35,42 +35,42 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="clientCertificatePassword" data-link-title="clientCertificatePassword">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L9">
         let <strong>clientCertificatePassword</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> clientCertificatePassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePassword&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PASSWORD&#34;) || &#34;&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="clientCertificatePath" data-link-title="clientCertificatePath">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L10">
         let <strong>clientCertificatePath</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> clientCertificatePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePath&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PATH&#34;) || &#34;&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="clientId" data-link-title="clientId">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L11">
         let <strong>clientId</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientId&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_ID&#34;) || &#34;&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="clientSecret" data-link-title="clientSecret">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L12">
         let <strong>clientSecret</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientSecret&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_SECRET&#34;) || &#34;&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="environment" data-link-title="environment">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L13">
         let <strong>environment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> environment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;environment&#34;) || (utilities.getEnv(&#34;ARM_ENVIRONMENT&#34;) || &#34;public&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="metadataHost" data-link-title="metadataHost">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L17">
         let <strong>metadataHost</strong>
     </a>
 </h3>
@@ -80,21 +80,21 @@ block_external_search_index: true
 The Hostname which should be used to fetch environment metadata from.
 
 <h3 class="pdoc-module-header" id="msiEndpoint" data-link-title="msiEndpoint">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L18">
         let <strong>msiEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> msiEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;msiEndpoint&#34;) || (utilities.getEnv(&#34;ARM_MSI_ENDPOINT&#34;) || &#34;&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="tenantId" data-link-title="tenantId">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L19">
         let <strong>tenantId</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tenantId&#34;) || (utilities.getEnv(&#34;ARM_TENANT_ID&#34;) || &#34;&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="useMsi" data-link-title="useMsi">
-    <a href="https://github.com/pulumi/pulumi-azuread/blob/c1b2da227778191e30509fba2bf4f7b757acaebf/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/df3f2fe7bd4d2dfd64d730943855f821fe610ab0/sdk/nodejs/config/vars.ts#L20">
         let <strong>useMsi</strong>
     </a>
 </h3>
