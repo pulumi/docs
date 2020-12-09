@@ -12,7 +12,7 @@ tags:
 
 When you’re considering whether or not to implement Kubernetes, perhaps the first question to ask yourself is do you need it at all?
 
-The point of any technology isn’t the technology itself. The point is whether you can use it to reduce the barrier of entry for application developers so they can get features from their machines to your customers as quickly and easily as possible. Do you already have a solution that works well? If you do, why do you want to change it? Making such a radical change in your technology is potentially quite dangerous so what’s your motivation?
+The point of any technology isn’t the technology itself. When done right, Kubernetes can reduce the barrier of entry for application developers so they can get features from their machines to your customers as quickly and easily as possible. But do you already have a solution that works well? If you do, why do you want to change it? Making such a radical change in your technology is potentially quite dangerous so what’s your motivation?
 
 It might be wiser to stay with the solution you have and improve it. Also, don't fall into the trap of believing that any technology, not just Kubernetes, will be a magical answer to all your problems, whether organizational or technical. There’s no such thing.
 
