@@ -54,7 +54,7 @@ Another way to look at this question is to ask yourself where your organization 
 
 > *We still see that most organizations are struggling to expand DevOps beyond a few pockets of success. One reason DevOps often fails to expand further is that most enterprises are structured in ways that create misaligned incentives and lack of accountability or ownership over the outcomes they’re supposed to be driving.*
 
- You might want to evaluate your own organization. A good guide is [DevOps Maturity Model](https://www.atlassian.com/solutions/devops/maturity-model).
+We have seen a greater likelihood of success within our own customers that have experience practicing "Cloud Engineering", "DevOps", "Site Reliability Engineering", and/or other more collaborative and engineering-oriented approaches to infrastructure. You might want to evaluate your own organization. A good guide is [DevOps Maturity Model](https://www.atlassian.com/solutions/devops/maturity-model).
 
 ### What Are Your Personal Motivations?
 
