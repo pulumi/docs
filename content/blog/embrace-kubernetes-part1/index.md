@@ -42,7 +42,7 @@ Given its widespread popularity, its many features, and its community support, i
 
 ### Is Your Organization Ready for Kubernetes?
 
-The first question to ask yourself is if your organization has the skills in place to support a Kubernetes implementation. By “skills,” we don’t mean only technical know-how. As we’ll see, bringing Kubernetes into an organization is a major effort that can affect many groups. For that effort to succeed, there must be good communication between those groups, trust, and a willingness to take on new challenges. In particular, the relationship between the applications teams and the operations teams needs to be a good one. To put it succinctly, people must be willing to set aside rivalries and politics so they can collaborate with each other towards a common business goal.
+The first question to ask yourself is if your organization has the DNA required to support a broad-scale Kubernetes implementation. By “DNA,” we don’t mean only technical know-how. Bringing Kubernetes into an organization is a major effort that can affect many groups. For that effort to succeed, there must be good communication between those groups, trust, and a willingness to take on new challenges together. In particular, the relationship between the applications teams and the operations teams needs to be healthy. People must be willing to set aside rivalries and politics so they can collaborate with each other towards a common business goal.
 
 As you can imagine, this can become a heated topic. If you’re interested in what others in the community are saying, here are a couple Tweets to get you started:
 
