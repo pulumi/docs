@@ -18,7 +18,7 @@ It very well might be that sticking with and improving the solution you already 
 
 In this blog post we’ll share some tips and tricks for evaluating your own situation to see if Kubernetes is a good fit. We've learned these from helping hundreds of customers adopt Kubernetes &mdash; in addition to not, when there was a better solution available. We’ll see that the question isn’t that simple to answer and there are a lot of variables to consider. In the next blog post, we’ll talk about a situation where Kubernetes can be a good fit and how to start your first Kubernetes project.
 
-Note that these blog posts assume you already have some familiarity with Kubernetes. If you need some introductory material, the [Kubernetes web site](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) is a good place to start.
+Note that these blog posts assume you already have some familiarity with Kubernetes. If you are just starting to learn, [our Getting Started with Kubernetes blog series](https://www.pulumi.com/blog/getting-started-with-k8s-part1/) is a good place to start.
 
 <!--more-->
 
