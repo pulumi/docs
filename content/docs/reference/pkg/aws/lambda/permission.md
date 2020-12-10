@@ -597,7 +597,7 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>
@@ -707,7 +707,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>
@@ -817,7 +817,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Function</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Function</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>
@@ -1254,7 +1254,7 @@ The following state arguments are supported:
 <a href="#state_function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>
@@ -1364,7 +1364,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 <a href="#state_function_go" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>
@@ -1474,7 +1474,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 <a href="#state_function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Function</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Function</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>
@@ -1584,7 +1584,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 <a href="#state_function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
 {{% /md %}}</dd>

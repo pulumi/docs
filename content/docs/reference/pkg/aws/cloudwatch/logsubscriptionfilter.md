@@ -313,7 +313,7 @@ The LogSubscriptionFilter resource accepts the following [input]({{< relref "/do
 <a href="#loggroup_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ The LogSubscriptionFilter resource accepts the following [input]({{< relref "/do
 <a href="#loggroup_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>
@@ -459,7 +459,7 @@ The LogSubscriptionFilter resource accepts the following [input]({{< relref "/do
 <a href="#loggroup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Log<wbr>Group</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Log<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>
@@ -532,7 +532,7 @@ The LogSubscriptionFilter resource accepts the following [input]({{< relref "/do
 <a href="#log_group_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>
@@ -822,7 +822,7 @@ The following state arguments are supported:
 <a href="#state_loggroup_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>
@@ -895,7 +895,7 @@ The following state arguments are supported:
 <a href="#state_loggroup_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The following state arguments are supported:
 <a href="#state_loggroup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Log<wbr>Group</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Log<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>
@@ -1041,7 +1041,7 @@ The following state arguments are supported:
 <a href="#state_log_group_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the log group to associate the subscription filter with
 {{% /md %}}</dd>

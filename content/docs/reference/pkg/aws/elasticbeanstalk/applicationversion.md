@@ -343,7 +343,7 @@ The ApplicationVersion resource accepts the following [input]({{< relref "/docs/
 <a href="#application_csharp" style="color: inherit; text-decoration: inherit;">Application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ The ApplicationVersion resource accepts the following [input]({{< relref "/docs/
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#application_go" style="color: inherit; text-decoration: inherit;">Application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -439,7 +439,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -513,7 +513,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Application</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Application</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Bucket</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Bucket</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ The following state arguments are supported:
 <a href="#state_application_csharp" style="color: inherit; text-decoration: inherit;">Application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -955,7 +955,7 @@ The following state arguments are supported:
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_application_go" style="color: inherit; text-decoration: inherit;">Application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -1125,7 +1125,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Application</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Application</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -1147,7 +1147,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Bucket</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">Bucket</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>
@@ -1221,7 +1221,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Beanstalk Application the version is associated with.
 {{% /md %}}</dd>
@@ -1243,7 +1243,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 bucket that contains the Application Version source bundle.
 {{% /md %}}</dd>

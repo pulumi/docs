@@ -275,7 +275,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Placement<wbr>Strategy&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Placement<wbr>Strategy</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Placement<wbr>Strategy</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Placement<wbr>Strategy</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Placement<wbr>Strategy]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Placement<wbr>Strategy</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
@@ -762,7 +762,7 @@ The following state arguments are supported:
 <a href="#state_strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Placement<wbr>Strategy&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Placement<wbr>Strategy</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ The following state arguments are supported:
 <a href="#state_strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
@@ -886,7 +886,7 @@ The following state arguments are supported:
 <a href="#state_strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Placement<wbr>Strategy</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Placement<wbr>Strategy</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
@@ -948,7 +948,7 @@ The following state arguments are supported:
 <a href="#state_strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Placement<wbr>Strategy]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Placement<wbr>Strategy</span>
     </dt>
     <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>

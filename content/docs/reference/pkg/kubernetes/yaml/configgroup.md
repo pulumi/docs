@@ -799,7 +799,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#objs_csharp" style="color: inherit; text-decoration: inherit;">Objs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;object, Immutable<wbr>Array&lt;object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#yaml_csharp" style="color: inherit; text-decoration: inherit;">Yaml</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -856,7 +856,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -866,7 +866,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#objs_go" style="color: inherit; text-decoration: inherit;">Objs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -896,7 +896,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#yaml_go" style="color: inherit; text-decoration: inherit;">Yaml</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -913,7 +913,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -923,7 +923,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#objs_nodejs" style="color: inherit; text-decoration: inherit;">objs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">any | any[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#yaml_nodejs" style="color: inherit; text-decoration: inherit;">yaml</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -970,7 +970,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Sequence[str]]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -980,7 +980,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#objs_python" style="color: inherit; text-decoration: inherit;">objs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Any, Sequence[Any]]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 
@@ -1010,7 +1010,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#yaml_python" style="color: inherit; text-decoration: inherit;">yaml</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Sequence[str]]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
 

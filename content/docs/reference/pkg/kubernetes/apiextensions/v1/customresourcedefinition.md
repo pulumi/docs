@@ -293,7 +293,7 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -412,7 +412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}status indicates the actual state of the CustomResourceDefinition{{% /md %}}</dd>
 
@@ -831,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd>
 
@@ -1630,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversion_python" style="color: inherit; text-decoration: inherit;">conversion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd>
 
@@ -1803,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}conditions indicate state for particular aspects of a CustomResourceDefinition{{% /md %}}</dd>
 
@@ -2126,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_printer_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>printer_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd>
 
@@ -2156,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.{{% /md %}}</dd>
 
@@ -2166,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subresources_python" style="color: inherit; text-decoration: inherit;">subresources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have.{{% /md %}}</dd>
 
@@ -2442,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd>
 
@@ -2535,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#open_apiv3_schema_python" style="color: inherit; text-decoration: inherit;">open_<wbr>apiv3_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd>
 
@@ -2690,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalitems_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2700,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2842,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;System.<wbr>Text.<wbr>Json.<wbr>Json<wbr>Element&gt;&gt;</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;System.<wbr>Text.<wbr>Json.<wbr>Json<wbr>Element&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3182,7 +3182,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additionalitems_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3192,7 +3192,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3334,7 +3334,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3654,7 +3654,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additionalitems_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props | boolean</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3664,7 +3664,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props | boolean</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3806,7 +3806,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props | any[]</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4126,7 +4126,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additional_items_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, bool]]</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4136,7 +4136,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, bool]]</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4146,7 +4146,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4156,7 +4156,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4176,7 +4176,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4186,7 +4186,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, Sequence[str]]]]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, Sequence[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4246,7 +4246,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#external_docs_python" style="color: inherit; text-decoration: inherit;">external_<wbr>docs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4278,7 +4278,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, Sequence[Any]]]</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4378,7 +4378,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4398,7 +4398,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#one_of_python" style="color: inherit; text-decoration: inherit;">one_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4418,7 +4418,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#pattern_properties_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4428,7 +4428,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]]</span>
+        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5523,7 +5523,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -5555,7 +5555,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -6266,7 +6266,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -6411,7 +6411,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#client_config_python" style="color: inherit; text-decoration: inherit;">client_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.{{% /md %}}</dd>
 
