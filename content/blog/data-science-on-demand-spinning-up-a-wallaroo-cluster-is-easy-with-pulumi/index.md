@@ -9,12 +9,9 @@ tags: ["Infrastructure","Customer"]
 ---
 
 *This guest post is from Simon Zelazny of
-[Wallaroo Labs](https://www.wallaroolabs.com/), and previously appeared on the
-[Wallaroo Labs blog](https://blog.wallaroolabs.com/).
+[Wallaroo Labs](https://www.wallaroo.ai/).
 Find out how Wallaroo powered their cluster provisioning with Pulumi,
 for data science on demand.*
-
-## Oh no, more data!
 
 Last month, we took a
 [long-running pandas classifier](https://github.com/WallarooLabs/wallaroo_blog_examples/tree/master/provisioned-classifier/classifier)
