@@ -24,6 +24,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="securityfirewall" title="SecurityFirewall"><span class="symbol resource"></span>SecurityFirewall</a></li>
     <li><a href="vpcpeering" title="VpcPeering"><span class="symbol resource"></span>VpcPeering</a></li>
+    <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -47,7 +48,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
 	<dt>Version</dt>
-	<dd>2.5.2</dd>
+	<dd>2.5.3</dd>
 </dl>
 
 
