@@ -10,17 +10,17 @@ tags:
 
 ---
 
-In the first article in this series,  we gave you some questions to help you and others at your company decide if Kubernetes is right for you. In this post, we’ll give you an example of where Kubernetes can be a good fit.
+In the [first article]({{< relref "/blog/embrace-kubernetes-part1" >}}) in this series,  we gave you some questions to help you and others at your company decide if Kubernetes is right for you. In this post, we’ll give you an example of where Kubernetes can be a good fit.
 
 <!--more-->
 
 ## When is Kubernetes a Good Choice?
 
-If you’ve decided your company can make the large investment of time and resources required to adopt Kubernetes, when is it a good choice? A well designed, well implemented Kubernetes platform can certainly deliver value to your customers. It does a fantastic job of reducing complexity from the application developers’ jobs. Just remember that the payoff, although dramatic, will be many months away and, before that, things will be slower than you’re used to.
+If you’ve decided your company can make the large investment of time and resources required to adopt Kubernetes, when is it the right choice? A well designed, well implemented Kubernetes platform can certainly deliver value to your customers. It does a fantastic job of reducing complexity from the application developers’ jobs. Just remember that the payoff, although dramatic, will be many months away and, before that, things will be slower than you’re used to.
 
-One example of where Kubernetes can add a lot of value is when the application side of the engineering organization has a low level of maturity and the operations side has a high degree of maturity. Kubernetes can make the applications developers jobs easier because it abstracts away deployment details. In turn, the operations team must be willing to take on the burden of shipping software and let the application developers concentrate on creating new products and features. This division implies a good relationship between them and fostering cooperation is always beneficial. If trust and good communication exists, Kubernetes is a great way for engineers to work together.
+One example of where Kubernetes can add a lot of value is when the application side of the engineering organization has a low level of maturity, and the operations side has a high degree of maturity. Kubernetes can make the applications developers jobs easier because it abstracts away deployment details. In turn, the operations team must be willing to take on the burden of shipping software and let the application developers concentrate on creating new products and features. This division implies a good relationship between them, and fostering cooperation is always beneficial. If trust and good communication exist, Kubernetes is a great way for engineers to work together.
 
-Here’s one example of how Kubernetes can help. Developers spend large amounts of time writing code that’s resilient to failure. Kubernetes, on the other hand, almost encourages you not to spend time writing fault-tolerant software and to let the Kubernetes side of things handle failure. Application developers don’t need to write resiliency into their applications. They can simply let the programs fail quickly and assume that Kubernetes will take care of it.
+Here’s one example of how Kubernetes can help. Developers spend large amounts of time writing code that’s resilient to failure. Kubernetes, on the other hand, almost encourages you not to spend time writing fault-tolerant software and let the Kubernetes handle failure. Application developers don’t need to write resiliency into their applications. They can simply let the programs fail quickly and assume that Kubernetes will take care of it.
 
 ## Are There Alternatives?
 
@@ -28,13 +28,13 @@ Asking if there are alternatives to Kubernetes makes sense, but it’s unlikely 
 
 Another approach is to build your own solution. One example is to rely on raw compute power and spinning VMs in and out very quickly. In this case, you’ll need to decide if you’re getting value for your money because you may not be using the entire VM or sizing it correctly, which Kubernetes does for you.
 
-You’ll also need to build the basic building blocks as well as the glue that ties everything together. That glue can be anything from a set of shell scripts to a very, very complex orchestration framework. The industry was in this mode for at least 10 years and there were many problems with this approach, particularly at scale. So, even if you think that the Kubernetes tooling is insufficient, you’ll run into similar problems with the DIY approach.
+You’ll also need to build the basic building blocks, as well as the glue that ties everything together. That glue can be anything from a set of shell scripts to a very, very complex orchestration framework. The industry was in this mode for at least 10 years and there were many problems with this approach, particularly at scale. So, even if you think that the Kubernetes tooling is insufficient, you’ll run into similar problems with the DIY approach.
 
 ## Picking a First Project
 
-Most medium to large organizations run multiple applications, and some of them are only used internally. A good way to start with Kubernetes is to pick an internal application that’s not mission critical. Migrating that application to Kubernetes will give you a feel for what the experience will look like. You’ll be able to identify the gaps, the things that you like and the potential problems.
+Most medium to large organizations run multiple applications, and some of them are only used internally. A good way to start with Kubernetes is to pick an internal application that’s not mission-critical. Migrating that application to Kubernetes will give you a feel for what the experience will look like. You’ll be able to identify the gaps, the things that you like, and the potential problems.
 
-So, start small and give yourself the time to learn. Once you feel comfortable, evaluate if Kubernetes is right for your company. If it is, then you can start to gradually move things over.
+So, start small and give yourself the time to learn. Once you feel comfortable, evaluate if Kubernetes is right for your company. If it is, then you can start to move things over gradually
 
 ## Summary
 
@@ -47,7 +47,7 @@ Kubernetes is a popular solution but does adopting it serve the needs of your or
 Kubernetes is a better fit for medium and large organizations. Startups and smaller  companies should take a look at off-the-shelf options.
 
 **[ ] Where does your organization sit in its adoption of DevOps?**
-It’s important that your organization is well along in its adoption of DevOps principles such as collaboration, good communication, trust, and the ability to work for the good of the entire company.
+Your organization must be well along in its adoption of DevOps principles such as collaboration, good communication, trust, and the ability to work for the good of the entire company.
 
 **[ ] Do you really need to change your infrastructure?**
 Does your current solution allow you to deliver features to your customers quickly, easily, and reliably? Ask yourself the questions, “Is what we have truly broken? Do we really need to fix it?”
