@@ -254,7 +254,7 @@ new_list = datadog.DashboardList("newList",
         ),
     ],
     name="TF Created List",
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             "datadog_dashboard.screen",
             "datadog_dashboard.time",
         ]))

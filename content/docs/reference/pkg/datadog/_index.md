@@ -37,8 +37,10 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="screenboard" title="ScreenBoard"><span class="symbol resource"></span>ScreenBoard</a></li>
+    <li><a href="securitymonitoringrule" title="SecurityMonitoringRule"><span class="symbol resource"></span>SecurityMonitoringRule</a></li>
     <li><a href="servicelevelobjective" title="ServiceLevelObjective"><span class="symbol resource"></span>ServiceLevelObjective</a></li>
     <li><a href="syntheticsglobalvariable" title="SyntheticsGlobalVariable"><span class="symbol resource"></span>SyntheticsGlobalVariable</a></li>
+    <li><a href="syntheticsprivatelocation" title="SyntheticsPrivateLocation"><span class="symbol resource"></span>SyntheticsPrivateLocation</a></li>
     <li><a href="syntheticstest" title="SyntheticsTest"><span class="symbol resource"></span>SyntheticsTest</a></li>
     <li><a href="timeboard" title="TimeBoard"><span class="symbol resource"></span>TimeBoard</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -52,6 +54,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
     <li><a href="getpermissions" title="GetPermissions"><span class="symbol function"></span>GetPermissions</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
+    <li><a href="getsecuritymonitoringrules" title="GetSecurityMonitoringRules"><span class="symbol function"></span>GetSecurityMonitoringRules</a></li>
     <li><a href="getsyntheticslocations" title="GetSyntheticsLocations"><span class="symbol function"></span>GetSyntheticsLocations</a></li>
 </ul>
 
@@ -64,7 +67,7 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.12.0</dd>
+	<dd>2.13.0</dd>
 </dl>
 
 
