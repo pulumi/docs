@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/wavefront | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/wavefront package."
-git_sha: "e67d011da66a4c62f31b663cd9c8764ae136aa42"
+git_sha: "bc611056ca709c4d3d0a893afb1d569297c79c3a"
 block_external_search_index: true
 ---
 
@@ -29,21 +29,21 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="address" data-link-title="address">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/e67d011da66a4c62f31b663cd9c8764ae136aa42/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/bc611056ca709c4d3d0a893afb1d569297c79c3a/sdk/nodejs/config/vars.ts#L9">
         let <strong>address</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;address&#34;) || utilities.getEnv(&#34;WAVEFRONT_ADDRESS&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="httpProxy" data-link-title="httpProxy">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/e67d011da66a4c62f31b663cd9c8764ae136aa42/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/bc611056ca709c4d3d0a893afb1d569297c79c3a/sdk/nodejs/config/vars.ts#L10">
         let <strong>httpProxy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> httpProxy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;httpProxy&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/e67d011da66a4c62f31b663cd9c8764ae136aa42/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/bc611056ca709c4d3d0a893afb1d569297c79c3a/sdk/nodejs/config/vars.ts#L11">
         let <strong>token</strong>
     </a>
 </h3>

@@ -12,6 +12,7 @@ meta_desc: "Explore the MaintenanceWindow resource of the Wavefront package, inc
 
 Provides a Wavefront Maintenance Window Resource. This allows maintenance windows to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1347,6 +1348,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the DerivedMetric resource of the Wavefront package, includi
 Provides a Wavefront Derived Metric Resource. This allows derived metrics to be created,
 updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -971,6 +972,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

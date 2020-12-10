@@ -12,6 +12,7 @@ meta_desc: "Explore the Dashboard resource of the Wavefront package, including e
 
 Provides a Wavefront Dashboard resource.  This allows dashboards to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2283,6 +2284,16 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="chartattribute_csharp">
+<a href="#chartattribute_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -2354,6 +2365,16 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="chartattribute_go">
+<a href="#chartattribute_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2431,6 +2452,16 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-optional"
             title="Optional">
+        <span id="chartattribute_nodejs">
+<a href="#chartattribute_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -2502,6 +2533,16 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="chart_attribute_python">
+<a href="#chart_attribute_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5484,6 +5525,8 @@ Valid options are `full` or `last`
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

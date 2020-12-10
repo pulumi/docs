@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDefaultUserGroup function of the Wavefront package, i
 
 Use this data source to get the Group ID of the `Everyone` group in Wavefront.
 
+
 {{% examples %}}
 ## Example Usage
 

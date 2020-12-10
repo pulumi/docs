@@ -12,6 +12,7 @@ meta_desc: "Explore the Role resource of the Wavefront package, including exampl
 
 Provides a Wavefront Role Resource. This allows user groups to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -888,6 +889,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

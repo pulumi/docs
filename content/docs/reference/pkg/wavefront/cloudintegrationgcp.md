@@ -13,6 +13,7 @@ meta_desc: "Explore the CloudIntegrationGcp resource of the Wavefront package, i
 Provides a Wavefront Cloud Integration for GCP. This allows GCP cloud integrations to be created,
 updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1369,6 +1370,8 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

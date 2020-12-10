@@ -13,6 +13,7 @@ meta_desc: "Explore the CloudIntegrationCloudTrail resource of the Wavefront pac
 Provides a Wavefront Cloud Integration for CloudTrail. This allows CloudTrail cloud integrations to be created,
 updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1516,6 +1517,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

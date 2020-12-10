@@ -12,6 +12,7 @@ meta_desc: "Explore the Alert resource of the Wavefront package, including examp
 
 Provides a Wavefront Alert resource.  This allows alerts to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1979,6 +1980,8 @@ the same value as `minutes`.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
