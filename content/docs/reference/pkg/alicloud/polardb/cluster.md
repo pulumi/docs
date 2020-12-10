@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module polardb | Package AliCloud"
+title_tag: "alicloud.polardb.Cluster"
 meta_desc: "Explore the Cluster resource of the polardb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a PolarDB cluster resource. A PolarDB cluster is an isolated database"
 ---
 

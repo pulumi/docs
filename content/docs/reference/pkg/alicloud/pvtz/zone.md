@@ -1,7 +1,7 @@
 
 ---
 title: "Zone"
-title_tag: "Resource Zone | Module pvtz | Package AliCloud"
+title_tag: "alicloud.pvtz.Zone"
 meta_desc: "Explore the Zone resource of the pvtz module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

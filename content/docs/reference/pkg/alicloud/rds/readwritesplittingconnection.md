@@ -1,7 +1,7 @@
 
 ---
 title: "ReadWriteSplittingConnection"
-title_tag: "Resource ReadWriteSplittingConnection | Module rds | Package AliCloud"
+title_tag: "alicloud.rds.ReadWriteSplittingConnection"
 meta_desc: "Explore the ReadWriteSplittingConnection resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS read write splitting connection resource to allocate an Intranet connection string for RDS instance."
 ---
 

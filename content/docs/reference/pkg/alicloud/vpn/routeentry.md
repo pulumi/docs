@@ -1,7 +1,7 @@
 
 ---
 title: "RouteEntry"
-title_tag: "Resource RouteEntry | Module vpn | Package AliCloud"
+title_tag: "alicloud.vpn.RouteEntry"
 meta_desc: "Explore the RouteEntry resource of the vpn module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

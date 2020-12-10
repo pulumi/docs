@@ -1,7 +1,7 @@
 
 ---
 title: "Ciphertext"
-title_tag: "Resource Ciphertext | Module kms | Package AliCloud"
+title_tag: "alicloud.kms.Ciphertext"
 meta_desc: "Explore the Ciphertext resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

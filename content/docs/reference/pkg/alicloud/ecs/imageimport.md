@@ -1,7 +1,7 @@
 
 ---
 title: "ImageImport"
-title_tag: "Resource ImageImport | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.ImageImport"
 meta_desc: "Explore the ImageImport resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Import a copy of your local on-premise file to ECS, and appear as a custom replacement in the corresponding domain."
 ---
 

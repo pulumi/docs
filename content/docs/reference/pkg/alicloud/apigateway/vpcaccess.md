@@ -1,7 +1,7 @@
 
 ---
 title: "VpcAccess"
-title_tag: "Resource VpcAccess | Module apigateway | Package AliCloud"
+title_tag: "alicloud.apigateway.VpcAccess"
 meta_desc: "Explore the VpcAccess resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

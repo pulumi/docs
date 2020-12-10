@@ -1,7 +1,7 @@
 
 ---
 title: "Switch"
-title_tag: "Resource Switch | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.Switch"
 meta_desc: "Explore the Switch resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

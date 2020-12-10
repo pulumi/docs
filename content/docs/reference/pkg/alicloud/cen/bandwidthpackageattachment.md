@@ -1,7 +1,7 @@
 
 ---
 title: "BandwidthPackageAttachment"
-title_tag: "Resource BandwidthPackageAttachment | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.BandwidthPackageAttachment"
 meta_desc: "Explore the BandwidthPackageAttachment resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN bandwidth package attachment resource. The resource can be used to bind a bandwidth package to a specified CEN instance."
 ---
 

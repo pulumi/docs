@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkInterfaceAttachment"
-title_tag: "Resource NetworkInterfaceAttachment | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.NetworkInterfaceAttachment"
 meta_desc: "Explore the NetworkInterfaceAttachment resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to attach ENI to or detach ENI from ECS Instances."
 ---
 

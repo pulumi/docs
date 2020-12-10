@@ -1,7 +1,7 @@
 
 ---
 title: "Key"
-title_tag: "Resource Key | Module kms | Package AliCloud"
+title_tag: "alicloud.kms.Key"
 meta_desc: "Explore the Key resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. A kms key can help user to protect data security in the transmission process. For information about Alikms Key and how to use it, see [What is Resource Alikms Key](https://www.alibabacloud.com/help/doc-detail/28947.htm)."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module gpdb | Package AliCloud"
+title_tag: "alicloud.gpdb.Connection"
 meta_desc: "Explore the Connection resource of the gpdb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a connection resource to allocate an Internet connection string for instance."
 ---
 

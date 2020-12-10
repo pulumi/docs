@@ -1,7 +1,7 @@
 
 ---
 title: "AccountAlias"
-title_tag: "Resource AccountAlias | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.AccountAlias"
 meta_desc: "Explore the AccountAlias resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM cloud account alias."
 ---
 

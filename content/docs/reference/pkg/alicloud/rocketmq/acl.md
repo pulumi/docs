@@ -1,7 +1,7 @@
 
 ---
 title: "Acl"
-title_tag: "Resource Acl | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.Acl"
 meta_desc: "Explore the Acl resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag Acl resource. Smart Access Gateway (SAG) provides the access control list (ACL) function in the form of whitelists and blacklists for different SAG instances."
 ---
 

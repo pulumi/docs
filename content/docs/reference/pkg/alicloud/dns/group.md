@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.Group"
 meta_desc: "Explore the Group resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

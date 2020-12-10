@@ -1,7 +1,7 @@
 
 ---
 title: "BucketObject"
-title_tag: "Resource BucketObject | Module oss | Package AliCloud"
+title_tag: "alicloud.oss.BucketObject"
 meta_desc: "Explore the BucketObject resource of the oss module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to put a object(content or file) to a oss bucket."
 ---
 

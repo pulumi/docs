@@ -1,7 +1,7 @@
 
 ---
 title: "Subscription"
-title_tag: "Resource Subscription | Module datahub | Package AliCloud"
+title_tag: "alicloud.datahub.Subscription"
 meta_desc: "Explore the Subscription resource of the datahub module, including examples, input properties, output properties, lookup functions, and supporting types. The subscription is the basic unit of resource usage in Datahub Service under Publish/Subscribe model. You can manage the relationships between user and topics by using subscriptions. [Refer to details](https://help.aliyun.com/document_detail/47440.html)."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "BastionHostInstance"
-title_tag: "Resource BastionHostInstance | Module yundun | Package AliCloud"
+title_tag: "alicloud.yundun.BastionHostInstance"
 meta_desc: "Explore the BastionHostInstance resource of the yundun module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud Bastionhost instance resource (&#34;Yundun_bastionhost&#34; is the short term of this product). "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Audit"
-title_tag: "Resource Audit | Module log | Package AliCloud"
+title_tag: "alicloud.log.Audit"
 meta_desc: "Explore the Audit resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. SLS log audit exists in the form of log service app."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Alarm"
-title_tag: "Resource Alarm | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.Alarm"
 meta_desc: "Explore the Alarm resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

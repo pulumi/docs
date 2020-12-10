@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkAttachment"
-title_tag: "Resource NetworkAttachment | Module cloudconnect | Package AliCloud"
+title_tag: "alicloud.cloudconnect.NetworkAttachment"
 meta_desc: "Explore the NetworkAttachment resource of the cloudconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloud Connect Network Attachment resource. This topic describes how to associate a Smart Access Gateway (SAG) instance with a network instance. You must associate an SAG instance with a network instance if you want to connect the SAG to Alibaba Cloud. You can connect an SAG to Alibaba Cloud through a leased line, the Internet, or the active and standby links."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "HAVipAttachment"
-title_tag: "Resource HAVipAttachment | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.HAVipAttachment"
 meta_desc: "Explore the HAVipAttachment resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

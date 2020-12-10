@@ -1,7 +1,7 @@
 
 ---
 title: "RouteTable"
-title_tag: "Resource RouteTable | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.RouteTable"
 meta_desc: "Explore the RouteTable resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module rds | Package AliCloud"
+title_tag: "alicloud.rds.Account"
 meta_desc: "Explore the Account resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS account resource and used to manage databases."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AlarmContact"
-title_tag: "Resource AlarmContact | Module cms | Package AliCloud"
+title_tag: "alicloud.cms.AlarmContact"
 meta_desc: "Explore the AlarmContact resource of the cms module, including examples, input properties, output properties, lookup functions, and supporting types. Creates or modifies an alarm contact. For information about alarm contact and how to use it, see [What is alarm contact](https://www.alibabacloud.com/help/en/doc-detail/114923.htm)."
 ---
 

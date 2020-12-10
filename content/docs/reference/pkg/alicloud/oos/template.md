@@ -1,7 +1,7 @@
 
 ---
 title: "Template"
-title_tag: "Resource Template | Module oos | Package AliCloud"
+title_tag: "alicloud.oos.Template"
 meta_desc: "Explore the Template resource of the oos module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a OOS Template resource. For information about Alicloud OOS Template and how to use it, see [What is Resource Alicloud OOS Template](https://www.alibabacloud.com/help/doc-detail/120761.htm)."
 ---
 

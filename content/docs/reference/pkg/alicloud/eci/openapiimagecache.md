@@ -1,7 +1,7 @@
 
 ---
 title: "OpenApiImageCache"
-title_tag: "Resource OpenApiImageCache | Module eci | Package AliCloud"
+title_tag: "alicloud.eci.OpenApiImageCache"
 meta_desc: "Explore the OpenApiImageCache resource of the eci module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

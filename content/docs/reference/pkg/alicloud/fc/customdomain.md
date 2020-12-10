@@ -1,7 +1,7 @@
 
 ---
 title: "CustomDomain"
-title_tag: "Resource CustomDomain | Module fc | Package AliCloud"
+title_tag: "alicloud.fc.CustomDomain"
 meta_desc: "Explore the CustomDomain resource of the fc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Alicloud Function Compute custom domain resource. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module adb | Package AliCloud"
+title_tag: "alicloud.adb.Account"
 meta_desc: "Explore the Account resource of the adb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a [ADB](https://www.alibabacloud.com/help/product/92664.htm) account resource and used to manage databases."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ScheduledTask"
-title_tag: "Resource ScheduledTask | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.ScheduledTask"
 meta_desc: "Explore the ScheduledTask resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

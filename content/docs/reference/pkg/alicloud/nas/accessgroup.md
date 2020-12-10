@@ -1,7 +1,7 @@
 
 ---
 title: "AccessGroup"
-title_tag: "Resource AccessGroup | Module nas | Package AliCloud"
+title_tag: "alicloud.nas.AccessGroup"
 meta_desc: "Explore the AccessGroup resource of the nas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NAS Access Group resource."
 ---
 

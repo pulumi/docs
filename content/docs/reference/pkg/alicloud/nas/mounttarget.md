@@ -1,7 +1,7 @@
 
 ---
 title: "MountTarget"
-title_tag: "Resource MountTarget | Module nas | Package AliCloud"
+title_tag: "alicloud.nas.MountTarget"
 meta_desc: "Explore the MountTarget resource of the nas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NAS Mount Target resource."
 ---
 

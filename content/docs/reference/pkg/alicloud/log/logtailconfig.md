@@ -1,7 +1,7 @@
 
 ---
 title: "LogTailConfig"
-title_tag: "Resource LogTailConfig | Module log | Package AliCloud"
+title_tag: "alicloud.log.LogTailConfig"
 meta_desc: "Explore the LogTailConfig resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

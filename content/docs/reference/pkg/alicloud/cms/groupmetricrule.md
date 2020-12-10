@@ -1,7 +1,7 @@
 
 ---
 title: "GroupMetricRule"
-title_tag: "Resource GroupMetricRule | Module cms | Package AliCloud"
+title_tag: "alicloud.cms.GroupMetricRule"
 meta_desc: "Explore the GroupMetricRule resource of the cms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloud Monitor Service Group Metric Rule resource."
 ---
 

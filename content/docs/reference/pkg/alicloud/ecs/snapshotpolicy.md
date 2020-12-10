@@ -1,7 +1,7 @@
 
 ---
 title: "SnapshotPolicy"
-title_tag: "Resource SnapshotPolicy | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.SnapshotPolicy"
 meta_desc: "Explore the SnapshotPolicy resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS snapshot policy resource."
 ---
 

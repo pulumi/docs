@@ -1,7 +1,7 @@
 
 ---
 title: "Bucket"
-title_tag: "Resource Bucket | Module oss | Package AliCloud"
+title_tag: "alicloud.oss.Bucket"
 meta_desc: "Explore the Bucket resource of the oss module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a oss bucket and set its attribution."
 ---
 

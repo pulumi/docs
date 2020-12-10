@@ -1,7 +1,7 @@
 
 ---
 title: "DomainAttachment"
-title_tag: "Resource DomainAttachment | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.DomainAttachment"
 meta_desc: "Explore the DomainAttachment resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

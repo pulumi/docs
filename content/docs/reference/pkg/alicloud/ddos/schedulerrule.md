@@ -1,7 +1,7 @@
 
 ---
 title: "SchedulerRule"
-title_tag: "Resource SchedulerRule | Module ddos | Package AliCloud"
+title_tag: "alicloud.ddos.SchedulerRule"
 meta_desc: "Explore the SchedulerRule resource of the ddos module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DdosCoo Scheduler Rule resource. For information about DdosCoo Scheduler Rule and how to use it, see[What is DdosCoo Scheduler Rule](https://www.alibabacloud.com/help/en/doc-detail/157481.htm)."
 ---
 

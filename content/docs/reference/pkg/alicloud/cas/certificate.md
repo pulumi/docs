@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module cas | Package AliCloud"
+title_tag: "alicloud.cas.Certificate"
 meta_desc: "Explore the Certificate resource of the cas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CAS Certificate resource."
 ---
 

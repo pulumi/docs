@@ -1,7 +1,7 @@
 
 ---
 title: "CopyImage"
-title_tag: "Resource CopyImage | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.CopyImage"
 meta_desc: "Explore the CopyImage resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

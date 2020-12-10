@@ -1,7 +1,7 @@
 
 ---
 title: "HAVip"
-title_tag: "Resource HAVip | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.HAVip"
 meta_desc: "Explore the HAVip resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DomainExtension"
-title_tag: "Resource DomainExtension | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.DomainExtension"
 meta_desc: "Explore the DomainExtension resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. HTTPS listeners of guaranteed-performance SLB support configuring multiple certificates, allowing you to forward requests with different domain names to different backend servers."
 ---
 

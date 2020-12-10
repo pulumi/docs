@@ -1,7 +1,7 @@
 
 ---
 title: "LaunchTemplate"
-title_tag: "Resource LaunchTemplate | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.LaunchTemplate"
 meta_desc: "Explore the LaunchTemplate resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS Launch Template resource."
 ---
 

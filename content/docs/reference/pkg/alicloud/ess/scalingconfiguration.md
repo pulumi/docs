@@ -1,7 +1,7 @@
 
 ---
 title: "ScalingConfiguration"
-title_tag: "Resource ScalingConfiguration | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.ScalingConfiguration"
 meta_desc: "Explore the ScalingConfiguration resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

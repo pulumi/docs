@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateZone"
-title_tag: "Resource PrivateZone | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.PrivateZone"
 meta_desc: "Explore the PrivateZone resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. This topic describes how to configure PrivateZone access. "
 ---
 

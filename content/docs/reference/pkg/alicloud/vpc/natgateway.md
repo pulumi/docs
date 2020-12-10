@@ -1,7 +1,7 @@
 
 ---
 title: "NatGateway"
-title_tag: "Resource NatGateway | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.NatGateway"
 meta_desc: "Explore the NatGateway resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

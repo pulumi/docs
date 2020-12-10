@@ -1,7 +1,7 @@
 
 ---
 title: "DnsDomain"
-title_tag: "Resource DnsDomain | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.DnsDomain"
 meta_desc: "Explore the DnsDomain resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

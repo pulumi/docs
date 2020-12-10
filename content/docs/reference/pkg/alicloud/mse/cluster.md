@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module mse | Package AliCloud"
+title_tag: "alicloud.mse.Cluster"
 meta_desc: "Explore the Cluster resource of the mse module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a MSE Cluster resource. It is a one-stop microservice platform for the industry&#39;s mainstream open source microservice frameworks Spring Cloud and Dubbo, providing governance center, managed registry and managed configuration center."
 ---
 

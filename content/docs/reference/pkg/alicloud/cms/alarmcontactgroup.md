@@ -1,7 +1,7 @@
 
 ---
 title: "AlarmContactGroup"
-title_tag: "Resource AlarmContactGroup | Module cms | Package AliCloud"
+title_tag: "alicloud.cms.AlarmContactGroup"
 meta_desc: "Explore the AlarmContactGroup resource of the cms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CMS Alarm Contact Group resource."
 ---
 

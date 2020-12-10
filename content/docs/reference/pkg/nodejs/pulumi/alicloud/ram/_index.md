@@ -3,7 +3,7 @@ title: "Module ram"
 title_tag: "Module ram | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "ram"
 meta_desc: "Explore members of the ram module in the @pulumi/alicloud package."
-git_sha: "4c4dbebbf662f52b648cbfbe09ca1ee944b21850"
+git_sha: "fcdd66dccf963899382dd7b59249d3ec24e3632c"
 block_external_search_index: true
 ---
 
@@ -90,7 +90,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AccessKey" data-link-title="AccessKey">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L55">
         Resource <strong>AccessKey</strong>
     </a>
 </h3>
@@ -145,7 +145,7 @@ export const secret = encrypt.encryptedSecret;
 ```
 
 <h4 class="pdoc-member-header" id="AccessKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -159,7 +159,7 @@ Create a AccessKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccessKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -170,14 +170,14 @@ Get an existing AccessKey resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccessKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccessKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -188,12 +188,12 @@ Returns true if the given object is an instance of AccessKey.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccessKey-encryptedSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L83">property <b>encryptedSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L83">property <b>encryptedSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptedSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccessKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -202,7 +202,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccessKey-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L87">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L87">property <b>keyFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +210,7 @@ deployments and may be missing (undefined) during planning phases.
 The fingerprint of the PGP key used to encrypt the secret
 
 <h4 class="pdoc-member-header" id="AccessKey-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L91">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L91">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -218,12 +218,12 @@ The fingerprint of the PGP key used to encrypt the secret
 Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 
 <h4 class="pdoc-member-header" id="AccessKey-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L92">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L92">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccessKey-secretFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L96">property <b>secretFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L96">property <b>secretFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretFile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -231,7 +231,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 
 <h4 class="pdoc-member-header" id="AccessKey-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L100">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L100">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -239,7 +239,7 @@ The name of file that can save access key id and access key secret. Strongly sug
 Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 
 <h4 class="pdoc-member-header" id="AccessKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AccessKey-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L104">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L104">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -256,7 +256,7 @@ deployments.
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="AccountAlias" data-link-title="AccountAlias">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L30">
         Resource <strong>AccountAlias</strong>
     </a>
 </h3>
@@ -286,7 +286,7 @@ RAM account alias can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AccountAlias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -300,7 +300,7 @@ Create a AccountAlias resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccountAlias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -311,14 +311,14 @@ Get an existing AccountAlias resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccountAlias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccountAlias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -329,7 +329,7 @@ Returns true if the given object is an instance of AccountAlias.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccountAlias-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L61">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L61">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Alias of cloud account. This name can have a string of 3 to 32 characters, must contain only alphanumeric characters or hyphens, such as "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="AccountAlias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -346,7 +346,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccountAlias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -355,7 +355,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AccountPasswordPolicy" data-link-title="AccountPasswordPolicy">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">
         Resource <strong>AccountPasswordPolicy</strong>
     </a>
 </h3>
@@ -371,7 +371,7 @@ RAM account password policy can be imported using the `id`, e.g. bash
 ```
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -385,7 +385,7 @@ Create a AccountPasswordPolicy resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -396,14 +396,14 @@ Get an existing AccountPasswordPolicy resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -414,7 +414,7 @@ Returns true if the given object is an instance of AccountPasswordPolicy.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-hardExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L47">property <b>hardExpiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L47">property <b>hardExpiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hardExpiry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -422,7 +422,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies if a password can expire in a hard way. Default to false.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -431,7 +431,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-maxLoginAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L51">property <b>maxLoginAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L51">property <b>maxLoginAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLoginAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -439,7 +439,7 @@ deployments and may be missing (undefined) during planning phases.
 Maximum logon attempts with an incorrect password within an hour. Valid value range: [0-32]. Default to 5.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-maxPasswordAge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L55">property <b>maxPasswordAge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L55">property <b>maxPasswordAge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxPasswordAge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ Maximum logon attempts with an incorrect password within an hour. Valid value ra
 The number of days after which password expires. A value of 0 indicates that the password never expires. Valid value range: [0-1095]. Default to 0.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-minimumPasswordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L59">property <b>minimumPasswordLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L59">property <b>minimumPasswordLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minimumPasswordLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ The number of days after which password expires. A value of 0 indicates that the
 Minimal required length of password for a user. Valid value range: [8-32]. Default to 12.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-passwordReusePrevention">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L63">property <b>passwordReusePrevention</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L63">property <b>passwordReusePrevention</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordReusePrevention: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ Minimal required length of password for a user. Valid value range: [8-32]. Defau
 User is not allowed to use the latest number of passwords specified in this parameter. A value of 0 indicates the password history check policy is disabled. Valid value range: [0-24]. Default to 0.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-requireLowercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L67">property <b>requireLowercaseCharacters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L67">property <b>requireLowercaseCharacters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requireLowercaseCharacters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -471,7 +471,7 @@ User is not allowed to use the latest number of passwords specified in this para
 Specifies if the occurrence of a lowercase character in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-requireNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L71">property <b>requireNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L71">property <b>requireNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requireNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ Specifies if the occurrence of a lowercase character in the password is mandator
 Specifies if the occurrence of a number in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-requireSymbols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L75">property <b>requireSymbols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L75">property <b>requireSymbols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requireSymbols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ Specifies if the occurrence of a number in the password is mandatory. Default to
 (Optional Specifies if the occurrence of a special character in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-requireUppercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L79">property <b>requireUppercaseCharacters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L79">property <b>requireUppercaseCharacters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requireUppercaseCharacters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -495,7 +495,7 @@ Specifies if the occurrence of a number in the password is mandatory. Default to
 Specifies if the occurrence of an uppercase character in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -504,14 +504,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Alias" data-link-title="Alias">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L7">
         Resource <strong>Alias</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Alias</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Alias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L35"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L35"> <b>constructor</b></a>
 </h4>
 
 
@@ -525,7 +525,7 @@ Create a Alias resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Alias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -536,14 +536,14 @@ Get an existing Alias resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Alias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Alias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -554,12 +554,12 @@ Returns true if the given object is an instance of Alias.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Alias-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L35">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L35">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Alias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -568,7 +568,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Alias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -577,7 +577,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L16">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -593,7 +593,7 @@ RAM group can be imported using the id or name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L55"> <b>constructor</b></a>
 </h4>
 
 
@@ -607,7 +607,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -618,14 +618,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -636,7 +636,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L47">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L47">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Comment of the RAM group. This parameter can have a string of 1 to 128 characters.
 
 <h4 class="pdoc-member-header" id="Group-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L51">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L51">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>force: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ Comment of the RAM group. This parameter can have a string of 1 to 128 character
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -661,7 +661,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -669,7 +669,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the RAM group. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -678,7 +678,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupMembership" data-link-title="GroupMembership">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L52">
         Resource <strong>GroupMembership</strong>
     </a>
 </h3>
@@ -730,7 +730,7 @@ RAM Group membership can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="GroupMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -744,7 +744,7 @@ Create a GroupMembership resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -755,14 +755,14 @@ Get an existing GroupMembership resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -773,7 +773,7 @@ Returns true if the given object is an instance of GroupMembership.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupMembership-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L83">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L83">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the RAM group. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -790,7 +790,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -799,7 +799,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GroupMembership-userNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L87">property <b>userNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L87">property <b>userNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -807,7 +807,7 @@ deployments.
 Set of user name which will be added to group. Each name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="GroupPolicyAttachment" data-link-title="GroupPolicyAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">
         Resource <strong>GroupPolicyAttachment</strong>
     </a>
 </h3>
@@ -864,7 +864,7 @@ RAM Group Policy attachment can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -878,7 +878,7 @@ Create a GroupPolicyAttachment resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -889,14 +889,14 @@ Get an existing GroupPolicyAttachment resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -907,7 +907,7 @@ Returns true if the given object is an instance of GroupPolicyAttachment.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L88">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L88">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -915,7 +915,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the RAM group. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -924,7 +924,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L92">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L92">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -932,7 +932,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L96">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L96">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -940,7 +940,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -949,7 +949,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LoginProfile" data-link-title="LoginProfile">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L38">
         Resource <strong>LoginProfile</strong>
     </a>
 </h3>
@@ -987,7 +987,7 @@ RAM login profile can be imported using the id or user name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="LoginProfile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -1001,7 +1001,7 @@ Create a LoginProfile resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LoginProfile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -1012,14 +1012,14 @@ Get an existing LoginProfile resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LoginProfile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LoginProfile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1030,7 +1030,7 @@ Returns true if the given object is an instance of LoginProfile.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LoginProfile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LoginProfile-mfaBindRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L69">property <b>mfaBindRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L69">property <b>mfaBindRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mfaBindRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1047,7 +1047,7 @@ deployments and may be missing (undefined) during planning phases.
 This parameter indicates whether the MFA needs to be bind when the user first logs in. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoginProfile-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L73">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L73">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1055,7 +1055,7 @@ This parameter indicates whether the MFA needs to be bind when the user first lo
 Password of the RAM user.
 
 <h4 class="pdoc-member-header" id="LoginProfile-passwordResetRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L77">property <b>passwordResetRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L77">property <b>passwordResetRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordResetRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ Password of the RAM user.
 This parameter indicates whether the password needs to be reset when the user first logs in. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoginProfile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="LoginProfile-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L81">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L81">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ deployments.
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L17">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -1096,7 +1096,7 @@ RAM policy can be imported using the id or name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -1110,7 +1110,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -1121,14 +1121,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1139,7 +1139,7 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-attachmentCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L48">property <b>attachmentCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L48">property <b>attachmentCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attachmentCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The policy attachment count.
 
 <h4 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L52">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ The policy attachment count.
 Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 
 <h4 class="pdoc-member-header" id="Policy-document">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L56">property <b>document</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L56">property <b>document</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>document: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ Description of the RAM policy. This name can have a string of 1 to 1024 characte
 Document of the RAM policy. It is required when the `statement` is not specified.
 
 <h4 class="pdoc-member-header" id="Policy-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L60">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L60">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>force: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ Document of the RAM policy. It is required when the `statement` is not specified
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1188,7 +1188,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="Policy-statements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L70">property <b>statements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L70">property <b>statements</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1200,7 +1200,7 @@ Field &#39;statement&#39; has been deprecated from version 1.49.0, and use field
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Statements of the RAM policy document. It is required when the `document` is not specified.
 
 <h4 class="pdoc-member-header" id="Policy-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L74">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L74">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1208,7 +1208,7 @@ Field &#39;statement&#39; has been deprecated from version 1.49.0, and use field
 The policy type.
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1217,7 +1217,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Policy-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L80">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L80">property <b>version</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1229,7 +1229,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM policy document. Valid value is `1`. Default value is `1`.
 
 <h3 class="pdoc-module-header" id="Role" data-link-title="Role">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L16">
         Resource <strong>Role</strong>
     </a>
 </h3>
@@ -1245,7 +1245,7 @@ RAM role can be imported using the id or name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -1259,7 +1259,7 @@ Create a Role resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1270,14 +1270,14 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1288,7 +1288,7 @@ Returns true if the given object is an instance of Role.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Role-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L47">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L47">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1296,7 +1296,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The role arn.
 
 <h4 class="pdoc-member-header" id="Role-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L51">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1304,7 +1304,7 @@ The role arn.
 Description of the RAM role. This name can have a string of 1 to 1024 characters.
 
 <h4 class="pdoc-member-header" id="Role-document">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L55">property <b>document</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L55">property <b>document</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>document: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1312,7 +1312,7 @@ Description of the RAM role. This name can have a string of 1 to 1024 characters
 Authorization strategy of the RAM role. It is required when the `services` and `ramUsers` are not specified.
 
 <h4 class="pdoc-member-header" id="Role-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L59">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L59">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>force: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1320,7 +1320,7 @@ Authorization strategy of the RAM role. It is required when the `services` and `
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1328,8 +1328,16 @@ This parameter is used for resource destroy. Default value is `false`.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="Role-maxSessionDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L63">property <b>maxSessionDuration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>maxSessionDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The maximum session duration of the RAM role. Valid values: 3600 to 43200. Unit: seconds. Default value: 3600. The default value is used if the parameter is not specified.
+
 <h4 class="pdoc-member-header" id="Role-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1345,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the RAM role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="Role-ramUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L69">property <b>ramUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L73">property <b>ramUsers</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1349,7 +1357,7 @@ Field &#39;ram_users&#39; has been deprecated from version 1.49.0, and use field
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) List of ram users who can assume the RAM role. The format of each item in this list is `acs:ram::${account_id}:root` or `acs:ram::${account_id}:user/${user_name}`, such as `acs:ram::1234567890000:root` and `acs:ram::1234567890001:user/Mary`. The `${user_name}` is the name of a RAM user which must exists in the Alicloud account indicated by the `${account_id}`.
 
 <h4 class="pdoc-member-header" id="Role-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L73">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L77">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1357,7 +1365,7 @@ Field &#39;ram_users&#39; has been deprecated from version 1.49.0, and use field
 The role ID.
 
 <h4 class="pdoc-member-header" id="Role-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L79">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L83">property <b>services</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1369,7 +1377,7 @@ Field &#39;services&#39; has been deprecated from version 1.49.0, and use field 
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) List of services which can assume the RAM role. The format of each item in this list is `${service}.aliyuncs.com` or `${account_id}@${service}.aliyuncs.com`, such as `ecs.aliyuncs.com` and `1234567890000@ots.aliyuncs.com`. The `${service}` can be `ecs`, `log`, `apigateway` and so on, the `${account_id}` refers to someone's Alicloud account id.
 
 <h4 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1378,7 +1386,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Role-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L85">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L89">property <b>version</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1390,7 +1398,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM role policy document. Valid value is `1`. Default value is `1`.
 
 <h3 class="pdoc-module-header" id="RoleAttachment" data-link-title="RoleAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L85">
         Resource <strong>RoleAttachment</strong>
     </a>
 </h3>
@@ -1475,7 +1483,7 @@ const attach = new alicloud.ram.RoleAttachment("attach", {
 ```
 
 <h4 class="pdoc-member-header" id="RoleAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L120"> <b>constructor</b></a>
 </h4>
 
 
@@ -1489,7 +1497,7 @@ Create a RoleAttachment resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoleAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L95">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L95">method <b>get</b></a>
 </h4>
 
 
@@ -1500,14 +1508,14 @@ Get an existing RoleAttachment resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RoleAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L85">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L85">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoleAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L106">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L106">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1518,7 +1526,7 @@ Returns true if the given object is an instance of RoleAttachment.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoleAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1527,7 +1535,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoleAttachment-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L116">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L116">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1535,7 +1543,7 @@ deployments and may be missing (undefined) during planning phases.
 The list of ECS instance's IDs.
 
 <h4 class="pdoc-member-header" id="RoleAttachment-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L120">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L120">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1543,7 +1551,7 @@ The list of ECS instance's IDs.
 The name of role used to bind. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="RoleAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L85">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L85">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1552,7 +1560,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RolePolicyAttachment" data-link-title="RolePolicyAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">
         Resource <strong>RolePolicyAttachment</strong>
     </a>
 </h3>
@@ -1625,7 +1633,7 @@ RAM Role Policy attachment can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -1639,7 +1647,7 @@ Create a RolePolicyAttachment resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L83">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L83">method <b>get</b></a>
 </h4>
 
 
@@ -1650,14 +1658,14 @@ Get an existing RolePolicyAttachment resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L94">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L94">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1668,7 +1676,7 @@ Returns true if the given object is an instance of RolePolicyAttachment.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1677,7 +1685,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L104">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L104">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1685,7 +1693,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L108">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L108">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1693,7 +1701,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L112">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L112">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1701,7 +1709,7 @@ Type of the RAM policy. It must be `Custom` or `System`.
 Name of the RAM Role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L73">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1710,7 +1718,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L16">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -1726,7 +1734,7 @@ RAM user can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -1740,7 +1748,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1751,14 +1759,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1769,7 +1777,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L47">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L47">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1777,7 +1785,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Comment of the RAM user. This parameter can have a string of 1 to 128 characters.
 
 <h4 class="pdoc-member-header" id="User-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L51">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L51">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1785,7 +1793,7 @@ Comment of the RAM user. This parameter can have a string of 1 to 128 characters
 Name of the RAM user which for display. This name can have a string of 1 to 128 characters or Chinese characters, must contain only alphanumeric characters or Chinese characters or hyphens, such as "-",".", and must not end with a hyphen.
 
 <h4 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L55">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L55">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1793,7 +1801,7 @@ Name of the RAM user which for display. This name can have a string of 1 to 128 
 Email of the RAM user.
 
 <h4 class="pdoc-member-header" id="User-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L59">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L59">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>force: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1801,7 +1809,7 @@ Email of the RAM user.
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1810,7 +1818,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-mobile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L63">property <b>mobile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L63">property <b>mobile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mobile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1818,7 +1826,7 @@ deployments and may be missing (undefined) during planning phases.
 Phone number of the RAM user. This number must contain an international area code prefix, just look like this: 86-18600008888.
 
 <h4 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1826,7 +1834,7 @@ Phone number of the RAM user. This number must contain an international area cod
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1835,7 +1843,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="UserPolicyAttachment" data-link-title="UserPolicyAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L60">
         Resource <strong>UserPolicyAttachment</strong>
     </a>
 </h3>
@@ -1895,7 +1903,7 @@ RAM User Policy attachment can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -1909,7 +1917,7 @@ Create a UserPolicyAttachment resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -1920,14 +1928,14 @@ Get an existing UserPolicyAttachment resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1938,7 +1946,7 @@ Returns true if the given object is an instance of UserPolicyAttachment.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1947,7 +1955,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L91">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L91">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1955,7 +1963,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L95">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L95">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1963,7 +1971,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1972,7 +1980,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachment-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L99">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L99">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1982,7 +1990,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccountAlias" data-link-title="getAccountAlias">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAlias.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAlias.ts#L8">
         Function <strong>getAccountAlias</strong>
     </a>
 </h3>
@@ -1991,7 +1999,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 <pre class="highlight"><code><span class='kd'></span>getAccountAlias(args?: <a href='#GetAccountAliasArgs'>GetAccountAliasArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAccountAliasResult'>GetAccountAliasResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getAccountAliases" data-link-title="getAccountAliases">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAliases.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAliases.ts#L24">
         Function <strong>getAccountAliases</strong>
     </a>
 </h3>
@@ -2016,7 +2024,7 @@ export const accountAlias = aliasDs.accountAlias;
 ```
 
 <h3 class="pdoc-module-header" id="getGroups" data-link-title="getGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L26">
         Function <strong>getGroups</strong>
     </a>
 </h3>
@@ -2043,7 +2051,7 @@ export const firstGroupName = groupsDs.groups[0].name;
 ```
 
 <h3 class="pdoc-module-header" id="getPolicies" data-link-title="getPolicies">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L27">
         Function <strong>getPolicies</strong>
     </a>
 </h3>
@@ -2071,7 +2079,7 @@ export const firstPolicyName = policiesDs.policies[0].name;
 ```
 
 <h3 class="pdoc-module-header" id="getRoles" data-link-title="getRoles">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L27">
         Function <strong>getRoles</strong>
     </a>
 </h3>
@@ -2099,7 +2107,7 @@ export const firstRoleId = rolesDs.roles[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getUsers" data-link-title="getUsers">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L28">
         Function <strong>getUsers</strong>
     </a>
 </h3>
@@ -2130,7 +2138,7 @@ export const firstUserId = usersDs.users[0].id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccessKeyArgs" data-link-title="AccessKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L177">
         interface <strong>AccessKeyArgs</strong>
     </a>
 </h3>
@@ -2140,7 +2148,7 @@ export const firstUserId = usersDs.users[0].id;
 The set of arguments for constructing a AccessKey resource.
 
 <h4 class="pdoc-member-header" id="AccessKeyArgs-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L181">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L181">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2148,7 +2156,7 @@ The set of arguments for constructing a AccessKey resource.
 Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 
 <h4 class="pdoc-member-header" id="AccessKeyArgs-secretFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L185">property <b>secretFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L185">property <b>secretFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2156,7 +2164,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 
 <h4 class="pdoc-member-header" id="AccessKeyArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L189">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L189">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2164,7 +2172,7 @@ The name of file that can save access key id and access key secret. Strongly sug
 Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 
 <h4 class="pdoc-member-header" id="AccessKeyArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L193">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L193">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2172,7 +2180,7 @@ Status of access key. It must be `Active` or `Inactive`. Default value is `Activ
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="AccessKeyState" data-link-title="AccessKeyState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L149">
         interface <strong>AccessKeyState</strong>
     </a>
 </h3>
@@ -2182,12 +2190,12 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 Input properties used for looking up and filtering AccessKey resources.
 
 <h4 class="pdoc-member-header" id="AccessKeyState-encryptedSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L150">property <b>encryptedSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L150">property <b>encryptedSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptedSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccessKeyState-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L154">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L154">property <b>keyFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2195,7 +2203,7 @@ Input properties used for looking up and filtering AccessKey resources.
 The fingerprint of the PGP key used to encrypt the secret
 
 <h4 class="pdoc-member-header" id="AccessKeyState-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L158">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L158">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2203,12 +2211,12 @@ The fingerprint of the PGP key used to encrypt the secret
 Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 
 <h4 class="pdoc-member-header" id="AccessKeyState-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L159">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L159">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccessKeyState-secretFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L163">property <b>secretFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L163">property <b>secretFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2216,7 +2224,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 
 <h4 class="pdoc-member-header" id="AccessKeyState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L167">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L167">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2224,7 +2232,7 @@ The name of file that can save access key id and access key secret. Strongly sug
 Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 
 <h4 class="pdoc-member-header" id="AccessKeyState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accessKey.ts#L171">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accessKey.ts#L171">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2232,7 +2240,7 @@ Status of access key. It must be `Active` or `Inactive`. Default value is `Activ
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="AccountAliasArgs" data-link-title="AccountAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L107">
         interface <strong>AccountAliasArgs</strong>
     </a>
 </h3>
@@ -2242,7 +2250,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 The set of arguments for constructing a AccountAlias resource.
 
 <h4 class="pdoc-member-header" id="AccountAliasArgs-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L111">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L111">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2250,7 +2258,7 @@ The set of arguments for constructing a AccountAlias resource.
 Alias of cloud account. This name can have a string of 3 to 32 characters, must contain only alphanumeric characters or hyphens, such as "-", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="AccountAliasState" data-link-title="AccountAliasState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L97">
         interface <strong>AccountAliasState</strong>
     </a>
 </h3>
@@ -2260,7 +2268,7 @@ Alias of cloud account. This name can have a string of 3 to 32 characters, must 
 Input properties used for looking up and filtering AccountAlias resources.
 
 <h4 class="pdoc-member-header" id="AccountAliasState-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountAlias.ts#L101">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountAlias.ts#L101">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2268,7 +2276,7 @@ Input properties used for looking up and filtering AccountAlias resources.
 Alias of cloud account. This name can have a string of 3 to 32 characters, must contain only alphanumeric characters or hyphens, such as "-", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="AccountPasswordPolicyArgs" data-link-title="AccountPasswordPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L170">
         interface <strong>AccountPasswordPolicyArgs</strong>
     </a>
 </h3>
@@ -2278,7 +2286,7 @@ Alias of cloud account. This name can have a string of 3 to 32 characters, must 
 The set of arguments for constructing a AccountPasswordPolicy resource.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-hardExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L174">property <b>hardExpiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L174">property <b>hardExpiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hardExpiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2286,7 +2294,7 @@ The set of arguments for constructing a AccountPasswordPolicy resource.
 Specifies if a password can expire in a hard way. Default to false.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-maxLoginAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L178">property <b>maxLoginAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L178">property <b>maxLoginAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLoginAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2294,7 +2302,7 @@ Specifies if a password can expire in a hard way. Default to false.
 Maximum logon attempts with an incorrect password within an hour. Valid value range: [0-32]. Default to 5.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-maxPasswordAge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L182">property <b>maxPasswordAge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L182">property <b>maxPasswordAge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPasswordAge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2302,7 +2310,7 @@ Maximum logon attempts with an incorrect password within an hour. Valid value ra
 The number of days after which password expires. A value of 0 indicates that the password never expires. Valid value range: [0-1095]. Default to 0.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-minimumPasswordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L186">property <b>minimumPasswordLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L186">property <b>minimumPasswordLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimumPasswordLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2310,7 +2318,7 @@ The number of days after which password expires. A value of 0 indicates that the
 Minimal required length of password for a user. Valid value range: [8-32]. Default to 12.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-passwordReusePrevention">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L190">property <b>passwordReusePrevention</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L190">property <b>passwordReusePrevention</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordReusePrevention?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2318,7 +2326,7 @@ Minimal required length of password for a user. Valid value range: [8-32]. Defau
 User is not allowed to use the latest number of passwords specified in this parameter. A value of 0 indicates the password history check policy is disabled. Valid value range: [0-24]. Default to 0.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireLowercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L194">property <b>requireLowercaseCharacters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L194">property <b>requireLowercaseCharacters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireLowercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2326,7 +2334,7 @@ User is not allowed to use the latest number of passwords specified in this para
 Specifies if the occurrence of a lowercase character in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L198">property <b>requireNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L198">property <b>requireNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireNumbers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2334,7 +2342,7 @@ Specifies if the occurrence of a lowercase character in the password is mandator
 Specifies if the occurrence of a number in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireSymbols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L202">property <b>requireSymbols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L202">property <b>requireSymbols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireSymbols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2342,7 +2350,7 @@ Specifies if the occurrence of a number in the password is mandatory. Default to
 (Optional Specifies if the occurrence of a special character in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireUppercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L206">property <b>requireUppercaseCharacters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L206">property <b>requireUppercaseCharacters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireUppercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2350,7 +2358,7 @@ Specifies if the occurrence of a number in the password is mandatory. Default to
 Specifies if the occurrence of an uppercase character in the password is mandatory. Default to true.
 
 <h3 class="pdoc-module-header" id="AccountPasswordPolicyState" data-link-title="AccountPasswordPolicyState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L128">
         interface <strong>AccountPasswordPolicyState</strong>
     </a>
 </h3>
@@ -2360,7 +2368,7 @@ Specifies if the occurrence of an uppercase character in the password is mandato
 Input properties used for looking up and filtering AccountPasswordPolicy resources.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-hardExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L132">property <b>hardExpiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L132">property <b>hardExpiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hardExpiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2368,7 +2376,7 @@ Input properties used for looking up and filtering AccountPasswordPolicy resourc
 Specifies if a password can expire in a hard way. Default to false.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-maxLoginAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L136">property <b>maxLoginAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L136">property <b>maxLoginAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLoginAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2376,7 +2384,7 @@ Specifies if a password can expire in a hard way. Default to false.
 Maximum logon attempts with an incorrect password within an hour. Valid value range: [0-32]. Default to 5.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-maxPasswordAge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L140">property <b>maxPasswordAge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L140">property <b>maxPasswordAge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPasswordAge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2384,7 +2392,7 @@ Maximum logon attempts with an incorrect password within an hour. Valid value ra
 The number of days after which password expires. A value of 0 indicates that the password never expires. Valid value range: [0-1095]. Default to 0.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-minimumPasswordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L144">property <b>minimumPasswordLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L144">property <b>minimumPasswordLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimumPasswordLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2392,7 +2400,7 @@ The number of days after which password expires. A value of 0 indicates that the
 Minimal required length of password for a user. Valid value range: [8-32]. Default to 12.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-passwordReusePrevention">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L148">property <b>passwordReusePrevention</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L148">property <b>passwordReusePrevention</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordReusePrevention?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2400,7 +2408,7 @@ Minimal required length of password for a user. Valid value range: [8-32]. Defau
 User is not allowed to use the latest number of passwords specified in this parameter. A value of 0 indicates the password history check policy is disabled. Valid value range: [0-24]. Default to 0.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-requireLowercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L152">property <b>requireLowercaseCharacters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L152">property <b>requireLowercaseCharacters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireLowercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2408,7 +2416,7 @@ User is not allowed to use the latest number of passwords specified in this para
 Specifies if the occurrence of a lowercase character in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-requireNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L156">property <b>requireNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L156">property <b>requireNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireNumbers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2416,7 +2424,7 @@ Specifies if the occurrence of a lowercase character in the password is mandator
 Specifies if the occurrence of a number in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-requireSymbols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L160">property <b>requireSymbols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L160">property <b>requireSymbols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireSymbols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2424,7 +2432,7 @@ Specifies if the occurrence of a number in the password is mandatory. Default to
 (Optional Specifies if the occurrence of a special character in the password is mandatory. Default to true.
 
 <h4 class="pdoc-member-header" id="AccountPasswordPolicyState-requireUppercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/accountPasswordPolicy.ts#L164">property <b>requireUppercaseCharacters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/accountPasswordPolicy.ts#L164">property <b>requireUppercaseCharacters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireUppercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2432,7 +2440,7 @@ Specifies if the occurrence of a number in the password is mandatory. Default to
 Specifies if the occurrence of an uppercase character in the password is mandatory. Default to true.
 
 <h3 class="pdoc-module-header" id="AliasArgs" data-link-title="AliasArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L78">
         interface <strong>AliasArgs</strong>
     </a>
 </h3>
@@ -2442,12 +2450,12 @@ Specifies if the occurrence of an uppercase character in the password is mandato
 The set of arguments for constructing a Alias resource.
 
 <h4 class="pdoc-member-header" id="AliasArgs-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L79">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L79">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="AliasState" data-link-title="AliasState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L71">
         interface <strong>AliasState</strong>
     </a>
 </h3>
@@ -2457,12 +2465,12 @@ The set of arguments for constructing a Alias resource.
 Input properties used for looking up and filtering Alias resources.
 
 <h4 class="pdoc-member-header" id="AliasState-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/alias.ts#L72">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/alias.ts#L72">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GetAccountAliasArgs" data-link-title="GetAccountAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAlias.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAlias.ts#L25">
         interface <strong>GetAccountAliasArgs</strong>
     </a>
 </h3>
@@ -2472,12 +2480,12 @@ Input properties used for looking up and filtering Alias resources.
 A collection of arguments for invoking getAccountAlias.
 
 <h4 class="pdoc-member-header" id="GetAccountAliasArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAlias.ts#L26">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAlias.ts#L26">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAccountAliasesArgs" data-link-title="GetAccountAliasesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAliases.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAliases.ts#L41">
         interface <strong>GetAccountAliasesArgs</strong>
     </a>
 </h3>
@@ -2487,12 +2495,12 @@ A collection of arguments for invoking getAccountAlias.
 A collection of arguments for invoking getAccountAliases.
 
 <h4 class="pdoc-member-header" id="GetAccountAliasesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAliases.ts#L42">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAliases.ts#L42">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAccountAliasesResult" data-link-title="GetAccountAliasesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAliases.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAliases.ts#L48">
         interface <strong>GetAccountAliasesResult</strong>
     </a>
 </h3>
@@ -2502,7 +2510,7 @@ A collection of arguments for invoking getAccountAliases.
 A collection of values returned by getAccountAliases.
 
 <h4 class="pdoc-member-header" id="GetAccountAliasesResult-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAliases.ts#L52">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAliases.ts#L52">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAlias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2510,7 +2518,7 @@ A collection of values returned by getAccountAliases.
 Alias of the account.
 
 <h4 class="pdoc-member-header" id="GetAccountAliasesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAliases.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAliases.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2518,12 +2526,12 @@ Alias of the account.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountAliasesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAliases.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAliases.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAccountAliasResult" data-link-title="GetAccountAliasResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAlias.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAlias.ts#L32">
         interface <strong>GetAccountAliasResult</strong>
     </a>
 </h3>
@@ -2533,12 +2541,12 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getAccountAlias.
 
 <h4 class="pdoc-member-header" id="GetAccountAliasResult-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAlias.ts#L33">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAlias.ts#L33">property <b>accountAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAlias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountAliasResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAlias.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAlias.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2546,12 +2554,12 @@ A collection of values returned by getAccountAlias.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountAliasResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getAccountAlias.ts#L38">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getAccountAlias.ts#L38">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetGroupsArgs" data-link-title="GetGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L47">
         interface <strong>GetGroupsArgs</strong>
     </a>
 </h3>
@@ -2561,7 +2569,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L51">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L51">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2569,12 +2577,12 @@ A collection of arguments for invoking getGroups.
 A regex string to filter the returned groups by their names.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L52">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L52">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L56">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L56">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2582,7 +2590,7 @@ A regex string to filter the returned groups by their names.
 Filter the results by a specific policy name. If you set this parameter without setting `policyType`, it will be automatically set to `System`.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L60">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L60">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2590,7 +2598,7 @@ Filter the results by a specific policy name. If you set this parameter without 
 Filter the results by a specific policy type. Valid items are `Custom` and `System`. If you set this parameter, you must set `policyName` as well.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L64">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L64">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2598,7 +2606,7 @@ Filter the results by a specific policy type. Valid items are `Custom` and `Syst
 Filter the results by a specific the user name.
 
 <h3 class="pdoc-module-header" id="GetGroupsResult" data-link-title="GetGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L70">
         interface <strong>GetGroupsResult</strong>
     </a>
 </h3>
@@ -2608,7 +2616,7 @@ Filter the results by a specific the user name.
 A collection of values returned by getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L74">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L74">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetGroupsGroup'>GetGroupsGroup</a>[];</code></pre>
@@ -2616,7 +2624,7 @@ A collection of values returned by getGroups.
 A list of groups. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2624,12 +2632,12 @@ A list of groups. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L79">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L83">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2637,27 +2645,27 @@ The provider-assigned unique ID for this managed resource.
 A list of ram group names.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L84">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L85">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L85">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L86">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L86">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getGroups.ts#L87">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getGroups.ts#L87">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPoliciesArgs" data-link-title="GetPoliciesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L49">
         interface <strong>GetPoliciesArgs</strong>
     </a>
 </h3>
@@ -2667,7 +2675,7 @@ A list of ram group names.
 A collection of arguments for invoking getPolicies.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L53">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L53">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2675,7 +2683,7 @@ A collection of arguments for invoking getPolicies.
 Filter results by a specific group name. Returned policies are attached to the specified group.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L57">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2683,12 +2691,12 @@ Filter results by a specific group name. Returned policies are attached to the s
 A regex string to filter resulting policies by name.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L58">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L62">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L62">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2696,7 +2704,7 @@ A regex string to filter resulting policies by name.
 Filter results by a specific role name. Returned policies are attached to the specified role.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L66">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L66">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2704,7 +2712,7 @@ Filter results by a specific role name. Returned policies are attached to the sp
 Filter results by a specific policy type. Valid values are `Custom` and `System`.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L70">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L70">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2712,7 +2720,7 @@ Filter results by a specific policy type. Valid values are `Custom` and `System`
 Filter results by a specific user name. Returned policies are attached to the specified user.
 
 <h3 class="pdoc-module-header" id="GetPoliciesResult" data-link-title="GetPoliciesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L76">
         interface <strong>GetPoliciesResult</strong>
     </a>
 </h3>
@@ -2722,12 +2730,12 @@ Filter results by a specific user name. Returned policies are attached to the sp
 A collection of values returned by getPolicies.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L77">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L77">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2735,12 +2743,12 @@ A collection of values returned by getPolicies.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L82">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L82">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L86">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L86">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2748,12 +2756,12 @@ The provider-assigned unique ID for this managed resource.
 A list of ram group names.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L87">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L87">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesResult-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L91">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L91">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetPoliciesPolicy'>GetPoliciesPolicy</a>[];</code></pre>
@@ -2761,12 +2769,12 @@ A list of ram group names.
 A list of policies. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L92">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L92">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L96">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L96">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2774,12 +2782,12 @@ A list of policies. Each element contains the following attributes:
 Type of the policy.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getPolicies.ts#L97">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getPolicies.ts#L97">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRolesArgs" data-link-title="GetRolesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L48">
         interface <strong>GetRolesArgs</strong>
     </a>
 </h3>
@@ -2789,7 +2797,7 @@ Type of the policy.
 A collection of arguments for invoking getRoles.
 
 <h4 class="pdoc-member-header" id="GetRolesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2797,7 +2805,7 @@ A collection of arguments for invoking getRoles.
 - A list of ram role IDs.
 
 <h4 class="pdoc-member-header" id="GetRolesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L56">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2805,12 +2813,12 @@ A collection of arguments for invoking getRoles.
 A regex string to filter results by the role name.
 
 <h4 class="pdoc-member-header" id="GetRolesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L61">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L61">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2818,7 +2826,7 @@ A regex string to filter results by the role name.
 Filter results by a specific policy name. If you set this parameter without setting `policyType`, the later will be automatically set to `System`. The resulting roles will be attached to the specified policy.
 
 <h4 class="pdoc-member-header" id="GetRolesArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L65">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L65">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2826,7 +2834,7 @@ Filter results by a specific policy name. If you set this parameter without sett
 Filter results by a specific policy type. Valid values are `Custom` and `System`. If you set this parameter, you must set `policyName` as well.
 
 <h3 class="pdoc-module-header" id="GetRolesResult" data-link-title="GetRolesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L71">
         interface <strong>GetRolesResult</strong>
     </a>
 </h3>
@@ -2836,7 +2844,7 @@ Filter results by a specific policy type. Valid values are `Custom` and `System`
 A collection of values returned by getRoles.
 
 <h4 class="pdoc-member-header" id="GetRolesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2844,7 +2852,7 @@ A collection of values returned by getRoles.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRolesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2852,12 +2860,12 @@ The provider-assigned unique ID for this managed resource.
 A list of ram role IDs.
 
 <h4 class="pdoc-member-header" id="GetRolesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L80">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L84">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L84">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2865,22 +2873,22 @@ A list of ram role IDs.
 A list of ram role names.
 
 <h4 class="pdoc-member-header" id="GetRolesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L85">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L85">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesResult-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L86">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L86">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesResult-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L87">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L87">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesResult-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getRoles.ts#L91">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getRoles.ts#L91">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRolesRole'>GetRolesRole</a>[];</code></pre>
@@ -2888,7 +2896,7 @@ A list of ram role names.
 A list of roles. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetUsersArgs" data-link-title="GetUsersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L50">
         interface <strong>GetUsersArgs</strong>
     </a>
 </h3>
@@ -2898,7 +2906,7 @@ A list of roles. Each element contains the following attributes:
 A collection of arguments for invoking getUsers.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L54">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L54">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2906,7 +2914,7 @@ A collection of arguments for invoking getUsers.
 Filter results by a specific group name. Returned users are in the specified group.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L58">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L58">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2914,7 +2922,7 @@ Filter results by a specific group name. Returned users are in the specified gro
 - A list of ram user IDs.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L62">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L62">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2922,12 +2930,12 @@ Filter results by a specific group name. Returned users are in the specified gro
 A regex string to filter resulting users by their names.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L63">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L63">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L67">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L67">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2935,7 +2943,7 @@ A regex string to filter resulting users by their names.
 Filter results by a specific policy name. If you set this parameter without setting `policyType`, the later will be automatically set to `System`. Returned users are attached to the specified policy.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L71">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L71">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2943,7 +2951,7 @@ Filter results by a specific policy name. If you set this parameter without sett
 Filter results by a specific policy type. Valid values are `Custom` and `System`. If you set this parameter, you must set `policyName` as well.
 
 <h3 class="pdoc-module-header" id="GetUsersResult" data-link-title="GetUsersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L77">
         interface <strong>GetUsersResult</strong>
     </a>
 </h3>
@@ -2953,12 +2961,12 @@ Filter results by a specific policy type. Valid values are `Custom` and `System`
 A collection of values returned by getUsers.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L78">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L78">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2966,7 +2974,7 @@ A collection of values returned by getUsers.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L86">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L86">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2974,12 +2982,12 @@ The provider-assigned unique ID for this managed resource.
 A list of ram user IDs.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L87">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L87">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L91">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L91">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2987,22 +2995,22 @@ A list of ram user IDs.
 A list of ram user names.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L92">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L92">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersResult-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L93">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L93">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersResult-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L94">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L94">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersResult-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/getUsers.ts#L98">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/getUsers.ts#L98">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetUsersUser'>GetUsersUser</a>[];</code></pre>
@@ -3010,7 +3018,7 @@ A list of ram user names.
 A list of users. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L110">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -3020,7 +3028,7 @@ A list of users. Each element contains the following attributes:
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L114">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L114">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3028,7 +3036,7 @@ The set of arguments for constructing a Group resource.
 Comment of the RAM group. This parameter can have a string of 1 to 128 characters.
 
 <h4 class="pdoc-member-header" id="GroupArgs-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L118">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L118">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3036,7 +3044,7 @@ Comment of the RAM group. This parameter can have a string of 1 to 128 character
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3044,7 +3052,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Name of the RAM group. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="GroupMembershipArgs" data-link-title="GroupMembershipArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L142">
         interface <strong>GroupMembershipArgs</strong>
     </a>
 </h3>
@@ -3054,7 +3062,7 @@ Name of the RAM group. This name can have a string of 1 to 128 characters, must 
 The set of arguments for constructing a GroupMembership resource.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L146">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L146">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3062,7 +3070,7 @@ The set of arguments for constructing a GroupMembership resource.
 Name of the RAM group. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-userNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L150">property <b>userNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L150">property <b>userNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3070,7 +3078,7 @@ Name of the RAM group. This name can have a string of 1 to 64 characters, must c
 Set of user name which will be added to group. Each name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="GroupMembershipState" data-link-title="GroupMembershipState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L128">
         interface <strong>GroupMembershipState</strong>
     </a>
 </h3>
@@ -3080,7 +3088,7 @@ Set of user name which will be added to group. Each name can have a string of 1 
 Input properties used for looking up and filtering GroupMembership resources.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L132">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L132">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3088,7 +3096,7 @@ Input properties used for looking up and filtering GroupMembership resources.
 Name of the RAM group. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-userNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupMembership.ts#L136">property <b>userNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupMembership.ts#L136">property <b>userNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3096,7 +3104,7 @@ Name of the RAM group. This name can have a string of 1 to 64 characters, must c
 Set of user name which will be added to group. Each name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="GroupPolicyAttachmentArgs" data-link-title="GroupPolicyAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L160">
         interface <strong>GroupPolicyAttachmentArgs</strong>
     </a>
 </h3>
@@ -3106,7 +3114,7 @@ Set of user name which will be added to group. Each name can have a string of 1 
 The set of arguments for constructing a GroupPolicyAttachment resource.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachmentArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L164">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L164">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3114,7 +3122,7 @@ The set of arguments for constructing a GroupPolicyAttachment resource.
 Name of the RAM group. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachmentArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L168">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L168">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3122,7 +3130,7 @@ Name of the RAM group. This name can have a string of 1 to 64 characters, must c
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachmentArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L172">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L172">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3130,7 +3138,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h3 class="pdoc-module-header" id="GroupPolicyAttachmentState" data-link-title="GroupPolicyAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L142">
         interface <strong>GroupPolicyAttachmentState</strong>
     </a>
 </h3>
@@ -3140,7 +3148,7 @@ Type of the RAM policy. It must be `Custom` or `System`.
 Input properties used for looking up and filtering GroupPolicyAttachment resources.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachmentState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L146">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L146">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3148,7 +3156,7 @@ Input properties used for looking up and filtering GroupPolicyAttachment resourc
 Name of the RAM group. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachmentState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L150">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L150">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3156,7 +3164,7 @@ Name of the RAM group. This name can have a string of 1 to 64 characters, must c
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="GroupPolicyAttachmentState-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/groupPolicyAttachment.ts#L154">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/groupPolicyAttachment.ts#L154">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3164,7 +3172,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L92">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -3174,7 +3182,7 @@ Type of the RAM policy. It must be `Custom` or `System`.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L96">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L96">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3182,7 +3190,7 @@ Input properties used for looking up and filtering Group resources.
 Comment of the RAM group. This parameter can have a string of 1 to 128 characters.
 
 <h4 class="pdoc-member-header" id="GroupState-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L100">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L100">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3190,7 +3198,7 @@ Comment of the RAM group. This parameter can have a string of 1 to 128 character
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/group.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/group.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3198,7 +3206,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Name of the RAM group. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="LoginProfileArgs" data-link-title="LoginProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L148">
         interface <strong>LoginProfileArgs</strong>
     </a>
 </h3>
@@ -3208,7 +3216,7 @@ Name of the RAM group. This name can have a string of 1 to 128 characters, must 
 The set of arguments for constructing a LoginProfile resource.
 
 <h4 class="pdoc-member-header" id="LoginProfileArgs-mfaBindRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L152">property <b>mfaBindRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L152">property <b>mfaBindRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaBindRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3216,7 +3224,7 @@ The set of arguments for constructing a LoginProfile resource.
 This parameter indicates whether the MFA needs to be bind when the user first logs in. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoginProfileArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L156">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L156">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3224,7 +3232,7 @@ This parameter indicates whether the MFA needs to be bind when the user first lo
 Password of the RAM user.
 
 <h4 class="pdoc-member-header" id="LoginProfileArgs-passwordResetRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L160">property <b>passwordResetRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L160">property <b>passwordResetRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordResetRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3232,7 +3240,7 @@ Password of the RAM user.
 This parameter indicates whether the password needs to be reset when the user first logs in. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoginProfileArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L164">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L164">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3240,7 +3248,7 @@ This parameter indicates whether the password needs to be reset when the user fi
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="LoginProfileState" data-link-title="LoginProfileState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L126">
         interface <strong>LoginProfileState</strong>
     </a>
 </h3>
@@ -3250,7 +3258,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 Input properties used for looking up and filtering LoginProfile resources.
 
 <h4 class="pdoc-member-header" id="LoginProfileState-mfaBindRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L130">property <b>mfaBindRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L130">property <b>mfaBindRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaBindRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3258,7 +3266,7 @@ Input properties used for looking up and filtering LoginProfile resources.
 This parameter indicates whether the MFA needs to be bind when the user first logs in. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoginProfileState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L134">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L134">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3266,7 +3274,7 @@ This parameter indicates whether the MFA needs to be bind when the user first lo
 Password of the RAM user.
 
 <h4 class="pdoc-member-header" id="LoginProfileState-passwordResetRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L138">property <b>passwordResetRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L138">property <b>passwordResetRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordResetRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3274,7 +3282,7 @@ Password of the RAM user.
 This parameter indicates whether the password needs to be reset when the user first logs in. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoginProfileState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/loginProfile.ts#L142">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/loginProfile.ts#L142">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3282,7 +3290,7 @@ This parameter indicates whether the password needs to be reset when the user fi
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L169">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -3292,7 +3300,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L173">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L173">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3300,7 +3308,7 @@ The set of arguments for constructing a Policy resource.
 Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-document">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L177">property <b>document</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L177">property <b>document</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>document?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3308,7 +3316,7 @@ Description of the RAM policy. This name can have a string of 1 to 1024 characte
 Document of the RAM policy. It is required when the `statement` is not specified.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L181">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L181">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3316,7 +3324,7 @@ Document of the RAM policy. It is required when the `statement` is not specified
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3324,7 +3332,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-statements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L191">property <b>statements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L191">property <b>statements</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3336,7 +3344,7 @@ Field &#39;statement&#39; has been deprecated from version 1.49.0, and use field
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Statements of the RAM policy document. It is required when the `document` is not specified.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L197">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L197">property <b>version</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3348,7 +3356,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM policy document. Valid value is `1`. Default value is `1`.
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L127">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -3358,7 +3366,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-attachmentCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L131">property <b>attachmentCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L131">property <b>attachmentCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attachmentCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3366,7 +3374,7 @@ Input properties used for looking up and filtering Policy resources.
 The policy attachment count.
 
 <h4 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L135">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L135">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3374,7 +3382,7 @@ The policy attachment count.
 Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 
 <h4 class="pdoc-member-header" id="PolicyState-document">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L139">property <b>document</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L139">property <b>document</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>document?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3382,7 +3390,7 @@ Description of the RAM policy. This name can have a string of 1 to 1024 characte
 Document of the RAM policy. It is required when the `statement` is not specified.
 
 <h4 class="pdoc-member-header" id="PolicyState-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L143">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L143">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3390,7 +3398,7 @@ Document of the RAM policy. It is required when the `statement` is not specified
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3398,7 +3406,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="PolicyState-statements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L153">property <b>statements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L153">property <b>statements</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3410,7 +3418,7 @@ Field &#39;statement&#39; has been deprecated from version 1.49.0, and use field
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Statements of the RAM policy document. It is required when the `document` is not specified.
 
 <h4 class="pdoc-member-header" id="PolicyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L157">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L157">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3418,7 +3426,7 @@ Field &#39;statement&#39; has been deprecated from version 1.49.0, and use field
 The policy type.
 
 <h4 class="pdoc-member-header" id="PolicyState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/policy.ts#L163">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/policy.ts#L163">property <b>version</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3430,7 +3438,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM policy document. Valid value is `1`. Default value is `1`.
 
 <h3 class="pdoc-module-header" id="RoleArgs" data-link-title="RoleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L192">
         interface <strong>RoleArgs</strong>
     </a>
 </h3>
@@ -3440,7 +3448,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 The set of arguments for constructing a Role resource.
 
 <h4 class="pdoc-member-header" id="RoleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L186">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L196">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3448,7 +3456,7 @@ The set of arguments for constructing a Role resource.
 Description of the RAM role. This name can have a string of 1 to 1024 characters.
 
 <h4 class="pdoc-member-header" id="RoleArgs-document">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L190">property <b>document</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L200">property <b>document</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>document?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3456,15 +3464,23 @@ Description of the RAM role. This name can have a string of 1 to 1024 characters
 Authorization strategy of the RAM role. It is required when the `services` and `ramUsers` are not specified.
 
 <h4 class="pdoc-member-header" id="RoleArgs-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L194">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L204">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 This parameter is used for resource destroy. Default value is `false`.
 
+<h4 class="pdoc-member-header" id="RoleArgs-maxSessionDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L208">property <b>maxSessionDuration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxSessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The maximum session duration of the RAM role. Valid values: 3600 to 43200. Unit: seconds. Default value: 3600. The default value is used if the parameter is not specified.
+
 <h4 class="pdoc-member-header" id="RoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3472,7 +3488,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Name of the RAM role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="RoleArgs-ramUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L204">property <b>ramUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L218">property <b>ramUsers</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3484,7 +3500,7 @@ Field &#39;ram_users&#39; has been deprecated from version 1.49.0, and use field
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) List of ram users who can assume the RAM role. The format of each item in this list is `acs:ram::${account_id}:root` or `acs:ram::${account_id}:user/${user_name}`, such as `acs:ram::1234567890000:root` and `acs:ram::1234567890001:user/Mary`. The `${user_name}` is the name of a RAM user which must exists in the Alicloud account indicated by the `${account_id}`.
 
 <h4 class="pdoc-member-header" id="RoleArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L210">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L224">property <b>services</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3496,7 +3512,7 @@ Field &#39;services&#39; has been deprecated from version 1.49.0, and use field 
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) List of services which can assume the RAM role. The format of each item in this list is `${service}.aliyuncs.com` or `${account_id}@${service}.aliyuncs.com`, such as `ecs.aliyuncs.com` and `1234567890000@ots.aliyuncs.com`. The `${service}` can be `ecs`, `log`, `apigateway` and so on, the `${account_id}` refers to someone's Alicloud account id.
 
 <h4 class="pdoc-member-header" id="RoleArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L216">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L230">property <b>version</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3508,7 +3524,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM role policy document. Valid value is `1`. Default value is `1`.
 
 <h3 class="pdoc-module-header" id="RoleAttachmentArgs" data-link-title="RoleAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L175">
         interface <strong>RoleAttachmentArgs</strong>
     </a>
 </h3>
@@ -3518,7 +3534,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 The set of arguments for constructing a RoleAttachment resource.
 
 <h4 class="pdoc-member-header" id="RoleAttachmentArgs-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L179">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L179">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3526,7 +3542,7 @@ The set of arguments for constructing a RoleAttachment resource.
 The list of ECS instance's IDs.
 
 <h4 class="pdoc-member-header" id="RoleAttachmentArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L183">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L183">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3534,7 +3550,7 @@ The list of ECS instance's IDs.
 The name of role used to bind. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="RoleAttachmentState" data-link-title="RoleAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L161">
         interface <strong>RoleAttachmentState</strong>
     </a>
 </h3>
@@ -3544,7 +3560,7 @@ The name of role used to bind. This name can have a string of 1 to 64 characters
 Input properties used for looking up and filtering RoleAttachment resources.
 
 <h4 class="pdoc-member-header" id="RoleAttachmentState-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L165">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L165">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3552,7 +3568,7 @@ Input properties used for looking up and filtering RoleAttachment resources.
 The list of ECS instance's IDs.
 
 <h4 class="pdoc-member-header" id="RoleAttachmentState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/roleAttachment.ts#L169">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/roleAttachment.ts#L169">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3560,7 +3576,7 @@ The list of ECS instance's IDs.
 The name of role used to bind. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="RolePolicyAttachmentArgs" data-link-title="RolePolicyAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L176">
         interface <strong>RolePolicyAttachmentArgs</strong>
     </a>
 </h3>
@@ -3570,7 +3586,7 @@ The name of role used to bind. This name can have a string of 1 to 64 characters
 The set of arguments for constructing a RolePolicyAttachment resource.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachmentArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L180">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L180">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3578,7 +3594,7 @@ The set of arguments for constructing a RolePolicyAttachment resource.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachmentArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L184">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L184">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3586,7 +3602,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachmentArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L188">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L188">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3594,7 +3610,7 @@ Type of the RAM policy. It must be `Custom` or `System`.
 Name of the RAM Role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="RolePolicyAttachmentState" data-link-title="RolePolicyAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L158">
         interface <strong>RolePolicyAttachmentState</strong>
     </a>
 </h3>
@@ -3604,7 +3620,7 @@ Name of the RAM Role. This name can have a string of 1 to 64 characters, must co
 Input properties used for looking up and filtering RolePolicyAttachment resources.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachmentState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L162">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L162">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3612,7 +3628,7 @@ Input properties used for looking up and filtering RolePolicyAttachment resource
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachmentState-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L166">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L166">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3620,7 +3636,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h4 class="pdoc-member-header" id="RolePolicyAttachmentState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/rolePolicyAttachment.ts#L170">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/rolePolicyAttachment.ts#L170">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3628,7 +3644,7 @@ Type of the RAM policy. It must be `Custom` or `System`.
 Name of the RAM Role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="RoleState" data-link-title="RoleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L140">
         interface <strong>RoleState</strong>
     </a>
 </h3>
@@ -3638,7 +3654,7 @@ Name of the RAM Role. This name can have a string of 1 to 64 characters, must co
 Input properties used for looking up and filtering Role resources.
 
 <h4 class="pdoc-member-header" id="RoleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L138">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L144">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3646,7 +3662,7 @@ Input properties used for looking up and filtering Role resources.
 The role arn.
 
 <h4 class="pdoc-member-header" id="RoleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L148">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3654,7 +3670,7 @@ The role arn.
 Description of the RAM role. This name can have a string of 1 to 1024 characters.
 
 <h4 class="pdoc-member-header" id="RoleState-document">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L146">property <b>document</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L152">property <b>document</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>document?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3662,15 +3678,23 @@ Description of the RAM role. This name can have a string of 1 to 1024 characters
 Authorization strategy of the RAM role. It is required when the `services` and `ramUsers` are not specified.
 
 <h4 class="pdoc-member-header" id="RoleState-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L150">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L156">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 This parameter is used for resource destroy. Default value is `false`.
 
+<h4 class="pdoc-member-header" id="RoleState-maxSessionDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L160">property <b>maxSessionDuration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxSessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The maximum session duration of the RAM role. Valid values: 3600 to 43200. Unit: seconds. Default value: 3600. The default value is used if the parameter is not specified.
+
 <h4 class="pdoc-member-header" id="RoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3678,7 +3702,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Name of the RAM role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-", "_", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="RoleState-ramUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L160">property <b>ramUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L170">property <b>ramUsers</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3690,7 +3714,7 @@ Field &#39;ram_users&#39; has been deprecated from version 1.49.0, and use field
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) List of ram users who can assume the RAM role. The format of each item in this list is `acs:ram::${account_id}:root` or `acs:ram::${account_id}:user/${user_name}`, such as `acs:ram::1234567890000:root` and `acs:ram::1234567890001:user/Mary`. The `${user_name}` is the name of a RAM user which must exists in the Alicloud account indicated by the `${account_id}`.
 
 <h4 class="pdoc-member-header" id="RoleState-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L164">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L174">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3698,7 +3722,7 @@ Field &#39;ram_users&#39; has been deprecated from version 1.49.0, and use field
 The role ID.
 
 <h4 class="pdoc-member-header" id="RoleState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L170">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L180">property <b>services</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3710,7 +3734,7 @@ Field &#39;services&#39; has been deprecated from version 1.49.0, and use field 
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) List of services which can assume the RAM role. The format of each item in this list is `${service}.aliyuncs.com` or `${account_id}@${service}.aliyuncs.com`, such as `ecs.aliyuncs.com` and `1234567890000@ots.aliyuncs.com`. The `${service}` can be `ecs`, `log`, `apigateway` and so on, the `${account_id}` refers to someone's Alicloud account id.
 
 <h4 class="pdoc-member-header" id="RoleState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/role.ts#L176">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/role.ts#L186">property <b>version</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3722,7 +3746,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 (It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM role policy document. Valid value is `1`. Default value is `1`.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L140">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -3732,7 +3756,7 @@ Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L144">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L144">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3740,7 +3764,7 @@ The set of arguments for constructing a User resource.
 Comment of the RAM user. This parameter can have a string of 1 to 128 characters.
 
 <h4 class="pdoc-member-header" id="UserArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L148">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L148">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3748,7 +3772,7 @@ Comment of the RAM user. This parameter can have a string of 1 to 128 characters
 Name of the RAM user which for display. This name can have a string of 1 to 128 characters or Chinese characters, must contain only alphanumeric characters or Chinese characters or hyphens, such as "-",".", and must not end with a hyphen.
 
 <h4 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L152">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L152">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3756,7 +3780,7 @@ Name of the RAM user which for display. This name can have a string of 1 to 128 
 Email of the RAM user.
 
 <h4 class="pdoc-member-header" id="UserArgs-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L156">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L156">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3764,7 +3788,7 @@ Email of the RAM user.
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="UserArgs-mobile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L160">property <b>mobile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L160">property <b>mobile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mobile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3772,7 +3796,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Phone number of the RAM user. This number must contain an international area code prefix, just look like this: 86-18600008888.
 
 <h4 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3780,7 +3804,7 @@ Phone number of the RAM user. This number must contain an international area cod
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="UserPolicyAttachmentArgs" data-link-title="UserPolicyAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L163">
         interface <strong>UserPolicyAttachmentArgs</strong>
     </a>
 </h3>
@@ -3790,7 +3814,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 The set of arguments for constructing a UserPolicyAttachment resource.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachmentArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L167">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L167">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3798,7 +3822,7 @@ The set of arguments for constructing a UserPolicyAttachment resource.
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachmentArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L171">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L171">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3806,7 +3830,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachmentArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L175">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L175">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3814,7 +3838,7 @@ Type of the RAM policy. It must be `Custom` or `System`.
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="UserPolicyAttachmentState" data-link-title="UserPolicyAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L145">
         interface <strong>UserPolicyAttachmentState</strong>
     </a>
 </h3>
@@ -3824,7 +3848,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 Input properties used for looking up and filtering UserPolicyAttachment resources.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachmentState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L149">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L149">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3832,7 +3856,7 @@ Input properties used for looking up and filtering UserPolicyAttachment resource
 Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachmentState-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L153">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L153">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3840,7 +3864,7 @@ Name of the RAM policy. This name can have a string of 1 to 128 characters, must
 Type of the RAM policy. It must be `Custom` or `System`.
 
 <h4 class="pdoc-member-header" id="UserPolicyAttachmentState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/userPolicyAttachment.ts#L157">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/userPolicyAttachment.ts#L157">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3848,7 +3872,7 @@ Type of the RAM policy. It must be `Custom` or `System`.
 Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L110">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -3858,7 +3882,7 @@ Name of the RAM user. This name can have a string of 1 to 64 characters, must co
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L114">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L114">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3866,7 +3890,7 @@ Input properties used for looking up and filtering User resources.
 Comment of the RAM user. This parameter can have a string of 1 to 128 characters.
 
 <h4 class="pdoc-member-header" id="UserState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L118">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L118">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3874,7 +3898,7 @@ Comment of the RAM user. This parameter can have a string of 1 to 128 characters
 Name of the RAM user which for display. This name can have a string of 1 to 128 characters or Chinese characters, must contain only alphanumeric characters or Chinese characters or hyphens, such as "-",".", and must not end with a hyphen.
 
 <h4 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L122">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L122">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3882,7 +3906,7 @@ Name of the RAM user which for display. This name can have a string of 1 to 128 
 Email of the RAM user.
 
 <h4 class="pdoc-member-header" id="UserState-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L126">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L126">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3890,7 +3914,7 @@ Email of the RAM user.
 This parameter is used for resource destroy. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="UserState-mobile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L130">property <b>mobile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L130">property <b>mobile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mobile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3898,7 +3922,7 @@ This parameter is used for resource destroy. Default value is `false`.
 Phone number of the RAM user. This number must contain an international area code prefix, just look like this: 86-18600008888.
 
 <h4 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/ram/user.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/ram/user.ts#L134">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module cassandra | Package AliCloud"
+title_tag: "alicloud.cassandra.Cluster"
 meta_desc: "Explore the Cluster resource of the cassandra module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cassandra cluster resource supports replica set clusters only. The Cassandra provides stable, reliable, and automatic scalable database services. "
 ---
 

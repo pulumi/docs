@@ -1,7 +1,7 @@
 
 ---
 title: "LogTailAttachment"
-title_tag: "Resource LogTailAttachment | Module log | Package AliCloud"
+title_tag: "alicloud.log.LogTailAttachment"
 meta_desc: "Explore the LogTailAttachment resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. The Logtail access service is a log collection agent provided by Log Service."
 ---
 

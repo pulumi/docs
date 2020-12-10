@@ -1,7 +1,7 @@
 
 ---
 title: "GroupMembership"
-title_tag: "Resource GroupMembership | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.GroupMembership"
 meta_desc: "Explore the GroupMembership resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM Group membership resource. "
 ---
 

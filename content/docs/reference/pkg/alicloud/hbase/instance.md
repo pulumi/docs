@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module hbase | Package AliCloud"
+title_tag: "alicloud.hbase.Instance"
 meta_desc: "Explore the Instance resource of the hbase module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a HBase instance resource supports replica set instances only. the HBase provides stable, reliable, and automatic scalable database services. "
 ---
 
@@ -139,7 +139,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/hbase/#pulumi_alicloud.hbase.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cold_storage_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/hbase/#pulumi_alicloud.hbase.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cold_storage_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_white</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -340,8 +340,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -353,6 +352,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_csharp">
+<a href="#account_csharp" style="color: inherit; text-decoration: inherit;">Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -384,7 +394,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -397,7 +407,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,7 +418,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -431,6 +441,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}"hbase/hbaseue/bds", The following types are supported after v1.73.0: `hbaseue` and `bds `
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipwhite_csharp">
+<a href="#ipwhite_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,6 +489,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="paytype_csharp">
 <a href="#paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
 </span> 
@@ -475,6 +507,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_csharp">
+<a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -496,7 +539,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -546,8 +589,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -559,6 +601,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_go">
+<a href="#account_go" style="color: inherit; text-decoration: inherit;">Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -590,7 +643,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -603,7 +656,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -614,7 +667,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -637,6 +690,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}"hbase/hbaseue/bds", The following types are supported after v1.73.0: `hbaseue` and `bds `
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipwhite_go">
+<a href="#ipwhite_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -674,6 +738,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="paytype_go">
 <a href="#paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
 </span> 
@@ -681,6 +756,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_go">
+<a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -702,7 +788,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -752,8 +838,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -765,6 +850,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_nodejs">
+<a href="#account_nodejs" style="color: inherit; text-decoration: inherit;">account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -796,7 +892,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -809,7 +905,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -820,7 +916,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -843,6 +939,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}"hbase/hbaseue/bds", The following types are supported after v1.73.0: `hbaseue` and `bds `
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipwhite_nodejs">
+<a href="#ipwhite_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>White</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -880,6 +987,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="paytype_nodejs">
 <a href="#paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
 </span> 
@@ -887,6 +1005,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_nodejs">
+<a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -908,7 +1037,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -958,8 +1087,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -971,6 +1099,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_python">
+<a href="#account_python" style="color: inherit; text-decoration: inherit;">account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1002,7 +1141,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -1015,7 +1154,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1026,7 +1165,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1049,6 +1188,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}"hbase/hbaseue/bds", The following types are supported after v1.73.0: `hbaseue` and `bds `
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_white_python">
+<a href="#ip_white_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>white</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1086,6 +1236,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pay_type_python">
 <a href="#pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
 </span> 
@@ -1093,6 +1254,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_groups_python">
+<a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1114,7 +1286,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1156,6 +1328,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="masterinstancequantity_csharp">
+<a href="#masterinstancequantity_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="slbconnaddrs_csharp">
+<a href="#slbconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Instance<wbr>Slb<wbr>Conn<wbr>Addr&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="uiproxyconnaddrs_csharp">
+<a href="#uiproxyconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zkconnaddrs_csharp">
+<a href="#zkconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Instance<wbr>Zk<wbr>Conn<wbr>Addr&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1172,6 +1389,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="masterinstancequantity_go">
+<a href="#masterinstancequantity_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="slbconnaddrs_go">
+<a href="#slbconnaddrs_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">[]Instance<wbr>Slb<wbr>Conn<wbr>Addr</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="uiproxyconnaddrs_go">
+<a href="#uiproxyconnaddrs_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">[]Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zkconnaddrs_go">
+<a href="#zkconnaddrs_go" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">[]Instance<wbr>Zk<wbr>Conn<wbr>Addr</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1190,6 +1452,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="masterinstancequantity_nodejs">
+<a href="#masterinstancequantity_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="slbconnaddrs_nodejs">
+<a href="#slbconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">Instance<wbr>Slb<wbr>Conn<wbr>Addr[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="uiproxyconnaddrs_nodejs">
+<a href="#uiproxyconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zkconnaddrs_nodejs">
+<a href="#zkconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">zk<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">Instance<wbr>Zk<wbr>Conn<wbr>Addr[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1206,6 +1513,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="master_instance_quantity_python">
+<a href="#master_instance_quantity_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="slb_conn_addrs_python">
+<a href="#slb_conn_addrs_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>conn_<wbr>addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">Sequence[Instance<wbr>Slb<wbr>Conn<wbr>Addr]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ui_proxy_conn_addrs_python">
+<a href="#ui_proxy_conn_addrs_python" style="color: inherit; text-decoration: inherit;">ui_<wbr>proxy_<wbr>conn_<wbr>addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">Sequence[Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zk_conn_addrs_python">
+<a href="#zk_conn_addrs_python" style="color: inherit; text-decoration: inherit;">zk_<wbr>conn_<wbr>addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">Sequence[Instance<wbr>Zk<wbr>Conn<wbr>Addr]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1227,7 +1579,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cold_storage_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cold_storage_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_white</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">master_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">slb_conn_addrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceSlbConnAddrArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ui_proxy_conn_addrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceUiProxyConnAddrArgs]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zk_conn_addrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceZkConnAddrArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1343,6 +1695,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_account_csharp">
+<a href="#state_account_csharp" style="color: inherit; text-decoration: inherit;">Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_autorenew_csharp">
 <a href="#state_autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
 </span> 
@@ -1371,7 +1734,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -1395,7 +1758,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1416,7 +1779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1449,8 +1812,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ipwhite_csharp">
+<a href="#state_ipwhite_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1477,6 +1850,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_masterinstancequantity_csharp">
+<a href="#state_masterinstancequantity_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_masterinstancetype_csharp">
 <a href="#state_masterinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
 </span> 
@@ -1498,6 +1883,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_paytype_csharp">
 <a href="#state_paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
 </span> 
@@ -1505,6 +1901,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_securitygroups_csharp">
+<a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_slbconnaddrs_csharp">
+<a href="#state_slbconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Inputs.<wbr>Instance<wbr>Slb<wbr>Conn<wbr>Addr<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1520,13 +1938,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_uiproxyconnaddrs_csharp">
+<a href="#state_uiproxyconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Inputs.<wbr>Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_vswitchid_csharp">
 <a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zkconnaddrs_csharp">
+<a href="#state_zkconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Inputs.<wbr>Instance<wbr>Zk<wbr>Conn<wbr>Addr<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,6 +1986,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_account_go">
+<a href="#state_account_go" style="color: inherit; text-decoration: inherit;">Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1577,7 +2028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -1601,7 +2052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1622,7 +2073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1655,8 +2106,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ipwhite_go">
+<a href="#state_ipwhite_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1683,6 +2144,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_masterinstancequantity_go">
+<a href="#state_masterinstancequantity_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_masterinstancetype_go">
 <a href="#state_masterinstancetype_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
 </span> 
@@ -1704,6 +2177,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_paytype_go">
 <a href="#state_paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
 </span> 
@@ -1711,6 +2195,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_securitygroups_go">
+<a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_slbconnaddrs_go">
+<a href="#state_slbconnaddrs_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">[]Instance<wbr>Slb<wbr>Conn<wbr>Addr</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1726,13 +2232,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_uiproxyconnaddrs_go">
+<a href="#state_uiproxyconnaddrs_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">[]Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_vswitchid_go">
 <a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zkconnaddrs_go">
+<a href="#state_zkconnaddrs_go" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">[]Instance<wbr>Zk<wbr>Conn<wbr>Addr</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1752,6 +2280,17 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_account_nodejs">
+<a href="#state_account_nodejs" style="color: inherit; text-decoration: inherit;">account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1783,7 +2322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -1807,7 +2346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1828,7 +2367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1861,8 +2400,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ipwhite_nodejs">
+<a href="#state_ipwhite_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>White</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1889,6 +2438,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_masterinstancequantity_nodejs">
+<a href="#state_masterinstancequantity_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_masterinstancetype_nodejs">
 <a href="#state_masterinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Type</a>
 </span> 
@@ -1910,6 +2471,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_paytype_nodejs">
 <a href="#state_paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
 </span> 
@@ -1917,6 +2489,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_securitygroups_nodejs">
+<a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_slbconnaddrs_nodejs">
+<a href="#state_slbconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">Instance<wbr>Slb<wbr>Conn<wbr>Addr[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1932,13 +2526,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_uiproxyconnaddrs_nodejs">
+<a href="#state_uiproxyconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_vswitchid_nodejs">
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zkconnaddrs_nodejs">
+<a href="#state_zkconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">zk<wbr>Conn<wbr>Addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">Instance<wbr>Zk<wbr>Conn<wbr>Addr[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1958,6 +2574,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_account_python">
+<a href="#state_account_python" style="color: inherit; text-decoration: inherit;">account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The account of the cluster web ui.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1989,7 +2616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}User-defined HBase instance one core node's storage space.Unit: GB. Value range:
+    <dd>{{% md %}}User-defined HBase instance one core node's storage, Valid when engine=hbase/hbaseue, bds engine no need core_disk_size, space.Unit: GB. Value range:
 - Custom storage space; value range: [400, 8000]
 - 40-GB increments.
 {{% /md %}}</dd>
@@ -2013,7 +2640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
+    <dd>{{% md %}}Default=2. if core_instance_quantity > 1,this is cluster's instance.  if core_instance_quantity = 1,this is a single instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2034,7 +2661,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
+    <dd>{{% md %}}The switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2067,8 +2694,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
-* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+    <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ip_white_python">
+<a href="#state_ip_white_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>white</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The white ip list of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2095,6 +2732,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_master_instance_quantity_python">
+<a href="#state_master_instance_quantity_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>quantity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count nodes of the master node.
+* `master_instance_type`、`core_instance_type` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_master_instance_type_python">
 <a href="#state_master_instance_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>type</a>
 </span> 
@@ -2116,6 +2765,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the cluster web ui account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_pay_type_python">
 <a href="#state_pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
 </span> 
@@ -2123,6 +2783,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_security_groups_python">
+<a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The security group resource of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_slb_conn_addrs_python">
+<a href="#state_slb_conn_addrs_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>conn_<wbr>addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceslbconnaddr">Sequence[Instance<wbr>Slb<wbr>Conn<wbr>Addr<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The slb service addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2138,13 +2820,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ui_proxy_conn_addrs_python">
+<a href="#state_ui_proxy_conn_addrs_python" style="color: inherit; text-decoration: inherit;">ui_<wbr>proxy_<wbr>conn_<wbr>addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceuiproxyconnaddr">Sequence[Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The Web UI proxy addresses of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_vswitch_id_python">
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}if vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. if vswitch_id is empty, net_type_classic
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zk_conn_addrs_python">
+<a href="#state_zk_conn_addrs_python" style="color: inherit; text-decoration: inherit;">zk_<wbr>conn_<wbr>addrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancezkconnaddr">Sequence[Instance<wbr>Zk<wbr>Conn<wbr>Addr<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.105.0+) The zookeeper addresses of the cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2162,6 +2866,510 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="instanceslbconnaddr">Instance<wbr>Slb<wbr>Conn<wbr>Addr</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#InstanceSlbConnAddr">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceSlbConnAddrOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.InstanceSlbConnAddr.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_csharp">
+<a href="#connaddr_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_csharp">
+<a href="#connaddrport_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_csharp">
+<a href="#nettype_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_go">
+<a href="#connaddr_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_go">
+<a href="#connaddrport_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_go">
+<a href="#nettype_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_nodejs">
+<a href="#connaddr_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_nodejs">
+<a href="#connaddrport_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_nodejs">
+<a href="#nettype_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conn_addr_python">
+<a href="#conn_addr_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conn_addr_port_python">
+<a href="#conn_addr_port_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_type_python">
+<a href="#net_type_python" style="color: inherit; text-decoration: inherit;">net_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="instanceuiproxyconnaddr">Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#InstanceUiProxyConnAddr">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceUiProxyConnAddrOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.InstanceUiProxyConnAddr.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_csharp">
+<a href="#connaddr_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_csharp">
+<a href="#connaddrport_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_csharp">
+<a href="#nettype_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_go">
+<a href="#connaddr_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_go">
+<a href="#connaddrport_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_go">
+<a href="#nettype_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_nodejs">
+<a href="#connaddr_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_nodejs">
+<a href="#connaddrport_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_nodejs">
+<a href="#nettype_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conn_addr_python">
+<a href="#conn_addr_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conn_addr_port_python">
+<a href="#conn_addr_port_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_type_python">
+<a href="#net_type_python" style="color: inherit; text-decoration: inherit;">net_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="instancezkconnaddr">Instance<wbr>Zk<wbr>Conn<wbr>Addr</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#InstanceZkConnAddr">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceZkConnAddrOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.InstanceZkConnAddr.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_csharp">
+<a href="#connaddr_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_csharp">
+<a href="#connaddrport_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_csharp">
+<a href="#nettype_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_go">
+<a href="#connaddr_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_go">
+<a href="#connaddrport_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_go">
+<a href="#nettype_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddr_nodejs">
+<a href="#connaddr_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connaddrport_nodejs">
+<a href="#connaddrport_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nettype_nodejs">
+<a href="#nettype_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conn_addr_python">
+<a href="#conn_addr_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conn_addr_port_python">
+<a href="#conn_addr_port_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_type_python">
+<a href="#net_type_python" style="color: inherit; text-decoration: inherit;">net_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

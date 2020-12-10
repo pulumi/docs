@@ -1,7 +1,7 @@
 
 ---
 title: "RouteService"
-title_tag: "Resource RouteService | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.RouteService"
 meta_desc: "Explore the RouteService resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN Route Service resource. The virtual border routers (VBRs) and Cloud Connect Network (CCN) instances attached to Cloud Enterprise Network (CEN) instances can access the cloud services deployed in VPCs through the CEN instances."
 ---
 

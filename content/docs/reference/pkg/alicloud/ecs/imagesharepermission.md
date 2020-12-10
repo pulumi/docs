@@ -1,7 +1,7 @@
 
 ---
 title: "ImageSharePermission"
-title_tag: "Resource ImageSharePermission | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.ImageSharePermission"
 meta_desc: "Explore the ImageSharePermission resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Manage image sharing permissions. You can share your custom image to other Alibaba Cloud users. The user can use the shared custom image to create ECS instances or replace the system disk of the instance."
 ---
 

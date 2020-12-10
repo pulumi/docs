@@ -1,7 +1,7 @@
 
 ---
 title: "ScalingRule"
-title_tag: "Resource ScalingRule | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.ScalingRule"
 meta_desc: "Explore the ScalingRule resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

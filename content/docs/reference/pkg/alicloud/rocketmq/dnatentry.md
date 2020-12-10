@@ -1,7 +1,7 @@
 
 ---
 title: "DnatEntry"
-title_tag: "Resource DnatEntry | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.DnatEntry"
 meta_desc: "Explore the DnatEntry resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag DnatEntry resource. This topic describes how to add a DNAT entry to a Smart Access Gateway (SAG) instance to enable the DNAT function. By using the DNAT function, you can forward requests received by public IP addresses to Alibaba Cloud instances according to custom mapping rules."
 ---
 

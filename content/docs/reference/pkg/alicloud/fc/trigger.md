@@ -1,7 +1,7 @@
 
 ---
 title: "Trigger"
-title_tag: "Resource Trigger | Module fc | Package AliCloud"
+title_tag: "alicloud.fc.Trigger"
 meta_desc: "Explore the Trigger resource of the fc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

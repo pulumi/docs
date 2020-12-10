@@ -1,7 +1,7 @@
 
 ---
 title: "Rule"
-title_tag: "Resource Rule | Module cfg | Package AliCloud"
+title_tag: "alicloud.cfg.Rule"
 meta_desc: "Explore the Rule resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a a Alicloud Config Rule resource. Cloud Config checks the validity of resources based on rules. You can create rules to evaluate resources as needed."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.Policy"
 meta_desc: "Explore the Policy resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

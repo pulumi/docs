@@ -1,7 +1,7 @@
 
 ---
 title: "RouterInterface"
-title_tag: "Resource RouterInterface | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.RouterInterface"
 meta_desc: "Explore the RouterInterface resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

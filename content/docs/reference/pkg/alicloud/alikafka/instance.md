@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module alikafka | Package AliCloud"
+title_tag: "alicloud.alikafka.Instance"
 meta_desc: "Explore the Instance resource of the alikafka module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ALIKAFKA instance resource."
 ---
 

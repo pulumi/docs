@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkInterface"
-title_tag: "Resource NetworkInterface | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.NetworkInterface"
 meta_desc: "Explore the NetworkInterface resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS Elastic Network Interface resource."
 ---
 

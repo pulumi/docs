@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityGroup"
-title_tag: "Resource SecurityGroup | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.SecurityGroup"
 meta_desc: "Explore the SecurityGroup resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

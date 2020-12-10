@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.Account"
 meta_desc: "Explore the Account resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Manager Account resource. Member accounts are containers for resources in a resource directory. These accounts isolate resources and serve as organizational units in the resource directory. You can create member accounts in a folder and then manage them in a unified manner."
 ---
 

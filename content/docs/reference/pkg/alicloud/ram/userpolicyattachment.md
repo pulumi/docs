@@ -1,7 +1,7 @@
 
 ---
 title: "UserPolicyAttachment"
-title_tag: "Resource UserPolicyAttachment | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.UserPolicyAttachment"
 meta_desc: "Explore the UserPolicyAttachment resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM User Policy attachment resource. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceGrant"
-title_tag: "Resource InstanceGrant | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.InstanceGrant"
 meta_desc: "Explore the InstanceGrant resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN child instance grant resource, which allow you to authorize a VPC or VBR to a CEN of a different account."
 ---
 

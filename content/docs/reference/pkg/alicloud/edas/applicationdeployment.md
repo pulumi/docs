@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationDeployment"
-title_tag: "Resource ApplicationDeployment | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.ApplicationDeployment"
 meta_desc: "Explore the ApplicationDeployment resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. Deploys applications on EDAS."
 ---
 

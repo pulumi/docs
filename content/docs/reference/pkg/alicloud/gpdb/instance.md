@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module gpdb | Package AliCloud"
+title_tag: "alicloud.gpdb.Instance"
 meta_desc: "Explore the Instance resource of the gpdb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a AnalyticDB for PostgreSQL instance resource supports replica set instances only. the AnalyticDB for PostgreSQL provides stable, reliable, and automatic scalable database services. "
 ---
 

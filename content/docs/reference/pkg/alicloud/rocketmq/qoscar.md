@@ -1,7 +1,7 @@
 
 ---
 title: "QosCar"
-title_tag: "Resource QosCar | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.QosCar"
 meta_desc: "Explore the QosCar resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag qos car resource. "
 ---
 

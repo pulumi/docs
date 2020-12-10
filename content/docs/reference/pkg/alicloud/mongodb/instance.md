@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module mongodb | Package AliCloud"
+title_tag: "alicloud.mongodb.Instance"
 meta_desc: "Explore the Instance resource of the mongodb module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
