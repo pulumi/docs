@@ -1,8 +1,8 @@
 ---
-title: Migrate to Pulumi from Terraform
+title: The Differences Between Pulumi and Terraform
 layout: terraform
 url: /terraform
-meta_desc: How to migrate to Pulumi from Terraform for huge productivity gains, and a unified programming model for Devs and DevOps.
+meta_desc: Pulumi and Terraform both can declaratively create, deploy, and manage infrastructure. Pulumi allows you to use a programming language instead of a custom DSL.
 
 hero:
     title: Modern Infrastructure as Code
