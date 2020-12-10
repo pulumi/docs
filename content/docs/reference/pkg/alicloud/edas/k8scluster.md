@@ -1,7 +1,7 @@
 
 ---
 title: "K8sCluster"
-title_tag: "Resource K8sCluster | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.K8sCluster"
 meta_desc: "Explore the K8sCluster resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EDAS K8s cluster resource. For information about EDAS K8s Cluster and how to use it, see[What is EDAS K8s Cluster](https://www.alibabacloud.com/help/en/doc-detail/85108.htm)."
 ---
 

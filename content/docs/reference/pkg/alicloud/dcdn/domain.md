@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module dcdn | Package AliCloud"
+title_tag: "alicloud.dcdn.Domain"
 meta_desc: "Explore the Domain resource of the dcdn module, including examples, input properties, output properties, lookup functions, and supporting types. You can use DCDN to improve the overall performance of your website and accelerate content delivery to improve user experience. For information about Alicloud DCDN Domain and how to use it, see [What is Resource Alicloud DCDN Domain](https://www.alibabacloud.com/help/en/doc-detail/130628.htm)."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "KeyPairAttachment"
-title_tag: "Resource KeyPairAttachment | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.KeyPairAttachment"
 meta_desc: "Explore the KeyPairAttachment resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a key pair attachment resource to bind key pair for several ECS instances."
 ---
 

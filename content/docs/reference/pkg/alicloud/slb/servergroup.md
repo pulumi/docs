@@ -1,7 +1,7 @@
 
 ---
 title: "ServerGroup"
-title_tag: "Resource ServerGroup | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.ServerGroup"
 meta_desc: "Explore the ServerGroup resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual server group contains several ECS instances. The virtual server group can help you to define multiple listening dimension,"
 ---
 

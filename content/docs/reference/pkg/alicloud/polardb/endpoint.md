@@ -1,7 +1,7 @@
 
 ---
 title: "Endpoint"
-title_tag: "Resource Endpoint | Module polardb | Package AliCloud"
+title_tag: "alicloud.polardb.Endpoint"
 meta_desc: "Explore the Endpoint resource of the polardb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a PolarDB endpoint resource to manage custom endpoint of PolarDB cluster."
 ---
 

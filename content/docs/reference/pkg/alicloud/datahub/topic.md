@@ -1,7 +1,7 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Module datahub | Package AliCloud"
+title_tag: "alicloud.datahub.Topic"
 meta_desc: "Explore the Topic resource of the datahub module, including examples, input properties, output properties, lookup functions, and supporting types. The topic is the basic unit of Datahub data source and is used to define one kind of data or stream. It contains a set of subscriptions. You can manage the datahub source of an application by using topics. [Refer to details](https://help.aliyun.com/document_detail/47440.html)."
 ---
 

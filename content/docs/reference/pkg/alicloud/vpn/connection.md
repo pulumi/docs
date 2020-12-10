@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module vpn | Package AliCloud"
+title_tag: "alicloud.vpn.Connection"
 meta_desc: "Explore the Connection resource of the vpn module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

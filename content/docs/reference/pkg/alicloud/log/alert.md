@@ -1,7 +1,7 @@
 
 ---
 title: "Alert"
-title_tag: "Resource Alert | Module log | Package AliCloud"
+title_tag: "alicloud.log.Alert"
 meta_desc: "Explore the Alert resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. Log alert is a unit of log service, which is used to monitor and alert the user&#39;s logstore status information. "
 ---
 

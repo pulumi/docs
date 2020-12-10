@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.Instance"
 meta_desc: "Explore the Instance resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

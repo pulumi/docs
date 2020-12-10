@@ -1,7 +1,7 @@
 
 ---
 title: "ForwardEntry"
-title_tag: "Resource ForwardEntry | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.ForwardEntry"
 meta_desc: "Explore the ForwardEntry resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a forward resource."
 ---
 

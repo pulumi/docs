@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.User"
 meta_desc: "Explore the User resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

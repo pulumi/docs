@@ -1,7 +1,7 @@
 
 ---
 title: "Api"
-title_tag: "Resource Api | Module apigateway | Package AliCloud"
+title_tag: "alicloud.apigateway.Api"
 meta_desc: "Explore the Api resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Attachment"
-title_tag: "Resource Attachment | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.Attachment"
 meta_desc: "Explore the Attachment resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

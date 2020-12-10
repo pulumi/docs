@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module emr | Package AliCloud"
+title_tag: "alicloud.emr.Cluster"
 meta_desc: "Explore the Cluster resource of the emr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a EMR Cluster resource. With this you can create, read, and release  EMR Cluster. "
 ---
 

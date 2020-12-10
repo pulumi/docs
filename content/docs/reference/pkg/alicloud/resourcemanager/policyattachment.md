@@ -1,7 +1,7 @@
 
 ---
 title: "PolicyAttachment"
-title_tag: "Resource PolicyAttachment | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.PolicyAttachment"
 meta_desc: "Explore the PolicyAttachment resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Manager Policy Attachment resource to attaches a policy to an object. After you attach a policy to an object, the object has the operation permissions on the current resource group or the resources under the current account. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module adb | Package AliCloud"
+title_tag: "alicloud.adb.Cluster"
 meta_desc: "Explore the Cluster resource of the adb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a ADB cluster resource. A ADB cluster is an isolated database"
 ---
 

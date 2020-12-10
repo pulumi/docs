@@ -1,7 +1,7 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.Role"
 meta_desc: "Explore the Role resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Manager role resource. Members are resource containers in the resource directory, which can physically isolate resources to form an independent resource grouping unit. You can create members in the resource folder to manage them in a unified manner."
 ---
 

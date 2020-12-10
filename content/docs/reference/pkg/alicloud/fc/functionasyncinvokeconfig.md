@@ -1,7 +1,7 @@
 
 ---
 title: "FunctionAsyncInvokeConfig"
-title_tag: "Resource FunctionAsyncInvokeConfig | Module fc | Package AliCloud"
+title_tag: "alicloud.fc.FunctionAsyncInvokeConfig"
 meta_desc: "Explore the FunctionAsyncInvokeConfig resource of the fc module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an asynchronous invocation configuration for a FC Function or Alias.  "
 ---
 

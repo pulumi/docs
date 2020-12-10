@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module drds | Package AliCloud"
+title_tag: "alicloud.drds.Instance"
 meta_desc: "Explore the Instance resource of the drds module, including examples, input properties, output properties, lookup functions, and supporting types. Distributed Relational Database Service (DRDS) is a lightweight (stateless), flexible, stable, and efficient middleware product independently developed by Alibaba Group to resolve scalability issues with single-host relational databases."
 ---
 

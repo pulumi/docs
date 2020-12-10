@@ -1,7 +1,7 @@
 
 ---
 title: "AccessRule"
-title_tag: "Resource AccessRule | Module nas | Package AliCloud"
+title_tag: "alicloud.nas.AccessRule"
 meta_desc: "Explore the AccessRule resource of the nas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Nas Access Rule resource."
 ---
 

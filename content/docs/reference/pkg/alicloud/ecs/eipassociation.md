@@ -1,7 +1,7 @@
 
 ---
 title: "EipAssociation"
-title_tag: "Resource EipAssociation | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.EipAssociation"
 meta_desc: "Explore the EipAssociation resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

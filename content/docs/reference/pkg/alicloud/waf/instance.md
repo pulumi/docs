@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module waf | Package AliCloud"
+title_tag: "alicloud.waf.Instance"
 meta_desc: "Explore the Instance resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Instance resource to create instance in the Web Application Firewall."
 ---
 

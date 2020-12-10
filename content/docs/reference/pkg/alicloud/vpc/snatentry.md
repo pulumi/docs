@@ -1,7 +1,7 @@
 
 ---
 title: "SnatEntry"
-title_tag: "Resource SnatEntry | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.SnatEntry"
 meta_desc: "Explore the SnatEntry resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a snat resource."
 ---
 

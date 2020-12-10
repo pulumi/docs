@@ -1,7 +1,7 @@
 
 ---
 title: "LoginProfile"
-title_tag: "Resource LoginProfile | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.LoginProfile"
 meta_desc: "Explore the LoginProfile resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM User Login Profile resource."
 ---
 

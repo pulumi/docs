@@ -1,7 +1,7 @@
 
 ---
 title: "AccountPrivilege"
-title_tag: "Resource AccountPrivilege | Module polardb | Package AliCloud"
+title_tag: "alicloud.polardb.AccountPrivilege"
 meta_desc: "Explore the AccountPrivilege resource of the polardb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a PolarDB account privilege resource and used to grant several database some access privilege. A database can be granted by multiple account."
 ---
 

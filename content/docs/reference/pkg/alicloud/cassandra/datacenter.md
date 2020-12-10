@@ -1,7 +1,7 @@
 
 ---
 title: "DataCenter"
-title_tag: "Resource DataCenter | Module cassandra | Package AliCloud"
+title_tag: "alicloud.cassandra.DataCenter"
 meta_desc: "Explore the DataCenter resource of the cassandra module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cassandra dataCenter resource supports replica set dataCenters only. The Cassandra provides stable, reliable, and automatic scalable database services. "
 ---
 

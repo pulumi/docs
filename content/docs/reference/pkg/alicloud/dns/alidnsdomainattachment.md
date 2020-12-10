@@ -1,7 +1,7 @@
 
 ---
 title: "AlidnsDomainAttachment"
-title_tag: "Resource AlidnsDomainAttachment | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.AlidnsDomainAttachment"
 meta_desc: "Explore the AlidnsDomainAttachment resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides bind the domain name to the Alidns instance resource."
 ---
 

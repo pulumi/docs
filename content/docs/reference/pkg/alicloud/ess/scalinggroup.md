@@ -1,7 +1,7 @@
 
 ---
 title: "ScalingGroup"
-title_tag: "Resource ScalingGroup | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.ScalingGroup"
 meta_desc: "Explore the ScalingGroup resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

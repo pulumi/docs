@@ -1,7 +1,7 @@
 
 ---
 title: "DdosBgpInstance"
-title_tag: "Resource DdosBgpInstance | Module ddos | Package AliCloud"
+title_tag: "alicloud.ddos.DdosBgpInstance"
 meta_desc: "Explore the DdosBgpInstance resource of the ddos module, including examples, input properties, output properties, lookup functions, and supporting types. Anti-DDoS Advanced instance resource. &#34;Ddosbgp&#34; is the short term of this product."
 ---
 

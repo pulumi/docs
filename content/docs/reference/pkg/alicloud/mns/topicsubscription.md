@@ -1,7 +1,7 @@
 
 ---
 title: "TopicSubscription"
-title_tag: "Resource TopicSubscription | Module mns | Package AliCloud"
+title_tag: "alicloud.mns.TopicSubscription"
 meta_desc: "Explore the TopicSubscription resource of the mns module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

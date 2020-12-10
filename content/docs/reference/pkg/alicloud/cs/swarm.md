@@ -1,7 +1,7 @@
 
 ---
 title: "Swarm"
-title_tag: "Resource Swarm | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.Swarm"
 meta_desc: "Explore the Swarm resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **DEPRECATED:** This resource manages swarm cluster, which is being deprecated and will be replaced by Kubernetes cluster."
 ---
 

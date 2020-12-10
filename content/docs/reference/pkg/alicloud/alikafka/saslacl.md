@@ -1,7 +1,7 @@
 
 ---
 title: "SaslAcl"
-title_tag: "Resource SaslAcl | Module alikafka | Package AliCloud"
+title_tag: "alicloud.alikafka.SaslAcl"
 meta_desc: "Explore the SaslAcl resource of the alikafka module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ALIKAFKA sasl acl resource."
 ---
 

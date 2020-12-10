@@ -1,7 +1,7 @@
 
 ---
 title: "App"
-title_tag: "Resource App | Module apigateway | Package AliCloud"
+title_tag: "alicloud.apigateway.App"
 meta_desc: "Explore the App resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

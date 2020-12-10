@@ -1,7 +1,7 @@
 
 ---
 title: "BandwidthLimit"
-title_tag: "Resource BandwidthLimit | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.BandwidthLimit"
 meta_desc: "Explore the BandwidthLimit resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN cross-regional interconnection bandwidth resource. To connect networks in different regions, you must set cross-region interconnection bandwidth after buying a bandwidth package. The total bandwidth set for all the interconnected regions of a bandwidth package cannot exceed the bandwidth of the bandwidth package. By default, 1 Kbps bandwidth is provided for connectivity test. To run normal business, you must buy a bandwidth package and set a proper interconnection bandwidth."
 ---
 

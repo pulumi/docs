@@ -1,7 +1,7 @@
 
 ---
 title: "DeployGroup"
-title_tag: "Resource DeployGroup | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.DeployGroup"
 meta_desc: "Explore the DeployGroup resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EDAS deploy group resource."
 ---
 

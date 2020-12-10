@@ -1,7 +1,7 @@
 
 ---
 title: "Qos"
-title_tag: "Resource Qos | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.Qos"
 meta_desc: "Explore the Qos resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag Qos resource. Smart Access Gateway (SAG) supports quintuple-based QoS functions to differentiate traffic of different services and ensure high-priority traffic bandwidth."
 ---
 

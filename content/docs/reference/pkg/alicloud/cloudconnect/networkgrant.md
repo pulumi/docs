@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkGrant"
-title_tag: "Resource NetworkGrant | Module cloudconnect | Package AliCloud"
+title_tag: "alicloud.cloudconnect.NetworkGrant"
 meta_desc: "Explore the NetworkGrant resource of the cloudconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloud Connect Network Grant resource. If the CEN instance to be attached belongs to another account, authorization by the CEN instance is required."
 ---
 

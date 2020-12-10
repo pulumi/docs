@@ -1,7 +1,7 @@
 
 ---
 title: "ConsumerGroup"
-title_tag: "Resource ConsumerGroup | Module alikafka | Package AliCloud"
+title_tag: "alicloud.alikafka.ConsumerGroup"
 meta_desc: "Explore the ConsumerGroup resource of the alikafka module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ALIKAFKA consumer group resource."
 ---
 

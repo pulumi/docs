@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceAttachment"
-title_tag: "Resource InstanceAttachment | Module ots | Package AliCloud"
+title_tag: "alicloud.ots.InstanceAttachment"
 meta_desc: "Explore the InstanceAttachment resource of the ots module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to bind a VPC to an OTS instance."
 ---
 

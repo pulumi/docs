@@ -1,7 +1,7 @@
 
 ---
 title: "Function"
-title_tag: "Resource Function | Module fc | Package AliCloud"
+title_tag: "alicloud.fc.Function"
 meta_desc: "Explore the Function resource of the fc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

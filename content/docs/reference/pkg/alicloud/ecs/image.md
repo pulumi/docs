@@ -1,7 +1,7 @@
 
 ---
 title: "Image"
-title_tag: "Resource Image | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.Image"
 meta_desc: "Explore the Image resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a custom image. You can then use a custom image to create ECS instances (RunInstances) or change the system disk for an existing instance (ReplaceSystemDisk)."
 ---
 

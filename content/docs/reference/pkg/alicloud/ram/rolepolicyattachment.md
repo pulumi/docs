@@ -1,7 +1,7 @@
 
 ---
 title: "RolePolicyAttachment"
-title_tag: "Resource RolePolicyAttachment | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.RolePolicyAttachment"
 meta_desc: "Explore the RolePolicyAttachment resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM Role attachment resource."
 ---
 

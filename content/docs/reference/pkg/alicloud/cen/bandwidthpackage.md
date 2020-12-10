@@ -1,7 +1,7 @@
 
 ---
 title: "BandwidthPackage"
-title_tag: "Resource BandwidthPackage | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.BandwidthPackage"
 meta_desc: "Explore the BandwidthPackage resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN bandwidth package resource. The CEN bandwidth package is an abstracted object that includes an interconnection bandwidth and interconnection areas. To buy a bandwidth package, you must specify the areas to connect. An area consists of one or more Alibaba Cloud regions. The areas in CEN include Mainland China, Asia Pacific, North America, and Europe."
 ---
 

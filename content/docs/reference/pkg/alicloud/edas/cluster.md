@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.Cluster"
 meta_desc: "Explore the Cluster resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EDAS cluster resource."
 ---
 

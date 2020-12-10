@@ -1,7 +1,7 @@
 
 ---
 title: "SaslUser"
-title_tag: "Resource SaslUser | Module alikafka | Package AliCloud"
+title_tag: "alicloud.alikafka.SaslUser"
 meta_desc: "Explore the SaslUser resource of the alikafka module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ALIKAFKA sasl user resource."
 ---
 

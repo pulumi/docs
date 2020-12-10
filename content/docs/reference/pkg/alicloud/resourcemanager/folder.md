@@ -1,7 +1,7 @@
 
 ---
 title: "Folder"
-title_tag: "Resource Folder | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.Folder"
 meta_desc: "Explore the Folder resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Manager Folder resource. A folder is an organizational unit in a resource directory. You can use folders to build an organizational structure for resources."
 ---
 

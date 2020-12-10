@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module datahub | Package AliCloud"
+title_tag: "alicloud.datahub.Project"
 meta_desc: "Explore the Project resource of the datahub module, including examples, input properties, output properties, lookup functions, and supporting types. The project is the basic unit of resource management in Datahub Service and is used to isolate and control resources. It contains a set of Topics. You can manage the datahub sources of an application by using projects. [Refer to details](https://help.aliyun.com/document_detail/47440.html)."
 ---
 

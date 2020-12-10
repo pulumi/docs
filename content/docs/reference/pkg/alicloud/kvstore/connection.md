@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module kvstore | Package AliCloud"
+title_tag: "alicloud.kvstore.Connection"
 meta_desc: "Explore the Connection resource of the kvstore module, including examples, input properties, output properties, lookup functions, and supporting types. Operate the public network ip of the specified resource. How to use it, see [What is Resource Alicloud KVStore Connection](https://www.alibabacloud.com/help/doc-detail/125795.htm)."
 ---
 

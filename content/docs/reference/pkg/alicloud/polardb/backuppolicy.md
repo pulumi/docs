@@ -1,7 +1,7 @@
 
 ---
 title: "BackupPolicy"
-title_tag: "Resource BackupPolicy | Module polardb | Package AliCloud"
+title_tag: "alicloud.polardb.BackupPolicy"
 meta_desc: "Explore the BackupPolicy resource of the polardb module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

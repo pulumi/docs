@@ -1,7 +1,7 @@
 
 ---
 title: "KeyPair"
-title_tag: "Resource KeyPair | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.KeyPair"
 meta_desc: "Explore the KeyPair resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a key pair resource."
 ---
 

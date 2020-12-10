@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module ots | Package AliCloud"
+title_tag: "alicloud.ots.Instance"
 meta_desc: "Explore the Instance resource of the ots module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager a [Table Store](https://www.alibabacloud.com/help/doc-detail/27280.htm) Instance."
 ---
 

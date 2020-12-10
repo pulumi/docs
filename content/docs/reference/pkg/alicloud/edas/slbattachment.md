@@ -1,7 +1,7 @@
 
 ---
 title: "SlbAttachment"
-title_tag: "Resource SlbAttachment | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.SlbAttachment"
 meta_desc: "Explore the SlbAttachment resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. Binds SLB to an EDAS application."
 ---
 

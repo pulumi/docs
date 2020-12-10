@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module waf | Package AliCloud"
+title_tag: "alicloud.waf.Domain"
 meta_desc: "Explore the Domain resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Domain resource to create domain in the Web Application Firewall."
 ---
 
@@ -377,17 +377,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceips_csharp">
-<a href="#sourceips_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clustertype_csharp">
@@ -536,6 +525,17 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourceips_csharp">
+<a href="#sourceips_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="writetime_csharp">
 <a href="#writetime_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
 </span> 
@@ -572,17 +572,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceips_go">
-<a href="#sourceips_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -733,6 +722,17 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourceips_go">
+<a href="#sourceips_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="writetime_go">
 <a href="#writetime_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
 </span> 
@@ -769,17 +769,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceips_nodejs">
-<a href="#sourceips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ips</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,6 +919,17 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourceips_nodejs">
+<a href="#sourceips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="writetime_nodejs">
 <a href="#writetime_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Time</a>
 </span> 
@@ -966,17 +966,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="source_ips_python">
-<a href="#source_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ips</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1123,6 +1112,17 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_ips_python">
+<a href="#source_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

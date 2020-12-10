@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module apigateway | Package AliCloud"
+title_tag: "alicloud.apigateway.Group"
 meta_desc: "Explore the Group resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.Instance"
 meta_desc: "Explore the Instance resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN instance resource. Cloud Enterprise Network (CEN) is a service that allows you to create a global network for rapidly building a distributed business system with a hybrid cloud computing solution. CEN enables you to build a secure, private, and enterprise-class interconnected network between VPCs in different regions and your local data centers. CEN provides enterprise-class scalability that automatically responds to your dynamic computing requirements."
 ---
 

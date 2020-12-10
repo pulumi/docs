@@ -1,7 +1,7 @@
 
 ---
 title: "PolicyVersion"
-title_tag: "Resource PolicyVersion | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.PolicyVersion"
 meta_desc: "Explore the PolicyVersion resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

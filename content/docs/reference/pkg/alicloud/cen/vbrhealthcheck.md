@@ -1,7 +1,7 @@
 
 ---
 title: "VbrHealthCheck"
-title_tag: "Resource VbrHealthCheck | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.VbrHealthCheck"
 meta_desc: "Explore the VbrHealthCheck resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. This topic describes how to configure the health check feature for a Cloud Enterprise Network (CEN) instance. "
 ---
 

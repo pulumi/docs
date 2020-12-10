@@ -1,7 +1,7 @@
 
 ---
 title: "Alias"
-title_tag: "Resource Alias | Module kms | Package AliCloud"
+title_tag: "alicloud.kms.Alias"
 meta_desc: "Explore the Alias resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Create an alias for the master key (CMK)."
 ---
 

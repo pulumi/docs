@@ -790,7 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the Backup Status of the instance.
+    <dd>{{% md %}}The Backup Status of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -801,7 +801,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}core node disk size, unit:GB.
+    <dd>{{% md %}}Core node disk size, unit:GB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -812,7 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cloud_ssd or cloud_efficiency
+    <dd>{{% md %}}Cloud_ssd or cloud_efficiency
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -823,7 +823,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -834,7 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}same with "core_instance_quantity"
+    <dd>{{% md %}}Same with "core_instance_quantity"
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -845,7 +845,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The created time of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -855,7 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection.
+    <dd>{{% md %}}The switch of delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -866,7 +867,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the engine of the instance.
+    <dd>{{% md %}}The engine of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -877,7 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the engine_version of the instance.
+    <dd>{{% md %}}The engine_version of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -888,7 +889,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the expire time of the instance.
+    <dd>{{% md %}}The expire time of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -910,7 +911,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -921,7 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}the node count of master
+    <dd>{{% md %}}The node count of master
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1038,7 +1039,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the Backup Status of the instance.
+    <dd>{{% md %}}The Backup Status of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1049,7 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}core node disk size, unit:GB.
+    <dd>{{% md %}}Core node disk size, unit:GB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1060,7 +1061,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cloud_ssd or cloud_efficiency
+    <dd>{{% md %}}Cloud_ssd or cloud_efficiency
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1071,7 +1072,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1082,7 +1083,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}same with "core_instance_quantity"
+    <dd>{{% md %}}Same with "core_instance_quantity"
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1093,7 +1094,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The created time of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1103,7 +1105,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection.
+    <dd>{{% md %}}The switch of delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1114,7 +1116,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the engine of the instance.
+    <dd>{{% md %}}The engine of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1125,7 +1127,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the engine_version of the instance.
+    <dd>{{% md %}}The engine_version of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1136,7 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the expire time of the instance.
+    <dd>{{% md %}}The expire time of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1158,7 +1160,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1169,7 +1171,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}the node count of master
+    <dd>{{% md %}}The node count of master
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1286,7 +1288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the Backup Status of the instance.
+    <dd>{{% md %}}The Backup Status of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1297,7 +1299,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}core node disk size, unit:GB.
+    <dd>{{% md %}}Core node disk size, unit:GB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1308,7 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cloud_ssd or cloud_efficiency
+    <dd>{{% md %}}Cloud_ssd or cloud_efficiency
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1319,7 +1321,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1330,7 +1332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}same with "core_instance_quantity"
+    <dd>{{% md %}}Same with "core_instance_quantity"
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1341,7 +1343,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The created time of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1351,7 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection.
+    <dd>{{% md %}}The switch of delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1362,7 +1365,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the engine of the instance.
+    <dd>{{% md %}}The engine of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1373,7 +1376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the engine_version of the instance.
+    <dd>{{% md %}}The engine_version of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1384,7 +1387,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the expire time of the instance.
+    <dd>{{% md %}}The expire time of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1406,7 +1409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1417,7 +1420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}the node count of master
+    <dd>{{% md %}}The node count of master
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1534,7 +1537,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the Backup Status of the instance.
+    <dd>{{% md %}}The Backup Status of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1545,7 +1548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}core node disk size, unit:GB.
+    <dd>{{% md %}}Core node disk size, unit:GB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1556,7 +1559,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cloud_ssd or cloud_efficiency
+    <dd>{{% md %}}Cloud_ssd or cloud_efficiency
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1567,7 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1578,7 +1581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}same with "core_instance_quantity"
+    <dd>{{% md %}}Same with "core_instance_quantity"
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1589,7 +1592,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The created time of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1599,7 +1603,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}the switch of delete protection.
+    <dd>{{% md %}}The switch of delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1610,7 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the engine of the instance.
+    <dd>{{% md %}}The engine of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1621,7 +1625,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the engine_version of the instance.
+    <dd>{{% md %}}The engine_version of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1632,7 +1636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the expire time of the instance.
+    <dd>{{% md %}}The expire time of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1654,7 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
+    <dd>{{% md %}}Like hbase.sn1.large, hbase.sn1.large, hbase.n1.2xlarge and so on.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1665,7 +1669,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}the node count of master
+    <dd>{{% md %}}The node count of master
 {{% /md %}}</dd>
 
     <dt class="property-required"

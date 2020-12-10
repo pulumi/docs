@@ -1,7 +1,7 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Module kms | Package AliCloud"
+title_tag: "alicloud.kms.Secret"
 meta_desc: "Explore the Secret resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. This resouce used to create a secret and store its initial version."
 ---
 

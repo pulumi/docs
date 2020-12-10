@@ -1,7 +1,7 @@
 
 ---
 title: "DomainGroup"
-title_tag: "Resource DomainGroup | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.DomainGroup"
 meta_desc: "Explore the DomainGroup resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Alidns Domain Group resource. For information about Alidns Domain Group and how to use it, see [What is Resource Alidns Domain Group](https://www.alibabacloud.com/help/en/doc-detail/29762.htm)."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkAclEntries"
-title_tag: "Resource NetworkAclEntries | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.NetworkAclEntries"
 meta_desc: "Explore the NetworkAclEntries resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a network acl entries resource to create ingress and egress entries."
 ---
 

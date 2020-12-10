@@ -1,7 +1,7 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Module polardb | Package AliCloud"
+title_tag: "alicloud.polardb.Database"
 meta_desc: "Explore the Database resource of the polardb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a PolarDB database resource. A database deployed in a PolarDB cluster. A PolarDB cluster can own multiple databases."
 ---
 

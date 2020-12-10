@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module rds | Package AliCloud"
+title_tag: "alicloud.rds.Connection"
 meta_desc: "Explore the Connection resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS connection resource to allocate an Internet connection string for RDS instance."
 ---
 

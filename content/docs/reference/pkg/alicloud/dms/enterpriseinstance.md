@@ -1,7 +1,7 @@
 
 ---
 title: "EnterpriseInstance"
-title_tag: "Resource EnterpriseInstance | Module dms | Package AliCloud"
+title_tag: "alicloud.dms.EnterpriseInstance"
 meta_desc: "Explore the EnterpriseInstance resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS Enterprise Instance resource."
 ---
 

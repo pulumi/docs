@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.Group"
 meta_desc: "Explore the Group resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ONS group resource."
 ---
 

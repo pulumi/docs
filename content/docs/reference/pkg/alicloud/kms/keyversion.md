@@ -1,7 +1,7 @@
 
 ---
 title: "KeyVersion"
-title_tag: "Resource KeyVersion | Module kms | Package AliCloud"
+title_tag: "alicloud.kms.KeyVersion"
 meta_desc: "Explore the KeyVersion resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Alikms Key Version resource. For information about Alikms Key Version and how to use it, see [What is Resource Alikms Key Version](https://www.alibabacloud.com/help/doc-detail/133838.htm)."
 ---
 

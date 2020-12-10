@@ -1,7 +1,7 @@
 
 ---
 title: "Eip"
-title_tag: "Resource Eip | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.Eip"
 meta_desc: "Explore the Eip resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

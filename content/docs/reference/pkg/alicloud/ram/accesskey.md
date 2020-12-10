@@ -1,7 +1,7 @@
 
 ---
 title: "AccessKey"
-title_tag: "Resource AccessKey | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.AccessKey"
 meta_desc: "Explore the AccessKey resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM User access key resource."
 ---
 

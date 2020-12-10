@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module fc | Package AliCloud"
+title_tag: "alicloud.fc.Service"
 meta_desc: "Explore the Service resource of the fc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

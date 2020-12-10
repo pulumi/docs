@@ -1,7 +1,7 @@
 
 ---
 title: "MasterSlaveServerGroup"
-title_tag: "Resource MasterSlaveServerGroup | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.MasterSlaveServerGroup"
 meta_desc: "Explore the MasterSlaveServerGroup resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. A master slave server group contains two ECS instances. The master slave server group can help you to define multiple listening dimension."
 ---
 

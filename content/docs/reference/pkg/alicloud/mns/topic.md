@@ -1,7 +1,7 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Module mns | Package AliCloud"
+title_tag: "alicloud.mns.Topic"
 meta_desc: "Explore the Topic resource of the mns module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

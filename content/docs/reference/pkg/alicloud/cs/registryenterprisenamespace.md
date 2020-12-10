@@ -1,7 +1,7 @@
 
 ---
 title: "RegistryEnterpriseNamespace"
-title_tag: "Resource RegistryEnterpriseNamespace | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.RegistryEnterpriseNamespace"
 meta_desc: "Explore the RegistryEnterpriseNamespace resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager Container Registry Enterprise Edition namespaces."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AclRule"
-title_tag: "Resource AclRule | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.AclRule"
 meta_desc: "Explore the AclRule resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag Acl Rule resource. This topic describes how to configure an access control list (ACL) rule for a target Smart Access Gateway instance to permit or deny access to or from specified IP addresses in the ACL rule."
 ---
 

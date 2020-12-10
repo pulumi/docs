@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.Instance"
 meta_desc: "Explore the Instance resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ONS instance resource."
 ---
 

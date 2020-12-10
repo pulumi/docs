@@ -1,7 +1,7 @@
 
 ---
 title: "CaCertificate"
-title_tag: "Resource CaCertificate | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.CaCertificate"
 meta_desc: "Explore the CaCertificate resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. A Load Balancer CA Certificate is used by the listener of the protocol https."
 ---
 

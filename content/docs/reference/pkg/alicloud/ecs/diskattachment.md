@@ -1,7 +1,7 @@
 
 ---
 title: "DiskAttachment"
-title_tag: "Resource DiskAttachment | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.DiskAttachment"
 meta_desc: "Explore the DiskAttachment resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Alicloud ECS Disk Attachment as a resource, to attach and detach disks from ECS Instances."
 ---
 

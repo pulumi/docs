@@ -1,7 +1,7 @@
 
 ---
 title: "Namespace"
-title_tag: "Resource Namespace | Module cr | Package AliCloud"
+title_tag: "alicloud.cr.Namespace"
 meta_desc: "Explore the Namespace resource of the cr module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager Container Registry namespaces."
 ---
 

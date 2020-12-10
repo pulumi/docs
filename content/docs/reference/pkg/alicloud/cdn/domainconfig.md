@@ -1,7 +1,7 @@
 
 ---
 title: "DomainConfig"
-title_tag: "Resource DomainConfig | Module cdn | Package AliCloud"
+title_tag: "alicloud.cdn.DomainConfig"
 meta_desc: "Explore the DomainConfig resource of the cdn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CDN Accelerated Domain resource."
 ---
 

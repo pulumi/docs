@@ -1,7 +1,7 @@
 
 ---
 title: "AlidnsDomain"
-title_tag: "Resource AlidnsDomain | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.AlidnsDomain"
 meta_desc: "Explore the AlidnsDomain resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Alidns domain resource."
 ---
 

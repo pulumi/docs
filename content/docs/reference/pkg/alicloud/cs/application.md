@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.Application"
 meta_desc: "Explore the Application resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **DEPRECATED:** This resource manages applications in swarm cluster only, which is being deprecated and will be replaced by Kubernetes cluster."
 ---
 

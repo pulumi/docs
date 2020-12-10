@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceAttachment"
-title_tag: "Resource InstanceAttachment | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.InstanceAttachment"
 meta_desc: "Explore the InstanceAttachment resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN child instance attachment resource that associate the network(VPC, CCN, VBR) with the CEN instance."
 ---
 

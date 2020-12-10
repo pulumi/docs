@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module cdn | Package AliCloud"
+title_tag: "alicloud.cdn.Domain"
 meta_desc: "Explore the Domain resource of the cdn module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Order"
-title_tag: "Resource Order | Module marketplace | Package AliCloud"
+title_tag: "alicloud.marketplace.Order"
 meta_desc: "Explore the Order resource of the marketplace module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

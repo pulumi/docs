@@ -1,7 +1,7 @@
 
 ---
 title: "DdosCooInstance"
-title_tag: "Resource DdosCooInstance | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.DdosCooInstance"
 meta_desc: "Explore the DdosCooInstance resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. BGP-Line Anti-DDoS instance resource. &#34;Ddoscoo&#34; is the short term of this product. See [What is Anti-DDoS Pro](https://www.alibabacloud.com/help/doc-detail/69319.htm)."
 ---
 

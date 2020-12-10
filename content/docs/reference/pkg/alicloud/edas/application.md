@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.Application"
 meta_desc: "Explore the Application resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an EDAS ecs application on EDAS. The application will be deployed when `group_id` and `war_url` are given."
 ---
 

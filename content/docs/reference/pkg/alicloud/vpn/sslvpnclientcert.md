@@ -1,7 +1,7 @@
 
 ---
 title: "SslVpnClientCert"
-title_tag: "Resource SslVpnClientCert | Module vpn | Package AliCloud"
+title_tag: "alicloud.vpn.SslVpnClientCert"
 meta_desc: "Explore the SslVpnClientCert resource of the vpn module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

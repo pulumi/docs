@@ -1,7 +1,7 @@
 
 ---
 title: "MachineGroup"
-title_tag: "Resource MachineGroup | Module log | Package AliCloud"
+title_tag: "alicloud.log.MachineGroup"
 meta_desc: "Explore the MachineGroup resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

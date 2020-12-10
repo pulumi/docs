@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationScale"
-title_tag: "Resource ApplicationScale | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.ApplicationScale"
 meta_desc: "Explore the ApplicationScale resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. This operation is provided to scale out an EDAS application."
 ---
 
