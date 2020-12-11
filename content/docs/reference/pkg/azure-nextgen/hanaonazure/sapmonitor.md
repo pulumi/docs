@@ -1,7 +1,7 @@
 
 ---
 title: "SapMonitor"
-title_tag: "Resource SapMonitor | Module hanaonazure | Package Azure NextGen"
+title_tag: "azure-nextgen.hanaonazure.SapMonitor"
 meta_desc: "Explore the SapMonitor resource of the hanaonazure module, including examples, input properties, output properties, lookup functions, and supporting types. SAP monitor info on Azure (ARM properties and SAP monitor properties)"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationServiceEnvironmentManagedApi"
-title_tag: "Resource IntegrationServiceEnvironmentManagedApi | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationServiceEnvironmentManagedApi"
 meta_desc: "Explore the IntegrationServiceEnvironmentManagedApi resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The managed api definition."
 ---
 

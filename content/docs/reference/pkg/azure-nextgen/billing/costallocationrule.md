@@ -1,7 +1,7 @@
 
 ---
 title: "CostAllocationRule"
-title_tag: "Resource CostAllocationRule | Module billing | Package Azure NextGen"
+title_tag: "azure-nextgen.billing.CostAllocationRule"
 meta_desc: "Explore the CostAllocationRule resource of the billing module, including examples, input properties, output properties, lookup functions, and supporting types. The cost allocation rule model definition"
 ---
 
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing.<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
 
@@ -1492,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
 
@@ -1529,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
 
@@ -1566,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
 
@@ -1853,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing.<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 
@@ -1890,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 
@@ -1927,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 
@@ -1964,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Cost<wbr>Allocation<wbr>Resource<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 
@@ -2171,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing.<wbr>Cost<wbr>Allocation<wbr>Policy<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
 
@@ -2181,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing.<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 
@@ -2218,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
 
@@ -2228,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 
@@ -2265,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Cost<wbr>Allocation<wbr>Policy<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
 
@@ -2275,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 
@@ -2312,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Cost<wbr>Allocation<wbr>Policy<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
 
@@ -2322,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Cost<wbr>Allocation<wbr>Resource<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
 

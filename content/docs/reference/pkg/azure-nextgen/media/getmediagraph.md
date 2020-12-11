@@ -224,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
 </span> 
@@ -308,6 +318,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Date the Media Graph was created.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -398,6 +418,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span> 
@@ -482,6 +512,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Date the Media Graph was created.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -940,7 +980,7 @@ The following output properties are available:
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -977,7 +1017,7 @@ The following output properties are available:
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -1014,7 +1054,7 @@ The following output properties are available:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response | Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -1051,7 +1091,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args, Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 

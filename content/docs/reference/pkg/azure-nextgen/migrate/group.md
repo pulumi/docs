@@ -1,7 +1,7 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.Group"
 meta_desc: "Explore the Group resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. A group created in a Migration project."
 ---
 

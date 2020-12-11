@@ -1,7 +1,7 @@
 
 ---
 title: "PeeringService"
-title_tag: "Resource PeeringService | Module peering | Package Azure NextGen"
+title_tag: "azure-nextgen.peering.PeeringService"
 meta_desc: "Explore the PeeringService resource of the peering module, including examples, input properties, output properties, lookup functions, and supporting types. Peering Service"
 ---
 

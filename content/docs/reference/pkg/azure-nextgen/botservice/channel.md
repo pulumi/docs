@@ -1,7 +1,7 @@
 
 ---
 title: "Channel"
-title_tag: "Resource Channel | Module botservice | Package Azure NextGen"
+title_tag: "azure-nextgen.botservice.Channel"
 meta_desc: "Explore the Channel resource of the botservice module, including examples, input properties, output properties, lookup functions, and supporting types. Bot channel resource definition"
 ---
 
@@ -382,7 +382,7 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AlexaChannelArgs, DirectLineChannelArgs, DirectLineSpeechChannelArgs, EmailChannelArgs, FacebookChannelArgs, KikChannelArgs, LineChannelArgs, MsTeamsChannelArgs, SkypeChannelArgs, SlackChannelArgs, SmsChannelArgs, TelegramChannelArgs, WebChatChannelArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AlexaChannelArgs, DirectLineChannelArgs, DirectLineSpeechChannelArgs, EmailChannelArgs, FacebookChannelArgs, KikChannelArgs, LineChannelArgs, MsTeamsChannelArgs, SkypeChannelArgs, SlackChannelArgs, SmsChannelArgs, TelegramChannelArgs, WebChatChannelArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -600,7 +600,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
 
@@ -620,7 +620,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#alexachannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
 
@@ -717,7 +717,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannel">Direct<wbr>Line<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannel">Email<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannel">Facebook<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannel">Kik<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannel">Line<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannel">Skype<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannel">Slack<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannel">Sms<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannel">Telegram<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannel">Web<wbr>Chat<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -794,7 +794,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
 
@@ -814,7 +814,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Alexa<wbr>Channel | Direct<wbr>Line<wbr>Channel | Direct<wbr>Line<wbr>Speech<wbr>Channel | Email<wbr>Channel | Facebook<wbr>Channel | Kik<wbr>Channel | Line<wbr>Channel | Ms<wbr>Teams<wbr>Channel | Skype<wbr>Channel | Slack<wbr>Channel | Sms<wbr>Channel | Telegram<wbr>Channel | Web<wbr>Chat<wbr>Channel</span>
+        <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannel">Direct<wbr>Line<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannel">Email<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannel">Facebook<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannel">Kik<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannel">Line<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannel">Skype<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannel">Slack<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannel">Sms<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannel">Telegram<wbr>Channel</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannel">Web<wbr>Chat<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -891,7 +891,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Kind</span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
 
@@ -911,7 +911,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Alexa<wbr>Channel<wbr>Args, Direct<wbr>Line<wbr>Channel<wbr>Args, Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args, Email<wbr>Channel<wbr>Args, Facebook<wbr>Channel<wbr>Args, Kik<wbr>Channel<wbr>Args, Line<wbr>Channel<wbr>Args, Ms<wbr>Teams<wbr>Channel<wbr>Args, Skype<wbr>Channel<wbr>Args, Slack<wbr>Channel<wbr>Args, Sms<wbr>Channel<wbr>Args, Telegram<wbr>Channel<wbr>Args, Web<wbr>Chat<wbr>Channel<wbr>Args]</span>
+        <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannel">Direct<wbr>Line<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannel">Email<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannel">Facebook<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannel">Kik<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannel">Line<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannel">Skype<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannel">Slack<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannel">Sms<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannel">Telegram<wbr>Channel<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannel">Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -6289,7 +6289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 
@@ -6306,7 +6306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 
@@ -6323,7 +6323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 
@@ -6340,7 +6340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 

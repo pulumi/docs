@@ -1,7 +1,7 @@
 
 ---
 title: "BlobInventoryPolicy"
-title_tag: "Resource BlobInventoryPolicy | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.BlobInventoryPolicy"
 meta_desc: "Explore the BlobInventoryPolicy resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The storage account blob inventory policy."
 ---
 
@@ -1748,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inventory<wbr>Rule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd>
 
@@ -1795,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd>
 
@@ -1842,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Inventory<wbr>Rule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd>
 
@@ -1889,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Inventory<wbr>Rule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd>
 

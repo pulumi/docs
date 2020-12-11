@@ -1,7 +1,7 @@
 
 ---
 title: "LocalNetworkGateway"
-title_tag: "Resource LocalNetworkGateway | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.LocalNetworkGateway"
 meta_desc: "Explore the LocalNetworkGateway resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. A common class for general resource information."
 ---
 

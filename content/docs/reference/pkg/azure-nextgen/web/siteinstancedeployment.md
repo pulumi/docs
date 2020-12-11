@@ -1,7 +1,7 @@
 
 ---
 title: "SiteInstanceDeployment"
-title_tag: "Resource SiteInstanceDeployment | Module web | Package Azure NextGen"
+title_tag: "azure-nextgen.web.SiteInstanceDeployment"
 meta_desc: "Explore the SiteInstanceDeployment resource of the web module, including examples, input properties, output properties, lookup functions, and supporting types. Represents user credentials used for publishing activity"
 ---
 

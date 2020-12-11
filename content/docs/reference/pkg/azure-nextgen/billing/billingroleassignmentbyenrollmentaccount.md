@@ -1,7 +1,7 @@
 
 ---
 title: "BillingRoleAssignmentByEnrollmentAccount"
-title_tag: "Resource BillingRoleAssignmentByEnrollmentAccount | Module billing | Package Azure NextGen"
+title_tag: "azure-nextgen.billing.BillingRoleAssignmentByEnrollmentAccount"
 meta_desc: "Explore the BillingRoleAssignmentByEnrollmentAccount resource of the billing module, including examples, input properties, output properties, lookup functions, and supporting types. The role assignment"
 ---
 

@@ -224,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -238,7 +248,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>MWSLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>S3Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cassandra<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Concur<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Couchbase<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Db2Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Drill<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>AXLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Eloqua<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Greenplum<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HBase<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hdfs<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hive<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Http<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hubspot<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Impala<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Informix<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Jira<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Magento<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Marketo<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Netezza<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>OData<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Odbc<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Office365Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Paypal<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Phoenix<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Presto<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Responsys<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>BWLinked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Shopify<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Snowflake<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Spark<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Square<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sybase<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Teradata<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Vertica<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Web<wbr>Linked<wbr>Service<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Xero<wbr>Linked<wbr>Service<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Zoho<wbr>Linked<wbr>Service<wbr>Response&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazonredshiftlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazons3linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurebatchlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobfslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobstoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredataexplorerlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakeanalyticslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakestorelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabricksdeltalakelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabrickslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefilestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefunctionlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurekeyvaultlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremlservicelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremariadblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremysqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurepostgresqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresearchlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldwlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlmilinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretablestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cassandralinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cassandra<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#commondataserviceforappslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#concurlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Concur<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdbmongodbapilinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#couchbaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Couchbase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#customdatasourcelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#db2linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Db2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#drilllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Drill<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicsaxlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicscrmlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eloqualinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Eloqua<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#fileserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#ftpserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googleadwordslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlebigquerylinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlecloudstoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#greenplumlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Greenplum<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hbaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HBase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightondemandlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdfslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hdfs<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hivelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hive<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#httplinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Http<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hubspotlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hubspot<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#impalalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Impala<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#informixlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Informix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jiralinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Jira<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#magentolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Magento<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mariadblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#marketolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Marketo<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#microsoftaccesslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbatlaslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbv2linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#netezzalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Netezza<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odatalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>OData<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odbclinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Odbc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#office365linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Office365Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oraclelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oracleservicecloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#paypallinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Paypal<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#phoenixlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Phoenix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#prestolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Presto<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#quickbookslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#responsyslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Responsys<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#restservicelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcemarketingcloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforceservicecloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapbwlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>BWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapcloudforcustomerlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapecclinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saphanalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapopenhublinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saptablelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicenowlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sftpserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sharepointonlinelistlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#shopifylinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Shopify<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#snowflakelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Snowflake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sparklinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Spark<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#squarelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Square<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sybaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sybase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#teradatalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Teradata<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#verticalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Vertica<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#weblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Web<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#xerolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Xero<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#zoholinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd>
 
@@ -271,6 +281,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -285,7 +305,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd>
 
@@ -318,6 +338,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -332,7 +362,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response | Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response | Amazon<wbr>S3Linked<wbr>Service<wbr>Response | Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response | Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>MLLinked<wbr>Service<wbr>Response | Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response | Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response | Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response | Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response | Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response | Cassandra<wbr>Linked<wbr>Service<wbr>Response | Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response | Concur<wbr>Linked<wbr>Service<wbr>Response | Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response | Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response | Couchbase<wbr>Linked<wbr>Service<wbr>Response | Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response | Db2Linked<wbr>Service<wbr>Response | Drill<wbr>Linked<wbr>Service<wbr>Response | Dynamics<wbr>AXLinked<wbr>Service<wbr>Response | Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response | Dynamics<wbr>Linked<wbr>Service<wbr>Response | Eloqua<wbr>Linked<wbr>Service<wbr>Response | File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response | Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response | Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response | Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response | Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response | Greenplum<wbr>Linked<wbr>Service<wbr>Response | HBase<wbr>Linked<wbr>Service<wbr>Response | HDInsight<wbr>Linked<wbr>Service<wbr>Response | HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response | Hdfs<wbr>Linked<wbr>Service<wbr>Response | Hive<wbr>Linked<wbr>Service<wbr>Response | Http<wbr>Linked<wbr>Service<wbr>Response | Hubspot<wbr>Linked<wbr>Service<wbr>Response | Impala<wbr>Linked<wbr>Service<wbr>Response | Informix<wbr>Linked<wbr>Service<wbr>Response | Jira<wbr>Linked<wbr>Service<wbr>Response | Magento<wbr>Linked<wbr>Service<wbr>Response | Maria<wbr>DBLinked<wbr>Service<wbr>Response | Marketo<wbr>Linked<wbr>Service<wbr>Response | Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response | Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response | Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response | Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response | My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response | Netezza<wbr>Linked<wbr>Service<wbr>Response | OData<wbr>Linked<wbr>Service<wbr>Response | Odbc<wbr>Linked<wbr>Service<wbr>Response | Office365Linked<wbr>Service<wbr>Response | Oracle<wbr>Linked<wbr>Service<wbr>Response | Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response | Paypal<wbr>Linked<wbr>Service<wbr>Response | Phoenix<wbr>Linked<wbr>Service<wbr>Response | Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response | Presto<wbr>Linked<wbr>Service<wbr>Response | Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response | Responsys<wbr>Linked<wbr>Service<wbr>Response | Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response | Salesforce<wbr>Linked<wbr>Service<wbr>Response | Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response | Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response | Sap<wbr>BWLinked<wbr>Service<wbr>Response | Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response | Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response | Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response | Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response | Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response | Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response | Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response | Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response | Shopify<wbr>Linked<wbr>Service<wbr>Response | Snowflake<wbr>Linked<wbr>Service<wbr>Response | Spark<wbr>Linked<wbr>Service<wbr>Response | Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response | Square<wbr>Linked<wbr>Service<wbr>Response | Sybase<wbr>Linked<wbr>Service<wbr>Response | Teradata<wbr>Linked<wbr>Service<wbr>Response | Vertica<wbr>Linked<wbr>Service<wbr>Response | Web<wbr>Linked<wbr>Service<wbr>Response | Xero<wbr>Linked<wbr>Service<wbr>Response | Zoho<wbr>Linked<wbr>Service<wbr>Response</span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd>
 
@@ -365,6 +395,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -379,7 +419,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd>
 
@@ -503,7 +543,7 @@ The following output properties are available:
 <a href="#mwsauthtoken_csharp" style="color: inherit; text-decoration: inherit;">Mws<wbr>Auth<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon MWS authentication token.{{% /md %}}</dd>
 
@@ -523,7 +563,7 @@ The following output properties are available:
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret key used to access data.{{% /md %}}</dd>
 
@@ -650,7 +690,7 @@ The following output properties are available:
 <a href="#mwsauthtoken_go" style="color: inherit; text-decoration: inherit;">Mws<wbr>Auth<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Amazon MWS authentication token.{{% /md %}}</dd>
 
@@ -670,7 +710,7 @@ The following output properties are available:
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret key used to access data.{{% /md %}}</dd>
 
@@ -797,7 +837,7 @@ The following output properties are available:
 <a href="#mwsauthtoken_nodejs" style="color: inherit; text-decoration: inherit;">mws<wbr>Auth<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Amazon MWS authentication token.{{% /md %}}</dd>
 
@@ -817,7 +857,7 @@ The following output properties are available:
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret key used to access data.{{% /md %}}</dd>
 
@@ -944,7 +984,7 @@ The following output properties are available:
 <a href="#mws_auth_token_python" style="color: inherit; text-decoration: inherit;">mws_<wbr>auth_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon MWS authentication token.{{% /md %}}</dd>
 
@@ -964,7 +1004,7 @@ The following output properties are available:
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret key used to access data.{{% /md %}}</dd>
 
@@ -1092,7 +1132,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the Amazon Redshift source.{{% /md %}}</dd>
 
@@ -1199,7 +1239,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of the Amazon Redshift source.{{% /md %}}</dd>
 
@@ -1306,7 +1346,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of the Amazon Redshift source.{{% /md %}}</dd>
 
@@ -1413,7 +1453,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the Amazon Redshift source.{{% /md %}}</dd>
 
@@ -1531,7 +1571,7 @@ The following output properties are available:
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -1551,7 +1591,7 @@ The following output properties are available:
 <a href="#sessiontoken_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
 
@@ -1638,7 +1678,7 @@ The following output properties are available:
 <a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -1658,7 +1698,7 @@ The following output properties are available:
 <a href="#sessiontoken_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
 
@@ -1745,7 +1785,7 @@ The following output properties are available:
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -1765,7 +1805,7 @@ The following output properties are available:
 <a href="#sessiontoken_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
 
@@ -1852,7 +1892,7 @@ The following output properties are available:
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -1872,7 +1912,7 @@ The following output properties are available:
 <a href="#session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
 
@@ -1940,7 +1980,7 @@ The following output properties are available:
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch account access key.{{% /md %}}</dd>
 
@@ -2047,7 +2087,7 @@ The following output properties are available:
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch account access key.{{% /md %}}</dd>
 
@@ -2154,7 +2194,7 @@ The following output properties are available:
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch account access key.{{% /md %}}</dd>
 
@@ -2261,7 +2301,7 @@ The following output properties are available:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch account access key.{{% /md %}}</dd>
 
@@ -2429,7 +2469,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.{{% /md %}}</dd>
 
@@ -2546,7 +2586,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.{{% /md %}}</dd>
 
@@ -2663,7 +2703,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.{{% /md %}}</dd>
 
@@ -2780,7 +2820,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.{{% /md %}}</dd>
 
@@ -2938,7 +2978,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -3085,7 +3125,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -3232,7 +3272,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -3379,7 +3419,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -3447,7 +3487,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd>
 
@@ -3544,7 +3584,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd>
 
@@ -3641,7 +3681,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd>
 
@@ -3738,7 +3778,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd>
 
@@ -3916,7 +3956,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Analytics account.{{% /md %}}</dd>
 
@@ -4043,7 +4083,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Analytics account.{{% /md %}}</dd>
 
@@ -4170,7 +4210,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Analytics account.{{% /md %}}</dd>
 
@@ -4297,7 +4337,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Analytics account.{{% /md %}}</dd>
 
@@ -4435,7 +4475,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Store account.{{% /md %}}</dd>
 
@@ -4572,7 +4612,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Store account.{{% /md %}}</dd>
 
@@ -4709,7 +4749,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Store account.{{% /md %}}</dd>
 
@@ -4846,7 +4886,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Store account.{{% /md %}}</dd>
 
@@ -4904,7 +4944,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -4991,7 +5031,7 @@ The following output properties are available:
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -5078,7 +5118,7 @@ The following output properties are available:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -5165,7 +5205,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -5253,7 +5293,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5450,7 +5490,7 @@ The following output properties are available:
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5647,7 +5687,7 @@ The following output properties are available:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5844,7 +5884,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6142,7 +6182,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -6289,7 +6329,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -6436,7 +6476,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -6583,7 +6623,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -6701,7 +6741,7 @@ The following output properties are available:
 <a href="#functionkey_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Function or Host key for Azure Function App.{{% /md %}}</dd>
 
@@ -6778,7 +6818,7 @@ The following output properties are available:
 <a href="#functionkey_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Function or Host key for Azure Function App.{{% /md %}}</dd>
 
@@ -6855,7 +6895,7 @@ The following output properties are available:
 <a href="#functionkey_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Function or Host key for Azure Function App.{{% /md %}}</dd>
 
@@ -6932,7 +6972,7 @@ The following output properties are available:
 <a href="#function_key_python" style="color: inherit; text-decoration: inherit;">function_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Function or Host key for Azure Function App.{{% /md %}}</dd>
 
@@ -7368,7 +7408,7 @@ The following output properties are available:
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The API key for accessing the Azure ML model endpoint.{{% /md %}}</dd>
 
@@ -7448,7 +7488,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.{{% /md %}}</dd>
 
@@ -7485,7 +7525,7 @@ The following output properties are available:
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API key for accessing the Azure ML model endpoint.{{% /md %}}</dd>
 
@@ -7565,7 +7605,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.{{% /md %}}</dd>
 
@@ -7602,7 +7642,7 @@ The following output properties are available:
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API key for accessing the Azure ML model endpoint.{{% /md %}}</dd>
 
@@ -7682,7 +7722,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.{{% /md %}}</dd>
 
@@ -7719,7 +7759,7 @@ The following output properties are available:
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The API key for accessing the Azure ML model endpoint.{{% /md %}}</dd>
 
@@ -7799,7 +7839,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.{{% /md %}}</dd>
 
@@ -7937,7 +7977,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.{{% /md %}}</dd>
 
@@ -8054,7 +8094,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.{{% /md %}}</dd>
 
@@ -8171,7 +8211,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.{{% /md %}}</dd>
 
@@ -8288,7 +8328,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.{{% /md %}}</dd>
 
@@ -9333,7 +9373,7 @@ The following output properties are available:
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin Key for Azure Search service{{% /md %}}</dd>
 
@@ -9410,7 +9450,7 @@ The following output properties are available:
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin Key for Azure Search service{{% /md %}}</dd>
 
@@ -9487,7 +9527,7 @@ The following output properties are available:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin Key for Azure Search service{{% /md %}}</dd>
 
@@ -9564,7 +9604,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin Key for Azure Search service{{% /md %}}</dd>
 
@@ -9692,7 +9732,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -9809,7 +9849,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -9926,7 +9966,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -10043,7 +10083,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -10171,7 +10211,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Database.{{% /md %}}</dd>
 
@@ -10288,7 +10328,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Database.{{% /md %}}</dd>
 
@@ -10405,7 +10445,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Database.{{% /md %}}</dd>
 
@@ -10522,7 +10562,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Database.{{% /md %}}</dd>
 
@@ -10650,7 +10690,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Managed Instance.{{% /md %}}</dd>
 
@@ -10767,7 +10807,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Managed Instance.{{% /md %}}</dd>
 
@@ -10884,7 +10924,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Managed Instance.{{% /md %}}</dd>
 
@@ -11001,7 +11041,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Managed Instance.{{% /md %}}</dd>
 
@@ -11907,7 +11947,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -12014,7 +12054,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -12121,7 +12161,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -12228,7 +12268,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -12366,7 +12406,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Common Data Service for Apps instance.{{% /md %}}</dd>
 
@@ -12386,7 +12426,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -12533,7 +12573,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Common Data Service for Apps instance.{{% /md %}}</dd>
 
@@ -12553,7 +12593,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -12700,7 +12740,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Common Data Service for Apps instance.{{% /md %}}</dd>
 
@@ -12720,7 +12760,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -12867,7 +12907,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Common Data Service for Apps instance.{{% /md %}}</dd>
 
@@ -12887,7 +12927,7 @@ The following output properties are available:
 <a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -13035,7 +13075,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -13162,7 +13202,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -13289,7 +13329,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -13416,7 +13456,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -13484,7 +13524,7 @@ The following output properties are available:
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -13581,7 +13621,7 @@ The following output properties are available:
 <a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -13678,7 +13718,7 @@ The following output properties are available:
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -13775,7 +13815,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -14770,7 +14810,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -14907,7 +14947,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -15044,7 +15084,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -15181,7 +15221,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -15568,7 +15608,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15675,7 +15715,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15782,7 +15822,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15889,7 +15929,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16077,7 +16117,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics CRM instance.{{% /md %}}</dd>
 
@@ -16097,7 +16137,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -16244,7 +16284,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics CRM instance.{{% /md %}}</dd>
 
@@ -16264,7 +16304,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -16411,7 +16451,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics CRM instance.{{% /md %}}</dd>
 
@@ -16431,7 +16471,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -16578,7 +16618,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics CRM instance.{{% /md %}}</dd>
 
@@ -16598,7 +16638,7 @@ The following output properties are available:
 <a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -16756,7 +16796,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics instance.{{% /md %}}</dd>
 
@@ -16776,7 +16816,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -16923,7 +16963,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics instance.{{% /md %}}</dd>
 
@@ -16943,7 +16983,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -17090,7 +17130,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics instance.{{% /md %}}</dd>
 
@@ -17110,7 +17150,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -17257,7 +17297,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics instance.{{% /md %}}</dd>
 
@@ -17277,7 +17317,7 @@ The following output properties are available:
 <a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -17415,7 +17455,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -17532,7 +17572,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -17649,7 +17689,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -17766,7 +17806,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -17884,7 +17924,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -17971,7 +18011,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -18058,7 +18098,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -18145,7 +18185,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -18273,7 +18313,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the FTP server.{{% /md %}}</dd>
 
@@ -18400,7 +18440,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the FTP server.{{% /md %}}</dd>
 
@@ -18527,7 +18567,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the FTP server.{{% /md %}}</dd>
 
@@ -18654,7 +18694,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the FTP server.{{% /md %}}</dd>
 
@@ -18722,7 +18762,7 @@ The following output properties are available:
 <a href="#developertoken_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The developer token associated with the manager account that you use to grant access to the AdWords API.{{% /md %}}</dd>
 
@@ -18752,7 +18792,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -18822,7 +18862,7 @@ The following output properties are available:
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.{{% /md %}}</dd>
 
@@ -18879,7 +18919,7 @@ The following output properties are available:
 <a href="#developertoken_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The developer token associated with the manager account that you use to grant access to the AdWords API.{{% /md %}}</dd>
 
@@ -18909,7 +18949,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -18979,7 +19019,7 @@ The following output properties are available:
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.{{% /md %}}</dd>
 
@@ -19036,7 +19076,7 @@ The following output properties are available:
 <a href="#developertoken_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The developer token associated with the manager account that you use to grant access to the AdWords API.{{% /md %}}</dd>
 
@@ -19066,7 +19106,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -19136,7 +19176,7 @@ The following output properties are available:
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.{{% /md %}}</dd>
 
@@ -19193,7 +19233,7 @@ The following output properties are available:
 <a href="#developer_token_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The developer token associated with the manager account that you use to grant access to the AdWords API.{{% /md %}}</dd>
 
@@ -19223,7 +19263,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -19293,7 +19333,7 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.{{% /md %}}</dd>
 
@@ -19391,7 +19431,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -19461,7 +19501,7 @@ The following output properties are available:
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.{{% /md %}}</dd>
 
@@ -19558,7 +19598,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -19628,7 +19668,7 @@ The following output properties are available:
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.{{% /md %}}</dd>
 
@@ -19725,7 +19765,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -19795,7 +19835,7 @@ The following output properties are available:
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.{{% /md %}}</dd>
 
@@ -19892,7 +19932,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
@@ -19962,7 +20002,7 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.{{% /md %}}</dd>
 
@@ -20080,7 +20120,7 @@ The following output properties are available:
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -20167,7 +20207,7 @@ The following output properties are available:
 <a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -20254,7 +20294,7 @@ The following output properties are available:
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -20341,7 +20381,7 @@ The following output properties are available:
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -20808,7 +20848,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -20965,7 +21005,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -21122,7 +21162,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -21279,7 +21319,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -21437,7 +21477,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster password.{{% /md %}}</dd>
 
@@ -21564,7 +21604,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster password.{{% /md %}}</dd>
 
@@ -21691,7 +21731,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster password.{{% /md %}}</dd>
 
@@ -21818,7 +21858,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster password.{{% /md %}}</dd>
 
@@ -21956,7 +21996,7 @@ The following output properties are available:
 <a href="#clusterpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password to access the cluster.{{% /md %}}</dd>
 
@@ -21966,7 +22006,7 @@ The following output properties are available:
 <a href="#clustersshpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ssh<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password to SSH remotely connect cluster’s node (for Linux).{{% /md %}}</dd>
 
@@ -22156,7 +22196,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key for the service principal id.{{% /md %}}</dd>
 
@@ -22333,7 +22373,7 @@ The following output properties are available:
 <a href="#clusterpassword_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to access the cluster.{{% /md %}}</dd>
 
@@ -22343,7 +22383,7 @@ The following output properties are available:
 <a href="#clustersshpassword_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ssh<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to SSH remotely connect cluster’s node (for Linux).{{% /md %}}</dd>
 
@@ -22533,7 +22573,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key for the service principal id.{{% /md %}}</dd>
 
@@ -22710,7 +22750,7 @@ The following output properties are available:
 <a href="#clusterpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to access the cluster.{{% /md %}}</dd>
 
@@ -22720,7 +22760,7 @@ The following output properties are available:
 <a href="#clustersshpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ssh<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to SSH remotely connect cluster’s node (for Linux).{{% /md %}}</dd>
 
@@ -22910,7 +22950,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key for the service principal id.{{% /md %}}</dd>
 
@@ -23087,7 +23127,7 @@ The following output properties are available:
 <a href="#cluster_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password to access the cluster.{{% /md %}}</dd>
 
@@ -23097,7 +23137,7 @@ The following output properties are available:
 <a href="#cluster_ssh_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ssh_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password to SSH remotely connect cluster’s node (for Linux).{{% /md %}}</dd>
 
@@ -23287,7 +23327,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key for the service principal id.{{% /md %}}</dd>
 
@@ -23445,7 +23485,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Windows authentication.{{% /md %}}</dd>
 
@@ -23542,7 +23582,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Windows authentication.{{% /md %}}</dd>
 
@@ -23639,7 +23679,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Windows authentication.{{% /md %}}</dd>
 
@@ -23736,7 +23776,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Windows authentication.{{% /md %}}</dd>
 
@@ -23884,7 +23924,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -24101,7 +24141,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -24318,7 +24358,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -24535,7 +24575,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -24753,7 +24793,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.{{% /md %}}</dd>
 
@@ -24880,7 +24920,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.{{% /md %}}</dd>
 
@@ -25007,7 +25047,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.{{% /md %}}</dd>
 
@@ -25134,7 +25174,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.{{% /md %}}</dd>
 
@@ -25182,7 +25222,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25202,7 +25242,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Hubspot application.{{% /md %}}</dd>
 
@@ -25252,7 +25292,7 @@ The following output properties are available:
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25309,7 +25349,7 @@ The following output properties are available:
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25329,7 +25369,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Hubspot application.{{% /md %}}</dd>
 
@@ -25379,7 +25419,7 @@ The following output properties are available:
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25436,7 +25476,7 @@ The following output properties are available:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25456,7 +25496,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Hubspot application.{{% /md %}}</dd>
 
@@ -25506,7 +25546,7 @@ The following output properties are available:
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25563,7 +25603,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25583,7 +25623,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Hubspot application.{{% /md %}}</dd>
 
@@ -25633,7 +25673,7 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25791,7 +25831,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name when using UsernameAndPassword.{{% /md %}}</dd>
 
@@ -25948,7 +25988,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name when using UsernameAndPassword.{{% /md %}}</dd>
 
@@ -26105,7 +26145,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name when using UsernameAndPassword.{{% /md %}}</dd>
 
@@ -26262,7 +26302,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name when using UsernameAndPassword.{{% /md %}}</dd>
 
@@ -26370,7 +26410,7 @@ The following output properties are available:
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -26410,7 +26450,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -26477,7 +26517,7 @@ The following output properties are available:
 <a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -26517,7 +26557,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -26584,7 +26624,7 @@ The following output properties are available:
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -26624,7 +26664,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -26691,7 +26731,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -26731,7 +26771,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -26998,7 +27038,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -27125,7 +27165,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -27252,7 +27292,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -27379,7 +27419,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -27616,7 +27656,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token from Magento.{{% /md %}}</dd>
 
@@ -27723,7 +27763,7 @@ The following output properties are available:
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token from Magento.{{% /md %}}</dd>
 
@@ -27830,7 +27870,7 @@ The following output properties are available:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token from Magento.{{% /md %}}</dd>
 
@@ -27937,7 +27977,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token from Magento.{{% /md %}}</dd>
 
@@ -28394,7 +28434,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your Marketo service.{{% /md %}}</dd>
 
@@ -28511,7 +28551,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your Marketo service.{{% /md %}}</dd>
 
@@ -28628,7 +28668,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your Marketo service.{{% /md %}}</dd>
 
@@ -28745,7 +28785,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your Marketo service.{{% /md %}}</dd>
 
@@ -28883,7 +28923,7 @@ The following output properties are available:
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -28923,7 +28963,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -28990,7 +29030,7 @@ The following output properties are available:
 <a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -29030,7 +29070,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -29097,7 +29137,7 @@ The following output properties are available:
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -29137,7 +29177,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -29204,7 +29244,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -29244,7 +29284,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -29671,7 +29711,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -29818,7 +29858,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -29965,7 +30005,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -30112,7 +30152,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -31177,7 +31217,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password of the OData service.{{% /md %}}</dd>
 
@@ -31187,7 +31227,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcert_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Embedded<wbr>Cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31197,7 +31237,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcertpassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Embedded<wbr>Cert<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31217,7 +31257,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31354,7 +31394,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password of the OData service.{{% /md %}}</dd>
 
@@ -31364,7 +31404,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcert_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Embedded<wbr>Cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31374,7 +31414,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcertpassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Embedded<wbr>Cert<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31394,7 +31434,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31531,7 +31571,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password of the OData service.{{% /md %}}</dd>
 
@@ -31541,7 +31581,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcert_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Embedded<wbr>Cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31551,7 +31591,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcertpassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Embedded<wbr>Cert<wbr>Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31571,7 +31611,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31708,7 +31748,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password of the OData service.{{% /md %}}</dd>
 
@@ -31718,7 +31758,7 @@ The following output properties are available:
 <a href="#service_principal_embedded_cert_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>embedded_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31728,7 +31768,7 @@ The following output properties are available:
 <a href="#service_principal_embedded_cert_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>embedded_<wbr>cert_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31748,7 +31788,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31836,7 +31876,7 @@ The following output properties are available:
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -31876,7 +31916,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -31943,7 +31983,7 @@ The following output properties are available:
 <a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -31983,7 +32023,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -32050,7 +32090,7 @@ The following output properties are available:
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -32090,7 +32130,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -32157,7 +32197,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -32197,7 +32237,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -32255,7 +32295,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key.{{% /md %}}</dd>
 
@@ -32352,7 +32392,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key.{{% /md %}}</dd>
 
@@ -32449,7 +32489,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key.{{% /md %}}</dd>
 
@@ -32546,7 +32586,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key.{{% /md %}}</dd>
 
@@ -32963,7 +33003,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username key.{{% /md %}}</dd>
 
@@ -33080,7 +33120,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username key.{{% /md %}}</dd>
 
@@ -33197,7 +33237,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username key.{{% /md %}}</dd>
 
@@ -33314,7 +33354,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username key.{{% /md %}}</dd>
 
@@ -33581,7 +33621,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your PayPal application.{{% /md %}}</dd>
 
@@ -33698,7 +33738,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your PayPal application.{{% /md %}}</dd>
 
@@ -33815,7 +33855,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your PayPal application.{{% /md %}}</dd>
 
@@ -33932,7 +33972,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your PayPal application.{{% /md %}}</dd>
 
@@ -34140,7 +34180,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -34307,7 +34347,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -34474,7 +34514,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -34641,7 +34681,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -35148,7 +35188,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -35335,7 +35375,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -35522,7 +35562,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -35709,7 +35749,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -35787,7 +35827,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -35797,7 +35837,7 @@ The following output properties are available:
 <a href="#accesstokensecret_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -35857,7 +35897,7 @@ The following output properties are available:
 <a href="#consumersecret_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consumer secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -35924,7 +35964,7 @@ The following output properties are available:
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -35934,7 +35974,7 @@ The following output properties are available:
 <a href="#accesstokensecret_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -35994,7 +36034,7 @@ The following output properties are available:
 <a href="#consumersecret_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36061,7 +36101,7 @@ The following output properties are available:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36071,7 +36111,7 @@ The following output properties are available:
 <a href="#accesstokensecret_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36131,7 +36171,7 @@ The following output properties are available:
 <a href="#consumersecret_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36198,7 +36238,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36208,7 +36248,7 @@ The following output properties are available:
 <a href="#access_token_secret_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36268,7 +36308,7 @@ The following output properties are available:
 <a href="#consumer_secret_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consumer secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36376,7 +36416,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36493,7 +36533,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36610,7 +36650,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36727,7 +36767,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36925,7 +36965,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password used in Basic authentication type.{{% /md %}}</dd>
 
@@ -36945,7 +36985,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's key used in AadServicePrincipal authentication type.{{% /md %}}</dd>
 
@@ -37082,7 +37122,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password used in Basic authentication type.{{% /md %}}</dd>
 
@@ -37102,7 +37142,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The application's key used in AadServicePrincipal authentication type.{{% /md %}}</dd>
 
@@ -37239,7 +37279,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password used in Basic authentication type.{{% /md %}}</dd>
 
@@ -37259,7 +37299,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The application's key used in AadServicePrincipal authentication type.{{% /md %}}</dd>
 
@@ -37396,7 +37436,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password used in Basic authentication type.{{% /md %}}</dd>
 
@@ -37416,7 +37456,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's key used in AadServicePrincipal authentication type.{{% /md %}}</dd>
 
@@ -37534,7 +37574,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -37544,7 +37584,7 @@ The following output properties are available:
 <a href="#securitytoken_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -37641,7 +37681,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -37651,7 +37691,7 @@ The following output properties are available:
 <a href="#securitytoken_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -37748,7 +37788,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -37758,7 +37798,7 @@ The following output properties are available:
 <a href="#securitytoken_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -37855,7 +37895,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -37865,7 +37905,7 @@ The following output properties are available:
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -37923,7 +37963,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38040,7 +38080,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38157,7 +38197,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38274,7 +38314,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38462,7 +38502,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -38472,7 +38512,7 @@ The following output properties are available:
 <a href="#securitytoken_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -38579,7 +38619,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -38589,7 +38629,7 @@ The following output properties are available:
 <a href="#securitytoken_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -38696,7 +38736,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -38706,7 +38746,7 @@ The following output properties are available:
 <a href="#securitytoken_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -38813,7 +38853,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -38823,7 +38863,7 @@ The following output properties are available:
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -38941,7 +38981,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server.{{% /md %}}</dd>
 
@@ -39048,7 +39088,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server.{{% /md %}}</dd>
 
@@ -39155,7 +39195,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server.{{% /md %}}</dd>
 
@@ -39262,7 +39302,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server.{{% /md %}}</dd>
 
@@ -39360,7 +39400,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39447,7 +39487,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39534,7 +39574,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39621,7 +39661,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39719,7 +39759,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39806,7 +39846,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39893,7 +39933,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39980,7 +40020,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -40088,7 +40128,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP HANA server.{{% /md %}}</dd>
 
@@ -40195,7 +40235,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP HANA server.{{% /md %}}</dd>
 
@@ -40302,7 +40342,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP HANA server.{{% /md %}}</dd>
 
@@ -40409,7 +40449,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP HANA server.{{% /md %}}</dd>
 
@@ -40557,7 +40597,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server where the open hub destination is located.{{% /md %}}</dd>
 
@@ -40714,7 +40754,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server where the open hub destination is located.{{% /md %}}</dd>
 
@@ -40871,7 +40911,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server where the open hub destination is located.{{% /md %}}</dd>
 
@@ -41028,7 +41068,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server where the open hub destination is located.{{% /md %}}</dd>
 
@@ -41196,7 +41236,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP server where the table is located.{{% /md %}}</dd>
 
@@ -41403,7 +41443,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP server where the table is located.{{% /md %}}</dd>
 
@@ -41610,7 +41650,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP server where the table is located.{{% /md %}}</dd>
 
@@ -41817,7 +41857,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP server where the table is located.{{% /md %}}</dd>
 
@@ -42253,7 +42293,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret for OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42303,7 +42343,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name for Basic and OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42400,7 +42440,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret for OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42450,7 +42490,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name for Basic and OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42547,7 +42587,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret for OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42597,7 +42637,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name for Basic and OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42694,7 +42734,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret for OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42744,7 +42784,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name for Basic and OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42892,7 +42932,7 @@ The following output properties are available:
 <a href="#passphrase_csharp" style="color: inherit; text-decoration: inherit;">Pass<wbr>Phrase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password to decrypt the SSH private key if the SSH private key is encrypted.{{% /md %}}</dd>
 
@@ -42902,7 +42942,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the SFTP server for Basic authentication.{{% /md %}}</dd>
 
@@ -42922,7 +42962,7 @@ The following output properties are available:
 <a href="#privatekeycontent_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.{{% /md %}}</dd>
 
@@ -43049,7 +43089,7 @@ The following output properties are available:
 <a href="#passphrase_go" style="color: inherit; text-decoration: inherit;">Pass<wbr>Phrase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to decrypt the SSH private key if the SSH private key is encrypted.{{% /md %}}</dd>
 
@@ -43059,7 +43099,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the SFTP server for Basic authentication.{{% /md %}}</dd>
 
@@ -43079,7 +43119,7 @@ The following output properties are available:
 <a href="#privatekeycontent_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.{{% /md %}}</dd>
 
@@ -43206,7 +43246,7 @@ The following output properties are available:
 <a href="#passphrase_nodejs" style="color: inherit; text-decoration: inherit;">pass<wbr>Phrase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to decrypt the SSH private key if the SSH private key is encrypted.{{% /md %}}</dd>
 
@@ -43216,7 +43256,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the SFTP server for Basic authentication.{{% /md %}}</dd>
 
@@ -43236,7 +43276,7 @@ The following output properties are available:
 <a href="#privatekeycontent_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.{{% /md %}}</dd>
 
@@ -43363,7 +43403,7 @@ The following output properties are available:
 <a href="#pass_phrase_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>phrase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password to decrypt the SSH private key if the SSH private key is encrypted.{{% /md %}}</dd>
 
@@ -43373,7 +43413,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the SFTP server for Basic authentication.{{% /md %}}</dd>
 
@@ -43393,7 +43433,7 @@ The following output properties are available:
 <a href="#private_key_content_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.{{% /md %}}</dd>
 
@@ -43461,7 +43501,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43558,7 +43598,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43655,7 +43695,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43752,7 +43792,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43860,7 +43900,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.{{% /md %}}</dd>
 
@@ -43967,7 +44007,7 @@ The following output properties are available:
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.{{% /md %}}</dd>
 
@@ -44074,7 +44114,7 @@ The following output properties are available:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.{{% /md %}}</dd>
 
@@ -44181,7 +44221,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.{{% /md %}}</dd>
 
@@ -44728,7 +44768,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -44915,7 +44955,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -45102,7 +45142,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -45289,7 +45329,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -45427,7 +45467,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication password.{{% /md %}}</dd>
 
@@ -45514,7 +45554,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication password.{{% /md %}}</dd>
 
@@ -45601,7 +45641,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication password.{{% /md %}}</dd>
 
@@ -45688,7 +45728,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication password.{{% /md %}}</dd>
 
@@ -45746,7 +45786,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Square application.{{% /md %}}</dd>
 
@@ -45883,7 +45923,7 @@ The following output properties are available:
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Square application.{{% /md %}}</dd>
 
@@ -46020,7 +46060,7 @@ The following output properties are available:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Square application.{{% /md %}}</dd>
 
@@ -46157,7 +46197,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Square application.{{% /md %}}</dd>
 
@@ -46365,7 +46405,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -46482,7 +46522,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -46599,7 +46639,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -46716,7 +46756,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -46834,7 +46874,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -46941,7 +46981,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -47048,7 +47088,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -47155,7 +47195,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -47601,7 +47641,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -47638,7 +47678,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -47675,7 +47715,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -47712,7 +47752,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -47760,7 +47800,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file.{{% /md %}}</dd>
 
@@ -47770,7 +47810,7 @@ The following output properties are available:
 <a href="#pfx_csharp" style="color: inherit; text-decoration: inherit;">Pfx</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
 
@@ -47797,7 +47837,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file.{{% /md %}}</dd>
 
@@ -47807,7 +47847,7 @@ The following output properties are available:
 <a href="#pfx_go" style="color: inherit; text-decoration: inherit;">Pfx</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
 
@@ -47834,7 +47874,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file.{{% /md %}}</dd>
 
@@ -47844,7 +47884,7 @@ The following output properties are available:
 <a href="#pfx_nodejs" style="color: inherit; text-decoration: inherit;">pfx</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
 
@@ -47871,7 +47911,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file.{{% /md %}}</dd>
 
@@ -47881,7 +47921,7 @@ The following output properties are available:
 <a href="#pfx_python" style="color: inherit; text-decoration: inherit;">pfx</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
 
@@ -47919,7 +47959,7 @@ The following output properties are available:
 <a href="#typeproperties_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Anonymous<wbr>Authentication<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#webanonymousauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Anonymous<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webbasicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webclientcertificateauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Web linked service properties.{{% /md %}}</dd>
 
@@ -47976,7 +48016,7 @@ The following output properties are available:
 <a href="#typeproperties_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#webanonymousauthenticationresponse">Web<wbr>Anonymous<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webbasicauthenticationresponse">Web<wbr>Basic<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webclientcertificateauthenticationresponse">Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Web linked service properties.{{% /md %}}</dd>
 
@@ -48033,7 +48073,7 @@ The following output properties are available:
 <a href="#typeproperties_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Web<wbr>Anonymous<wbr>Authentication<wbr>Response | Web<wbr>Basic<wbr>Authentication<wbr>Response | Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response</span>
+        <span class="property-type"><a href="#webanonymousauthenticationresponse">Web<wbr>Anonymous<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webbasicauthenticationresponse">Web<wbr>Basic<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webclientcertificateauthenticationresponse">Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Web linked service properties.{{% /md %}}</dd>
 
@@ -48090,7 +48130,7 @@ The following output properties are available:
 <a href="#type_properties_python" style="color: inherit; text-decoration: inherit;">type_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Web<wbr>Anonymous<wbr>Authentication<wbr>Response<wbr>Args, Web<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args, Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#webanonymousauthenticationresponse">Web<wbr>Anonymous<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webbasicauthenticationresponse">Web<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webclientcertificateauthenticationresponse">Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Web linked service properties.{{% /md %}}</dd>
 
@@ -48188,7 +48228,7 @@ The following output properties are available:
 <a href="#consumerkey_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consumer key associated with the Xero application.{{% /md %}}</dd>
 
@@ -48238,7 +48278,7 @@ The following output properties are available:
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).{{% /md %}}</dd>
@@ -48316,7 +48356,7 @@ The following output properties are available:
 <a href="#consumerkey_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer key associated with the Xero application.{{% /md %}}</dd>
 
@@ -48366,7 +48406,7 @@ The following output properties are available:
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).{{% /md %}}</dd>
@@ -48444,7 +48484,7 @@ The following output properties are available:
 <a href="#consumerkey_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer key associated with the Xero application.{{% /md %}}</dd>
 
@@ -48494,7 +48534,7 @@ The following output properties are available:
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).{{% /md %}}</dd>
@@ -48572,7 +48612,7 @@ The following output properties are available:
 <a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consumer key associated with the Xero application.{{% /md %}}</dd>
 
@@ -48622,7 +48662,7 @@ The following output properties are available:
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).{{% /md %}}</dd>
@@ -48681,7 +48721,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token for Zoho authentication.{{% /md %}}</dd>
 
@@ -48798,7 +48838,7 @@ The following output properties are available:
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for Zoho authentication.{{% /md %}}</dd>
 
@@ -48915,7 +48955,7 @@ The following output properties are available:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for Zoho authentication.{{% /md %}}</dd>
 
@@ -49032,7 +49072,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access token for Zoho authentication.{{% /md %}}</dd>
 

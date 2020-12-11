@@ -1,7 +1,7 @@
 
 ---
 title: "ControllerDetails"
-title_tag: "Resource ControllerDetails | Module delegatednetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.delegatednetwork.ControllerDetails"
 meta_desc: "Explore the ControllerDetails resource of the delegatednetwork module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an instance of a DNC controller."
 ---
 

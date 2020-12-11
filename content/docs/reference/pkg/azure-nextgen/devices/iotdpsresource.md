@@ -1,7 +1,7 @@
 
 ---
 title: "IotDpsResource"
-title_tag: "Resource IotDpsResource | Module devices | Package Azure NextGen"
+title_tag: "azure-nextgen.devices.IotDpsResource"
 meta_desc: "Explore the IotDpsResource resource of the devices module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the provisioning service."
 ---
 
@@ -802,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Allocation<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Public<wbr>Network<wbr>Access</span>
     </dt>
     <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
 
@@ -872,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>State</span>
     </dt>
     <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationpolicy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
 
@@ -959,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
 
@@ -976,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Allocation<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
 
@@ -1036,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>Network<wbr>Access</span>
     </dt>
     <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
 
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>State</span>
     </dt>
     <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
 
@@ -1063,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocation_policy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Allocation<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
 
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>Network<wbr>Access</span>
     </dt>
     <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
 
@@ -1133,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">State</span>
     </dt>
     <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
 
@@ -1650,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Iot<wbr>Dps<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}Sku name.{{% /md %}}</dd>
 
@@ -1677,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sku name.{{% /md %}}</dd>
 
@@ -1704,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Iot<wbr>Dps<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}Sku name.{{% /md %}}</dd>
 
@@ -1731,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Iot<wbr>Dps<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}Sku name.{{% /md %}}</dd>
 
@@ -2356,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Ip<wbr>Filter<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
 
@@ -2393,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
 
@@ -2430,7 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Ip<wbr>Filter<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
 
@@ -2467,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Ip<wbr>Filter<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
 
@@ -3239,7 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
 
@@ -3276,7 +3276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
 
@@ -3313,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
 
@@ -3350,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
 
@@ -3557,7 +3557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Access<wbr>Rights<wbr>Description</span>
     </dt>
     <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
 
@@ -3604,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
 
@@ -3651,7 +3651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Access<wbr>Rights<wbr>Description</span>
     </dt>
     <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
 
@@ -3698,7 +3698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Access<wbr>Rights<wbr>Description</span>
     </dt>
     <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
 

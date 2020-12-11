@@ -1,7 +1,7 @@
 
 ---
 title: "Image"
-title_tag: "Resource Image | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.Image"
 meta_desc: "Explore the Image resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist."
 ---
 
@@ -76,8 +76,8 @@ func main() {
 					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
 					},
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 				},
 			},
 		})
@@ -196,8 +196,8 @@ func main() {
 			StorageProfile: &compute.ImageStorageProfileArgs{
 				OsDisk: &compute.ImageOSDiskArgs{
 					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 				},
 				ZoneResilient: pulumi.Bool(true),
 			},
@@ -324,8 +324,8 @@ func main() {
 					ManagedDisk: &compute.SubResourceArgs{
 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
 					},
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 				},
 			},
 		})
@@ -453,8 +453,8 @@ func main() {
 					ManagedDisk: &compute.SubResourceArgs{
 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
 					},
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 				},
 				ZoneResilient: pulumi.Bool(true),
 			},
@@ -582,8 +582,8 @@ func main() {
 					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
 					},
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 					Snapshot: &compute.SubResourceArgs{
 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
 					},
@@ -711,8 +711,8 @@ func main() {
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			StorageProfile: &compute.ImageStorageProfileArgs{
 				OsDisk: &compute.ImageOSDiskArgs{
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 					Snapshot: &compute.SubResourceArgs{
 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
 					},
@@ -945,8 +945,8 @@ func main() {
 				},
 				OsDisk: &compute.ImageOSDiskArgs{
 					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 				},
 				ZoneResilient: pulumi.Bool(false),
 			},
@@ -1094,8 +1094,8 @@ func main() {
 					ManagedDisk: &compute.SubResourceArgs{
 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
 					},
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 				},
 				ZoneResilient: pulumi.Bool(false),
 			},
@@ -1248,8 +1248,8 @@ func main() {
 					},
 				},
 				OsDisk: &compute.ImageOSDiskArgs{
-					OsState: pulumi.String("Generalized"),
-					OsType:  pulumi.String("Linux"),
+					OsState: "Generalized",
+					OsType:  "Linux",
 					Snapshot: &compute.SubResourceArgs{
 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
 					},
@@ -1343,7 +1343,7 @@ const image = new azure_nextgen.compute.latest.Image("image", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_virtual_machine</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[ImageStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGenerationTypes]]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_virtual_machine</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[ImageStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1551,7 +1551,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Hyper<wbr>VGeneration<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
 
@@ -1628,7 +1628,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
 
@@ -1705,7 +1705,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Hyper<wbr>VGeneration<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
 
@@ -1782,7 +1782,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Hyper<wbr>VGeneration<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
 
@@ -2226,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -2276,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -2313,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -2363,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -2400,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -2450,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -2487,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -2924,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osstate_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>State<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The OS State.{{% /md %}}</dd>
 
@@ -2934,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -2954,7 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -3004,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -3021,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osstate_go" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS State.{{% /md %}}</dd>
 
@@ -3031,7 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -3051,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -3101,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osstate_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Operating<wbr>System<wbr>State<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The OS State.{{% /md %}}</dd>
 
@@ -3128,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -3148,7 +3148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -3198,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -3215,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_state_python" style="color: inherit; text-decoration: inherit;">os_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Operating<wbr>System<wbr>State<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The OS State.{{% /md %}}</dd>
 
@@ -3225,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -3245,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -3295,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 

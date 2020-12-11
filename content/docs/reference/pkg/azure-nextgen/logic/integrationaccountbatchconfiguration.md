@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountBatchConfiguration"
-title_tag: "Resource IntegrationAccountBatchConfiguration | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationAccountBatchConfiguration"
 meta_desc: "Explore the IntegrationAccountBatchConfiguration resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The batch configuration resource definition."
 ---
 
@@ -1632,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Days<wbr>Of<wbr>Week&gt;</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 
@@ -1689,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 
@@ -1746,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Days<wbr>Of<wbr>Week[]</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 
@@ -1803,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Days<wbr>Of<wbr>Week]</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
 
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
 
@@ -1885,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
 
@@ -1912,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
 
@@ -2318,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Recurrence<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd>
 
@@ -2385,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd>
 
@@ -2452,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Recurrence<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd>
 
@@ -2519,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Recurrence<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd>
 

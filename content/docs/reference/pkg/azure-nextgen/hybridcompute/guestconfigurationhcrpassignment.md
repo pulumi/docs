@@ -1,7 +1,7 @@
 
 ---
 title: "GuestConfigurationHCRPAssignment"
-title_tag: "Resource GuestConfigurationHCRPAssignment | Module hybridcompute | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridcompute.GuestConfigurationHCRPAssignment"
 meta_desc: "Explore the GuestConfigurationHCRPAssignment resource of the hybridcompute module, including examples, input properties, output properties, lookup functions, and supporting types. Guest configuration assignment is an association between a machine and guest configuration."
 ---
 
@@ -1802,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionafterreboot_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>After<wbr>Reboot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Action<wbr>After<wbr>Reboot</span>
     </dt>
     <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
 
@@ -1812,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmoduleoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Allow<wbr>Module<wbr>Overwrite</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
 
@@ -1822,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationmode_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Configuration<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
 
@@ -1842,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootifneeded_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Reboot<wbr>If<wbr>Needed</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
 
@@ -1869,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionafterreboot_go" style="color: inherit; text-decoration: inherit;">Action<wbr>After<wbr>Reboot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
 
@@ -1879,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmoduleoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
 
@@ -1889,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationmode_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
 
@@ -1909,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootifneeded_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
 
@@ -1936,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionafterreboot_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>After<wbr>Reboot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Action<wbr>After<wbr>Reboot</span>
     </dt>
     <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
 
@@ -1946,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmoduleoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Module<wbr>Overwrite</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Allow<wbr>Module<wbr>Overwrite</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
 
@@ -1956,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationmode_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Configuration<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
 
@@ -1976,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootifneeded_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>If<wbr>Needed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Reboot<wbr>If<wbr>Needed</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
 
@@ -2003,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_after_reboot_python" style="color: inherit; text-decoration: inherit;">action_<wbr>after_<wbr>reboot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Action<wbr>After<wbr>Reboot</span>
     </dt>
     <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
 
@@ -2013,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_module_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>module_<wbr>overwrite</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Allow<wbr>Module<wbr>Overwrite</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
 
@@ -2023,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_mode_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Configuration<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
 
@@ -2043,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reboot_if_needed_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>if_<wbr>needed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Reboot<wbr>If<wbr>Needed</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
 
@@ -2898,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
 
@@ -2955,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
 
@@ -3012,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
 
@@ -3069,7 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Kind</span>
     </dt>
     <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
 

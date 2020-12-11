@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementGroupSubscription"
-title_tag: "Resource ManagementGroupSubscription | Module management | Package Azure NextGen"
+title_tag: "azure-nextgen.management.ManagementGroupSubscription"
 meta_desc: "Explore the ManagementGroupSubscription resource of the management module, including examples, input properties, output properties, lookup functions, and supporting types. The details of subscription under management group."
 ---
 

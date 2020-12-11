@@ -1,7 +1,7 @@
 
 ---
 title: "EnvironmentSetting"
-title_tag: "Resource EnvironmentSetting | Module labservices | Package Azure NextGen"
+title_tag: "azure-nextgen.labservices.EnvironmentSetting"
 meta_desc: "Explore the EnvironmentSetting resource of the labservices module, including examples, input properties, output properties, lookup functions, and supporting types. Represents settings of an environment, from which environment instances would be created"
 ---
 
@@ -24,7 +24,7 @@ Represents settings of an environment, from which environment instances would be
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnvironmentSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_settings</span><span class="p">:</span> <span class="nx">Optional[ResourceSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnvironmentSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConfigurationState]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_settings</span><span class="p">:</span> <span class="nx">Optional[ResourceSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,7 +252,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#configurationstate_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Configuration<wbr>State</span>
     </dt>
     <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
 
@@ -379,7 +379,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#configurationstate_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
 
@@ -506,7 +506,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#configurationstate_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Configuration<wbr>State</span>
     </dt>
     <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
 
@@ -633,7 +633,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#configuration_state_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Configuration<wbr>State</span>
     </dt>
     <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
 
@@ -1666,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Managed<wbr>Lab<wbr>Vm<wbr>Size</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
 
@@ -1703,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
 
@@ -1740,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Lab<wbr>Vm<wbr>Size</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
 
@@ -1777,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Lab<wbr>Vm<wbr>Size</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
 

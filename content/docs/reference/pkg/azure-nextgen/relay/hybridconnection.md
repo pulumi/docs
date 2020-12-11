@@ -1,7 +1,7 @@
 
 ---
 title: "HybridConnection"
-title_tag: "Resource HybridConnection | Module relay | Package Azure NextGen"
+title_tag: "azure-nextgen.relay.HybridConnection"
 meta_desc: "Explore the HybridConnection resource of the relay module, including examples, input properties, output properties, lookup functions, and supporting types. Description of hybrid connection resource."
 ---
 
@@ -29,10 +29,10 @@ class MyStack : Stack
     {
         var hybridConnection = new AzureNextGen.Relay.Latest.HybridConnection("hybridConnection", new AzureNextGen.Relay.Latest.HybridConnectionArgs
         {
-            HybridConnectionName = "sdk-Relay-Hybrid-01",
-            NamespaceName = "sdk-RelayNamespace-01",
+            HybridConnectionName = "example-Relay-Hybrid-01",
+            NamespaceName = "example-RelayNamespace-01",
             RequiresClientAuthorization = true,
-            ResourceGroupName = "RG-eg",
+            ResourceGroupName = "resourcegroup",
         });
     }
 
@@ -55,10 +55,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := relay.NewHybridConnection(ctx, "hybridConnection", &relay.HybridConnectionArgs{
-			HybridConnectionName:        pulumi.String("sdk-Relay-Hybrid-01"),
-			NamespaceName:               pulumi.String("sdk-RelayNamespace-01"),
+			HybridConnectionName:        pulumi.String("example-Relay-Hybrid-01"),
+			NamespaceName:               pulumi.String("example-RelayNamespace-01"),
 			RequiresClientAuthorization: pulumi.Bool(true),
-			ResourceGroupName:           pulumi.String("RG-eg"),
+			ResourceGroupName:           pulumi.String("resourcegroup"),
 		})
 		if err != nil {
 			return err
@@ -78,10 +78,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 hybrid_connection = azure_nextgen.relay.latest.HybridConnection("hybridConnection",
-    hybrid_connection_name="sdk-Relay-Hybrid-01",
-    namespace_name="sdk-RelayNamespace-01",
+    hybrid_connection_name="example-Relay-Hybrid-01",
+    namespace_name="example-RelayNamespace-01",
     requires_client_authorization=True,
-    resource_group_name="RG-eg")
+    resource_group_name="resourcegroup")
 
 ```
 
@@ -94,10 +94,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hybridConnection = new azure_nextgen.relay.latest.HybridConnection("hybridConnection", {
-    hybridConnectionName: "sdk-Relay-Hybrid-01",
-    namespaceName: "sdk-RelayNamespace-01",
+    hybridConnectionName: "example-Relay-Hybrid-01",
+    namespaceName: "example-RelayNamespace-01",
     requiresClientAuthorization: true,
-    resourceGroupName: "RG-eg",
+    resourceGroupName: "resourcegroup",
 });
 
 ```

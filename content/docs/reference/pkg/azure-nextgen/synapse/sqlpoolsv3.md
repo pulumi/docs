@@ -1,7 +1,7 @@
 
 ---
 title: "SqlPoolsV3"
-title_tag: "Resource SqlPoolsV3 | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.SqlPoolsV3"
 meta_desc: "Explore the SqlPoolsV3 resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. A sql pool resource."
 ---
 

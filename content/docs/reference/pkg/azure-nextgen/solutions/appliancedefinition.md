@@ -1,7 +1,7 @@
 
 ---
 title: "ApplianceDefinition"
-title_tag: "Resource ApplianceDefinition | Module solutions | Package Azure NextGen"
+title_tag: "azure-nextgen.solutions.ApplianceDefinition"
 meta_desc: "Explore the ApplianceDefinition resource of the solutions module, including examples, input properties, output properties, lookup functions, and supporting types. Information about appliance definition."
 ---
 
@@ -76,7 +76,7 @@ func main() {
 			Description:       pulumi.String("myApplianceDef description"),
 			DisplayName:       pulumi.String("myApplianceDef"),
 			Location:          pulumi.String("East US 2"),
-			LockLevel:         pulumi.String("None"),
+			LockLevel:         "None",
 			PackageFileUri:    pulumi.String("https://path/to/packagezipfile"),
 			ResourceGroupName: pulumi.String("rg"),
 		})
@@ -150,7 +150,7 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">appliance_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplianceArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplianceProviderAuthorizationArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">appliance_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplianceArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplianceProviderAuthorizationArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[ApplianceLockLevel]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -348,7 +348,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#locklevel_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Appliance<wbr>Lock<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The appliance lock level.{{% /md %}}</dd>
 
@@ -485,7 +485,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#locklevel_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The appliance lock level.{{% /md %}}</dd>
 
@@ -622,7 +622,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#locklevel_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Appliance<wbr>Lock<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The appliance lock level.{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#lock_level_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Appliance<wbr>Lock<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The appliance lock level.{{% /md %}}</dd>
 
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Appliance<wbr>Artifact<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The appliance artifact type.{{% /md %}}</dd>
 
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The appliance artifact type.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Appliance<wbr>Artifact<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The appliance artifact type.{{% /md %}}</dd>
 
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Appliance<wbr>Artifact<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The appliance artifact type.{{% /md %}}</dd>
 
@@ -1611,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1628,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1645,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1662,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Experiment"
-title_tag: "Resource Experiment | Module batchai | Package Azure NextGen"
+title_tag: "azure-nextgen.batchai.Experiment"
 meta_desc: "Explore the Experiment resource of the batchai module, including examples, input properties, output properties, lookup functions, and supporting types. Experiment information."
 ---
 

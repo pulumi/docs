@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module datalakeanalytics | Package Azure NextGen"
+title_tag: "azure-nextgen.datalakeanalytics.FirewallRule"
 meta_desc: "Explore the FirewallRule resource of the datalakeanalytics module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Analytics firewall rule information."
 ---
 

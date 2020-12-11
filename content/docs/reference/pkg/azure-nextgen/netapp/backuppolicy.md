@@ -1,7 +1,7 @@
 
 ---
 title: "BackupPolicy"
-title_tag: "Resource BackupPolicy | Module netapp | Package Azure NextGen"
+title_tag: "azure-nextgen.netapp.BackupPolicy"
 meta_desc: "Explore the BackupPolicy resource of the netapp module, including examples, input properties, output properties, lookup functions, and supporting types. Backup policy information"
 ---
 

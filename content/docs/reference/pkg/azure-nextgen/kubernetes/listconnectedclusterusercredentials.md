@@ -24,7 +24,7 @@ meta_desc: "Explore the ListConnectedClusterUserCredentials function of the kube
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connected_cluster_user_credentials(</span><span class="nx">authentication_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[AuthenticationDetailsValueArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectedClusterUserCredentialsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connected_cluster_user_credentials(</span><span class="nx">authentication_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, AuthenticationMethod]]</span> = None<span class="p">, </span><span class="nx">client_proxy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[AuthenticationDetailsValueArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectedClusterUserCredentialsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -55,7 +55,7 @@ The following arguments are supported:
 <a href="#authenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Authentication<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
 
@@ -89,6 +89,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientproxy_csharp">
+<a href="#clientproxy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Proxy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -102,7 +112,7 @@ The following arguments are supported:
 <a href="#authenticationmethod_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
 
@@ -136,6 +146,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientproxy_go">
+<a href="#clientproxy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Proxy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -149,7 +169,7 @@ The following arguments are supported:
 <a href="#authenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Authentication<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
 
@@ -183,6 +203,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientproxy_nodejs">
+<a href="#clientproxy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Proxy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -196,7 +226,7 @@ The following arguments are supported:
 <a href="#authentication_method_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Authentication<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
 
@@ -230,6 +260,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_proxy_python">
+<a href="#client_proxy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>proxy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -252,6 +292,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="hybridconnectionconfig_csharp">
+<a href="#hybridconnectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hybridconnectionconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>Hybrid<wbr>Connection<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the REP (rendezvous endpoint) and “Sender” access token.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kubeconfigs_csharp">
 <a href="#kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
 </span> 
@@ -266,6 +316,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="hybridconnectionconfig_go">
+<a href="#hybridconnectionconfig_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hybridconnectionconfigresponse">Hybrid<wbr>Connection<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the REP (rendezvous endpoint) and “Sender” access token.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -286,6 +346,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="hybridconnectionconfig_nodejs">
+<a href="#hybridconnectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hybridconnectionconfigresponse">Hybrid<wbr>Connection<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the REP (rendezvous endpoint) and “Sender” access token.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kubeconfigs_nodejs">
 <a href="#kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
 </span> 
@@ -300,6 +370,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="hybrid_connection_config_python">
+<a href="#hybrid_connection_config_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hybridconnectionconfigresponse">Hybrid<wbr>Connection<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the REP (rendezvous endpoint) and “Sender” access token.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -514,6 +594,205 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="hybridconnectionconfigresponse">Hybrid<wbr>Connection<wbr>Config<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expirationtime_csharp">
+<a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when this token will be expired.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hybridconnectionname_csharp">
+<a href="#hybridconnectionname_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the connection{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relay_csharp">
+<a href="#relay_csharp" style="color: inherit; text-decoration: inherit;">Relay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the relay.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sender access token{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expirationtime_go">
+<a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when this token will be expired.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hybridconnectionname_go">
+<a href="#hybridconnectionname_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the connection{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relay_go">
+<a href="#relay_go" style="color: inherit; text-decoration: inherit;">Relay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the relay.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sender access token{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expirationtime_nodejs">
+<a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when this token will be expired.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hybridconnectionname_nodejs">
+<a href="#hybridconnectionname_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the connection{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relay_nodejs">
+<a href="#relay_nodejs" style="color: inherit; text-decoration: inherit;">relay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the relay.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sender access token{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expiration_time_python">
+<a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when this token will be expired.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hybrid_connection_name_python">
+<a href="#hybrid_connection_name_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the connection{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relay_python">
+<a href="#relay_python" style="color: inherit; text-decoration: inherit;">relay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the relay.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sender access token{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

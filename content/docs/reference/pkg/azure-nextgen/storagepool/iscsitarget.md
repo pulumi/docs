@@ -1,7 +1,7 @@
 
 ---
 title: "IscsiTarget"
-title_tag: "Resource IscsiTarget | Module storagepool | Package Azure NextGen"
+title_tag: "azure-nextgen.storagepool.IscsiTarget"
 meta_desc: "Explore the IscsiTarget resource of the storagepool module, including examples, input properties, output properties, lookup functions, and supporting types. Payload for iSCSI Target Create or Update requests."
 ---
 
@@ -46,7 +46,7 @@ class MyStack : Stack
                             {
                                 "lun0",
                             },
-                            Password = "some_pa$$word",
+                            Password = "<password>",
                             Username = "some_username",
                         },
                     },
@@ -80,8 +80,6 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
-
 	storagepool "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagepool/v20200315preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -101,7 +99,7 @@ func main() {
 							MappedLuns: pulumi.StringArray{
 								pulumi.String("lun0"),
 							},
-							Password: pulumi.String(fmt.Sprintf("%v%v%v%v", "some_pa", "$", "$", "word")),
+							Password: pulumi.String("<password>"),
 							Username: pulumi.String("some_username"),
 						},
 					},
@@ -144,7 +142,7 @@ iscsi_target = azure_nextgen.storagepool.v20200315preview.IscsiTarget("iscsiTarg
         acls=[azure_nextgen.storagepool.v20200315preview.AclArgs(
             initiator_iqn="iqn.2005-03.org.iscsi:client",
             mapped_luns=["lun0"],
-            password="some_pa$$word",
+            password="<password>",
             username="some_username",
         )],
         attributes=azure_nextgen.storagepool.v20200315preview.AttributesArgs(
@@ -176,7 +174,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
         acls: [{
             initiatorIqn: "iqn.2005-03.org.iscsi:client",
             mappedLuns: ["lun0"],
-            password: `some_pa$$word`,
+            password: "<password>",
             username: "some_username",
         }],
         attributes: {

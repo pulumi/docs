@@ -1,7 +1,7 @@
 
 ---
 title: "PublicIPAddress"
-title_tag: "Resource PublicIPAddress | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.PublicIPAddress"
 meta_desc: "Explore the PublicIPAddress resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Public IP address resource."
 ---
 
@@ -320,7 +320,7 @@ const publicIPAddress = new azure_nextgen.network.latest.PublicIPAddress("public
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PublicIPAddress</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ddos_settings</span><span class="p">:</span> <span class="nx">Optional[DdosSettingsArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressDnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idle_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpTagArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_allocation_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_address_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PublicIPAddress</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ddos_settings</span><span class="p">:</span> <span class="nx">Optional[DdosSettingsArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressDnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idle_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpTagArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, IPVersion]]</span> = None<span class="p">, </span><span class="nx">public_ip_allocation_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, IPAllocationMethod]]</span> = None<span class="p">, </span><span class="nx">public_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_address_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -598,7 +598,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -608,7 +608,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#publicipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -765,7 +765,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -775,7 +775,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#publicipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -932,7 +932,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -942,7 +942,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#publicipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -1099,7 +1099,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#public_ip_address_version_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPVersion</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
 <a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -2880,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectioncoverage_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ddos<wbr>Settings<wbr>Protection<wbr>Coverage</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -2917,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectioncoverage_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -2954,7 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectioncoverage_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ddos<wbr>Settings<wbr>Protection<wbr>Coverage</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -2991,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_coverage_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ddos<wbr>Settings<wbr>Protection<wbr>Coverage</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -3467,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -3494,7 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -3521,7 +3521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -3548,7 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -11794,7 +11794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -11804,7 +11804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 
@@ -11821,7 +11821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -11831,7 +11831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 
@@ -11848,7 +11848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -11858,7 +11858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 
@@ -11875,7 +11875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>IPAddress<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -11885,7 +11885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 

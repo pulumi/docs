@@ -1,7 +1,7 @@
 
 ---
 title: "SubscriptionDiagnosticSetting"
-title_tag: "Resource SubscriptionDiagnosticSetting | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.SubscriptionDiagnosticSetting"
 meta_desc: "Explore the SubscriptionDiagnosticSetting resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. The subscription diagnostic setting resource."
 ---
 

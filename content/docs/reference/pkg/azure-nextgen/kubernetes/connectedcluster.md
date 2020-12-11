@@ -1,7 +1,7 @@
 
 ---
 title: "ConnectedCluster"
-title_tag: "Resource ConnectedCluster | Module kubernetes | Package Azure NextGen"
+title_tag: "azure-nextgen.kubernetes.ConnectedCluster"
 meta_desc: "Explore the ConnectedCluster resource of the kubernetes module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a connected cluster."
 ---
 
@@ -74,7 +74,7 @@ func main() {
 			AgentPublicKeyCertificate: pulumi.String("MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO"),
 			ClusterName:               pulumi.String("testCluster"),
 			Identity: &kubernetes.ConnectedClusterIdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
+				Type: "SystemAssigned",
 			},
 			Location:          pulumi.String("East US"),
 			ResourceGroupName: pulumi.String("k8sc-rg"),
@@ -154,7 +154,7 @@ const connectedCluster = new azure_nextgen.kubernetes.v20200101preview.Connected
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[ConnectedClusterAADProfileArgs]</span> = None<span class="p">, </span><span class="nx">agent_public_key_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ConnectedClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[ConnectedClusterAADProfileArgs]</span> = None<span class="p">, </span><span class="nx">agent_public_key_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connectivity_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectivityStatus]]</span> = None<span class="p">, </span><span class="nx">distribution</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ConnectedClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">infrastructure</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningState]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -388,11 +388,41 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectivitystatus_csharp">
+<a href="#connectivitystatus_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Connectivity<wbr>Status</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distribution_csharp">
+<a href="#distribution_csharp" style="color: inherit; text-decoration: inherit;">Distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_csharp">
+<a href="#infrastructure_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
@@ -475,11 +505,41 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectivitystatus_go">
+<a href="#connectivitystatus_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distribution_go">
+<a href="#distribution_go" style="color: inherit; text-decoration: inherit;">Distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_go">
+<a href="#infrastructure_go" style="color: inherit; text-decoration: inherit;">Infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
@@ -562,11 +622,41 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectivitystatus_nodejs">
+<a href="#connectivitystatus_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Connectivity<wbr>Status</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distribution_nodejs">
+<a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_nodejs">
+<a href="#infrastructure_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
@@ -649,11 +739,41 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectivity_status_python">
+<a href="#connectivity_status_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Connectivity<wbr>Status</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distribution_python">
+<a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_python">
+<a href="#infrastructure_python" style="color: inherit; text-decoration: inherit;">infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
@@ -717,6 +837,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="lastconnectivitytime_csharp">
+<a href="#lastconnectivitytime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managedidentitycertificateexpirationtime_csharp">
+<a href="#managedidentitycertificateexpirationtime_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Certificate<wbr>Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -724,6 +864,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_csharp">
+<a href="#offering_csharp" style="color: inherit; text-decoration: inherit;">Offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="totalcorecount_csharp">
+<a href="#totalcorecount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -784,6 +944,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="lastconnectivitytime_go">
+<a href="#lastconnectivitytime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managedidentitycertificateexpirationtime_go">
+<a href="#managedidentitycertificateexpirationtime_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Certificate<wbr>Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -791,6 +971,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_go">
+<a href="#offering_go" style="color: inherit; text-decoration: inherit;">Offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="totalcorecount_go">
+<a href="#totalcorecount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -851,6 +1051,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="lastconnectivitytime_nodejs">
+<a href="#lastconnectivitytime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managedidentitycertificateexpirationtime_nodejs">
+<a href="#managedidentitycertificateexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Certificate<wbr>Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -858,6 +1078,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_nodejs">
+<a href="#offering_nodejs" style="color: inherit; text-decoration: inherit;">offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="totalcorecount_nodejs">
+<a href="#totalcorecount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -918,6 +1158,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="last_connectivity_time_python">
+<a href="#last_connectivity_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>connectivity_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managed_identity_certificate_expiration_time_python">
+<a href="#managed_identity_certificate_expiration_time_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity_<wbr>certificate_<wbr>expiration_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -925,6 +1185,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_python">
+<a href="#offering_python" style="color: inherit; text-decoration: inherit;">offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="total_core_count_python">
+<a href="#total_core_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>core_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1297,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.{{% /md %}}</dd>
 
@@ -1314,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.{{% /md %}}</dd>
 
@@ -1331,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.{{% /md %}}</dd>
 
@@ -1348,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.{{% /md %}}</dd>
 

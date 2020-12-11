@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module cache | Package Azure NextGen"
+title_tag: "azure-nextgen.cache.FirewallRule"
 meta_desc: "Explore the FirewallRule resource of the cache module, including examples, input properties, output properties, lookup functions, and supporting types. A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect"
 ---
 

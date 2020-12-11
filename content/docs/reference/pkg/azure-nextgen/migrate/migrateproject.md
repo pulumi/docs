@@ -1,7 +1,7 @@
 
 ---
 title: "MigrateProject"
-title_tag: "Resource MigrateProject | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.MigrateProject"
 meta_desc: "Explore the MigrateProject resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. Migrate Project REST Resource."
 ---
 
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
 
@@ -935,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
 
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "QueueServiceProperties"
-title_tag: "Resource QueueServiceProperties | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.QueueServiceProperties"
 meta_desc: "Explore the QueueServiceProperties resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The properties of a storage account’s Queue service."
 ---
 

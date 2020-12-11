@@ -134,6 +134,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -158,7 +168,7 @@ The following output properties are available:
 <a href="#authenticationdetails_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response&gt;&gt;</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 
@@ -178,6 +188,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -205,7 +225,7 @@ The following output properties are available:
 <a href="#authenticationdetails_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailspropertiesresponse">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailspropertiesresponse">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailspropertiesresponse">Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 
@@ -225,6 +245,16 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -252,7 +282,7 @@ The following output properties are available:
 <a href="#authenticationdetails_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response | Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response | Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailspropertiesresponse">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailspropertiesresponse">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailspropertiesresponse">Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 
@@ -272,6 +302,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -299,7 +339,7 @@ The following output properties are available:
 <a href="#authentication_details_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailspropertiesresponse">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailspropertiesresponse">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailspropertiesresponse">Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 

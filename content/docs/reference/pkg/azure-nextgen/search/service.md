@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module search | Package Azure NextGen"
+title_tag: "azure-nextgen.search.Service"
 meta_desc: "Explore the Service resource of the search module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an Azure Cognitive Search service and its current state."
 ---
 
@@ -65,14 +65,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
-			HostingMode:       pulumi.String("default"),
+			HostingMode:       "default",
 			Location:          pulumi.String("westus"),
 			PartitionCount:    pulumi.Int(1),
 			ReplicaCount:      pulumi.Int(3),
 			ResourceGroupName: pulumi.String("rg1"),
 			SearchServiceName: pulumi.String("mysearchservice"),
 			Sku: &search.SkuArgs{
-				Name: pulumi.String("standard"),
+				Name: "standard",
 			},
 			Tags: pulumi.StringMap{
 				"app-name": pulumi.String("My e-commerce app"),
@@ -187,15 +187,15 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
-			HostingMode:         pulumi.String("default"),
+			HostingMode:         "default",
 			Location:            pulumi.String("westus"),
 			PartitionCount:      pulumi.Int(1),
-			PublicNetworkAccess: pulumi.String("disabled"),
+			PublicNetworkAccess: "disabled",
 			ReplicaCount:        pulumi.Int(3),
 			ResourceGroupName:   pulumi.String("rg1"),
 			SearchServiceName:   pulumi.String("mysearchservice"),
 			Sku: &search.SkuArgs{
-				Name: pulumi.String("standard"),
+				Name: "standard",
 			},
 			Tags: pulumi.StringMap{
 				"app-name": pulumi.String("My e-commerce app"),
@@ -325,7 +325,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
-			HostingMode: pulumi.String("default"),
+			HostingMode: "default",
 			Location:    pulumi.String("westus"),
 			NetworkRuleSet: &search.NetworkRuleSetArgs{
 				IpRules: search.IpRuleArray{
@@ -342,7 +342,7 @@ func main() {
 			ResourceGroupName: pulumi.String("rg1"),
 			SearchServiceName: pulumi.String("mysearchservice"),
 			Sku: &search.SkuArgs{
-				Name: pulumi.String("standard"),
+				Name: "standard",
 			},
 			Tags: pulumi.StringMap{
 				"app-name": pulumi.String("My e-commerce app"),
@@ -480,9 +480,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
-			HostingMode: pulumi.String("default"),
+			HostingMode: "default",
 			Identity: &search.IdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
+				Type: "SystemAssigned",
 			},
 			Location:          pulumi.String("westus"),
 			PartitionCount:    pulumi.Int(1),
@@ -490,7 +490,7 @@ func main() {
 			ResourceGroupName: pulumi.String("rg1"),
 			SearchServiceName: pulumi.String("mysearchservice"),
 			Sku: &search.SkuArgs{
-				Name: pulumi.String("standard"),
+				Name: "standard",
 			},
 			Tags: pulumi.StringMap{
 				"app-name": pulumi.String("My e-commerce app"),
@@ -574,7 +574,7 @@ const service = new azure_nextgen.search.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hosting_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hosting_mode</span><span class="p">:</span> <span class="nx">Optional[HostingMode]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[PublicNetworkAccess]</span> = None<span class="p">, </span><span class="nx">replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -782,7 +782,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostingmode_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Hosting<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.{{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Public<wbr>Network<wbr>Access</span>
     </dt>
     <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostingmode_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd>
 
@@ -1016,7 +1016,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostingmode_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Hosting<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.{{% /md %}}</dd>
 
@@ -1056,7 +1056,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Public<wbr>Network<wbr>Access</span>
     </dt>
     <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd>
 
@@ -1133,7 +1133,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hosting_mode_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Hosting<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.{{% /md %}}</dd>
 
@@ -1173,7 +1173,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Public<wbr>Network<wbr>Access</span>
     </dt>
     <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd>
 
@@ -1599,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1616,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1633,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1650,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -3187,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'{{% /md %}}</dd>
 
@@ -3204,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'{{% /md %}}</dd>
 
@@ -3221,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'{{% /md %}}</dd>
 
@@ -3238,7 +3238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'{{% /md %}}</dd>
 

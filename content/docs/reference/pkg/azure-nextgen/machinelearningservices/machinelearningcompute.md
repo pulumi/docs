@@ -1,7 +1,7 @@
 
 ---
 title: "MachineLearningCompute"
-title_tag: "Resource MachineLearningCompute | Module machinelearningservices | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningservices.MachineLearningCompute"
 meta_desc: "Explore the MachineLearningCompute resource of the machinelearningservices module, including examples, input properties, output properties, lookup functions, and supporting types. Machine Learning compute object wrapped into ARM resource envelope."
 ---
 
@@ -908,7 +908,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSArgs, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Factory<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#aks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSArgs</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amlcompute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#computeinstance">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datafactory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Factory<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datalakeanalytics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databricks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsight">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachine">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd>
 
@@ -995,7 +995,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#aks">AKS</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amlcompute">Aml<wbr>Compute</a></span><span class="property-type"> | </span><span class="property-type"><a href="#computeinstance">Compute<wbr>Instance</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datafactory">Data<wbr>Factory</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datalakeanalytics">Data<wbr>Lake<wbr>Analytics</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databricks">Databricks</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsight">HDInsight</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachine">Virtual<wbr>Machine</a></span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd>
 
@@ -1082,7 +1082,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">AKS | Aml<wbr>Compute | Compute<wbr>Instance | Data<wbr>Factory | Data<wbr>Lake<wbr>Analytics | Databricks | HDInsight | Virtual<wbr>Machine</span>
+        <span class="property-type"><a href="#aks">AKS</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amlcompute">Aml<wbr>Compute</a></span><span class="property-type"> | </span><span class="property-type"><a href="#computeinstance">Compute<wbr>Instance</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datafactory">Data<wbr>Factory</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datalakeanalytics">Data<wbr>Lake<wbr>Analytics</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databricks">Databricks</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsight">HDInsight</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachine">Virtual<wbr>Machine</a></span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[AKSArgs, Aml<wbr>Compute<wbr>Args, Compute<wbr>Instance<wbr>Args, Data<wbr>Factory<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>Args, Databricks<wbr>Args, HDInsight<wbr>Args, Virtual<wbr>Machine<wbr>Args]</span>
+        <span class="property-type"><a href="#aks">AKSArgs</a></span><span class="property-type"> | </span><span class="property-type"><a href="#amlcompute">Aml<wbr>Compute<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#computeinstance">Compute<wbr>Instance<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datafactory">Data<wbr>Factory<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#datalakeanalytics">Data<wbr>Lake<wbr>Analytics<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databricks">Databricks<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hdinsight">HDInsight<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachine">Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd>
 
@@ -3098,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteloginportpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
 
@@ -3138,7 +3138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmpriority_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Vm<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
 
@@ -3165,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteloginportpublicaccess_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
 
@@ -3205,7 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmpriority_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
 
@@ -3232,7 +3232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteloginportpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
 
@@ -3272,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmpriority_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Vm<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
 
@@ -3299,7 +3299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_login_port_public_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>login_<wbr>port_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
 
@@ -3339,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_priority_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Vm<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
 
@@ -5050,7 +5050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsharingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Sharing<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Application<wbr>Sharing<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
 
@@ -5097,7 +5097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsharingpolicy_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Sharing<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
 
@@ -5144,7 +5144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsharingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Sharing<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Application<wbr>Sharing<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
 
@@ -5191,7 +5191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_sharing_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>sharing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Application<wbr>Sharing<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
 
@@ -6097,7 +6097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Ssh<wbr>Public<wbr>Access</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
 
@@ -6124,7 +6124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshpublicaccess_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
 
@@ -6151,7 +6151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ssh<wbr>Public<wbr>Access</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
 
@@ -6178,7 +6178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_public_access_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ssh<wbr>Public<wbr>Access</span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
 
@@ -9629,7 +9629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -9656,7 +9656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -9683,7 +9683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -9710,7 +9710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementConfiguration"
-title_tag: "Resource ManagementConfiguration | Module operationsmanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.operationsmanagement.ManagementConfiguration"
 meta_desc: "Explore the ManagementConfiguration resource of the operationsmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. The container for solution."
 ---
 

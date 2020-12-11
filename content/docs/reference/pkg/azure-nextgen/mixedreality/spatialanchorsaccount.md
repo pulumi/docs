@@ -1,7 +1,7 @@
 
 ---
 title: "SpatialAnchorsAccount"
-title_tag: "Resource SpatialAnchorsAccount | Module mixedreality | Package Azure NextGen"
+title_tag: "azure-nextgen.mixedreality.SpatialAnchorsAccount"
 meta_desc: "Explore the SpatialAnchorsAccount resource of the mixedreality module, including examples, input properties, output properties, lookup functions, and supporting types. SpatialAnchorsAccount Response."
 ---
 

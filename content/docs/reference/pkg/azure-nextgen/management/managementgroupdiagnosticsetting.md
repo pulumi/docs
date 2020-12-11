@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementGroupDiagnosticSetting"
-title_tag: "Resource ManagementGroupDiagnosticSetting | Module management | Package Azure NextGen"
+title_tag: "azure-nextgen.management.ManagementGroupDiagnosticSetting"
 meta_desc: "Explore the ManagementGroupDiagnosticSetting resource of the management module, including examples, input properties, output properties, lookup functions, and supporting types. The management group diagnostic setting resource."
 ---
 

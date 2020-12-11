@@ -1,7 +1,7 @@
 
 ---
 title: "ShareSubscription"
-title_tag: "Resource ShareSubscription | Module datashare | Package Azure NextGen"
+title_tag: "azure-nextgen.datashare.ShareSubscription"
 meta_desc: "Explore the ShareSubscription resource of the datashare module, including examples, input properties, output properties, lookup functions, and supporting types. A share subscription data transfer object."
 ---
 

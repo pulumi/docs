@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateAtlase"
-title_tag: "Resource PrivateAtlase | Module maps | Package Azure NextGen"
+title_tag: "azure-nextgen.maps.PrivateAtlase"
 meta_desc: "Explore the PrivateAtlase resource of the maps module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure resource which represents which will provision the ability to create private location data."
 ---
 

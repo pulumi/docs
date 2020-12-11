@@ -222,6 +222,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -266,7 +276,7 @@ The following output properties are available:
 <a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Encoded<wbr>Task<wbr>Step<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>File<wbr>Task<wbr>Step<wbr>Response&gt;&gt;</span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Encoded<wbr>Task<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
 
@@ -369,6 +379,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -413,7 +433,7 @@ The following output properties are available:
 <a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
 
@@ -516,6 +536,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -560,7 +590,7 @@ The following output properties are available:
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Docker<wbr>Build<wbr>Step<wbr>Response | Encoded<wbr>Task<wbr>Step<wbr>Response | File<wbr>Task<wbr>Step<wbr>Response</span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
 
@@ -663,6 +693,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -707,7 +747,7 @@ The following output properties are available:
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
 

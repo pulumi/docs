@@ -174,6 +174,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource identifier of the job.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -238,6 +248,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource identifier of the job.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -308,6 +328,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource identifier of the job.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -372,6 +402,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource identifier of the job.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -444,6 +484,205 @@ The following output properties are available:
 
 
 ## Supporting Types
+
+
+<h4 id="deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="carriername_csharp">
+<a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackingnumber_csharp">
+<a href="#trackingnumber_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="drivecount_csharp">
+<a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="shipdate_csharp">
+<a href="#shipdate_csharp" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="carriername_go">
+<a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackingnumber_go">
+<a href="#trackingnumber_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="drivecount_go">
+<a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="shipdate_go">
+<a href="#shipdate_go" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="carriername_nodejs">
+<a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackingnumber_nodejs">
+<a href="#trackingnumber_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="drivecount_nodejs">
+<a href="#drivecount_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="shipdate_nodejs">
+<a href="#shipdate_nodejs" style="color: inherit; text-decoration: inherit;">ship<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="carrier_name_python">
+<a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tracking_number_python">
+<a href="#tracking_number_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="drive_count_python">
+<a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ship_date_python">
+<a href="#ship_date_python" style="color: inherit; text-decoration: inherit;">ship_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="drivestatusresponse">Drive<wbr>Status<wbr>Response</h4>
@@ -1479,7 +1718,7 @@ The following output properties are available:
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
 
@@ -1666,7 +1905,7 @@ The following output properties are available:
 <a href="#deliverypackage_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
 
@@ -1853,7 +2092,7 @@ The following output properties are available:
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
 
@@ -2040,7 +2279,7 @@ The following output properties are available:
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
 

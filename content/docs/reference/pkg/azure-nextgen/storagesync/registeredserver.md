@@ -1,7 +1,7 @@
 
 ---
 title: "RegisteredServer"
-title_tag: "Resource RegisteredServer | Module storagesync | Package Azure NextGen"
+title_tag: "azure-nextgen.storagesync.RegisteredServer"
 meta_desc: "Explore the RegisteredServer resource of the storagesync module, including examples, input properties, output properties, lookup functions, and supporting types. Registered Server resource."
 ---
 

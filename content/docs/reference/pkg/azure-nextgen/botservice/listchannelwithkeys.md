@@ -212,6 +212,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -226,7 +236,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Alexa<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Email<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Facebook<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Kik<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Line<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Skype<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Slack<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Sms<wbr>Channel<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Telegram<wbr>Channel<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Response&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#alexachannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Alexa<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Email<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Facebook<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Kik<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Skype<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Slack<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Sms<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Telegram<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -299,6 +309,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -313,7 +333,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#alexachannelresponse">Alexa<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannelresponse">Direct<wbr>Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannelresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannelresponse">Email<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannelresponse">Facebook<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannelresponse">Kik<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannelresponse">Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannelresponse">Ms<wbr>Teams<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannelresponse">Skype<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannelresponse">Slack<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannelresponse">Sms<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannelresponse">Telegram<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannelresponse">Web<wbr>Chat<wbr>Channel<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -386,6 +406,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -400,7 +430,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Alexa<wbr>Channel<wbr>Response | Direct<wbr>Line<wbr>Channel<wbr>Response | Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response | Email<wbr>Channel<wbr>Response | Facebook<wbr>Channel<wbr>Response | Kik<wbr>Channel<wbr>Response | Line<wbr>Channel<wbr>Response | Ms<wbr>Teams<wbr>Channel<wbr>Response | Skype<wbr>Channel<wbr>Response | Slack<wbr>Channel<wbr>Response | Sms<wbr>Channel<wbr>Response | Telegram<wbr>Channel<wbr>Response | Web<wbr>Chat<wbr>Channel<wbr>Response</span>
+        <span class="property-type"><a href="#alexachannelresponse">Alexa<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannelresponse">Direct<wbr>Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannelresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannelresponse">Email<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannelresponse">Facebook<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannelresponse">Kik<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannelresponse">Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannelresponse">Ms<wbr>Teams<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannelresponse">Skype<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannelresponse">Slack<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannelresponse">Sms<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannelresponse">Telegram<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannelresponse">Web<wbr>Chat<wbr>Channel<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -473,6 +503,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -487,7 +527,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#alexachannelresponse">Alexa<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinechannelresponse">Direct<wbr>Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#directlinespeechchannelresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#emailchannelresponse">Email<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facebookchannelresponse">Facebook<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#kikchannelresponse">Kik<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linechannelresponse">Line<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#msteamschannelresponse">Ms<wbr>Teams<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#skypechannelresponse">Skype<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#slackchannelresponse">Slack<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#smschannelresponse">Sms<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#telegramchannelresponse">Telegram<wbr>Channel<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webchatchannelresponse">Web<wbr>Chat<wbr>Channel<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 

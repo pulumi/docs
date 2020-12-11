@@ -1,7 +1,7 @@
 
 ---
 title: "DigitalTwinsEndpoint"
-title_tag: "Resource DigitalTwinsEndpoint | Module digitaltwins | Package Azure NextGen"
+title_tag: "azure-nextgen.digitaltwins.DigitalTwinsEndpoint"
 meta_desc: "Explore the DigitalTwinsEndpoint resource of the digitaltwins module, including examples, input properties, output properties, lookup functions, and supporting types. DigitalTwinsInstance endpoint resource."
 ---
 
@@ -292,7 +292,7 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#eventgrid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhub">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
@@ -339,7 +339,7 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#eventgrid">Event<wbr>Grid</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhub">Event<wbr>Hub</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebus">Service<wbr>Bus</a></span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
@@ -386,7 +386,7 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Event<wbr>Grid | Event<wbr>Hub | Service<wbr>Bus</span>
+        <span class="property-type"><a href="#eventgrid">Event<wbr>Grid</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhub">Event<wbr>Hub</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebus">Service<wbr>Bus</a></span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
@@ -433,7 +433,7 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Event<wbr>Grid<wbr>Args, Event<wbr>Hub<wbr>Args, Service<wbr>Bus<wbr>Args]</span>
+        <span class="property-type"><a href="#eventgrid">Event<wbr>Grid<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhub">Event<wbr>Hub<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebus">Service<wbr>Bus<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 

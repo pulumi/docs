@@ -1,7 +1,7 @@
 
 ---
 title: "JobCredential"
-title_tag: "Resource JobCredential | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.JobCredential"
 meta_desc: "Explore the JobCredential resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A stored credential that can be used by a job to connect to target databases."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobCredential = new AzureNextGen.Sql.V20170301Preview.JobCredential("jobCredential", new AzureNextGen.Sql.V20170301Preview.JobCredentialArgs
+        var jobCredential = new AzureNextGen.Sql.V20200801Preview.JobCredential("jobCredential", new AzureNextGen.Sql.V20200801Preview.JobCredentialArgs
         {
             CredentialName = "cred1",
             JobAgentName = "agent1",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_credential = azure_nextgen.sql.v20170301preview.JobCredential("jobCredential",
+job_credential = azure_nextgen.sql.v20200801preview.JobCredential("jobCredential",
     credential_name="cred1",
     job_agent_name="agent1",
     password="<password>",
@@ -99,7 +99,7 @@ job_credential = azure_nextgen.sql.v20170301preview.JobCredential("jobCredential
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobCredential = new azure_nextgen.sql.v20170301preview.JobCredential("jobCredential", {
+const jobCredential = new azure_nextgen.sql.v20200801preview.JobCredential("jobCredential", {
     credentialName: "cred1",
     jobAgentName: "agent1",
     password: "<password>",

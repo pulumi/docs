@@ -1,7 +1,7 @@
 
 ---
 title: "BackupScheduleGroup"
-title_tag: "Resource BackupScheduleGroup | Module storsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.storsimple.BackupScheduleGroup"
 meta_desc: "Explore the BackupScheduleGroup resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. The Backup Schedule Group"
 ---
 

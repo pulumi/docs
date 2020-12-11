@@ -1,7 +1,7 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.Secret"
 meta_desc: "Explore the Secret resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A secret."
 ---
 

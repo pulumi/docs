@@ -1,7 +1,7 @@
 
 ---
 title: "WorkspaceConnection"
-title_tag: "Resource WorkspaceConnection | Module machinelearningservices | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningservices.WorkspaceConnection"
 meta_desc: "Explore the WorkspaceConnection resource of the machinelearningservices module, including examples, input properties, output properties, lookup functions, and supporting types. Workspace connection."
 ---
 

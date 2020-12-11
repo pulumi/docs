@@ -1,7 +1,7 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Module netapp | Package Azure NextGen"
+title_tag: "azure-nextgen.netapp.Volume"
 meta_desc: "Explore the Volume resource of the netapp module, including examples, input properties, output properties, lookup functions, and supporting types. Volume resource"
 ---
 
@@ -140,7 +140,7 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountTargetPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountTargetPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -468,7 +468,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Security<wbr>Style</span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
 
@@ -478,7 +478,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servicelevel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Service<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
 
@@ -695,7 +695,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
 
@@ -705,7 +705,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servicelevel_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
 
@@ -922,7 +922,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Style</span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
 
@@ -932,7 +932,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servicelevel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Service<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
 
@@ -1149,7 +1149,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Style</span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#service_level_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Service<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
 
@@ -3051,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationschedule_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Replication<wbr>Schedule</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
 
@@ -3061,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Endpoint<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
 
@@ -3108,7 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationschedule_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
 
@@ -3165,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationschedule_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Replication<wbr>Schedule</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
 
@@ -3175,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Endpoint<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
 
@@ -3222,7 +3222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_schedule_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Replication<wbr>Schedule</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
 
@@ -3232,7 +3232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Endpoint<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
 

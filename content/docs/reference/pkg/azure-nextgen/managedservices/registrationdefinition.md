@@ -1,7 +1,7 @@
 
 ---
 title: "RegistrationDefinition"
-title_tag: "Resource RegistrationDefinition | Module managedservices | Package Azure NextGen"
+title_tag: "azure-nextgen.managedservices.RegistrationDefinition"
 meta_desc: "Explore the RegistrationDefinition resource of the managedservices module, including examples, input properties, output properties, lookup functions, and supporting types. Registration definition."
 ---
 

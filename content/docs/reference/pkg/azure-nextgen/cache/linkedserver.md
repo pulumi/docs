@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedServer"
-title_tag: "Resource LinkedServer | Module cache | Package Azure NextGen"
+title_tag: "azure-nextgen.cache.LinkedServer"
 meta_desc: "Explore the LinkedServer resource of the cache module, including examples, input properties, output properties, lookup functions, and supporting types. Response to put/get linked server (with properties) for Redis cache."
 ---
 
@@ -62,7 +62,7 @@ func main() {
 			LinkedServerName:         pulumi.String("cache2"),
 			Name:                     pulumi.String("cache1"),
 			ResourceGroupName:        pulumi.String("rg1"),
-			ServerRole:               pulumi.String("Secondary"),
+			ServerRole:               "Secondary",
 		})
 		if err != nil {
 			return err
@@ -124,7 +124,7 @@ const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LinkedServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">linked_redis_cache_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_redis_cache_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LinkedServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">linked_redis_cache_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_redis_cache_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_role</span><span class="p">:</span> <span class="nx">Optional[ReplicationRole]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -352,7 +352,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#serverrole_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Replication<wbr>Role</span>
     </dt>
     <dd>{{% md %}}Role of the linked server.{{% /md %}}</dd>
 
@@ -419,7 +419,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#serverrole_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role of the linked server.{{% /md %}}</dd>
 
@@ -486,7 +486,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#serverrole_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Replication<wbr>Role</span>
     </dt>
     <dd>{{% md %}}Role of the linked server.{{% /md %}}</dd>
 
@@ -553,7 +553,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#server_role_python" style="color: inherit; text-decoration: inherit;">server_<wbr>role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Replication<wbr>Role</span>
     </dt>
     <dd>{{% md %}}Role of the linked server.{{% /md %}}</dd>
 

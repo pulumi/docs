@@ -1,7 +1,7 @@
 
 ---
 title: "TemplateSpecVersion"
-title_tag: "Resource TemplateSpecVersion | Module resources | Package Azure NextGen"
+title_tag: "azure-nextgen.resources.TemplateSpecVersion"
 meta_desc: "Explore the TemplateSpecVersion resource of the resources module, including examples, input properties, output properties, lookup functions, and supporting types. Template Spec Version object."
 ---
 

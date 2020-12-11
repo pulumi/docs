@@ -1,7 +1,7 @@
 
 ---
 title: "Prediction"
-title_tag: "Resource Prediction | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.Prediction"
 meta_desc: "Explore the Prediction resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The prediction resource format."
 ---
 

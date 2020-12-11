@@ -1,7 +1,7 @@
 
 ---
 title: "SourceControlConfiguration"
-title_tag: "Resource SourceControlConfiguration | Module kubernetesconfiguration | Package Azure NextGen"
+title_tag: "azure-nextgen.kubernetesconfiguration.SourceControlConfiguration"
 meta_desc: "Explore the SourceControlConfiguration resource of the kubernetesconfiguration module, including examples, input properties, output properties, lookup functions, and supporting types. The SourceControl Configuration object returned in Get &amp; Put response."
 ---
 
@@ -182,7 +182,7 @@ const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.v20
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_rp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_protected_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">enable_helm_operator</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">helm_operator_properties</span><span class="p">:</span> <span class="nx">Optional[HelmOperatorPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">operator_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_params</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_control_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_known_hosts_contents</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_rp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_protected_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">enable_helm_operator</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">helm_operator_properties</span><span class="p">:</span> <span class="nx">Optional[HelmOperatorPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">operator_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_params</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_scope</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatorScopeType]]</span> = None<span class="p">, </span><span class="nx">operator_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatorType]]</span> = None<span class="p">, </span><span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_control_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_known_hosts_contents</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -470,7 +470,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatorscope_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Operator<wbr>Scope<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
 
@@ -480,7 +480,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatortype_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Operator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
 
@@ -627,7 +627,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatorscope_go" style="color: inherit; text-decoration: inherit;">Operator<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
 
@@ -637,7 +637,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatortype_go" style="color: inherit; text-decoration: inherit;">Operator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatorscope_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operator<wbr>Scope<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
 
@@ -794,7 +794,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatortype_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
 
@@ -941,7 +941,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operator_scope_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operator<wbr>Scope<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
 
@@ -951,7 +951,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operator_type_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
 

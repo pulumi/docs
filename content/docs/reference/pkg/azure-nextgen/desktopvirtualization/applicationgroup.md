@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationGroup"
-title_tag: "Resource ApplicationGroup | Module desktopvirtualization | Package Azure NextGen"
+title_tag: "azure-nextgen.desktopvirtualization.ApplicationGroup"
 meta_desc: "Explore the ApplicationGroup resource of the desktopvirtualization module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a ApplicationGroup definition."
 ---
 
@@ -145,7 +145,7 @@ const applicationGroup = new azure_nextgen.desktopvirtualization.v20201110previe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplicationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_arm_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplicationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_group_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ApplicationGroupType]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_arm_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -333,7 +333,7 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#applicationgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Group<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Application<wbr>Group<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Resource Type of ApplicationGroup.{{% /md %}}</dd>
 
@@ -420,7 +420,7 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#applicationgrouptype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Group<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Type of ApplicationGroup.{{% /md %}}</dd>
 
@@ -507,7 +507,7 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#applicationgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Group<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Application<wbr>Group<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Resource Type of ApplicationGroup.{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#application_group_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>group_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Application<wbr>Group<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Resource Type of ApplicationGroup.{{% /md %}}</dd>
 

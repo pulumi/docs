@@ -1,7 +1,7 @@
 
 ---
 title: "MachineLearningService"
-title_tag: "Resource MachineLearningService | Module machinelearningservices | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningservices.MachineLearningService"
 meta_desc: "Explore the MachineLearningService resource of the machinelearningservices module, including examples, input properties, output properties, lookup functions, and supporting types. Machine Learning service object wrapped into ARM resource envelope."
 ---
 
@@ -359,7 +359,7 @@ const machineLearningService = new azure_nextgen.machinelearningservices.v202009
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_image_request</span><span class="p">:</span> <span class="nx">Optional[CreateServiceRequestEnvironmentImageRequestArgs]</span> = None<span class="p">, </span><span class="nx">keys</span><span class="p">:</span> <span class="nx">Optional[CreateServiceRequestKeysArgs]</span> = None<span class="p">, </span><span class="nx">kv_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ComputeEnvironmentType]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_image_request</span><span class="p">:</span> <span class="nx">Optional[CreateServiceRequestEnvironmentImageRequestArgs]</span> = None<span class="p">, </span><span class="nx">keys</span><span class="p">:</span> <span class="nx">Optional[CreateServiceRequestKeysArgs]</span> = None<span class="p">, </span><span class="nx">kv_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -537,7 +537,7 @@ The MachineLearningService resource accepts the following [input]({{< relref "/d
 <a href="#computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Compute<wbr>Environment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The compute environment type for the service.{{% /md %}}</dd>
 
@@ -644,7 +644,7 @@ The MachineLearningService resource accepts the following [input]({{< relref "/d
 <a href="#computetype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute environment type for the service.{{% /md %}}</dd>
 
@@ -751,7 +751,7 @@ The MachineLearningService resource accepts the following [input]({{< relref "/d
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Compute<wbr>Environment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The compute environment type for the service.{{% /md %}}</dd>
 
@@ -858,7 +858,7 @@ The MachineLearningService resource accepts the following [input]({{< relref "/d
 <a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Compute<wbr>Environment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The compute environment type for the service.{{% /md %}}</dd>
 

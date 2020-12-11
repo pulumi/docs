@@ -174,6 +174,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -228,7 +238,7 @@ The following output properties are available:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -291,6 +301,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -345,7 +365,7 @@ The following output properties are available:
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -408,6 +428,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -462,7 +492,7 @@ The following output properties are available:
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -525,6 +555,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -579,7 +619,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 

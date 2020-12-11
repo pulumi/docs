@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRouteCircuitConnection"
-title_tag: "Resource ExpressRouteCircuitConnection | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.ExpressRouteCircuitConnection"
 meta_desc: "Explore the ExpressRouteCircuitConnection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Express Route Circuit Connection in an ExpressRouteCircuitPeering resource."
 ---
 

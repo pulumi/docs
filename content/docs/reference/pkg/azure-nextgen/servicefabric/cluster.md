@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module servicefabric | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabric.Cluster"
 meta_desc: "Explore the Cluster resource of the servicefabric module, including examples, input properties, output properties, lookup functions, and supporting types. The cluster resource"
 ---
 

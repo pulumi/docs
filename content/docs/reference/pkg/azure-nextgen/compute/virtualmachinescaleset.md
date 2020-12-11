@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachineScaleSet"
-title_tag: "Resource VirtualMachineScaleSet | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.VirtualMachineScaleSet"
 meta_desc: "Explore the VirtualMachineScaleSet resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Virtual Machine Scale Set."
 ---
 
@@ -119,7 +119,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -146,7 +146,7 @@ func main() {
 				},
 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						Image: &compute.VirtualHardDiskArgs{
 							Uri: pulumi.String("http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd"),
@@ -390,7 +390,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -423,7 +423,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						Name:         pulumi.String("osDisk"),
 						VhdContainers: pulumi.StringArray{
@@ -683,7 +683,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -713,7 +713,7 @@ func main() {
 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -974,7 +974,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -1002,7 +1002,7 @@ func main() {
 				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
 					DataDisks: compute.VirtualMachineScaleSetDataDiskArray{
 						&compute.VirtualMachineScaleSetDataDiskArgs{
-							Caching:      pulumi.String("ReadWrite"),
+							Caching:      "ReadWrite",
 							CreateOption: pulumi.String("Empty"),
 							DiskSizeGB:   pulumi.Int(1023),
 							Lun:          pulumi.Int(0),
@@ -1018,7 +1018,7 @@ func main() {
 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
@@ -1308,7 +1308,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -1344,7 +1344,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadOnly"),
+						Caching:      "ReadOnly",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -1619,7 +1619,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -1652,7 +1652,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -1917,7 +1917,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -1955,7 +1955,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -2228,7 +2228,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -2275,7 +2275,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -2552,7 +2552,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -2585,7 +2585,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -2849,7 +2849,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
@@ -2888,7 +2888,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -3164,7 +3164,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -3209,7 +3209,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						DiskSizeGB:   pulumi.Int(512),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
@@ -3500,7 +3500,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -3533,7 +3533,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadOnly"),
+						Caching:      "ReadOnly",
 						CreateOption: pulumi.String("FromImage"),
 						DiffDiskSettings: &compute.DiffDiskSettingsArgs{
 							Option:    pulumi.String("Local"),
@@ -3818,7 +3818,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -3851,7 +3851,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadOnly"),
+						Caching:      "ReadOnly",
 						CreateOption: pulumi.String("FromImage"),
 						DiffDiskSettings: &compute.DiffDiskSettingsArgs{
 							Option: pulumi.String("Local"),
@@ -4142,7 +4142,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
@@ -4194,7 +4194,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -4483,7 +4483,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				DiagnosticsProfile: &compute.DiagnosticsProfileArgs{
@@ -4521,7 +4521,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -4779,7 +4779,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -4812,7 +4812,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -5060,7 +5060,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -5093,7 +5093,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Premium_LRS"),
@@ -5355,7 +5355,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -5398,7 +5398,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -5670,7 +5670,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Manual"),
+				Mode: "Manual",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -5709,7 +5709,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
 							StorageAccountType: pulumi.String("Standard_LRS"),
@@ -5990,7 +5990,7 @@ func main() {
 				Tier:     pulumi.String("Standard"),
 			},
 			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: pulumi.String("Automatic"),
+				Mode: "Automatic",
 			},
 			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
@@ -6035,7 +6035,7 @@ func main() {
 						Version:   pulumi.String("latest"),
 					},
 					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      pulumi.String("ReadWrite"),
+						Caching:      "ReadWrite",
 						CreateOption: pulumi.String("FromImage"),
 						DiskSizeGB:   pulumi.Int(512),
 						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
@@ -7649,7 +7649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentname_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Component<wbr>Names</span>
     </dt>
     <dd>{{% md %}}The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.{{% /md %}}</dd>
 
@@ -7669,7 +7669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passname_csharp" style="color: inherit; text-decoration: inherit;">Pass<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Pass<wbr>Names</span>
     </dt>
     <dd>{{% md %}}The pass name. Currently, the only allowable value is OobeSystem.{{% /md %}}</dd>
 
@@ -7679,7 +7679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settingname_csharp" style="color: inherit; text-decoration: inherit;">Setting<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Setting<wbr>Names</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.{{% /md %}}</dd>
 
@@ -7696,7 +7696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentname_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.{{% /md %}}</dd>
 
@@ -7716,7 +7716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passname_go" style="color: inherit; text-decoration: inherit;">Pass<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pass name. Currently, the only allowable value is OobeSystem.{{% /md %}}</dd>
 
@@ -7726,7 +7726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settingname_go" style="color: inherit; text-decoration: inherit;">Setting<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.{{% /md %}}</dd>
 
@@ -7743,7 +7743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentname_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Component<wbr>Names</span>
     </dt>
     <dd>{{% md %}}The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.{{% /md %}}</dd>
 
@@ -7763,7 +7763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passname_nodejs" style="color: inherit; text-decoration: inherit;">pass<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Pass<wbr>Names</span>
     </dt>
     <dd>{{% md %}}The pass name. Currently, the only allowable value is OobeSystem.{{% /md %}}</dd>
 
@@ -7773,7 +7773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settingname_nodejs" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Setting<wbr>Names</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.{{% /md %}}</dd>
 
@@ -7790,7 +7790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Component<wbr>Names</span>
     </dt>
     <dd>{{% md %}}The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.{{% /md %}}</dd>
 
@@ -7810,7 +7810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pass_name_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Pass<wbr>Names</span>
     </dt>
     <dd>{{% md %}}The pass name. Currently, the only allowable value is OobeSystem.{{% /md %}}</dd>
 
@@ -7820,7 +7820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Setting<wbr>Names</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.{{% /md %}}</dd>
 
@@ -9235,7 +9235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#option_csharp" style="color: inherit; text-decoration: inherit;">Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Diff<wbr>Disk<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk settings for operating system disk.{{% /md %}}</dd>
 
@@ -9245,7 +9245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Diff<wbr>Disk<wbr>Placement</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd>
 
@@ -9262,7 +9262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#option_go" style="color: inherit; text-decoration: inherit;">Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk settings for operating system disk.{{% /md %}}</dd>
 
@@ -9272,7 +9272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd>
 
@@ -9289,7 +9289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#option_nodejs" style="color: inherit; text-decoration: inherit;">option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Diff<wbr>Disk<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk settings for operating system disk.{{% /md %}}</dd>
 
@@ -9299,7 +9299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Diff<wbr>Disk<wbr>Placement</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd>
 
@@ -9316,7 +9316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#option_python" style="color: inherit; text-decoration: inherit;">option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Diff<wbr>Disk<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk settings for operating system disk.{{% /md %}}</dd>
 
@@ -9326,7 +9326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Diff<wbr>Disk<wbr>Placement</span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd>
 
@@ -10467,7 +10467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>In<wbr>Guest<wbr>Patch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 
@@ -10484,7 +10484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 
@@ -10501,7 +10501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>In<wbr>Guest<wbr>Patch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 
@@ -10518,7 +10518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">In<wbr>Guest<wbr>Patch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 
@@ -11421,7 +11421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Scale<wbr>In<wbr>Rules&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The rules to be followed when scaling-in a virtual machine scale set. <br><br> Possible values are: <br><br> **Default** When a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set. Then, it will be balanced across Fault Domains as far as possible. Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in. <br><br> **OldestVM** When a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the oldest virtual machines that are not protected will be chosen for removal. <br><br> **NewestVM** When a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the newest virtual machines that are not protected will be chosen for removal. <br><br>{{% /md %}}</dd>
 
@@ -11438,7 +11438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The rules to be followed when scaling-in a virtual machine scale set. <br><br> Possible values are: <br><br> **Default** When a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set. Then, it will be balanced across Fault Domains as far as possible. Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in. <br><br> **OldestVM** When a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the oldest virtual machines that are not protected will be chosen for removal. <br><br> **NewestVM** When a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the newest virtual machines that are not protected will be chosen for removal. <br><br>{{% /md %}}</dd>
 
@@ -11455,7 +11455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Scale<wbr>In<wbr>Rules[]</span>
     </dt>
     <dd>{{% md %}}The rules to be followed when scaling-in a virtual machine scale set. <br><br> Possible values are: <br><br> **Default** When a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set. Then, it will be balanced across Fault Domains as far as possible. Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in. <br><br> **OldestVM** When a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the oldest virtual machines that are not protected will be chosen for removal. <br><br> **NewestVM** When a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the newest virtual machines that are not protected will be chosen for removal. <br><br>{{% /md %}}</dd>
 
@@ -11472,7 +11472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Scale<wbr>In<wbr>Rules]]</span>
     </dt>
     <dd>{{% md %}}The rules to be followed when scaling-in a virtual machine scale set. <br><br> Possible values are: <br><br> **Default** When a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set. Then, it will be balanced across Fault Domains as far as possible. Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in. <br><br> **OldestVM** When a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the oldest virtual machines that are not protected will be chosen for removal. <br><br> **NewestVM** When a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the newest virtual machines that are not protected will be chosen for removal. <br><br>{{% /md %}}</dd>
 
@@ -13015,7 +13015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Upgrade<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.{{% /md %}}</dd>
 
@@ -13052,7 +13052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.{{% /md %}}</dd>
 
@@ -13089,7 +13089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Upgrade<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.{{% /md %}}</dd>
 
@@ -13126,7 +13126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Upgrade<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.{{% /md %}}</dd>
 
@@ -13957,7 +13957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Create<wbr>Option<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The create option.{{% /md %}}</dd>
 
@@ -13977,7 +13977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -14054,7 +14054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The create option.{{% /md %}}</dd>
 
@@ -14074,7 +14074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -14151,7 +14151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Create<wbr>Option<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The create option.{{% /md %}}</dd>
 
@@ -14171,7 +14171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -14248,7 +14248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Create<wbr>Option<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The create option.{{% /md %}}</dd>
 
@@ -14268,7 +14268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -16021,7 +16021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -16128,7 +16128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddressversion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -16235,7 +16235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -16342,7 +16342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_version_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPVersion</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -16829,7 +16829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.{{% /md %}}</dd>
 
@@ -16856,7 +16856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.{{% /md %}}</dd>
 
@@ -16883,7 +16883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.{{% /md %}}</dd>
 
@@ -16910,7 +16910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.{{% /md %}}</dd>
 
@@ -17514,7 +17514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -17541,7 +17541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -17568,7 +17568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -17595,7 +17595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Account<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 
@@ -18856,7 +18856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Create<wbr>Option<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.{{% /md %}}</dd>
 
@@ -18866,7 +18866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -18926,7 +18926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -18963,7 +18963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.{{% /md %}}</dd>
 
@@ -18973,7 +18973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -19033,7 +19033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -19070,7 +19070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Create<wbr>Option<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.{{% /md %}}</dd>
 
@@ -19080,7 +19080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -19140,7 +19140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -19177,7 +19177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Create<wbr>Option<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.{{% /md %}}</dd>
 
@@ -19187,7 +19187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Caching<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
 
@@ -19247,7 +19247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -20412,7 +20412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -20479,7 +20479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -20546,7 +20546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -20613,7 +20613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_version_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPVersion</span>
     </dt>
     <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd>
 
@@ -21426,7 +21426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Virtual<wbr>Machine<wbr>Eviction<wbr>Policy<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
 
@@ -21476,7 +21476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Virtual<wbr>Machine<wbr>Priority<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview{{% /md %}}</dd>
 
@@ -21543,7 +21543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
 
@@ -21593,7 +21593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview{{% /md %}}</dd>
 
@@ -21660,7 +21660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Machine<wbr>Eviction<wbr>Policy<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
 
@@ -21710,7 +21710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Machine<wbr>Priority<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview{{% /md %}}</dd>
 
@@ -21777,7 +21777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Machine<wbr>Eviction<wbr>Policy<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
 
@@ -21827,7 +21827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Machine<wbr>Priority<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview{{% /md %}}</dd>
 
@@ -22532,7 +22532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Protocol<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**{{% /md %}}</dd>
 
@@ -22559,7 +22559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**{{% /md %}}</dd>
 
@@ -22586,7 +22586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Protocol<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**{{% /md %}}</dd>
 
@@ -22613,7 +22613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Protocol<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Module"
-title_tag: "Resource Module | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.Module"
 meta_desc: "Explore the Module resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the module type."
 ---
 

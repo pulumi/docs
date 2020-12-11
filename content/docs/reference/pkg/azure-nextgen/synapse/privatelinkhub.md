@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkHub"
-title_tag: "Resource PrivateLinkHub | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.PrivateLinkHub"
 meta_desc: "Explore the PrivateLinkHub resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. A privateLinkHub"
 ---
 

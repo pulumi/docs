@@ -1,7 +1,7 @@
 
 ---
 title: "Pipeline"
-title_tag: "Resource Pipeline | Module devops | Package Azure NextGen"
+title_tag: "azure-nextgen.devops.Pipeline"
 meta_desc: "Explore the Pipeline resource of the devops module, including examples, input properties, output properties, lookup functions, and supporting types. Azure DevOps Pipeline used to configure Continuous Integration (CI) &amp; Continuous Delivery (CD) for Azure resources."
 ---
 
@@ -906,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Authorization<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of authorization.{{% /md %}}</dd>
 
@@ -933,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationtype_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of authorization.{{% /md %}}</dd>
 
@@ -960,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Authorization<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of authorization.{{% /md %}}</dd>
 
@@ -987,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_type_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Authorization<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of authorization.{{% /md %}}</dd>
 
@@ -1402,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repositorytype_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Code<wbr>Repository<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of code repository.{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repositorytype_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of code repository.{{% /md %}}</dd>
 
@@ -1516,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repositorytype_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Code<wbr>Repository<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of code repository.{{% /md %}}</dd>
 
@@ -1573,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_type_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Code<wbr>Repository<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of code repository.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SiteInstanceDeploymentSlot"
-title_tag: "Resource SiteInstanceDeploymentSlot | Module web | Package Azure NextGen"
+title_tag: "azure-nextgen.web.SiteInstanceDeploymentSlot"
 meta_desc: "Explore the SiteInstanceDeploymentSlot resource of the web module, including examples, input properties, output properties, lookup functions, and supporting types. Represents user credentials used for publishing activity"
 ---
 

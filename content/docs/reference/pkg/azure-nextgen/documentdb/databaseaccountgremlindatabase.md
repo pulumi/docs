@@ -1,7 +1,7 @@
 
 ---
 title: "DatabaseAccountGremlinDatabase"
-title_tag: "Resource DatabaseAccountGremlinDatabase | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.DatabaseAccountGremlinDatabase"
 meta_desc: "Explore the DatabaseAccountGremlinDatabase resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Gremlin database."
 ---
 

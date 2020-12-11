@@ -1,7 +1,7 @@
 
 ---
 title: "SnapshotPolicy"
-title_tag: "Resource SnapshotPolicy | Module netapp | Package Azure NextGen"
+title_tag: "azure-nextgen.netapp.SnapshotPolicy"
 meta_desc: "Explore the SnapshotPolicy resource of the netapp module, including examples, input properties, output properties, lookup functions, and supporting types. Snapshot policy information"
 ---
 

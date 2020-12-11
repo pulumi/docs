@@ -234,6 +234,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -328,6 +338,16 @@ The following output properties are available:
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -428,6 +448,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -522,6 +552,16 @@ The following output properties are available:
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1711,16 +1751,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -1728,6 +1758,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1848,16 +1888,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -1865,6 +1895,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1985,16 +2025,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -2002,6 +2032,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2122,16 +2162,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -2139,6 +2169,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="e_tag_python">
+<a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2367,8 +2407,8 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurrence_csharp">
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span> 
@@ -2404,8 +2444,8 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurrence_go">
 <a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span> 
@@ -2441,8 +2481,8 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurrence_nodejs">
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
@@ -2478,8 +2518,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="recurrence_python">
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 

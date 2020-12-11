@@ -1,7 +1,7 @@
 
 ---
 title: "IotHubResourceEventHubConsumerGroup"
-title_tag: "Resource IotHubResourceEventHubConsumerGroup | Module devices | Package Azure NextGen"
+title_tag: "azure-nextgen.devices.IotHubResourceEventHubConsumerGroup"
 meta_desc: "Explore the IotHubResourceEventHubConsumerGroup resource of the devices module, including examples, input properties, output properties, lookup functions, and supporting types. The properties of the EventHubConsumerGroupInfo object."
 ---
 

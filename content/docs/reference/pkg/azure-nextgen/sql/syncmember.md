@@ -1,7 +1,7 @@
 
 ---
 title: "SyncMember"
-title_tag: "Resource SyncMember | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.SyncMember"
 meta_desc: "Explore the SyncMember resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL Database sync member."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncMember = new AzureNextGen.Sql.V20190601Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20190601Preview.SyncMemberArgs
+        var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
         {
             DatabaseName = "syncgroupcrud-7421",
             DatabaseType = "AzureSqlDatabase",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +89,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_member = azure_nextgen.sql.v20190601preview.SyncMember("syncMember",
+sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
     database_name="syncgroupcrud-7421",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
@@ -111,7 +111,7 @@ sync_member = azure_nextgen.sql.v20190601preview.SyncMember("syncMember",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncMember = new azure_nextgen.sql.v20190601preview.SyncMember("syncMember", {
+const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
     databaseName: "syncgroupcrud-7421",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
@@ -138,9 +138,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncMember = new AzureNextGen.Sql.V20190601Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20190601Preview.SyncMemberArgs
+        var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
         {
-            DatabaseName = "syncgroupcrud-4328",
+            DatabaseName = "syncgroupcrud-7421",
             DatabaseType = "AzureSqlDatabase",
             ResourceGroupName = "syncgroupcrud-65440",
             ServerName = "syncgroupcrud-8475",
@@ -165,14 +165,14 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
+			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
 			ServerName:                        pulumi.String("syncgroupcrud-8475"),
@@ -200,8 +200,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_member = azure_nextgen.sql.v20190601preview.SyncMember("syncMember",
-    database_name="syncgroupcrud-4328",
+sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
+    database_name="syncgroupcrud-7421",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
     server_name="syncgroupcrud-8475",
@@ -222,8 +222,8 @@ sync_member = azure_nextgen.sql.v20190601preview.SyncMember("syncMember",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncMember = new azure_nextgen.sql.v20190601preview.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-4328",
+const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
+    databaseName: "syncgroupcrud-7421",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
     serverName: "syncgroupcrud-8475",
@@ -251,7 +251,7 @@ const syncMember = new azure_nextgen.sql.v20190601preview.SyncMember("syncMember
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_server_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_agent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_member_azure_database_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_link_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SyncMemberDbType]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_server_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_agent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_direction</span><span class="p">:</span> <span class="nx">Optional[Union[str, SyncDirection]]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_member_azure_database_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_link_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -479,7 +479,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncdirection_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
 
@@ -616,7 +616,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
 
@@ -656,7 +656,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncdirection_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
 
@@ -753,7 +753,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
 
@@ -793,7 +793,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncdirection_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sync<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
 
@@ -890,7 +890,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sync<wbr>Member<wbr>Db<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
 
@@ -930,7 +930,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sync_direction_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sync<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
 

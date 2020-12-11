@@ -1,7 +1,7 @@
 
 ---
 title: "FileServer"
-title_tag: "Resource FileServer | Module batchai | Package Azure NextGen"
+title_tag: "azure-nextgen.batchai.FileServer"
 meta_desc: "Explore the FileServer resource of the batchai module, including examples, input properties, output properties, lookup functions, and supporting types. File Server information."
 ---
 
@@ -1008,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
 
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachingtype_csharp" style="color: inherit; text-decoration: inherit;">Caching<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Caching<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
 
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
 
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachingtype_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
 
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
 
@@ -1112,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachingtype_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Caching<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
 
@@ -1149,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_type_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Caching<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
 

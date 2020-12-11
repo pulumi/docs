@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.LoadBalancer"
 meta_desc: "Explore the LoadBalancer resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. LoadBalancer resource."
 ---
 
@@ -4653,7 +4653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectioncoverage_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ddos<wbr>Settings<wbr>Protection<wbr>Coverage</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -4690,7 +4690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectioncoverage_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -4727,7 +4727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectioncoverage_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ddos<wbr>Settings<wbr>Protection<wbr>Coverage</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -4764,7 +4764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_coverage_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>coverage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ddos<wbr>Settings<wbr>Protection<wbr>Coverage</span>
     </dt>
     <dd>{{% md %}}The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.{{% /md %}}</dd>
 
@@ -5399,7 +5399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -5426,7 +5426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -5453,7 +5453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -5480,7 +5480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -6375,7 +6375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.{{% /md %}}</dd>
 
@@ -6385,7 +6385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The Private IP allocation method.{{% /md %}}</dd>
 
@@ -6472,7 +6472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddressversion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.{{% /md %}}</dd>
 
@@ -6482,7 +6482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Private IP allocation method.{{% /md %}}</dd>
 
@@ -6569,7 +6569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.{{% /md %}}</dd>
 
@@ -6579,7 +6579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The Private IP allocation method.{{% /md %}}</dd>
 
@@ -6666,7 +6666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_version_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPVersion</span>
     </dt>
     <dd>{{% md %}}Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.{{% /md %}}</dd>
 
@@ -6676,7 +6676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The Private IP allocation method.{{% /md %}}</dd>
 
@@ -8091,7 +8091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the inbound NAT pool.{{% /md %}}</dd>
 
@@ -8198,7 +8198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the inbound NAT pool.{{% /md %}}</dd>
 
@@ -8305,7 +8305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the inbound NAT pool.{{% /md %}}</dd>
 
@@ -8412,7 +8412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the inbound NAT pool.{{% /md %}}</dd>
 
@@ -9139,7 +9139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -9236,7 +9236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -9333,7 +9333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -9430,7 +9430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -10693,7 +10693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Load<wbr>Balancer<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10703,7 +10703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Load<wbr>Balancer<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10720,7 +10720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10730,7 +10730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tier of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10747,7 +10747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Load<wbr>Balancer<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10757,7 +10757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Load<wbr>Balancer<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10774,7 +10774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Load<wbr>Balancer<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10784,7 +10784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Load<wbr>Balancer<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a load balancer SKU.{{% /md %}}</dd>
 
@@ -10941,7 +10941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -11031,7 +11031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loaddistribution_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Distribution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Load<wbr>Distribution</span>
     </dt>
     <dd>{{% md %}}The load distribution policy for this rule.{{% /md %}}</dd>
 
@@ -11078,7 +11078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -11168,7 +11168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loaddistribution_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Distribution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load distribution policy for this rule.{{% /md %}}</dd>
 
@@ -11215,7 +11215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -11305,7 +11305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loaddistribution_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Distribution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Load<wbr>Distribution</span>
     </dt>
     <dd>{{% md %}}The load distribution policy for this rule.{{% /md %}}</dd>
 
@@ -11352,7 +11352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -11442,7 +11442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_distribution_python" style="color: inherit; text-decoration: inherit;">load_<wbr>distribution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Load<wbr>Distribution</span>
     </dt>
     <dd>{{% md %}}The load distribution policy for this rule.{{% /md %}}</dd>
 
@@ -15182,7 +15182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Load<wbr>Balancer<wbr>Outbound<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol for the outbound rule in load balancer.{{% /md %}}</dd>
 
@@ -15269,7 +15269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the outbound rule in load balancer.{{% /md %}}</dd>
 
@@ -15356,7 +15356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Load<wbr>Balancer<wbr>Outbound<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol for the outbound rule in load balancer.{{% /md %}}</dd>
 
@@ -15443,7 +15443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Load<wbr>Balancer<wbr>Outbound<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol for the outbound rule in load balancer.{{% /md %}}</dd>
 
@@ -17087,7 +17087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Probe<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.{{% /md %}}</dd>
 
@@ -17164,7 +17164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.{{% /md %}}</dd>
 
@@ -17241,7 +17241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Probe<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.{{% /md %}}</dd>
 
@@ -17318,7 +17318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Probe<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.{{% /md %}}</dd>
 
@@ -17955,7 +17955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -17965,7 +17965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -18102,7 +18102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -18112,7 +18112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -18249,7 +18249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -18259,7 +18259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -18396,7 +18396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_version_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPVersion</span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
 
@@ -18406,7 +18406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd>
 
@@ -19631,7 +19631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -19641,7 +19641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 
@@ -19658,7 +19658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -19668,7 +19668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 
@@ -19685,7 +19685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -19695,7 +19695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 
@@ -19712,7 +19712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>IPAddress<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of a public IP address SKU.{{% /md %}}</dd>
 
@@ -19722,7 +19722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of a public IP address SKU.{{% /md %}}</dd>
 
@@ -20307,7 +20307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthoptype_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Route<wbr>Next<wbr>Hop<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -20364,7 +20364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthoptype_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -20421,7 +20421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthoptype_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Route<wbr>Next<wbr>Hop<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -20478,7 +20478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_type_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Route<wbr>Next<wbr>Hop<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -21543,7 +21543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -21553,7 +21553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -21563,7 +21563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 
@@ -21720,7 +21720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -21730,7 +21730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -21740,7 +21740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 
@@ -21897,7 +21897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -21907,7 +21907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Rule<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -21917,7 +21917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 
@@ -22074,7 +22074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -22084,7 +22084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Rule<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -22094,7 +22094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 

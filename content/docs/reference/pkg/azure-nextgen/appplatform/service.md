@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module appplatform | Package Azure NextGen"
+title_tag: "azure-nextgen.appplatform.Service"
 meta_desc: "Explore the Service resource of the appplatform module, including examples, input properties, output properties, lookup functions, and supporting types. Service resource"
 ---
 

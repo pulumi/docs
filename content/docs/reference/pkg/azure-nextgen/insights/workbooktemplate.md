@@ -1,7 +1,7 @@
 
 ---
 title: "WorkbookTemplate"
-title_tag: "Resource WorkbookTemplate | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.WorkbookTemplate"
 meta_desc: "Explore the WorkbookTemplate resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights workbook template definition."
 ---
 

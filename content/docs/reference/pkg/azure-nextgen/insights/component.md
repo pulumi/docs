@@ -1,7 +1,7 @@
 
 ---
 title: "Component"
-title_tag: "Resource Component | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.Component"
 meta_desc: "Explore the Component resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights component definition."
 ---
 
@@ -232,7 +232,7 @@ const component = new azure_nextgen.insights.latest.Component("component", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Component</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_ip_masking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flow_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hockey_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immediate_purge_data_on30_days</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingestion_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sampling_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Component</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ApplicationType]]</span> = None<span class="p">, </span><span class="nx">disable_ip_masking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flow_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, FlowType]]</span> = None<span class="p">, </span><span class="nx">hockey_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immediate_purge_data_on30_days</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingestion_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, IngestionMode]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_source</span><span class="p">:</span> <span class="nx">Optional[Union[str, RequestSource]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sampling_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -410,7 +410,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Application<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
 
@@ -470,7 +470,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#flowtype_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Flow<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
 
@@ -500,7 +500,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ingestionmode_csharp" style="color: inherit; text-decoration: inherit;">Ingestion<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Ingestion<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
 
@@ -510,7 +510,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#requestsource_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Request<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
 
@@ -557,7 +557,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
 
@@ -617,7 +617,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#flowtype_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
 
@@ -647,7 +647,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ingestionmode_go" style="color: inherit; text-decoration: inherit;">Ingestion<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
 
@@ -657,7 +657,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#requestsource_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Application<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
 
@@ -764,7 +764,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#flowtype_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Flow<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
 
@@ -794,7 +794,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ingestionmode_nodejs" style="color: inherit; text-decoration: inherit;">ingestion<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ingestion<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
 
@@ -804,7 +804,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#requestsource_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Request<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
 
@@ -851,7 +851,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Application<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
 
@@ -911,7 +911,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#flow_type_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Flow<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
 
@@ -941,7 +941,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ingestion_mode_python" style="color: inherit; text-decoration: inherit;">ingestion_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ingestion<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
 
@@ -951,7 +951,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#request_source_python" style="color: inherit; text-decoration: inherit;">request_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Request<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
 

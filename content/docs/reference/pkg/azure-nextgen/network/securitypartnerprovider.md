@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityPartnerProvider"
-title_tag: "Resource SecurityPartnerProvider | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.SecurityPartnerProvider"
 meta_desc: "Explore the SecurityPartnerProvider resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Security Partner Provider resource."
 ---
 
@@ -142,7 +142,7 @@ const securityPartnerProvider = new azure_nextgen.network.latest.SecurityPartner
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecurityPartnerProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_partner_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecurityPartnerProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_partner_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_provider_name</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityProviderName]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -360,7 +360,7 @@ The SecurityPartnerProvider resource accepts the following [input]({{< relref "/
 <a href="#securityprovidername_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Provider<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Provider<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The security provider name.{{% /md %}}</dd>
 
@@ -437,7 +437,7 @@ The SecurityPartnerProvider resource accepts the following [input]({{< relref "/
 <a href="#securityprovidername_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Provider<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security provider name.{{% /md %}}</dd>
 
@@ -514,7 +514,7 @@ The SecurityPartnerProvider resource accepts the following [input]({{< relref "/
 <a href="#securityprovidername_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Provider<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Provider<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The security provider name.{{% /md %}}</dd>
 
@@ -591,7 +591,7 @@ The SecurityPartnerProvider resource accepts the following [input]({{< relref "/
 <a href="#security_provider_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>provider_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Provider<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The security provider name.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "NamedValue"
-title_tag: "Resource NamedValue | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.NamedValue"
 meta_desc: "Explore the NamedValue resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. NamedValue details."
 ---
 

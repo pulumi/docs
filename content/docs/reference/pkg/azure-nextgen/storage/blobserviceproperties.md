@@ -1,7 +1,7 @@
 
 ---
 title: "BlobServiceProperties"
-title_tag: "Resource BlobServiceProperties | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.BlobServiceProperties"
 meta_desc: "Explore the BlobServiceProperties resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The properties of a storage account’s Blob service."
 ---
 

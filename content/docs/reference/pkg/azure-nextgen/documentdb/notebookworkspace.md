@@ -1,7 +1,7 @@
 
 ---
 title: "NotebookWorkspace"
-title_tag: "Resource NotebookWorkspace | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.NotebookWorkspace"
 meta_desc: "Explore the NotebookWorkspace resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. A notebook workspace resource"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "IncidentRelation"
-title_tag: "Resource IncidentRelation | Module securityinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.securityinsights.IncidentRelation"
 meta_desc: "Explore the IncidentRelation resource of the securityinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a relation between two resources"
 ---
 

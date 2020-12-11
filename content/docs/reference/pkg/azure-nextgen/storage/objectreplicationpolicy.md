@@ -1,7 +1,7 @@
 
 ---
 title: "ObjectReplicationPolicy"
-title_tag: "Resource ObjectReplicationPolicy | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.ObjectReplicationPolicy"
 meta_desc: "Explore the ObjectReplicationPolicy resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The replication policy between two storage accounts. Multiple rules can be defined in one policy."
 ---
 

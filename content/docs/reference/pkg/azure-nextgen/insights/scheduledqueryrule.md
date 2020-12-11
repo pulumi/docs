@@ -1,7 +1,7 @@
 
 ---
 title: "ScheduledQueryRule"
-title_tag: "Resource ScheduledQueryRule | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.ScheduledQueryRule"
 meta_desc: "Explore the ScheduledQueryRule resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. The Log Search Rule resource."
 ---
 
@@ -443,7 +443,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -621,7 +621,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Alerting<wbr>Action<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#alertingaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Alerting<wbr>Action<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
 
@@ -681,7 +681,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
 
@@ -718,7 +718,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
 
@@ -778,7 +778,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
 
@@ -815,7 +815,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Alerting<wbr>Action | Log<wbr>To<wbr>Metric<wbr>Action</span>
+        <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
 
@@ -875,7 +875,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Alerting<wbr>Action<wbr>Args, Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args]</span>
+        <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
 
@@ -972,7 +972,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enabled</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
 
@@ -1268,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Alert<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
 
@@ -1315,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
 
@@ -1362,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Alert<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
 
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Alert<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
 
@@ -2232,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
 
@@ -2269,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
 
@@ -2306,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
 
@@ -2343,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operator</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
 
@@ -2550,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictriggertype_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Metric<wbr>Trigger<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
 
@@ -2570,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Conditional<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
 
@@ -2597,7 +2597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictriggertype_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
 
@@ -2617,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
 
@@ -2644,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictriggertype_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Metric<wbr>Trigger<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
 
@@ -2664,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Conditional<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
 
@@ -2691,7 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Metric<wbr>Trigger<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
 
@@ -2711,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Conditional<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
 
@@ -3364,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querytype_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Query<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
 
@@ -3411,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querytype_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
 
@@ -3458,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querytype_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Query<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
 
@@ -3505,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_type_python" style="color: inherit; text-decoration: inherit;">query_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Query<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
 
@@ -3742,7 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Conditional<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
 
@@ -3779,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
 
@@ -3816,7 +3816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Conditional<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
 
@@ -3853,7 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Conditional<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
 

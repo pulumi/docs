@@ -1,7 +1,7 @@
 
 ---
 title: "FrontDoor"
-title_tag: "Resource FrontDoor | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.FrontDoor"
 meta_desc: "Explore the FrontDoor resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there."
 ---
 
@@ -429,7 +429,7 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_settings</span><span class="p">:</span> <span class="nx">Optional[BackendPoolsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[HealthProbeSettingsModelArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancingSettingsModelArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_settings</span><span class="p">:</span> <span class="nx">Optional[BackendPoolsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, FrontDoorEnabledState]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[HealthProbeSettingsModelArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancingSettingsModelArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -647,7 +647,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -774,7 +774,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -901,7 +901,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -1028,7 +1028,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Backend<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -1748,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backend<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -1865,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backend<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2531,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcecertificatenamecheck_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Certificate<wbr>Name<wbr>Check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Enforce<wbr>Certificate<wbr>Name<wbr>Check<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.{{% /md %}}</dd>
 
@@ -2558,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcecertificatenamecheck_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Certificate<wbr>Name<wbr>Check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.{{% /md %}}</dd>
 
@@ -2585,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcecertificatenamecheck_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Certificate<wbr>Name<wbr>Check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enforce<wbr>Certificate<wbr>Name<wbr>Check<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.{{% /md %}}</dd>
 
@@ -2612,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforce_certificate_name_check_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>certificate_<wbr>name_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enforce<wbr>Certificate<wbr>Name<wbr>Check<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.{{% /md %}}</dd>
 
@@ -3298,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamiccompression_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dynamic<wbr>Compression<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
 
@@ -3308,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameterstripdirective_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Query</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
 
@@ -3345,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamiccompression_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
 
@@ -3355,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameterstripdirective_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
 
@@ -3392,7 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamiccompression_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Dynamic<wbr>Compression<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
 
@@ -3402,7 +3402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameterstripdirective_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Query</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
 
@@ -3439,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamic_compression_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Dynamic<wbr>Compression<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
 
@@ -3449,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_parameter_strip_directive_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>strip_<wbr>directive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Query</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
 
@@ -4035,7 +4035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
 
@@ -4082,7 +4082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingprotocol_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
 
@@ -4129,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
 
@@ -4176,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Forwarding<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
 
@@ -4433,7 +4433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaffinityenabledstate_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Session<wbr>Affinity<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -4500,7 +4500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaffinityenabledstate_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -4567,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaffinityenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Session<wbr>Affinity<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -4634,7 +4634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_affinity_enabled_state_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>enabled_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Session<wbr>Affinity<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -5478,7 +5478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Health<wbr>Probe<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.{{% /md %}}</dd>
 
@@ -5488,7 +5488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobemethod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Health<wbr>Probe<wbr>Method</span>
     </dt>
     <dd>{{% md %}}Configures which HTTP method to use to probe the backends defined under backendPools.{{% /md %}}</dd>
 
@@ -5538,7 +5538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
@@ -5555,7 +5555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.{{% /md %}}</dd>
 
@@ -5565,7 +5565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobemethod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures which HTTP method to use to probe the backends defined under backendPools.{{% /md %}}</dd>
 
@@ -5615,7 +5615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
@@ -5632,7 +5632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Health<wbr>Probe<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.{{% /md %}}</dd>
 
@@ -5642,7 +5642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobemethod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Health<wbr>Probe<wbr>Method</span>
     </dt>
     <dd>{{% md %}}Configures which HTTP method to use to probe the backends defined under backendPools.{{% /md %}}</dd>
 
@@ -5692,7 +5692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
@@ -5709,7 +5709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Health<wbr>Probe<wbr>Enabled</span>
     </dt>
     <dd>{{% md %}}Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.{{% /md %}}</dd>
 
@@ -5719,7 +5719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_probe_method_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Health<wbr>Probe<wbr>Method</span>
     </dt>
     <dd>{{% md %}}Configures which HTTP method to use to probe the backends defined under backendPools.{{% /md %}}</dd>
 
@@ -5769,7 +5769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
@@ -6873,7 +6873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectprotocol_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
 
@@ -6883,7 +6883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
 
@@ -6940,7 +6940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectprotocol_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
 
@@ -6950,7 +6950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
 
@@ -7007,7 +7007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectprotocol_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
 
@@ -7017,7 +7017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
 
@@ -7074,7 +7074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirect_protocol_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Redirect<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
 
@@ -7084,7 +7084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Redirect<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
 
@@ -7391,7 +7391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceptedprotocols_csharp" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for this rule{{% /md %}}</dd>
 
@@ -7401,7 +7401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Routing<wbr>Rule<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -7451,7 +7451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -7488,7 +7488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceptedprotocols_go" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for this rule{{% /md %}}</dd>
 
@@ -7498,7 +7498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -7548,7 +7548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -7585,7 +7585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceptedprotocols_nodejs" style="color: inherit; text-decoration: inherit;">accepted<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Front<wbr>Door<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for this rule{{% /md %}}</dd>
 
@@ -7595,7 +7595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Routing<wbr>Rule<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -7645,7 +7645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Forwarding<wbr>Configuration | Redirect<wbr>Configuration</span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -7682,7 +7682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accepted_protocols_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Front<wbr>Door<wbr>Protocol]]</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for this rule{{% /md %}}</dd>
 
@@ -7692,7 +7692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Routing<wbr>Rule<wbr>Enabled<wbr>State</span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -7742,7 +7742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_configuration_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Forwarding<wbr>Configuration<wbr>Args, Redirect<wbr>Configuration<wbr>Args]</span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -7870,7 +7870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -7987,7 +7987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -8104,7 +8104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Forwarding<wbr>Configuration<wbr>Response | Redirect<wbr>Configuration<wbr>Response</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -8221,7 +8221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_configuration_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Redirect<wbr>Configuration<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -8447,7 +8447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 
@@ -8484,7 +8484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 
@@ -8521,7 +8521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Forwarding<wbr>Configuration<wbr>Response | Redirect<wbr>Configuration<wbr>Response</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 
@@ -8558,7 +8558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_configuration_override_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Redirect<wbr>Configuration<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 

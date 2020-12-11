@@ -1,7 +1,7 @@
 
 ---
 title: "Backup"
-title_tag: "Resource Backup | Module netapp | Package Azure NextGen"
+title_tag: "azure-nextgen.netapp.Backup"
 meta_desc: "Explore the Backup resource of the netapp module, including examples, input properties, output properties, lookup functions, and supporting types. Backup of a Volume"
 ---
 

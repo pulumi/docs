@@ -1,7 +1,7 @@
 
 ---
 title: "ComputePolicy"
-title_tag: "Resource ComputePolicy | Module datalakeanalytics | Package Azure NextGen"
+title_tag: "azure-nextgen.datalakeanalytics.ComputePolicy"
 meta_desc: "Explore the ComputePolicy resource of the datalakeanalytics module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Analytics compute policy information."
 ---
 
@@ -128,7 +128,7 @@ const computePolicy = new azure_nextgen.datalakeanalytics.latest.ComputePolicy("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ComputePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ComputePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AADObjectType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -336,7 +336,7 @@ The ComputePolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>AADObject<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
 
@@ -413,7 +413,7 @@ The ComputePolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
 
@@ -490,7 +490,7 @@ The ComputePolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>AADObject<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
 
@@ -567,7 +567,7 @@ The ComputePolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">AADObject<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
 

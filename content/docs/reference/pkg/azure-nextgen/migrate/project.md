@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.Project"
 meta_desc: "Explore the Project resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. Azure Migrate Project."
 ---
 
@@ -792,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Project<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
 
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Project<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
 
@@ -933,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_status_python" style="color: inherit; text-decoration: inherit;">project_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Project<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
 

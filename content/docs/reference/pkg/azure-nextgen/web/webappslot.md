@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppSlot"
-title_tag: "Resource WebAppSlot | Module web | Package Azure NextGen"
+title_tag: "azure-nextgen.web.WebAppSlot"
 meta_desc: "Explore the WebAppSlot resource of the web module, including examples, input properties, output properties, lookup functions, and supporting types. A web app, a mobile app backend, or an API app."
 ---
 
@@ -24,7 +24,7 @@ A web app, a mobile app backend, or an API app.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_exclusion_paths</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloning_info</span><span class="p">:</span> <span class="nx">Optional[CloningInfoArgs]</span> = None<span class="p">, </span><span class="nx">container_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_name_ssl_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostNameSslStateArgs]]</span> = None<span class="p">, </span><span class="nx">host_names_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[HostingEnvironmentProfileArgs]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_site_also_stopped</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_farm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[SiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_exclusion_paths</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[ClientCertMode]</span> = None<span class="p">, </span><span class="nx">cloning_info</span><span class="p">:</span> <span class="nx">Optional[CloningInfoArgs]</span> = None<span class="p">, </span><span class="nx">container_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_name_ssl_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostNameSslStateArgs]]</span> = None<span class="p">, </span><span class="nx">host_names_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[HostingEnvironmentProfileArgs]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_mode</span><span class="p">:</span> <span class="nx">Optional[RedundancyMode]</span> = None<span class="p">, </span><span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_site_also_stopped</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_farm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[SiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -272,7 +272,7 @@ The WebAppSlot resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#clientcertmode_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Client<wbr>Cert<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}This composes with ClientCertEnabled setting.
 - ClientCertEnabled: false means ClientCert is ignored.
@@ -417,7 +417,7 @@ http requests{{% /md %}}</dd>
 <a href="#redundancymode_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Redundancy<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Site redundancy mode{{% /md %}}</dd>
 
@@ -554,7 +554,7 @@ http requests{{% /md %}}</dd>
 <a href="#clientcertmode_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This composes with ClientCertEnabled setting.
 - ClientCertEnabled: false means ClientCert is ignored.
@@ -699,7 +699,7 @@ http requests{{% /md %}}</dd>
 <a href="#redundancymode_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site redundancy mode{{% /md %}}</dd>
 
@@ -836,7 +836,7 @@ http requests{{% /md %}}</dd>
 <a href="#clientcertmode_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Client<wbr>Cert<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}This composes with ClientCertEnabled setting.
 - ClientCertEnabled: false means ClientCert is ignored.
@@ -981,7 +981,7 @@ http requests{{% /md %}}</dd>
 <a href="#redundancymode_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Redundancy<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Site redundancy mode{{% /md %}}</dd>
 
@@ -1118,7 +1118,7 @@ http requests{{% /md %}}</dd>
 <a href="#client_cert_mode_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Client<wbr>Cert<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}This composes with ClientCertEnabled setting.
 - ClientCertEnabled: false means ClientCert is ignored.
@@ -1263,7 +1263,7 @@ http requests{{% /md %}}</dd>
 <a href="#redundancy_mode_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Redundancy<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Site redundancy mode{{% /md %}}</dd>
 
@@ -1499,6 +1499,16 @@ This only applies to Functions container.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="targetswapslot_csharp">
 <a href="#targetswapslot_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Swap<wbr>Slot</a>
 </span> 
@@ -1705,6 +1715,16 @@ This only applies to Functions container.{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}App suspended till in case memory-time quota is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1917,6 +1937,16 @@ This only applies to Functions container.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="targetswapslot_nodejs">
 <a href="#targetswapslot_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Swap<wbr>Slot</a>
 </span> 
@@ -2123,6 +2153,16 @@ This only applies to Functions container.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}App suspended till in case memory-time quota is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2513,7 +2553,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Auto<wbr>Heal<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd>
 
@@ -2551,7 +2591,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd>
 
@@ -2589,7 +2629,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Auto<wbr>Heal<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd>
 
@@ -2627,7 +2667,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Auto<wbr>Heal<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd>
 
@@ -4731,7 +4771,7 @@ together to use the same snapshot.{{% /md %}}</dd>
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Connection<wbr>String<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd>
 
@@ -4768,7 +4808,7 @@ together to use the same snapshot.{{% /md %}}</dd>
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd>
 
@@ -4805,7 +4845,7 @@ together to use the same snapshot.{{% /md %}}</dd>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Connection<wbr>String<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd>
 
@@ -4842,7 +4882,7 @@ together to use the same snapshot.{{% /md %}}</dd>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Connection<wbr>String<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd>
 
@@ -5767,7 +5807,7 @@ for more details.{{% /md %}}</dd>
 <a href="#hosttype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Host<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd>
 
@@ -5787,7 +5827,7 @@ for more details.{{% /md %}}</dd>
 <a href="#sslstate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Ssl<wbr>State</span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd>
 
@@ -5834,7 +5874,7 @@ for more details.{{% /md %}}</dd>
 <a href="#hosttype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd>
 
@@ -5854,7 +5894,7 @@ for more details.{{% /md %}}</dd>
 <a href="#sslstate_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd>
 
@@ -5901,7 +5941,7 @@ for more details.{{% /md %}}</dd>
 <a href="#hosttype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Host<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd>
 
@@ -5921,7 +5961,7 @@ for more details.{{% /md %}}</dd>
 <a href="#sslstate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Ssl<wbr>State</span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd>
 
@@ -5968,7 +6008,7 @@ for more details.{{% /md %}}</dd>
 <a href="#host_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Host<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd>
 
@@ -5988,7 +6028,7 @@ for more details.{{% /md %}}</dd>
 <a href="#ssl_state_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Ssl<wbr>State</span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd>
 
@@ -6661,7 +6701,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Ip<wbr>Filter<wbr>Tag</span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd>
 
@@ -6796,7 +6836,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd>
 
@@ -6931,7 +6971,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ip<wbr>Filter<wbr>Tag</span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd>
 
@@ -7066,7 +7106,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ip<wbr>Filter<wbr>Tag</span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd>
 
@@ -7665,7 +7705,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
 
@@ -7692,7 +7732,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
 
@@ -7719,7 +7759,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
 
@@ -7746,7 +7786,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Managed<wbr>Service<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
 
@@ -8617,6 +8657,16 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -8704,6 +8754,16 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8797,6 +8857,16 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -8884,6 +8954,16 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -10082,7 +10162,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#ftpsstate_csharp" style="color: inherit; text-decoration: inherit;">Ftps<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Ftps<wbr>State</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd>
 
@@ -10192,7 +10272,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#loadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Site<wbr>Load<wbr>Balancing</span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd>
 
@@ -10222,7 +10302,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#managedpipelinemode_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Pipeline<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Managed<wbr>Pipeline<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd>
 
@@ -10242,7 +10322,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Supported<wbr>Tls<wbr>Versions</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd>
 
@@ -10403,7 +10483,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scmmintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Min<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Supported<wbr>Tls<wbr>Versions</span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
@@ -10413,7 +10493,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scmtype_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Scm<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd>
 
@@ -10660,7 +10740,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#ftpsstate_go" style="color: inherit; text-decoration: inherit;">Ftps<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd>
 
@@ -10770,7 +10850,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#loadbalancing_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd>
 
@@ -10800,7 +10880,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#managedpipelinemode_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Pipeline<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd>
 
@@ -10820,7 +10900,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd>
 
@@ -10981,7 +11061,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scmmintlsversion_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Min<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
@@ -10991,7 +11071,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scmtype_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd>
 
@@ -11238,7 +11318,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#ftpsstate_nodejs" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ftps<wbr>State</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd>
 
@@ -11348,7 +11428,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#loadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Site<wbr>Load<wbr>Balancing</span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd>
 
@@ -11378,7 +11458,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#managedpipelinemode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Pipeline<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Managed<wbr>Pipeline<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd>
 
@@ -11398,7 +11478,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Supported<wbr>Tls<wbr>Versions</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd>
 
@@ -11559,7 +11639,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scmmintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Min<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Supported<wbr>Tls<wbr>Versions</span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
@@ -11569,7 +11649,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scmtype_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Scm<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd>
 
@@ -11816,7 +11896,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#ftps_state_python" style="color: inherit; text-decoration: inherit;">ftps_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ftps<wbr>State</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd>
 
@@ -11926,7 +12006,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#load_balancing_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Site<wbr>Load<wbr>Balancing</span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd>
 
@@ -11956,7 +12036,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#managed_pipeline_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>pipeline_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Managed<wbr>Pipeline<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd>
 
@@ -11976,7 +12056,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Supported<wbr>Tls<wbr>Versions</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd>
 
@@ -12137,7 +12217,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scm_min_tls_version_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Supported<wbr>Tls<wbr>Versions</span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
@@ -12147,7 +12227,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scm_type_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Scm<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd>
 
@@ -16075,6 +16155,285 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Win32 error code.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

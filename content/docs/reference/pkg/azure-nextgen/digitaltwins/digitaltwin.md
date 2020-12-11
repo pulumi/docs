@@ -1,7 +1,7 @@
 
 ---
 title: "DigitalTwin"
-title_tag: "Resource DigitalTwin | Module digitaltwins | Package Azure NextGen"
+title_tag: "azure-nextgen.digitaltwins.DigitalTwin"
 meta_desc: "Explore the DigitalTwin resource of the digitaltwins module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the DigitalTwins service."
 ---
 

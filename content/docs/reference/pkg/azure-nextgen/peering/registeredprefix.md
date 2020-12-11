@@ -1,7 +1,7 @@
 
 ---
 title: "RegisteredPrefix"
-title_tag: "Resource RegisteredPrefix | Module peering | Package Azure NextGen"
+title_tag: "azure-nextgen.peering.RegisteredPrefix"
 meta_desc: "Explore the RegisteredPrefix resource of the peering module, including examples, input properties, output properties, lookup functions, and supporting types. The customer&#39;s prefix that is registered by the peering service provider."
 ---
 

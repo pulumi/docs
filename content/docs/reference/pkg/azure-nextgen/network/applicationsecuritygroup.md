@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationSecurityGroup"
-title_tag: "Resource ApplicationSecurityGroup | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.ApplicationSecurityGroup"
 meta_desc: "Explore the ApplicationSecurityGroup resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. An application security group in a resource group."
 ---
 

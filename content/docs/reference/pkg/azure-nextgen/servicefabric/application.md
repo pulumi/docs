@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module servicefabric | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabric.Application"
 meta_desc: "Explore the Application resource of the servicefabric module, including examples, input properties, output properties, lookup functions, and supporting types. The application resource."
 ---
 
@@ -1960,7 +1960,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Rolling<wbr>Upgrade<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd>
 
@@ -2018,7 +2018,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrademode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd>
 
@@ -2076,7 +2076,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Rolling<wbr>Upgrade<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd>
 
@@ -2134,7 +2134,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Rolling<wbr>Upgrade<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd>
 
@@ -3083,7 +3083,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failureaction_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Arm<wbr>Upgrade<wbr>Failure<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -3150,7 +3150,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failureaction_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -3217,7 +3217,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failureaction_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Arm<wbr>Upgrade<wbr>Failure<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -3284,7 +3284,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Arm<wbr>Upgrade<wbr>Failure<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -3983,7 +3983,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Managed<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd>
 
@@ -4012,7 +4012,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd>
 
@@ -4041,7 +4041,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Managed<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd>
 
@@ -4070,7 +4070,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Managed<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd>
 

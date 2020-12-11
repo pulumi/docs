@@ -1,7 +1,7 @@
 
 ---
 title: "CustomerSubscription"
-title_tag: "Resource CustomerSubscription | Module azurestack | Package Azure NextGen"
+title_tag: "azure-nextgen.azurestack.CustomerSubscription"
 meta_desc: "Explore the CustomerSubscription resource of the azurestack module, including examples, input properties, output properties, lookup functions, and supporting types. Customer subscription."
 ---
 

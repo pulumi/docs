@@ -1,7 +1,7 @@
 
 ---
 title: "IotDefenderSetting"
-title_tag: "Resource IotDefenderSetting | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.IotDefenderSetting"
 meta_desc: "Explore the IotDefenderSetting resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. IoT Defender settings"
 ---
 

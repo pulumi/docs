@@ -1,7 +1,7 @@
 
 ---
 title: "SqlServer"
-title_tag: "Resource SqlServer | Module azuredata | Package Azure NextGen"
+title_tag: "azure-nextgen.azuredata.SqlServer"
 meta_desc: "Explore the SqlServer resource of the azuredata module, including examples, input properties, output properties, lookup functions, and supporting types. A SQL server."
 ---
 

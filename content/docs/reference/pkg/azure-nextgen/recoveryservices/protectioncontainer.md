@@ -1,7 +1,7 @@
 
 ---
 title: "ProtectionContainer"
-title_tag: "Resource ProtectionContainer | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ProtectionContainer"
 meta_desc: "Explore the ProtectionContainer resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Base class for container with backup items. Containers with specific workloads are derived from this class."
 ---
 
@@ -348,7 +348,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Container<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Container<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Dpm<wbr>Container<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Iaa<wbr>SVMContainer<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#azuresqlcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragecontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureworkloadcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Dpm<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iaasvmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Iaa<wbr>SVMContainer<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
 
@@ -435,7 +435,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmcontainer">Dpm<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericcontainer">Generic<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabcontainer">Mab<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Sql<wbr>Container | Azure<wbr>Storage<wbr>Container | Azure<wbr>Workload<wbr>Container | Dpm<wbr>Container | Generic<wbr>Container | Iaa<wbr>SVMContainer | Mab<wbr>Container</span>
+        <span class="property-type"><a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmcontainer">Dpm<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericcontainer">Generic<wbr>Container</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabcontainer">Mab<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Sql<wbr>Container<wbr>Args, Azure<wbr>Storage<wbr>Container<wbr>Args, Azure<wbr>Workload<wbr>Container<wbr>Args, Dpm<wbr>Container<wbr>Args, Generic<wbr>Container<wbr>Args, Iaa<wbr>SVMContainer<wbr>Args, Mab<wbr>Container<wbr>Args]</span>
+        <span class="property-type"><a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmcontainer">Dpm<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericcontainer">Generic<wbr>Container<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iaasvmcontainer">Iaa<wbr>SVMContainer<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabcontainer">Mab<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
 
@@ -815,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -956,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -1300,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -1387,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -1474,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Operation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
 
@@ -2011,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 
@@ -2028,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
 
@@ -2108,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 
@@ -2125,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -2175,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
 
@@ -2205,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 
@@ -2222,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -2272,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
 
@@ -2302,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 
@@ -3889,7 +3889,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -4016,7 +4016,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -4143,7 +4143,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -4270,7 +4270,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -5086,7 +5086,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -5153,7 +5153,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -5220,7 +5220,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -5287,7 +5287,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -5962,7 +5962,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -6039,7 +6039,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -6116,7 +6116,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -6193,7 +6193,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -7540,7 +7540,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -7657,7 +7657,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -7774,7 +7774,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -7891,7 +7891,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
 
@@ -8009,7 +8009,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupitemtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Item<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Item<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd>
 
@@ -8066,7 +8066,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupitemtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Item<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd>
 
@@ -8123,7 +8123,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupitemtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Item<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Item<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd>
 
@@ -8180,7 +8180,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backup_item_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>item_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Item<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd>
 

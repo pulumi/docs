@@ -1,7 +1,7 @@
 
 ---
 title: "PublishedBlueprint"
-title_tag: "Resource PublishedBlueprint | Module management | Package Azure NextGen"
+title_tag: "azure-nextgen.management.PublishedBlueprint"
 meta_desc: "Explore the PublishedBlueprint resource of the management module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a published Blueprint."
 ---
 

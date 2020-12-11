@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementGroup"
-title_tag: "Resource ManagementGroup | Module management | Package Azure NextGen"
+title_tag: "azure-nextgen.management.ManagementGroup"
 meta_desc: "Explore the ManagementGroup resource of the management module, including examples, input properties, output properties, lookup functions, and supporting types. The management group details."
 ---
 

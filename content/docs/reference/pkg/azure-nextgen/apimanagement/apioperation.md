@@ -1,7 +1,7 @@
 
 ---
 title: "ApiOperation"
-title_tag: "Resource ApiOperation | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ApiOperation"
 meta_desc: "Explore the ApiOperation resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Api Operation details."
 ---
 

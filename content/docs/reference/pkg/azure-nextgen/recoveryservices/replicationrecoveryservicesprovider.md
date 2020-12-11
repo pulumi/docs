@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationRecoveryServicesProvider"
-title_tag: "Resource ReplicationRecoveryServicesProvider | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ReplicationRecoveryServicesProvider"
 meta_desc: "Explore the ReplicationRecoveryServicesProvider resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Provider details."
 ---
 

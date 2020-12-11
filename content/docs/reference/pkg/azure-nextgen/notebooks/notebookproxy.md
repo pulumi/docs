@@ -1,7 +1,7 @@
 
 ---
 title: "NotebookProxy"
-title_tag: "Resource NotebookProxy | Module notebooks | Package Azure NextGen"
+title_tag: "azure-nextgen.notebooks.NotebookProxy"
 meta_desc: "Explore the NotebookProxy resource of the notebooks module, including examples, input properties, output properties, lookup functions, and supporting types. A NotebookProxy resource."
 ---
 

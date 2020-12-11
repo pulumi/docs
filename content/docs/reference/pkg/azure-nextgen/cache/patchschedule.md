@@ -1,7 +1,7 @@
 
 ---
 title: "PatchSchedule"
-title_tag: "Resource PatchSchedule | Module cache | Package Azure NextGen"
+title_tag: "azure-nextgen.cache.PatchSchedule"
 meta_desc: "Explore the PatchSchedule resource of the cache module, including examples, input properties, output properties, lookup functions, and supporting types. Response to put/get patch schedules for Redis cache."
 ---
 
@@ -73,12 +73,12 @@ func main() {
 			ResourceGroupName: pulumi.String("rg1"),
 			ScheduleEntries: cache.ScheduleEntryArray{
 				&cache.ScheduleEntryArgs{
-					DayOfWeek:         pulumi.String("Monday"),
+					DayOfWeek:         "Monday",
 					MaintenanceWindow: pulumi.String("PT5H"),
 					StartHourUtc:      pulumi.Int(12),
 				},
 				&cache.ScheduleEntryArgs{
-					DayOfWeek:    pulumi.String("Tuesday"),
+					DayOfWeek:    "Tuesday",
 					StartHourUtc: pulumi.Int(12),
 				},
 			},
@@ -664,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
 
@@ -701,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
 
@@ -738,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
 
@@ -775,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
 

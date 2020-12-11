@@ -1,7 +1,7 @@
 
 ---
 title: "Configuration"
-title_tag: "Resource Configuration | Module dbformysql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformysql.Configuration"
 meta_desc: "Explore the Configuration resource of the dbformysql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Configuration."
 ---
 

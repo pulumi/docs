@@ -1,7 +1,7 @@
 
 ---
 title: "TagByProduct"
-title_tag: "Resource TagByProduct | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.TagByProduct"
 meta_desc: "Explore the TagByProduct resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Tag Contract details."
 ---
 

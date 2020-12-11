@@ -1,7 +1,7 @@
 
 ---
 title: "NamespaceVirtualNetworkRule"
-title_tag: "Resource NamespaceVirtualNetworkRule | Module eventhub | Package Azure NextGen"
+title_tag: "azure-nextgen.eventhub.NamespaceVirtualNetworkRule"
 meta_desc: "Explore the NamespaceVirtualNetworkRule resource of the eventhub module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in a List or Get VirtualNetworkRules operation"
 ---
 

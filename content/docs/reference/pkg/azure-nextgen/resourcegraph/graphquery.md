@@ -1,7 +1,7 @@
 
 ---
 title: "GraphQuery"
-title_tag: "Resource GraphQuery | Module resourcegraph | Package Azure NextGen"
+title_tag: "azure-nextgen.resourcegraph.GraphQuery"
 meta_desc: "Explore the GraphQuery resource of the resourcegraph module, including examples, input properties, output properties, lookup functions, and supporting types. Graph Query entity definition."
 ---
 

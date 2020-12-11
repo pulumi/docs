@@ -1,7 +1,7 @@
 
 ---
 title: "UserAssignedIdentity"
-title_tag: "Resource UserAssignedIdentity | Module managedidentity | Package Azure NextGen"
+title_tag: "azure-nextgen.managedidentity.UserAssignedIdentity"
 meta_desc: "Explore the UserAssignedIdentity resource of the managedidentity module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an identity resource."
 ---
 

@@ -224,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -298,7 +308,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -318,7 +328,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -338,6 +348,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}UTC Date and time when project was created{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -415,7 +435,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -435,7 +455,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -455,6 +475,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}UTC Date and time when project was created{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -532,7 +562,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response | My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response | Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response | Sql<wbr>Connection<wbr>Info<wbr>Response</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -552,7 +582,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response | My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response | Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response | Sql<wbr>Connection<wbr>Info<wbr>Response</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -572,6 +602,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}UTC Date and time when project was created{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -649,7 +689,7 @@ The following output properties are available:
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -669,7 +709,7 @@ The following output properties are available:
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Gallery"
-title_tag: "Resource Gallery | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.Gallery"
 meta_desc: "Explore the Gallery resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the Shared Image Gallery that you want to create or update."
 ---
 
@@ -1000,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Gallery<wbr>Sharing<wbr>Permission<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**{{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**{{% /md %}}</dd>
 
@@ -1034,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Gallery<wbr>Sharing<wbr>Permission<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**{{% /md %}}</dd>
 
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Gallery<wbr>Sharing<wbr>Permission<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**{{% /md %}}</dd>
 

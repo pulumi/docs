@@ -1,7 +1,7 @@
 
 ---
 title: "DelegatedSubnetServiceDetails"
-title_tag: "Resource DelegatedSubnetServiceDetails | Module delegatednetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.delegatednetwork.DelegatedSubnetServiceDetails"
 meta_desc: "Explore the DelegatedSubnetServiceDetails resource of the delegatednetwork module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an instance of a orchestrator."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DataController"
-title_tag: "Resource DataController | Module azuredata | Package Azure NextGen"
+title_tag: "azure-nextgen.azuredata.DataController"
 meta_desc: "Explore the DataController resource of the azuredata module, including examples, input properties, output properties, lookup functions, and supporting types. Data controller resource"
 ---
 

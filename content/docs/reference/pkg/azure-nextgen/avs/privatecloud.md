@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateCloud"
-title_tag: "Resource PrivateCloud | Module avs | Package Azure NextGen"
+title_tag: "azure-nextgen.avs.PrivateCloud"
 meta_desc: "Explore the PrivateCloud resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. A private cloud resource"
 ---
 
@@ -146,7 +146,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentitySourceArgs]]</span> = None<span class="p">, </span><span class="nx">internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[ManagementClusterArgs]</span> = None<span class="p">, </span><span class="nx">network_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentitySourceArgs]]</span> = None<span class="p">, </span><span class="nx">internet</span><span class="p">:</span> <span class="nx">Optional[Union[str, InternetEnum]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[ManagementClusterArgs]</span> = None<span class="p">, </span><span class="nx">network_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -394,7 +394,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Internet<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
 
@@ -511,7 +511,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_go" style="color: inherit; text-decoration: inherit;">Internet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
 
@@ -628,7 +628,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Internet<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
 
@@ -745,7 +745,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Internet<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
 
@@ -1729,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Ssl<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
 
@@ -1836,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
 
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ssl<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
 
@@ -2050,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ssl<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ServerKey"
-title_tag: "Resource ServerKey | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ServerKey"
 meta_desc: "Explore the ServerKey resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A server key."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverKey = new AzureNextGen.Sql.V20150501Preview.ServerKey("serverKey", new AzureNextGen.Sql.V20150501Preview.ServerKeyArgs
+        var serverKey = new AzureNextGen.Sql.V20200801Preview.ServerKey("serverKey", new AzureNextGen.Sql.V20200801Preview.ServerKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ResourceGroupName = "sqlcrudtest-7398",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20150501preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_key = azure_nextgen.sql.v20150501preview.ServerKey("serverKey",
+server_key = azure_nextgen.sql.v20200801preview.ServerKey("serverKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     resource_group_name="sqlcrudtest-7398",
     server_key_type="AzureKeyVault",
@@ -96,7 +96,7 @@ server_key = azure_nextgen.sql.v20150501preview.ServerKey("serverKey",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverKey = new azure_nextgen.sql.v20150501preview.ServerKey("serverKey", {
+const serverKey = new azure_nextgen.sql.v20200801preview.ServerKey("serverKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     resourceGroupName: "sqlcrudtest-7398",
     serverKeyType: "AzureKeyVault",
@@ -120,7 +120,7 @@ const serverKey = new azure_nextgen.sql.v20150501preview.ServerKey("serverKey", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_key_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServerKeyType]]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -300,7 +300,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -318,7 +318,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#serverkeytype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Server<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 
@@ -334,43 +334,13 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationdate_csharp">
-<a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_csharp">
-<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the server key.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -387,7 +357,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -405,7 +375,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#serverkeytype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 
@@ -421,43 +391,13 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationdate_go">
-<a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_go">
-<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the server key.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -474,7 +414,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -492,7 +432,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#serverkeytype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 
@@ -508,43 +448,13 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationdate_nodejs">
-<a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_nodejs">
-<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the server key.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -561,7 +471,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -579,7 +489,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#server_key_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 
@@ -595,43 +505,13 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creation_date_python">
-<a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_python">
-<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the server key.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -653,6 +533,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="creationdate_csharp">
+<a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -660,6 +550,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -693,6 +593,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -710,6 +620,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="creationdate_go">
+<a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -717,6 +637,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -750,6 +680,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -767,6 +707,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="creationdate_nodejs">
+<a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -774,6 +724,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -807,6 +767,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -824,6 +794,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="creation_date_python">
+<a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The server key creation date.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -831,6 +811,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of encryption protector. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -861,6 +851,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Subregion of the server key.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of the server key.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

@@ -1,7 +1,7 @@
 
 ---
 title: "DisasterRecoveryConfig"
-title_tag: "Resource DisasterRecoveryConfig | Module eventhub | Package Azure NextGen"
+title_tag: "azure-nextgen.eventhub.DisasterRecoveryConfig"
 meta_desc: "Explore the DisasterRecoveryConfig resource of the eventhub module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in List or Get Alias(Disaster Recovery configuration) operation"
 ---
 

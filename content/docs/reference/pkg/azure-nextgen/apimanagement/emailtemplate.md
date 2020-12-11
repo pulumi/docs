@@ -1,7 +1,7 @@
 
 ---
 title: "EmailTemplate"
-title_tag: "Resource EmailTemplate | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.EmailTemplate"
 meta_desc: "Explore the EmailTemplate resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Email Template details."
 ---
 

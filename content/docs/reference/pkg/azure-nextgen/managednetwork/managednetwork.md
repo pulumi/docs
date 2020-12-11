@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedNetwork"
-title_tag: "Resource ManagedNetwork | Module managednetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.managednetwork.ManagedNetwork"
 meta_desc: "Explore the ManagedNetwork resource of the managednetwork module, including examples, input properties, output properties, lookup functions, and supporting types. The Managed Network resource"
 ---
 

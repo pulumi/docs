@@ -1,7 +1,7 @@
 
 ---
 title: "JitRequest"
-title_tag: "Resource JitRequest | Module solutions | Package Azure NextGen"
+title_tag: "azure-nextgen.solutions.JitRequest"
 meta_desc: "Explore the JitRequest resource of the solutions module, including examples, input properties, output properties, lookup functions, and supporting types. Information about JIT request definition."
 ---
 

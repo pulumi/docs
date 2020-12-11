@@ -1,7 +1,7 @@
 
 ---
 title: "WorkflowAccessKey"
-title_tag: "Resource WorkflowAccessKey | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.WorkflowAccessKey"
 meta_desc: "Explore the WorkflowAccessKey resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

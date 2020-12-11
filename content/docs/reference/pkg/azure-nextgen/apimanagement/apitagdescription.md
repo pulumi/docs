@@ -1,7 +1,7 @@
 
 ---
 title: "ApiTagDescription"
-title_tag: "Resource ApiTagDescription | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ApiTagDescription"
 meta_desc: "Explore the ApiTagDescription resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Contract details."
 ---
 

@@ -224,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
 </span> 
@@ -288,6 +298,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -358,6 +378,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span> 
@@ -422,6 +452,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2449,7 +2489,7 @@ The following output properties are available:
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -2486,7 +2526,7 @@ The following output properties are available:
 <a href="#preset_go" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -2523,7 +2563,7 @@ The following output properties are available:
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Analyzer<wbr>Preset<wbr>Response | Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response | Face<wbr>Detector<wbr>Preset<wbr>Response | Standard<wbr>Encoder<wbr>Preset<wbr>Response</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -2560,7 +2600,7 @@ The following output properties are available:
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args, Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args, Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args, Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "MoveResource"
-title_tag: "Resource MoveResource | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.MoveResource"
 meta_desc: "Explore the MoveResource resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. Defines the move resource."
 ---
 
@@ -3409,7 +3409,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3456,7 +3456,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettings">Load<wbr>Balancer<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettings">Network<wbr>Interface<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettings">Public<wbr>IPAddress<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettings">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettings">Virtual<wbr>Network<wbr>Resource<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3503,7 +3503,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Availability<wbr>Set<wbr>Resource<wbr>Settings | Load<wbr>Balancer<wbr>Resource<wbr>Settings | Network<wbr>Interface<wbr>Resource<wbr>Settings | Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings | Public<wbr>IPAddress<wbr>Resource<wbr>Settings | Resource<wbr>Group<wbr>Resource<wbr>Settings | Sql<wbr>Database<wbr>Resource<wbr>Settings | Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings | Sql<wbr>Server<wbr>Resource<wbr>Settings | Virtual<wbr>Machine<wbr>Resource<wbr>Settings | Virtual<wbr>Network<wbr>Resource<wbr>Settings</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettings">Load<wbr>Balancer<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettings">Network<wbr>Interface<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettings">Public<wbr>IPAddress<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettings">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettings">Virtual<wbr>Network<wbr>Resource<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3550,7 +3550,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args, Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args, Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args, Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args, Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args, Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args, Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args, Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args, Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args, Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args, Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args]</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettings">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettings">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettings">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettings">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettings">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3594,6 +3594,16 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
+        <span id="isresolverequired_csharp">
+<a href="#isresolverequired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Resolve<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a value indicating whether the resolve action is required over the move collection.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="movestatus_csharp">
 <a href="#movestatus_csharp" style="color: inherit; text-decoration: inherit;">Move<wbr>Status</a>
 </span> 
@@ -3628,7 +3638,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3668,7 +3678,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3698,6 +3708,16 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isresolverequired_go">
+<a href="#isresolverequired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Resolve<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a value indicating whether the resolve action is required over the move collection.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3735,7 +3755,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3775,7 +3795,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3805,6 +3825,16 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isresolverequired_nodejs">
+<a href="#isresolverequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Resolve<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a value indicating whether the resolve action is required over the move collection.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3842,7 +3872,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response | Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response | Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3882,7 +3912,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response | Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response | Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3912,6 +3942,16 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="is_resolve_required_python">
+<a href="#is_resolve_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>resolve_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a value indicating whether the resolve action is required over the move collection.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3949,7 +3989,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#source_resource_settings_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3989,7 +4029,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -7101,7 +7141,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Zone<wbr>Redundant</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -7128,7 +7168,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -7155,7 +7195,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Zone<wbr>Redundant</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -7182,7 +7222,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Zone<wbr>Redundant</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -7339,7 +7379,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Zone<wbr>Redundant</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -7366,7 +7406,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -7393,7 +7433,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Zone<wbr>Redundant</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -7420,7 +7460,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Zone<wbr>Redundant</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
 
@@ -8221,7 +8261,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#targetavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Target<wbr>Availability<wbr>Zone</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
 
@@ -8268,7 +8308,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#targetavailabilityzone_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
 
@@ -8315,7 +8355,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#targetavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Target<wbr>Availability<wbr>Zone</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
 
@@ -8362,7 +8402,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 <a href="#target_availability_zone_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Target<wbr>Availability<wbr>Zone</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
 

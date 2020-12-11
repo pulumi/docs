@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module databoxedge | Package Azure NextGen"
+title_tag: "azure-nextgen.databoxedge.User"
 meta_desc: "Explore the User resource of the databoxedge module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a user who has access to one or more shares on the Data Box Edge/Gateway device."
 ---
 
@@ -34,7 +34,7 @@ class MyStack : Stack
             {
                 EncryptionAlgorithm = "None",
                 EncryptionCertThumbprint = "blah",
-                Value = "Password@1",
+                Value = "<value>",
             },
             Name = "user1",
             ResourceGroupName = "GroupForEdgeAutomation",
@@ -66,7 +66,7 @@ func main() {
 			EncryptedPassword: &databoxedge.AsymmetricEncryptedSecretArgs{
 				EncryptionAlgorithm:      pulumi.String("None"),
 				EncryptionCertThumbprint: pulumi.String("blah"),
-				Value:                    pulumi.String("Password@1"),
+				Value:                    pulumi.String("<value>"),
 			},
 			Name:              pulumi.String("user1"),
 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
@@ -95,7 +95,7 @@ user = azure_nextgen.databoxedge.latest.User("user",
     encrypted_password=azure_nextgen.databoxedge.latest.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="None",
         encryption_cert_thumbprint="blah",
-        value="Password@1",
+        value="<value>",
     ),
     name="user1",
     resource_group_name="GroupForEdgeAutomation",
@@ -117,7 +117,7 @@ const user = new azure_nextgen.databoxedge.latest.User("user", {
     encryptedPassword: {
         encryptionAlgorithm: "None",
         encryptionCertThumbprint: "blah",
-        value: "Password@1",
+        value: "<value>",
     },
     name: "user1",
     resourceGroupName: "GroupForEdgeAutomation",
@@ -141,7 +141,7 @@ const user = new azure_nextgen.databoxedge.latest.User("user", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[AsymmetricEncryptedSecretArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShareAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[AsymmetricEncryptedSecretArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShareAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, UserType]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -349,7 +349,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>User<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 
@@ -416,7 +416,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 
@@ -483,7 +483,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>User<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 
@@ -550,7 +550,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">User<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 
@@ -726,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 
@@ -763,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 
@@ -800,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 
@@ -1044,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
 
@@ -1071,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
 
@@ -1098,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Share<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
 
@@ -1125,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Share<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
 

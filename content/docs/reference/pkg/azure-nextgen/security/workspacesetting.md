@@ -1,7 +1,7 @@
 
 ---
 title: "WorkspaceSetting"
-title_tag: "Resource WorkspaceSetting | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.WorkspaceSetting"
 meta_desc: "Explore the WorkspaceSetting resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. Configures where to store the OMS agent data for workspaces under a scope"
 ---
 

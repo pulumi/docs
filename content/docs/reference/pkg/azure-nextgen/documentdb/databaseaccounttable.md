@@ -1,7 +1,7 @@
 
 ---
 title: "DatabaseAccountTable"
-title_tag: "Resource DatabaseAccountTable | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.DatabaseAccountTable"
 meta_desc: "Explore the DatabaseAccountTable resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Table."
 ---
 

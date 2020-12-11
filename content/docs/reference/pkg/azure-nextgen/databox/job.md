@@ -1,7 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module databox | Package Azure NextGen"
+title_tag: "azure-nextgen.databox.Job"
 meta_desc: "Explore the Job resource of the databox module, including examples, input properties, output properties, lookup functions, and supporting types. Job Resource."
 ---
 
@@ -206,12 +206,12 @@ class MyStack : Stack
                         AccountDetails = 
                         {
                             { "dataAccountType", "StorageAccount" },
-                            { "sharePassword", "Abcd223@22344Abcd223@22344" },
+                            { "sharePassword", "<sharePassword>" },
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
                         },
                     },
                 } },
-                { "devicePassword", "Abcd223@22344" },
+                { "devicePassword", "<devicePassword>" },
                 { "jobDetailsType", "DataBox" },
                 { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
                 {
@@ -263,11 +263,11 @@ job = azure_nextgen.databox.latest.Job("job",
         "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
-                "sharePassword": "Abcd223@22344Abcd223@22344",
+                "sharePassword": "<sharePassword>",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
             },
         )],
-        "devicePassword": "Abcd223@22344",
+        "devicePassword": "<devicePassword>",
         "jobDetailsType": "DataBox",
         "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
             address_type="Commercial",
@@ -309,11 +309,11 @@ const job = new azure_nextgen.databox.latest.Job("job", {
         dataImportDetails: [{
             accountDetails: {
                 dataAccountType: "StorageAccount",
-                sharePassword: "Abcd223@22344Abcd223@22344",
+                sharePassword: "<sharePassword>",
                 storageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
             },
         }],
-        devicePassword: "Abcd223@22344",
+        devicePassword: "<devicePassword>",
         jobDetailsType: "DataBox",
         shippingAddress: {
             addressType: "Commercial",
@@ -895,7 +895,7 @@ const job = new azure_nextgen.databox.latest.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[JobDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">delivery_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[Union[DataBoxDiskJobDetailsArgs, DataBoxHeavyJobDetailsArgs, DataBoxJobDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transfer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[JobDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">delivery_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, JobDeliveryType]]</span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[Union[DataBoxDiskJobDetailsArgs, DataBoxHeavyJobDetailsArgs, DataBoxJobDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transfer_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, TransferType]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1113,7 +1113,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transfertype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Transfer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
 
@@ -1133,7 +1133,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#deliverytype_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Job<wbr>Delivery<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
 
@@ -1143,7 +1143,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#databoxdiskjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -1220,7 +1220,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transfertype_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
 
@@ -1240,7 +1240,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#deliverytype_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
 
@@ -1250,7 +1250,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -1327,7 +1327,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transfertype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transfer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
 
@@ -1347,7 +1347,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#deliverytype_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Job<wbr>Delivery<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
 
@@ -1357,7 +1357,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details | Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details | Data<wbr>Box<wbr>Job<wbr>Details</span>
+        <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -1434,7 +1434,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transfer_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transfer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
 
@@ -1454,7 +1454,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#delivery_type_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Job<wbr>Delivery<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
 
@@ -1464,7 +1464,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args, Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args]</span>
+        <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -7905,7 +7905,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -7925,7 +7925,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#logcollectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Collection<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Log<wbr>Collection<wbr>Level</span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
 
@@ -7942,7 +7942,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -7962,7 +7962,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#logcollectionlevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Collection<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
 
@@ -7979,7 +7979,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Disk<wbr>Details | Storage<wbr>Account<wbr>Details</span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -7999,7 +7999,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#logcollectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Collection<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Log<wbr>Collection<wbr>Level</span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
 
@@ -8016,7 +8016,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Args]</span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8036,7 +8036,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#log_collection_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>collection_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Log<wbr>Collection<wbr>Level</span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
 
@@ -8064,7 +8064,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8101,7 +8101,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8138,7 +8138,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Disk<wbr>Details<wbr>Response | Storage<wbr>Account<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8175,7 +8175,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8223,7 +8223,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8240,7 +8240,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8257,7 +8257,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Disk<wbr>Details | Storage<wbr>Account<wbr>Details</span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8274,7 +8274,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Args]</span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8302,7 +8302,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8319,7 +8319,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8336,7 +8336,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Disk<wbr>Details<wbr>Response | Storage<wbr>Account<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8353,7 +8353,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -8381,7 +8381,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#doubleencryption_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Double<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
 
@@ -8398,7 +8398,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#doubleencryption_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
 
@@ -8415,7 +8415,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#doubleencryption_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Double<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
 
@@ -8432,7 +8432,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#double_encryption_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Double<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
 
@@ -8549,7 +8549,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filterfiletype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Filter<wbr>File<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
 
@@ -8576,7 +8576,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filterfiletype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
 
@@ -8603,7 +8603,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filterfiletype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Filter<wbr>File<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
 
@@ -8630,7 +8630,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filter_file_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Filter<wbr>File<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
 
@@ -9820,7 +9820,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Notification<wbr>Stage<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
 
@@ -9847,7 +9847,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
 
@@ -9874,7 +9874,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Notification<wbr>Stage<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
 
@@ -9901,7 +9901,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Notification<wbr>Stage<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
 
@@ -10863,7 +10863,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd>
 
@@ -10970,7 +10970,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd>
 
@@ -11077,7 +11077,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd>
 
@@ -11184,7 +11184,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd>
 
@@ -11721,7 +11721,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 
@@ -11758,7 +11758,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 
@@ -11795,7 +11795,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 
@@ -11832,7 +11832,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 
@@ -12277,7 +12277,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Data<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
 
@@ -12314,7 +12314,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
 
@@ -12351,7 +12351,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
 
@@ -12388,7 +12388,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
 
@@ -12595,7 +12595,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Transfer<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
 
@@ -12632,7 +12632,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
 
@@ -12669,7 +12669,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transfer<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
 
@@ -12706,7 +12706,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transfer_configuration_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transfer<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
 
@@ -13229,7 +13229,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Data<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
 
@@ -13276,7 +13276,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
 
@@ -13323,7 +13323,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
 
@@ -13370,7 +13370,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
 
@@ -13627,7 +13627,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferredshipmenttype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shipment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Transport<wbr>Shipment<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
 
@@ -13644,7 +13644,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferredshipmenttype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shipment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
 
@@ -13661,7 +13661,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferredshipmenttype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shipment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Shipment<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
 
@@ -13678,7 +13678,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferred_shipment_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shipment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Shipment<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
 

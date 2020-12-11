@@ -1,7 +1,7 @@
 
 ---
 title: "Suppression"
-title_tag: "Resource Suppression | Module advisor | Package Azure NextGen"
+title_tag: "azure-nextgen.advisor.Suppression"
 meta_desc: "Explore the Suppression resource of the advisor module, including examples, input properties, output properties, lookup functions, and supporting types. The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule."
 ---
 
@@ -529,6 +529,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="expirationtimestamp_csharp">
+<a href="#expirationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Stamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the expiration time stamp.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -553,6 +563,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="expirationtimestamp_go">
+<a href="#expirationtimestamp_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Stamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the expiration time stamp.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -583,6 +603,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="expirationtimestamp_nodejs">
+<a href="#expirationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Stamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the expiration time stamp.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -607,6 +637,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="expiration_time_stamp_python">
+<a href="#expiration_time_stamp_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>stamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the expiration time stamp.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

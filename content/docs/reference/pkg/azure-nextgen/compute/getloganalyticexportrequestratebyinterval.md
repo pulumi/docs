@@ -24,7 +24,7 @@ meta_desc: "Explore the GetLogAnalyticExportRequestRateByInterval function of th
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_log_analytic_export_request_rate_by_interval(</span><span class="nx">blob_container_sas_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_by_operation_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_by_resource_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_by_throttle_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">interval_length</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLogAnalyticExportRequestRateByIntervalResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_log_analytic_export_request_rate_by_interval(</span><span class="nx">blob_container_sas_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_by_client_application_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_by_operation_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_by_resource_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_by_throttle_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_by_user_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">interval_length</span><span class="p">:</span> <span class="nx">Optional[IntervalInMins]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLogAnalyticExportRequestRateByIntervalResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -75,7 +75,7 @@ The following arguments are supported:
 <a href="#intervallength_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Interval<wbr>In<wbr>Mins</span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
 
@@ -98,6 +98,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbyclientapplicationid_csharp">
+<a href="#groupbyclientapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Client<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -128,6 +138,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbyuseragent_csharp">
+<a href="#groupbyuseragent_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>User<wbr>Agent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -162,7 +182,7 @@ The following arguments are supported:
 <a href="#intervallength_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
 
@@ -185,6 +205,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbyclientapplicationid_go">
+<a href="#groupbyclientapplicationid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Client<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -215,6 +245,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbyuseragent_go">
+<a href="#groupbyuseragent_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>User<wbr>Agent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -249,7 +289,7 @@ The following arguments are supported:
 <a href="#intervallength_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Interval<wbr>In<wbr>Mins</span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
 
@@ -272,6 +312,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbyclientapplicationid_nodejs">
+<a href="#groupbyclientapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Client<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -302,6 +352,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbyuseragent_nodejs">
+<a href="#groupbyuseragent_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>User<wbr>Agent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -336,7 +396,7 @@ The following arguments are supported:
 <a href="#interval_length_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Interval<wbr>In<wbr>Mins</span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
 
@@ -359,6 +419,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_by_client_application_id_python">
+<a href="#group_by_client_application_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>client_<wbr>application_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -389,6 +459,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_by_user_agent_python">
+<a href="#group_by_user_agent_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>user_<wbr>agent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

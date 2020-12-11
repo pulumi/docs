@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetwork"
-title_tag: "Resource VirtualNetwork | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.VirtualNetwork"
 meta_desc: "Explore the VirtualNetwork resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network."
 ---
 
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
 
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
 
@@ -1177,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
 
@@ -1204,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
 
@@ -1351,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpublicip_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
 
@@ -1388,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpublicip_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
 
@@ -1425,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpublicip_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
 
@@ -1462,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_public_ip_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
 
@@ -1540,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useinvmcreationpermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
 
@@ -1550,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepublicipaddresspermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
 
@@ -1607,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useinvmcreationpermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
 
@@ -1617,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepublicipaddresspermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
 
@@ -1674,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useinvmcreationpermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
 
@@ -1684,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepublicipaddresspermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
 
@@ -1741,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_in_vm_creation_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>in_<wbr>vm_<wbr>creation_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
 
@@ -1751,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_public_ip_address_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip_<wbr>address_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Usage<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DisasterRecoveryConfiguration"
-title_tag: "Resource DisasterRecoveryConfiguration | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.DisasterRecoveryConfiguration"
 meta_desc: "Explore the DisasterRecoveryConfiguration resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a disaster recovery configuration."
 ---
 

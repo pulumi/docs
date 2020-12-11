@@ -184,6 +184,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="modifiedat_csharp">
 <a href="#modifiedat_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>At</a>
 </span> 
@@ -268,7 +278,7 @@ The following output properties are available:
 <a href="#iconfileuris_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Outputs.<wbr>Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
 
@@ -318,6 +328,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -405,7 +425,7 @@ The following output properties are available:
 <a href="#iconfileuris_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
 
@@ -455,6 +475,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -542,7 +572,7 @@ The following output properties are available:
 <a href="#iconfileuris_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
 
@@ -592,6 +622,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -679,7 +719,7 @@ The following output properties are available:
 <a href="#icon_file_uris_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
 
@@ -724,125 +764,6 @@ The following output properties are available:
 
 
 ## Supporting Types
-
-
-<h4 id="offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="iconkind_csharp">
-<a href="#iconkind_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Icon size{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="uri_csharp">
-<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Icon uri{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="iconkind_go">
-<a href="#iconkind_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Icon size{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="uri_go">
-<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Icon uri{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="iconkind_nodejs">
-<a href="#iconkind_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Icon size{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="uri_nodejs">
-<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Icon uri{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="icon_kind_python">
-<a href="#icon_kind_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Icon size{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="uri_python">
-<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Icon uri{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
 
 
 <h4 id="planresponse">Plan<wbr>Response</h4>

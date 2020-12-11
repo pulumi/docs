@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedStorageAccount"
-title_tag: "Resource LinkedStorageAccount | Module operationalinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.operationalinsights.LinkedStorageAccount"
 meta_desc: "Explore the LinkedStorageAccount resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Linked storage accounts top level resource container."
 ---
 

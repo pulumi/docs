@@ -1,7 +1,7 @@
 
 ---
 title: "PostgresInstance"
-title_tag: "Resource PostgresInstance | Module azuredata | Package Azure NextGen"
+title_tag: "azure-nextgen.azuredata.PostgresInstance"
 meta_desc: "Explore the PostgresInstance resource of the azuredata module, including examples, input properties, output properties, lookup functions, and supporting types. A Postgres Instance."
 ---
 

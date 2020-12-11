@@ -1,7 +1,7 @@
 
 ---
 title: "Formula"
-title_tag: "Resource Formula | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.Formula"
 meta_desc: "Explore the Formula resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A formula for creating a VM, specifying an image base and other parameters"
 ---
 
@@ -2103,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -2140,7 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -2177,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -2214,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -2579,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Host<wbr>Caching<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -2616,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -2653,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Host<wbr>Caching<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -2690,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Host<wbr>Caching<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -3849,7 +3849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -3886,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -3923,7 +3923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -3960,7 +3960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -4487,7 +4487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinecreationsource_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -4844,7 +4844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinecreationsource_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -5201,7 +5201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinecreationsource_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -5558,7 +5558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_creation_source_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>creation_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -7843,7 +7843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -7900,7 +7900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -7957,7 +7957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -8014,7 +8014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -8351,7 +8351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 
@@ -8468,7 +8468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 
@@ -8585,7 +8585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 
@@ -8702,7 +8702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 

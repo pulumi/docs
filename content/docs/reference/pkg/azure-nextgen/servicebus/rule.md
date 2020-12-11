@@ -1,7 +1,7 @@
 
 ---
 title: "Rule"
-title_tag: "Resource Rule | Module servicebus | Package Azure NextGen"
+title_tag: "azure-nextgen.servicebus.Rule"
 meta_desc: "Explore the Rule resource of the servicebus module, including examples, input properties, output properties, lookup functions, and supporting types. Description of Rule Resource."
 ---
 
@@ -69,7 +69,7 @@ func main() {
 					"topicHint": pulumi.String("Crop"),
 				},
 			},
-			FilterType:        pulumi.String("CorrelationFilter"),
+			FilterType:        "CorrelationFilter",
 			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
 			ResourceGroupName: pulumi.String("resourceGroupName"),
 			RuleName:          pulumi.String("sdk-Rules-6571"),
@@ -269,7 +269,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := servicebus.NewRule(ctx, "rule", &servicebus.RuleArgs{
-			FilterType:        pulumi.String("SqlFilter"),
+			FilterType:        "SqlFilter",
 			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
 			ResourceGroupName: pulumi.String("resourceGroupName"),
 			RuleName:          pulumi.String("sdk-Rules-6571"),
@@ -345,7 +345,7 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[ActionArgs]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[CorrelationFilterArgs]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[SqlFilterArgs]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[ActionArgs]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[CorrelationFilterArgs]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[FilterType]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[SqlFilterArgs]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -593,7 +593,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filtertype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd>
 
@@ -690,7 +690,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filtertype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd>
 
@@ -787,7 +787,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filtertype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd>
 
@@ -884,7 +884,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filter_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd>
 

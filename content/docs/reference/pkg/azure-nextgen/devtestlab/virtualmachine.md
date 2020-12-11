@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachine"
-title_tag: "Resource VirtualMachine | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.VirtualMachine"
 meta_desc: "Explore the VirtualMachine resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual machine."
 ---
 
@@ -194,7 +194,7 @@ const virtualMachine = new azure_nextgen.devtestlab.latest.VirtualMachine("virtu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_claim</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">artifact_deployment_status</span><span class="p">:</span> <span class="nx">Optional[ArtifactDeploymentStatusPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArtifactInstallPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">compute_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataDiskPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">disallow_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_reference</span><span class="p">:</span> <span class="nx">Optional[GalleryImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">is_authentication_with_ssh_key</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_known_power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[NetworkInterfacePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleCreationParameterArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_creation_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_claim</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">artifact_deployment_status</span><span class="p">:</span> <span class="nx">Optional[ArtifactDeploymentStatusPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArtifactInstallPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">compute_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataDiskPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">disallow_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_reference</span><span class="p">:</span> <span class="nx">Optional[GalleryImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">is_authentication_with_ssh_key</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_known_power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[NetworkInterfacePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleCreationParameterArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_creation_source</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualMachineCreationSource]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -722,7 +722,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#virtualmachinecreationsource_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#virtualmachinecreationsource_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -1456,7 +1456,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#virtualmachinecreationsource_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -1823,7 +1823,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#virtual_machine_creation_source_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>creation_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
 
@@ -3672,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -3709,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -3746,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -3783,7 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
 
@@ -4667,7 +4667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Host<wbr>Caching<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -4704,7 +4704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -4741,7 +4741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Host<wbr>Caching<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -4778,7 +4778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Host<wbr>Caching<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
 
@@ -5779,7 +5779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -5816,7 +5816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -5853,7 +5853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -5890,7 +5890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
 
@@ -6895,7 +6895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -6952,7 +6952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -7009,7 +7009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -7066,7 +7066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
 
@@ -7403,7 +7403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 
@@ -7520,7 +7520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 
@@ -7637,7 +7637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 
@@ -7754,7 +7754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
 

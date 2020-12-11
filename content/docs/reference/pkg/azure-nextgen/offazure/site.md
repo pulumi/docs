@@ -1,7 +1,7 @@
 
 ---
 title: "Site"
-title_tag: "Resource Site | Module offazure | Package Azure NextGen"
+title_tag: "azure-nextgen.offazure.Site"
 meta_desc: "Explore the Site resource of the offazure module, including examples, input properties, output properties, lookup functions, and supporting types. Site REST Resource."
 ---
 

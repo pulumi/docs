@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module search | Package Azure NextGen"
+title_tag: "azure-nextgen.search.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the search module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an existing Private Endpoint connection to the Azure Cognitive Search service."
 ---
 
@@ -66,7 +66,7 @@ func main() {
 			Properties: &search.PrivateEndpointConnectionPropertiesArgs{
 				PrivateLinkServiceConnectionState: &search.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs{
 					Description: pulumi.String("Rejected for some reason"),
-					Status:      pulumi.String("Rejected"),
+					Status:      "Rejected",
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
@@ -901,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.{{% /md %}}</dd>
 
@@ -938,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.{{% /md %}}</dd>
 
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.{{% /md %}}</dd>
 
@@ -1012,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.{{% /md %}}</dd>
 

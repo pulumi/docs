@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachineScaleSetExtension"
-title_tag: "Resource VirtualMachineScaleSetExtension | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.VirtualMachineScaleSetExtension"
 meta_desc: "Explore the VirtualMachineScaleSetExtension resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Virtual Machine Scale Set Extension."
 ---
 

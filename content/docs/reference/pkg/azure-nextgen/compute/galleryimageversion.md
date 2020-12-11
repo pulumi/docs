@@ -1,7 +1,7 @@
 
 ---
 title: "GalleryImageVersion"
-title_tag: "Resource GalleryImageVersion | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.GalleryImageVersion"
 meta_desc: "Explore the GalleryImageVersion resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the gallery image version that you want to create or update."
 ---
 
@@ -377,7 +377,7 @@ func main() {
 			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
 				DataDiskImages: compute.GalleryDataDiskImageArray{
 					&compute.GalleryDataDiskImageArgs{
-						HostCaching: pulumi.String("None"),
+						HostCaching: "None",
 						Lun:         pulumi.Int(1),
 						Source: &compute.GalleryArtifactVersionSourceArgs{
 							Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}"),
@@ -385,7 +385,7 @@ func main() {
 					},
 				},
 				OsDiskImage: &compute.GalleryOSDiskImageArgs{
-					HostCaching: pulumi.String("ReadOnly"),
+					HostCaching: "ReadOnly",
 					Source: &compute.GalleryArtifactVersionSourceArgs{
 						Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}"),
 					},
@@ -2250,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Host<wbr>Caching</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -2287,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -2324,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Host<wbr>Caching</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Host<wbr>Caching</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -2628,7 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 
@@ -2685,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 
@@ -2742,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 
@@ -2799,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 
@@ -3434,7 +3434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Host<wbr>Caching</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -3488,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Host<wbr>Caching</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -3515,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Host<wbr>Caching</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
 
@@ -4218,7 +4218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 
@@ -4265,7 +4265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 
@@ -4312,7 +4312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 
@@ -4359,7 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "HealthAlert"
-title_tag: "Resource HealthAlert | Module alertsmanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.alertsmanagement.HealthAlert"
 meta_desc: "Explore the HealthAlert resource of the alertsmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. The health alert resource."
 ---
 

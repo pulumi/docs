@@ -1,7 +1,7 @@
 
 ---
 title: "DdosProtectionPlan"
-title_tag: "Resource DdosProtectionPlan | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.DdosProtectionPlan"
 meta_desc: "Explore the DdosProtectionPlan resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. A DDoS protection plan in a resource group."
 ---
 

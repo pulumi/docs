@@ -1,7 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module scheduler | Package Azure NextGen"
+title_tag: "azure-nextgen.scheduler.Job"
 meta_desc: "Explore the Job resource of the scheduler module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#basicauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1340,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthentication">Client<wbr>Cert<wbr>Authentication</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthentication">OAuth<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Basic<wbr>Authentication | Client<wbr>Cert<wbr>Authentication | OAuth<wbr>Authentication</span>
+        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthentication">Client<wbr>Cert<wbr>Authentication</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthentication">OAuth<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1454,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Basic<wbr>Authentication<wbr>Args, Client<wbr>Cert<wbr>Authentication<wbr>Args, OAuth<wbr>Authentication<wbr>Args]</span>
+        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthentication">Client<wbr>Cert<wbr>Authentication<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthentication">OAuth<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1522,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1579,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Basic<wbr>Authentication<wbr>Response | Client<wbr>Cert<wbr>Authentication<wbr>Response | OAuth<wbr>Authentication<wbr>Response</span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1693,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Basic<wbr>Authentication<wbr>Response<wbr>Args, Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args, OAuth<wbr>Authentication<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1821,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Job<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action type.{{% /md %}}</dd>
 
@@ -1898,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action type.{{% /md %}}</dd>
 
@@ -1975,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Job<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action type.{{% /md %}}</dd>
 
@@ -2052,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Job<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action type.{{% /md %}}</dd>
 
@@ -2449,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Job<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job error action type.{{% /md %}}</dd>
 
@@ -2516,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job error action type.{{% /md %}}</dd>
 
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Job<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job error action type.{{% /md %}}</dd>
 
@@ -2650,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Job<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the job error action type.{{% /md %}}</dd>
 
@@ -2987,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Job<wbr>State</span>
     </dt>
     <dd>{{% md %}}Gets or set the job state.{{% /md %}}</dd>
 
@@ -3034,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or set the job state.{{% /md %}}</dd>
 
@@ -3081,7 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Job<wbr>State</span>
     </dt>
     <dd>{{% md %}}Gets or set the job state.{{% /md %}}</dd>
 
@@ -3128,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Job<wbr>State</span>
     </dt>
     <dd>{{% md %}}Gets or set the job state.{{% /md %}}</dd>
 
@@ -3415,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Recurrence<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
 
@@ -3472,7 +3472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
 
@@ -3529,7 +3529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Recurrence<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
 
@@ -3586,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Recurrence<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
 
@@ -3913,7 +3913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Day<wbr>Of<wbr>Week&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -3970,7 +3970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -4027,7 +4027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Day<wbr>Of<wbr>Week[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -4084,7 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Day<wbr>Of<wbr>Week]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -4112,7 +4112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Job<wbr>Schedule<wbr>Day</span>
     </dt>
     <dd>{{% md %}}Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -4139,7 +4139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -4166,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Job<wbr>Schedule<wbr>Day</span>
     </dt>
     <dd>{{% md %}}Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -4193,7 +4193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Job<wbr>Schedule<wbr>Day</span>
     </dt>
     <dd>{{% md %}}Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -5246,7 +5246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytype_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Retry<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry strategy to be used.{{% /md %}}</dd>
 
@@ -5283,7 +5283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytype_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry strategy to be used.{{% /md %}}</dd>
 
@@ -5320,7 +5320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytype_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Retry<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry strategy to be used.{{% /md %}}</dd>
 
@@ -5357,7 +5357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_type_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Retry<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry strategy to be used.{{% /md %}}</dd>
 
@@ -5564,7 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication type.{{% /md %}}</dd>
 
@@ -5601,7 +5601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication type.{{% /md %}}</dd>
 
@@ -5638,7 +5638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication type.{{% /md %}}</dd>
 
@@ -5675,7 +5675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Service<wbr>Bus<wbr>Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication type.{{% /md %}}</dd>
 
@@ -7040,7 +7040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Service<wbr>Bus<wbr>Transport<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 
@@ -7117,7 +7117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 
@@ -7194,7 +7194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Service<wbr>Bus<wbr>Transport<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 
@@ -7271,7 +7271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_type_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Service<wbr>Bus<wbr>Transport<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 
@@ -7678,7 +7678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Service<wbr>Bus<wbr>Transport<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 
@@ -7755,7 +7755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 
@@ -7832,7 +7832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Service<wbr>Bus<wbr>Transport<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 
@@ -7909,7 +7909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_type_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Service<wbr>Bus<wbr>Transport<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd>
 

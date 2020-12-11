@@ -1,7 +1,7 @@
 
 ---
 title: "ChapSetting"
-title_tag: "Resource ChapSetting | Module storsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.storsimple.ChapSetting"
 meta_desc: "Explore the ChapSetting resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. Challenge-Handshake Authentication Protocol (CHAP) setting"
 ---
 
@@ -35,7 +35,7 @@ class MyStack : Stack
             Password = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
-                Value = "W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ==",
+                Value = "<value>",
             },
             ResourceGroupName = "ResourceGroupForSDKTest",
         });
@@ -64,8 +64,8 @@ func main() {
 			DeviceName:   pulumi.String("HSDK-WSJQERQW3F"),
 			ManagerName:  pulumi.String("hAzureSDKOperations"),
 			Password: &storsimple.AsymmetricEncryptedSecretArgs{
-				EncryptionAlgorithm: pulumi.String("RSAES_PKCS1_v_1_5"),
-				Value:               pulumi.String("W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ=="),
+				EncryptionAlgorithm: "RSAES_PKCS1_v_1_5",
+				Value:               pulumi.String("<value>"),
 			},
 			ResourceGroupName: pulumi.String("ResourceGroupForSDKTest"),
 		})
@@ -92,7 +92,7 @@ chap_setting = azure_nextgen.storsimple.latest.ChapSetting("chapSetting",
     manager_name="hAzureSDKOperations",
     password=azure_nextgen.storsimple.latest.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="RSAES_PKCS1_v_1_5",
-        value="W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ==",
+        value="<value>",
     ),
     resource_group_name="ResourceGroupForSDKTest")
 
@@ -112,7 +112,7 @@ const chapSetting = new azure_nextgen.storsimple.latest.ChapSetting("chapSetting
     managerName: "hAzureSDKOperations",
     password: {
         encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
-        value: "W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ==",
+        value: "<value>",
     },
     resourceGroupName: "ResourceGroupForSDKTest",
 });
@@ -718,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 
@@ -792,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationProtectedItem"
-title_tag: "Resource ReplicationProtectedItem | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ReplicationProtectedItem"
 meta_desc: "Explore the ReplicationProtectedItem resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Replication protected item."
 ---
 
@@ -6709,7 +6709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AEnable<wbr>Protection<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>San<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#a2aenableprotectioninput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AEnable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazureenableprotectioninput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2enableprotectioninput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageenableprotectioninput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmenableprotectioninput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sanenableprotectioninput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>San<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.{{% /md %}}</dd>
 
@@ -6746,7 +6746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#a2aenableprotectioninput">A2AEnable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazureenableprotectioninput">Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2enableprotectioninput">In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageenableprotectioninput">In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmenableprotectioninput">In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sanenableprotectioninput">San<wbr>Enable<wbr>Protection<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.{{% /md %}}</dd>
 
@@ -6783,7 +6783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2AEnable<wbr>Protection<wbr>Input | Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input | In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input | In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input | In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input | San<wbr>Enable<wbr>Protection<wbr>Input</span>
+        <span class="property-type"><a href="#a2aenableprotectioninput">A2AEnable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazureenableprotectioninput">Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2enableprotectioninput">In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageenableprotectioninput">In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmenableprotectioninput">In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sanenableprotectioninput">San<wbr>Enable<wbr>Protection<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.{{% /md %}}</dd>
 
@@ -6820,7 +6820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[A2AEnable<wbr>Protection<wbr>Input<wbr>Args, Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args, San<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args]</span>
+        <span class="property-type"><a href="#a2aenableprotectioninput">A2AEnable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazureenableprotectioninput">Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2enableprotectioninput">In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageenableprotectioninput">In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmenableprotectioninput">In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sanenableprotectioninput">San<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.{{% /md %}}</dd>
 
@@ -10580,7 +10580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -10627,7 +10627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -10674,7 +10674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -10721,7 +10721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -10769,7 +10769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -10956,7 +10956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -11143,7 +11143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -11330,7 +11330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The DiskType.{{% /md %}}</dd>
 
@@ -16090,7 +16090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16137,7 +16137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16184,7 +16184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16231,7 +16231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16279,7 +16279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16316,7 +16316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16353,7 +16353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16390,7 +16390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 
@@ -16458,7 +16458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -16645,7 +16645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -16832,7 +16832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -17019,7 +17019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -23834,7 +23834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicareplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2replicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd>
 
@@ -24111,7 +24111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd>
 
@@ -24388,7 +24388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2AReplication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd>
 
@@ -24665,7 +24665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[A2AReplication<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd>
 

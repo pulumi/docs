@@ -1,7 +1,7 @@
 
 ---
 title: "Container"
-title_tag: "Resource Container | Module databoxedge | Package Azure NextGen"
+title_tag: "azure-nextgen.databoxedge.Container"
 meta_desc: "Explore the Container resource of the databoxedge module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a container on the  Data Box Edge/Gateway device."
 ---
 
@@ -120,7 +120,7 @@ const container = new azure_nextgen.databoxedge.latest.Container("container", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_format</span><span class="p">:</span> <span class="nx">Optional[Union[str, AzureContainerDataFormat]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,7 +308,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</span>
     </dt>
     <dd>{{% md %}}DataFormat for Container{{% /md %}}</dd>
 
@@ -365,7 +365,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dataformat_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DataFormat for Container{{% /md %}}</dd>
 
@@ -422,7 +422,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</span>
     </dt>
     <dd>{{% md %}}DataFormat for Container{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Container<wbr>Data<wbr>Format</span>
     </dt>
     <dd>{{% md %}}DataFormat for Container{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "P2sVpnServerConfiguration"
-title_tag: "Resource P2sVpnServerConfiguration | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.P2sVpnServerConfiguration"
 meta_desc: "Explore the P2sVpnServerConfiguration resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. P2SVpnServerConfiguration Resource."
 ---
 
@@ -63,7 +63,7 @@ class MyStack : Stack
             },
             P2SVpnServerConfigurationName = "p2sVpnServerConfiguration1",
             RadiusServerAddress = "8.9.9.9",
-            RadiusServerSecret = "123_abc",
+            RadiusServerSecret = "<radiusServerSecret>",
             ResourceGroupName = "rg1",
             VirtualWanName = "virtualWan1",
             VpnClientIpsecPolicies = 
@@ -132,7 +132,7 @@ func main() {
 			},
 			P2SVpnServerConfigurationName: pulumi.String("p2sVpnServerConfiguration1"),
 			RadiusServerAddress:           pulumi.String("8.9.9.9"),
-			RadiusServerSecret:            pulumi.String("123_abc"),
+			RadiusServerSecret:            pulumi.String("<radiusServerSecret>"),
 			ResourceGroupName:             pulumi.String("rg1"),
 			VirtualWanName:                pulumi.String("virtualWan1"),
 			VpnClientIpsecPolicies: network.IpsecPolicyArray{
@@ -187,7 +187,7 @@ p2s_vpn_server_configuration = azure_nextgen.network.latest.P2sVpnServerConfigur
     )],
     p2_s_vpn_server_configuration_name="p2sVpnServerConfiguration1",
     radius_server_address="8.9.9.9",
-    radius_server_secret="123_abc",
+    radius_server_secret="<radiusServerSecret>",
     resource_group_name="rg1",
     virtual_wan_name="virtualWan1",
     vpn_client_ipsec_policies=[azure_nextgen.network.latest.IpsecPolicyArgs(
@@ -231,7 +231,7 @@ const p2sVpnServerConfiguration = new azure_nextgen.network.latest.P2sVpnServerC
     }],
     p2SVpnServerConfigurationName: "p2sVpnServerConfiguration1",
     radiusServerAddress: "8.9.9.9",
-    radiusServerSecret: "123_abc",
+    radiusServerSecret: "<radiusServerSecret>",
     resourceGroupName: "rg1",
     virtualWanName: "virtualWan1",
     vpnClientIpsecPolicies: [{
@@ -263,7 +263,7 @@ const p2sVpnServerConfiguration = new azure_nextgen.network.latest.P2sVpnServerC
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">P2sVpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_radius_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigRadiusClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_radius_server_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigRadiusServerRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_vpn_client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigVpnClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_vpn_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigVpnClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_wan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">P2sVpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_radius_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigRadiusClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_radius_server_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigRadiusServerRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_vpn_client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigVpnClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_config_vpn_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SVpnServerConfigVpnClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_server_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_wan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, VpnGatewayTunnelingProtocol]]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +571,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the P2SVpnServerConfiguration.{{% /md %}}</dd>
 
@@ -718,7 +718,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the P2SVpnServerConfiguration.{{% /md %}}</dd>
 
@@ -865,7 +865,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the P2SVpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1012,7 +1012,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol]]</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the P2SVpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1208,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dh<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -1218,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ike<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1228,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ike<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ipsec<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1248,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ipsec<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1258,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Pfs<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -1305,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1315,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1335,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1345,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 
@@ -1382,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Dh<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -1392,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ike<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1402,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ike<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1412,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ipsec<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1422,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ipsec<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1432,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Pfs<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 
@@ -1469,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Dh<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -1479,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ike<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ike<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -1499,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ipsec<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1509,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ipsec<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -1519,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Pfs<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 

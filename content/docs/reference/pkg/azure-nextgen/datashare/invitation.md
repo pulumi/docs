@@ -1,7 +1,7 @@
 
 ---
 title: "Invitation"
-title_tag: "Resource Invitation | Module datashare | Package Azure NextGen"
+title_tag: "azure-nextgen.datashare.Invitation"
 meta_desc: "Explore the Invitation resource of the datashare module, including examples, input properties, output properties, lookup functions, and supporting types. A Invitation data transfer object."
 ---
 

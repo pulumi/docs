@@ -1,7 +1,7 @@
 
 ---
 title: "Queue"
-title_tag: "Resource Queue | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.Queue"
 meta_desc: "Explore the Queue resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

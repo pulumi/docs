@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module containerregistry | Package Azure NextGen"
+title_tag: "azure-nextgen.containerregistry.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the containerregistry module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a private endpoint connection for a container registry."
 ---
 
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.ContainerRegistry.V20191201Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ContainerRegistry.V20191201Preview.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.ContainerRegistry.V20201101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ContainerRegistry.V20201101Preview.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myConnection",
-            PrivateLinkServiceConnectionState = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Auto-Approved",
                 Status = "Approved",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20191201preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,9 +84,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.containerregistry.v20191201preview.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.containerregistry.v20201101preview.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="myConnection",
-    private_link_service_connection_state=azure_nextgen.containerregistry.v20191201preview.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.containerregistry.v20201101preview.PrivateLinkServiceConnectionStateArgs(
         description="Auto-Approved",
         status="Approved",
     ),
@@ -103,7 +103,7 @@ private_endpoint_connection = azure_nextgen.containerregistry.v20191201preview.P
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.containerregistry.v20191201preview.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.containerregistry.v20201101preview.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "myConnection",
     privateLinkServiceConnectionState: {
         description: "Auto-Approved",
@@ -952,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Actions<wbr>Required</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
 
@@ -972,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 
@@ -1026,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Actions<wbr>Required</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
 
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 
@@ -1063,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Actions<wbr>Required</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
 
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 

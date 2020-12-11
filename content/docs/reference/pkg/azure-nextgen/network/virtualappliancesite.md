@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualApplianceSite"
-title_tag: "Resource VirtualApplianceSite | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualApplianceSite"
 meta_desc: "Explore the VirtualApplianceSite resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Appliance Site resource."
 ---
 

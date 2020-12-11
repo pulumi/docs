@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedService"
-title_tag: "Resource LinkedService | Module machinelearningservices | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningservices.LinkedService"
 meta_desc: "Explore the LinkedService resource of the machinelearningservices module, including examples, input properties, output properties, lookup functions, and supporting types. Linked service."
 ---
 
@@ -65,7 +65,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := machinelearningservices.NewLinkedService(ctx, "linkedService", &machinelearningservices.LinkedServiceArgs{
 			Identity: &machinelearningservices.IdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
+				Type: "SystemAssigned",
 			},
 			LinkName: pulumi.String("link-1"),
 			Location: pulumi.String("westus"),
@@ -771,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -798,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -852,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Linked<wbr>Service<wbr>Link<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the link target.{{% /md %}}</dd>
 
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the link target.{{% /md %}}</dd>
 
@@ -1203,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Linked<wbr>Service<wbr>Link<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the link target.{{% /md %}}</dd>
 
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Linked<wbr>Service<wbr>Link<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the link target.{{% /md %}}</dd>
 

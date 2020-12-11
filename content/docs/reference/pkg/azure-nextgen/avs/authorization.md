@@ -1,7 +1,7 @@
 
 ---
 title: "Authorization"
-title_tag: "Resource Authorization | Module avs | Package Azure NextGen"
+title_tag: "azure-nextgen.avs.Authorization"
 meta_desc: "Explore the Authorization resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. ExpressRoute Circuit Authorization"
 ---
 

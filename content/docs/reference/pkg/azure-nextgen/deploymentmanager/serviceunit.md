@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceUnit"
-title_tag: "Resource ServiceUnit | Module deploymentmanager | Package Azure NextGen"
+title_tag: "azure-nextgen.deploymentmanager.ServiceUnit"
 meta_desc: "Explore the ServiceUnit resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. Represents the response of a service unit resource."
 ---
 
@@ -70,7 +70,7 @@ func main() {
 				ParametersUri: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
 				TemplateUri:   pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
 			},
-			DeploymentMode:      pulumi.String("Incremental"),
+			DeploymentMode:      "Incremental",
 			Location:            pulumi.String("centralus"),
 			ResourceGroupName:   pulumi.String("myResourceGroup"),
 			ServiceName:         pulumi.String("myService"),
@@ -190,7 +190,7 @@ func main() {
 				ParametersArtifactSourceRelativePath: pulumi.String("parameter/myTopologyUnit.parameters.json"),
 				TemplateArtifactSourceRelativePath:   pulumi.String("templates/myTopologyUnit.template.json"),
 			},
-			DeploymentMode:      pulumi.String("Incremental"),
+			DeploymentMode:      "Incremental",
 			Location:            pulumi.String("centralus"),
 			ResourceGroupName:   pulumi.String("myResourceGroup"),
 			ServiceName:         pulumi.String("myService"),
@@ -271,7 +271,7 @@ const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.Service
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ServiceUnitArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_topology_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_unit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ServiceUnitArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[DeploymentMode]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_topology_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_unit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -449,7 +449,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Deployment<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
 
@@ -546,7 +546,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
 
@@ -643,7 +643,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Deployment<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
 
@@ -740,7 +740,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Deployment<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
 

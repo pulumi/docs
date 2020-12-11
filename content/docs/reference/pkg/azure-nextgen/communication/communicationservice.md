@@ -1,7 +1,7 @@
 
 ---
 title: "CommunicationService"
-title_tag: "Resource CommunicationService | Module communication | Package Azure NextGen"
+title_tag: "azure-nextgen.communication.CommunicationService"
 meta_desc: "Explore the CommunicationService resource of the communication module, including examples, input properties, output properties, lookup functions, and supporting types. A class representing a CommunicationService resource."
 ---
 

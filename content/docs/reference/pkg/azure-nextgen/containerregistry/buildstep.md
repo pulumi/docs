@@ -1,7 +1,7 @@
 
 ---
 title: "BuildStep"
-title_tag: "Resource BuildStep | Module containerregistry | Package Azure NextGen"
+title_tag: "azure-nextgen.containerregistry.BuildStep"
 meta_desc: "Explore the BuildStep resource of the containerregistry module, including examples, input properties, output properties, lookup functions, and supporting types. Build step resource properties"
 ---
 

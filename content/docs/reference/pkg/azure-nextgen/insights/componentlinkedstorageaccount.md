@@ -1,7 +1,7 @@
 
 ---
 title: "ComponentLinkedStorageAccount"
-title_tag: "Resource ComponentLinkedStorageAccount | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.ComponentLinkedStorageAccount"
 meta_desc: "Explore the ComponentLinkedStorageAccount resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights component linked storage accounts"
 ---
 

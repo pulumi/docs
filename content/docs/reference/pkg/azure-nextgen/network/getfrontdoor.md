@@ -194,6 +194,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -368,6 +378,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of the frontdoor.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -548,6 +568,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -722,6 +752,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Id of the frontdoor.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -4450,7 +4490,7 @@ The following output properties are available:
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -4567,7 +4607,7 @@ The following output properties are available:
 <a href="#routeconfiguration_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -4684,7 +4724,7 @@ The following output properties are available:
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Forwarding<wbr>Configuration<wbr>Response | Redirect<wbr>Configuration<wbr>Response</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -4801,7 +4841,7 @@ The following output properties are available:
 <a href="#route_configuration_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Redirect<wbr>Configuration<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
@@ -4948,7 +4988,7 @@ The following output properties are available:
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 
@@ -4985,7 +5025,7 @@ The following output properties are available:
 <a href="#routeconfigurationoverride_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 
@@ -5022,7 +5062,7 @@ The following output properties are available:
 <a href="#routeconfigurationoverride_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Forwarding<wbr>Configuration<wbr>Response | Redirect<wbr>Configuration<wbr>Response</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 
@@ -5059,7 +5099,7 @@ The following output properties are available:
 <a href="#route_configuration_override_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Redirect<wbr>Configuration<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 

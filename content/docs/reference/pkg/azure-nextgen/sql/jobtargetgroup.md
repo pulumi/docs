@@ -1,7 +1,7 @@
 
 ---
 title: "JobTargetGroup"
-title_tag: "Resource JobTargetGroup | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.JobTargetGroup"
 meta_desc: "Explore the JobTargetGroup resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A group of job targets."
 ---
 
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobTargetGroup = new AzureNextGen.Sql.V20170301Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20170301Preview.JobTargetGroupArgs
+        var jobTargetGroup = new AzureNextGen.Sql.V20200801Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20200801Preview.JobTargetGroupArgs
         {
             JobAgentName = "agent1",
             Members = 
             {
-                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
                 {
                     DatabaseName = "database1",
                     MembershipType = "Exclude",
                     ServerName = "server1",
                     Type = "SqlDatabase",
                 },
-                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
                 {
                     MembershipType = "Include",
                     RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
                     ServerName = "server1",
                     Type = "SqlServer",
                 },
-                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
                 {
                     ElasticPoolName = "pool1",
                     MembershipType = "Include",
@@ -54,9 +54,8 @@ class MyStack : Stack
                     ServerName = "server2",
                     Type = "SqlElasticPool",
                 },
-                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
                 {
-                    DatabaseName = "database1",
                     MembershipType = "Include",
                     RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
                     ServerName = "server3",
@@ -82,7 +81,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,26 +92,25 @@ func main() {
 			Members: sql.JobTargetArray{
 				&sql.JobTargetArgs{
 					DatabaseName:   pulumi.String("database1"),
-					MembershipType: pulumi.String("Exclude"),
+					MembershipType: "Exclude",
 					ServerName:     pulumi.String("server1"),
 					Type:           pulumi.String("SqlDatabase"),
 				},
 				&sql.JobTargetArgs{
-					MembershipType:    pulumi.String("Include"),
+					MembershipType:    "Include",
 					RefreshCredential: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential"),
 					ServerName:        pulumi.String("server1"),
 					Type:              pulumi.String("SqlServer"),
 				},
 				&sql.JobTargetArgs{
 					ElasticPoolName:   pulumi.String("pool1"),
-					MembershipType:    pulumi.String("Include"),
+					MembershipType:    "Include",
 					RefreshCredential: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential"),
 					ServerName:        pulumi.String("server2"),
 					Type:              pulumi.String("SqlElasticPool"),
 				},
 				&sql.JobTargetArgs{
-					DatabaseName:      pulumi.String("database1"),
-					MembershipType:    pulumi.String("Include"),
+					MembershipType:    "Include",
 					RefreshCredential: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential"),
 					ServerName:        pulumi.String("server3"),
 					ShardMapName:      pulumi.String("shardMap1"),
@@ -140,30 +138,29 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_target_group = azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup",
+job_target_group = azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup",
     job_agent_name="agent1",
     members=[
-        azure_nextgen.sql.v20170301preview.JobTargetArgs(
+        azure_nextgen.sql.v20200801preview.JobTargetArgs(
             database_name="database1",
             membership_type="Exclude",
             server_name="server1",
             type="SqlDatabase",
         ),
-        azure_nextgen.sql.v20170301preview.JobTargetArgs(
+        azure_nextgen.sql.v20200801preview.JobTargetArgs(
             membership_type="Include",
             refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
             server_name="server1",
             type="SqlServer",
         ),
-        azure_nextgen.sql.v20170301preview.JobTargetArgs(
+        azure_nextgen.sql.v20200801preview.JobTargetArgs(
             elastic_pool_name="pool1",
             membership_type="Include",
             refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
             server_name="server2",
             type="SqlElasticPool",
         ),
-        azure_nextgen.sql.v20170301preview.JobTargetArgs(
-            database_name="database1",
+        azure_nextgen.sql.v20200801preview.JobTargetArgs(
             membership_type="Include",
             refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
             server_name="server3",
@@ -185,7 +182,7 @@ job_target_group = azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetG
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobTargetGroup = new azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup", {
+const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup", {
     jobAgentName: "agent1",
     members: [
         {
@@ -208,7 +205,6 @@ const jobTargetGroup = new azure_nextgen.sql.v20170301preview.JobTargetGroup("jo
             type: "SqlElasticPool",
         },
         {
-            databaseName: "database1",
             membershipType: "Include",
             refreshCredential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
             serverName: "server3",
@@ -235,7 +231,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobTargetGroup = new AzureNextGen.Sql.V20170301Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20170301Preview.JobTargetGroupArgs
+        var jobTargetGroup = new AzureNextGen.Sql.V20200801Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20200801Preview.JobTargetGroupArgs
         {
             JobAgentName = "agent1",
             Members = {},
@@ -257,7 +253,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -287,7 +283,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_target_group = azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup",
+job_target_group = azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup",
     job_agent_name="agent1",
     members=[],
     resource_group_name="group1",
@@ -304,7 +300,7 @@ job_target_group = azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetG
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobTargetGroup = new azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup", {
+const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup", {
     jobAgentName: "agent1",
     members: [],
     resourceGroupName: "group1",
@@ -913,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Target<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd>
 
@@ -943,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershiptype_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd>
 
@@ -990,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd>
 
@@ -1020,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershiptype_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd>
 
@@ -1067,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Job<wbr>Target<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd>
 
@@ -1097,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershiptype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd>
 
@@ -1144,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Job<wbr>Target<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd>
 
@@ -1174,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd>
 

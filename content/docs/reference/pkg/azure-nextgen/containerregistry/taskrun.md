@@ -1,7 +1,7 @@
 
 ---
 title: "TaskRun"
-title_tag: "Resource TaskRun | Module containerregistry | Package Azure NextGen"
+title_tag: "azure-nextgen.containerregistry.TaskRun"
 meta_desc: "Explore the TaskRun resource of the containerregistry module, including examples, input properties, output properties, lookup functions, and supporting types. The task run that has the ARM resource and properties. "
 ---
 
@@ -365,7 +365,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runrequest_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Docker<wbr>Build<wbr>Request<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>File<wbr>Task<wbr>Run<wbr>Request<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Task<wbr>Run<wbr>Request<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#dockerbuildrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Docker<wbr>Build<wbr>Request<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskrunrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskrunrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>File<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#taskrunrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd>
 
@@ -442,7 +442,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runrequest_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#dockerbuildrequest">Docker<wbr>Build<wbr>Request</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskrunrequest">Encoded<wbr>Task<wbr>Run<wbr>Request</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskrunrequest">File<wbr>Task<wbr>Run<wbr>Request</a></span><span class="property-type"> | </span><span class="property-type"><a href="#taskrunrequest">Task<wbr>Run<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runrequest_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Docker<wbr>Build<wbr>Request | Encoded<wbr>Task<wbr>Run<wbr>Request | File<wbr>Task<wbr>Run<wbr>Request | Task<wbr>Run<wbr>Request</span>
+        <span class="property-type"><a href="#dockerbuildrequest">Docker<wbr>Build<wbr>Request</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskrunrequest">Encoded<wbr>Task<wbr>Run<wbr>Request</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskrunrequest">File<wbr>Task<wbr>Run<wbr>Request</a></span><span class="property-type"> | </span><span class="property-type"><a href="#taskrunrequest">Task<wbr>Run<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd>
 
@@ -596,7 +596,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#run_request_python" style="color: inherit; text-decoration: inherit;">run_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Docker<wbr>Build<wbr>Request<wbr>Args, Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args, File<wbr>Task<wbr>Run<wbr>Request<wbr>Args, Task<wbr>Run<wbr>Request<wbr>Args]</span>
+        <span class="property-type"><a href="#dockerbuildrequest">Docker<wbr>Build<wbr>Request<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#encodedtaskrunrequest">Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#filetaskrunrequest">File<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#taskrunrequest">Task<wbr>Run<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd>
 
@@ -5158,7 +5158,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -5208,7 +5208,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -5258,7 +5258,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -5308,7 +5308,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -6484,7 +6484,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>OS</span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
 
@@ -6494,7 +6494,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Architecture</span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
 
@@ -6504,7 +6504,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Variant</span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 
@@ -6521,7 +6521,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
 
@@ -6531,7 +6531,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
 
@@ -6541,7 +6541,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 
@@ -6558,7 +6558,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>OS</span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
 
@@ -6568,7 +6568,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Architecture</span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
 
@@ -6578,7 +6578,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Variant</span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 
@@ -6595,7 +6595,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">OS</span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
 
@@ -6605,7 +6605,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Architecture</span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
 
@@ -6615,7 +6615,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Variant</span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 
@@ -7881,7 +7881,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Secret<wbr>Object<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd>
@@ -7911,7 +7911,7 @@ used as is without any modification.{{% /md %}}</dd>
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd>
@@ -7941,7 +7941,7 @@ used as is without any modification.{{% /md %}}</dd>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Secret<wbr>Object<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd>
@@ -7971,7 +7971,7 @@ used as is without any modification.{{% /md %}}</dd>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Secret<wbr>Object<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd>
@@ -8461,7 +8461,7 @@ used as is without any modification.{{% /md %}}</dd>
 <a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Registry<wbr>Login<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -8480,7 +8480,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -8499,7 +8499,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Source<wbr>Registry<wbr>Login<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -8518,7 +8518,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Source<wbr>Registry<wbr>Login<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to

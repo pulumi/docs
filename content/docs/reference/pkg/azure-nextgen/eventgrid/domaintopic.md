@@ -1,7 +1,7 @@
 
 ---
 title: "DomainTopic"
-title_tag: "Resource DomainTopic | Module eventgrid | Package Azure NextGen"
+title_tag: "azure-nextgen.eventgrid.DomainTopic"
 meta_desc: "Explore the DomainTopic resource of the eventgrid module, including examples, input properties, output properties, lookup functions, and supporting types. Domain Topic."
 ---
 

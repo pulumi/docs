@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceFabric"
-title_tag: "Resource ServiceFabric | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.ServiceFabric"
 meta_desc: "Explore the ServiceFabric resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A Service Fabric."
 ---
 

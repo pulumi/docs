@@ -1,7 +1,7 @@
 
 ---
 title: "DataCollectionRule"
-title_tag: "Resource DataCollectionRule | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.DataCollectionRule"
 meta_desc: "Explore the DataCollectionRule resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of ARM tracked top level resource."
 ---
 
@@ -1936,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Data<wbr>Flow<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd>
 
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd>
 
@@ -1990,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Known<wbr>Data<wbr>Flow<wbr>Streams[]</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd>
 
@@ -2017,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Known<wbr>Data<wbr>Flow<wbr>Streams]]</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd>
 
@@ -2351,7 +2351,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -2400,7 +2400,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -2449,7 +2449,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -2498,7 +2498,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3023,7 +3023,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -3033,7 +3033,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3084,7 +3084,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -3094,7 +3094,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3145,7 +3145,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Transfer<wbr>Period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -3155,7 +3155,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3206,7 +3206,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduled_transfer_period_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>transfer_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -3216,7 +3216,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3500,7 +3500,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facilitynames_csharp" style="color: inherit; text-decoration: inherit;">Facility<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd>
 
@@ -3521,7 +3521,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3532,7 +3532,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#loglevels_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd>
 
@@ -3549,7 +3549,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facilitynames_go" style="color: inherit; text-decoration: inherit;">Facility<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd>
 
@@ -3570,7 +3570,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3581,7 +3581,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#loglevels_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd>
 
@@ -3598,7 +3598,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facilitynames_nodejs" style="color: inherit; text-decoration: inherit;">facility<wbr>Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names[]</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd>
 
@@ -3619,7 +3619,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3630,7 +3630,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#loglevels_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels[]</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd>
 
@@ -3647,7 +3647,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facility_names_python" style="color: inherit; text-decoration: inherit;">facility_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names]]</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd>
 
@@ -3668,7 +3668,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3679,7 +3679,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#log_levels_python" style="color: inherit; text-decoration: inherit;">log_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels]]</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd>
 
@@ -3925,7 +3925,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -3935,7 +3935,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3974,7 +3974,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -3984,7 +3984,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -4023,7 +4023,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Transfer<wbr>Period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -4033,7 +4033,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -4072,7 +4072,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduled_transfer_period_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>transfer_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
 
@@ -4082,7 +4082,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>

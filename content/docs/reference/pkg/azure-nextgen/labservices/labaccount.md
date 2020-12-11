@@ -1,7 +1,7 @@
 
 ---
 title: "LabAccount"
-title_tag: "Resource LabAccount | Module labservices | Package Azure NextGen"
+title_tag: "azure-nextgen.labservices.LabAccount"
 meta_desc: "Explore the LabAccount resource of the labservices module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a lab account."
 ---
 

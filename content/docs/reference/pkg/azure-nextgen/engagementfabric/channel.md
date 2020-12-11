@@ -1,7 +1,7 @@
 
 ---
 title: "Channel"
-title_tag: "Resource Channel | Module engagementfabric | Package Azure NextGen"
+title_tag: "azure-nextgen.engagementfabric.Channel"
 meta_desc: "Explore the Channel resource of the engagementfabric module, including examples, input properties, output properties, lookup functions, and supporting types. The EngagementFabric channel"
 ---
 

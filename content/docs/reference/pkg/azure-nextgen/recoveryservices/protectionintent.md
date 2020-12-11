@@ -1,7 +1,7 @@
 
 ---
 title: "ProtectionIntent"
-title_tag: "Resource ProtectionIntent | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ProtectionIntent"
 meta_desc: "Explore the ProtectionIntent resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Base class for backup ProtectionIntent."
 ---
 
@@ -345,7 +345,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureresourceprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
 
@@ -432,7 +432,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureresourceprotectionintent">Azure<wbr>Resource<wbr>Protection<wbr>Intent</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent | Azure<wbr>Resource<wbr>Protection<wbr>Intent</span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureresourceprotectionintent">Azure<wbr>Resource<wbr>Protection<wbr>Intent</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
 
@@ -606,7 +606,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args, Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args]</span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureresourceprotectionintent">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -842,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -956,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 
@@ -983,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -1013,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -1330,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 
@@ -1357,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -1464,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 
@@ -1491,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
 
@@ -1531,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
 

@@ -17,6 +17,8 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
     <li><a href="hcxenterprisesite" title="HcxEnterpriseSite"><span class="symbol resource"></span>HcxEnterpriseSite</a></li>
     <li><a href="privatecloud" title="PrivateCloud"><span class="symbol resource"></span>PrivateCloud</a></li>
     <li><a href="workloadnetworkdhcp" title="WorkloadNetworkDhcp"><span class="symbol resource"></span>WorkloadNetworkDhcp</a></li>
+    <li><a href="workloadnetworkdnsservice" title="WorkloadNetworkDnsService"><span class="symbol resource"></span>WorkloadNetworkDnsService</a></li>
+    <li><a href="workloadnetworkdnszone" title="WorkloadNetworkDnsZone"><span class="symbol resource"></span>WorkloadNetworkDnsZone</a></li>
     <li><a href="workloadnetworkportmirroring" title="WorkloadNetworkPortMirroring"><span class="symbol resource"></span>WorkloadNetworkPortMirroring</a></li>
     <li><a href="workloadnetworksegment" title="WorkloadNetworkSegment"><span class="symbol resource"></span>WorkloadNetworkSegment</a></li>
     <li><a href="workloadnetworkvmgroup" title="WorkloadNetworkVMGroup"><span class="symbol resource"></span>WorkloadNetworkVMGroup</a></li>
@@ -30,6 +32,8 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
     <li><a href="gethcxenterprisesite" title="GetHcxEnterpriseSite"><span class="symbol function"></span>GetHcxEnterpriseSite</a></li>
     <li><a href="getprivatecloud" title="GetPrivateCloud"><span class="symbol function"></span>GetPrivateCloud</a></li>
     <li><a href="getworkloadnetworkdhcp" title="GetWorkloadNetworkDhcp"><span class="symbol function"></span>GetWorkloadNetworkDhcp</a></li>
+    <li><a href="getworkloadnetworkdnsservice" title="GetWorkloadNetworkDnsService"><span class="symbol function"></span>GetWorkloadNetworkDnsService</a></li>
+    <li><a href="getworkloadnetworkdnszone" title="GetWorkloadNetworkDnsZone"><span class="symbol function"></span>GetWorkloadNetworkDnsZone</a></li>
     <li><a href="getworkloadnetworkportmirroring" title="GetWorkloadNetworkPortMirroring"><span class="symbol function"></span>GetWorkloadNetworkPortMirroring</a></li>
     <li><a href="getworkloadnetworksegment" title="GetWorkloadNetworkSegment"><span class="symbol function"></span>GetWorkloadNetworkSegment</a></li>
     <li><a href="getworkloadnetworkvmgroup" title="GetWorkloadNetworkVMGroup"><span class="symbol function"></span>GetWorkloadNetworkVMGroup</a></li>
@@ -43,7 +47,7 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.8</dd>
+	<dd>0.3.0</dd>
 </dl>
 
 

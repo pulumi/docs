@@ -1,7 +1,7 @@
 
 ---
 title: "CustomDomain"
-title_tag: "Resource CustomDomain | Module appplatform | Package Azure NextGen"
+title_tag: "azure-nextgen.appplatform.CustomDomain"
 meta_desc: "Explore the CustomDomain resource of the appplatform module, including examples, input properties, output properties, lookup functions, and supporting types. Custom domain resource payload."
 ---
 

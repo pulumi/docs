@@ -1,7 +1,7 @@
 
 ---
 title: "Bookmark"
-title_tag: "Resource Bookmark | Module operationalinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.operationalinsights.Bookmark"
 meta_desc: "Explore the Bookmark resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a bookmark in Azure Security Insights."
 ---
 
@@ -1148,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Case<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 
@@ -1242,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Case<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 
@@ -1289,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Case<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 

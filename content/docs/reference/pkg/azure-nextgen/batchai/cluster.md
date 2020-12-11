@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module batchai | Package Azure NextGen"
+title_tag: "azure-nextgen.batchai.Cluster"
 meta_desc: "Explore the Cluster resource of the batchai module, including examples, input properties, output properties, lookup functions, and supporting types. Information about a Cluster."
 ---
 
@@ -141,7 +141,7 @@ func main() {
 				AdminUserPassword:     pulumi.String("admin_user_password"),
 				AdminUserSshPublicKey: pulumi.String("ssh-rsa AAAAB3NzaC1yc..."),
 			},
-			VmPriority:    pulumi.String("dedicated"),
+			VmPriority:    "dedicated",
 			VmSize:        pulumi.String("STANDARD_NC6"),
 			WorkspaceName: pulumi.String("demo_workspace"),
 		})
@@ -267,7 +267,7 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_setup</span><span class="p">:</span> <span class="nx">Optional[NodeSetupArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">user_account_settings</span><span class="p">:</span> <span class="nx">Optional[UserAccountSettingsArgs]</span> = None<span class="p">, </span><span class="nx">virtual_machine_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_setup</span><span class="p">:</span> <span class="nx">Optional[NodeSetupArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">user_account_settings</span><span class="p">:</span> <span class="nx">Optional[UserAccountSettingsArgs]</span> = None<span class="p">, </span><span class="nx">virtual_machine_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[VmPriority]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -535,7 +535,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vmpriority_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Vm<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}VM priority. Allowed values are: dedicated (default) and lowpriority.{{% /md %}}</dd>
 
@@ -642,7 +642,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vmpriority_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VM priority. Allowed values are: dedicated (default) and lowpriority.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vmpriority_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Vm<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}VM priority. Allowed values are: dedicated (default) and lowpriority.{{% /md %}}</dd>
 
@@ -856,7 +856,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vm_priority_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Vm<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}VM priority. Allowed values are: dedicated (default) and lowpriority.{{% /md %}}</dd>
 
@@ -5121,7 +5121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Deallocation<wbr>Option</span>
     </dt>
     <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
 
@@ -5148,7 +5148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
 
@@ -5175,7 +5175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Deallocation<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Deallocation<wbr>Option</span>
     </dt>
     <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
 
@@ -5202,7 +5202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_deallocation_option_python" style="color: inherit; text-decoration: inherit;">node_<wbr>deallocation_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Deallocation<wbr>Option</span>
     </dt>
     <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
 

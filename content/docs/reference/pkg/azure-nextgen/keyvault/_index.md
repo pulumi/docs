@@ -11,15 +11,19 @@ Explore the resources and functions of the keyvault module in the Azure NextGen 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
     <li><a href="managedhsm" title="ManagedHsm"><span class="symbol resource"></span>ManagedHsm</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
     <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
     <li><a href="getmanagedhsm" title="GetManagedHsm"><span class="symbol function"></span>GetManagedHsm</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
     <li><a href="getvault" title="GetVault"><span class="symbol function"></span>GetVault</a></li>
 </ul>
 
@@ -30,7 +34,7 @@ Explore the resources and functions of the keyvault module in the Azure NextGen 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.8</dd>
+	<dd>0.3.0</dd>
 </dl>
 
 

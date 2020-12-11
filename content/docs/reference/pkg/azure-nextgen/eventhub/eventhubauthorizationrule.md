@@ -1,7 +1,7 @@
 
 ---
 title: "EventHubAuthorizationRule"
-title_tag: "Resource EventHubAuthorizationRule | Module eventhub | Package Azure NextGen"
+title_tag: "azure-nextgen.eventhub.EventHubAuthorizationRule"
 meta_desc: "Explore the EventHubAuthorizationRule resource of the eventhub module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in a List or Get AuthorizationRule operation"
 ---
 
@@ -133,7 +133,7 @@ const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuth
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHubAuthorizationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHubAuthorizationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AccessRights]]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -351,7 +351,7 @@ The EventHubAuthorizationRule resource accepts the following [input]({{< relref 
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Access<wbr>Rights&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -408,7 +408,7 @@ The EventHubAuthorizationRule resource accepts the following [input]({{< relref 
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -465,7 +465,7 @@ The EventHubAuthorizationRule resource accepts the following [input]({{< relref 
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Access<wbr>Rights[]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ The EventHubAuthorizationRule resource accepts the following [input]({{< relref 
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Access<wbr>Rights]]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 

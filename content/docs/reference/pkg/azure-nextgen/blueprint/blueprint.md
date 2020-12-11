@@ -1,7 +1,7 @@
 
 ---
 title: "Blueprint"
-title_tag: "Resource Blueprint | Module blueprint | Package Azure NextGen"
+title_tag: "azure-nextgen.blueprint.Blueprint"
 meta_desc: "Explore the Blueprint resource of the blueprint module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Blueprint definition."
 ---
 
@@ -446,7 +446,7 @@ const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("bluepr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Blueprint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blueprint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">layout</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_groups</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ResourceGroupDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Blueprint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blueprint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">layout</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_groups</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ResourceGroupDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_scope</span><span class="p">:</span> <span class="nx">Optional[Union[str, BlueprintTargetScope]]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -644,7 +644,7 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#targetscope_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Blueprint<wbr>Target<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
 
@@ -741,7 +741,7 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#targetscope_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
 
@@ -838,7 +838,7 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#targetscope_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Blueprint<wbr>Target<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
 
@@ -935,7 +935,7 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#target_scope_python" style="color: inherit; text-decoration: inherit;">target_<wbr>scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Blueprint<wbr>Target<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
 
@@ -1350,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Template<wbr>Parameter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
 
@@ -1417,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
 
@@ -1484,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Template<wbr>Parameter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
 
@@ -1551,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Template<wbr>Parameter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "RoleAssignment"
-title_tag: "Resource RoleAssignment | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.RoleAssignment"
 meta_desc: "Explore the RoleAssignment resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The Role Assignment resource format."
 ---
 
@@ -81,7 +81,7 @@ func main() {
 				},
 			},
 			ResourceGroupName: pulumi.String("TestHubRG"),
-			Role:              pulumi.String("Admin"),
+			Role:              "Admin",
 		})
 		if err != nil {
 			return err
@@ -159,7 +159,7 @@ const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflation_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">connectors</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interactions</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">kpis</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssignmentPrincipalArgs]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationship_links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationships</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_assignments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">sas_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">segments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">views</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">widget_types</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflation_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">connectors</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interactions</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">kpis</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssignmentPrincipalArgs]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationship_links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationships</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[RoleTypes]</span> = None<span class="p">, </span><span class="nx">role_assignments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">sas_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">segments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">views</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">widget_types</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -377,7 +377,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Role<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
 
@@ -584,7 +584,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Role<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
 
@@ -998,7 +998,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Role<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
 

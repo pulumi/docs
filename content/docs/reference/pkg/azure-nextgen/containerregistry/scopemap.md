@@ -1,7 +1,7 @@
 
 ---
 title: "ScopeMap"
-title_tag: "Resource ScopeMap | Module containerregistry | Package Azure NextGen"
+title_tag: "azure-nextgen.containerregistry.ScopeMap"
 meta_desc: "Explore the ScopeMap resource of the containerregistry module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a scope map for a container registry."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scopeMap = new AzureNextGen.ContainerRegistry.V20190501Preview.ScopeMap("scopeMap", new AzureNextGen.ContainerRegistry.V20190501Preview.ScopeMapArgs
+        var scopeMap = new AzureNextGen.ContainerRegistry.V20201101Preview.ScopeMap("scopeMap", new AzureNextGen.ContainerRegistry.V20201101Preview.ScopeMapArgs
         {
             Actions = 
             {
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20190501preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scope_map = azure_nextgen.containerregistry.v20190501preview.ScopeMap("scopeMap",
+scope_map = azure_nextgen.containerregistry.v20201101preview.ScopeMap("scopeMap",
     actions=[
         "repositories/myrepository/contentWrite",
         "repositories/myrepository/delete",
@@ -106,7 +106,7 @@ scope_map = azure_nextgen.containerregistry.v20190501preview.ScopeMap("scopeMap"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scopeMap = new azure_nextgen.containerregistry.v20190501preview.ScopeMap("scopeMap", {
+const scopeMap = new azure_nextgen.containerregistry.v20201101preview.ScopeMap("scopeMap", {
     actions: [
         "repositories/myrepository/contentWrite",
         "repositories/myrepository/delete",

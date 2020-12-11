@@ -1,7 +1,7 @@
 
 ---
 title: "BackupSchedule"
-title_tag: "Resource BackupSchedule | Module storsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.storsimple.BackupSchedule"
 meta_desc: "Explore the BackupSchedule resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. The backup schedule."
 ---
 
@@ -60,47 +60,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewBackupSchedule(ctx, "backupSchedule", &storsimple.BackupScheduleArgs{
-			BackupPolicyName:   pulumi.String("BkUpPolicy01ForSDKTest"),
-			BackupScheduleName: pulumi.String("schedule2"),
-			BackupType:         pulumi.String("CloudSnapshot"),
-			DeviceName:         pulumi.String("Device05ForSDKTest"),
-			Kind:               pulumi.String("Series8000"),
-			ManagerName:        pulumi.String("ManagerForSDKTest1"),
-			ResourceGroupName:  pulumi.String("ResourceGroupForSDKTest"),
-			RetentionCount:     pulumi.Int(1),
-			ScheduleRecurrence: &storsimple.ScheduleRecurrenceArgs{
-				RecurrenceType:  pulumi.String("Weekly"),
-				RecurrenceValue: pulumi.Int(1),
-				WeeklyDaysList: pulumi.StringArray{
-					pulumi.String("Friday"),
-					pulumi.String("Thursday"),
-					pulumi.String("Monday"),
-				},
-			},
-			ScheduleStatus: pulumi.String("Enabled"),
-			StartTime:      pulumi.String("2017-06-24T01:00:00Z"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -178,7 +138,7 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[BackupType]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Kind]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[ScheduleStatus]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -376,7 +336,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backuptype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Backup<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
 
@@ -436,7 +396,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedulestatus_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Schedule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
 
@@ -456,7 +416,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 
@@ -493,7 +453,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backuptype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
 
@@ -553,7 +513,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedulestatus_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
 
@@ -573,7 +533,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 
@@ -610,7 +570,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backuptype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Backup<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
 
@@ -670,7 +630,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedulestatus_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Schedule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
 
@@ -690,7 +650,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 
@@ -727,7 +687,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backup_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Backup<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
 
@@ -787,7 +747,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedule_status_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Schedule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
 
@@ -807,7 +767,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Kind</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 
@@ -1043,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Recurrence<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
 
@@ -1063,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklydayslist_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Days<wbr>List</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Day<wbr>Of<wbr>Week&gt;</span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 
@@ -1080,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
 
@@ -1100,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklydayslist_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Days<wbr>List</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 
@@ -1117,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Recurrence<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
 
@@ -1137,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklydayslist_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Days<wbr>List</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Day<wbr>Of<wbr>Week[]</span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 
@@ -1154,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_type_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Recurrence<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
 
@@ -1174,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_days_list_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>days_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Day<wbr>Of<wbr>Week]</span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 

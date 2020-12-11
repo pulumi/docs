@@ -1,7 +1,7 @@
 
 ---
 title: "ConsoleWithLocation"
-title_tag: "Resource ConsoleWithLocation | Module portal | Package Azure NextGen"
+title_tag: "azure-nextgen.portal.ConsoleWithLocation"
 meta_desc: "Explore the ConsoleWithLocation resource of the portal module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud shell console"
 ---
 

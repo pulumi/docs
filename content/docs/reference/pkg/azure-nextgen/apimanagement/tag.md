@@ -1,7 +1,7 @@
 
 ---
 title: "Tag"
-title_tag: "Resource Tag | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Tag"
 meta_desc: "Explore the Tag resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Tag Contract details."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualRouter"
-title_tag: "Resource VirtualRouter | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualRouter"
 meta_desc: "Explore the VirtualRouter resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. VirtualRouter Resource."
 ---
 

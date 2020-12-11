@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallPolicy"
-title_tag: "Resource FirewallPolicy | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.FirewallPolicy"
 meta_desc: "Explore the FirewallPolicy resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. FirewallPolicy Resource."
 ---
 
@@ -318,7 +318,7 @@ const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewall
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">base_policy</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[DnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicySkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threat_intel_whitelist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelWhitelistArgs]</span> = None<span class="p">, </span><span class="nx">transport_security</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyTransportSecurityArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">base_policy</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[DnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicySkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, AzureFirewallThreatIntelMode]]</span> = None<span class="p">, </span><span class="nx">threat_intel_whitelist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelWhitelistArgs]</span> = None<span class="p">, </span><span class="nx">transport_security</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyTransportSecurityArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -596,7 +596,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelmode_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
 
@@ -733,7 +733,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelmode_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
 
@@ -870,7 +870,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelmode_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intel<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
 
@@ -1007,7 +1007,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threat_intel_mode_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intel_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
 
@@ -1989,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
 
@@ -2016,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
 
@@ -2043,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
 
@@ -2070,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
 
@@ -2148,7 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
 
@@ -2235,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
 
@@ -2322,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
 
@@ -2409,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
 
@@ -3183,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The signature state.{{% /md %}}</dd>
 
@@ -3210,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature state.{{% /md %}}</dd>
 
@@ -3237,7 +3237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The signature state.{{% /md %}}</dd>
 
@@ -3264,7 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The signature state.{{% /md %}}</dd>
 
@@ -3411,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
 
@@ -3428,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
 
@@ -3445,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
 
@@ -3462,7 +3462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
 
@@ -3965,7 +3965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
@@ -3992,7 +3992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
@@ -4019,7 +4019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
@@ -4046,7 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 

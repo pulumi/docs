@@ -1,7 +1,7 @@
 
 ---
 title: "ReferenceDataSet"
-title_tag: "Resource ReferenceDataSet | Module timeseriesinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.timeseriesinsights.ReferenceDataSet"
 meta_desc: "Explore the ReferenceDataSet resource of the timeseriesinsights module, including examples, input properties, output properties, lookup functions, and supporting types. A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs."
 ---
 
@@ -159,7 +159,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReferenceDataSetKeyPropertyArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_data_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[Union[str, DataStringComparisonBehavior]]</span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReferenceDataSetKeyPropertyArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_data_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -387,7 +387,7 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#datastringcomparisonbehavior_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>String<wbr>Comparison<wbr>Behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Data<wbr>String<wbr>Comparison<wbr>Behavior</span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
 
@@ -464,7 +464,7 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#datastringcomparisonbehavior_go" style="color: inherit; text-decoration: inherit;">Data<wbr>String<wbr>Comparison<wbr>Behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
 
@@ -541,7 +541,7 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#datastringcomparisonbehavior_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>String<wbr>Comparison<wbr>Behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>String<wbr>Comparison<wbr>Behavior</span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
 
@@ -618,7 +618,7 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#data_string_comparison_behavior_python" style="color: inherit; text-decoration: inherit;">data_<wbr>string_<wbr>comparison_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>String<wbr>Comparison<wbr>Behavior</span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
 
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Reference<wbr>Data<wbr>Key<wbr>Property<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the key property.{{% /md %}}</dd>
 
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the key property.{{% /md %}}</dd>
 
@@ -968,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Reference<wbr>Data<wbr>Key<wbr>Property<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the key property.{{% /md %}}</dd>
 
@@ -995,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Reference<wbr>Data<wbr>Key<wbr>Property<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the key property.{{% /md %}}</dd>
 

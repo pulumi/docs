@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module datamigration | Package Azure NextGen"
+title_tag: "azure-nextgen.datamigration.Service"
 meta_desc: "Explore the Service resource of the datamigration module, including examples, input properties, output properties, lookup functions, and supporting types. A Database Migration Service resource"
 ---
 

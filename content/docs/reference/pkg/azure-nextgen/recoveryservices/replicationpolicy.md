@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationPolicy"
-title_tag: "Resource ReplicationPolicy | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ReplicationPolicy"
 meta_desc: "Explore the ReplicationPolicy resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Protection profile details."
 ---
 
@@ -690,7 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -737,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -831,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -1128,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2APolicy<wbr>Creation<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#a2apolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2APolicy<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd>
 
@@ -1145,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#a2apolicycreationinput">A2APolicy<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicyinput">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicyinput">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicyinput">Hyper<wbr>VReplica<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policyinput">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicyinput">In<wbr>Mage<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicycreationinput">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicycreationinput">VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd>
 
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2APolicy<wbr>Creation<wbr>Input | Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input | Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input | Hyper<wbr>VReplica<wbr>Policy<wbr>Input | In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input | In<wbr>Mage<wbr>Policy<wbr>Input | In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input | VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input</span>
+        <span class="property-type"><a href="#a2apolicycreationinput">A2APolicy<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicyinput">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicyinput">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicyinput">Hyper<wbr>VReplica<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policyinput">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicyinput">In<wbr>Mage<wbr>Policy<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicycreationinput">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicycreationinput">VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd>
 
@@ -1179,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[A2APolicy<wbr>Creation<wbr>Input<wbr>Args, Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args, Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args, Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args, VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args]</span>
+        <span class="property-type"><a href="#a2apolicycreationinput">A2APolicy<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicyinput">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicyinput">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicyinput">Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policyinput">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicyinput">In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicycreationinput">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicycreationinput">VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd>
 
@@ -4239,7 +4239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -4296,7 +4296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -4353,7 +4353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -4410,7 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -4876,7 +4876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -4923,7 +4923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -4970,7 +4970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -5017,7 +5017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
 
@@ -5483,7 +5483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2APolicy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2APolicy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagebasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rcmazuremigrationpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 
@@ -5510,7 +5510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 
@@ -5537,7 +5537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2APolicy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response | Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response | Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 
@@ -5564,7 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[A2APolicy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 

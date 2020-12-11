@@ -1,7 +1,7 @@
 
 ---
 title: "SshPublicKey"
-title_tag: "Resource SshPublicKey | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.SshPublicKey"
 meta_desc: "Explore the SshPublicKey resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the SSH public key."
 ---
 

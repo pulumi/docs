@@ -1,7 +1,7 @@
 
 ---
 title: "SqlDatabase"
-title_tag: "Resource SqlDatabase | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.SqlDatabase"
 meta_desc: "Explore the SqlDatabase resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. A sql database resource."
 ---
 

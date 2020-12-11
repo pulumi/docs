@@ -1,7 +1,7 @@
 
 ---
 title: "AzureADMetric"
-title_tag: "Resource AzureADMetric | Module aadiam | Package Azure NextGen"
+title_tag: "azure-nextgen.aadiam.AzureADMetric"
 meta_desc: "Explore the AzureADMetric resource of the aadiam module, including examples, input properties, output properties, lookup functions, and supporting types. AzureADMetrics resource."
 ---
 

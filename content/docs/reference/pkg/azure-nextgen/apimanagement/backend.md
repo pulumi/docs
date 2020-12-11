@@ -1,7 +1,7 @@
 
 ---
 title: "Backend"
-title_tag: "Resource Backend | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Backend"
 meta_desc: "Explore the Backend resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Backend details."
 ---
 
@@ -59,7 +59,7 @@ class MyStack : Stack
             Protocol = "http",
             Proxy = new AzureNextGen.ApiManagement.Latest.Inputs.BackendProxyContractArgs
             {
-                Password = "opensesame",
+                Password = "<password>",
                 Url = "http://192.168.1.1:8080",
                 Username = "Contoso\\admin",
             },
@@ -116,7 +116,7 @@ func main() {
 			Description: pulumi.String("description5308"),
 			Protocol:    pulumi.String("http"),
 			Proxy: &apimanagement.BackendProxyContractArgs{
-				Password: pulumi.String("opensesame"),
+				Password: pulumi.String("<password>"),
 				Url:      pulumi.String("http://192.168.1.1:8080"),
 				Username: pulumi.String("Contoso\\admin"),
 			},
@@ -169,7 +169,7 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
     description="description5308",
     protocol="http",
     proxy=azure_nextgen.apimanagement.latest.BackendProxyContractArgs(
-        password="opensesame",
+        password="<password>",
         url="http://192.168.1.1:8080",
         username="Contoso\\admin",
     ),
@@ -215,7 +215,7 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
     description: "description5308",
     protocol: "http",
     proxy: {
-        password: "opensesame",
+        password: "<password>",
         url: "http://192.168.1.1:8080",
         username: "Contoso\\admin",
     },
@@ -396,7 +396,7 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[BackendCredentialsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BackendPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[BackendProxyContractArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[BackendTlsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[BackendCredentialsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BackendPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, BackendProtocol]]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[BackendProxyContractArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[BackendTlsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,7 +584,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Backend<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
 
@@ -711,7 +711,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
 
@@ -838,7 +838,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backend<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
 
@@ -965,7 +965,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backend<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
 

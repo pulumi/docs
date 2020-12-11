@@ -1,7 +1,7 @@
 
 ---
 title: "IpGroup"
-title_tag: "Resource IpGroup | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.IpGroup"
 meta_desc: "Explore the IpGroup resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. The IpGroups resource information."
 ---
 

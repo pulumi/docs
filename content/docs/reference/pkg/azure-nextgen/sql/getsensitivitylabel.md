@@ -374,6 +374,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="columnname_csharp">
+<a href="#columnname_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="isdisabled_csharp">
 <a href="#isdisabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Disabled</a>
 </span> 
@@ -384,6 +404,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managedby_csharp">
+<a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -391,6 +421,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="schemaname_csharp">
+<a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tablename_csharp">
+<a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -461,6 +511,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="columnname_go">
+<a href="#columnname_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="isdisabled_go">
 <a href="#isdisabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Disabled</a>
 </span> 
@@ -471,6 +541,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managedby_go">
+<a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -478,6 +558,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="schemaname_go">
+<a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tablename_go">
+<a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -548,6 +648,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="columnname_nodejs">
+<a href="#columnname_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="isdisabled_nodejs">
 <a href="#isdisabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Disabled</a>
 </span> 
@@ -558,6 +678,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managedby_nodejs">
+<a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -565,6 +695,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="schemaname_nodejs">
+<a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tablename_nodejs">
+<a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -635,6 +785,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="column_name_python">
+<a href="#column_name_python" style="color: inherit; text-decoration: inherit;">column_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="is_disabled_python">
 <a href="#is_disabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>disabled</a>
 </span> 
@@ -645,6 +815,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managed_by_python">
+<a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -652,6 +832,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="schema_name_python">
+<a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="table_name_python">
+<a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

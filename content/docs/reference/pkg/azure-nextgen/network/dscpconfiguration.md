@@ -1,7 +1,7 @@
 
 ---
 title: "DscpConfiguration"
-title_tag: "Resource DscpConfiguration | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.DscpConfiguration"
 meta_desc: "Explore the DscpConfiguration resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. DSCP Configuration in a resource group."
 ---
 
@@ -236,7 +236,7 @@ const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("ds
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DscpConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosIpRangeArgs]]</span> = None<span class="p">, </span><span class="nx">destination_port_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">dscp_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosIpRangeArgs]]</span> = None<span class="p">, </span><span class="nx">source_port_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DscpConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosIpRangeArgs]]</span> = None<span class="p">, </span><span class="nx">destination_port_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">dscp_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProtocolType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosIpRangeArgs]]</span> = None<span class="p">, </span><span class="nx">source_port_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[QosPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -484,7 +484,7 @@ The DscpConfiguration resource accepts the following [input]({{< relref "/docs/i
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}RNM supported protocol types.{{% /md %}}</dd>
 
@@ -601,7 +601,7 @@ The DscpConfiguration resource accepts the following [input]({{< relref "/docs/i
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RNM supported protocol types.{{% /md %}}</dd>
 
@@ -718,7 +718,7 @@ The DscpConfiguration resource accepts the following [input]({{< relref "/docs/i
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}RNM supported protocol types.{{% /md %}}</dd>
 
@@ -835,7 +835,7 @@ The DscpConfiguration resource accepts the following [input]({{< relref "/docs/i
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}RNM supported protocol types.{{% /md %}}</dd>
 

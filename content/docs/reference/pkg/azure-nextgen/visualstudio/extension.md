@@ -1,7 +1,7 @@
 
 ---
 title: "Extension"
-title_tag: "Resource Extension | Module visualstudio | Package Azure NextGen"
+title_tag: "azure-nextgen.visualstudio.Extension"
 meta_desc: "Explore the Extension resource of the visualstudio module, including examples, input properties, output properties, lookup functions, and supporting types. The response to an extension resource GET request."
 ---
 

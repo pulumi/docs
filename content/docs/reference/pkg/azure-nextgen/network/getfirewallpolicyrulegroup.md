@@ -244,6 +244,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -308,6 +318,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Rule Group type.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -378,6 +398,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -442,6 +472,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Rule Group type.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1249,7 +1289,7 @@ The following output properties are available:
 <a href="#rulecondition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -1316,7 +1356,7 @@ The following output properties are available:
 <a href="#rulecondition_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -1383,7 +1423,7 @@ The following output properties are available:
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -1450,7 +1490,7 @@ The following output properties are available:
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 

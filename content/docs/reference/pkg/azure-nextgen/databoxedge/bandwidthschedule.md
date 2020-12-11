@@ -1,7 +1,7 @@
 
 ---
 title: "BandwidthSchedule"
-title_tag: "Resource BandwidthSchedule | Module databoxedge | Package Azure NextGen"
+title_tag: "azure-nextgen.databoxedge.BandwidthSchedule"
 meta_desc: "Explore the BandwidthSchedule resource of the databoxedge module, including examples, input properties, output properties, lookup functions, and supporting types. The bandwidth schedule details."
 ---
 
@@ -141,7 +141,7 @@ const bandwidthSchedule = new azure_nextgen.databoxedge.latest.BandwidthSchedule
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BandwidthSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">days</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_in_mbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stop</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BandwidthSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">days</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, DayOfWeek]]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_in_mbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stop</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -319,7 +319,7 @@ The BandwidthSchedule resource accepts the following [input]({{< relref "/docs/i
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Day<wbr>Of<wbr>Week&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
 
@@ -396,7 +396,7 @@ The BandwidthSchedule resource accepts the following [input]({{< relref "/docs/i
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
 
@@ -473,7 +473,7 @@ The BandwidthSchedule resource accepts the following [input]({{< relref "/docs/i
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Day<wbr>Of<wbr>Week[]</span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
 
@@ -550,7 +550,7 @@ The BandwidthSchedule resource accepts the following [input]({{< relref "/docs/i
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Day<wbr>Of<wbr>Week]]</span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ReportConfigByResourceGroupName"
-title_tag: "Resource ReportConfigByResourceGroupName | Module costmanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.costmanagement.ReportConfigByResourceGroupName"
 meta_desc: "Explore the ReportConfigByResourceGroupName resource of the costmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. A report config resource."
 ---
 
@@ -24,7 +24,7 @@ A report config resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReportConfigByResourceGroupName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[ReportConfigDefinitionArgs]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[ReportConfigDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">report_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ReportConfigScheduleArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReportConfigByResourceGroupName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[ReportConfigDefinitionArgs]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[ReportConfigDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[Union[str, FormatType]]</span> = None<span class="p">, </span><span class="nx">report_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ReportConfigScheduleArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +242,7 @@ The ReportConfigByResourceGroupName resource accepts the following [input]({{< r
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Format<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
 
@@ -309,7 +309,7 @@ The ReportConfigByResourceGroupName resource accepts the following [input]({{< r
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
 
@@ -376,7 +376,7 @@ The ReportConfigByResourceGroupName resource accepts the following [input]({{< r
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Format<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
 
@@ -443,7 +443,7 @@ The ReportConfigByResourceGroupName resource accepts the following [input]({{< r
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Format<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Function<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
 
@@ -716,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
 
@@ -743,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Function<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
 
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Function<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
 
@@ -937,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Operator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
 
@@ -974,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
 
@@ -1011,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
 
@@ -1048,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
 
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granularity_csharp" style="color: inherit; text-decoration: inherit;">Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Granularity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granularity_go" style="color: inherit; text-decoration: inherit;">Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
 
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granularity_nodejs" style="color: inherit; text-decoration: inherit;">granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Report<wbr>Granularity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
 
@@ -1476,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granularity_python" style="color: inherit; text-decoration: inherit;">granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Report<wbr>Granularity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
 
@@ -1961,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Timeframe<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
 
@@ -1971,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
 
@@ -2008,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
 
@@ -2018,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
 
@@ -2055,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Timeframe<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
 
@@ -2065,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Report<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
 
@@ -2102,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Timeframe<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
 
@@ -2112,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Report<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
 
@@ -3323,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Config<wbr>Column<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
 
@@ -3350,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
 
@@ -3377,7 +3377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Report<wbr>Config<wbr>Column<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
 
@@ -3404,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Report<wbr>Config<wbr>Column<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
 
@@ -3789,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Recurrence<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
 
@@ -3809,7 +3809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Status<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
 
@@ -3826,7 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
 
@@ -3846,7 +3846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
 
@@ -3863,7 +3863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Recurrence<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
 
@@ -3883,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Status<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
 
@@ -3900,7 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Recurrence<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
 
@@ -3920,7 +3920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Status<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
 

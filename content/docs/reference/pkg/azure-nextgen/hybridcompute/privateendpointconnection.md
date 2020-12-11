@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module hybridcompute | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridcompute.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the hybridcompute module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

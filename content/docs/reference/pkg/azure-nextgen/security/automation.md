@@ -1,7 +1,7 @@
 
 ---
 title: "Automation"
-title_tag: "Resource Automation | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.Automation"
 meta_desc: "Explore the Automation resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. The security automation resource."
 ---
 
@@ -2345,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Event<wbr>Source</span>
     </dt>
     <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
 
@@ -2372,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
 
@@ -2399,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Event<wbr>Source</span>
     </dt>
     <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
 
@@ -2426,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Event<wbr>Source</span>
     </dt>
     <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
 
@@ -2593,7 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
 
@@ -2613,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertytype_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Property<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
 
@@ -2640,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
 
@@ -2660,7 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertytype_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
 
@@ -2687,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
 
@@ -2707,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertytype_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Property<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
 
@@ -2734,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operator</span>
     </dt>
     <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
 
@@ -2754,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_type_python" style="color: inherit; text-decoration: inherit;">property_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Property<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
 

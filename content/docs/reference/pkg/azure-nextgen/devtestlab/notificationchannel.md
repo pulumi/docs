@@ -1,7 +1,7 @@
 
 ---
 title: "NotificationChannel"
-title_tag: "Resource NotificationChannel | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.NotificationChannel"
 meta_desc: "Explore the NotificationChannel resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A notification."
 ---
 
@@ -889,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Notification<wbr>Channel<wbr>Event<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd>
 
@@ -906,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd>
 
@@ -923,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Notification<wbr>Channel<wbr>Event<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd>
 
@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Notification<wbr>Channel<wbr>Event<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd>
 

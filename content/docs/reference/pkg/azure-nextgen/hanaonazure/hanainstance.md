@@ -1,7 +1,7 @@
 
 ---
 title: "HanaInstance"
-title_tag: "Resource HanaInstance | Module hanaonazure | Package Azure NextGen"
+title_tag: "azure-nextgen.hanaonazure.HanaInstance"
 meta_desc: "Explore the HanaInstance resource of the hanaonazure module, including examples, input properties, output properties, lookup functions, and supporting types. HANA instance info on Azure (ARM properties and HANA properties)"
 ---
 

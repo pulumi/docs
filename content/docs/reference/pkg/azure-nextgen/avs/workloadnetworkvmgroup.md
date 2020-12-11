@@ -1,7 +1,7 @@
 
 ---
 title: "WorkloadNetworkVMGroup"
-title_tag: "Resource WorkloadNetworkVMGroup | Module avs | Package Azure NextGen"
+title_tag: "azure-nextgen.avs.WorkloadNetworkVMGroup"
 meta_desc: "Explore the WorkloadNetworkVMGroup resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. NSX VM Group"
 ---
 

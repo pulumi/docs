@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlTrigger"
-title_tag: "Resource SqlResourceSqlTrigger | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.SqlResourceSqlTrigger"
 meta_desc: "Explore the SqlResourceSqlTrigger resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB trigger."
 ---
 
@@ -1431,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggeroperation_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Trigger<wbr>Operation</span>
     </dt>
     <dd>{{% md %}}The operation the trigger is associated with{{% /md %}}</dd>
 
@@ -1441,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggertype_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Trigger<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the Trigger{{% /md %}}</dd>
 
@@ -1478,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggeroperation_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation the trigger is associated with{{% /md %}}</dd>
 
@@ -1488,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggertype_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Trigger{{% /md %}}</dd>
 
@@ -1525,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggeroperation_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Trigger<wbr>Operation</span>
     </dt>
     <dd>{{% md %}}The operation the trigger is associated with{{% /md %}}</dd>
 
@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggertype_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Trigger<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the Trigger{{% /md %}}</dd>
 
@@ -1572,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_operation_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Trigger<wbr>Operation</span>
     </dt>
     <dd>{{% md %}}The operation the trigger is associated with{{% /md %}}</dd>
 
@@ -1582,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_type_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Trigger<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the Trigger{{% /md %}}</dd>
 

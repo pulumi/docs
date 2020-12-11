@@ -1,7 +1,7 @@
 
 ---
 title: "TagAtScope"
-title_tag: "Resource TagAtScope | Module resources | Package Azure NextGen"
+title_tag: "azure-nextgen.resources.TagAtScope"
 meta_desc: "Explore the TagAtScope resource of the resources module, including examples, input properties, output properties, lookup functions, and supporting types. Wrapper resource for tags API requests and responses."
 ---
 

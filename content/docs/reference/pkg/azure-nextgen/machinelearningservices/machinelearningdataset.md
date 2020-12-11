@@ -1,7 +1,7 @@
 
 ---
 title: "MachineLearningDataset"
-title_tag: "Resource MachineLearningDataset | Module machinelearningservices | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningservices.MachineLearningDataset"
 meta_desc: "Explore the MachineLearningDataset resource of the machinelearningservices module, including examples, input properties, output properties, lookup functions, and supporting types. Machine Learning dataset object wrapped into ARM resource envelope."
 ---
 
@@ -172,7 +172,7 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestParametersArgs]</span> = None<span class="p">, </span><span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestRegistrationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestTimeSeriesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatasetType]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestParametersArgs]</span> = None<span class="p">, </span><span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestRegistrationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestTimeSeriesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -360,7 +360,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#datasettype_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Dataset<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
 
@@ -447,7 +447,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#datasettype_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
 
@@ -534,7 +534,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#datasettype_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Dataset<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
 
@@ -621,7 +621,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#dataset_type_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Dataset<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
 
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Header</span>
     </dt>
     <dd>{{% md %}}Header type.{{% /md %}}</dd>
 
@@ -1256,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Source<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Data source type.{{% /md %}}</dd>
 
@@ -1273,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header type.{{% /md %}}</dd>
 
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data source type.{{% /md %}}</dd>
 
@@ -1350,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Header</span>
     </dt>
     <dd>{{% md %}}Header type.{{% /md %}}</dd>
 
@@ -1410,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Source<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Data source type.{{% /md %}}</dd>
 
@@ -1427,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Header</span>
     </dt>
     <dd>{{% md %}}Header type.{{% /md %}}</dd>
 
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Source<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Data source type.{{% /md %}}</dd>
 

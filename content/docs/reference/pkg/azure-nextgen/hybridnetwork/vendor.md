@@ -1,7 +1,7 @@
 
 ---
 title: "Vendor"
-title_tag: "Resource Vendor | Module hybridnetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridnetwork.Vendor"
 meta_desc: "Explore the Vendor resource of the hybridnetwork module, including examples, input properties, output properties, lookup functions, and supporting types. Vendor resource."
 ---
 

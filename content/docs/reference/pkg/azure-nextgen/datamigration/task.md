@@ -1,7 +1,7 @@
 
 ---
 title: "Task"
-title_tag: "Resource Task | Module datamigration | Package Azure NextGen"
+title_tag: "azure-nextgen.datamigration.Task"
 meta_desc: "Explore the Task resource of the datamigration module, including examples, input properties, output properties, lookup functions, and supporting types. A task resource"
 ---
 
@@ -252,7 +252,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlserversynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlservertaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbformysqltaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqldbtaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmisynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmitaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gettdecertificatessqltaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqlsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqltaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbtaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmisynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmitaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqldbsynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom task properties{{% /md %}}</dd>
 
@@ -319,7 +319,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlserversynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlservertaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbformysqltaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqldbtaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmisynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmitaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gettdecertificatessqltaskproperties">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqlsynctaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqltaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskproperties">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskproperties">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbsynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbtaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmisynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmitaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqldbsynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Custom task properties{{% /md %}}</dd>
 
@@ -386,7 +386,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties | Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties | Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties | Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties | Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties | Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties | Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties | Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties | Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties | Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties | Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties | Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties | Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties</span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlserversynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlservertaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbformysqltaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqldbtaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmisynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmitaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gettdecertificatessqltaskproperties">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqlsynctaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqltaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskproperties">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskproperties">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbsynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbtaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmisynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmitaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqldbsynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Custom task properties{{% /md %}}</dd>
 
@@ -453,7 +453,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args, Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args]</span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlserversynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttosourcesqlservertaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbformysqltaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqldbtaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmisynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlmitaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gettdecertificatessqltaskproperties">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqlsynctaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#getusertablessqltaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskproperties">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskproperties">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbsynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqldbtaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmisynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#migratesqlserversqlmitaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqldbsynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom task properties{{% /md %}}</dd>
 
@@ -2766,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkpermissionsgroup_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Permissions<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Server<wbr>Level<wbr>Permissions<wbr>Group</span>
     </dt>
     <dd>{{% md %}}Permission group for validations{{% /md %}}</dd>
 
@@ -2813,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkpermissionsgroup_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Permissions<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission group for validations{{% /md %}}</dd>
 
@@ -2860,7 +2860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkpermissionsgroup_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Permissions<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Level<wbr>Permissions<wbr>Group</span>
     </dt>
     <dd>{{% md %}}Permission group for validations{{% /md %}}</dd>
 
@@ -2907,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_permissions_group_python" style="color: inherit; text-decoration: inherit;">check_<wbr>permissions_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Level<wbr>Permissions<wbr>Group</span>
     </dt>
     <dd>{{% md %}}Permission group for validations{{% /md %}}</dd>
 
@@ -29782,7 +29782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmode_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Backup<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.{{% /md %}}</dd>
 
@@ -29869,7 +29869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmode_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.{{% /md %}}</dd>
 
@@ -29956,7 +29956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmode_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.{{% /md %}}</dd>
 
@@ -30043,7 +30043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_mode_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.{{% /md %}}</dd>
 
@@ -36362,7 +36362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -36392,7 +36392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Sql<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 
@@ -36449,7 +36449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -36479,7 +36479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 
@@ -36536,7 +36536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -36566,7 +36566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sql<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 
@@ -36623,7 +36623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -36653,7 +36653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sql<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 
@@ -38781,7 +38781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmode_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Backup<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup.{{% /md %}}</dd>
 
@@ -38858,7 +38858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmode_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup.{{% /md %}}</dd>
 
@@ -38935,7 +38935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmode_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup.{{% /md %}}</dd>
 
@@ -39012,7 +39012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_mode_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Backup Mode to specify whether to use existing backup or create new backup.{{% /md %}}</dd>
 

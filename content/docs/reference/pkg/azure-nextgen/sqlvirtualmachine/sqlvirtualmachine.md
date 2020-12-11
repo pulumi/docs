@@ -1,7 +1,7 @@
 
 ---
 title: "SqlVirtualMachine"
-title_tag: "Resource SqlVirtualMachine | Module sqlvirtualmachine | Package Azure NextGen"
+title_tag: "azure-nextgen.sqlvirtualmachine.SqlVirtualMachine"
 meta_desc: "Explore the SqlVirtualMachine resource of the sqlvirtualmachine module, including examples, input properties, output properties, lookup functions, and supporting types. A SQL virtual machine."
 ---
 
@@ -437,7 +437,7 @@ func main() {
 				StorageAccountUrl:     pulumi.String("https://teststorage.blob.core.windows.net/"),
 			},
 			AutoPatchingSettings: &sqlvirtualmachine.AutoPatchingSettingsArgs{
-				DayOfWeek:                     pulumi.String("Sunday"),
+				DayOfWeek:                     "Sunday",
 				Enable:                        pulumi.Bool(true),
 				MaintenanceWindowDuration:     pulumi.Int(60),
 				MaintenanceWindowStartingHour: pulumi.Int(2),
@@ -705,7 +705,7 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[AutoBackupSettingsArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[AutoPatchingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[KeyVaultCredentialSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[ServerConfigurationsManagementSettingsArgs]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[StorageConfigurationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainCredentialsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[AutoBackupSettingsArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[AutoPatchingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[KeyVaultCredentialSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[ServerConfigurationsManagementSettingsArgs]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlImageSku]]</span> = None<span class="p">, </span><span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlManagementMode]]</span> = None<span class="p">, </span><span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlServerLicenseType]]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[StorageConfigurationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainCredentialsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -973,7 +973,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlimagesku_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Image<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
 
@@ -983,7 +983,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlmanagement_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Management<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
 
@@ -993,7 +993,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlserverlicensetype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Server<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
 
@@ -1150,7 +1150,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlimagesku_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
 
@@ -1160,7 +1160,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlmanagement_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
 
@@ -1170,7 +1170,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlserverlicensetype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
 
@@ -1327,7 +1327,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlimagesku_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sql<wbr>Image<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
 
@@ -1337,7 +1337,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlmanagement_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sql<wbr>Management<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
 
@@ -1347,7 +1347,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlserverlicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sql<wbr>Server<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
 
@@ -1504,7 +1504,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_image_sku_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sql<wbr>Image<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
 
@@ -1514,7 +1514,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_management_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sql<wbr>Management<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
 
@@ -1524,7 +1524,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_server_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>license_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sql<wbr>Server<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
 
@@ -1968,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscheduletype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Backup<wbr>Schedule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
 
@@ -2008,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Full<wbr>Backup<wbr>Frequency<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
 
@@ -2095,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscheduletype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
 
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
 
@@ -2222,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscheduletype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Schedule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
 
@@ -2262,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Full<wbr>Backup<wbr>Frequency<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
 
@@ -2349,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_schedule_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Schedule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
 
@@ -2389,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Full<wbr>Backup<wbr>Frequency<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
 
@@ -3006,7 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
 
@@ -3053,7 +3053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
 
@@ -3100,7 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
 
@@ -3147,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Day<wbr>Of<wbr>Week</span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
 
@@ -3882,7 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
 
@@ -3899,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
 
@@ -3916,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
 
@@ -3933,7 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
 
@@ -4756,7 +4756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Connectivity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
 
@@ -4803,7 +4803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivitytype_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
 
@@ -4850,7 +4850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Connectivity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
 
@@ -4897,7 +4897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Connectivity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
 
@@ -5154,7 +5154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Disk<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5191,7 +5191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5228,7 +5228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5265,7 +5265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5472,7 +5472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
 
@@ -5489,7 +5489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
 
@@ -5506,7 +5506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sql<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
 
@@ -5523,7 +5523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sql<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
 
@@ -5630,7 +5630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Disk<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5670,7 +5670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Storage<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
 
@@ -5687,7 +5687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5727,7 +5727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageworkloadtype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
 
@@ -5744,7 +5744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Disk<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5784,7 +5784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
 
@@ -5801,7 +5801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Disk<wbr>Configuration<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
 
@@ -5841,7 +5841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Workload<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
 

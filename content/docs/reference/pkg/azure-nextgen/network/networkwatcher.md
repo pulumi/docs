@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkWatcher"
-title_tag: "Resource NetworkWatcher | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.NetworkWatcher"
 meta_desc: "Explore the NetworkWatcher resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Network watcher in a resource group."
 ---
 

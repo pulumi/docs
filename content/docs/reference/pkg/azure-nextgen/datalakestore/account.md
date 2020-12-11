@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module datalakestore | Package Azure NextGen"
+title_tag: "azure-nextgen.datalakestore.Account"
 meta_desc: "Explore the Account resource of the datalakestore module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Store account information."
 ---
 
@@ -103,10 +103,10 @@ func main() {
 					EncryptionKeyVersion: pulumi.String("encryption_key_version"),
 					KeyVaultResourceId:   pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab345"),
 				},
-				Type: pulumi.String("UserManaged"),
+				Type: "UserManaged",
 			},
-			EncryptionState:       pulumi.String("Enabled"),
-			FirewallAllowAzureIps: pulumi.String("Enabled"),
+			EncryptionState:       "Enabled",
+			FirewallAllowAzureIps: "Enabled",
 			FirewallRules: datalakestore.CreateFirewallRuleWithAccountParametersArray{
 				&datalakestore.CreateFirewallRuleWithAccountParametersArgs{
 					EndIpAddress:   pulumi.String("2.2.2.2"),
@@ -114,17 +114,17 @@ func main() {
 					StartIpAddress: pulumi.String("1.1.1.1"),
 				},
 			},
-			FirewallState: pulumi.String("Enabled"),
+			FirewallState: "Enabled",
 			Identity: &datalakestore.EncryptionIdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
+				Type: "SystemAssigned",
 			},
 			Location:          pulumi.String("eastus2"),
-			NewTier:           pulumi.String("Consumption"),
+			NewTier:           "Consumption",
 			ResourceGroupName: pulumi.String("contosorg"),
 			Tags: pulumi.StringMap{
 				"test_key": pulumi.String("test_value"),
 			},
-			TrustedIdProviderState: pulumi.String("Enabled"),
+			TrustedIdProviderState: "Enabled",
 			TrustedIdProviders: datalakestore.CreateTrustedIdProviderWithAccountParametersArray{
 				&datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
 					IdProvider: pulumi.String("https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1"),
@@ -244,7 +244,7 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[EncryptionConfigArgs]</span> = None<span class="p">, </span><span class="nx">encryption_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateFirewallRuleWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_id_provider_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trusted_id_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateTrustedIdProviderWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateVirtualNetworkRuleWithAccountParametersArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[EncryptionConfigArgs]</span> = None<span class="p">, </span><span class="nx">encryption_state</span><span class="p">:</span> <span class="nx">Optional[EncryptionState]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[FirewallAllowAzureIpsState]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateFirewallRuleWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[FirewallState]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[TierType]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_id_provider_state</span><span class="p">:</span> <span class="nx">Optional[TrustedIdProviderState]</span> = None<span class="p">, </span><span class="nx">trusted_id_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateTrustedIdProviderWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateVirtualNetworkRuleWithAccountParametersArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -472,7 +472,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionstate_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Encryption<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of encryption for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -482,7 +482,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallallowazureips_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
 
@@ -502,7 +502,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallstate_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Firewall<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#newtier_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Tier<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The commitment tier to use for next month.{{% /md %}}</dd>
 
@@ -542,7 +542,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviderstate_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Id<wbr>Provider<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Trusted<wbr>Id<wbr>Provider<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of the trusted identity provider feature for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionstate_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of encryption for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallallowazureips_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallstate_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#newtier_go" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The commitment tier to use for next month.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviderstate_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Id<wbr>Provider<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the trusted identity provider feature for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -786,7 +786,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionstate_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Encryption<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of encryption for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -796,7 +796,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallallowazureips_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
 
@@ -816,7 +816,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallstate_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Firewall<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -836,7 +836,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#newtier_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Tier<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The commitment tier to use for next month.{{% /md %}}</dd>
 
@@ -856,7 +856,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviderstate_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Id<wbr>Provider<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Trusted<wbr>Id<wbr>Provider<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of the trusted identity provider feature for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -943,7 +943,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_state_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Encryption<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of encryption for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewall_allow_azure_ips_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>allow_<wbr>azure_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
 
@@ -973,7 +973,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewall_state_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Firewall<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -993,7 +993,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#new_tier_python" style="color: inherit; text-decoration: inherit;">new_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Tier<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The commitment tier to use for next month.{{% /md %}}</dd>
 
@@ -1013,7 +1013,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trusted_id_provider_state_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>id_<wbr>provider_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Trusted<wbr>Id<wbr>Provider<wbr>State</span>
     </dt>
     <dd>{{% md %}}The current state of the trusted identity provider feature for this Data Lake Store account.{{% /md %}}</dd>
 
@@ -1946,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Encryption<wbr>Config<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.{{% /md %}}</dd>
 
@@ -1973,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.{{% /md %}}</dd>
 
@@ -2000,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Encryption<wbr>Config<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.{{% /md %}}</dd>
 
@@ -2027,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Encryption<wbr>Config<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.{{% /md %}}</dd>
 
@@ -2184,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Encryption<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of encryption being used. Currently the only supported type is 'SystemAssigned'.{{% /md %}}</dd>
 
@@ -2201,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of encryption being used. Currently the only supported type is 'SystemAssigned'.{{% /md %}}</dd>
 
@@ -2218,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Encryption<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of encryption being used. Currently the only supported type is 'SystemAssigned'.{{% /md %}}</dd>
 
@@ -2235,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Encryption<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of encryption being used. Currently the only supported type is 'SystemAssigned'.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DeploymentAtSubscriptionScope"
-title_tag: "Resource DeploymentAtSubscriptionScope | Module resources | Package Azure NextGen"
+title_tag: "azure-nextgen.resources.DeploymentAtSubscriptionScope"
 meta_desc: "Explore the DeploymentAtSubscriptionScope resource of the resources module, including examples, input properties, output properties, lookup functions, and supporting types. Deployment information."
 ---
 
@@ -65,7 +65,7 @@ func main() {
 			DeploymentName: pulumi.String("my-deployment"),
 			Location:       pulumi.String("eastus"),
 			Properties: &resources.DeploymentPropertiesArgs{
-				Mode:       pulumi.String("Incremental"),
+				Mode:       "Incremental",
 				Parameters: nil,
 				TemplateLink: &resources.TemplateLinkArgs{
 					Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1"),
@@ -2074,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Deployment<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.{{% /md %}}</dd>
 
@@ -2087,16 +2087,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#debugsetting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expressionevaluationoptions_csharp">
-<a href="#expressionevaluationoptions_csharp" style="color: inherit; text-decoration: inherit;">Expression<wbr>Evaluation<wbr>Options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionevaluationoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2161,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.{{% /md %}}</dd>
 
@@ -2174,16 +2164,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expressionevaluationoptions_go">
-<a href="#expressionevaluationoptions_go" style="color: inherit; text-decoration: inherit;">Expression<wbr>Evaluation<wbr>Options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2248,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Deployment<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.{{% /md %}}</dd>
 
@@ -2261,16 +2241,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expressionevaluationoptions_nodejs">
-<a href="#expressionevaluationoptions_nodejs" style="color: inherit; text-decoration: inherit;">expression<wbr>Evaluation<wbr>Options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2335,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Deployment<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.{{% /md %}}</dd>
 
@@ -2348,16 +2318,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expression_evaluation_options_python">
-<a href="#expression_evaluation_options_python" style="color: inherit; text-decoration: inherit;">expression_<wbr>evaluation_<wbr>options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3493,85 +3453,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scope_csharp">
-<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scope_go">
-<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scope_nodejs">
-<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scope_python">
-<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
 <h4 id="onerrordeployment">On<wbr>Error<wbr>Deployment</h4>
 
 
@@ -3599,7 +3480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>On<wbr>Error<wbr>Deployment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
 
@@ -3626,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
 
@@ -3653,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>On<wbr>Error<wbr>Deployment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
 
@@ -3680,7 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">On<wbr>Error<wbr>Deployment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
 
@@ -4088,6 +3969,165 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedlocations_csharp">
+<a href="#extendedlocations_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedlocations_go">
+<a href="#extendedlocations_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedlocations_nodejs">
+<a href="#extendedlocations_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_locations_python">
+<a href="#extended_locations_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response</h4>
 
 
@@ -4148,6 +4188,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locationmappings_csharp">
+<a href="#locationmappings_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4238,6 +4288,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="locationmappings_go">
+<a href="#locationmappings_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">[]Provider<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span> 
@@ -4325,6 +4385,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="locationmappings_nodejs">
+<a href="#locationmappings_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
@@ -4409,6 +4479,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_mappings_python">
+<a href="#location_mappings_python" style="color: inherit; text-decoration: inherit;">location_<wbr>mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">Sequence[Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

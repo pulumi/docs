@@ -1,7 +1,7 @@
 
 ---
 title: "FileShare"
-title_tag: "Resource FileShare | Module storsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.storsimple.FileShare"
 meta_desc: "Explore the FileShare resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. The File Share."
 ---
 
@@ -63,16 +63,16 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := storsimple.NewFileShare(ctx, "fileShare", &storsimple.FileShareArgs{
 			AdminUser:                  pulumi.String("fareast\\idcdlslb"),
-			DataPolicy:                 pulumi.String("Tiered"),
+			DataPolicy:                 "Tiered",
 			Description:                pulumi.String("Demo FileShare for SDK Test Tiered"),
 			DeviceName:                 pulumi.String("HSDK-4XY4FI2IVG"),
 			FileServerName:             pulumi.String("HSDK-4XY4FI2IVG"),
 			ManagerName:                pulumi.String("hAzureSDKOperations"),
-			MonitoringStatus:           pulumi.String("Enabled"),
+			MonitoringStatus:           "Enabled",
 			ProvisionedCapacityInBytes: pulumi.Int(536870912000),
 			ResourceGroupName:          pulumi.String("ResourceGroupForSDKTest"),
 			ShareName:                  pulumi.String("Auto-TestFileShare1"),
-			ShareStatus:                pulumi.String("Online"),
+			ShareStatus:                "Online",
 		})
 		if err != nil {
 			return err
@@ -144,7 +144,7 @@ const fileShare = new azure_nextgen.storsimple.latest.FileShare("fileShare", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[DataPolicy]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[MonitoringStatus]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[ShareStatus]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -332,7 +332,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The data policy{{% /md %}}</dd>
 
@@ -372,7 +372,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The monitoring status{{% /md %}}</dd>
 
@@ -412,7 +412,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharestatus_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Share<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The Share Status{{% /md %}}</dd>
 
@@ -449,7 +449,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#datapolicy_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data policy{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitoring status{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharestatus_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Share Status{{% /md %}}</dd>
 
@@ -566,7 +566,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#datapolicy_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The data policy{{% /md %}}</dd>
 
@@ -606,7 +606,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The monitoring status{{% /md %}}</dd>
 
@@ -646,7 +646,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharestatus_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Share<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The Share Status{{% /md %}}</dd>
 
@@ -683,7 +683,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#data_policy_python" style="color: inherit; text-decoration: inherit;">data_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The data policy{{% /md %}}</dd>
 
@@ -723,7 +723,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The monitoring status{{% /md %}}</dd>
 
@@ -763,7 +763,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#share_status_python" style="color: inherit; text-decoration: inherit;">share_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Share<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The Share Status{{% /md %}}</dd>
 

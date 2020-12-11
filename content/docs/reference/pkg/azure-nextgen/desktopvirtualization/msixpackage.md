@@ -1,7 +1,7 @@
 
 ---
 title: "MSIXPackage"
-title_tag: "Resource MSIXPackage | Module desktopvirtualization | Package Azure NextGen"
+title_tag: "azure-nextgen.desktopvirtualization.MSIXPackage"
 meta_desc: "Explore the MSIXPackage resource of the desktopvirtualization module, including examples, input properties, output properties, lookup functions, and supporting types. Schema for MSIX Package properties."
 ---
 

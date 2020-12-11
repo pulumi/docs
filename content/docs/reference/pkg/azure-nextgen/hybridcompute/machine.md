@@ -1,7 +1,7 @@
 
 ---
 title: "Machine"
-title_tag: "Resource Machine | Module hybridcompute | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridcompute.Machine"
 meta_desc: "Explore the Machine resource of the hybridcompute module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a hybrid machine."
 ---
 

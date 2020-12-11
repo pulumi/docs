@@ -1,7 +1,7 @@
 
 ---
 title: "DataPool"
-title_tag: "Resource DataPool | Module autonomousdevelopmentplatform | Package Azure NextGen"
+title_tag: "azure-nextgen.autonomousdevelopmentplatform.DataPool"
 meta_desc: "Explore the DataPool resource of the autonomousdevelopmentplatform module, including examples, input properties, output properties, lookup functions, and supporting types. An ADP Data Pool."
 ---
 

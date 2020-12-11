@@ -1,7 +1,7 @@
 
 ---
 title: "RegistrationAssignment"
-title_tag: "Resource RegistrationAssignment | Module managedservices | Package Azure NextGen"
+title_tag: "azure-nextgen.managedservices.RegistrationAssignment"
 meta_desc: "Explore the RegistrationAssignment resource of the managedservices module, including examples, input properties, output properties, lookup functions, and supporting types. Registration assignment."
 ---
 

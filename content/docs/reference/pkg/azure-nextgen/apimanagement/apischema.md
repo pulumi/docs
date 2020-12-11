@@ -1,7 +1,7 @@
 
 ---
 title: "ApiSchema"
-title_tag: "Resource ApiSchema | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ApiSchema"
 meta_desc: "Explore the ApiSchema resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Schema Contract details."
 ---
 

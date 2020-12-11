@@ -1,7 +1,7 @@
 
 ---
 title: "WorkspaceSqlAadAdmin"
-title_tag: "Resource WorkspaceSqlAadAdmin | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.WorkspaceSqlAadAdmin"
 meta_desc: "Explore the WorkspaceSqlAadAdmin resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. Workspace active directory administrator"
 ---
 

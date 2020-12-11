@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

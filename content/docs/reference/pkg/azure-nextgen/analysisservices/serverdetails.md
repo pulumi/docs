@@ -1,7 +1,7 @@
 
 ---
 title: "ServerDetails"
-title_tag: "Resource ServerDetails | Module analysisservices | Package Azure NextGen"
+title_tag: "azure-nextgen.analysisservices.ServerDetails"
 meta_desc: "Explore the ServerDetails resource of the analysisservices module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an instance of an Analysis Services resource."
 ---
 
@@ -172,7 +172,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[ConnectionMode]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -430,7 +430,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypoolconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Connection<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
 
@@ -537,7 +537,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypoolconnectionmode_go" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
 
@@ -644,7 +644,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypoolconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">querypool<wbr>Connection<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Connection<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
 
@@ -751,7 +751,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypool_connection_mode_python" style="color: inherit; text-decoration: inherit;">querypool_<wbr>connection_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Connection<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
 
@@ -1891,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
 
@@ -1928,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
 
@@ -1965,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
 
@@ -2002,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Pool"
-title_tag: "Resource Pool | Module batch | Package Azure NextGen"
+title_tag: "azure-nextgen.batch.Pool"
 meta_desc: "Explore the Pool resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Contains information about a pool."
 ---
 
@@ -325,157 +325,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
-			AccountName: pulumi.String("sampleacct"),
-			ApplicationLicenses: pulumi.StringArray{
-				pulumi.String("app-license0"),
-				pulumi.String("app-license1"),
-			},
-			ApplicationPackages: batch.ApplicationPackageReferenceArray{
-				&batch.ApplicationPackageReferenceArgs{
-					Id:      pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234"),
-					Version: pulumi.String("asdf"),
-				},
-			},
-			Certificates: batch.CertificateReferenceArray{
-				&batch.CertificateReferenceArgs{
-					Id:            pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567"),
-					StoreLocation: pulumi.String("LocalMachine"),
-					StoreName:     pulumi.String("MY"),
-					Visibility: pulumi.StringArray{
-						pulumi.String("RemoteUser"),
-					},
-				},
-			},
-			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
-				CloudServiceConfiguration: &batch.CloudServiceConfigurationArgs{
-					OsFamily:  pulumi.String("4"),
-					OsVersion: pulumi.String("WA-GUEST-OS-4.45_201708-01"),
-				},
-			},
-			DisplayName:            pulumi.String("my-pool-name"),
-			InterNodeCommunication: pulumi.String("Enabled"),
-			Metadata: batch.MetadataItemArray{
-				&batch.MetadataItemArgs{
-					Name:  pulumi.String("metadata-1"),
-					Value: pulumi.String("value-1"),
-				},
-				&batch.MetadataItemArgs{
-					Name:  pulumi.String("metadata-2"),
-					Value: pulumi.String("value-2"),
-				},
-			},
-			NetworkConfiguration: &batch.NetworkConfigurationArgs{
-				EndpointConfiguration: &batch.PoolEndpointConfigurationArgs{
-					InboundNatPools: batch.InboundNatPoolArray{
-						&batch.InboundNatPoolArgs{
-							BackendPort:            pulumi.Int(12001),
-							FrontendPortRangeEnd:   pulumi.Int(15100),
-							FrontendPortRangeStart: pulumi.Int(15000),
-							Name:                   pulumi.String("testnat"),
-							NetworkSecurityGroupRules: batch.NetworkSecurityGroupRuleArray{
-								&batch.NetworkSecurityGroupRuleArgs{
-									Access:              pulumi.String("Allow"),
-									Priority:            pulumi.Int(150),
-									SourceAddressPrefix: pulumi.String("192.100.12.45"),
-									SourcePortRanges: pulumi.StringArray{
-										pulumi.String("*"),
-									},
-								},
-								&batch.NetworkSecurityGroupRuleArgs{
-									Access:              pulumi.String("Deny"),
-									Priority:            pulumi.Int(3500),
-									SourceAddressPrefix: pulumi.String("*"),
-									SourcePortRanges: pulumi.StringArray{
-										pulumi.String("*"),
-									},
-								},
-							},
-							Protocol: pulumi.String("TCP"),
-						},
-					},
-				},
-				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
-					IpAddressIds: pulumi.StringArray{
-						pulumi.String("/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"),
-						pulumi.String("/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268"),
-					},
-					Provision: pulumi.String("UserManaged"),
-				},
-				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
-			},
-			PoolName:          pulumi.String("testpool"),
-			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
-			ScaleSettings: &batch.ScaleSettingsArgs{
-				FixedScale: &batch.FixedScaleSettingsArgs{
-					NodeDeallocationOption: pulumi.String("TaskCompletion"),
-					ResizeTimeout:          pulumi.String("PT8M"),
-					TargetDedicatedNodes:   pulumi.Int(6),
-					TargetLowPriorityNodes: pulumi.Int(28),
-				},
-			},
-			StartTask: &batch.StartTaskArgs{
-				CommandLine: pulumi.String("cmd /c SET"),
-				EnvironmentSettings: batch.EnvironmentSettingArray{
-					&batch.EnvironmentSettingArgs{
-						Name:  pulumi.String("MYSET"),
-						Value: pulumi.String("1234"),
-					},
-				},
-				MaxTaskRetryCount: pulumi.Int(6),
-				ResourceFiles: batch.ResourceFileArray{
-					&batch.ResourceFileArgs{
-						FileMode: pulumi.String("777"),
-						FilePath: pulumi.String("c:\\temp\\gohere"),
-						HttpUrl:  pulumi.String("https://testaccount.blob.core.windows.net/example-blob-file"),
-					},
-				},
-				UserIdentity: &batch.UserIdentityArgs{
-					AutoUser: &batch.AutoUserSpecificationArgs{
-						ElevationLevel: pulumi.String("Admin"),
-						Scope:          pulumi.String("Pool"),
-					},
-				},
-				WaitForSuccess: pulumi.Bool(true),
-			},
-			TaskSchedulingPolicy: &batch.TaskSchedulingPolicyArgs{
-				NodeFillType: pulumi.String("Pack"),
-			},
-			TaskSlotsPerNode: pulumi.Int(13),
-			UserAccounts: batch.UserAccountArray{
-				&batch.UserAccountArgs{
-					ElevationLevel: pulumi.String("Admin"),
-					LinuxUserConfiguration: &batch.LinuxUserConfigurationArgs{
-						Gid:           pulumi.Int(4567),
-						SshPrivateKey: pulumi.String("sshprivatekeyvalue"),
-						Uid:           pulumi.Int(1234),
-					},
-					Name:     pulumi.String("username1"),
-					Password: pulumi.String("examplepassword"),
-				},
-			},
-			VmSize: pulumi.String("STANDARD_D4"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -844,107 +694,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	"fmt"
-
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
-			AccountName: pulumi.String("sampleacct"),
-			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
-				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
-					DataDisks: batch.DataDiskArray{
-						&batch.DataDiskArgs{
-							Caching:            pulumi.String("ReadWrite"),
-							DiskSizeGB:         pulumi.Int(30),
-							Lun:                pulumi.Int(0),
-							StorageAccountType: pulumi.String("Premium_LRS"),
-						},
-						&batch.DataDiskArgs{
-							Caching:            pulumi.String("None"),
-							DiskSizeGB:         pulumi.Int(200),
-							Lun:                pulumi.Int(1),
-							StorageAccountType: pulumi.String("Standard_LRS"),
-						},
-					},
-					DiskEncryptionConfiguration: &batch.DiskEncryptionConfigurationArgs{
-						Targets: pulumi.StringArray{
-							pulumi.String("OsDisk"),
-							pulumi.String("TemporaryDisk"),
-						},
-					},
-					ImageReference: &batch.ImageReferenceArgs{
-						Offer:     pulumi.String("WindowsServer"),
-						Publisher: pulumi.String("MicrosoftWindowsServer"),
-						Sku:       pulumi.String("2016-Datacenter-SmallDisk"),
-						Version:   pulumi.String("latest"),
-					},
-					LicenseType:    pulumi.String("Windows_Server"),
-					NodeAgentSkuId: pulumi.String("batch.node.windows amd64"),
-					WindowsConfiguration: &batch.WindowsConfigurationArgs{
-						EnableAutomaticUpdates: pulumi.Bool(false),
-					},
-				},
-			},
-			NetworkConfiguration: &batch.NetworkConfigurationArgs{
-				EndpointConfiguration: &batch.PoolEndpointConfigurationArgs{
-					InboundNatPools: batch.InboundNatPoolArray{
-						&batch.InboundNatPoolArgs{
-							BackendPort:            pulumi.Int(12001),
-							FrontendPortRangeEnd:   pulumi.Int(15100),
-							FrontendPortRangeStart: pulumi.Int(15000),
-							Name:                   pulumi.String("testnat"),
-							NetworkSecurityGroupRules: batch.NetworkSecurityGroupRuleArray{
-								&batch.NetworkSecurityGroupRuleArgs{
-									Access:              pulumi.String("Allow"),
-									Priority:            pulumi.Int(150),
-									SourceAddressPrefix: pulumi.String("192.100.12.45"),
-									SourcePortRanges: pulumi.StringArray{
-										pulumi.String("1"),
-										pulumi.String("2"),
-									},
-								},
-								&batch.NetworkSecurityGroupRuleArgs{
-									Access:              pulumi.String("Deny"),
-									Priority:            pulumi.Int(3500),
-									SourceAddressPrefix: pulumi.String("*"),
-									SourcePortRanges: pulumi.StringArray{
-										pulumi.String("*"),
-									},
-								},
-							},
-							Protocol: pulumi.String("TCP"),
-						},
-					},
-				},
-			},
-			PoolName:          pulumi.String("testpool"),
-			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
-			ScaleSettings: &batch.ScaleSettingsArgs{
-				AutoScale: &batch.AutoScaleSettingsArgs{
-					EvaluationInterval: pulumi.String("PT5M"),
-					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
-				},
-			},
-			VmSize: pulumi.String("STANDARD_D4"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -1479,7 +1229,7 @@ func main() {
 			},
 			NetworkConfiguration: &batch.NetworkConfigurationArgs{
 				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
-					Provision: pulumi.String("NoPublicIPAddresses"),
+					Provision: "NoPublicIPAddresses",
 				},
 				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
 			},
@@ -1634,7 +1384,7 @@ func main() {
 					IpAddressIds: pulumi.StringArray{
 						pulumi.String("/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"),
 					},
-					Provision: pulumi.String("UserManaged"),
+					Provision: "UserManaged",
 				},
 				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
 			},
@@ -1728,7 +1478,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPackageReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetadataItemArgs]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[NetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[StartTaskArgs]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[TaskSchedulingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccountArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPackageReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[InterNodeCommunicationState]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetadataItemArgs]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[NetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[StartTaskArgs]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[TaskSchedulingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccountArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1986,7 +1736,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#internodecommunication_csharp" style="color: inherit; text-decoration: inherit;">Inter<wbr>Node<wbr>Communication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inter<wbr>Node<wbr>Communication<wbr>State</span>
     </dt>
     <dd>{{% md %}}This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.{{% /md %}}</dd>
 
@@ -2173,7 +1923,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#internodecommunication_go" style="color: inherit; text-decoration: inherit;">Inter<wbr>Node<wbr>Communication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.{{% /md %}}</dd>
 
@@ -2360,7 +2110,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#internodecommunication_nodejs" style="color: inherit; text-decoration: inherit;">inter<wbr>Node<wbr>Communication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Inter<wbr>Node<wbr>Communication<wbr>State</span>
     </dt>
     <dd>{{% md %}}This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.{{% /md %}}</dd>
 
@@ -2547,7 +2297,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#inter_node_communication_python" style="color: inherit; text-decoration: inherit;">inter_<wbr>node_<wbr>communication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Inter<wbr>Node<wbr>Communication<wbr>State</span>
     </dt>
     <dd>{{% md %}}This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.{{% /md %}}</dd>
 
@@ -4067,7 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_csharp" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Elevation<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -4077,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Auto<wbr>User<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.{{% /md %}}</dd>
 
@@ -4094,7 +3844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_go" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -4104,7 +3854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.{{% /md %}}</dd>
 
@@ -4121,7 +3871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_nodejs" style="color: inherit; text-decoration: inherit;">elevation<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Elevation<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -4131,7 +3881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Auto<wbr>User<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.{{% /md %}}</dd>
 
@@ -4148,7 +3898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevation_level_python" style="color: inherit; text-decoration: inherit;">elevation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Elevation<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -4158,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Auto<wbr>User<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.{{% /md %}}</dd>
 
@@ -5829,7 +5579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storelocation_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Certificate<wbr>Store<wbr>Location</span>
     </dt>
     <dd>{{% md %}}The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
 
@@ -5849,7 +5599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Certificate<wbr>Visibility&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5876,7 +5626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storelocation_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
 
@@ -5896,7 +5646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5923,7 +5673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storelocation_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Certificate<wbr>Store<wbr>Location</span>
     </dt>
     <dd>{{% md %}}The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
 
@@ -5943,7 +5693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Certificate<wbr>Visibility[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5970,7 +5720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Certificate<wbr>Store<wbr>Location</span>
     </dt>
     <dd>{{% md %}}The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
 
@@ -5990,7 +5740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Certificate<wbr>Visibility]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6455,7 +6205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Container<wbr>Type</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6492,7 +6242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6529,7 +6279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Container<wbr>Type</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6566,7 +6316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Container<wbr>Type</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7111,7 +6861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Caching<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Values are:
 
@@ -7127,7 +6877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}If omitted, the default is "Standard_LRS". Values are:
 
@@ -7167,7 +6917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Values are:
 
@@ -7183,7 +6933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If omitted, the default is "Standard_LRS". Values are:
 
@@ -7223,7 +6973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Caching<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Values are:
 
@@ -7239,7 +6989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}If omitted, the default is "Standard_LRS". Values are:
 
@@ -7279,7 +7029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Caching<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Values are:
 
@@ -7295,7 +7045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}If omitted, the default is "Standard_LRS". Values are:
 
@@ -7799,7 +7549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Disk<wbr>Encryption<wbr>Target&gt;</span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 
@@ -7816,7 +7566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 
@@ -7833,7 +7583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Disk<wbr>Encryption<wbr>Target[]</span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 
@@ -7850,7 +7600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Disk<wbr>Encryption<wbr>Target]</span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 
@@ -8195,7 +7945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Compute<wbr>Node<wbr>Deallocation<wbr>Option</span>
     </dt>
     <dd>{{% md %}}If omitted, the default value is Requeue.{{% /md %}}</dd>
 
@@ -8242,7 +7992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If omitted, the default value is Requeue.{{% /md %}}</dd>
 
@@ -8289,7 +8039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Deallocation<wbr>Option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Compute<wbr>Node<wbr>Deallocation<wbr>Option</span>
     </dt>
     <dd>{{% md %}}If omitted, the default value is Requeue.{{% /md %}}</dd>
 
@@ -8336,7 +8086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_deallocation_option_python" style="color: inherit; text-decoration: inherit;">node_<wbr>deallocation_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Compute<wbr>Node<wbr>Deallocation<wbr>Option</span>
     </dt>
     <dd>{{% md %}}If omitted, the default value is Requeue.{{% /md %}}</dd>
 
@@ -9111,7 +8861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inbound<wbr>Endpoint<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9178,7 +8928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9245,7 +8995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Inbound<wbr>Endpoint<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9312,7 +9062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Inbound<wbr>Endpoint<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11219,7 +10969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11266,7 +11016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11313,7 +11063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11360,7 +11110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11785,7 +11535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_csharp" style="color: inherit; text-decoration: inherit;">Provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>IPAddress<wbr>Provisioning<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The default value is BatchManaged{{% /md %}}</dd>
 
@@ -11812,7 +11562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_go" style="color: inherit; text-decoration: inherit;">Provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is BatchManaged{{% /md %}}</dd>
 
@@ -11839,7 +11589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_nodejs" style="color: inherit; text-decoration: inherit;">provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>IPAddress<wbr>Provisioning<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The default value is BatchManaged{{% /md %}}</dd>
 
@@ -11866,7 +11616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_python" style="color: inherit; text-decoration: inherit;">provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">IPAddress<wbr>Provisioning<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The default value is BatchManaged{{% /md %}}</dd>
 
@@ -13915,7 +13665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workingdirectory_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Container<wbr>Working<wbr>Directory</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13962,7 +13712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workingdirectory_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14009,7 +13759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workingdirectory_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Container<wbr>Working<wbr>Directory</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14056,7 +13806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#working_directory_python" style="color: inherit; text-decoration: inherit;">working_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Container<wbr>Working<wbr>Directory</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14283,7 +14033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodefilltype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Fill<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Compute<wbr>Node<wbr>Fill<wbr>Type</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14300,7 +14050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodefilltype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Fill<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14317,7 +14067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodefilltype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Fill<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Compute<wbr>Node<wbr>Fill<wbr>Type</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14334,7 +14084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_fill_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>fill_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Compute<wbr>Node<wbr>Fill<wbr>Type</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14461,7 +14211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_csharp" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Elevation<wbr>Level</span>
     </dt>
     <dd>{{% md %}}nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -14518,7 +14268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_go" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -14575,7 +14325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_nodejs" style="color: inherit; text-decoration: inherit;">elevation<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Elevation<wbr>Level</span>
     </dt>
     <dd>{{% md %}}nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -14632,7 +14382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevation_level_python" style="color: inherit; text-decoration: inherit;">elevation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Elevation<wbr>Level</span>
     </dt>
     <dd>{{% md %}}nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.{{% /md %}}</dd>
 
@@ -15985,7 +15735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Login<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.{{% /md %}}</dd>
 
@@ -16002,7 +15752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.{{% /md %}}</dd>
 
@@ -16019,7 +15769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Login<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.{{% /md %}}</dd>
 
@@ -16036,7 +15786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Login<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.{{% /md %}}</dd>
 

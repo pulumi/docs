@@ -1,7 +1,7 @@
 
 ---
 title: "BookmarkRelation"
-title_tag: "Resource BookmarkRelation | Module securityinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.securityinsights.BookmarkRelation"
 meta_desc: "Explore the BookmarkRelation resource of the securityinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a relation between two resources"
 ---
 

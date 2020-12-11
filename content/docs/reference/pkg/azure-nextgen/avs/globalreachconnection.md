@@ -1,7 +1,7 @@
 
 ---
 title: "GlobalReachConnection"
-title_tag: "Resource GlobalReachConnection | Module avs | Package Azure NextGen"
+title_tag: "azure-nextgen.avs.GlobalReachConnection"
 meta_desc: "Explore the GlobalReachConnection resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. A global reach connection resource"
 ---
 

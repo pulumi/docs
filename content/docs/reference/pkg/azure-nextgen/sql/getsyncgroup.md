@@ -254,6 +254,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="lastsynctime_csharp">
 <a href="#lastsynctime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Time</a>
 </span> 
@@ -304,6 +314,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="conflictloggingretentionindays_csharp">
+<a href="#conflictloggingretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Logging<wbr>Retention<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Conflict logging retention period.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="conflictresolutionpolicy_csharp">
 <a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span> 
@@ -311,6 +331,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Conflict resolution policy of the sync group.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enableconflictlogging_csharp">
+<a href="#enableconflictlogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Conflict<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -354,6 +384,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncdatabaseid_csharp">
 <a href="#syncdatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Database<wbr>Id</a>
 </span> 
@@ -378,6 +418,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -431,6 +481,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="conflictloggingretentionindays_go">
+<a href="#conflictloggingretentionindays_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Logging<wbr>Retention<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Conflict logging retention period.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="conflictresolutionpolicy_go">
 <a href="#conflictresolutionpolicy_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span> 
@@ -438,6 +498,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Conflict resolution policy of the sync group.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enableconflictlogging_go">
+<a href="#enableconflictlogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Conflict<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -481,6 +551,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncdatabaseid_go">
 <a href="#syncdatabaseid_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Database<wbr>Id</a>
 </span> 
@@ -505,6 +585,16 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -558,6 +648,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="conflictloggingretentionindays_nodejs">
+<a href="#conflictloggingretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Logging<wbr>Retention<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Conflict logging retention period.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="conflictresolutionpolicy_nodejs">
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span> 
@@ -565,6 +665,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Conflict resolution policy of the sync group.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enableconflictlogging_nodejs">
+<a href="#enableconflictlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Conflict<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -608,6 +718,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncdatabaseid_nodejs">
 <a href="#syncdatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Database<wbr>Id</a>
 </span> 
@@ -632,6 +752,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -685,6 +815,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="conflict_logging_retention_in_days_python">
+<a href="#conflict_logging_retention_in_days_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>logging_<wbr>retention_<wbr>in_<wbr>days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Conflict logging retention period.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="conflict_resolution_policy_python">
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span> 
@@ -692,6 +832,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Conflict resolution policy of the sync group.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enable_conflict_logging_python">
+<a href="#enable_conflict_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>conflict_<wbr>logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -735,6 +885,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sync_database_id_python">
 <a href="#sync_database_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>database_<wbr>id</a>
 </span> 
@@ -764,6 +924,245 @@ The following output properties are available:
 
 
 ## Supporting Types
+
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="syncgroupschemaresponse">Sync<wbr>Group<wbr>Schema<wbr>Response</h4>

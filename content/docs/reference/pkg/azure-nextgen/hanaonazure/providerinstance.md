@@ -1,7 +1,7 @@
 
 ---
 title: "ProviderInstance"
-title_tag: "Resource ProviderInstance | Module hanaonazure | Package Azure NextGen"
+title_tag: "azure-nextgen.hanaonazure.ProviderInstance"
 meta_desc: "Explore the ProviderInstance resource of the hanaonazure module, including examples, input properties, output properties, lookup functions, and supporting types. A provider instance associated with a SAP monitor."
 ---
 

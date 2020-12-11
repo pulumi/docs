@@ -2499,7 +2499,7 @@ The following output properties are available:
 <a href="#jobsecrets_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
 
@@ -2526,7 +2526,7 @@ The following output properties are available:
 <a href="#jobsecrets_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
 
@@ -2553,7 +2553,7 @@ The following output properties are available:
 <a href="#jobsecrets_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response | Databox<wbr>Job<wbr>Secrets<wbr>Response</span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
 
@@ -2580,7 +2580,7 @@ The following output properties are available:
 <a href="#job_secrets_python" style="color: inherit; text-decoration: inherit;">job_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args, Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ServerDnsAlias"
-title_tag: "Resource ServerDnsAlias | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ServerDnsAlias"
 meta_desc: "Explore the ServerDnsAlias resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A server DNS alias."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverDnsAlias = new AzureNextGen.Sql.V20170301Preview.ServerDnsAlias("serverDnsAlias", new AzureNextGen.Sql.V20170301Preview.ServerDnsAliasArgs
+        var serverDnsAlias = new AzureNextGen.Sql.V20200801Preview.ServerDnsAlias("serverDnsAlias", new AzureNextGen.Sql.V20200801Preview.ServerDnsAliasArgs
         {
             DnsAliasName = "dns-alias-name-1",
             ResourceGroupName = "Default",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_dns_alias = azure_nextgen.sql.v20170301preview.ServerDnsAlias("serverDnsAlias",
+server_dns_alias = azure_nextgen.sql.v20200801preview.ServerDnsAlias("serverDnsAlias",
     dns_alias_name="dns-alias-name-1",
     resource_group_name="Default",
     server_name="dns-alias-server")
@@ -90,7 +90,7 @@ server_dns_alias = azure_nextgen.sql.v20170301preview.ServerDnsAlias("serverDnsA
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverDnsAlias = new azure_nextgen.sql.v20170301preview.ServerDnsAlias("serverDnsAlias", {
+const serverDnsAlias = new azure_nextgen.sql.v20200801preview.ServerDnsAlias("serverDnsAlias", {
     dnsAliasName: "dns-alias-name-1",
     resourceGroupName: "Default",
     serverName: "dns-alias-server",
@@ -292,7 +292,7 @@ The ServerDnsAlias resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server DNS alias.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server dns alias.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -329,7 +329,7 @@ The ServerDnsAlias resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server DNS alias.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server dns alias.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -366,7 +366,7 @@ The ServerDnsAlias resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server DNS alias.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server dns alias.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -403,7 +403,7 @@ The ServerDnsAlias resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the server DNS alias.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the server dns alias.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

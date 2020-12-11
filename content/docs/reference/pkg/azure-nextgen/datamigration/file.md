@@ -1,7 +1,7 @@
 
 ---
 title: "File"
-title_tag: "Resource File | Module datamigration | Package Azure NextGen"
+title_tag: "azure-nextgen.datamigration.File"
 meta_desc: "Explore the File resource of the datamigration module, including examples, input properties, output properties, lookup functions, and supporting types. A file resource"
 ---
 

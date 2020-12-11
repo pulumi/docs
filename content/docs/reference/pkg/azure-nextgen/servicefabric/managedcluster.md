@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedCluster"
-title_tag: "Resource ManagedCluster | Module servicefabric | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabric.ManagedCluster"
 meta_desc: "Explore the ManagedCluster resource of the servicefabric module, including examples, input properties, output properties, lookup functions, and supporting types. The manged cluster resource"
 ---
 
@@ -4772,7 +4772,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Probe<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
 
@@ -4782,7 +4782,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -4829,7 +4829,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#probeprotocol_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
 
@@ -4839,7 +4839,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -4886,7 +4886,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Probe<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
 
@@ -4896,7 +4896,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 
@@ -4943,7 +4943,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Probe<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
 
@@ -4953,7 +4953,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protocol</span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
 

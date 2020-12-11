@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityContact"
-title_tag: "Resource SecurityContact | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.SecurityContact"
 meta_desc: "Explore the SecurityContact resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. Contact details and configurations for notifications coming from Azure Security Center."
 ---
 

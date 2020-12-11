@@ -1,7 +1,7 @@
 
 ---
 title: "OpenShiftManagedCluster"
-title_tag: "Resource OpenShiftManagedCluster | Module containerservice | Package Azure NextGen"
+title_tag: "azure-nextgen.containerservice.OpenShiftManagedCluster"
 meta_desc: "Explore the OpenShiftManagedCluster resource of the containerservice module, including examples, input properties, output properties, lookup functions, and supporting types. OpenShift Managed cluster."
 ---
 
@@ -2045,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -2055,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -2065,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role</span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
 
@@ -2112,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -2122,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -2132,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
 
@@ -2179,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -2189,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -2199,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role</span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
 
@@ -2246,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -2266,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role</span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
 
@@ -2989,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -3009,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -3046,7 +3046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -3066,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -3123,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -3160,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -3180,7 +3180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 

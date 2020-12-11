@@ -1,7 +1,7 @@
 
 ---
 title: "CassandraResourceCassandraTable"
-title_tag: "Resource CassandraResourceCassandraTable | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.CassandraResourceCassandraTable"
 meta_desc: "Explore the CassandraResourceCassandraTable resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Cassandra table."
 ---
 

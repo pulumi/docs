@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRoutePort"
-title_tag: "Resource ExpressRoutePort | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.ExpressRoutePort"
 meta_desc: "Explore the ExpressRoutePort resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. ExpressRoutePort resource definition."
 ---
 
@@ -241,7 +241,7 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExpressRouteLinkArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePortsEncapsulation]]</span> = None<span class="p">, </span><span class="nx">express_route_port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExpressRouteLinkArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -449,7 +449,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#encapsulation_csharp" style="color: inherit; text-decoration: inherit;">Encapsulation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Ports<wbr>Encapsulation</span>
     </dt>
     <dd>{{% md %}}Encapsulation method on physical ports.{{% /md %}}</dd>
 
@@ -556,7 +556,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#encapsulation_go" style="color: inherit; text-decoration: inherit;">Encapsulation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encapsulation method on physical ports.{{% /md %}}</dd>
 
@@ -663,7 +663,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#encapsulation_nodejs" style="color: inherit; text-decoration: inherit;">encapsulation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Express<wbr>Route<wbr>Ports<wbr>Encapsulation</span>
     </dt>
     <dd>{{% md %}}Encapsulation method on physical ports.{{% /md %}}</dd>
 
@@ -770,7 +770,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#encapsulation_python" style="color: inherit; text-decoration: inherit;">encapsulation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Express<wbr>Route<wbr>Ports<wbr>Encapsulation</span>
     </dt>
     <dd>{{% md %}}Encapsulation method on physical ports.{{% /md %}}</dd>
 
@@ -1346,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminstate_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Link<wbr>Admin<wbr>State</span>
     </dt>
     <dd>{{% md %}}Administrative state of the physical port.{{% /md %}}</dd>
 
@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminstate_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrative state of the physical port.{{% /md %}}</dd>
 
@@ -1440,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminstate_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Express<wbr>Route<wbr>Link<wbr>Admin<wbr>State</span>
     </dt>
     <dd>{{% md %}}Administrative state of the physical port.{{% /md %}}</dd>
 
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_state_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Express<wbr>Route<wbr>Link<wbr>Admin<wbr>State</span>
     </dt>
     <dd>{{% md %}}Administrative state of the physical port.{{% /md %}}</dd>
 
@@ -1555,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cipher_csharp" style="color: inherit; text-decoration: inherit;">Cipher</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Cipher</span>
     </dt>
     <dd>{{% md %}}Mac security cipher.{{% /md %}}</dd>
 
@@ -1575,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scistate_csharp" style="color: inherit; text-decoration: inherit;">Sci<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Sci<wbr>State</span>
     </dt>
     <dd>{{% md %}}Sci mode enabled/disabled.{{% /md %}}</dd>
 
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cipher_go" style="color: inherit; text-decoration: inherit;">Cipher</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mac security cipher.{{% /md %}}</dd>
 
@@ -1622,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scistate_go" style="color: inherit; text-decoration: inherit;">Sci<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sci mode enabled/disabled.{{% /md %}}</dd>
 
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cipher_nodejs" style="color: inherit; text-decoration: inherit;">cipher</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Cipher</span>
     </dt>
     <dd>{{% md %}}Mac security cipher.{{% /md %}}</dd>
 
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scistate_nodejs" style="color: inherit; text-decoration: inherit;">sci<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Sci<wbr>State</span>
     </dt>
     <dd>{{% md %}}Sci mode enabled/disabled.{{% /md %}}</dd>
 
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cipher_python" style="color: inherit; text-decoration: inherit;">cipher</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Cipher</span>
     </dt>
     <dd>{{% md %}}Mac security cipher.{{% /md %}}</dd>
 
@@ -1716,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sci_state_python" style="color: inherit; text-decoration: inherit;">sci_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Sci<wbr>State</span>
     </dt>
     <dd>{{% md %}}Sci mode enabled/disabled.{{% /md %}}</dd>
 
@@ -2422,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
@@ -2449,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
@@ -2503,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 

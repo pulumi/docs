@@ -1,7 +1,7 @@
 
 ---
 title: "Subnet"
-title_tag: "Resource Subnet | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.Subnet"
 meta_desc: "Explore the Subnet resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Subnet in a virtual network resource."
 ---
 
@@ -12380,7 +12380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthoptype_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Route<wbr>Next<wbr>Hop<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -12437,7 +12437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthoptype_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -12494,7 +12494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthoptype_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Route<wbr>Next<wbr>Hop<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -12551,7 +12551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_type_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Route<wbr>Next<wbr>Hop<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
 
@@ -13616,7 +13616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -13626,7 +13626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -13636,7 +13636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 
@@ -13793,7 +13793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -13803,7 +13803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -13813,7 +13813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 
@@ -13970,7 +13970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -13980,7 +13980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Rule<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -13990,7 +13990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 
@@ -14147,7 +14147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Rule<wbr>Access</span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
 
@@ -14157,7 +14157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Rule<wbr>Direction</span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
 
@@ -14167,7 +14167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Rule<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
 

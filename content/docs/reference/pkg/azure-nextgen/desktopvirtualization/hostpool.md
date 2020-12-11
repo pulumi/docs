@@ -1,7 +1,7 @@
 
 ---
 title: "HostPool"
-title_tag: "Resource HostPool | Module desktopvirtualization | Package Azure NextGen"
+title_tag: "azure-nextgen.desktopvirtualization.HostPool"
 meta_desc: "Explore the HostPool resource of the desktopvirtualization module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a HostPool definition."
 ---
 
@@ -202,7 +202,7 @@ const hostPool = new azure_nextgen.desktopvirtualization.v20201110preview.HostPo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[RegistrationInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sso_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_client_secret_key_vault_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_secret_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssoadfs_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, HostPoolType]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, LoadBalancerType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PersonalDesktopAssignmentType]]</span> = None<span class="p">, </span><span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PreferredAppGroupType]]</span> = None<span class="p">, </span><span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[RegistrationInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sso_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_client_secret_key_vault_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_secret_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SSOSecretType]]</span> = None<span class="p">, </span><span class="nx">ssoadfs_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -390,7 +390,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostpooltype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Host<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
 
@@ -400,7 +400,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Load<wbr>Balancer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
 
@@ -420,7 +420,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preferredappgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>App<wbr>Group<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Preferred<wbr>App<wbr>Group<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
 
@@ -480,7 +480,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#personaldesktopassignmenttype_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Desktop<wbr>Assignment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Personal<wbr>Desktop<wbr>Assignment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
 
@@ -540,7 +540,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssosecrettype_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>SSOSecret<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
 
@@ -617,7 +617,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostpooltype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
 
@@ -627,7 +627,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
 
@@ -647,7 +647,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preferredappgrouptype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>App<wbr>Group<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
 
@@ -707,7 +707,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#personaldesktopassignmenttype_go" style="color: inherit; text-decoration: inherit;">Personal<wbr>Desktop<wbr>Assignment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
 
@@ -767,7 +767,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssosecrettype_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
 
@@ -844,7 +844,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostpooltype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Host<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Load<wbr>Balancer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
 
@@ -874,7 +874,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preferredappgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>App<wbr>Group<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Preferred<wbr>App<wbr>Group<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
 
@@ -934,7 +934,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#personaldesktopassignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Desktop<wbr>Assignment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Personal<wbr>Desktop<wbr>Assignment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
 
@@ -994,7 +994,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssosecrettype_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Secret<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>SSOSecret<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
 
@@ -1071,7 +1071,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#host_pool_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Host<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
 
@@ -1081,7 +1081,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Load<wbr>Balancer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
 
@@ -1101,7 +1101,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preferred_app_group_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>app_<wbr>group_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Preferred<wbr>App<wbr>Group<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
 
@@ -1161,7 +1161,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#personal_desktop_assignment_type_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>desktop_<wbr>assignment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Personal<wbr>Desktop<wbr>Assignment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
 
@@ -1221,7 +1221,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sso_secret_type_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>secret_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">SSOSecret<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
 
@@ -1517,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationtokenoperation_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Token<wbr>Operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Registration<wbr>Token<wbr>Operation</span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
 
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationtokenoperation_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Token<wbr>Operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
 
@@ -1591,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationtokenoperation_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Token<wbr>Operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Registration<wbr>Token<wbr>Operation</span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
 
@@ -1628,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_token_operation_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>token_<wbr>operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Registration<wbr>Token<wbr>Operation</span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
 

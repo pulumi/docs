@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachine"
-title_tag: "Resource VirtualMachine | Module vmwarecloudsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.vmwarecloudsimple.VirtualMachine"
 meta_desc: "Explore the VirtualMachine resource of the vmwarecloudsimple module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual machine model"
 ---
 
@@ -89,7 +89,7 @@ func main() {
 			Disks: vmwarecloudsimple.VirtualDiskArray{
 				&vmwarecloudsimple.VirtualDiskArgs{
 					ControllerId:     pulumi.String("1000"),
-					IndependenceMode: pulumi.String("persistent"),
+					IndependenceMode: "persistent",
 					TotalSize:        pulumi.Int(10485760),
 					VirtualDiskId:    pulumi.String("2000"),
 				},
@@ -100,7 +100,7 @@ func main() {
 					Network: &vmwarecloudsimple.VirtualNetworkArgs{
 						Id: pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19"),
 					},
-					NicType:      pulumi.String("E1000"),
+					NicType:      "E1000",
 					PowerOnBoot:  pulumi.Bool(true),
 					VirtualNicId: pulumi.String("4000"),
 				},
@@ -3119,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#independencemode_csharp" style="color: inherit; text-decoration: inherit;">Independence<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Disk<wbr>Independence<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
 
@@ -3166,7 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#independencemode_go" style="color: inherit; text-decoration: inherit;">Independence<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
 
@@ -3213,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#independencemode_nodejs" style="color: inherit; text-decoration: inherit;">independence<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Disk<wbr>Independence<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
 
@@ -3260,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#independence_mode_python" style="color: inherit; text-decoration: inherit;">independence_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Disk<wbr>Independence<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
 
@@ -4114,7 +4114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>NICType</span>
     </dt>
     <dd>{{% md %}}NIC type{{% /md %}}</dd>
 
@@ -4191,7 +4191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}NIC type{{% /md %}}</dd>
 
@@ -4268,7 +4268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>NICType</span>
     </dt>
     <dd>{{% md %}}NIC type{{% /md %}}</dd>
 
@@ -4345,7 +4345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">NICType</span>
     </dt>
     <dd>{{% md %}}NIC type{{% /md %}}</dd>
 

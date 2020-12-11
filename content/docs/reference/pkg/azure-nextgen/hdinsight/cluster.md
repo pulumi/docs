@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module hdinsight | Package Azure NextGen"
+title_tag: "azure-nextgen.hdinsight.Cluster"
 meta_desc: "Explore the Cluster resource of the hdinsight module, including examples, input properties, output properties, lookup functions, and supporting types. The HDInsight cluster."
 ---
 
@@ -173,133 +173,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName: pulumi.String("cluster1"),
-			Properties: &hdinsight.ClusterCreatePropertiesArgs{
-				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
-					ComponentVersion: pulumi.StringMap{
-						"Hadoop": pulumi.String("2.7"),
-					},
-					Configurations: pulumi.MapMap{
-						"gateway": pulumi.Map{
-							"restAuthCredential.isEnabled": pulumi.Bool(true),
-							"restAuthCredential.password":  pulumi.String("**********"),
-							"restAuthCredential.username":  pulumi.String("admin"),
-						},
-					},
-					Kind: pulumi.String("hadoop"),
-				},
-				ClusterVersion: pulumi.String("3.6"),
-				ComputeProfile: &hdinsight.ComputeProfileArgs{
-					Roles: hdinsight.RoleArray{
-						&hdinsight.RoleArgs{
-							AutoscaleConfiguration: &hdinsight.AutoscaleArgs{
-								Recurrence: &hdinsight.AutoscaleRecurrenceArgs{
-									Schedule: hdinsight.AutoscaleScheduleArray{
-										&hdinsight.AutoscaleScheduleArgs{
-											Days: pulumi.StringArray{
-												pulumi.String("Monday"),
-												pulumi.String("Tuesday"),
-												pulumi.String("Wednesday"),
-												pulumi.String("Thursday"),
-												pulumi.String("Friday"),
-											},
-											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
-												MaxInstanceCount: pulumi.Int(3),
-												MinInstanceCount: pulumi.Int(3),
-												Time:             pulumi.String("09:00"),
-											},
-										},
-										&hdinsight.AutoscaleScheduleArgs{
-											Days: pulumi.StringArray{
-												pulumi.String("Monday"),
-												pulumi.String("Tuesday"),
-												pulumi.String("Wednesday"),
-												pulumi.String("Thursday"),
-												pulumi.String("Friday"),
-											},
-											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
-												MaxInstanceCount: pulumi.Int(6),
-												MinInstanceCount: pulumi.Int(6),
-												Time:             pulumi.String("18:00"),
-											},
-										},
-										&hdinsight.AutoscaleScheduleArgs{
-											Days: pulumi.StringArray{
-												pulumi.String("Saturday"),
-												pulumi.String("Sunday"),
-											},
-											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
-												MaxInstanceCount: pulumi.Int(2),
-												MinInstanceCount: pulumi.Int(2),
-												Time:             pulumi.String("09:00"),
-											},
-										},
-										&hdinsight.AutoscaleScheduleArgs{
-											Days: pulumi.StringArray{
-												pulumi.String("Saturday"),
-												pulumi.String("Sunday"),
-											},
-											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
-												MaxInstanceCount: pulumi.Int(4),
-												MinInstanceCount: pulumi.Int(4),
-												Time:             pulumi.String("18:00"),
-											},
-										},
-									},
-									TimeZone: pulumi.String("China Standard Time"),
-								},
-							},
-							HardwareProfile: &hdinsight.HardwareProfileArgs{
-								VmSize: pulumi.String("Standard_D4_V2"),
-							},
-							Name: pulumi.String("workernode"),
-							OsProfile: &hdinsight.OsProfileArgs{
-								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
-									Password: pulumi.String("**********"),
-									Username: pulumi.String("sshuser"),
-								},
-							},
-							ScriptActions:       hdinsight.ScriptActionArray{},
-							TargetInstanceCount: pulumi.Int(4),
-						},
-					},
-				},
-				OsType: pulumi.String("Linux"),
-				StorageProfile: &hdinsight.StorageProfileArgs{
-					Storageaccounts: hdinsight.StorageAccountArray{
-						&hdinsight.StorageAccountArgs{
-							Container: pulumi.String("hdinsight-autoscale-tes-2019-06-18t05-49-16-591z"),
-							IsDefault: pulumi.Bool(true),
-							Key:       pulumi.String("storagekey"),
-							Name:      pulumi.String("mystorage.blob.core.windows.net"),
-						},
-					},
-				},
-				Tier: pulumi.String("Standard"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -720,7 +594,7 @@ func main() {
 						},
 					},
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -731,7 +605,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
@@ -1113,7 +987,7 @@ func main() {
 						},
 					},
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -1124,7 +998,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
@@ -1521,7 +1395,7 @@ func main() {
 						},
 					},
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -1532,7 +1406,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
@@ -1975,7 +1849,7 @@ func main() {
 						GroupName: pulumi.String("Kafka security group name"),
 					},
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -1986,7 +1860,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
@@ -2503,12 +2377,12 @@ func main() {
 						},
 					},
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				SecurityProfile: &hdinsight.SecurityProfileArgs{
 					ClusterUsersGroupDNs: pulumi.StringArray{
 						pulumi.String("hdiusers"),
 					},
-					DirectoryType:      pulumi.String("ActiveDirectory"),
+					DirectoryType:      "ActiveDirectory",
 					Domain:             pulumi.String("DomainName"),
 					DomainUserPassword: pulumi.String("**********"),
 					DomainUsername:     pulumi.String("DomainUsername"),
@@ -2527,7 +2401,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Premium"),
+				Tier: "Premium",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
@@ -2962,7 +2836,7 @@ func main() {
 						},
 					},
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -2973,7 +2847,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
@@ -3325,7 +3199,7 @@ func main() {
 					},
 				},
 				MinSupportedTlsVersion: pulumi.String("1.2"),
-				OsType:                 pulumi.String("Linux"),
+				OsType:                 "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -3336,7 +3210,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
@@ -3702,7 +3576,7 @@ func main() {
 				DiskEncryptionProperties: &hdinsight.DiskEncryptionPropertiesArgs{
 					EncryptionAtHost: pulumi.Bool(true),
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -3713,7 +3587,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
@@ -4083,7 +3957,7 @@ func main() {
 				EncryptionInTransitProperties: &hdinsight.EncryptionInTransitPropertiesArgs{
 					IsEncryptionInTransitEnabled: pulumi.Bool(true),
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -4094,7 +3968,7 @@ func main() {
 						},
 					},
 				},
-				Tier: pulumi.String("Standard"),
+				Tier: "Standard",
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
@@ -4487,7 +4361,7 @@ func main() {
 					PrivateLink:                pulumi.String("Enabled"),
 					ResourceProviderConnection: pulumi.String("Outbound"),
 				},
-				OsType: pulumi.String("Linux"),
+				OsType: "Linux",
 				StorageProfile: &hdinsight.StorageProfileArgs{
 					Storageaccounts: hdinsight.StorageAccountArray{
 						&hdinsight.StorageAccountArgs{
@@ -6080,7 +5954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Days<wbr>Of<wbr>Week&gt;</span>
     </dt>
     <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
 
@@ -6107,7 +5981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
 
@@ -6134,7 +6008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Days<wbr>Of<wbr>Week[]</span>
     </dt>
     <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
 
@@ -6161,7 +6035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Days<wbr>Of<wbr>Week]</span>
     </dt>
     <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
 
@@ -6954,7 +6828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}The type of operating system.{{% /md %}}</dd>
 
@@ -6984,7 +6858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The cluster tier.{{% /md %}}</dd>
 
@@ -7081,7 +6955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of operating system.{{% /md %}}</dd>
 
@@ -7111,7 +6985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster tier.{{% /md %}}</dd>
 
@@ -7208,7 +7082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}The type of operating system.{{% /md %}}</dd>
 
@@ -7238,7 +7112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The cluster tier.{{% /md %}}</dd>
 
@@ -7335,7 +7209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">OSType</span>
     </dt>
     <dd>{{% md %}}The type of operating system.{{% /md %}}</dd>
 
@@ -7365,7 +7239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Tier</span>
     </dt>
     <dd>{{% md %}}The cluster tier.{{% /md %}}</dd>
 
@@ -8550,7 +8424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
@@ -8577,7 +8451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
@@ -8604,7 +8478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
@@ -8631,7 +8505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
@@ -9582,7 +9456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Json<wbr>Web<wbr>Key<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Algorithm identifier for encryption, default RSA-OAEP.{{% /md %}}</dd>
 
@@ -9649,7 +9523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Algorithm identifier for encryption, default RSA-OAEP.{{% /md %}}</dd>
 
@@ -9716,7 +9590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Json<wbr>Web<wbr>Key<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Algorithm identifier for encryption, default RSA-OAEP.{{% /md %}}</dd>
 
@@ -9783,7 +9657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Json<wbr>Web<wbr>Key<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Algorithm identifier for encryption, default RSA-OAEP.{{% /md %}}</dd>
 
@@ -11051,7 +10925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Private<wbr>Link</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
@@ -11061,7 +10935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceproviderconnection_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Resource<wbr>Provider<wbr>Connection</span>
     </dt>
     <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
@@ -11078,7 +10952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
@@ -11088,7 +10962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceproviderconnection_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
@@ -11105,7 +10979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Private<wbr>Link</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
@@ -11115,7 +10989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceproviderconnection_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Resource<wbr>Provider<wbr>Connection</span>
     </dt>
     <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
@@ -11132,7 +11006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Private<wbr>Link</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
@@ -11142,7 +11016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_provider_connection_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Resource<wbr>Provider<wbr>Connection</span>
     </dt>
     <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
@@ -12662,7 +12536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directorytype_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Directory<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The directory type.{{% /md %}}</dd>
 
@@ -12759,7 +12633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directorytype_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type.{{% /md %}}</dd>
 
@@ -12856,7 +12730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directorytype_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Directory<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The directory type.{{% /md %}}</dd>
 
@@ -12953,7 +12827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directory_type_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Directory<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The directory type.{{% /md %}}</dd>
 

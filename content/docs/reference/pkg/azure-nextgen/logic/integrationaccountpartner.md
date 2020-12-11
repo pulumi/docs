@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountPartner"
-title_tag: "Resource IntegrationAccountPartner | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationAccountPartner"
 meta_desc: "Explore the IntegrationAccountPartner resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account partner."
 ---
 
@@ -168,7 +168,7 @@ const integrationAccountPartner = new azure_nextgen.logic.latest.IntegrationAcco
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountPartner</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[PartnerContentArgs]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">partner_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountPartner</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[PartnerContentArgs]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">partner_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PartnerType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -376,7 +376,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 <a href="#partnertype_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Partner<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The partner type.{{% /md %}}</dd>
 
@@ -463,7 +463,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 <a href="#partnertype_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The partner type.{{% /md %}}</dd>
 
@@ -550,7 +550,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 <a href="#partnertype_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Partner<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The partner type.{{% /md %}}</dd>
 
@@ -637,7 +637,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 <a href="#partner_type_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Partner<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The partner type.{{% /md %}}</dd>
 

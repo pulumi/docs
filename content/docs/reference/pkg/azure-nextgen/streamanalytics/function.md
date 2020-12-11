@@ -1,7 +1,7 @@
 
 ---
 title: "Function"
-title_tag: "Resource Function | Module streamanalytics | Package Azure NextGen"
+title_tag: "azure-nextgen.streamanalytics.Function"
 meta_desc: "Explore the Function resource of the streamanalytics module, including examples, input properties, output properties, lookup functions, and supporting types. A function object, containing all information associated with the named function. All functions are contained under a streaming job."
 ---
 
@@ -2661,7 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbinding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2698,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2735,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding | Java<wbr>Script<wbr>Function<wbr>Binding</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2772,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args, Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args]</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2830,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2877,7 +2877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2924,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response | Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2971,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args, Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 

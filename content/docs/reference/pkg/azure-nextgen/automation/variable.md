@@ -1,7 +1,7 @@
 
 ---
 title: "Variable"
-title_tag: "Resource Variable | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.Variable"
 meta_desc: "Explore the Variable resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the variable."
 ---
 

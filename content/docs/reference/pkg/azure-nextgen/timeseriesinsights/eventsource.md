@@ -1,7 +1,7 @@
 
 ---
 title: "EventSource"
-title_tag: "Resource EventSource | Module timeseriesinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.timeseriesinsights.EventSource"
 meta_desc: "Explore the EventSource resource of the timeseriesinsights module, including examples, input properties, output properties, lookup functions, and supporting types. An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source"
 ---
 
@@ -120,7 +120,7 @@ const eventSource = new azure_nextgen.timeseriesinsights.latest.EventSource("eve
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_source_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_timestamp</span><span class="p">:</span> <span class="nx">Optional[LocalTimestampArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_source_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, EventSourceKind]]</span> = None<span class="p">, </span><span class="nx">local_timestamp</span><span class="p">:</span> <span class="nx">Optional[LocalTimestampArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -318,7 +318,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Event<wbr>Source<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
 
@@ -395,7 +395,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
 
@@ -472,7 +472,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Event<wbr>Source<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Event<wbr>Source<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
 
@@ -785,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Local<wbr>Timestamp<wbr>Format</span>
     </dt>
     <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Local<wbr>Timestamp<wbr>Format</span>
     </dt>
     <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
 
@@ -866,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Local<wbr>Timestamp<wbr>Format</span>
     </dt>
     <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
 

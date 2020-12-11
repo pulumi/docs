@@ -1,7 +1,7 @@
 
 ---
 title: "HyperVSite"
-title_tag: "Resource HyperVSite | Module offazure | Package Azure NextGen"
+title_tag: "azure-nextgen.offazure.HyperVSite"
 meta_desc: "Explore the HyperVSite resource of the offazure module, including examples, input properties, output properties, lookup functions, and supporting types. Site REST Resource."
 ---
 

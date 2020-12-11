@@ -1,7 +1,7 @@
 
 ---
 title: "SqlPoolSensitivityLabel"
-title_tag: "Resource SqlPoolSensitivityLabel | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.SqlPoolSensitivityLabel"
 meta_desc: "Explore the SqlPoolSensitivityLabel resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. A sensitivity label."
 ---
 

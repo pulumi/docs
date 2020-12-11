@@ -1,7 +1,7 @@
 
 ---
 title: "ContainerGroup"
-title_tag: "Resource ContainerGroup | Module containerinstance | Package Azure NextGen"
+title_tag: "azure-nextgen.containerinstance.ContainerGroup"
 meta_desc: "Explore the ContainerGroup resource of the containerinstance module, including examples, input properties, output properties, lookup functions, and supporting types. A container group."
 ---
 
@@ -240,7 +240,7 @@ func main() {
 				SearchDomains: pulumi.String("cluster.local svc.cluster.local"),
 			},
 			Identity: &containerinstance.ContainerGroupIdentityArgs{
-				Type: pulumi.String("SystemAssigned, UserAssigned"),
+				Type: "SystemAssigned, UserAssigned",
 				UserAssignedIdentities: pulumi.MapMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": nil,
 				},
@@ -520,7 +520,7 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerArgs]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">encryption_properties</span><span class="p">:</span> <span class="nx">Optional[EncryptionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[ImageRegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[InitContainerDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[IpAddressArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerArgs]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">encryption_properties</span><span class="p">:</span> <span class="nx">Optional[EncryptionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[ImageRegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[InitContainerDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[IpAddressArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystemTypes]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, ContainerGroupRestartPolicy]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Union[str, ContainerGroupSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -718,7 +718,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The operating system type required by the containers in the container group.{{% /md %}}</dd>
 
@@ -828,7 +828,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#restartpolicy_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Restart<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Restart policy for all containers within the container group. 
 - `Always` Always restart
@@ -842,7 +842,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The SKU for a container group.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system type required by the containers in the container group.{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#restartpolicy_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Restart policy for all containers within the container group. 
 - `Always` Always restart
@@ -1023,7 +1023,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU for a container group.{{% /md %}}</dd>
 
@@ -1080,7 +1080,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The operating system type required by the containers in the container group.{{% /md %}}</dd>
 
@@ -1190,7 +1190,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Group<wbr>Restart<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Restart policy for all containers within the container group. 
 - `Always` Always restart
@@ -1204,7 +1204,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Group<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The SKU for a container group.{{% /md %}}</dd>
 
@@ -1261,7 +1261,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The operating system type required by the containers in the container group.{{% /md %}}</dd>
 
@@ -1371,7 +1371,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Group<wbr>Restart<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Restart policy for all containers within the container group. 
 - `Always` Always restart
@@ -1385,7 +1385,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Group<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The SKU for a container group.{{% /md %}}</dd>
 
@@ -2794,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
 
@@ -2821,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
 
@@ -2848,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
 
@@ -2875,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
 
@@ -3528,7 +3528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Scheme</span>
     </dt>
     <dd>{{% md %}}The scheme.{{% /md %}}</dd>
 
@@ -3565,7 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheme.{{% /md %}}</dd>
 
@@ -3602,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Scheme</span>
     </dt>
     <dd>{{% md %}}The scheme.{{% /md %}}</dd>
 
@@ -3639,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Scheme</span>
     </dt>
     <dd>{{% md %}}The scheme.{{% /md %}}</dd>
 
@@ -3836,7 +3836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Network<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 
@@ -3863,7 +3863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 
@@ -3890,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Network<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 
@@ -3917,7 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Network<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 
@@ -7140,7 +7140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Gpu<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The SKU of the GPU resource.{{% /md %}}</dd>
 
@@ -7167,7 +7167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the GPU resource.{{% /md %}}</dd>
 
@@ -7194,7 +7194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Gpu<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The SKU of the GPU resource.{{% /md %}}</dd>
 
@@ -7221,7 +7221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Gpu<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The SKU of the GPU resource.{{% /md %}}</dd>
 
@@ -8413,7 +8413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Ip<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies if the IP is exposed to the public internet or private VNET.{{% /md %}}</dd>
 
@@ -8460,7 +8460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the IP is exposed to the public internet or private VNET.{{% /md %}}</dd>
 
@@ -8507,7 +8507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Group<wbr>Ip<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies if the IP is exposed to the public internet or private VNET.{{% /md %}}</dd>
 
@@ -8554,7 +8554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Group<wbr>Ip<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies if the IP is exposed to the public internet or private VNET.{{% /md %}}</dd>
 
@@ -8861,7 +8861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Log<wbr>Analytics<wbr>Log<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The log type to be used.{{% /md %}}</dd>
 
@@ -8918,7 +8918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log type to be used.{{% /md %}}</dd>
 
@@ -8975,7 +8975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Log<wbr>Analytics<wbr>Log<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The log type to be used.{{% /md %}}</dd>
 
@@ -9032,7 +9032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Log<wbr>Analytics<wbr>Log<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The log type to be used.{{% /md %}}</dd>
 
@@ -9329,7 +9329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Network<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 
@@ -9356,7 +9356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 
@@ -9383,7 +9383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Group<wbr>Network<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 
@@ -9410,7 +9410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Group<wbr>Network<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 

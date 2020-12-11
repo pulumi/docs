@@ -1,7 +1,7 @@
 
 ---
 title: "SyncAgent"
-title_tag: "Resource SyncAgent | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.SyncAgent"
 meta_desc: "Explore the SyncAgent resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL Database sync agent."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncAgent = new AzureNextGen.Sql.V20150501Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20150501Preview.SyncAgentArgs
+        var syncAgent = new AzureNextGen.Sql.V20200801Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20200801Preview.SyncAgentArgs
         {
             ResourceGroupName = "syncagentcrud-65440",
             ServerName = "syncagentcrud-8475",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20150501preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
+sync_agent = azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent",
     resource_group_name="syncagentcrud-65440",
     server_name="syncagentcrud-8475",
     sync_agent_name="syncagentcrud-3187",
@@ -93,7 +93,7 @@ sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncAgent = new azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent", {
+const syncAgent = new azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",
     serverName: "syncagentcrud-8475",
     syncAgentName: "syncagentcrud-3187",
@@ -114,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncAgent = new AzureNextGen.Sql.V20150501Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20150501Preview.SyncAgentArgs
+        var syncAgent = new AzureNextGen.Sql.V20200801Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20200801Preview.SyncAgentArgs
         {
             ResourceGroupName = "syncagentcrud-65440",
             ServerName = "syncagentcrud-8475",
@@ -135,7 +135,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20150501preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -164,7 +164,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
+sync_agent = azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent",
     resource_group_name="syncagentcrud-65440",
     server_name="syncagentcrud-8475",
     sync_agent_name="syncagentcrud-3187",
@@ -180,7 +180,7 @@ sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncAgent = new azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent", {
+const syncAgent = new azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",
     serverName: "syncagentcrud-8475",
     syncAgentName: "syncagentcrud-3187",

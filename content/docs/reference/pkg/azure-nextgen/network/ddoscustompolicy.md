@@ -1,7 +1,7 @@
 
 ---
 title: "DdosCustomPolicy"
-title_tag: "Resource DdosCustomPolicy | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.DdosCustomPolicy"
 meta_desc: "Explore the DdosCustomPolicy resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. A DDoS custom policy in a resource group."
 ---
 
@@ -915,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
 
@@ -945,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggersensitivityoverride_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Sensitivity<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</span>
     </dt>
     <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
 
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
 
@@ -992,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggersensitivityoverride_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Sensitivity<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
 
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggersensitivityoverride_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Sensitivity<wbr>Override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</span>
     </dt>
     <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
 
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
 
@@ -1086,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_sensitivity_override_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>sensitivity_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</span>
     </dt>
     <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
 

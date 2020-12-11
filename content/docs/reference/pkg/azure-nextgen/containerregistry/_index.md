@@ -14,6 +14,7 @@ Explore the resources and functions of the containerregistry module in the Azure
     <li><a href="agentpool" title="AgentPool"><span class="symbol resource"></span>AgentPool</a></li>
     <li><a href="buildstep" title="BuildStep"><span class="symbol resource"></span>BuildStep</a></li>
     <li><a href="buildtask" title="BuildTask"><span class="symbol resource"></span>BuildTask</a></li>
+    <li><a href="connectedregistry" title="ConnectedRegistry"><span class="symbol resource"></span>ConnectedRegistry</a></li>
     <li><a href="exportpipeline" title="ExportPipeline"><span class="symbol resource"></span>ExportPipeline</a></li>
     <li><a href="importpipeline" title="ImportPipeline"><span class="symbol resource"></span>ImportPipeline</a></li>
     <li><a href="pipelinerun" title="PipelineRun"><span class="symbol resource"></span>PipelineRun</a></li>
@@ -33,6 +34,7 @@ Explore the resources and functions of the containerregistry module in the Azure
     <li><a href="getbuildloglink" title="GetBuildLogLink"><span class="symbol function"></span>GetBuildLogLink</a></li>
     <li><a href="getbuildstep" title="GetBuildStep"><span class="symbol function"></span>GetBuildStep</a></li>
     <li><a href="getbuildtask" title="GetBuildTask"><span class="symbol function"></span>GetBuildTask</a></li>
+    <li><a href="getconnectedregistry" title="GetConnectedRegistry"><span class="symbol function"></span>GetConnectedRegistry</a></li>
     <li><a href="getexportpipeline" title="GetExportPipeline"><span class="symbol function"></span>GetExportPipeline</a></li>
     <li><a href="getimportpipeline" title="GetImportPipeline"><span class="symbol function"></span>GetImportPipeline</a></li>
     <li><a href="getpipelinerun" title="GetPipelineRun"><span class="symbol function"></span>GetPipelineRun</a></li>
@@ -65,7 +67,7 @@ Explore the resources and functions of the containerregistry module in the Azure
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.8</dd>
+	<dd>0.3.0</dd>
 </dl>
 
 

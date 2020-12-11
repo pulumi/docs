@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedCluster"
-title_tag: "Resource ManagedCluster | Module containerservice | Package Azure NextGen"
+title_tag: "azure-nextgen.containerservice.ManagedCluster"
 meta_desc: "Explore the ManagedCluster resource of the containerservice module, including examples, input properties, output properties, lookup functions, and supporting types. Managed cluster."
 ---
 
@@ -442,7 +442,98 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AadProfile: &containerservice.ManagedClusterAADProfileArgs{
+				EnableAzureRBAC: pulumi.Bool(true),
+				Managed:         pulumi.Bool(true),
+			},
+			AddonProfiles: nil,
+			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					AvailabilityZones: pulumi.StringArray{
+						pulumi.String("1"),
+						pulumi.String("2"),
+						pulumi.String("3"),
+					},
+					Count:              pulumi.Int(3),
+					EnableNodePublicIP: pulumi.Bool(true),
+					Mode:               pulumi.String("System"),
+					Name:               pulumi.String("nodepool1"),
+					OsType:             pulumi.String("Linux"),
+					Type:               pulumi.String("VirtualMachineScaleSets"),
+					VmSize:             pulumi.String("Standard_DS1_v2"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(true),
+			EnableRBAC:              pulumi.Bool(true),
+			KubernetesVersion:       pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -755,7 +846,7 @@ func main() {
 			EnablePodSecurityPolicy: pulumi.Bool(true),
 			EnableRBAC:              pulumi.Bool(true),
 			Identity: &containerservice.ManagedClusterIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
+				Type: "UserAssigned",
 				UserAssignedIdentities: pulumi.MapMap{
 					"/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
 				},
@@ -1126,7 +1217,7 @@ func main() {
 			EnablePodSecurityPolicy: pulumi.Bool(true),
 			EnableRBAC:              pulumi.Bool(true),
 			Identity: &containerservice.ManagedClusterIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
+				Type: "UserAssigned",
 				UserAssignedIdentities: pulumi.MapMap{
 					"/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
 				},
@@ -3603,7 +3694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancersku_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Load<wbr>Balancer<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
 
@@ -3613,7 +3704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Network<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3623,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkplugin_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Network<wbr>Plugin</span>
     </dt>
     <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3633,7 +3724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkpolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Network<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3643,7 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundtype_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outbound<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
 
@@ -3710,7 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancersku_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
 
@@ -3720,7 +3811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3730,7 +3821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkplugin_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3740,7 +3831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkpolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3750,7 +3841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundtype_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
 
@@ -3817,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancersku_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Load<wbr>Balancer<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
 
@@ -3827,7 +3918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Network<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3837,7 +3928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkplugin_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Network<wbr>Plugin</span>
     </dt>
     <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3847,7 +3938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Network<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3857,7 +3948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundtype_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Outbound<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
 
@@ -3924,7 +4015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_sku_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Load<wbr>Balancer<wbr>Sku</span>
     </dt>
     <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
 
@@ -3934,7 +4025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Network<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3944,7 +4035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_plugin_python" style="color: inherit; text-decoration: inherit;">network_<wbr>plugin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Network<wbr>Plugin</span>
     </dt>
     <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3954,7 +4045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Network<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
 
@@ -3964,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_type_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Outbound<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
 
@@ -7376,7 +7467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Agent<wbr>Pool<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
 
@@ -7426,7 +7517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSDisk<wbr>Type</span>
     </dt>
     <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
 
@@ -7436,7 +7527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -7466,7 +7557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetevictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Scale<wbr>Set<wbr>Eviction<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
 
@@ -7476,7 +7567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetpriority_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Scale<wbr>Set<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
 
@@ -7506,7 +7597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Agent<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
 
@@ -7526,7 +7617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -7653,7 +7744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
 
@@ -7703,7 +7794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisktype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
 
@@ -7713,7 +7804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -7743,7 +7834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetevictionpolicy_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
 
@@ -7753,7 +7844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetpriority_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
 
@@ -7783,7 +7874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
 
@@ -7803,7 +7894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -7930,7 +8021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Agent<wbr>Pool<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
 
@@ -7980,7 +8071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisktype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>OSDisk<wbr>Type</span>
     </dt>
     <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
 
@@ -7990,7 +8081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -8020,7 +8111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetevictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Scale<wbr>Set<wbr>Eviction<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
 
@@ -8030,7 +8121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetpriority_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Set<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Scale<wbr>Set<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
 
@@ -8060,7 +8151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Agent<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
 
@@ -8080,7 +8171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -8207,7 +8298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Agent<wbr>Pool<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
 
@@ -8257,7 +8348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">OSDisk<wbr>Type</span>
     </dt>
     <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
 
@@ -8267,7 +8358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">OSType</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
 
@@ -8297,7 +8388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_set_eviction_policy_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>set_<wbr>eviction_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Scale<wbr>Set<wbr>Eviction<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
 
@@ -8307,7 +8398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_set_priority_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>set_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Scale<wbr>Set<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
 
@@ -8337,7 +8428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Agent<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
 
@@ -8357,7 +8448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Service<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -9634,7 +9725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradechannel_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Channel</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Upgrade<wbr>Channel</span>
     </dt>
     <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
 
@@ -9651,7 +9742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradechannel_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Channel</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
 
@@ -9668,7 +9759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradechannel_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Channel</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Upgrade<wbr>Channel</span>
     </dt>
     <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
 
@@ -9685,7 +9776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_channel_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>channel</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Upgrade<wbr>Channel</span>
     </dt>
     <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
 
@@ -9792,7 +9883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
 
@@ -9819,7 +9910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
 
@@ -9846,7 +9937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
 
@@ -9873,7 +9964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
 
@@ -12384,7 +12475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expander_csharp" style="color: inherit; text-decoration: inherit;">Expander</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Expander</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12551,7 +12642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expander_go" style="color: inherit; text-decoration: inherit;">Expander</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12718,7 +12809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expander_nodejs" style="color: inherit; text-decoration: inherit;">expander</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Expander</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12885,7 +12976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expander_python" style="color: inherit; text-decoration: inherit;">expander</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Expander</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14050,7 +14141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Managed<wbr>Cluster<wbr>SKUName</span>
     </dt>
     <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14060,7 +14151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Managed<wbr>Cluster<wbr>SKUTier</span>
     </dt>
     <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14077,7 +14168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14087,7 +14178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14104,7 +14195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Cluster<wbr>SKUName</span>
     </dt>
     <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14114,7 +14205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Cluster<wbr>SKUTier</span>
     </dt>
     <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14131,7 +14222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Cluster<wbr>SKUName</span>
     </dt>
     <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14141,7 +14232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Cluster<wbr>SKUTier</span>
     </dt>
     <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
 
@@ -14546,7 +14637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
 
@@ -14583,7 +14674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
 
@@ -14620,7 +14711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
 
@@ -14657,7 +14748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
 

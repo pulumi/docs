@@ -1,7 +1,7 @@
 
 ---
 title: "OnPremiseIotSensor"
-title_tag: "Resource OnPremiseIotSensor | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.OnPremiseIotSensor"
 meta_desc: "Explore the OnPremiseIotSensor resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. On-premise IoT sensor"
 ---
 

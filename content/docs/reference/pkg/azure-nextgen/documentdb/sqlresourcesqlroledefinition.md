@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlRoleDefinition"
-title_tag: "Resource SqlResourceSqlRoleDefinition | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.SqlResourceSqlRoleDefinition"
 meta_desc: "Explore the SqlResourceSqlRoleDefinition resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB SQL Role Definition."
 ---
 
@@ -90,7 +90,7 @@ func main() {
 			ResourceGroupName: pulumi.String("myResourceGroupName"),
 			RoleDefinitionId:  pulumi.String("myRoleDefinitionId"),
 			RoleName:          pulumi.String("myRoleName"),
-			Type:              pulumi.String("CustomRole"),
+			Type:              "CustomRole",
 		})
 		if err != nil {
 			return err
@@ -172,7 +172,7 @@ const sqlResourceSqlRoleDefinition = new azure_nextgen.documentdb.v20200601previ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlResourceSqlRoleDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assignable_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlResourceSqlRoleDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assignable_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[RoleDefinitionType]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -410,7 +410,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Role<wbr>Definition<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Role Definition was built-in or user created.{{% /md %}}</dd>
 
@@ -487,7 +487,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Role Definition was built-in or user created.{{% /md %}}</dd>
 
@@ -564,7 +564,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Role<wbr>Definition<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Role Definition was built-in or user created.{{% /md %}}</dd>
 
@@ -641,7 +641,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Role<wbr>Definition<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Role Definition was built-in or user created.{{% /md %}}</dd>
 

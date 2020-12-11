@@ -1,7 +1,7 @@
 
 ---
 title: "DeploymentScript"
-title_tag: "Resource DeploymentScript | Module resources | Package Azure NextGen"
+title_tag: "azure-nextgen.resources.DeploymentScript"
 meta_desc: "Explore the DeploymentScript resource of the resources module, including examples, input properties, output properties, lookup functions, and supporting types. Deployment script object."
 ---
 
@@ -51,7 +51,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+			Identity: &resources.ManagedServiceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+				},
+			},
+			Kind:              pulumi.String("AzurePowerShell"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("script-rg"),
+			ScriptName:        pulumi.String("MyDeploymentScript"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,7 +95,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
     identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": azure_nextgen.resources.v20191001preview.UserAssignedIdentityArgs(),
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
         },
     ),
     kind="AzurePowerShell",
@@ -133,7 +164,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+			Identity: &resources.ManagedServiceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+				},
+			},
+			Kind:              pulumi.String("AzurePowerShell"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("script-rg"),
+			ScriptName:        pulumi.String("MyDeploymentScript"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -146,7 +208,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
     identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": azure_nextgen.resources.v20191001preview.UserAssignedIdentityArgs(),
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
         },
     ),
     kind="AzurePowerShell",
@@ -215,7 +277,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+			Identity: &resources.ManagedServiceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+				},
+			},
+			Kind:              pulumi.String("AzurePowerShell"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("script-rg"),
+			ScriptName:        pulumi.String("MyDeploymentScript"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -228,7 +321,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
     identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": azure_nextgen.resources.v20191001preview.UserAssignedIdentityArgs(),
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
         },
     ),
     kind="AzurePowerShell",
@@ -297,7 +390,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+			Identity: &resources.ManagedServiceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
+				},
+			},
+			Kind:              pulumi.String("AzurePowerShell"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("script-rg"),
+			ScriptName:        pulumi.String("MyDeploymentScript"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -310,7 +434,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
     identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": azure_nextgen.resources.v20191001preview.UserAssignedIdentityArgs(),
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
         },
     ),
     kind="AzurePowerShell",
@@ -357,7 +481,7 @@ const deploymentScript = new azure_nextgen.resources.v20191001preview.Deployment
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentScript</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentScript</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ScriptType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -545,7 +669,7 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Script<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the script.{{% /md %}}</dd>
 
@@ -612,7 +736,7 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the script.{{% /md %}}</dd>
 
@@ -679,7 +803,7 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Script<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the script.{{% /md %}}</dd>
 
@@ -746,7 +870,7 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Script<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the script.{{% /md %}}</dd>
 
@@ -1032,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd>
 
@@ -1042,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 
@@ -1069,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd>
 
@@ -1079,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 
@@ -1106,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd>
 
@@ -1116,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 
@@ -1143,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Service<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd>
 
@@ -1153,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 
@@ -1602,125 +1726,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="userassignedidentity">User<wbr>Assigned<wbr>Identity</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientid_csharp">
-<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="principalid_csharp">
-<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this identity.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientid_go">
-<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="principalid_go">
-<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this identity.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientid_nodejs">
-<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="principalid_nodejs">
-<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this identity.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="client_id_python">
-<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="principal_id_python">
-<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this identity.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
 
 
@@ -1732,8 +1737,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
 </span> 
@@ -1742,8 +1747,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
 </span> 
@@ -1759,8 +1764,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
 </span> 
@@ -1769,8 +1774,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
 </span> 
@@ -1786,8 +1791,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span> 
@@ -1796,8 +1801,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span> 
@@ -1813,8 +1818,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
@@ -1823,8 +1828,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span> 

@@ -204,6 +204,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
@@ -224,6 +234,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="lastconnectivitytime_csharp">
+<a href="#lastconnectivitytime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -234,6 +254,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managedidentitycertificateexpirationtime_csharp">
+<a href="#managedidentitycertificateexpirationtime_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Certificate<wbr>Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -241,6 +271,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_csharp">
+<a href="#offering_csharp" style="color: inherit; text-decoration: inherit;">Offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="totalcorecount_csharp">
+<a href="#totalcorecount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -261,6 +311,36 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="connectivitystatus_csharp">
+<a href="#connectivitystatus_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="distribution_csharp">
+<a href="#distribution_csharp" style="color: inherit; text-decoration: inherit;">Distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="infrastructure_csharp">
+<a href="#infrastructure_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -321,6 +401,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
@@ -341,6 +431,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="lastconnectivitytime_go">
+<a href="#lastconnectivitytime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -351,6 +451,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managedidentitycertificateexpirationtime_go">
+<a href="#managedidentitycertificateexpirationtime_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Certificate<wbr>Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -358,6 +468,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_go">
+<a href="#offering_go" style="color: inherit; text-decoration: inherit;">Offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="totalcorecount_go">
+<a href="#totalcorecount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -378,6 +508,36 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="connectivitystatus_go">
+<a href="#connectivitystatus_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="distribution_go">
+<a href="#distribution_go" style="color: inherit; text-decoration: inherit;">Distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="infrastructure_go">
+<a href="#infrastructure_go" style="color: inherit; text-decoration: inherit;">Infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -438,6 +598,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
@@ -458,6 +628,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="lastconnectivitytime_nodejs">
+<a href="#lastconnectivitytime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -468,6 +648,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managedidentitycertificateexpirationtime_nodejs">
+<a href="#managedidentitycertificateexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Certificate<wbr>Expiration<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -475,6 +665,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_nodejs">
+<a href="#offering_nodejs" style="color: inherit; text-decoration: inherit;">offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="totalcorecount_nodejs">
+<a href="#totalcorecount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -495,6 +705,36 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="connectivitystatus_nodejs">
+<a href="#connectivitystatus_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="distribution_nodejs">
+<a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="infrastructure_nodejs">
+<a href="#infrastructure_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -555,6 +795,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
@@ -575,6 +825,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="last_connectivity_time_python">
+<a href="#last_connectivity_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>connectivity_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time representing the last instance when heart beat was received from the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -585,6 +845,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managed_identity_certificate_expiration_time_python">
+<a href="#managed_identity_certificate_expiration_time_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity_<wbr>certificate_<wbr>expiration_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time of the managed identity certificate{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -592,6 +862,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="offering_python">
+<a href="#offering_python" style="color: inherit; text-decoration: inherit;">offering</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="total_core_count_python">
+<a href="#total_core_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>core_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores present in the connected cluster resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -612,6 +902,36 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="connectivity_status_python">
+<a href="#connectivity_status_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="distribution_python">
+<a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes distribution running on this connected cluster.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="infrastructure_python">
+<a href="#infrastructure_python" style="color: inherit; text-decoration: inherit;">infrastructure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

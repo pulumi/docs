@@ -1,7 +1,7 @@
 
 ---
 title: "ServerAdministrator"
-title_tag: "Resource ServerAdministrator | Module dbformysql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformysql.ServerAdministrator"
 meta_desc: "Explore the ServerAdministrator resource of the dbformysql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a and external administrator to be created."
 ---
 
@@ -124,7 +124,7 @@ const serverAdministrator = new azure_nextgen.dbformysql.latest.ServerAdministra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerAdministrator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerAdministrator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AdministratorType]]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,7 +302,7 @@ The ServerAdministrator resource accepts the following [input]({{< relref "/docs
 <a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Administrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of administrator.{{% /md %}}</dd>
 
@@ -369,7 +369,7 @@ The ServerAdministrator resource accepts the following [input]({{< relref "/docs
 <a href="#administratortype_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of administrator.{{% /md %}}</dd>
 
@@ -436,7 +436,7 @@ The ServerAdministrator resource accepts the following [input]({{< relref "/docs
 <a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Administrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of administrator.{{% /md %}}</dd>
 
@@ -503,7 +503,7 @@ The ServerAdministrator resource accepts the following [input]({{< relref "/docs
 <a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Administrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of administrator.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Module storsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.storsimple.Volume"
 meta_desc: "Explore the Volume resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. The volume."
 ---
 
@@ -69,13 +69,13 @@ func main() {
 			},
 			DeviceName:          pulumi.String("Device05ForSDKTest"),
 			ManagerName:         pulumi.String("ManagerForSDKTest1"),
-			MonitoringStatus:    pulumi.String("Enabled"),
+			MonitoringStatus:    "Enabled",
 			ResourceGroupName:   pulumi.String("ResourceGroupForSDKTest"),
 			SizeInBytes:         pulumi.Int(5368709120),
 			VolumeContainerName: pulumi.String("VolumeContainerForSDKTest"),
 			VolumeName:          pulumi.String("Volume1ForSDKTest"),
-			VolumeStatus:        pulumi.String("Offline"),
-			VolumeType:          pulumi.String("Tiered"),
+			VolumeStatus:        "Offline",
+			VolumeType:          "Tiered",
 		})
 		if err != nil {
 			return err
@@ -145,7 +145,7 @@ const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control_record_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_in_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control_record_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Kind]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[MonitoringStatus]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_in_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_status</span><span class="p">:</span> <span class="nx">Optional[VolumeStatus]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[VolumeType]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -353,7 +353,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
 
@@ -403,7 +403,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumestatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
 
@@ -413,7 +413,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
 
@@ -423,7 +423,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 
@@ -470,7 +470,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
 
@@ -520,7 +520,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumestatus_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
 
@@ -540,7 +540,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 
@@ -587,7 +587,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
 
@@ -637,7 +637,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumestatus_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Volume<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
 
@@ -647,7 +647,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Volume<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
 
@@ -657,7 +657,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volume_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Volume<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
 
@@ -764,7 +764,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Volume<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
 
@@ -774,7 +774,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Kind</span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 

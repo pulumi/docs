@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationFabric"
-title_tag: "Resource ReplicationFabric | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ReplicationFabric"
 meta_desc: "Explore the ReplicationFabric resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Fabric definition."
 ---
 
@@ -2043,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabriccreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabriccreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd>
 
@@ -2060,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd>
 
@@ -2077,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Fabric<wbr>Creation<wbr>Input | In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input | VMware<wbr>V2Fabric<wbr>Creation<wbr>Input</span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd>
 
@@ -2094,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args, VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args]</span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd>
 
@@ -2132,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervsitedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwaredetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmmdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd>
 
@@ -2219,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd>
 
@@ -2306,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response | Hyper<wbr>VSite<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response | VMware<wbr>Details<wbr>Response | VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response | Vmm<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd>
 
@@ -2393,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, VMware<wbr>Details<wbr>Response<wbr>Args, VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, Vmm<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd>
 

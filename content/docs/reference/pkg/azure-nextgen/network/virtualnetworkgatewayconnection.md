@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkGatewayConnection"
-title_tag: "Resource VirtualNetworkGatewayConnection | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualNetworkGatewayConnection"
 meta_desc: "Explore the VirtualNetworkGatewayConnection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. A common class for general resource information."
 ---
 
@@ -322,7 +322,7 @@ const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.Virtual
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">local_network_gateway2</span><span class="p">:</span> <span class="nx">Optional[LocalNetworkGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrafficSelectorPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">use_local_azure_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway1</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway2</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkGatewayConnectionMode]]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkGatewayConnectionProtocol]]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkGatewayConnectionType]]</span> = None<span class="p">, </span><span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">local_network_gateway2</span><span class="p">:</span> <span class="nx">Optional[LocalNetworkGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrafficSelectorPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">use_local_azure_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway1</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway2</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -500,7 +500,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
 
@@ -550,7 +550,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectionmode_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
 
@@ -560,7 +560,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectionprotocol_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
 
@@ -727,7 +727,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
 
@@ -777,7 +777,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectionmode_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
 
@@ -787,7 +787,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectionprotocol_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
 
@@ -954,7 +954,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectiontype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
 
@@ -1004,7 +1004,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectionmode_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
 
@@ -1014,7 +1014,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
 
@@ -1181,7 +1181,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connection_mode_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
 
@@ -1241,7 +1241,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
 
@@ -2433,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -2460,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -2487,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -2514,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Extended<wbr>Location<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
@@ -2979,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dh<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -2989,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ike<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -2999,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ike<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -3009,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ipsec<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3019,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ipsec<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3029,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Pfs<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 
@@ -3066,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -3076,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -3086,7 +3086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -3096,7 +3096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3106,7 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3116,7 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 
@@ -3153,7 +3153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Dh<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -3163,7 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ike<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -3173,7 +3173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ike<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -3183,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ipsec<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3193,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ipsec<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3203,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Pfs<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 
@@ -3240,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Dh<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
 
@@ -3250,7 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ike<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -3260,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ike<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
 
@@ -3270,7 +3270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ipsec<wbr>Encryption</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3280,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ipsec<wbr>Integrity</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
 
@@ -3290,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Pfs<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
 
@@ -5568,7 +5568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -5648,7 +5648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpngatewaygeneration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Gateway<wbr>Generation</span>
     </dt>
     <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
 
@@ -5658,7 +5658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpntype_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -5755,7 +5755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -5835,7 +5835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpngatewaygeneration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
 
@@ -5845,7 +5845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpntype_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -5942,7 +5942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -6022,7 +6022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpngatewaygeneration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Vpn<wbr>Gateway<wbr>Generation</span>
     </dt>
     <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
 
@@ -6032,7 +6032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpntype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Vpn<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -6129,7 +6129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Network<wbr>Gateway<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -6209,7 +6209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_gateway_generation_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Vpn<wbr>Gateway<wbr>Generation</span>
     </dt>
     <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
 
@@ -6219,7 +6219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Vpn<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
 
@@ -6267,7 +6267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
 
@@ -6324,7 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
 
@@ -6381,7 +6381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
 
@@ -6438,7 +6438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
 
@@ -7844,7 +7844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
 
@@ -7854,7 +7854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
 
@@ -7871,7 +7871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
 
@@ -7881,7 +7881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
 
@@ -7898,7 +7898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
 
@@ -7908,7 +7908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
 
@@ -7925,7 +7925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
 
@@ -7935,7 +7935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
 
@@ -8202,7 +8202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Client<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
 
@@ -8319,7 +8319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
 
@@ -8436,7 +8436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Vpn<wbr>Client<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
 
@@ -8553,7 +8553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Vpn<wbr>Client<wbr>Protocol]]</span>
     </dt>
     <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
 

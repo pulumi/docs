@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module batch | Package Azure NextGen"
+title_tag: "azure-nextgen.batch.Certificate"
 meta_desc: "Explore the Certificate resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Contains information about a certificate."
 ---
 
@@ -33,7 +33,7 @@ class MyStack : Stack
             CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
             Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
             Format = "Pfx",
-            Password = "KG0UY40e...",
+            Password = "<password>",
             ResourceGroupName = "default-azurebatch-japaneast",
             Thumbprint = "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
             ThumbprintAlgorithm = "sha1",
@@ -62,8 +62,8 @@ func main() {
 			AccountName:         pulumi.String("sampleacct"),
 			CertificateName:     pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
 			Data:                pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
-			Format:              pulumi.String("Pfx"),
-			Password:            pulumi.String("KG0UY40e..."),
+			Format:              "Pfx",
+			Password:            pulumi.String("<password>"),
 			ResourceGroupName:   pulumi.String("default-azurebatch-japaneast"),
 			Thumbprint:          pulumi.String("0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
 			ThumbprintAlgorithm: pulumi.String("sha1"),
@@ -90,7 +90,7 @@ certificate = azure_nextgen.batch.latest.Certificate("certificate",
     certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
     format="Pfx",
-    password="KG0UY40e...",
+    password="<password>",
     resource_group_name="default-azurebatch-japaneast",
     thumbprint="0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     thumbprint_algorithm="sha1")
@@ -110,7 +110,7 @@ const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
     certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
     format: "Pfx",
-    password: "KG0UY40e...",
+    password: "<password>",
     resourceGroupName: "default-azurebatch-japaneast",
     thumbprint: "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     thumbprintAlgorithm: "sha1",
@@ -162,7 +162,7 @@ func main() {
 			AccountName:       pulumi.String("sampleacct"),
 			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
 			Data:              pulumi.String("MIICrjCCAZagAwI..."),
-			Format:            pulumi.String("Cer"),
+			Format:            "Cer",
 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
 		})
 		if err != nil {
@@ -226,7 +226,7 @@ class MyStack : Stack
             AccountName = "sampleacct",
             CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
             Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
-            Password = "KG0UY40e...",
+            Password = "<password>",
             ResourceGroupName = "default-azurebatch-japaneast",
         });
     }
@@ -253,7 +253,7 @@ func main() {
 			AccountName:       pulumi.String("sampleacct"),
 			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
 			Data:              pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
-			Password:          pulumi.String("KG0UY40e..."),
+			Password:          pulumi.String("<password>"),
 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
 		})
 		if err != nil {
@@ -277,7 +277,7 @@ certificate = azure_nextgen.batch.latest.Certificate("certificate",
     account_name="sampleacct",
     certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
-    password="KG0UY40e...",
+    password="<password>",
     resource_group_name="default-azurebatch-japaneast")
 
 ```
@@ -294,7 +294,7 @@ const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
     accountName: "sampleacct",
     certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
-    password: "KG0UY40e...",
+    password: "<password>",
     resourceGroupName: "default-azurebatch-japaneast",
 });
 
@@ -314,7 +314,7 @@ const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbprint_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[CertificateFormat]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbprint_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -532,7 +532,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Certificate<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.{{% /md %}}</dd>
 
@@ -706,7 +706,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Certificate<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.{{% /md %}}</dd>
 
@@ -793,7 +793,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Certificate<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.{{% /md %}}</dd>
 

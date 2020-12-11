@@ -1,7 +1,7 @@
 
 ---
 title: "AssessmentMetadataInSubscription"
-title_tag: "Resource AssessmentMetadataInSubscription | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.AssessmentMetadataInSubscription"
 meta_desc: "Explore the AssessmentMetadataInSubscription resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. Security assessment metadata"
 ---
 
@@ -162,7 +162,7 @@ const assessmentMetadataInSubscription = new azure_nextgen.security.latest.Asses
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assessment_metadata_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assessment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">implementation_effort</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPartnerDataArgs]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remediation_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threats</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_impact</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assessment_metadata_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assessment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AssessmentType]]</span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Category]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">implementation_effort</span><span class="p">:</span> <span class="nx">Optional[Union[str, ImplementationEffort]]</span> = None<span class="p">, </span><span class="nx">partner_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPartnerDataArgs]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remediation_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, Severity]]</span> = None<span class="p">, </span><span class="nx">threats</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Threats]]]</span> = None<span class="p">, </span><span class="nx">user_impact</span><span class="p">:</span> <span class="nx">Optional[Union[str, UserImpact]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -350,7 +350,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#assessmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Assessment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
 
@@ -370,7 +370,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
 
@@ -380,7 +380,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Category&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -400,7 +400,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#implementationeffort_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Implementation<wbr>Effort</span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
 
@@ -440,7 +440,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#threats_csharp" style="color: inherit; text-decoration: inherit;">Threats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Threats&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -450,7 +450,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#userimpact_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>User<wbr>Impact</span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
 
@@ -477,7 +477,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#assessmenttype_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
 
@@ -497,7 +497,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
 
@@ -507,7 +507,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -527,7 +527,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#implementationeffort_go" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
 
@@ -567,7 +567,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#threats_go" style="color: inherit; text-decoration: inherit;">Threats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -577,7 +577,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#userimpact_go" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
 
@@ -604,7 +604,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#assessmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Assessment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
 
@@ -624,7 +624,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Category[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -654,7 +654,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#implementationeffort_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Effort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Implementation<wbr>Effort</span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Threats[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#userimpact_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Impact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>User<wbr>Impact</span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
 
@@ -731,7 +731,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#assessment_type_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Assessment<wbr>Type</span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
 
@@ -751,7 +751,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Severity</span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
 
@@ -761,7 +761,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Category]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -781,7 +781,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#implementation_effort_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>effort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Implementation<wbr>Effort</span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
 
@@ -821,7 +821,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Threats]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -831,7 +831,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#user_impact_python" style="color: inherit; text-decoration: inherit;">user_<wbr>impact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">User<wbr>Impact</span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
 

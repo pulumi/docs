@@ -1,7 +1,7 @@
 
 ---
 title: "MoveCollection"
-title_tag: "Resource MoveCollection | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.MoveCollection"
 meta_desc: "Explore the MoveCollection resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. Define the move collection."
 ---
 
@@ -13,124 +13,6 @@ meta_desc: "Explore the MoveCollection resource of the migrate module, including
 Define the move collection.
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### MoveCollections_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var moveCollection = new AzureNextGen.Migrate.V20191001Preview.MoveCollection("moveCollection", new AzureNextGen.Migrate.V20191001Preview.MoveCollectionArgs
-        {
-            Identity = new AzureNextGen.Migrate.V20191001Preview.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Location = "eastus2",
-            MoveCollectionName = "movecollection1",
-            Properties = new AzureNextGen.Migrate.V20191001Preview.Inputs.MoveCollectionPropertiesArgs
-            {
-                SourceRegion = "eastus",
-                TargetRegion = "westus",
-            },
-            ResourceGroupName = "rg1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/v20191001preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := migrate.NewMoveCollection(ctx, "moveCollection", &migrate.MoveCollectionArgs{
-			Identity: &migrate.IdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
-			},
-			Location:           pulumi.String("eastus2"),
-			MoveCollectionName: pulumi.String("movecollection1"),
-			Properties: &migrate.MoveCollectionPropertiesArgs{
-				SourceRegion: pulumi.String("eastus"),
-				TargetRegion: pulumi.String("westus"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-move_collection = azure_nextgen.migrate.v20191001preview.MoveCollection("moveCollection",
-    identity=azure_nextgen.migrate.v20191001preview.IdentityArgs(
-        type="SystemAssigned",
-    ),
-    location="eastus2",
-    move_collection_name="movecollection1",
-    properties=azure_nextgen.migrate.v20191001preview.MoveCollectionPropertiesArgs(
-        source_region="eastus",
-        target_region="westus",
-    ),
-    resource_group_name="rg1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const moveCollection = new azure_nextgen.migrate.v20191001preview.MoveCollection("moveCollection", {
-    identity: {
-        type: "SystemAssigned",
-    },
-    location: "eastus2",
-    moveCollectionName: "movecollection1",
-    properties: {
-        sourceRegion: "eastus",
-        targetRegion: "westus",
-    },
-    resourceGroupName: "rg1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a MoveCollection Resource {#create}
@@ -595,6 +477,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -629,6 +521,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -669,6 +571,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -703,6 +615,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -787,7 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource mover service.{{% /md %}}</dd>
 
@@ -824,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource mover service.{{% /md %}}</dd>
 
@@ -861,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource mover service.{{% /md %}}</dd>
 
@@ -898,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource mover service.{{% /md %}}</dd>
 
@@ -1200,6 +1122,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
@@ -1234,6 +1166,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1274,6 +1216,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
@@ -1311,6 +1263,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
@@ -1338,6 +1300,284 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">[]Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Sequence[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

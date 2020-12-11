@@ -1,7 +1,7 @@
 
 ---
 title: "LiveOutput"
-title_tag: "Resource LiveOutput | Module media | Package Azure NextGen"
+title_tag: "azure-nextgen.media.LiveOutput"
 meta_desc: "Explore the LiveOutput resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. The Live Output."
 ---
 

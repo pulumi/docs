@@ -1,7 +1,7 @@
 
 ---
 title: "LiveEvent"
-title_tag: "Resource LiveEvent | Module media | Package Azure NextGen"
+title_tag: "azure-nextgen.media.LiveEvent"
 meta_desc: "Explore the LiveEvent resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. The live event."
 ---
 
@@ -207,7 +207,7 @@ const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[CrossSiteAccessPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[LiveEventEncodingArgs]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[LiveEventInputArgs]</span> = None<span class="p">, </span><span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[LiveEventPreviewArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transcriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[LiveEventTranscriptionArgs]]</span> = None<span class="p">, </span><span class="nx">use_static_hostname</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[CrossSiteAccessPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[LiveEventEncodingArgs]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[LiveEventInputArgs]</span> = None<span class="p">, </span><span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[LiveEventPreviewArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, StreamOptionsFlag]]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transcriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[LiveEventTranscriptionArgs]]</span> = None<span class="p">, </span><span class="nx">use_static_hostname</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -495,7 +495,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#streamoptions_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stream<wbr>Options<wbr>Flag&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
@@ -652,7 +652,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#streamoptions_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#streamoptions_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Stream<wbr>Options<wbr>Flag[]</span>
     </dt>
     <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
@@ -966,7 +966,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#stream_options_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Stream<wbr>Options<wbr>Flag]]</span>
     </dt>
     <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
@@ -2066,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encodingtype_csharp" style="color: inherit; text-decoration: inherit;">Encoding<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Live<wbr>Event<wbr>Encoding<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
 
@@ -2096,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
@@ -2113,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encodingtype_go" style="color: inherit; text-decoration: inherit;">Encoding<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
 
@@ -2143,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
@@ -2160,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encodingtype_nodejs" style="color: inherit; text-decoration: inherit;">encoding<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Live<wbr>Event<wbr>Encoding<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
 
@@ -2190,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Stretch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
@@ -2207,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_type_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Live<wbr>Event<wbr>Encoding<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
 
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Stretch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
@@ -2702,7 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Live<wbr>Event<wbr>Input<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
@@ -2759,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingprotocol_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
@@ -2816,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Live<wbr>Event<wbr>Input<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
@@ -2873,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streaming_protocol_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Live<wbr>Event<wbr>Input<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 

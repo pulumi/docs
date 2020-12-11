@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module operationalinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.operationalinsights.Cluster"
 meta_desc: "Explore the Cluster resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The top level Log Analytics cluster resource container."
 ---
 
@@ -142,7 +142,7 @@ const cluster = new azure_nextgen.operationalinsights.latest.Cluster("cluster", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_availability_zones_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_properties</span><span class="p">:</span> <span class="nx">Optional[KeyVaultPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingType]]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_availability_zones_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_properties</span><span class="p">:</span> <span class="nx">Optional[KeyVaultPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -350,7 +350,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#billingtype_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Billing<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd>
 
@@ -457,7 +457,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#billingtype_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd>
 
@@ -564,7 +564,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#billingtype_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Billing<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd>
 
@@ -671,7 +671,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#billing_type_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Billing<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd>
 
@@ -765,6 +765,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createddate_csharp">
+<a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster creation time{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -772,6 +782,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lastmodifieddate_csharp">
+<a href="#lastmodifieddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the cluster was updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -803,6 +823,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="associatedworkspaces_csharp">
+<a href="#associatedworkspaces_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Workspaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#associatedworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Associated<wbr>Workspace<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Log Analytics workspaces associated with the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="capacityreservationproperties_csharp">
+<a href="#capacityreservationproperties_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capacityreservationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Capacity<wbr>Reservation<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties for capacity reservation{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -822,6 +862,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createddate_go">
+<a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster creation time{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -829,6 +879,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lastmodifieddate_go">
+<a href="#lastmodifieddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the cluster was updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -860,6 +920,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="associatedworkspaces_go">
+<a href="#associatedworkspaces_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Workspaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#associatedworkspaceresponse">[]Associated<wbr>Workspace<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Log Analytics workspaces associated with the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="capacityreservationproperties_go">
+<a href="#capacityreservationproperties_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capacityreservationpropertiesresponse">Capacity<wbr>Reservation<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties for capacity reservation{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -879,6 +959,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createddate_nodejs">
+<a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster creation time{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -886,6 +976,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lastmodifieddate_nodejs">
+<a href="#lastmodifieddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the cluster was updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -917,6 +1017,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="associatedworkspaces_nodejs">
+<a href="#associatedworkspaces_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Workspaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#associatedworkspaceresponse">Associated<wbr>Workspace<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Log Analytics workspaces associated with the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="capacityreservationproperties_nodejs">
+<a href="#capacityreservationproperties_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capacityreservationpropertiesresponse">Capacity<wbr>Reservation<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties for capacity reservation{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -936,6 +1056,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="created_date_python">
+<a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster creation time{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -943,6 +1073,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="last_modified_date_python">
+<a href="#last_modified_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the cluster was updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -974,6 +1114,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="associated_workspaces_python">
+<a href="#associated_workspaces_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>workspaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#associatedworkspaceresponse">Sequence[Associated<wbr>Workspace<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Log Analytics workspaces associated with the cluster{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="capacity_reservation_properties_python">
+<a href="#capacity_reservation_properties_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capacityreservationpropertiesresponse">Capacity<wbr>Reservation<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties for capacity reservation{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -988,6 +1148,364 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 ## Supporting Types
+
+
+<h4 id="associatedworkspaceresponse">Associated<wbr>Workspace<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associatedate_csharp">
+<a href="#associatedate_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of workspace association.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ResourceId id the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspacename_csharp">
+<a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name id the assigned workspace.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associatedate_go">
+<a href="#associatedate_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of workspace association.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ResourceId id the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspacename_go">
+<a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name id the assigned workspace.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associatedate_nodejs">
+<a href="#associatedate_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of workspace association.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ResourceId id the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspacename_nodejs">
+<a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name id the assigned workspace.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associate_date_python">
+<a href="#associate_date_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time of workspace association.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ResourceId id the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the assigned workspace.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspace_name_python">
+<a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name id the assigned workspace.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="capacityreservationpropertiesresponse">Capacity<wbr>Reservation<wbr>Properties<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastskuupdate_csharp">
+<a href="#lastskuupdate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sku<wbr>Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time Sku was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxcapacity_csharp">
+<a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mincapacity_csharp">
+<a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastskuupdate_go">
+<a href="#lastskuupdate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sku<wbr>Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time Sku was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxcapacity_go">
+<a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mincapacity_go">
+<a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastskuupdate_nodejs">
+<a href="#lastskuupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sku<wbr>Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time Sku was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxcapacity_nodejs">
+<a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mincapacity_nodejs">
+<a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_sku_update_python">
+<a href="#last_sku_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sku_<wbr>update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last time Sku was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_capacity_python">
+<a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="min_capacity_python">
+<a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="clustersku">Cluster<wbr>Sku</h4>
@@ -1017,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Cluster<wbr>Sku<wbr>Name<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 
@@ -1044,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 
@@ -1071,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Cluster<wbr>Sku<wbr>Name<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 
@@ -1098,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Cluster<wbr>Sku<wbr>Name<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 
@@ -1245,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
@@ -1272,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
@@ -1299,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
@@ -1326,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 

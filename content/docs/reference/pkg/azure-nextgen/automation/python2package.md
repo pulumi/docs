@@ -1,7 +1,7 @@
 
 ---
 title: "Python2Package"
-title_tag: "Resource Python2Package | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.Python2Package"
 meta_desc: "Explore the Python2Package resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the module type."
 ---
 

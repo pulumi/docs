@@ -1,7 +1,7 @@
 
 ---
 title: "StorageAccount"
-title_tag: "Resource StorageAccount | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.StorageAccount"
 meta_desc: "Explore the StorageAccount resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The storage account."
 ---
 
@@ -239,7 +239,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -427,7 +427,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
 
@@ -467,7 +467,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Access<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Required for storage accounts where kind = BlobStorage. The access tier used for billing.{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#largefilesharesstate_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Shares<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Large<wbr>File<wbr>Shares<wbr>State</span>
     </dt>
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
 
@@ -557,7 +557,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Minimum<wbr>Tls<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.{{% /md %}}</dd>
 
@@ -614,7 +614,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
 
@@ -654,7 +654,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required for storage accounts where kind = BlobStorage. The access tier used for billing.{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#largefilesharesstate_go" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Shares<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
 
@@ -744,7 +744,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.{{% /md %}}</dd>
 
@@ -801,7 +801,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
 
@@ -841,7 +841,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Access<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Required for storage accounts where kind = BlobStorage. The access tier used for billing.{{% /md %}}</dd>
 
@@ -921,7 +921,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#largefilesharesstate_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>File<wbr>Shares<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Large<wbr>File<wbr>Shares<wbr>State</span>
     </dt>
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
 
@@ -931,7 +931,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Minimum<wbr>Tls<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.{{% /md %}}</dd>
 
@@ -988,7 +988,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Kind</span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
 
@@ -1028,7 +1028,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Access<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Required for storage accounts where kind = BlobStorage. The access tier used for billing.{{% /md %}}</dd>
 
@@ -1108,7 +1108,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#large_file_shares_state_python" style="color: inherit; text-decoration: inherit;">large_<wbr>file_<wbr>shares_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Large<wbr>File<wbr>Shares<wbr>State</span>
     </dt>
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
 
@@ -1118,7 +1118,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Minimum<wbr>Tls<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.{{% /md %}}</dd>
 
@@ -2422,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directoryserviceoptions_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Service<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Directory<wbr>Service<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
 
@@ -2449,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directoryserviceoptions_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Service<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
 
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directoryserviceoptions_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Service<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Directory<wbr>Service<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
 
@@ -2503,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directory_service_options_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>service_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Directory<wbr>Service<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
 
@@ -3335,7 +3335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
 
@@ -3382,7 +3382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
 
@@ -3429,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
 
@@ -3476,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
 
@@ -3743,7 +3743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
 
@@ -3770,7 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
 
@@ -3797,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
 
@@ -3824,7 +3824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
 
@@ -4937,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
 
@@ -4964,7 +4964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
 
@@ -4991,7 +4991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
 
@@ -5018,7 +5018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Action</span>
     </dt>
     <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
 
@@ -5165,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -5182,7 +5182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -5199,7 +5199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -5216,7 +5216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -5801,7 +5801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Default<wbr>Action</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
 
@@ -5811,7 +5811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Bypass</span>
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
 
@@ -5848,7 +5848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
 
@@ -5858,7 +5858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_go" style="color: inherit; text-decoration: inherit;">Bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
 
@@ -5895,7 +5895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Default<wbr>Action</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
 
@@ -5905,7 +5905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Bypass</span>
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
 
@@ -5942,7 +5942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Default<wbr>Action</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
 
@@ -5952,7 +5952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Bypass</span>
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
 
@@ -6736,7 +6736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingchoice_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Choice</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Routing<wbr>Choice</span>
     </dt>
     <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
 
@@ -6773,7 +6773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingchoice_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Choice</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
 
@@ -6810,7 +6810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingchoice_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Choice</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Routing<wbr>Choice</span>
     </dt>
     <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
 
@@ -6847,7 +6847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_choice_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>choice</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Routing<wbr>Choice</span>
     </dt>
     <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
 
@@ -7034,7 +7034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
 
@@ -7051,7 +7051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
 
@@ -7068,7 +7068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
 
@@ -7085,7 +7085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
 
@@ -7720,7 +7720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
 
@@ -7730,7 +7730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>State</span>
     </dt>
     <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
 
@@ -7757,7 +7757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
 
@@ -7767,7 +7767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
 
@@ -7794,7 +7794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
 
@@ -7804,7 +7804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>State</span>
     </dt>
     <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
 
@@ -7831,7 +7831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Action</span>
     </dt>
     <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
 
@@ -7841,7 +7841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">State</span>
     </dt>
     <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
 

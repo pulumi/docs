@@ -1,7 +1,7 @@
 
 ---
 title: "TemplateSpec"
-title_tag: "Resource TemplateSpec | Module resources | Package Azure NextGen"
+title_tag: "azure-nextgen.resources.TemplateSpec"
 meta_desc: "Explore the TemplateSpec resource of the resources module, including examples, input properties, output properties, lookup functions, and supporting types. Template Spec object."
 ---
 

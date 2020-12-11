@@ -1,7 +1,7 @@
 
 ---
 title: "Api"
-title_tag: "Resource Api | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Api"
 meta_desc: "Explore the Api resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Api details."
 ---
 
@@ -64,49 +64,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
-			ApiId: pulumi.String("tempgroup"),
-			AuthenticationSettings: &apimanagement.AuthenticationSettingsContractArgs{
-				OAuth2: &apimanagement.OAuth2AuthenticationSettingsContractArgs{
-					AuthorizationServerId: pulumi.String("authorizationServerId2283"),
-					Scope:                 pulumi.String("oauth2scope2580"),
-				},
-			},
-			Description: pulumi.String("apidescription5200"),
-			DisplayName: pulumi.String("apiname1463"),
-			Path:        pulumi.String("newapiPath"),
-			Protocols: pulumi.StringArray{
-				pulumi.String("https"),
-				pulumi.String("http"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-			ServiceUrl:        pulumi.String("http://newechoapi.cloudapp.net/api"),
-			SubscriptionKeyParameterNames: &apimanagement.SubscriptionKeyParameterNamesContractArgs{
-				Header: pulumi.String("header4520"),
-				Query:  pulumi.String("query3037"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -213,42 +171,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
-			ApiId:       pulumi.String("echo-api2"),
-			Description: pulumi.String("Copy of Existing Echo Api including Operations."),
-			DisplayName: pulumi.String("Echo API2"),
-			IsCurrent:   pulumi.Bool(true),
-			Path:        pulumi.String("echo2"),
-			Protocols: pulumi.StringArray{
-				pulumi.String("http"),
-				pulumi.String("https"),
-			},
-			ResourceGroupName:    pulumi.String("rg1"),
-			ServiceName:          pulumi.String("apimService1"),
-			ServiceUrl:           pulumi.String("http://echoapi.cloudapp.net/api"),
-			SourceApiId:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001"),
-			SubscriptionRequired: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -343,44 +266,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
-			ApiId:           pulumi.String("echoapiv3"),
-			ApiVersion:      pulumi.String("v4"),
-			ApiVersionSetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458"),
-			Description:     pulumi.String("Create Echo API into a new Version using Existing Version Set and Copy all Operations."),
-			DisplayName:     pulumi.String("Echo API2"),
-			IsCurrent:       pulumi.Bool(true),
-			Path:            pulumi.String("echo2"),
-			Protocols: pulumi.StringArray{
-				pulumi.String("http"),
-				pulumi.String("https"),
-			},
-			ResourceGroupName:    pulumi.String("rg1"),
-			ServiceName:          pulumi.String("apimService1"),
-			ServiceUrl:           pulumi.String("http://echoapi.cloudapp.net/api"),
-			SourceApiId:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath"),
-			SubscriptionRequired: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -972,50 +858,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewApi(ctx, "api", &apimanagement.ApiArgs{
-			ApiId: pulumi.String("tempgroup"),
-			AuthenticationSettings: &apimanagement.AuthenticationSettingsContractArgs{
-				Openid: &apimanagement.OpenIdAuthenticationSettingsContractArgs{
-					BearerTokenSendingMethods: pulumi.StringArray{
-						pulumi.String("authorizationHeader"),
-					},
-					OpenidProviderId: pulumi.String("testopenid"),
-				},
-			},
-			Description: pulumi.String("This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."),
-			DisplayName: pulumi.String("Swagger Petstore"),
-			Path:        pulumi.String("petstore"),
-			Protocols: pulumi.StringArray{
-				pulumi.String("https"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-			ServiceUrl:        pulumi.String("http://petstore.swagger.io/v2"),
-			SubscriptionKeyParameterNames: &apimanagement.SubscriptionKeyParameterNamesContractArgs{
-				Header: pulumi.String("Ocp-Apim-Subscription-Key"),
-				Query:  pulumi.String("subscription-key"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -1319,7 +1162,7 @@ const api = new azure_nextgen.apimanagement.latest.Api("api", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_set</span><span class="p">:</span> <span class="nx">Optional[ApiVersionSetContractDetailsArgs]</span> = None<span class="p">, </span><span class="nx">api_version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_settings</span><span class="p">:</span> <span class="nx">Optional[AuthenticationSettingsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_api_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[SubscriptionKeyParameterNamesContractArgs]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsdl_selector</span><span class="p">:</span> <span class="nx">Optional[ApiCreateOrUpdatePropertiesWsdlSelectorArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ApiType]]</span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_set</span><span class="p">:</span> <span class="nx">Optional[ApiVersionSetContractDetailsArgs]</span> = None<span class="p">, </span><span class="nx">api_version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_settings</span><span class="p">:</span> <span class="nx">Optional[AuthenticationSettingsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[Union[str, ContentFormat]]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Protocol]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_api_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SoapApiType]]</span> = None<span class="p">, </span><span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[SubscriptionKeyParameterNamesContractArgs]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsdl_selector</span><span class="p">:</span> <span class="nx">Optional[ApiCreateOrUpdatePropertiesWsdlSelectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1557,7 +1400,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apitype_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Api<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
 
@@ -1637,7 +1480,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Content<wbr>Format</span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
 
@@ -1657,7 +1500,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Protocol&gt;</span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
 
@@ -1677,7 +1520,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#soapapitype_csharp" style="color: inherit; text-decoration: inherit;">Soap<wbr>Api<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Soap<wbr>Api<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
@@ -1806,7 +1649,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apitype_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
 
@@ -1886,7 +1729,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
 
@@ -1906,7 +1749,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
 
@@ -1926,7 +1769,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#soapapitype_go" style="color: inherit; text-decoration: inherit;">Soap<wbr>Api<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
@@ -2055,7 +1898,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apitype_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Api<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
 
@@ -2135,7 +1978,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Content<wbr>Format</span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
 
@@ -2155,7 +1998,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
 
@@ -2175,7 +2018,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#soapapitype_nodejs" style="color: inherit; text-decoration: inherit;">soap<wbr>Api<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Soap<wbr>Api<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
@@ -2304,7 +2147,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_type_python" style="color: inherit; text-decoration: inherit;">api_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Api<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
 
@@ -2384,7 +2227,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Content<wbr>Format</span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
 
@@ -2404,7 +2247,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Protocol]</span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
 
@@ -2424,7 +2267,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#soap_api_type_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>api_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Soap<wbr>Api<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
@@ -3865,7 +3708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Methods&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
 
@@ -3892,7 +3735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
 
@@ -3919,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Methods[]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
 
@@ -3946,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Bearer<wbr>Token<wbr>Sending<wbr>Methods]]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
 

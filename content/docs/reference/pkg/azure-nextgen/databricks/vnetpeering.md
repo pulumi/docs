@@ -1,7 +1,7 @@
 
 ---
 title: "VNetPeering"
-title_tag: "Resource VNetPeering | Module databricks | Package Azure NextGen"
+title_tag: "azure-nextgen.databricks.VNetPeering"
 meta_desc: "Explore the VNetPeering resource of the databricks module, including examples, input properties, output properties, lookup functions, and supporting types. Peerings in a VirtualNetwork resource"
 ---
 

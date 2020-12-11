@@ -1,7 +1,7 @@
 
 ---
 title: "DataCollectionRuleAssociation"
-title_tag: "Resource DataCollectionRuleAssociation | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.DataCollectionRuleAssociation"
 meta_desc: "Explore the DataCollectionRuleAssociation resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of generic ARM proxy resource."
 ---
 

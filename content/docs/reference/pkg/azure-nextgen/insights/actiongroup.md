@@ -1,7 +1,7 @@
 
 ---
 title: "ActionGroup"
-title_tag: "Resource ActionGroup | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.ActionGroup"
 meta_desc: "Explore the ActionGroup resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An action group resource."
 ---
 
@@ -47,7 +47,7 @@ class MyStack : Stack
                     IsGlobalRunbook = false,
                     Name = "testRunbook",
                     RunbookName = "Sample runbook",
-                    ServiceUri = "https://s13events.azure-automation.net/webhooks?token=iimE%2fD19Eg%2bvDy22yUMecIZY6Uiz%2bHfuQ67r8r1wY%2fI%3d",
+                    ServiceUri = "<serviceUri>",
                     UseCommonAlertSchema = true,
                     WebhookResourceId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
                 },
@@ -66,7 +66,7 @@ class MyStack : Stack
                 {
                     FunctionAppResourceId = "/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
                     FunctionName = "HttpTriggerCSharp1",
-                    HttpTriggerUrl = "https://testfunctionapp.azurewebsites.net/api/HttpTriggerCSharp1?code=4CopFfiXqUQC8dvIM7F53J7tIU3Gy9QQIG/vKAXMe2avhHqK3/jVYw==",
+                    HttpTriggerUrl = "<httpTriggerUrl>",
                     Name = "Sample azureFunction",
                     UseCommonAlertSchema = true,
                 },
@@ -193,7 +193,7 @@ func main() {
 					IsGlobalRunbook:      pulumi.Bool(false),
 					Name:                 pulumi.String("testRunbook"),
 					RunbookName:          pulumi.String("Sample runbook"),
-					ServiceUri:           pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "https://s13events.azure-automation.net/webhooks?token=iimE", "%", "2fD19Eg", "%", "2bvDy22yUMecIZY6Uiz", "%", "2bHfuQ67r8r1wY", "%", "2fI", "%", "3d")),
+					ServiceUri:           pulumi.String("<serviceUri>"),
 					UseCommonAlertSchema: pulumi.Bool(true),
 					WebhookResourceId:    pulumi.String("/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084"),
 				},
@@ -208,7 +208,7 @@ func main() {
 				&insights.AzureFunctionReceiverArgs{
 					FunctionAppResourceId: pulumi.String("/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp"),
 					FunctionName:          pulumi.String("HttpTriggerCSharp1"),
-					HttpTriggerUrl:        pulumi.String("https://testfunctionapp.azurewebsites.net/api/HttpTriggerCSharp1?code=4CopFfiXqUQC8dvIM7F53J7tIU3Gy9QQIG/vKAXMe2avhHqK3/jVYw=="),
+					HttpTriggerUrl:        pulumi.String("<httpTriggerUrl>"),
 					Name:                  pulumi.String("Sample azureFunction"),
 					UseCommonAlertSchema:  pulumi.Bool(true),
 				},
@@ -312,7 +312,7 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
         is_global_runbook=False,
         name="testRunbook",
         runbook_name="Sample runbook",
-        service_uri="https://s13events.azure-automation.net/webhooks?token=iimE%2fD19Eg%2bvDy22yUMecIZY6Uiz%2bHfuQ67r8r1wY%2fI%3d",
+        service_uri="<serviceUri>",
         use_common_alert_schema=True,
         webhook_resource_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
     )],
@@ -323,7 +323,7 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
     azure_function_receivers=[azure_nextgen.insights.latest.AzureFunctionReceiverArgs(
         function_app_resource_id="/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
         function_name="HttpTriggerCSharp1",
-        http_trigger_url="https://testfunctionapp.azurewebsites.net/api/HttpTriggerCSharp1?code=4CopFfiXqUQC8dvIM7F53J7tIU3Gy9QQIG/vKAXMe2avhHqK3/jVYw==",
+        http_trigger_url="<httpTriggerUrl>",
         name="Sample azureFunction",
         use_common_alert_schema=True,
     )],
@@ -413,7 +413,7 @@ const actionGroup = new azure_nextgen.insights.latest.ActionGroup("actionGroup",
         isGlobalRunbook: false,
         name: "testRunbook",
         runbookName: "Sample runbook",
-        serviceUri: `https://s13events.azure-automation.net/webhooks?token=iimE%2fD19Eg%2bvDy22yUMecIZY6Uiz%2bHfuQ67r8r1wY%2fI%3d`,
+        serviceUri: "<serviceUri>",
         useCommonAlertSchema: true,
         webhookResourceId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
     }],
@@ -424,7 +424,7 @@ const actionGroup = new azure_nextgen.insights.latest.ActionGroup("actionGroup",
     azureFunctionReceivers: [{
         functionAppResourceId: "/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
         functionName: "HttpTriggerCSharp1",
-        httpTriggerUrl: "https://testfunctionapp.azurewebsites.net/api/HttpTriggerCSharp1?code=4CopFfiXqUQC8dvIM7F53J7tIU3Gy9QQIG/vKAXMe2avhHqK3/jVYw==",
+        httpTriggerUrl: "<httpTriggerUrl>",
         name: "Sample azureFunction",
         useCommonAlertSchema: true,
     }],

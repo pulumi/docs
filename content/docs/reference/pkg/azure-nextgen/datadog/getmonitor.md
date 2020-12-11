@@ -174,6 +174,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ARM id of the monitor resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -248,6 +258,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ARM id of the monitor resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -328,6 +348,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ARM id of the monitor resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -402,6 +432,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ARM id of the monitor resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -915,6 +955,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="marketplacesubscriptionstatus_csharp">
+<a href="#marketplacesubscriptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="monitoringstatus_csharp">
+<a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_csharp">
@@ -924,26 +984,6 @@ The following output properties are available:
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="marketplacesubscriptionstatus_csharp">
-<a href="#marketplacesubscriptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="monitoringstatus_csharp">
-<a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -992,6 +1032,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="marketplacesubscriptionstatus_go">
+<a href="#marketplacesubscriptionstatus_go" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="monitoringstatus_go">
+<a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_go">
@@ -1001,26 +1061,6 @@ The following output properties are available:
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="marketplacesubscriptionstatus_go">
-<a href="#marketplacesubscriptionstatus_go" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="monitoringstatus_go">
-<a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1069,6 +1109,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="marketplacesubscriptionstatus_nodejs">
+<a href="#marketplacesubscriptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">marketplace<wbr>Subscription<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="monitoringstatus_nodejs">
+<a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_nodejs">
@@ -1078,26 +1138,6 @@ The following output properties are available:
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="marketplacesubscriptionstatus_nodejs">
-<a href="#marketplacesubscriptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">marketplace<wbr>Subscription<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="monitoringstatus_nodejs">
-<a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1146,6 +1186,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="marketplace_subscription_status_python">
+<a href="#marketplace_subscription_status_python" style="color: inherit; text-decoration: inherit;">marketplace_<wbr>subscription_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="monitoring_status_python">
+<a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="datadog_organization_properties_python">
@@ -1155,26 +1215,6 @@ The following output properties are available:
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="marketplace_subscription_status_python">
-<a href="#marketplace_subscription_status_python" style="color: inherit; text-decoration: inherit;">marketplace_<wbr>subscription_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_status_python">
-<a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

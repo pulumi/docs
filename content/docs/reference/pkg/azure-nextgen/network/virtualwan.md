@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualWan"
-title_tag: "Resource VirtualWan | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualWan"
 meta_desc: "Explore the VirtualWan resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. VirtualWAN Resource."
 ---
 

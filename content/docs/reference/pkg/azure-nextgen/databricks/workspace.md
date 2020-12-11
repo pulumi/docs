@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module databricks | Package Azure NextGen"
+title_tag: "azure-nextgen.databricks.Workspace"
 meta_desc: "Explore the Workspace resource of the databricks module, including examples, input properties, output properties, lookup functions, and supporting types. Information about workspace."
 ---
 
@@ -1815,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault{{% /md %}}</dd>
 
@@ -1862,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault{{% /md %}}</dd>
 
@@ -1909,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault{{% /md %}}</dd>
 
@@ -1956,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault{{% /md %}}</dd>
 

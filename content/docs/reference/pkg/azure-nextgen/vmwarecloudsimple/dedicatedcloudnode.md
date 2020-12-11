@@ -1,7 +1,7 @@
 
 ---
 title: "DedicatedCloudNode"
-title_tag: "Resource DedicatedCloudNode | Module vmwarecloudsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.vmwarecloudsimple.DedicatedCloudNode"
 meta_desc: "Explore the DedicatedCloudNode resource of the vmwarecloudsimple module, including examples, input properties, output properties, lookup functions, and supporting types. Dedicated cloud node model"
 ---
 

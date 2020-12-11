@@ -1,7 +1,7 @@
 
 ---
 title: "ActivityLogAlert"
-title_tag: "Resource ActivityLogAlert | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.ActivityLogAlert"
 meta_desc: "Explore the ActivityLogAlert resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An activity log alert resource."
 ---
 

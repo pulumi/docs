@@ -184,6 +184,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -314,6 +324,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="migrationproperties_csharp">
+<a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="notificationsettings_csharp">
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span> 
@@ -378,6 +398,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Deployment Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -511,6 +541,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="migrationproperties_go">
+<a href="#migrationproperties_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="notificationsettings_go">
 <a href="#notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span> 
@@ -575,6 +615,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Deployment Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -708,6 +758,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="migrationproperties_nodejs">
+<a href="#migrationproperties_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="notificationsettings_nodejs">
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span> 
@@ -772,6 +832,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Deployment Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -902,6 +972,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="migration_properties_python">
+<a href="#migration_properties_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2233,6 +2313,284 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to decrypt the provided Secure LDAP certificate pfx file.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="migrationprogressresponse">Migration<wbr>Progress<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_csharp">
+<a href="#completionpercentage_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_csharp">
+<a href="#progressmessage_csharp" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_go">
+<a href="#completionpercentage_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_go">
+<a href="#progressmessage_go" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_nodejs">
+<a href="#completionpercentage_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_nodejs">
+<a href="#progressmessage_nodejs" style="color: inherit; text-decoration: inherit;">progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completion_percentage_python">
+<a href="#completion_percentage_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progress_message_python">
+<a href="#progress_message_python" style="color: inherit; text-decoration: inherit;">progress_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_csharp">
+<a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_csharp">
+<a href="#oldsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_csharp">
+<a href="#oldvnetsiteid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_go">
+<a href="#migrationprogress_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_go">
+<a href="#oldsubnetid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_go">
+<a href="#oldvnetsiteid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_nodejs">
+<a href="#migrationprogress_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_nodejs">
+<a href="#oldsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_nodejs">
+<a href="#oldvnetsiteid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migration_progress_python">
+<a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="old_subnet_id_python">
+<a href="#old_subnet_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="old_vnet_site_id_python">
+<a href="#old_vnet_site_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>vnet_<wbr>site_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

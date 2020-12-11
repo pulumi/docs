@@ -1,7 +1,7 @@
 
 ---
 title: "SystemTopic"
-title_tag: "Resource SystemTopic | Module eventgrid | Package Azure NextGen"
+title_tag: "azure-nextgen.eventgrid.SystemTopic"
 meta_desc: "Explore the SystemTopic resource of the eventgrid module, including examples, input properties, output properties, lookup functions, and supporting types. EventGrid System Topic."
 ---
 

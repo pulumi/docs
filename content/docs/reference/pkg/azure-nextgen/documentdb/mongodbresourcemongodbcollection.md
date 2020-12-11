@@ -1,7 +1,7 @@
 
 ---
 title: "MongoDBResourceMongoDBCollection"
-title_tag: "Resource MongoDBResourceMongoDBCollection | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.MongoDBResourceMongoDBCollection"
 meta_desc: "Explore the MongoDBResourceMongoDBCollection resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB MongoDB collection."
 ---
 

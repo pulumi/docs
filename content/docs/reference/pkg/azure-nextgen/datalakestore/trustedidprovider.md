@@ -1,7 +1,7 @@
 
 ---
 title: "TrustedIdProvider"
-title_tag: "Resource TrustedIdProvider | Module datalakestore | Package Azure NextGen"
+title_tag: "azure-nextgen.datalakestore.TrustedIdProvider"
 meta_desc: "Explore the TrustedIdProvider resource of the datalakestore module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Store trusted identity provider information."
 ---
 

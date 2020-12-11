@@ -1,7 +1,7 @@
 
 ---
 title: "ApiRelease"
-title_tag: "Resource ApiRelease | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ApiRelease"
 meta_desc: "Explore the ApiRelease resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. ApiRelease details."
 ---
 
@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var apiRelease = new AzureNextGen.ApiManagement.Latest.ApiRelease("apiRelease", new AzureNextGen.ApiManagement.Latest.ApiReleaseArgs
         {
-            ApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+            ApiId = "a1",
             Notes = "yahooagain",
             ReleaseId = "testrev",
             ResourceGroupName = "rg1",
@@ -56,7 +56,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := apimanagement.NewApiRelease(ctx, "apiRelease", &apimanagement.ApiReleaseArgs{
-			ApiId:             pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1"),
+			ApiId:             pulumi.String("a1"),
 			Notes:             pulumi.String("yahooagain"),
 			ReleaseId:         pulumi.String("testrev"),
 			ResourceGroupName: pulumi.String("rg1"),
@@ -80,7 +80,7 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 api_release = azure_nextgen.apimanagement.latest.ApiRelease("apiRelease",
-    api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+    api_id="a1",
     notes="yahooagain",
     release_id="testrev",
     resource_group_name="rg1",
@@ -97,7 +97,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiRelease = new azure_nextgen.apimanagement.latest.ApiRelease("apiRelease", {
-    apiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+    apiId: "a1",
     notes: "yahooagain",
     releaseId: "testrev",
     resourceGroupName: "rg1",

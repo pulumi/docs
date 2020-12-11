@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountAgreement"
-title_tag: "Resource IntegrationAccountAgreement | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationAccountAgreement"
 meta_desc: "Explore the IntegrationAccountAgreement resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account agreement."
 ---
 
@@ -234,7 +234,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := logic.NewIntegrationAccountAgreement(ctx, "integrationAccountAgreement", &logic.IntegrationAccountAgreementArgs{
 			AgreementName: pulumi.String("testAgreement"),
-			AgreementType: pulumi.String("AS2"),
+			AgreementType: "AS2",
 			Content: &logic.AgreementContentArgs{
 				AS2: &logic.AS2AgreementContentArgs{
 					ReceiveAgreement: &logic.AS2OneWayAgreementArgs{
@@ -747,7 +747,7 @@ const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">agreement_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[AgreementContentArgs]</span> = None<span class="p">, </span><span class="nx">guest_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">guest_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">host_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">agreement_type</span><span class="p">:</span> <span class="nx">Optional[AgreementType]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[AgreementContentArgs]</span> = None<span class="p">, </span><span class="nx">guest_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">guest_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">host_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -935,7 +935,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreementtype_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Agreement<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
 
@@ -1062,7 +1062,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreementtype_go" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
 
@@ -1189,7 +1189,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreementtype_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Agreement<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
 
@@ -1316,7 +1316,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreement_type_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Agreement<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
 
@@ -3044,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#michashingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Mic<wbr>Hashing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Hashing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
 
@@ -3141,7 +3141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#michashingalgorithm_go" style="color: inherit; text-decoration: inherit;">Mic<wbr>Hashing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
 
@@ -3238,7 +3238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#michashingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">mic<wbr>Hashing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Hashing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
 
@@ -3335,7 +3335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mic_hashing_algorithm_python" style="color: inherit; text-decoration: inherit;">mic_<wbr>hashing_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Hashing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
 
@@ -6124,7 +6124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
 
@@ -6164,7 +6164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Signing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
 
@@ -6231,7 +6231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
 
@@ -6271,7 +6271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingalgorithm_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
 
@@ -6338,7 +6338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
 
@@ -6378,7 +6378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Signing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
 
@@ -6445,7 +6445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Encryption<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
 
@@ -6485,7 +6485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signing_algorithm_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Signing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
 
@@ -8724,7 +8724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_csharp" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Edifact<wbr>Decimal<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
 
@@ -8764,7 +8764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -8851,7 +8851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_go" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
 
@@ -8891,7 +8891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -8978,7 +8978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Edifact<wbr>Decimal<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
 
@@ -9018,7 +9018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -9105,7 +9105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Edifact<wbr>Decimal<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
 
@@ -9145,7 +9145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -14378,7 +14378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Edifact<wbr>Character<wbr>Set</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
 
@@ -14408,7 +14408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_csharp" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Edifact<wbr>Decimal<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
 
@@ -14458,7 +14458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
 
@@ -14495,7 +14495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
 
@@ -14525,7 +14525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_go" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
 
@@ -14575,7 +14575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
 
@@ -14612,7 +14612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Edifact<wbr>Character<wbr>Set</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
 
@@ -14642,7 +14642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Edifact<wbr>Decimal<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
 
@@ -14692,7 +14692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
 
@@ -14729,7 +14729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Edifact<wbr>Character<wbr>Set</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
 
@@ -14759,7 +14759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Edifact<wbr>Decimal<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
 
@@ -14809,7 +14809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
 
@@ -15336,7 +15336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Message<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -15353,7 +15353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -15370,7 +15370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Message<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -15387,7 +15387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Message<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -18074,7 +18074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -18151,7 +18151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -18228,7 +18228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -18305,7 +18305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -18732,7 +18732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -18839,7 +18839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -18946,7 +18946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -19053,7 +19053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -21126,7 +21126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -21223,7 +21223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -21320,7 +21320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -21417,7 +21417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -21874,7 +21874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Date<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd>
 
@@ -21954,7 +21954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Time<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd>
 
@@ -21981,7 +21981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd>
 
@@ -22061,7 +22061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd>
 
@@ -22088,7 +22088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>X12Date<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd>
 
@@ -22168,7 +22168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>X12Time<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd>
 
@@ -22195,7 +22195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">X12Date<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd>
 
@@ -22275,7 +22275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">X12Time<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd>
 
@@ -22812,7 +22812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderdateformat_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Date<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Date<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
 
@@ -22822,7 +22822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadertimeformat_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Time<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Time<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
 
@@ -22942,7 +22942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usageindicator_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Usage<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
 
@@ -23059,7 +23059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderdateformat_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Date<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
 
@@ -23069,7 +23069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadertimeformat_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Time<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
 
@@ -23189,7 +23189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usageindicator_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
 
@@ -23306,7 +23306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderdateformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Date<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>X12Date<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
 
@@ -23316,7 +23316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadertimeformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Time<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>X12Time<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
 
@@ -23436,7 +23436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usageindicator_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Usage<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
 
@@ -23553,7 +23553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_date_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">X12Date<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
 
@@ -23563,7 +23563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_time_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">X12Time<wbr>Format</span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
 
@@ -23683,7 +23683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usage_indicator_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Usage<wbr>Indicator</span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
 
@@ -24750,7 +24750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Character<wbr>Set</span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
 
@@ -24810,7 +24810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -24827,7 +24827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
 
@@ -24887,7 +24887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -24904,7 +24904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>X12Character<wbr>Set</span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
 
@@ -24964,7 +24964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -24981,7 +24981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">X12Character<wbr>Set</span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
 
@@ -25041,7 +25041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Segment<wbr>Terminator<wbr>Suffix</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 
@@ -25388,7 +25388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Message<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -25405,7 +25405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -25422,7 +25422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Message<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -25439,7 +25439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Message<wbr>Filter<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 
@@ -28434,7 +28434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -28511,7 +28511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -28588,7 +28588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -28665,7 +28665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -29102,7 +29102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -29209,7 +29209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -29316,7 +29316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 
@@ -29423,7 +29423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Trailing<wbr>Separator<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
 

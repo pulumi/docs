@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module servicefabricmesh | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabricmesh.Application"
 meta_desc: "Explore the Application resource of the servicefabricmesh module, including examples, input properties, output properties, lookup functions, and supporting types. This type describes an application resource."
 ---
 
@@ -1718,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizedisk_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Size<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 
@@ -1745,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizedisk_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 
@@ -1772,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizedisk_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Size<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 
@@ -1799,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_disk_python" style="color: inherit; text-decoration: inherit;">size_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Size<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 
@@ -2473,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
 
@@ -2490,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
 
@@ -2507,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
 
@@ -2524,7 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Name</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
 
@@ -8568,7 +8568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Operating<wbr>System<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operation system required by the code in service.{{% /md %}}</dd>
 
@@ -8655,7 +8655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation system required by the code in service.{{% /md %}}</dd>
 
@@ -8742,7 +8742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operating<wbr>System<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operation system required by the code in service.{{% /md %}}</dd>
 
@@ -8829,7 +8829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operating<wbr>System<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operation system required by the code in service.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module batchai | Package Azure NextGen"
+title_tag: "azure-nextgen.batchai.Workspace"
 meta_desc: "Explore the Workspace resource of the batchai module, including examples, input properties, output properties, lookup functions, and supporting types. Batch AI Workspace information."
 ---
 

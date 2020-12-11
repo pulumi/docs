@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.User"
 meta_desc: "Explore the User resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. User details."
 ---
 
@@ -128,7 +128,7 @@ const user = new azure_nextgen.apimanagement.latest.User("user", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">confirmation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserIdentityContractArgs]]</span> = None<span class="p">, </span><span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AppType]]</span> = None<span class="p">, </span><span class="nx">confirmation</span><span class="p">:</span> <span class="nx">Optional[Union[str, Confirmation]]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserIdentityContractArgs]]</span> = None<span class="p">, </span><span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, UserState]]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -366,7 +366,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#apptype_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>App<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy portal.{{% /md %}}</dd>
 
@@ -376,7 +376,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#confirmation_csharp" style="color: inherit; text-decoration: inherit;">Confirmation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Confirmation</span>
     </dt>
     <dd>{{% md %}}Determines the type of confirmation e-mail that will be sent to the newly created user.{{% /md %}}</dd>
 
@@ -426,7 +426,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>User<wbr>State</span>
     </dt>
     <dd>{{% md %}}Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.{{% /md %}}</dd>
 
@@ -503,7 +503,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#apptype_go" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy portal.{{% /md %}}</dd>
 
@@ -513,7 +513,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#confirmation_go" style="color: inherit; text-decoration: inherit;">Confirmation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the type of confirmation e-mail that will be sent to the newly created user.{{% /md %}}</dd>
 
@@ -563,7 +563,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.{{% /md %}}</dd>
 
@@ -640,7 +640,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>App<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy portal.{{% /md %}}</dd>
 
@@ -650,7 +650,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#confirmation_nodejs" style="color: inherit; text-decoration: inherit;">confirmation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Confirmation</span>
     </dt>
     <dd>{{% md %}}Determines the type of confirmation e-mail that will be sent to the newly created user.{{% /md %}}</dd>
 
@@ -700,7 +700,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>User<wbr>State</span>
     </dt>
     <dd>{{% md %}}Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.{{% /md %}}</dd>
 
@@ -777,7 +777,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">App<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy portal.{{% /md %}}</dd>
 
@@ -787,7 +787,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#confirmation_python" style="color: inherit; text-decoration: inherit;">confirmation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Confirmation</span>
     </dt>
     <dd>{{% md %}}Determines the type of confirmation e-mail that will be sent to the newly created user.{{% /md %}}</dd>
 
@@ -837,7 +837,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">User<wbr>State</span>
     </dt>
     <dd>{{% md %}}Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.{{% /md %}}</dd>
 

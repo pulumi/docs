@@ -1,7 +1,7 @@
 
 ---
 title: "CloudConnector"
-title_tag: "Resource CloudConnector | Module costmanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.costmanagement.CloudConnector"
 meta_desc: "Explore the CloudConnector resource of the costmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. The Connector model definition"
 ---
 
@@ -120,7 +120,7 @@ const cloudConnector = new azure_nextgen.costmanagement.v20190301preview.CloudCo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">report_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_model</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorBillingModel]]</span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">report_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,7 +308,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#billingmodel_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Connector<wbr>Billing<wbr>Model</span>
     </dt>
     <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
 
@@ -405,7 +405,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#billingmodel_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
 
@@ -502,7 +502,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#billingmodel_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Connector<wbr>Billing<wbr>Model</span>
     </dt>
     <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#billing_model_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Connector<wbr>Billing<wbr>Model</span>
     </dt>
     <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Query"
-title_tag: "Resource Query | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.Query"
 meta_desc: "Explore the Query resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. A Log Analytics QueryPack-Query definition."
 ---
 

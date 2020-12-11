@@ -1,7 +1,7 @@
 
 ---
 title: "Environment"
-title_tag: "Resource Environment | Module labservices | Package Azure NextGen"
+title_tag: "azure-nextgen.labservices.Environment"
 meta_desc: "Explore the Environment resource of the labservices module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an environment instance"
 ---
 

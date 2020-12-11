@@ -1,7 +1,7 @@
 
 ---
 title: "DiagnosticSetting"
-title_tag: "Resource DiagnosticSetting | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.DiagnosticSetting"
 meta_desc: "Explore the DiagnosticSetting resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. The diagnostic setting resource."
 ---
 

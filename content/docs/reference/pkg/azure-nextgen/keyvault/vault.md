@@ -1,7 +1,7 @@
 
 ---
 title: "Vault"
-title_tag: "Resource Vault | Module keyvault | Package Azure NextGen"
+title_tag: "azure-nextgen.keyvault.Vault"
 meta_desc: "Explore the Vault resource of the keyvault module, including examples, input properties, output properties, lookup functions, and supporting types. Resource information with extended details."
 ---
 
@@ -183,7 +183,7 @@ func main() {
 				EnabledForTemplateDeployment: pulumi.Bool(true),
 				Sku: &keyvault.SkuArgs{
 					Family: pulumi.String("A"),
-					Name:   pulumi.String("standard"),
+					Name:   "standard",
 				},
 				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
 			},
@@ -448,7 +448,7 @@ func main() {
 				},
 				Sku: &keyvault.SkuArgs{
 					Family: pulumi.String("A"),
-					Name:   pulumi.String("standard"),
+					Name:   "standard",
 				},
 				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
 			},
@@ -1700,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Network<wbr>Rule<wbr>Bypass<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
 
@@ -1710,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Network<wbr>Rule<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
 
@@ -1747,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_go" style="color: inherit; text-decoration: inherit;">Bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
 
@@ -1757,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
 
@@ -1794,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Network<wbr>Rule<wbr>Bypass<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
 
@@ -1804,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Network<wbr>Rule<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
 
@@ -1841,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Network<wbr>Rule<wbr>Bypass<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
 
@@ -1851,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Network<wbr>Rule<wbr>Action</span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
 
@@ -2098,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Certificate<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
 
@@ -2108,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Key<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
 
@@ -2118,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Secret<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
 
@@ -2128,7 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Storage<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
 
@@ -2145,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
 
@@ -2155,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
 
@@ -2165,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
 
@@ -2175,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
 
@@ -2192,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Certificate<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
 
@@ -2202,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Key<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
 
@@ -2212,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Secret<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
 
@@ -2222,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Storage<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
 
@@ -2239,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Certificate<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
 
@@ -2249,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Key<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
 
@@ -2259,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Secret<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
 
@@ -2269,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Storage<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
 
@@ -2893,7 +2893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Sku<wbr>Family</span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd>
 
@@ -2903,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
 
@@ -2920,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd>
 
@@ -2930,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
 
@@ -2947,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Family</span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd>
 
@@ -2957,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
 
@@ -2974,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Family</span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd>
 
@@ -2984,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
 
@@ -3161,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
 
@@ -3253,7 +3253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3298,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
 
@@ -3390,7 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3435,7 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
 
@@ -3527,7 +3527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3572,7 +3572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
 
@@ -3664,7 +3664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3822,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3969,7 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4116,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4263,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets.{{% /md %}}</dd>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

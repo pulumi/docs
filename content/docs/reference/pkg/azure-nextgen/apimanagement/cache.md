@@ -1,7 +1,7 @@
 
 ---
 title: "Cache"
-title_tag: "Resource Cache | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Cache"
 meta_desc: "Explore the Cache resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Cache details."
 ---
 

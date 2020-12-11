@@ -1,7 +1,7 @@
 
 ---
 title: "DatabaseAccountSqlDatabase"
-title_tag: "Resource DatabaseAccountSqlDatabase | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.DatabaseAccountSqlDatabase"
 meta_desc: "Explore the DatabaseAccountSqlDatabase resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB SQL database."
 ---
 

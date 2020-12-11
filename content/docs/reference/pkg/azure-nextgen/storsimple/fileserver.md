@@ -1,7 +1,7 @@
 
 ---
 title: "FileServer"
-title_tag: "Resource FileServer | Module storsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.storsimple.FileServer"
 meta_desc: "Explore the FileServer resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. The file server."
 ---
 

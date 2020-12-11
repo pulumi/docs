@@ -1,7 +1,7 @@
 
 ---
 title: "Property"
-title_tag: "Resource Property | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Property"
 meta_desc: "Explore the Property resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Property details."
 ---
 

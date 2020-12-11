@@ -1,7 +1,7 @@
 
 ---
 title: "SyncGroup"
-title_tag: "Resource SyncGroup | Module storagesync | Package Azure NextGen"
+title_tag: "azure-nextgen.storagesync.SyncGroup"
 meta_desc: "Explore the SyncGroup resource of the storagesync module, including examples, input properties, output properties, lookup functions, and supporting types. Sync Group object."
 ---
 

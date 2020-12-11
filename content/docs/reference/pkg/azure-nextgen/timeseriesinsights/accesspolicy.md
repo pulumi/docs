@@ -1,7 +1,7 @@
 
 ---
 title: "AccessPolicy"
-title_tag: "Resource AccessPolicy | Module timeseriesinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.timeseriesinsights.AccessPolicy"
 meta_desc: "Explore the AccessPolicy resource of the timeseriesinsights module, including examples, input properties, output properties, lookup functions, and supporting types. An access policy is used to grant users and applications access to the environment. Roles are assigned to service principals in Azure Active Directory. These roles define the actions the principal can perform through the Time Series Insights data plane APIs."
 ---
 
@@ -129,7 +129,7 @@ const accessPolicy = new azure_nextgen.timeseriesinsights.latest.AccessPolicy("a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AccessPolicyRole]]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -357,7 +357,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Access<wbr>Policy<wbr>Role&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of roles the principal is assigned on the environment.{{% /md %}}</dd>
 
@@ -424,7 +424,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of roles the principal is assigned on the environment.{{% /md %}}</dd>
 
@@ -491,7 +491,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Access<wbr>Policy<wbr>Role[]</span>
     </dt>
     <dd>{{% md %}}The list of roles the principal is assigned on the environment.{{% /md %}}</dd>
 
@@ -558,7 +558,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Access<wbr>Policy<wbr>Role]]</span>
     </dt>
     <dd>{{% md %}}The list of roles the principal is assigned on the environment.{{% /md %}}</dd>
 

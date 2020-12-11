@@ -1,7 +1,7 @@
 
 ---
 title: "Key"
-title_tag: "Resource Key | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.Key"
 meta_desc: "Explore the Key resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. A workspace key"
 ---
 

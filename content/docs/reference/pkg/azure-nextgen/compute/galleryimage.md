@@ -1,7 +1,7 @@
 
 ---
 title: "GalleryImage"
-title_tag: "Resource GalleryImage | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.GalleryImage"
 meta_desc: "Explore the GalleryImage resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the gallery image definition that you want to create or update."
 ---
 
@@ -73,8 +73,8 @@ func main() {
 				Sku:       pulumi.String("mySkuName"),
 			},
 			Location:          pulumi.String("West US"),
-			OsState:           pulumi.String("Generalized"),
-			OsType:            pulumi.String("Windows"),
+			OsState:           "Generalized",
+			OsType:            "Windows",
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 		})
 		if err != nil {
@@ -149,7 +149,7 @@ const galleryImage = new azure_nextgen.compute.latest.GalleryImage("galleryImage
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[DisallowedArgs]</span> = None<span class="p">, </span><span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[GalleryImageFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[GalleryImageIdentifierArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[ImagePurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[RecommendedMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[DisallowedArgs]</span> = None<span class="p">, </span><span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[GalleryImageFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[GalleryImageIdentifierArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemStateTypes]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[ImagePurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[RecommendedMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -367,7 +367,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osstate_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>State<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.{{% /md %}}</dd>
 
@@ -377,7 +377,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -447,7 +447,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Hyper<wbr>VGeneration</span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
 
@@ -554,7 +554,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osstate_go" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.{{% /md %}}</dd>
 
@@ -564,7 +564,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
 
@@ -741,7 +741,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osstate_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Operating<wbr>System<wbr>State<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.{{% /md %}}</dd>
 
@@ -751,7 +751,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -821,7 +821,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Hyper<wbr>VGeneration</span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
 
@@ -928,7 +928,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#os_state_python" style="color: inherit; text-decoration: inherit;">os_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Operating<wbr>System<wbr>State<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.{{% /md %}}</dd>
 
@@ -938,7 +938,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Operating<wbr>System<wbr>Types</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
 
@@ -1008,7 +1008,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Hyper<wbr>VGeneration</span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
 

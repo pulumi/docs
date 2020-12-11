@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Certificate"
 meta_desc: "Explore the Certificate resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Certificate details."
 ---
 

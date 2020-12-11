@@ -1,7 +1,7 @@
 
 ---
 title: "SqlServerInstance"
-title_tag: "Resource SqlServerInstance | Module azuredata | Package Azure NextGen"
+title_tag: "azure-nextgen.azuredata.SqlServerInstance"
 meta_desc: "Explore the SqlServerInstance resource of the azuredata module, including examples, input properties, output properties, lookup functions, and supporting types. A SqlServerInstance."
 ---
 

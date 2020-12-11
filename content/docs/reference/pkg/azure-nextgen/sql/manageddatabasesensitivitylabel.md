@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedDatabaseSensitivityLabel"
-title_tag: "Resource ManagedDatabaseSensitivityLabel | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ManagedDatabaseSensitivityLabel"
 meta_desc: "Explore the ManagedDatabaseSensitivityLabel resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A sensitivity label."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabaseSensitivityLabel = new AzureNextGen.Sql.V20180601Preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureNextGen.Sql.V20180601Preview.ManagedDatabaseSensitivityLabelArgs
+        var managedDatabaseSensitivityLabel = new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseSensitivityLabelArgs
         {
             ColumnName = "myColumn",
             DatabaseName = "myDatabase",
@@ -36,6 +36,7 @@ class MyStack : Stack
             LabelId = "bf91e08c-f4f0-478a-b016-25164b2a65ff",
             LabelName = "PII",
             ManagedInstanceName = "myManagedInstanceName",
+            Rank = "High",
             ResourceGroupName = "myRG",
             SchemaName = "dbo",
             SensitivityLabelSource = "current",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20180601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -69,6 +70,7 @@ func main() {
 			LabelId:                pulumi.String("bf91e08c-f4f0-478a-b016-25164b2a65ff"),
 			LabelName:              pulumi.String("PII"),
 			ManagedInstanceName:    pulumi.String("myManagedInstanceName"),
+			Rank:                   "High",
 			ResourceGroupName:      pulumi.String("myRG"),
 			SchemaName:             pulumi.String("dbo"),
 			SensitivityLabelSource: pulumi.String("current"),
@@ -91,7 +93,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database_sensitivity_label = azure_nextgen.sql.v20180601preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
+managed_database_sensitivity_label = azure_nextgen.sql.v20200801preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
     column_name="myColumn",
     database_name="myDatabase",
     information_type="PhoneNumber",
@@ -99,6 +101,7 @@ managed_database_sensitivity_label = azure_nextgen.sql.v20180601preview.ManagedD
     label_id="bf91e08c-f4f0-478a-b016-25164b2a65ff",
     label_name="PII",
     managed_instance_name="myManagedInstanceName",
+    rank="High",
     resource_group_name="myRG",
     schema_name="dbo",
     sensitivity_label_source="current",
@@ -114,7 +117,7 @@ managed_database_sensitivity_label = azure_nextgen.sql.v20180601preview.ManagedD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20180601preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
+const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
     columnName: "myColumn",
     databaseName: "myDatabase",
     informationType: "PhoneNumber",
@@ -122,6 +125,7 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20180601preview.M
     labelId: "bf91e08c-f4f0-478a-b016-25164b2a65ff",
     labelName: "PII",
     managedInstanceName: "myManagedInstanceName",
+    rank: "High",
     resourceGroupName: "myRG",
     schemaName: "dbo",
     sensitivityLabelSource: "current",
@@ -144,7 +148,7 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20180601preview.M
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rank</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitivity_label_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rank</span><span class="p">:</span> <span class="nx">Optional[SensitivityLabelRank]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitivity_label_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -432,7 +436,7 @@ The ManagedDatabaseSensitivityLabel resource accepts the following [input]({{< r
 <a href="#rank_csharp" style="color: inherit; text-decoration: inherit;">Rank</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sensitivity<wbr>Label<wbr>Rank</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -559,7 +563,7 @@ The ManagedDatabaseSensitivityLabel resource accepts the following [input]({{< r
 <a href="#rank_go" style="color: inherit; text-decoration: inherit;">Rank</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -686,7 +690,7 @@ The ManagedDatabaseSensitivityLabel resource accepts the following [input]({{< r
 <a href="#rank_nodejs" style="color: inherit; text-decoration: inherit;">rank</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Sensitivity<wbr>Label<wbr>Rank</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -813,7 +817,7 @@ The ManagedDatabaseSensitivityLabel resource accepts the following [input]({{< r
 <a href="#rank_python" style="color: inherit; text-decoration: inherit;">rank</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Sensitivity<wbr>Label<wbr>Rank</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -854,6 +858,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managedby_csharp">
+<a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -904,6 +918,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="managedby_go">
+<a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -951,6 +975,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="managedby_nodejs">
+<a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -995,6 +1029,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managed_by_python">
+<a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource that manages the sensitivity label.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

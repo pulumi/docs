@@ -1,7 +1,7 @@
 
 ---
 title: "StorageAccount"
-title_tag: "Resource StorageAccount | Module databoxedge | Package Azure NextGen"
+title_tag: "azure-nextgen.databoxedge.StorageAccount"
 meta_desc: "Explore the StorageAccount resource of the databoxedge module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Storage Account on the  Data Box Edge/Gateway device."
 ---
 
@@ -128,7 +128,7 @@ const storageAccount = new azure_nextgen.databoxedge.latest.StorageAccount("stor
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, DataPolicy]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountStatus]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -336,7 +336,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Data policy of the storage Account.{{% /md %}}</dd>
 
@@ -366,7 +366,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageaccountstatus_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Storage<wbr>Account<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the storage account{{% /md %}}</dd>
 
@@ -413,7 +413,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#datapolicy_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data policy of the storage Account.{{% /md %}}</dd>
 
@@ -443,7 +443,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageaccountstatus_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current status of the storage account{{% /md %}}</dd>
 
@@ -490,7 +490,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#datapolicy_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Data policy of the storage Account.{{% /md %}}</dd>
 
@@ -520,7 +520,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageaccountstatus_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Account<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the storage account{{% /md %}}</dd>
 
@@ -567,7 +567,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#data_policy_python" style="color: inherit; text-decoration: inherit;">data_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Data policy of the storage Account.{{% /md %}}</dd>
 
@@ -597,7 +597,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_account_status_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Account<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the storage account{{% /md %}}</dd>
 
