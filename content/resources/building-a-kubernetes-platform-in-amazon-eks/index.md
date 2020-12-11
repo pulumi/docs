@@ -4,10 +4,10 @@ title: "Building a Kubernetes Platform in Amazon EKS with Pulumi"
 meta_desc: "In this workshop, you will examine how Pulumi interacts with Kubernetes, and build real-world examples of managing Amazon EKS clusters."
 
 # A featured webinar will display first in the list.
-featured: false
+featured: true
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -54,7 +54,7 @@ main:
     # Webinar title.
     title: "Cloud Engineering Concepts: Building a Kubernetes platform in Amazon EKS with Pulumi"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/emUSsZDcu6E"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-12-10T17:00:00-08:00
     # Duration of the webinar.
@@ -70,6 +70,7 @@ main:
         **Target Audience**
 
         Active Pulumi users, and users considering or actively building a Kubernetes platform
+
         **Prerequisites**
 
         Attendees should be familiar with Pulumi and have the Pulumi CLI installed on their machine.
@@ -79,8 +80,6 @@ main:
     presenters:
         - name: Lee Briggs
           role: Community Engineer, Pulumi
-        - name: Yaniv Bossem
-          role: Partner Solutions Architect, DevOps at Amazon Web Services (AWS)
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
@@ -89,13 +88,4 @@ main:
         - How to provision the external-dns add-on to automate DNS entry for Ingress resources
         - How to install cert-manager to automate the creation of TLS certificates for applications
         - Install an example application to show the end-to-end user experience for users.
-
-# The right hand side form section.
-form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: ""
-
-    # HubSpot form id.
-    hubspot_form_id: "3ca277f5-deaa-40c1-8dcf-7ebc40f99f1a"
 ---
