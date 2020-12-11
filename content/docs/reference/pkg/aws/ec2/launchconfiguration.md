@@ -828,7 +828,7 @@ instance.  See Block Devices below for details.
 <a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -1052,7 +1052,7 @@ instance.  See Block Devices below for details.
 <a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -1276,7 +1276,7 @@ instance.  See Block Devices below for details.
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Instance<wbr>Profile</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Instance<wbr>Profile</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -1500,7 +1500,7 @@ instance.  See Block Devices below for details.
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -1963,7 +1963,7 @@ instance.  See Block Devices below for details.
 <a href="#state_iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -2198,7 +2198,7 @@ instance.  See Block Devices below for details.
 <a href="#state_iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -2433,7 +2433,7 @@ instance.  See Block Devices below for details.
 <a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Instance<wbr>Profile</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Instance<wbr>Profile</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -2668,7 +2668,7 @@ instance.  See Block Devices below for details.
 <a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.

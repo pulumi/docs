@@ -283,7 +283,7 @@ The NetworkPolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -293,7 +293,7 @@ The NetworkPolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyspec">Network<wbr>Policy<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkpolicyspec">Network<wbr>Policy<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired behavior for this NetworkPolicy.{{% /md %}}</dd>
 
@@ -617,7 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
 
@@ -1186,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyport">Network<wbr>Policy<wbr>Port<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#networkpolicyport">Network<wbr>Policy<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.{{% /md %}}</dd>
 
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicypeer">Network<wbr>Policy<wbr>Peer<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#networkpolicypeer">Network<wbr>Policy<wbr>Peer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.{{% /md %}}</dd>
 
@@ -1309,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicypeer">Network<wbr>Policy<wbr>Peer<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#networkpolicypeer">Network<wbr>Policy<wbr>Peer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sources which should be able to access the pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all sources (traffic not restricted by source). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the from list.{{% /md %}}</dd>
 
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyport">Network<wbr>Policy<wbr>Port<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#networkpolicyport">Network<wbr>Policy<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ports which should be made accessible on the pods selected for this rule. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.{{% /md %}}</dd>
 
@@ -1474,7 +1474,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#ip_block_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipblock">IPBlock<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipblock">IPBlock<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.{{% /md %}}</dd>
 
@@ -1484,7 +1484,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#namespace_selector_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
 
@@ -1496,7 +1496,7 @@ If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Po
 <a href="#pod_selector_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
 
@@ -1530,7 +1530,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;int, string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a> | <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd>
 
@@ -1557,7 +1557,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a> | <a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd>
 
@@ -1584,7 +1584,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">number | string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd>
 
@@ -1611,7 +1611,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[int, str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a> | <a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd>
 
@@ -1804,7 +1804,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyegressrule">Network<wbr>Policy<wbr>Egress<wbr>Rule<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#networkpolicyegressrule">Network<wbr>Policy<wbr>Egress<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of egress rules to be applied to the selected pods. Outgoing traffic is allowed if there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the traffic), OR if the traffic matches at least one egress rule across all of the NetworkPolicy objects whose podSelector matches the pod. If this field is empty then this NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the pods it selects are isolated by default). This field is beta-level in 1.8{{% /md %}}</dd>
 
@@ -1814,7 +1814,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyingressrule">Network<wbr>Policy<wbr>Ingress<wbr>Rule<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#networkpolicyingressrule">Network<wbr>Policy<wbr>Ingress<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ingress rules to be applied to the selected pods. Traffic is allowed to a pod if there are no NetworkPolicies selecting the pod OR if the traffic source is the pod's local node, OR if the traffic matches at least one ingress rule across all of the NetworkPolicy objects whose podSelector matches the pod. If this field is empty then this NetworkPolicy does not allow any traffic (and serves solely to ensure that the pods it selects are isolated by default).{{% /md %}}</dd>
 
@@ -2503,7 +2503,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2535,7 +2535,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 

@@ -1142,7 +1142,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd>
 <a href="#fetch_opts_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>opts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fetchopts">Fetch<wbr>Opts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fetchopts">Fetch<wbr>Opts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional options to customize the fetching of the Helm chart.{{% /md %}}</dd>
 

@@ -320,7 +320,7 @@ The UserPolicyAttachment resource accepts the following [input]({{< relref "/doc
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>
@@ -349,7 +349,7 @@ The UserPolicyAttachment resource accepts the following [input]({{< relref "/doc
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ The UserPolicyAttachment resource accepts the following [input]({{< relref "/doc
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | User</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | User</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ The UserPolicyAttachment resource accepts the following [input]({{< relref "/doc
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ The following state arguments are supported:
 <a href="#state_user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>
@@ -671,7 +671,7 @@ The following state arguments are supported:
 <a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>
@@ -700,7 +700,7 @@ The following state arguments are supported:
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | User</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | User</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>
@@ -729,7 +729,7 @@ The following state arguments are supported:
 <a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The user the policy should be applied to
 {{% /md %}}</dd>

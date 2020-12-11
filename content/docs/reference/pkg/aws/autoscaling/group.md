@@ -342,7 +342,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#launchconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#metricsgranularity_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Metrics<wbr>Granularity&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Metrics<wbr>Granularity</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -446,7 +446,7 @@ prefix. Conflicts with `name`.
 <a href="#placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -719,7 +719,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#launchconfiguration_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#metricsgranularity_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ prefix. Conflicts with `name`.
 <a href="#placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#launchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Launch<wbr>Configuration</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Launch<wbr>Configuration</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -1141,7 +1141,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#metricsgranularity_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Metrics<wbr>Granularity</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | enums.<wbr>Metrics<wbr>Granularity</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -1200,7 +1200,7 @@ prefix. Conflicts with `name`.
 <a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Placement<wbr>Group</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Placement<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -1473,7 +1473,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#launch_configuration_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -1518,7 +1518,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#metrics_granularity_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Metrics<wbr>Granularity]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | Metrics<wbr>Granularity</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -1577,7 +1577,7 @@ prefix. Conflicts with `name`.
 <a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -2088,7 +2088,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#state_launchconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -2144,7 +2144,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#state_metricsgranularity_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Metrics<wbr>Granularity&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Metrics<wbr>Granularity</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -2215,7 +2215,7 @@ prefix. Conflicts with `name`.
 <a href="#state_placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -2476,7 +2476,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#state_launchconfiguration_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -2532,7 +2532,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#state_metricsgranularity_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -2603,7 +2603,7 @@ prefix. Conflicts with `name`.
 <a href="#state_placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -2864,7 +2864,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#state_launchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Launch<wbr>Configuration</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Launch<wbr>Configuration</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -2920,7 +2920,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#state_metricsgranularity_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Metrics<wbr>Granularity</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | enums.<wbr>Metrics<wbr>Granularity</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -2991,7 +2991,7 @@ prefix. Conflicts with `name`.
 <a href="#state_placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Placement<wbr>Group</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Placement<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
@@ -3252,7 +3252,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a href="#state_launch_configuration_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
 {{% /md %}}</dd>
@@ -3308,7 +3308,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
 <a href="#state_metrics_granularity_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>granularity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Metrics<wbr>Granularity]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | Metrics<wbr>Granularity</span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 {{% /md %}}</dd>
@@ -3379,7 +3379,7 @@ prefix. Conflicts with `name`.
 <a href="#state_placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}</dd>
