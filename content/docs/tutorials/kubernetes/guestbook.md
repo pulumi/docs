@@ -221,9 +221,9 @@ const frontendService = new k8s.core.v1.Service("frontend", {
 // Export the frontend IP.
 export let frontendIp: pulumi.Output<string>;
 if (useLoadBalancer) {
-    frontendIp = frontendService.status.loadBalancer.ingress[0].ip;    
+    frontendIp = frontendService.status.loadBalancer.ingress[0].ip;
 } else {
-    frontendIp = frontendService.spec.clusterIP;    
+    frontendIp = frontendService.spec.clusterIP;
 }
 ```
 
@@ -654,7 +654,7 @@ func main() {
         } else {
             ctx.Export("frontendIP", frontendService.Spec.ApplyT(func(spec *corev1.ServiceSpec) *string {
                 return spec.ClusterIP
-            }))            
+            }))
         }
 
         return nil
@@ -920,7 +920,7 @@ class Guestbook : Stack
 
         if (useLoadBalancer)
         {
-            this.FrontendIp = frontendService.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip ?? status.LoadBalancer.Ingress[0].Hostname);            
+            this.FrontendIp = frontendService.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip ?? status.LoadBalancer.Ingress[0].Hostname);
         }
         else
         {
