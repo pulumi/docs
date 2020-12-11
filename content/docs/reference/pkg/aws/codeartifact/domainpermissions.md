@@ -1,7 +1,7 @@
 
 ---
 title: "DomainPermissions"
-title_tag: "Resource DomainPermissions | Module codeartifact | Package AWS"
+title_tag: "aws.codeartifact.DomainPermissions"
 meta_desc: "Explore the DomainPermissions resource of the codeartifact module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeArtifact Domains Permissions Policy Resource."
 ---
 

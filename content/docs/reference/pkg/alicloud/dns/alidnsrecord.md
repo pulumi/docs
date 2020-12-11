@@ -1,7 +1,7 @@
 
 ---
 title: "AlidnsRecord"
-title_tag: "Resource AlidnsRecord | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.AlidnsRecord"
 meta_desc: "Explore the AlidnsRecord resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Alidns Record resource. For information about Alidns Domain Record and how to use it, see [What is Resource Alidns Record](https://www.alibabacloud.com/help/en/doc-detail/29772.htm)."
 ---
 

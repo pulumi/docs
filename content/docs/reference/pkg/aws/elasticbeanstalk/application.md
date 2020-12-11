@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module elasticbeanstalk | Package AWS"
+title_tag: "aws.elasticbeanstalk.Application"
 meta_desc: "Explore the Application resource of the elasticbeanstalk module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Beanstalk Application Resource. Elastic Beanstalk allows"
 ---
 

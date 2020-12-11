@@ -1,7 +1,7 @@
 
 ---
 title: "BucketMetric"
-title_tag: "Resource BucketMetric | Module s3 | Package AWS"
+title_tag: "aws.s3.BucketMetric"
 meta_desc: "Explore the BucketMetric resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html) resource."
 ---
 

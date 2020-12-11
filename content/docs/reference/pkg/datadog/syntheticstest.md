@@ -795,7 +795,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var testTcp = new Datadog.SyntheticsTest("testTcp", new Datadog.SyntheticsTestArgs
+        var testDns = new Datadog.SyntheticsTest("testDns", new Datadog.SyntheticsTestArgs
         {
             Assertions = 
             {
@@ -849,7 +849,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewSyntheticsTest(ctx, "testTcp", &datadog.SyntheticsTestArgs{
+		_, err := datadog.NewSyntheticsTest(ctx, "testDns", &datadog.SyntheticsTestArgs{
 			Assertions: pulumi.StringMapArray{
 				pulumi.StringMap{
 					"operator": pulumi.String("is"),
@@ -893,7 +893,7 @@ func main() {
 import pulumi
 import pulumi_datadog as datadog
 
-test_tcp = datadog.SyntheticsTest("testTcp",
+test_dns = datadog.SyntheticsTest("testDns",
     assertions=[{
         "operator": "is",
         "property": "A",
@@ -927,7 +927,7 @@ test_tcp = datadog.SyntheticsTest("testTcp",
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
 
-const testTcp = new datadog.SyntheticsTest("test_tcp", {
+const testDns = new datadog.SyntheticsTest("test_dns", {
     assertions: [{
         operator: "is",
         property: "A",

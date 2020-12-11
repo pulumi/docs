@@ -1,7 +1,7 @@
 
 ---
 title: "WindowsFileSystem"
-title_tag: "Resource WindowsFileSystem | Module fsx | Package AWS"
+title_tag: "aws.fsx.WindowsFileSystem"
 meta_desc: "Explore the WindowsFileSystem resource of the fsx module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html) for more information."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "HaproxyLayer"
-title_tag: "Resource HaproxyLayer | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.HaproxyLayer"
 meta_desc: "Explore the HaproxyLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks haproxy layer resource."
 ---
 

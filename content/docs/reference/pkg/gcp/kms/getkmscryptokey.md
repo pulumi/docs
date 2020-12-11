@@ -19,6 +19,102 @@ A CryptoKey is an interface to key material which can be used to encrypt and dec
 Google Cloud KMS KeyRing.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myKeyRing = Output.Create(Gcp.Kms.GetKMSKeyRing.InvokeAsync(new Gcp.Kms.GetKMSKeyRingArgs
+        {
+            Name = "my-key-ring",
+            Location = "us-central1",
+        }));
+        var myCryptoKey = myKeyRing.Apply(myKeyRing => Output.Create(Gcp.Kms.GetKMSCryptoKey.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyArgs
+        {
+            Name = "my-crypto-key",
+            KeyRing = myKeyRing.SelfLink,
+        })));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myKeyRing, err := kms.GetKMSKeyRing(ctx, &kms.GetKMSKeyRingArgs{
+			Name:     "my-key-ring",
+			Location: "us-central1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.GetKMSCryptoKey(ctx, &kms.GetKMSCryptoKeyArgs{
+			Name:    "my-crypto-key",
+			KeyRing: myKeyRing.SelfLink,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_key_ring = gcp.kms.get_kms_key_ring(name="my-key-ring",
+    location="us-central1")
+my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
+    key_ring=my_key_ring.self_link)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myKeyRing = gcp.kms.getKMSKeyRing({
+    name: "my-key-ring",
+    location: "us-central1",
+});
+const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
+    name: "my-crypto-key",
+    keyRing: myKeyRing.selfLink,
+}));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetKMSCryptoKey {#using}
 

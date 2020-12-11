@@ -15,6 +15,80 @@ Use this data source to get the rollout state.
 https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeploymentRollout
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var qa = Output.Create(Gcp.GameServices.GetGameServerDeploymentRollout.InvokeAsync(new Gcp.GameServices.GetGameServerDeploymentRolloutArgs
+        {
+            DeploymentId = "tf-test-deployment-s8sn12jt2c",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gameservices.LookupGameServerDeploymentRollout(ctx, &gameservices.LookupGameServerDeploymentRolloutArgs{
+			DeploymentId: "tf-test-deployment-s8sn12jt2c",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+qa = gcp.gameservices.get_game_server_deployment_rollout(deployment_id="tf-test-deployment-s8sn12jt2c")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const qa = pulumi.output(gcp.gameservices.getGameServerDeploymentRollout({
+    deploymentId: "tf-test-deployment-s8sn12jt2c",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetGameServerDeploymentRollout {#using}
 

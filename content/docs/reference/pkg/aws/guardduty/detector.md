@@ -1,7 +1,7 @@
 
 ---
 title: "Detector"
-title_tag: "Resource Detector | Module guardduty | Package AWS"
+title_tag: "aws.guardduty.Detector"
 meta_desc: "Explore the Detector resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage a GuardDuty detector."
 ---
 

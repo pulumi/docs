@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceAssociation"
-title_tag: "Resource ResourceAssociation | Module ram | Package AWS"
+title_tag: "aws.ram.ResourceAssociation"
 meta_desc: "Explore the ResourceAssociation resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Resource Access Manager (RAM) Resource Association."
 ---
 

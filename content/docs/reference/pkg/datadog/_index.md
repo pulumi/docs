@@ -35,6 +35,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="metricmetadata" title="MetricMetadata"><span class="symbol resource"></span>MetricMetadata</a></li>
     <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="screenboard" title="ScreenBoard"><span class="symbol resource"></span>ScreenBoard</a></li>
     <li><a href="servicelevelobjective" title="ServiceLevelObjective"><span class="symbol resource"></span>ServiceLevelObjective</a></li>
     <li><a href="syntheticsglobalvariable" title="SyntheticsGlobalVariable"><span class="symbol resource"></span>SyntheticsGlobalVariable</a></li>
@@ -49,6 +50,8 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="getdashboardlist" title="GetDashboardList"><span class="symbol function"></span>GetDashboardList</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
+    <li><a href="getpermissions" title="GetPermissions"><span class="symbol function"></span>GetPermissions</a></li>
+    <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
     <li><a href="getsyntheticslocations" title="GetSyntheticsLocations"><span class="symbol function"></span>GetSyntheticsLocations</a></li>
 </ul>
 
@@ -61,7 +64,7 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.11.0</dd>
+	<dd>2.12.0</dd>
 </dl>
 
 

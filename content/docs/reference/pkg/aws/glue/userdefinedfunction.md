@@ -1,7 +1,7 @@
 
 ---
 title: "UserDefinedFunction"
-title_tag: "Resource UserDefinedFunction | Module glue | Package AWS"
+title_tag: "aws.glue.UserDefinedFunction"
 meta_desc: "Explore the UserDefinedFunction resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue User Defined Function Resource."
 ---
 

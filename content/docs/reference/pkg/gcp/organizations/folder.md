@@ -24,6 +24,109 @@ resource must have `roles/resourcemanager.folderCreator`. See the
 [Access Control for Folders Using IAM](https://cloud.google.com/resource-manager/docs/access-control-folders)
 doc for more information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Top-level folder under an organization.
+        var department1 = new Gcp.Organizations.Folder("department1", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Department 1",
+            Parent = "organizations/1234567",
+        });
+        // Folder nested under another folder.
+        var team_abc = new Gcp.Organizations.Folder("team-abc", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Team ABC",
+            Parent = department1.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		department1, err := organizations.NewFolder(ctx, "department1", &organizations.FolderArgs{
+			DisplayName: pulumi.String("Department 1"),
+			Parent:      pulumi.String("organizations/1234567"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = organizations.NewFolder(ctx, "team_abc", &organizations.FolderArgs{
+			DisplayName: pulumi.String("Team ABC"),
+			Parent:      department1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+# Top-level folder under an organization.
+department1 = gcp.organizations.Folder("department1",
+    display_name="Department 1",
+    parent="organizations/1234567")
+# Folder nested under another folder.
+team_abc = gcp.organizations.Folder("team-abc",
+    display_name="Team ABC",
+    parent=department1.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+// Top-level folder under an organization.
+const department1 = new gcp.organizations.Folder("department1", {
+    displayName: "Department 1",
+    parent: "organizations/1234567",
+});
+// Folder nested under another folder.
+const team_abc = new gcp.organizations.Folder("team-abc", {
+    displayName: "Team ABC",
+    parent: department1.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Folder Resource {#create}
@@ -1025,6 +1128,20 @@ Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
 
 
 
+
+
+## Import
+
+
+Folders can be imported using the folder's id, e.g. # Both syntaxes are valid
+
+```sh
+ $ pulumi import gcp:organizations/folder:Folder department1 1234567
+```
+
+```sh
+ $ pulumi import gcp:organizations/folder:Folder department1 folders/1234567
+```
 
 
 

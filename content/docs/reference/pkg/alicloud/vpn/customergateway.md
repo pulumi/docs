@@ -1,7 +1,7 @@
 
 ---
 title: "CustomerGateway"
-title_tag: "Resource CustomerGateway | Module vpn | Package AliCloud"
+title_tag: "alicloud.vpn.CustomerGateway"
 meta_desc: "Explore the CustomerGateway resource of the vpn module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

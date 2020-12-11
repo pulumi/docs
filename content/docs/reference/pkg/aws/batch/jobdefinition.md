@@ -1,7 +1,7 @@
 
 ---
 title: "JobDefinition"
-title_tag: "Resource JobDefinition | Module batch | Package AWS"
+title_tag: "aws.batch.JobDefinition"
 meta_desc: "Explore the JobDefinition resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Batch Job Definition resource."
 ---
 

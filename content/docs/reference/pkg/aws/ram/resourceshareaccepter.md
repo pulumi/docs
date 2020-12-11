@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceShareAccepter"
-title_tag: "Resource ResourceShareAccepter | Module ram | Package AWS"
+title_tag: "aws.ram.ResourceShareAccepter"
 meta_desc: "Explore the ResourceShareAccepter resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Manage accepting a Resource Access Manager (RAM) Resource Share invitation. From a _receiver_ AWS account, accept an invitation to share resources that were shared by a _sender_ AWS account. To create a resource share in the _sender_, see the `aws.ram.ResourceShare` resource."
 ---
 

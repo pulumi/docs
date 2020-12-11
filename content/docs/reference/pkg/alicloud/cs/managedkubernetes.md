@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedKubernetes"
-title_tag: "Resource ManagedKubernetes | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.ManagedKubernetes"
 meta_desc: "Explore the ManagedKubernetes resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
@@ -318,7 +318,10 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -792,7 +795,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -974,7 +977,10 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1448,7 +1454,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -1630,7 +1636,10 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2104,7 +2113,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -2286,7 +2295,10 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2760,7 +2772,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -2839,13 +2851,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="certificateauthority_csharp">
+<a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="connections_csharp">
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Managed<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2919,7 +2942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Managed<wbr>Kubernetes<wbr>Worker<wbr>Node&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2942,13 +2965,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="certificateauthority_go">
+<a href="#certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="connections_go">
 <a href="#connections_go" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3022,7 +3056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">[]Managed<wbr>Kubernetes<wbr>Worker<wbr>Node</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3045,13 +3079,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="certificateauthority_nodejs">
+<a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="connections_nodejs">
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3125,7 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">Managed<wbr>Kubernetes<wbr>Worker<wbr>Node[]</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3148,13 +3193,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="certificate_authority_python">
+<a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="connections_python">
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3228,7 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">Sequence[Managed<wbr>Kubernetes<wbr>Worker<wbr>Node]</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3262,7 +3318,7 @@ Get an existing ManagedKubernetes resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">api_audiences</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[ManagedKubernetesConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">cpu_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_san</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_ssh</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_provider_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclude_autoscaler_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[ManagedKubernetesRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesTaintArgs]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesWorkerNodeArgs]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ManagedKubernetes</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">api_audiences</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[ManagedKubernetesCertificateAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[ManagedKubernetesConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">cpu_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_san</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_ssh</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_provider_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclude_autoscaler_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[ManagedKubernetesRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesTaintArgs]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesWorkerNodeArgs]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ManagedKubernetes</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3410,6 +3466,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificateauthority_csharp">
+<a href="#state_certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientcert_csharp">
 <a href="#state_clientcert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
 </span> 
@@ -3460,7 +3527,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3470,7 +3540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Connections<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3998,7 +4068,7 @@ The following state arguments are supported:
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -4054,7 +4124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4152,6 +4222,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificateauthority_go">
+<a href="#state_certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientcert_go">
 <a href="#state_clientcert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
 </span> 
@@ -4202,7 +4283,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4212,7 +4296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4740,7 +4824,7 @@ The following state arguments are supported:
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -4796,7 +4880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">[]Managed<wbr>Kubernetes<wbr>Worker<wbr>Node</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4894,6 +4978,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificateauthority_nodejs">
+<a href="#state_certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientcert_nodejs">
 <a href="#state_clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span> 
@@ -4944,7 +5039,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4954,7 +5052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5482,7 +5580,7 @@ The following state arguments are supported:
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -5538,7 +5636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">Managed<wbr>Kubernetes<wbr>Worker<wbr>Node[]</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5636,6 +5734,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificate_authority_python">
+<a href="#state_certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedkubernetescertificateauthority">Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_client_cert_python">
 <a href="#state_client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
@@ -5686,7 +5795,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
+* ack.standard : Standard managed clusters.
+* ack.pro.small : Professional managed clusters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5696,7 +5808,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+    <dd>{{% md %}}Map of kubernetes cluster connection information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6224,7 +6336,7 @@ The following state arguments are supported:
 * cloud_efficiency: ultra disks.
 * cloud_ssd: SSDs.
 * cloud_essd: essd.
-* `size`: the size of a data disk. Unit: GiB.
+* `size`: the size of a data disk, at least 40. Unit: GiB.
 * `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd>
 
@@ -6280,7 +6392,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedkubernetesworkernode">Sequence[Managed<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+    <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6513,6 +6625,184 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="managedkubernetescertificateauthority">Managed<wbr>Kubernetes<wbr>Certificate<wbr>Authority</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesCertificateAuthority">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesCertificateAuthorityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.ManagedKubernetesCertificateAuthority.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcert_csharp">
+<a href="#clientcert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkey_csharp">
+<a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustercert_csharp">
+<a href="#clustercert_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded cluster certificate data required to communicate with your cluster. Add this to the certificate-authority-data section of the kubeconfig file for your cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcert_go">
+<a href="#clientcert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkey_go">
+<a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustercert_go">
+<a href="#clustercert_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded cluster certificate data required to communicate with your cluster. Add this to the certificate-authority-data section of the kubeconfig file for your cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcert_nodejs">
+<a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkey_nodejs">
+<a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustercert_nodejs">
+<a href="#clustercert_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded cluster certificate data required to communicate with your cluster. Add this to the certificate-authority-data section of the kubeconfig file for your cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_cert_python">
+<a href="#cluster_cert_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded cluster certificate data required to communicate with your cluster. Add this to the certificate-authority-data section of the kubeconfig file for your cluster.
 {{% /md %}}</dd>
 
 </dl>

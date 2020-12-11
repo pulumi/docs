@@ -1,7 +1,7 @@
 
 ---
 title: "LifecycleHook"
-title_tag: "Resource LifecycleHook | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.LifecycleHook"
 meta_desc: "Explore the LifecycleHook resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

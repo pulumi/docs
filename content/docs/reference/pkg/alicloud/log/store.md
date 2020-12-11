@@ -1,7 +1,7 @@
 
 ---
 title: "Store"
-title_tag: "Resource Store | Module log | Package AliCloud"
+title_tag: "alicloud.log.Store"
 meta_desc: "Explore the Store resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

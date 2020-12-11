@@ -1,7 +1,7 @@
 
 ---
 title: "LicenseConfiguration"
-title_tag: "Resource LicenseConfiguration | Module licensemanager | Package AWS"
+title_tag: "aws.licensemanager.LicenseConfiguration"
 meta_desc: "Explore the LicenseConfiguration resource of the licensemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a License Manager license configuration resource."
 ---
 

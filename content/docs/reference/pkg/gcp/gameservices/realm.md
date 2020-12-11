@@ -18,6 +18,92 @@ To get more information about Realm, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Game Service Realm Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.GameServices.Realm("default", new Gcp.GameServices.RealmArgs
+        {
+            Description = "one of the nine",
+            Location = "global",
+            RealmId = "tf-test-realm",
+            TimeZone = "EST",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gameservices.NewRealm(ctx, "_default", &gameservices.RealmArgs{
+			Description: pulumi.String("one of the nine"),
+			Location:    pulumi.String("global"),
+			RealmId:     pulumi.String("tf-test-realm"),
+			TimeZone:    pulumi.String("EST"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.gameservices.Realm("default",
+    description="one of the nine",
+    location="global",
+    realm_id="tf-test-realm",
+    time_zone="EST")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultRealm = new gcp.gameservices.Realm("default", {
+    description: "one of the nine",
+    location: "global",
+    realmId: "tf-test-realm",
+    timeZone: "EST",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Realm Resource {#create}
@@ -1203,6 +1289,24 @@ https://www.iana.org/time-zones.
 
 
 
+
+
+## Import
+
+
+Realm can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/realm:Realm default projects/{{project}}/locations/{{location}}/realms/{{realm_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/realm:Realm default {{project}}/{{location}}/{{realm_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/realm:Realm default {{location}}/{{realm_id}}
+```
 
 
 

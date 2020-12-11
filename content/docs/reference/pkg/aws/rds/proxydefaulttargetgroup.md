@@ -1,7 +1,7 @@
 
 ---
 title: "ProxyDefaultTargetGroup"
-title_tag: "Resource ProxyDefaultTargetGroup | Module rds | Package AWS"
+title_tag: "aws.rds.ProxyDefaultTargetGroup"
 meta_desc: "Explore the ProxyDefaultTargetGroup resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

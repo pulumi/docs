@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module elasticsearch | Package AliCloud"
+title_tag: "alicloud.elasticsearch.Instance"
 meta_desc: "Explore the Instance resource of the elasticsearch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Elasticsearch instance resource. It contains data nodes, dedicated master node(optional) and etc. It can be associated with private IP whitelists and kibana IP whitelist."
 ---
 

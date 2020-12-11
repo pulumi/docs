@@ -1,7 +1,7 @@
 
 ---
 title: "CodeSigningConfig"
-title_tag: "Resource CodeSigningConfig | Module lambda | Package AWS"
+title_tag: "aws.lambda.CodeSigningConfig"
 meta_desc: "Explore the CodeSigningConfig resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Lambda Code Signing Config resource. A code signing configuration defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail)."
 ---
 

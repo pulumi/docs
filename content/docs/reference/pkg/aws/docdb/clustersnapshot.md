@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterSnapshot"
-title_tag: "Resource ClusterSnapshot | Module docdb | Package AWS"
+title_tag: "aws.docdb.ClusterSnapshot"
 meta_desc: "Explore the ClusterSnapshot resource of the docdb module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a DocDB database cluster snapshot for DocDB clusters."
 ---
 

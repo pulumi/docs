@@ -1,7 +1,7 @@
 
 ---
 title: "EnterpriseUser"
-title_tag: "Resource EnterpriseUser | Module dms | Package AliCloud"
+title_tag: "alicloud.dms.EnterpriseUser"
 meta_desc: "Explore the EnterpriseUser resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS Enterprise User resource. For information about Alidms Enterprise User and how to use it, see [What is Resource Alidms Enterprise User](https://www.alibabacloud.com/help/doc-detail/98001.htm)."
 ---
 

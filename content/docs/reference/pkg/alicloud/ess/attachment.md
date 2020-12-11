@@ -1,7 +1,7 @@
 
 ---
 title: "Attachment"
-title_tag: "Resource Attachment | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.Attachment"
 meta_desc: "Explore the Attachment resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches several ECS instances to a specified scaling group or remove them from it."
 ---
 

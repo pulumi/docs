@@ -1,7 +1,7 @@
 
 ---
 title: "WebAcl"
-title_tag: "Resource WebAcl | Module waf | Package AWS"
+title_tag: "aws.waf.WebAcl"
 meta_desc: "Explore the WebAcl resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Web ACL Resource"
 ---
 

@@ -18,6 +18,644 @@ To get more information about RegionNetworkEndpointGroup, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Region Network Endpoint Group Functions
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var archive = new Gcp.Storage.BucketObject("archive", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("path/to/index.zip"),
+        });
+        var functionNegFunction = new Gcp.CloudFunctions.Function("functionNegFunction", new Gcp.CloudFunctions.FunctionArgs
+        {
+            Description = "My function",
+            Runtime = "nodejs10",
+            AvailableMemoryMb = 128,
+            SourceArchiveBucket = bucket.Name,
+            SourceArchiveObject = archive.Name,
+            TriggerHttp = true,
+            Timeout = 60,
+            EntryPoint = "helloGET",
+        });
+        // Cloud Functions Example
+        var functionNegRegionNetworkEndpointGroup = new Gcp.Compute.RegionNetworkEndpointGroup("functionNegRegionNetworkEndpointGroup", new Gcp.Compute.RegionNetworkEndpointGroupArgs
+        {
+            NetworkEndpointType = "SERVERLESS",
+            Region = "us-central1",
+            CloudFunction = new Gcp.Compute.Inputs.RegionNetworkEndpointGroupCloudFunctionArgs
+            {
+                Function = functionNegFunction.Name,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		archive, err := storage.NewBucketObject(ctx, "archive", &storage.BucketObjectArgs{
+			Bucket: bucket.Name,
+			Source: pulumi.NewFileAsset("path/to/index.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		functionNegFunction, err := cloudfunctions.NewFunction(ctx, "functionNegFunction", &cloudfunctions.FunctionArgs{
+			Description:         pulumi.String("My function"),
+			Runtime:             pulumi.String("nodejs10"),
+			AvailableMemoryMb:   pulumi.Int(128),
+			SourceArchiveBucket: bucket.Name,
+			SourceArchiveObject: archive.Name,
+			TriggerHttp:         pulumi.Bool(true),
+			Timeout:             pulumi.Int(60),
+			EntryPoint:          pulumi.String("helloGET"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionNetworkEndpointGroup(ctx, "functionNegRegionNetworkEndpointGroup", &compute.RegionNetworkEndpointGroupArgs{
+			NetworkEndpointType: pulumi.String("SERVERLESS"),
+			Region:              pulumi.String("us-central1"),
+			CloudFunction: &compute.RegionNetworkEndpointGroupCloudFunctionArgs{
+				Function: functionNegFunction.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+archive = gcp.storage.BucketObject("archive",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("path/to/index.zip"))
+function_neg_function = gcp.cloudfunctions.Function("functionNegFunction",
+    description="My function",
+    runtime="nodejs10",
+    available_memory_mb=128,
+    source_archive_bucket=bucket.name,
+    source_archive_object=archive.name,
+    trigger_http=True,
+    timeout=60,
+    entry_point="helloGET")
+# Cloud Functions Example
+function_neg_region_network_endpoint_group = gcp.compute.RegionNetworkEndpointGroup("functionNegRegionNetworkEndpointGroup",
+    network_endpoint_type="SERVERLESS",
+    region="us-central1",
+    cloud_function=gcp.compute.RegionNetworkEndpointGroupCloudFunctionArgs(
+        function=function_neg_function.name,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const archive = new gcp.storage.BucketObject("archive", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("path/to/index.zip"),
+});
+const functionNegFunction = new gcp.cloudfunctions.Function("functionNegFunction", {
+    description: "My function",
+    runtime: "nodejs10",
+    availableMemoryMb: 128,
+    sourceArchiveBucket: bucket.name,
+    sourceArchiveObject: archive.name,
+    triggerHttp: true,
+    timeout: 60,
+    entryPoint: "helloGET",
+});
+// Cloud Functions Example
+const functionNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndpointGroup("functionNegRegionNetworkEndpointGroup", {
+    networkEndpointType: "SERVERLESS",
+    region: "us-central1",
+    cloudFunction: {
+        "function": functionNegFunction.name,
+    },
+});
+```
+
+{{% /example %}}
+
+### Region Network Endpoint Group Cloudrun
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cloudrunNegService = new Gcp.CloudRun.Service("cloudrunNegService", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 100,
+                    LatestRevision = true,
+                },
+            },
+        });
+        // Cloud Run Example
+        var cloudrunNegRegionNetworkEndpointGroup = new Gcp.Compute.RegionNetworkEndpointGroup("cloudrunNegRegionNetworkEndpointGroup", new Gcp.Compute.RegionNetworkEndpointGroupArgs
+        {
+            NetworkEndpointType = "SERVERLESS",
+            Region = "us-central1",
+            CloudRun = new Gcp.Compute.Inputs.RegionNetworkEndpointGroupCloudRunArgs
+            {
+                Service = cloudrunNegService.Name,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cloudrunNegService, err := cloudrun.NewService(ctx, "cloudrunNegService", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+						},
+					},
+				},
+			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					Percent:        pulumi.Int(100),
+					LatestRevision: pulumi.Bool(true),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionNetworkEndpointGroup(ctx, "cloudrunNegRegionNetworkEndpointGroup", &compute.RegionNetworkEndpointGroupArgs{
+			NetworkEndpointType: pulumi.String("SERVERLESS"),
+			Region:              pulumi.String("us-central1"),
+			CloudRun: &compute.RegionNetworkEndpointGroupCloudRunArgs{
+				Service: cloudrunNegService.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+cloudrun_neg_service = gcp.cloudrun.Service("cloudrunNegService",
+    location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="gcr.io/cloudrun/hello",
+            )],
+        ),
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        percent=100,
+        latest_revision=True,
+    )])
+# Cloud Run Example
+cloudrun_neg_region_network_endpoint_group = gcp.compute.RegionNetworkEndpointGroup("cloudrunNegRegionNetworkEndpointGroup",
+    network_endpoint_type="SERVERLESS",
+    region="us-central1",
+    cloud_run=gcp.compute.RegionNetworkEndpointGroupCloudRunArgs(
+        service=cloudrun_neg_service.name,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cloudrunNegService = new gcp.cloudrun.Service("cloudrunNegService", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [{
+        percent: 100,
+        latestRevision: true,
+    }],
+});
+// Cloud Run Example
+const cloudrunNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndpointGroup("cloudrunNegRegionNetworkEndpointGroup", {
+    networkEndpointType: "SERVERLESS",
+    region: "us-central1",
+    cloudRun: {
+        service: cloudrunNegService.name,
+    },
+});
+```
+
+{{% /example %}}
+
+### Region Network Endpoint Group Appengine
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var appengineNegBucket = new Gcp.Storage.Bucket("appengineNegBucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var appengineNegBucketObject = new Gcp.Storage.BucketObject("appengineNegBucketObject", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = appengineNegBucket.Name,
+            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+        });
+        var appengineNegFlexibleAppVersion = new Gcp.AppEngine.FlexibleAppVersion("appengineNegFlexibleAppVersion", new Gcp.AppEngine.FlexibleAppVersionArgs
+        {
+            VersionId = "v1",
+            Service = "default",
+            Runtime = "nodejs",
+            Entrypoint = new Gcp.AppEngine.Inputs.FlexibleAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(appengineNegBucket.Name, appengineNegBucketObject.Name).Apply(values =>
+                    {
+                        var appengineNegBucketName = values.Item1;
+                        var appengineNegBucketObjectName = values.Item2;
+                        return $"https://storage.googleapis.com/{appengineNegBucketName}/{appengineNegBucketObjectName}";
+                    }),
+                },
+            },
+            LivenessCheck = new Gcp.AppEngine.Inputs.FlexibleAppVersionLivenessCheckArgs
+            {
+                Path = "/",
+            },
+            ReadinessCheck = new Gcp.AppEngine.Inputs.FlexibleAppVersionReadinessCheckArgs
+            {
+                Path = "/",
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            Handlers = 
+            {
+                new Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerArgs
+                {
+                    UrlRegex = ".*\\/my-path\\/*",
+                    SecurityLevel = "SECURE_ALWAYS",
+                    Login = "LOGIN_REQUIRED",
+                    AuthFailAction = "AUTH_FAIL_ACTION_REDIRECT",
+                    StaticFiles = new Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerStaticFilesArgs
+                    {
+                        Path = "my-other-path",
+                        UploadPathRegex = ".*\\/my-path\\/*",
+                    },
+                },
+            },
+            AutomaticScaling = new Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingArgs
+            {
+                CoolDownPeriod = "120s",
+                CpuUtilization = new Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs
+                {
+                    TargetUtilization = 0.5,
+                },
+            },
+            NoopOnDestroy = true,
+        });
+        // App Engine Example
+        var appengineNegRegionNetworkEndpointGroup = new Gcp.Compute.RegionNetworkEndpointGroup("appengineNegRegionNetworkEndpointGroup", new Gcp.Compute.RegionNetworkEndpointGroupArgs
+        {
+            NetworkEndpointType = "SERVERLESS",
+            Region = "us-central1",
+            AppEngine = new Gcp.Compute.Inputs.RegionNetworkEndpointGroupAppEngineArgs
+            {
+                Service = appengineNegFlexibleAppVersion.Service,
+                Version = appengineNegFlexibleAppVersion.VersionId,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		appengineNegBucket, err := storage.NewBucket(ctx, "appengineNegBucket", nil)
+		if err != nil {
+			return err
+		}
+		appengineNegBucketObject, err := storage.NewBucketObject(ctx, "appengineNegBucketObject", &storage.BucketObjectArgs{
+			Bucket: appengineNegBucket.Name,
+			Source: pulumi.NewFileAsset("./test-fixtures/appengine/hello-world.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		appengineNegFlexibleAppVersion, err := appengine.NewFlexibleAppVersion(ctx, "appengineNegFlexibleAppVersion", &appengine.FlexibleAppVersionArgs{
+			VersionId: pulumi.String("v1"),
+			Service:   pulumi.String("default"),
+			Runtime:   pulumi.String("nodejs"),
+			Entrypoint: &appengine.FlexibleAppVersionEntrypointArgs{
+				Shell: pulumi.String("node ./app.js"),
+			},
+			Deployment: &appengine.FlexibleAppVersionDeploymentArgs{
+				Zip: &appengine.FlexibleAppVersionDeploymentZipArgs{
+					SourceUrl: pulumi.All(appengineNegBucket.Name, appengineNegBucketObject.Name).ApplyT(func(_args []interface{}) (string, error) {
+						appengineNegBucketName := _args[0].(string)
+						appengineNegBucketObjectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", appengineNegBucketName, "/", appengineNegBucketObjectName), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			LivenessCheck: &appengine.FlexibleAppVersionLivenessCheckArgs{
+				Path: pulumi.String("/"),
+			},
+			ReadinessCheck: &appengine.FlexibleAppVersionReadinessCheckArgs{
+				Path: pulumi.String("/"),
+			},
+			EnvVariables: pulumi.StringMap{
+				"port": pulumi.String("8080"),
+			},
+			Handlers: appengine.FlexibleAppVersionHandlerArray{
+				&appengine.FlexibleAppVersionHandlerArgs{
+					UrlRegex:       pulumi.String(".*\\/my-path\\/*"),
+					SecurityLevel:  pulumi.String("SECURE_ALWAYS"),
+					Login:          pulumi.String("LOGIN_REQUIRED"),
+					AuthFailAction: pulumi.String("AUTH_FAIL_ACTION_REDIRECT"),
+					StaticFiles: &appengine.FlexibleAppVersionHandlerStaticFilesArgs{
+						Path:            pulumi.String("my-other-path"),
+						UploadPathRegex: pulumi.String(".*\\/my-path\\/*"),
+					},
+				},
+			},
+			AutomaticScaling: &appengine.FlexibleAppVersionAutomaticScalingArgs{
+				CoolDownPeriod: pulumi.String("120s"),
+				CpuUtilization: &appengine.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs{
+					TargetUtilization: pulumi.Float64(0.5),
+				},
+			},
+			NoopOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionNetworkEndpointGroup(ctx, "appengineNegRegionNetworkEndpointGroup", &compute.RegionNetworkEndpointGroupArgs{
+			NetworkEndpointType: pulumi.String("SERVERLESS"),
+			Region:              pulumi.String("us-central1"),
+			AppEngine: &compute.RegionNetworkEndpointGroupAppEngineArgs{
+				Service: appengineNegFlexibleAppVersion.Service,
+				Version: appengineNegFlexibleAppVersion.VersionId,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+appengine_neg_bucket = gcp.storage.Bucket("appengineNegBucket")
+appengine_neg_bucket_object = gcp.storage.BucketObject("appengineNegBucketObject",
+    bucket=appengine_neg_bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+appengine_neg_flexible_app_version = gcp.appengine.FlexibleAppVersion("appengineNegFlexibleAppVersion",
+    version_id="v1",
+    service="default",
+    runtime="nodejs",
+    entrypoint=gcp.appengine.FlexibleAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.FlexibleAppVersionDeploymentArgs(
+        zip=gcp.appengine.FlexibleAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(appengine_neg_bucket.name, appengine_neg_bucket_object.name).apply(lambda appengineNegBucketName, appengineNegBucketObjectName: f"https://storage.googleapis.com/{appengine_neg_bucket_name}/{appengine_neg_bucket_object_name}"),
+        ),
+    ),
+    liveness_check=gcp.appengine.FlexibleAppVersionLivenessCheckArgs(
+        path="/",
+    ),
+    readiness_check=gcp.appengine.FlexibleAppVersionReadinessCheckArgs(
+        path="/",
+    ),
+    env_variables={
+        "port": "8080",
+    },
+    handlers=[gcp.appengine.FlexibleAppVersionHandlerArgs(
+        url_regex=".*\\/my-path\\/*",
+        security_level="SECURE_ALWAYS",
+        login="LOGIN_REQUIRED",
+        auth_fail_action="AUTH_FAIL_ACTION_REDIRECT",
+        static_files=gcp.appengine.FlexibleAppVersionHandlerStaticFilesArgs(
+            path="my-other-path",
+            upload_path_regex=".*\\/my-path\\/*",
+        ),
+    )],
+    automatic_scaling=gcp.appengine.FlexibleAppVersionAutomaticScalingArgs(
+        cool_down_period="120s",
+        cpu_utilization=gcp.appengine.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs(
+            target_utilization=0.5,
+        ),
+    ),
+    noop_on_destroy=True)
+# App Engine Example
+appengine_neg_region_network_endpoint_group = gcp.compute.RegionNetworkEndpointGroup("appengineNegRegionNetworkEndpointGroup",
+    network_endpoint_type="SERVERLESS",
+    region="us-central1",
+    app_engine=gcp.compute.RegionNetworkEndpointGroupAppEngineArgs(
+        service=appengine_neg_flexible_app_version.service,
+        version=appengine_neg_flexible_app_version.version_id,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const appengineNegBucket = new gcp.storage.Bucket("appengineNegBucket", {});
+const appengineNegBucketObject = new gcp.storage.BucketObject("appengineNegBucketObject", {
+    bucket: appengineNegBucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const appengineNegFlexibleAppVersion = new gcp.appengine.FlexibleAppVersion("appengineNegFlexibleAppVersion", {
+    versionId: "v1",
+    service: "default",
+    runtime: "nodejs",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${appengineNegBucket.name}/${appengineNegBucketObject.name}`,
+        },
+    },
+    livenessCheck: {
+        path: "/",
+    },
+    readinessCheck: {
+        path: "/",
+    },
+    envVariables: {
+        port: "8080",
+    },
+    handlers: [{
+        urlRegex: ".*\\/my-path\\/*",
+        securityLevel: "SECURE_ALWAYS",
+        login: "LOGIN_REQUIRED",
+        authFailAction: "AUTH_FAIL_ACTION_REDIRECT",
+        staticFiles: {
+            path: "my-other-path",
+            uploadPathRegex: ".*\\/my-path\\/*",
+        },
+    }],
+    automaticScaling: {
+        coolDownPeriod: "120s",
+        cpuUtilization: {
+            targetUtilization: 0.5,
+        },
+    },
+    noopOnDestroy: true,
+});
+// App Engine Example
+const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndpointGroup("appengineNegRegionNetworkEndpointGroup", {
+    networkEndpointType: "SERVERLESS",
+    region: "us-central1",
+    appEngine: {
+        service: appengineNegFlexibleAppVersion.service,
+        version: appengineNegFlexibleAppVersion.versionId,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegionNetworkEndpointGroup Resource {#create}
@@ -1987,6 +2625,28 @@ will parse them to { function = "function1" } and { function = "function2" } res
 
 
 
+
+
+## Import
+
+
+RegionNetworkEndpointGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default projects/{{project}}/regions/{{region}}/networkEndpointGroups/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup default {{name}}
+```
 
 
 

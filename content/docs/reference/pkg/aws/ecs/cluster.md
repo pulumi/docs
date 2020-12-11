@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module ecs | Package AWS"
+title_tag: "aws.ecs.Cluster"
 meta_desc: "Explore the Cluster resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS cluster."
 ---
 

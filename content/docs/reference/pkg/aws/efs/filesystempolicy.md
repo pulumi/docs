@@ -1,7 +1,7 @@
 
 ---
 title: "FileSystemPolicy"
-title_tag: "Resource FileSystemPolicy | Module efs | Package AWS"
+title_tag: "aws.efs.FileSystemPolicy"
 meta_desc: "Explore the FileSystemPolicy resource of the efs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic File System (EFS) File System Policy resource."
 ---
 

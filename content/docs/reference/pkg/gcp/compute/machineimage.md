@@ -20,6 +20,144 @@ To get more information about MachineImage, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/machine-images)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Machine Image Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vm = new Gcp.Compute.Instance("vm", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = "debian-cloud/debian-9",
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = "default",
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var image = new Gcp.Compute.MachineImage("image", new Gcp.Compute.MachineImageArgs
+        {
+            SourceInstance = vm.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vm, err := compute.NewInstance(ctx, "vm", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String("debian-cloud/debian-9"),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewMachineImage(ctx, "image", &compute.MachineImageArgs{
+			SourceInstance: vm.SelfLink,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vm = gcp.compute.Instance("vm",
+    machine_type="e2-medium",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image="debian-cloud/debian-9",
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network="default",
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+image = gcp.compute.MachineImage("image", source_instance=vm.self_link,
+opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vm = new gcp.compute.Instance("vm", {
+    machineType: "e2-medium",
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    networkInterfaces: [{
+        network: "default",
+    }],
+}, {
+    provider: google_beta,
+});
+const image = new gcp.compute.MachineImage("image", {sourceInstance: vm.selfLink}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MachineImage Resource {#create}
@@ -1469,6 +1607,24 @@ customer-supplied encryption key that protects this resource.
 
 
 
+
+
+## Import
+
+
+MachineImage can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/machineImage:MachineImage default projects/{{project}}/global/machineImages/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/machineImage:MachineImage default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/machineImage:MachineImage default {{name}}
+```
 
 
 

@@ -1,7 +1,7 @@
 
 ---
 title: "CapacityProvider"
-title_tag: "Resource CapacityProvider | Module ecs | Package AWS"
+title_tag: "aws.ecs.CapacityProvider"
 meta_desc: "Explore the CapacityProvider resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS cluster capacity provider. More information can be found on the [ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html)."
 ---
 

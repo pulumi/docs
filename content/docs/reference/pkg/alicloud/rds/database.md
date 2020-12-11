@@ -1,7 +1,7 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Module rds | Package AliCloud"
+title_tag: "alicloud.rds.Database"
 meta_desc: "Explore the Database resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS database resource. A DB database deployed in a DB instance. A DB instance can own multiple databases."
 ---
 

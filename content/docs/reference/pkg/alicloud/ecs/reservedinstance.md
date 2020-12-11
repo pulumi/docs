@@ -1,7 +1,7 @@
 
 ---
 title: "ReservedInstance"
-title_tag: "Resource ReservedInstance | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.ReservedInstance"
 meta_desc: "Explore the ReservedInstance resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Reserved Instance resource."
 ---
 

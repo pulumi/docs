@@ -1,7 +1,7 @@
 
 ---
 title: "ImageExport"
-title_tag: "Resource ImageExport | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.ImageExport"
 meta_desc: "Explore the ImageExport resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Export a custom image to the OSS bucket in the same region as the custom image."
 ---
 

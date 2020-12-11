@@ -1,7 +1,7 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Module alikafka | Package AliCloud"
+title_tag: "alicloud.alikafka.Topic"
 meta_desc: "Explore the Topic resource of the alikafka module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ALIKAFKA topic resource."
 ---
 

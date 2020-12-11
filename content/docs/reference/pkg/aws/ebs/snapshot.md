@@ -1,7 +1,7 @@
 
 ---
 title: "Snapshot"
-title_tag: "Resource Snapshot | Module ebs | Package AWS"
+title_tag: "aws.ebs.Snapshot"
 meta_desc: "Explore the Snapshot resource of the ebs module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Snapshot of an EBS Volume."
 ---
 

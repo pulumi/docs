@@ -1,7 +1,7 @@
 
 ---
 title: "ReadOnlyInstance"
-title_tag: "Resource ReadOnlyInstance | Module rds | Package AliCloud"
+title_tag: "alicloud.rds.ReadOnlyInstance"
 meta_desc: "Explore the ReadOnlyInstance resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS readonly instance resource. "
 ---
 

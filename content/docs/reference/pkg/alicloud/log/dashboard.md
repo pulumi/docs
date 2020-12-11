@@ -1,7 +1,7 @@
 
 ---
 title: "Dashboard"
-title_tag: "Resource Dashboard | Module log | Package AliCloud"
+title_tag: "alicloud.log.Dashboard"
 meta_desc: "Explore the Dashboard resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. The dashboard is a real-time data analysis platform provided by the log service. You can display frequently used query and analysis statements in the form of charts and save statistical charts to the dashboard."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallPolicy"
-title_tag: "Resource FirewallPolicy | Module networkfirewall | Package AWS"
+title_tag: "aws.networkfirewall.FirewallPolicy"
 meta_desc: "Explore the FirewallPolicy resource of the networkfirewall module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Network Firewall Firewall Policy Resource"
 ---
 

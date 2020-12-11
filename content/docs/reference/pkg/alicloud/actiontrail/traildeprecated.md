@@ -1,7 +1,7 @@
 
 ---
 title: "TrailDeprecated"
-title_tag: "Resource TrailDeprecated | Module actiontrail | Package AliCloud"
+title_tag: "alicloud.actiontrail.TrailDeprecated"
 meta_desc: "Explore the TrailDeprecated resource of the actiontrail module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

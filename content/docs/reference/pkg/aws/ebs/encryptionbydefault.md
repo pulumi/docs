@@ -1,7 +1,7 @@
 
 ---
 title: "EncryptionByDefault"
-title_tag: "Resource EncryptionByDefault | Module ebs | Package AWS"
+title_tag: "aws.ebs.EncryptionByDefault"
 meta_desc: "Explore the EncryptionByDefault resource of the ebs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage whether default EBS encryption is enabled for your AWS account in the current AWS region. To manage the default KMS key for the region, see the `aws.ebs.DefaultKmsKey` resource."
 ---
 

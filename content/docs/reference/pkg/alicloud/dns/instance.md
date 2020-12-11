@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.Instance"
 meta_desc: "Explore the Instance resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

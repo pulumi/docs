@@ -18,6 +18,320 @@ To get more information about DeviceRegistry, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/iot/docs/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloudiot Device Registry Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := iot.NewRegistry(ctx, "test_registry", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test_registry = gcp.iot.Registry("test-registry")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test_registry = new gcp.iot.Registry("test-registry", {});
+```
+
+{{% /example %}}
+
+### Cloudiot Device Registry Single Event Notification Configs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var default_telemetry = new Gcp.PubSub.Topic("default-telemetry", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
+        {
+            EventNotificationConfigs = 
+            {
+                new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
+                {
+                    PubsubTopicName = default_telemetry.Id,
+                    SubfolderMatches = "",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := pubsub.NewTopic(ctx, "default_telemetry", nil)
+		if err != nil {
+			return err
+		}
+		_, err = iot.NewRegistry(ctx, "test_registry", &iot.RegistryArgs{
+			EventNotificationConfigs: iot.RegistryEventNotificationConfigItemArray{
+				&iot.RegistryEventNotificationConfigItemArgs{
+					PubsubTopicName:  default_telemetry.ID(),
+					SubfolderMatches: pulumi.String(""),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_telemetry = gcp.pubsub.Topic("default-telemetry")
+test_registry = gcp.iot.Registry("test-registry", event_notification_configs=[gcp.iot.RegistryEventNotificationConfigItemArgs(
+    pubsub_topic_name=default_telemetry.id,
+    subfolder_matches="",
+)])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+const test_registry = new gcp.iot.Registry("test-registry", {eventNotificationConfigs: [{
+    pubsubTopicName: default_telemetry.id,
+    subfolderMatches: "",
+}]});
+```
+
+{{% /example %}}
+
+### Cloudiot Device Registry Full
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var default_devicestatus = new Gcp.PubSub.Topic("default-devicestatus", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var default_telemetry = new Gcp.PubSub.Topic("default-telemetry", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var additional_telemetry = new Gcp.PubSub.Topic("additional-telemetry", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
+        {
+            EventNotificationConfigs = 
+            {
+                new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
+                {
+                    PubsubTopicName = additional_telemetry.Id,
+                    SubfolderMatches = "test/path",
+                },
+                new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
+                {
+                    PubsubTopicName = default_telemetry.Id,
+                    SubfolderMatches = "",
+                },
+            },
+            StateNotificationConfig = 
+            {
+                { "pubsub_topic_name", default_devicestatus.Id },
+            },
+            MqttConfig = 
+            {
+                { "mqtt_enabled_state", "MQTT_ENABLED" },
+            },
+            HttpConfig = 
+            {
+                { "http_enabled_state", "HTTP_ENABLED" },
+            },
+            LogLevel = "INFO",
+            Credentials = 
+            {
+                new Gcp.Iot.Inputs.RegistryCredentialArgs
+                {
+                    PublicKeyCertificate = 
+                    {
+                        { "format", "X509_CERTIFICATE_PEM" },
+                        { "certificate", File.ReadAllText("test-fixtures/rsa_cert.pem") },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_devicestatus = gcp.pubsub.Topic("default-devicestatus")
+default_telemetry = gcp.pubsub.Topic("default-telemetry")
+additional_telemetry = gcp.pubsub.Topic("additional-telemetry")
+test_registry = gcp.iot.Registry("test-registry",
+    event_notification_configs=[
+        gcp.iot.RegistryEventNotificationConfigItemArgs(
+            pubsub_topic_name=additional_telemetry.id,
+            subfolder_matches="test/path",
+        ),
+        gcp.iot.RegistryEventNotificationConfigItemArgs(
+            pubsub_topic_name=default_telemetry.id,
+            subfolder_matches="",
+        ),
+    ],
+    state_notification_config={
+        "pubsub_topic_name": default_devicestatus.id,
+    },
+    mqtt_config={
+        "mqtt_enabled_state": "MQTT_ENABLED",
+    },
+    http_config={
+        "http_enabled_state": "HTTP_ENABLED",
+    },
+    log_level="INFO",
+    credentials=[gcp.iot.RegistryCredentialArgs(
+        public_key_certificate={
+            "format": "X509_CERTIFICATE_PEM",
+            "certificate": (lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+        },
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const default_devicestatus = new gcp.pubsub.Topic("default-devicestatus", {});
+const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+const additional_telemetry = new gcp.pubsub.Topic("additional-telemetry", {});
+const test_registry = new gcp.iot.Registry("test-registry", {
+    eventNotificationConfigs: [
+        {
+            pubsubTopicName: additional_telemetry.id,
+            subfolderMatches: "test/path",
+        },
+        {
+            pubsubTopicName: default_telemetry.id,
+            subfolderMatches: "",
+        },
+    ],
+    stateNotificationConfig: {
+        pubsub_topic_name: default_devicestatus.id,
+    },
+    mqttConfig: {
+        mqtt_enabled_state: "MQTT_ENABLED",
+    },
+    httpConfig: {
+        http_enabled_state: "HTTP_ENABLED",
+    },
+    logLevel: "INFO",
+    credentials: [{
+        publicKeyCertificate: {
+            format: "X509_CERTIFICATE_PEM",
+            certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        },
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Registry Resource {#create}
@@ -1617,6 +1931,28 @@ item.
 
 
 
+
+
+## Import
+
+
+DeviceRegistry can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:iot/registry:Registry default {{project}}/locations/{{region}}/registries/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:iot/registry:Registry default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:iot/registry:Registry default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:iot/registry:Registry default {{name}}
+```
 
 
 

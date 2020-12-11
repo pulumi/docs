@@ -3,7 +3,7 @@ title: "Module types/enums/iam"
 title_tag: "Module types/enums/iam | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/iam"
 meta_desc: "Explore members of the enums/iam module in the @pulumi/aws package."
-git_sha: "fbc6ab50703a2a173ec5f3800d282dc130df7d38"
+git_sha: "915e8c946f2e4ea320451268dae8af053d158698"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ManagedPolicy" data-link-title="ManagedPolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/types/enums/iam/index.ts#L276">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/915e8c946f2e4ea320451268dae8af053d158698/sdk/nodejs/types/enums/iam/index.ts#L276">
         type <strong>ManagedPolicy</strong>
     </a>
 </h3>

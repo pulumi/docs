@@ -20,6 +20,137 @@ To get more information about TargetTcpProxy, see:
 * How-to Guides
     * [Setting Up TCP proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/tcp-proxy)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Target Tcp Proxy Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
+        {
+            TimeoutSec = 1,
+            CheckIntervalSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = 443,
+            },
+        });
+        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+        {
+            Protocol = "TCP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                defaultHealthCheck.Id,
+            },
+        });
+        var defaultTargetTCPProxy = new Gcp.Compute.TargetTCPProxy("defaultTargetTCPProxy", new Gcp.Compute.TargetTCPProxyArgs
+        {
+            BackendService = defaultBackendService.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+			TimeoutSec:       pulumi.Int(1),
+			CheckIntervalSec: pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			Protocol:   pulumi.String("TCP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHealthCheck.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewTargetTCPProxy(ctx, "defaultTargetTCPProxy", &compute.TargetTCPProxyArgs{
+			BackendService: defaultBackendService.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+    timeout_sec=1,
+    check_interval_sec=1,
+    tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+        port=443,
+    ))
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    protocol="TCP",
+    timeout_sec=10,
+    health_checks=[default_health_check.id])
+default_target_tcp_proxy = gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", backend_service=default_backend_service.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+    timeoutSec: 1,
+    checkIntervalSec: 1,
+    tcpHealthCheck: {
+        port: "443",
+    },
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    protocol: "TCP",
+    timeoutSec: 10,
+    healthChecks: [defaultHealthCheck.id],
+});
+const defaultTargetTCPProxy = new gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", {backendService: defaultBackendService.id});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TargetTCPProxy Resource {#create}
@@ -1253,6 +1384,24 @@ Possible values are `NONE` and `PROXY_V1`.
 
 
 
+
+
+## Import
+
+
+TargetTcpProxy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default projects/{{project}}/global/targetTcpProxies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default {{name}}
+```
 
 
 

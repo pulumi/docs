@@ -20,6 +20,84 @@ resource must have `roles/resourcemanager.projectCreator`. See the
 [Access Control for Organizations Using IAM](https://cloud.google.com/resource-manager/docs/access-control-org)
 doc for more information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            OrgId = "1234567",
+            ProjectId = "your-project-id",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+			OrgId:     pulumi.String("1234567"),
+			ProjectId: pulumi.String("your-project-id"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    org_id="1234567",
+    project_id="your-project-id")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("my_project", {
+    orgId: "1234567",
+    projectId: "your-project-id",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UsageExportBucket Resource {#create}
@@ -733,6 +811,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Projects can be imported using the `project_id`, e.g.
+
+```sh
+ $ pulumi import gcp:projects/usageExportBucket:UsageExportBucket my_project your-project-id
+```
 
 
 

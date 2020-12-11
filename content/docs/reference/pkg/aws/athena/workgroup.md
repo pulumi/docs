@@ -1,7 +1,7 @@
 
 ---
 title: "Workgroup"
-title_tag: "Resource Workgroup | Module athena | Package AWS"
+title_tag: "aws.athena.Workgroup"
 meta_desc: "Explore the Workgroup resource of the athena module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Athena Workgroup."
 ---
 

@@ -19,6 +19,128 @@ To get more information about DicomStore, see:
 * How-to Guides
     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Healthcare Dicom Store Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+        {
+            Location = "us-central1",
+        });
+        var @default = new Gcp.Healthcare.DicomStore("default", new Gcp.Healthcare.DicomStoreArgs
+        {
+            Dataset = dataset.Id,
+            NotificationConfig = new Gcp.Healthcare.Inputs.DicomStoreNotificationConfigArgs
+            {
+                PubsubTopic = topic.Id,
+            },
+            Labels = 
+            {
+                { "label1", "labelvalue1" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+		if err != nil {
+			return err
+		}
+		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+			Location: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewDicomStore(ctx, "_default", &healthcare.DicomStoreArgs{
+			Dataset: dataset.ID(),
+			NotificationConfig: &healthcare.DicomStoreNotificationConfigArgs{
+				PubsubTopic: topic.ID(),
+			},
+			Labels: pulumi.StringMap{
+				"label1": pulumi.String("labelvalue1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic("topic")
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.DicomStore("default",
+    dataset=dataset.id,
+    notification_config=gcp.healthcare.DicomStoreNotificationConfigArgs(
+        pubsub_topic=topic.id,
+    ),
+    labels={
+        "label1": "labelvalue1",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const topic = new gcp.pubsub.Topic("topic", {});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const _default = new gcp.healthcare.DicomStore("default", {
+    dataset: dataset.id,
+    notificationConfig: {
+        pubsubTopic: topic.id,
+    },
+    labels: {
+        label1: "labelvalue1",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DicomStore Resource {#create}
@@ -1104,6 +1226,20 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 
 
 
+
+
+## Import
+
+
+DicomStore can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:healthcare/dicomStore:DicomStore default {{dataset}}/dicomStores/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:healthcare/dicomStore:DicomStore default {{dataset}}/{{name}}
+```
 
 
 

@@ -1,7 +1,7 @@
 
 ---
 title: "EndpointAddress"
-title_tag: "Resource EndpointAddress | Module polardb | Package AliCloud"
+title_tag: "alicloud.polardb.EndpointAddress"
 meta_desc: "Explore the EndpointAddress resource of the polardb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a PolarDB endpoint address resource to allocate an Internet endpoint address string for PolarDB instance."
 ---
 

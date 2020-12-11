@@ -1,7 +1,7 @@
 
 ---
 title: "LogGroup"
-title_tag: "Resource LogGroup | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.LogGroup"
 meta_desc: "Explore the LogGroup resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Log Group resource."
 ---
 

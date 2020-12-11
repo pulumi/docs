@@ -1,7 +1,7 @@
 
 ---
 title: "ServerlessKubernetes"
-title_tag: "Resource ServerlessKubernetes | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.ServerlessKubernetes"
 meta_desc: "Explore the ServerlessKubernetes resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.LoadBalancer"
 meta_desc: "Explore the LoadBalancer resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Application Load Balancer resource."
 ---
 

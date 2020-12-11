@@ -2385,6 +2385,28 @@ This is a unique ID associated with this set of parameters.
 
 
 
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

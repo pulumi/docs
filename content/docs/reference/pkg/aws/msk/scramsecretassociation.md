@@ -1,7 +1,7 @@
 
 ---
 title: "ScramSecretAssociation"
-title_tag: "Resource ScramSecretAssociation | Module msk | Package AWS"
+title_tag: "aws.msk.ScramSecretAssociation"
 meta_desc: "Explore the ScramSecretAssociation resource of the msk module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

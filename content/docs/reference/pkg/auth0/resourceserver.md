@@ -12,6 +12,7 @@ meta_desc: "Explore the ResourceServer resource of the Auth0 package, including 
 
 With this resource, you can set up APIs that can be consumed from your authorized applications.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1871,6 +1872,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

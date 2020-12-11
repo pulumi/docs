@@ -1,7 +1,7 @@
 
 ---
 title: "NodeGroup"
-title_tag: "Resource NodeGroup | Module eks | Package AWS"
+title_tag: "aws.eks.NodeGroup"
 meta_desc: "Explore the NodeGroup resource of the eks module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the [EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)."
 ---
 

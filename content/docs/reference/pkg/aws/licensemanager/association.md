@@ -1,7 +1,7 @@
 
 ---
 title: "Association"
-title_tag: "Resource Association | Module licensemanager | Package AWS"
+title_tag: "aws.licensemanager.Association"
 meta_desc: "Explore the Association resource of the licensemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a License Manager association."
 ---
 

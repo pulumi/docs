@@ -1,7 +1,7 @@
 
 ---
 title: "Workflow"
-title_tag: "Resource Workflow | Module glue | Package AWS"
+title_tag: "aws.glue.Workflow"
 meta_desc: "Explore the Workflow resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Workflow resource."
 ---
 

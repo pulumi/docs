@@ -1,7 +1,7 @@
 
 ---
 title: "Recorder"
-title_tag: "Resource Recorder | Module cfg | Package AWS"
+title_tag: "aws.cfg.Recorder"
 meta_desc: "Explore the Recorder resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Config Configuration Recorder. Please note that this resource **does not start** the created recorder automatically."
 ---
 

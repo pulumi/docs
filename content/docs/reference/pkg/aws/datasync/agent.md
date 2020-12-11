@@ -1,7 +1,7 @@
 
 ---
 title: "Agent"
-title_tag: "Resource Agent | Module datasync | Package AWS"
+title_tag: "aws.datasync.Agent"
 meta_desc: "Explore the Agent resource of the datasync module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS DataSync Agent deployed on premises."
 ---
 

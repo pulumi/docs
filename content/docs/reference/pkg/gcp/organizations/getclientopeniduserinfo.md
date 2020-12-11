@@ -23,6 +23,79 @@ use the `https://www.googleapis.com/auth/userinfo.email` scope! You will
 receive an error otherwise.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Exporting An Email
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var me = Output.Create(Gcp.Organizations.GetClientOpenIdUserInfo.InvokeAsync());
+        this.My_email = me.Apply(me => me.Email);
+    }
+
+    [Output("my-email")]
+    public Output<string> My_email { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		me, err := organizations.GetClientOpenIdUserInfo(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("my-email", me.Email)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+me = gcp.organizations.get_client_open_id_user_info()
+pulumi.export("my-email", me.email)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const me = gcp.organizations.getClientOpenIdUserInfo({});
+export const my_email = me.then(me => me.email);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetClientOpenIdUserInfo {#using}
 

@@ -1,7 +1,7 @@
 
 ---
 title: "KubernetesAutoscaler"
-title_tag: "Resource KubernetesAutoscaler | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.KubernetesAutoscaler"
 meta_desc: "Explore the KubernetesAutoscaler resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager cluster-autoscaler in Kubernetes Cluster. "
 ---
 

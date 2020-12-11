@@ -1,7 +1,7 @@
 
 ---
 title: "SigningJob"
-title_tag: "Resource SigningJob | Module signer | Package AWS"
+title_tag: "aws.signer.SigningJob"
 meta_desc: "Explore the SigningJob resource of the signer module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Signer Signing Job."
 ---
 

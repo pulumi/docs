@@ -13,6 +13,98 @@ meta_desc: "Explore the GetRegionSslCertificate function of the compute module, 
 Get info about a Region Google Compute SSL Certificate from its name.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myCert = Output.Create(Gcp.Compute.GetRegionSslCertificate.InvokeAsync(new Gcp.Compute.GetRegionSslCertificateArgs
+        {
+            Name = "my-cert",
+        }));
+        this.Certificate = myCert.Apply(myCert => myCert.Certificate);
+        this.CertificateId = myCert.Apply(myCert => myCert.CertificateId);
+        this.SelfLink = myCert.Apply(myCert => myCert.SelfLink);
+    }
+
+    [Output("certificate")]
+    public Output<string> Certificate { get; set; }
+    [Output("certificateId")]
+    public Output<string> CertificateId { get; set; }
+    [Output("selfLink")]
+    public Output<string> SelfLink { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myCert, err := compute.LookupRegionSslCertificate(ctx, &compute.LookupRegionSslCertificateArgs{
+			Name: "my-cert",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("certificate", myCert.Certificate)
+		ctx.Export("certificateId", myCert.CertificateId)
+		ctx.Export("selfLink", myCert.SelfLink)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_cert = gcp.compute.get_region_ssl_certificate(name="my-cert")
+pulumi.export("certificate", my_cert.certificate)
+pulumi.export("certificateId", my_cert.certificate_id)
+pulumi.export("selfLink", my_cert.self_link)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myCert = gcp.compute.getRegionSslCertificate({
+    name: "my-cert",
+});
+export const certificate = myCert.then(myCert => myCert.certificate);
+export const certificateId = myCert.then(myCert => myCert.certificateId);
+export const selfLink = myCert.then(myCert => myCert.selfLink);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetRegionSslCertificate {#using}
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DomainDkim"
-title_tag: "Resource DomainDkim | Module ses | Package AWS"
+title_tag: "aws.ses.DomainDkim"
 meta_desc: "Explore the DomainDkim resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SES domain DKIM generation resource."
 ---
 

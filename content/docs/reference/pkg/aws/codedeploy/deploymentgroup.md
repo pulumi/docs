@@ -1,7 +1,7 @@
 
 ---
 title: "DeploymentGroup"
-title_tag: "Resource DeploymentGroup | Module codedeploy | Package AWS"
+title_tag: "aws.codedeploy.DeploymentGroup"
 meta_desc: "Explore the DeploymentGroup resource of the codedeploy module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeDeploy Deployment Group for a CodeDeploy Application"
 ---
 

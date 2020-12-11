@@ -19,6 +19,454 @@ To get more information about Subscription, see:
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Pubsub Subscription Push
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
+        {
+            Topic = exampleTopic.Name,
+            AckDeadlineSeconds = 20,
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            PushConfig = new Gcp.PubSub.Inputs.SubscriptionPushConfigArgs
+            {
+                PushEndpoint = "https://example.com/push",
+                Attributes = 
+                {
+                    { "x-goog-version", "v1" },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Topic:              exampleTopic.Name,
+			AckDeadlineSeconds: pulumi.Int(20),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			PushConfig: &pubsub.SubscriptionPushConfigArgs{
+				PushEndpoint: pulumi.String("https://example.com/push"),
+				Attributes: pulumi.StringMap{
+					"x-goog-version": pulumi.String("v1"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    ack_deadline_seconds=20,
+    labels={
+        "foo": "bar",
+    },
+    push_config=gcp.pubsub.SubscriptionPushConfigArgs(
+        push_endpoint="https://example.com/push",
+        attributes={
+            "x-goog-version": "v1",
+        },
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    ackDeadlineSeconds: 20,
+    labels: {
+        foo: "bar",
+    },
+    pushConfig: {
+        pushEndpoint: "https://example.com/push",
+        attributes: {
+            "x-goog-version": "v1",
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Pubsub Subscription Pull
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
+        {
+            Topic = exampleTopic.Name,
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            MessageRetentionDuration = "1200s",
+            RetainAckedMessages = true,
+            AckDeadlineSeconds = 20,
+            ExpirationPolicy = new Gcp.PubSub.Inputs.SubscriptionExpirationPolicyArgs
+            {
+                Ttl = "300000.5s",
+            },
+            RetryPolicy = new Gcp.PubSub.Inputs.SubscriptionRetryPolicyArgs
+            {
+                MinimumBackoff = "10s",
+            },
+            EnableMessageOrdering = false,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Topic: exampleTopic.Name,
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			MessageRetentionDuration: pulumi.String("1200s"),
+			RetainAckedMessages:      pulumi.Bool(true),
+			AckDeadlineSeconds:       pulumi.Int(20),
+			ExpirationPolicy: &pubsub.SubscriptionExpirationPolicyArgs{
+				Ttl: pulumi.String("300000.5s"),
+			},
+			RetryPolicy: &pubsub.SubscriptionRetryPolicyArgs{
+				MinimumBackoff: pulumi.String("10s"),
+			},
+			EnableMessageOrdering: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    labels={
+        "foo": "bar",
+    },
+    message_retention_duration="1200s",
+    retain_acked_messages=True,
+    ack_deadline_seconds=20,
+    expiration_policy=gcp.pubsub.SubscriptionExpirationPolicyArgs(
+        ttl="300000.5s",
+    ),
+    retry_policy=gcp.pubsub.SubscriptionRetryPolicyArgs(
+        minimum_backoff="10s",
+    ),
+    enable_message_ordering=False)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    labels: {
+        foo: "bar",
+    },
+    messageRetentionDuration: "1200s",
+    retainAckedMessages: true,
+    ackDeadlineSeconds: 20,
+    expirationPolicy: {
+        ttl: "300000.5s",
+    },
+    retryPolicy: {
+        minimumBackoff: "10s",
+    },
+    enableMessageOrdering: false,
+});
+```
+
+{{% /example %}}
+
+### Pubsub Subscription Different Project
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+            Project = "topic-project",
+        });
+        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
+        {
+            Project = "subscription-project",
+            Topic = exampleTopic.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", &pubsub.TopicArgs{
+			Project: pulumi.String("topic-project"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Project: pulumi.String("subscription-project"),
+			Topic:   exampleTopic.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic", project="topic-project")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    project="subscription-project",
+    topic=example_topic.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {project: "topic-project"});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    project: "subscription-project",
+    topic: exampleTopic.name,
+});
+```
+
+{{% /example %}}
+
+### Pubsub Subscription Dead Letter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleDeadLetter = new Gcp.PubSub.Topic("exampleDeadLetter", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
+        {
+            Topic = exampleTopic.Name,
+            DeadLetterPolicy = new Gcp.PubSub.Inputs.SubscriptionDeadLetterPolicyArgs
+            {
+                DeadLetterTopic = exampleDeadLetter.Id,
+                MaxDeliveryAttempts = 10,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", nil)
+		if err != nil {
+			return err
+		}
+		exampleDeadLetter, err := pubsub.NewTopic(ctx, "exampleDeadLetter", nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Topic: exampleTopic.Name,
+			DeadLetterPolicy: &pubsub.SubscriptionDeadLetterPolicyArgs{
+				DeadLetterTopic:     exampleDeadLetter.ID(),
+				MaxDeliveryAttempts: pulumi.Int(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_dead_letter = gcp.pubsub.Topic("exampleDeadLetter")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    dead_letter_policy=gcp.pubsub.SubscriptionDeadLetterPolicyArgs(
+        dead_letter_topic=example_dead_letter.id,
+        max_delivery_attempts=10,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleDeadLetter = new gcp.pubsub.Topic("exampleDeadLetter", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    deadLetterPolicy: {
+        deadLetterTopic: exampleDeadLetter.id,
+        maxDeliveryAttempts: 10,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Subscription Resource {#create}
@@ -2968,6 +3416,24 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 
 
+
+
+## Import
+
+
+Subscription can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default projects/{{project}}/subscriptions/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default {{name}}
+```
 
 
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module iot | Package AWS"
+title_tag: "aws.iot.Certificate"
 meta_desc: "Explore the Certificate resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. Creates and manages an AWS IoT certificate."
 ---
 

@@ -30,6 +30,496 @@ To get more information about Service, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloud Run Service Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    LatestRevision = true,
+                    Percent = 100,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+						},
+					},
+				},
+			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					LatestRevision: pulumi.Bool(true),
+					Percent:        pulumi.Int(100),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="gcr.io/cloudrun/hello",
+            )],
+        ),
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        latest_revision=True,
+        percent=100,
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [{
+        latestRevision: true,
+        percent: 100,
+    }],
+});
+```
+
+{{% /example %}}
+
+### Cloud Run Service Multiple Environment Variables
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            AutogenerateRevisionName = true,
+            Location = "us-central1",
+            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+            {
+                Annotations = 
+                {
+                    { "generated-by", "magic-modules" },
+                },
+            },
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Env = 
+                            {
+                                
+                                {
+                                    { "name", "SOURCE" },
+                                    { "value", "remote" },
+                                },
+                                
+                                {
+                                    { "name", "TARGET" },
+                                    { "value", "home" },
+                                },
+                            },
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    LatestRevision = true,
+                    Percent = 100,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			AutogenerateRevisionName: pulumi.Bool(true),
+			Location:                 pulumi.String("us-central1"),
+			Metadata: &cloudrun.ServiceMetadataArgs{
+				Annotations: pulumi.StringMap{
+					"generated-by": pulumi.String("magic-modules"),
+				},
+			},
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Env: pulumi.StringMapArray{
+								pulumi.StringMap{
+									"name":  pulumi.String("SOURCE"),
+									"value": pulumi.String("remote"),
+								},
+								pulumi.StringMap{
+									"name":  pulumi.String("TARGET"),
+									"value": pulumi.String("home"),
+								},
+							},
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+						},
+					},
+				},
+			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					LatestRevision: pulumi.Bool(true),
+					Percent:        pulumi.Int(100),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    autogenerate_revision_name=True,
+    location="us-central1",
+    metadata=gcp.cloudrun.ServiceMetadataArgs(
+        annotations={
+            "generated-by": "magic-modules",
+        },
+    ),
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                env=[
+                    {
+                        "name": "SOURCE",
+                        "value": "remote",
+                    },
+                    {
+                        "name": "TARGET",
+                        "value": "home",
+                    },
+                ],
+                image="gcr.io/cloudrun/hello",
+            )],
+        ),
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        latest_revision=True,
+        percent=100,
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("default", {
+    autogenerateRevisionName: true,
+    location: "us-central1",
+    metadata: {
+        annotations: {
+            "generated-by": "magic-modules",
+        },
+    },
+    template: {
+        spec: {
+            containers: [{
+                envs: [
+                    {
+                        name: "SOURCE",
+                        value: "remote",
+                    },
+                    {
+                        name: "TARGET",
+                        value: "home",
+                    },
+                ],
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [{
+        latestRevision: true,
+        percent: 100,
+    }],
+});
+```
+
+{{% /example %}}
+
+### Cloud Run Service Traffic Split
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+                {
+                    Name = "cloudrun-srv-green",
+                },
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 25,
+                    RevisionName = "cloudrun-srv-green",
+                },
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 75,
+                    RevisionName = "cloudrun-srv-blue",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Metadata: &cloudrun.ServiceTemplateMetadataArgs{
+					Name: pulumi.String("cloudrun-srv-green"),
+				},
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+						},
+					},
+				},
+			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					Percent:      pulumi.Int(25),
+					RevisionName: pulumi.String("cloudrun-srv-green"),
+				},
+				&cloudrun.ServiceTrafficArgs{
+					Percent:      pulumi.Int(75),
+					RevisionName: pulumi.String("cloudrun-srv-blue"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
+            name="cloudrun-srv-green",
+        ),
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="gcr.io/cloudrun/hello",
+            )],
+        ),
+    ),
+    traffics=[
+        gcp.cloudrun.ServiceTrafficArgs(
+            percent=25,
+            revision_name="cloudrun-srv-green",
+        ),
+        gcp.cloudrun.ServiceTrafficArgs(
+            percent=75,
+            revision_name="cloudrun-srv-blue",
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        metadata: {
+            name: "cloudrun-srv-green",
+        },
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [
+        {
+            percent: 25,
+            revisionName: "cloudrun-srv-green",
+        },
+        {
+            percent: 75,
+            // This revision needs to already exist
+            revisionName: "cloudrun-srv-blue",
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -5017,6 +5507,24 @@ false when RevisionName is non-empty.
 
 
 
+
+
+## Import
+
+
+Service can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default locations/{{location}}/namespaces/{{project}}/services/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{name}}
+```
 
 
 

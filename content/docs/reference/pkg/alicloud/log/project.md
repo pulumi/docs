@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module log | Package AliCloud"
+title_tag: "alicloud.log.Project"
 meta_desc: "Explore the Project resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

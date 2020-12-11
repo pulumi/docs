@@ -1,7 +1,7 @@
 
 ---
 title: "Disk"
-title_tag: "Resource Disk | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.Disk"
 meta_desc: "Explore the Disk resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a ECS disk resource."
 ---
 

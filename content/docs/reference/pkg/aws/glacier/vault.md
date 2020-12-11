@@ -1,7 +1,7 @@
 
 ---
 title: "Vault"
-title_tag: "Resource Vault | Module glacier | Package AWS"
+title_tag: "aws.glacier.Vault"
 meta_desc: "Explore the Vault resource of the glacier module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glacier Vault Resource. You can refer to the [Glacier Developer Guide](https://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-vaults.html) for a full explanation of the Glacier Vault functionality"
 ---
 

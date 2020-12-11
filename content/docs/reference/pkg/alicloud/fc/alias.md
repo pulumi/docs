@@ -1,7 +1,7 @@
 
 ---
 title: "Alias"
-title_tag: "Resource Alias | Module fc | Package AliCloud"
+title_tag: "alicloud.fc.Alias"
 meta_desc: "Explore the Alias resource of the fc module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Function Compute service alias. Creates an alias that points to the specified Function Compute service version. "
 ---
 

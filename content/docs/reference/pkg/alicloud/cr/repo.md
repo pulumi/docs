@@ -1,7 +1,7 @@
 
 ---
 title: "Repo"
-title_tag: "Resource Repo | Module cr | Package AliCloud"
+title_tag: "alicloud.cr.Repo"
 meta_desc: "Explore the Repo resource of the cr module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager Container Registry repositories."
 ---
 

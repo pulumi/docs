@@ -12,6 +12,7 @@ meta_desc: "Explore the Email resource of the Auth0 package, including examples,
 
 With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email providers so you can route all emails that are part of Auth0's authentication workflows through the supported high-volume email service of your choice.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1393,6 +1394,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

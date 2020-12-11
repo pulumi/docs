@@ -1,7 +1,7 @@
 
 ---
 title: "ProxyProtocolPolicy"
-title_tag: "Resource ProxyProtocolPolicy | Module ec2 | Package AWS"
+title_tag: "aws.ec2.ProxyProtocolPolicy"
 meta_desc: "Explore the ProxyProtocolPolicy resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend."
 ---
 

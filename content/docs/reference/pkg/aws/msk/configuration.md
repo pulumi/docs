@@ -1,7 +1,7 @@
 
 ---
 title: "Configuration"
-title_tag: "Resource Configuration | Module msk | Package AWS"
+title_tag: "aws.msk.Configuration"
 meta_desc: "Explore the Configuration resource of the msk module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon Managed Streaming for Kafka configuration. More information can be found on the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration.html)."
 ---
 

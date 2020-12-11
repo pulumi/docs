@@ -1,7 +1,7 @@
 
 ---
 title: "ImageCache"
-title_tag: "Resource ImageCache | Module eci | Package AliCloud"
+title_tag: "alicloud.eci.ImageCache"
 meta_desc: "Explore the ImageCache resource of the eci module, including examples, input properties, output properties, lookup functions, and supporting types. An ECI Image Cache can help user to solve the time-consuming problem of image pull. For information about Alicloud ECI Image Cache and how to use it, see [What is Resource Alicloud ECI Image Cache](https://www.alibabacloud.com/help/doc-detail/146891.htm)."
 ---
 

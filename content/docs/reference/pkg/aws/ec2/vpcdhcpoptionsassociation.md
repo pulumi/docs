@@ -1,7 +1,7 @@
 
 ---
 title: "VpcDhcpOptionsAssociation"
-title_tag: "Resource VpcDhcpOptionsAssociation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcDhcpOptionsAssociation"
 meta_desc: "Explore the VpcDhcpOptionsAssociation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC DHCP Options Association resource."
 ---
 

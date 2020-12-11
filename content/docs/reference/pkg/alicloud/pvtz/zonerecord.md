@@ -1,7 +1,7 @@
 
 ---
 title: "ZoneRecord"
-title_tag: "Resource ZoneRecord | Module pvtz | Package AliCloud"
+title_tag: "alicloud.pvtz.ZoneRecord"
 meta_desc: "Explore the ZoneRecord resource of the pvtz module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

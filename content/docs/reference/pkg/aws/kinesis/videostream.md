@@ -1,7 +1,7 @@
 
 ---
 title: "VideoStream"
-title_tag: "Resource VideoStream | Module kinesis | Package AWS"
+title_tag: "aws.kinesis.VideoStream"
 meta_desc: "Explore the VideoStream resource of the kinesis module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), playback, and other processing."
 ---
 

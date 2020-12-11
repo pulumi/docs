@@ -1,7 +1,7 @@
 
 ---
 title: "BackendServer"
-title_tag: "Resource BackendServer | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.BackendServer"
 meta_desc: "Explore the BackendServer resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. Add a group of backend servers (ECS or ENI instance) to the Server Load Balancer or remove them from it."
 ---
 

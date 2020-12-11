@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceDirectory"
-title_tag: "Resource ResourceDirectory | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.ResourceDirectory"
 meta_desc: "Explore the ResourceDirectory resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Manager Resource Directory resource. Resource Directory enables you to establish an organizational structure for the resources used by applications of your enterprise. You can plan, build, and manage the resources in a centralized manner by using only one resource directory."
 ---
 

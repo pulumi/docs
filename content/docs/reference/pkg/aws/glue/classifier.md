@@ -1,7 +1,7 @@
 
 ---
 title: "Classifier"
-title_tag: "Resource Classifier | Module glue | Package AWS"
+title_tag: "aws.glue.Classifier"
 meta_desc: "Explore the Classifier resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Classifier resource."
 ---
 

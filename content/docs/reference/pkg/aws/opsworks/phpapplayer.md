@@ -1,7 +1,7 @@
 
 ---
 title: "PhpAppLayer"
-title_tag: "Resource PhpAppLayer | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.PhpAppLayer"
 meta_desc: "Explore the PhpAppLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks PHP application layer resource."
 ---
 

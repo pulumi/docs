@@ -1054,6 +1054,216 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.ApiToken">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ApiToken</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="p">:</span> <span class="n">Union[ApiTokenConditionArgs, Mapping[str, Any], Awaitable[Union[ApiTokenConditionArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ApiTokenPolicyArgs, Mapping[str, Any], Awaitable[Union[ApiTokenPolicyArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ApiTokenPolicyArgs, Mapping[str, Any], Awaitable[Union[ApiTokenPolicyArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ApiToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource which manages Cloudflare API tokens.</p>
+<p>Read more about permission groups and their applicable scopes in
+<a class="reference external" href="https://developers.cloudflare.com/api/tokens/create/permissions">the official documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="nb">all</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_api_token_permission_groups</span><span class="p">()</span>
+<span class="c1"># Token allowed to create new tokens.</span>
+<span class="c1"># Can only be used from specific ip range.</span>
+<span class="n">api_token_create</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiToken</span><span class="p">(</span><span class="s2">&quot;apiTokenCreate&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;api_token_create&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenPolicyArgs</span><span class="p">(</span>
+        <span class="n">permission_groups</span><span class="o">=</span><span class="p">[</span><span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;API Tokens Write&quot;</span><span class="p">]],</span>
+        <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+            <span class="sa">f</span><span class="s2">&quot;com.cloudflare.api.user.</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">)],</span>
+    <span class="n">condition</span><span class="o">=</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenConditionArgs</span><span class="p">(</span>
+        <span class="n">request_ip</span><span class="o">=</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenConditionRequestIpArgs</span><span class="p">(</span>
+            <span class="n">ins</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;192.0.2.1/32&quot;</span><span class="p">],</span>
+            <span class="n">not_ins</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;198.51.100.1/32&quot;</span><span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="nb">all</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_api_token_permission_groups</span><span class="p">()</span>
+<span class="c1"># Token allowed to read audit logs from all accounts.</span>
+<span class="n">logs_account_all</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiToken</span><span class="p">(</span><span class="s2">&quot;logsAccountAll&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;logs_account_all&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenPolicyArgs</span><span class="p">(</span>
+        <span class="n">permission_groups</span><span class="o">=</span><span class="p">[</span><span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;Access: Audit Logs Read&quot;</span><span class="p">]],</span>
+        <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;com.cloudflare.api.account.*&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">)])</span>
+<span class="c1"># Token allowed to read audit logs from specific account.</span>
+<span class="n">logs_account</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiToken</span><span class="p">(</span><span class="s2">&quot;logsAccount&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;logs_account&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenPolicyArgs</span><span class="p">(</span>
+        <span class="n">permission_groups</span><span class="o">=</span><span class="p">[</span><span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;Access: Audit Logs Read&quot;</span><span class="p">]],</span>
+        <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+            <span class="sa">f</span><span class="s2">&quot;com.cloudflare.api.account.</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;account_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">)])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="nb">all</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_api_token_permission_groups</span><span class="p">()</span>
+<span class="c1"># Token allowed to edit DNS entries and TLS certs for specific zone.</span>
+<span class="n">dns_tls_edit</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiToken</span><span class="p">(</span><span class="s2">&quot;dnsTlsEdit&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dns_tls_edit&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenPolicyArgs</span><span class="p">(</span>
+        <span class="n">permission_groups</span><span class="o">=</span><span class="p">[</span>
+            <span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;DNS Write&quot;</span><span class="p">],</span>
+            <span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;SSL and Certificates Write&quot;</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+            <span class="sa">f</span><span class="s2">&quot;com.cloudflare.api.account.zone.</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;zone_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">)])</span>
+<span class="c1"># Token allowed to edit DNS entries for all zones except one.</span>
+<span class="n">dns_tls_edit_all_except_one</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiToken</span><span class="p">(</span><span class="s2">&quot;dnsTlsEditAllExceptOne&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dns_tls_edit_all_except_one&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenPolicyArgs</span><span class="p">(</span>
+            <span class="n">permission_groups</span><span class="o">=</span><span class="p">[</span><span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;DNS Write&quot;</span><span class="p">]],</span>
+            <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;com.cloudflare.api.account.zone.*&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">),</span>
+        <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenPolicyArgs</span><span class="p">(</span>
+            <span class="n">permission_groups</span><span class="o">=</span><span class="p">[</span><span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;DNS Write&quot;</span><span class="p">]],</span>
+            <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+                <span class="sa">f</span><span class="s2">&quot;com.cloudflare.api.account.zone.</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;zone_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="n">effect</span><span class="o">=</span><span class="s2">&quot;deny&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+<span class="c1"># Token allowed to edit DNS entries for all zones from specific account.</span>
+<span class="n">dns_edit_all_account</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiToken</span><span class="p">(</span><span class="s2">&quot;dnsEditAllAccount&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dns_edit_all_account&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ApiTokenPolicyArgs</span><span class="p">(</span>
+        <span class="n">permission_groups</span><span class="o">=</span><span class="p">[</span><span class="nb">all</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;DNS Write&quot;</span><span class="p">]],</span>
+        <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+            <span class="sa">f</span><span class="s2">&quot;com.cloudflare.api.account.</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;account_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+                <span class="s2">&quot;com.cloudflare.api.account.zone.*&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="p">}),</span>
+        <span class="p">},</span>
+    <span class="p">)])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ApiTokenConditionArgs'</em><em>]</em><em>]</em>) – Condition block. See the definition below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the APIToken.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ApiTokenPolicyArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Permissions policy. Multiple policy blocks can be defined.
+See the definition below.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="p">:</span> <span class="n">Union[ApiTokenConditionArgs, Mapping[str, Any], Awaitable[Union[ApiTokenConditionArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issued_on</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">modified_on</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ApiTokenPolicyArgs, Mapping[str, Any], Awaitable[Union[ApiTokenPolicyArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ApiTokenPolicyArgs, Mapping[str, Any], Awaitable[Union[ApiTokenPolicyArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.api_token.ApiToken<a class="headerlink" href="#pulumi_cloudflare.ApiToken.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApiToken resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ApiTokenConditionArgs'</em><em>]</em><em>]</em>) – Condition block. See the definition below.</p></li>
+<li><p><strong>issued_on</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RFC3339 timestamp of when the API Token was issued.</p></li>
+<li><p><strong>modified_on</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RFC3339 timestamp of when the API Token was last modified.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the APIToken.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ApiTokenPolicyArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Permissions policy. Multiple policy blocks can be defined.
+See the definition below.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the API Token.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.condition">
+<em class="property">property </em><code class="sig-name descname">condition</code><a class="headerlink" href="#pulumi_cloudflare.ApiToken.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Condition block. See the definition below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.issued_on">
+<em class="property">property </em><code class="sig-name descname">issued_on</code><a class="headerlink" href="#pulumi_cloudflare.ApiToken.issued_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RFC3339 timestamp of when the API Token was issued.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.modified_on">
+<em class="property">property </em><code class="sig-name descname">modified_on</code><a class="headerlink" href="#pulumi_cloudflare.ApiToken.modified_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RFC3339 timestamp of when the API Token was last modified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_cloudflare.ApiToken.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the APIToken.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.policies">
+<em class="property">property </em><code class="sig-name descname">policies</code><a class="headerlink" href="#pulumi_cloudflare.ApiToken.policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permissions policy. Multiple policy blocks can be defined.
+See the definition below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#pulumi_cloudflare.ApiToken.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the API Token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ApiToken.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ApiToken.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ApiToken.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.Argo">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Argo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smart_routing</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tiered_caching</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.</p>
@@ -1420,6 +1630,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.AwaitableGetApiTokenPermissionGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetApiTokenPermissionGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetApiTokenPermissionGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.AwaitableGetIpRangesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">china_ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">china_ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1437,6 +1652,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_cloudflare.AwaitableGetWafRulesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafRulesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafRulesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_cloudflare.AwaitableGetZoneDnssecResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetZoneDnssecResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest_algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetZoneDnssecResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -2414,6 +2634,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.GetApiTokenPermissionGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetApiTokenPermissionGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetApiTokenPermissionGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getApiTokenPermissionGroups.</p>
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetApiTokenPermissionGroupsResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_cloudflare.GetApiTokenPermissionGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetApiTokenPermissionGroupsResult.permissions">
+<em class="property">property </em><code class="sig-name descname">permissions</code><a class="headerlink" href="#pulumi_cloudflare.GetApiTokenPermissionGroupsResult.permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of permission groups where keys are human-readable permission names
+and values are permission IDs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.GetIpRangesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">china_ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">china_ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getIpRanges.</p>
@@ -2517,6 +2756,78 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.GetWafRulesResult.rules">
 <em class="property">property </em><code class="sig-name descname">rules</code><a class="headerlink" href="#pulumi_cloudflare.GetWafRulesResult.rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of WAF Rules details. Full list below:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetZoneDnssecResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest_algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getZoneDnssec.</p>
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.algorithm">
+<em class="property">property </em><code class="sig-name descname">algorithm</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zone DNSSEC algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.digest">
+<em class="property">property </em><code class="sig-name descname">digest</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.digest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zone DNSSEC digest.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.digest_algorithm">
+<em class="property">property </em><code class="sig-name descname">digest_algorithm</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.digest_algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Digest algorithm use for Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.digest_type">
+<em class="property">property </em><code class="sig-name descname">digest_type</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.digest_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Digest Type for Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.ds">
+<em class="property">property </em><code class="sig-name descname">ds</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.ds" title="Permalink to this definition">¶</a></dt>
+<dd><p>DS for the Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.flags">
+<em class="property">property </em><code class="sig-name descname">flags</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zone DNSSEC flags.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.key_tag">
+<em class="property">property </em><code class="sig-name descname">key_tag</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.key_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key Tag for the Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.key_type">
+<em class="property">property </em><code class="sig-name descname">key_type</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.key_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key type used for Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.public_key">
+<em class="property">property </em><code class="sig-name descname">public_key</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.public_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public Key for the Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetZoneDnssecResult.status">
+<em class="property">property </em><code class="sig-name descname">status</code><a class="headerlink" href="#pulumi_cloudflare.GetZoneDnssecResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the Zone DNSSEC.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5836,6 +6147,171 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.ZoneDnssec">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ZoneDnssec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">modified_on</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Cloudflare Zone DNSSEC resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">example_zone_dnssec</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ZoneDnssec</span><span class="p">(</span><span class="s2">&quot;exampleZoneDnssec&quot;</span><span class="p">,</span> <span class="n">zone_id</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Zone DNSSEC resource can be imported using a zone ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/zoneDnssec:ZoneDnssec example d41d8cd98f00b204e9800998ecf8427e
+
+where* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - zone ID, as returned from <span class="sb">`</span>API &lt;https://api.cloudflare.com/#zone-list-zones&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>modified_on</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone DNSSEC updated time.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone id for the zone.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">algorithm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest_algorithm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digest_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ds</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flags</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_tag</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">modified_on</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.zone_dnssec.ZoneDnssec<a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ZoneDnssec resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone DNSSEC algorithm.</p></li>
+<li><p><strong>digest</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone DNSSEC digest.</p></li>
+<li><p><strong>digest_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Digest algorithm use for Zone DNSSEC.</p></li>
+<li><p><strong>digest_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Digest Type for Zone DNSSEC.</p></li>
+<li><p><strong>ds</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DS for the Zone DNSSEC.</p></li>
+<li><p><strong>flags</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Zone DNSSEC flags.</p></li>
+<li><p><strong>key_tag</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Key Tag for the Zone DNSSEC.</p></li>
+<li><p><strong>key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Key type used for Zone DNSSEC.</p></li>
+<li><p><strong>modified_on</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone DNSSEC updated time.</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Public Key for the Zone DNSSEC.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the Zone DNSSEC.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone id for the zone.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.algorithm">
+<em class="property">property </em><code class="sig-name descname">algorithm</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zone DNSSEC algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.digest">
+<em class="property">property </em><code class="sig-name descname">digest</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.digest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zone DNSSEC digest.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.digest_algorithm">
+<em class="property">property </em><code class="sig-name descname">digest_algorithm</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.digest_algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Digest algorithm use for Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.digest_type">
+<em class="property">property </em><code class="sig-name descname">digest_type</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.digest_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Digest Type for Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.ds">
+<em class="property">property </em><code class="sig-name descname">ds</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.ds" title="Permalink to this definition">¶</a></dt>
+<dd><p>DS for the Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.flags">
+<em class="property">property </em><code class="sig-name descname">flags</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zone DNSSEC flags.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.key_tag">
+<em class="property">property </em><code class="sig-name descname">key_tag</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.key_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key Tag for the Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.key_type">
+<em class="property">property </em><code class="sig-name descname">key_type</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.key_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key type used for Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.modified_on">
+<em class="property">property </em><code class="sig-name descname">modified_on</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.modified_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zone DNSSEC updated time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.public_key">
+<em class="property">property </em><code class="sig-name descname">public_key</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.public_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public Key for the Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.status">
+<em class="property">property </em><code class="sig-name descname">status</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the Zone DNSSEC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.zone_id">
+<em class="property">property </em><code class="sig-name descname">zone_id</code><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zone id for the zone.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ZoneDnssec.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneDnssec.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.ZoneLockdown">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ZoneLockdown</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configurations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ZoneLockdownConfigurationArgs, Mapping[str, Any], Awaitable[Union[ZoneLockdownConfigurationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ZoneLockdownConfigurationArgs, Mapping[str, Any], Awaitable[Union[ZoneLockdownConfigurationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">urls</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges.</p>
@@ -6097,6 +6573,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_cloudflare.get_api_token_permission_groups">
+<code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_api_token_permission_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.get_api_token_permission_groups.AwaitableGetApiTokenPermissionGroupsResult<a class="headerlink" href="#pulumi_cloudflare.get_api_token_permission_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to look up <a class="reference external" href="https://developers.cloudflare.com/api/tokens/create/permissions">API Token Permission Groups</a>. Commonly used as references within <cite>``ApiToken`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/api_token.html">https://www.terraform.io/docs/providers/cloudflare/r/api_token.html</a>&gt;`_ resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_api_token_permission_groups</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;dnsReadPermissionId&quot;</span><span class="p">,</span> <span class="n">test</span><span class="o">.</span><span class="n">permissions</span><span class="p">[</span><span class="s2">&quot;DNS Read&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_cloudflare.get_ip_ranges">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.get_ip_ranges.AwaitableGetIpRangesResult<a class="headerlink" href="#pulumi_cloudflare.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the <a class="reference external" href="https://www.cloudflare.com/ips/">IP ranges</a> of Cloudflare edge nodes.</p>
@@ -6173,6 +6662,23 @@ values must match in order to be included, see below for full list.</p></li>
 <li><p><strong>package_id</strong> (<em>str</em>) – The ID of the WAF Rule Package in which to search for the WAF Rules.</p></li>
 <li><p><strong>zone_id</strong> (<em>str</em>) – The ID of the DNS zone in which to search for the WAF Rules.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_cloudflare.get_zone_dnssec">
+<code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_zone_dnssec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.get_zone_dnssec.AwaitableGetZoneDnssecResult<a class="headerlink" href="#pulumi_cloudflare.get_zone_dnssec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to look up [Zone][1] DNSSEC settings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_zone_dnssec</span><span class="p">(</span><span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;&lt;zone_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>zone_id</strong> (<em>str</em>) – The zone id for the zone.</p>
 </dd>
 </dl>
 </dd></dl>

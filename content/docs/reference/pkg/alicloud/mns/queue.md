@@ -1,7 +1,7 @@
 
 ---
 title: "Queue"
-title_tag: "Resource Queue | Module mns | Package AliCloud"
+title_tag: "alicloud.mns.Queue"
 meta_desc: "Explore the Queue resource of the mns module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

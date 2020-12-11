@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationRecorder"
-title_tag: "Resource ConfigurationRecorder | Module cfg | Package AliCloud"
+title_tag: "alicloud.cfg.ConfigurationRecorder"
 meta_desc: "Explore the ConfigurationRecorder resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Alicloud Config Configuration Recorder resource. Cloud Config is a specialized service for evaluating resources. Cloud Config tracks configuration changes of your resources and evaluates configuration compliance. Cloud Config can help you evaluate numerous resources and maintain the continuous compliance of your cloud infrastructure."
 ---
 

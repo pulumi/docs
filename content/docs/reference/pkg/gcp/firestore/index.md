@@ -20,6 +20,150 @@ To get more information about Index, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/firestore/docs/query-data/indexing)
 
+> **Warning:** This resource creates a Firestore Index on a project that already has
+Firestore enabled. If you haven't already enabled it, you can create a
+`gcp.appengine.Application` resource with `database_type` set to
+`"CLOUD_FIRESTORE"` to do so. Your Firestore location will be the same as
+the App Engine location specified.
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Firestore Index Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_index = new Gcp.Firestore.Index("my-index", new Gcp.Firestore.IndexArgs
+        {
+            Collection = "chatrooms",
+            Fields = 
+            {
+                new Gcp.Firestore.Inputs.IndexFieldArgs
+                {
+                    FieldPath = "name",
+                    Order = "ASCENDING",
+                },
+                new Gcp.Firestore.Inputs.IndexFieldArgs
+                {
+                    FieldPath = "description",
+                    Order = "DESCENDING",
+                },
+                new Gcp.Firestore.Inputs.IndexFieldArgs
+                {
+                    FieldPath = "__name__",
+                    Order = "DESCENDING",
+                },
+            },
+            Project = "my-project-name",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/firestore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := firestore.NewIndex(ctx, "my_index", &firestore.IndexArgs{
+			Collection: pulumi.String("chatrooms"),
+			Fields: firestore.IndexFieldArray{
+				&firestore.IndexFieldArgs{
+					FieldPath: pulumi.String("name"),
+					Order:     pulumi.String("ASCENDING"),
+				},
+				&firestore.IndexFieldArgs{
+					FieldPath: pulumi.String("description"),
+					Order:     pulumi.String("DESCENDING"),
+				},
+				&firestore.IndexFieldArgs{
+					FieldPath: pulumi.String("__name__"),
+					Order:     pulumi.String("DESCENDING"),
+				},
+			},
+			Project: pulumi.String("my-project-name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_index = gcp.firestore.Index("my-index",
+    collection="chatrooms",
+    fields=[
+        gcp.firestore.IndexFieldArgs(
+            field_path="name",
+            order="ASCENDING",
+        ),
+        gcp.firestore.IndexFieldArgs(
+            field_path="description",
+            order="DESCENDING",
+        ),
+        gcp.firestore.IndexFieldArgs(
+            field_path="__name__",
+            order="DESCENDING",
+        ),
+    ],
+    project="my-project-name")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_index = new gcp.firestore.Index("my-index", {
+    collection: "chatrooms",
+    fields: [
+        {
+            fieldPath: "name",
+            order: "ASCENDING",
+        },
+        {
+            fieldPath: "description",
+            order: "DESCENDING",
+        },
+        {
+            fieldPath: "__name__",
+            order: "DESCENDING",
+        },
+    ],
+    project: "my-project-name",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Index Resource {#create}
@@ -1277,6 +1421,16 @@ Possible values are `ASCENDING` and `DESCENDING`.
 
 
 
+
+
+## Import
+
+
+Index can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:firestore/index:Index default {{name}}
+```
 
 
 

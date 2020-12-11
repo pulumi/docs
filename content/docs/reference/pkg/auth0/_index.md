@@ -22,6 +22,7 @@ A Pulumi package for creating and managing auth0 cloud resources.
     <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
     <li><a href="globalclient" title="GlobalClient"><span class="symbol resource"></span>GlobalClient</a></li>
     <li><a href="hook" title="Hook"><span class="symbol resource"></span>Hook</a></li>
+    <li><a href="logstream" title="LogStream"><span class="symbol resource"></span>LogStream</a></li>
     <li><a href="prompt" title="Prompt"><span class="symbol resource"></span>Prompt</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="resourceserver" title="ResourceServer"><span class="symbol resource"></span>ResourceServer</a></li>
@@ -41,7 +42,7 @@ A Pulumi package for creating and managing auth0 cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`auth0` Terraform Provider](https://github.com/alexkappa/terraform-provider-auth0).</dd>
 	<dt>Version</dt>
-	<dd>1.3.0</dd>
+	<dd>1.4.0</dd>
 </dl>
 
 

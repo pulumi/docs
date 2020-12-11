@@ -1,7 +1,7 @@
 
 ---
 title: "AnalyticsApplication"
-title_tag: "Resource AnalyticsApplication | Module kinesis | Package AWS"
+title_tag: "aws.kinesis.AnalyticsApplication"
 meta_desc: "Explore the AnalyticsApplication resource of the kinesis module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that"
 ---
 

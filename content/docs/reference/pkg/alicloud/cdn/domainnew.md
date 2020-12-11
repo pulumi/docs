@@ -1,7 +1,7 @@
 
 ---
 title: "DomainNew"
-title_tag: "Resource DomainNew | Module cdn | Package AliCloud"
+title_tag: "alicloud.cdn.DomainNew"
 meta_desc: "Explore the DomainNew resource of the cdn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CDN Accelerated Domain resource. This resource is based on CDN&#39;s new version OpenAPI."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SslVpnServer"
-title_tag: "Resource SslVpnServer | Module vpn | Package AliCloud"
+title_tag: "alicloud.vpn.SslVpnServer"
 meta_desc: "Explore the SslVpnServer resource of the vpn module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

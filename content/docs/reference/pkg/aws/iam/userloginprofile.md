@@ -1,7 +1,7 @@
 
 ---
 title: "UserLoginProfile"
-title_tag: "Resource UserLoginProfile | Module iam | Package AWS"
+title_tag: "aws.iam.UserLoginProfile"
 meta_desc: "Explore the UserLoginProfile resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an IAM User Login Profile with limited support for password creation during this provider resource creation. Uses PGP to encrypt the password for safe transport to the user. PGP keys can be obtained from Keybase."
 ---
 

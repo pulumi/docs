@@ -20,6 +20,300 @@ To get more information about AccessLevels, see:
 * How-to Guides
     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Access Context Manager Access Levels Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+        var access_levels = new Gcp.AccessContextManager.AccessLevels("access-levels", new Gcp.AccessContextManager.AccessLevelsArgs
+        {
+            AccessLevels = 
+            {
+                new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelArgs
+                {
+                    Basic = new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicArgs
+                    {
+                        Conditions = 
+                        {
+                            new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicConditionArgs
+                            {
+                                DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicConditionDevicePolicyArgs
+                                {
+                                    OsConstraints = 
+                                    {
+                                        new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs
+                                        {
+                                            OsType = "DESKTOP_CHROME_OS",
+                                        },
+                                    },
+                                    RequireScreenLock = true,
+                                },
+                                Regions = 
+                                {
+                                    "CH",
+                                    "IT",
+                                    "US",
+                                },
+                            },
+                        },
+                    },
+                    Name = access_policy.Name.Apply(name => $"accessPolicies/{name}/accessLevels/chromeos_no_lock"),
+                    Title = "chromeos_no_lock",
+                },
+                new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelArgs
+                {
+                    Basic = new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicArgs
+                    {
+                        Conditions = 
+                        {
+                            new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicConditionArgs
+                            {
+                                DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicConditionDevicePolicyArgs
+                                {
+                                    OsConstraints = 
+                                    {
+                                        new Gcp.AccessContextManager.Inputs.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs
+                                        {
+                                            OsType = "DESKTOP_MAC",
+                                        },
+                                    },
+                                    RequireScreenLock = true,
+                                },
+                                Regions = 
+                                {
+                                    "CH",
+                                    "IT",
+                                    "US",
+                                },
+                            },
+                        },
+                    },
+                    Name = access_policy.Name.Apply(name => $"accessPolicies/{name}/accessLevels/mac_no_lock"),
+                    Title = "mac_no_lock",
+                },
+            },
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/accesscontextmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access_policy", &accesscontextmanager.AccessPolicyArgs{
+			Parent: pulumi.String("organizations/123456789"),
+			Title:  pulumi.String("my policy"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewAccessLevels(ctx, "access_levels", &accesscontextmanager.AccessLevelsArgs{
+			AccessLevels: accesscontextmanager.AccessLevelsAccessLevelArray{
+				&accesscontextmanager.AccessLevelsAccessLevelArgs{
+					Basic: &accesscontextmanager.AccessLevelsAccessLevelBasicArgs{
+						Conditions: accesscontextmanager.AccessLevelsAccessLevelBasicConditionArray{
+							&accesscontextmanager.AccessLevelsAccessLevelBasicConditionArgs{
+								DevicePolicy: &accesscontextmanager.AccessLevelsAccessLevelBasicConditionDevicePolicyArgs{
+									OsConstraints: accesscontextmanager.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArray{
+										&accesscontextmanager.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs{
+											OsType: pulumi.String("DESKTOP_CHROME_OS"),
+										},
+									},
+									RequireScreenLock: pulumi.Bool(true),
+								},
+								Regions: pulumi.StringArray{
+									pulumi.String("CH"),
+									pulumi.String("IT"),
+									pulumi.String("US"),
+								},
+							},
+						},
+					},
+					Name: access_policy.Name.ApplyT(func(name string) (string, error) {
+						return fmt.Sprintf("%v%v%v", "accessPolicies/", name, "/accessLevels/chromeos_no_lock"), nil
+					}).(pulumi.StringOutput),
+					Title: pulumi.String("chromeos_no_lock"),
+				},
+				&accesscontextmanager.AccessLevelsAccessLevelArgs{
+					Basic: &accesscontextmanager.AccessLevelsAccessLevelBasicArgs{
+						Conditions: accesscontextmanager.AccessLevelsAccessLevelBasicConditionArray{
+							&accesscontextmanager.AccessLevelsAccessLevelBasicConditionArgs{
+								DevicePolicy: &accesscontextmanager.AccessLevelsAccessLevelBasicConditionDevicePolicyArgs{
+									OsConstraints: accesscontextmanager.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArray{
+										&accesscontextmanager.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs{
+											OsType: pulumi.String("DESKTOP_MAC"),
+										},
+									},
+									RequireScreenLock: pulumi.Bool(true),
+								},
+								Regions: pulumi.StringArray{
+									pulumi.String("CH"),
+									pulumi.String("IT"),
+									pulumi.String("US"),
+								},
+							},
+						},
+					},
+					Name: access_policy.Name.ApplyT(func(name string) (string, error) {
+						return fmt.Sprintf("%v%v%v", "accessPolicies/", name, "/accessLevels/mac_no_lock"), nil
+					}).(pulumi.StringOutput),
+					Title: pulumi.String("mac_no_lock"),
+				},
+			},
+			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+access_levels = gcp.accesscontextmanager.AccessLevels("access-levels",
+    access_levels=[
+        gcp.accesscontextmanager.AccessLevelsAccessLevelArgs(
+            basic=gcp.accesscontextmanager.AccessLevelsAccessLevelBasicArgs(
+                conditions=[gcp.accesscontextmanager.AccessLevelsAccessLevelBasicConditionArgs(
+                    device_policy={
+                        "osConstraints": [{
+                            "osType": "DESKTOP_CHROME_OS",
+                        }],
+                        "requireScreenLock": True,
+                    },
+                    regions=[
+                        "CH",
+                        "IT",
+                        "US",
+                    ],
+                )],
+            ),
+            name=access_policy.name.apply(lambda name: f"accessPolicies/{name}/accessLevels/chromeos_no_lock"),
+            title="chromeos_no_lock",
+        ),
+        gcp.accesscontextmanager.AccessLevelsAccessLevelArgs(
+            basic=gcp.accesscontextmanager.AccessLevelsAccessLevelBasicArgs(
+                conditions=[gcp.accesscontextmanager.AccessLevelsAccessLevelBasicConditionArgs(
+                    device_policy={
+                        "osConstraints": [{
+                            "osType": "DESKTOP_MAC",
+                        }],
+                        "requireScreenLock": True,
+                    },
+                    regions=[
+                        "CH",
+                        "IT",
+                        "US",
+                    ],
+                )],
+            ),
+            name=access_policy.name.apply(lambda name: f"accessPolicies/{name}/accessLevels/mac_no_lock"),
+            title="mac_no_lock",
+        ),
+    ],
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels", {
+    accessLevels: [
+        {
+            basic: {
+                conditions: [{
+                    devicePolicy: {
+                        osConstraints: [{
+                            osType: "DESKTOP_CHROME_OS",
+                        }],
+                        requireScreenLock: true,
+                    },
+                    regions: [
+                        "CH",
+                        "IT",
+                        "US",
+                    ],
+                }],
+            },
+            name: pulumi.interpolate`accessPolicies/${access_policy.name}/accessLevels/chromeos_no_lock`,
+            title: "chromeos_no_lock",
+        },
+        {
+            basic: {
+                conditions: [{
+                    devicePolicy: {
+                        osConstraints: [{
+                            osType: "DESKTOP_MAC",
+                        }],
+                        requireScreenLock: true,
+                    },
+                    regions: [
+                        "CH",
+                        "IT",
+                        "US",
+                    ],
+                }],
+            },
+            name: pulumi.interpolate`accessPolicies/${access_policy.name}/accessLevels/mac_no_lock`,
+            title: "mac_no_lock",
+        },
+    ],
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessLevels Resource {#create}
@@ -2337,6 +2631,20 @@ Structure is documented below.
 
 
 
+
+
+## Import
+
+
+AccessLevels can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/accessLevels:AccessLevels default {{parent}}/accessLevels
+```
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/accessLevels:AccessLevels default {{parent}}
+```
 
 
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Function"
-title_tag: "Resource Function | Module lambda | Package AWS"
+title_tag: "aws.lambda.Function"
 meta_desc: "Explore the Function resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

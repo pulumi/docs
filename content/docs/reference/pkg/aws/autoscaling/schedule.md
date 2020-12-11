@@ -1,7 +1,7 @@
 
 ---
 title: "Schedule"
-title_tag: "Resource Schedule | Module autoscaling | Package AWS"
+title_tag: "aws.autoscaling.Schedule"
 meta_desc: "Explore the Schedule resource of the autoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AutoScaling Schedule resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Alias"
-title_tag: "Resource Alias | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.Alias"
 meta_desc: "Explore the Alias resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

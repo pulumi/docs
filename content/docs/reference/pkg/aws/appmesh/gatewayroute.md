@@ -1,7 +1,7 @@
 
 ---
 title: "GatewayRoute"
-title_tag: "Resource GatewayRoute | Module appmesh | Package AWS"
+title_tag: "aws.appmesh.GatewayRoute"
 meta_desc: "Explore the GatewayRoute resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh gateway route resource."
 ---
 

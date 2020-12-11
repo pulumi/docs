@@ -20,6 +20,235 @@ To get more information about Note, see:
     * [Official Documentation](https://cloud.google.com/container-analysis/)
     * [Creating Attestations (Occurrences)](https://cloud.google.com/binary-authorization/docs/making-attestations)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Container Analysis Note Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "Attestor Note",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+					HumanReadableName: pulumi.String("Attestor Note"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+    hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+        human_readable_name="Attestor Note",
+    ),
+))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {
+    attestationAuthority: {
+        hint: {
+            humanReadableName: "Attestor Note",
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Container Analysis Note Attestation Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "Attestor Note",
+                },
+            },
+            ExpirationTime = "2120-10-02T15:01:23.045123456Z",
+            LongDescription = "a longer description of test note",
+            RelatedUrls = 
+            {
+                new Gcp.ContainerAnalysis.Inputs.NoteRelatedUrlArgs
+                {
+                    Label = "foo",
+                    Url = "some.url",
+                },
+                new Gcp.ContainerAnalysis.Inputs.NoteRelatedUrlArgs
+                {
+                    Url = "google.com",
+                },
+            },
+            ShortDescription = "test note",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+					HumanReadableName: pulumi.String("Attestor Note"),
+				},
+			},
+			ExpirationTime:  pulumi.String("2120-10-02T15:01:23.045123456Z"),
+			LongDescription: pulumi.String("a longer description of test note"),
+			RelatedUrls: containeranalysis.NoteRelatedUrlArray{
+				&containeranalysis.NoteRelatedUrlArgs{
+					Label: pulumi.String("foo"),
+					Url:   pulumi.String("some.url"),
+				},
+				&containeranalysis.NoteRelatedUrlArgs{
+					Url: pulumi.String("google.com"),
+				},
+			},
+			ShortDescription: pulumi.String("test note"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note",
+    attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+        hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+            human_readable_name="Attestor Note",
+        ),
+    ),
+    expiration_time="2120-10-02T15:01:23.045123456Z",
+    long_description="a longer description of test note",
+    related_urls=[
+        gcp.containeranalysis.NoteRelatedUrlArgs(
+            label="foo",
+            url="some.url",
+        ),
+        gcp.containeranalysis.NoteRelatedUrlArgs(
+            url="google.com",
+        ),
+    ],
+    short_description="test note")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {
+    attestationAuthority: {
+        hint: {
+            humanReadableName: "Attestor Note",
+        },
+    },
+    expirationTime: "2120-10-02T15:01:23.045123456Z",
+    longDescription: "a longer description of test note",
+    relatedUrls: [
+        {
+            label: "foo",
+            url: "some.url",
+        },
+        {
+            url: "google.com",
+        },
+    ],
+    shortDescription: "test note",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Note Resource {#create}
@@ -1881,6 +2110,24 @@ example "qa".
 
 
 
+
+
+## Import
+
+
+Note can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default projects/{{project}}/notes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default {{name}}
+```
 
 
 

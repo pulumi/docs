@@ -14,6 +14,7 @@ Hooks are secure, self-contained functions that allow you to customize the behav
 
 Depending on the extensibility point, you can use Hooks with Database Connections and/or Passwordless Connections.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -901,6 +902,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

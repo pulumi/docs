@@ -1,7 +1,7 @@
 
 ---
 title: "RepositoryPolicy"
-title_tag: "Resource RepositoryPolicy | Module ecr | Package AWS"
+title_tag: "aws.ecr.RepositoryPolicy"
 meta_desc: "Explore the RepositoryPolicy resource of the ecr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Container Registry Repository Policy."
 ---
 

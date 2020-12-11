@@ -1,7 +1,7 @@
 
 ---
 title: "Handshake"
-title_tag: "Resource Handshake | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.Handshake"
 meta_desc: "Explore the Handshake resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Manager handshake resource. You can invite accounts to join a resource directory for unified management."
 ---
 

@@ -17,6 +17,88 @@ For a list of services available, visit the
 
 Requires [Service Usage API](https://console.cloud.google.com/apis/library/serviceusage.googleapis.com).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.Service("project", new Gcp.Projects.ServiceArgs
+        {
+            DisableDependentServices = true,
+            Project = "your-project-id",
+            Service = "iam.googleapis.com",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewService(ctx, "project", &projects.ServiceArgs{
+			DisableDependentServices: pulumi.Bool(true),
+			Project:                  pulumi.String("your-project-id"),
+			Service:                  pulumi.String("iam.googleapis.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.projects.Service("project",
+    disable_dependent_services=True,
+    project="your-project-id",
+    service="iam.googleapis.com")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.Service("project", {
+    disableDependentServices: true,
+    project: "your-project-id",
+    service: "iam.googleapis.com",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -826,6 +908,18 @@ If `false` or unset, an error will be generated if any enabled services depend o
 
 
 
+
+
+## Import
+
+
+Project services can be imported using the `project_id` and `service`, e.g.
+
+```sh
+ $ pulumi import gcp:projects/service:Service my_project your-project-id/iam.googleapis.com
+```
+
+ Note that unlike other resources that fail if they already exist, `terraform apply` can be successfully used to verify already enabled services. This means that when importing existing resources into Terraform, you can either import the `google_project_service` resources or treat them as new infrastructure and run `terraform apply` to add them to state.
 
 
 

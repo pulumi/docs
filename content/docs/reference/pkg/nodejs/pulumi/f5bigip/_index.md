@@ -3,7 +3,7 @@ title: "Package @pulumi/f5bigip"
 title_tag: "Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "@pulumi/f5bigip"
 meta_desc: "Explore members of the @pulumi/f5bigip package."
-git_sha: "f0e6cd308eb59ccd4382e8fb9671c454494aa67c"
+git_sha: "fd146340288aa457ef916992718f831e3049b5ce"
 block_external_search_index: true
 ---
 
@@ -56,6 +56,7 @@ import * as f5bigip from "@pulumi/f5bigip";
     <li><a href="#Command"><span class="symbol resource"></span>Command</a></li>
     <li><a href="#CommonLicenseManageBigIq"><span class="symbol resource"></span>CommonLicenseManageBigIq</a></li>
     <li><a href="#Do"><span class="symbol resource"></span>Do</a></li>
+    <li><a href="#EventServiceDiscovery"><span class="symbol resource"></span>EventServiceDiscovery</a></li>
     <li><a href="#Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
@@ -72,6 +73,8 @@ import * as f5bigip from "@pulumi/f5bigip";
     <li><a href="#CommonLicenseManageBigIqState"><span class="symbol api"></span>CommonLicenseManageBigIqState</a></li>
     <li><a href="#DoArgs"><span class="symbol api"></span>DoArgs</a></li>
     <li><a href="#DoState"><span class="symbol api"></span>DoState</a></li>
+    <li><a href="#EventServiceDiscoveryArgs"><span class="symbol api"></span>EventServiceDiscoveryArgs</a></li>
+    <li><a href="#EventServiceDiscoveryState"><span class="symbol api"></span>EventServiceDiscoveryState</a></li>
     <li><a href="#getEnv"><span class="symbol api"></span>getEnv</a></li>
     <li><a href="#getEnvBoolean"><span class="symbol api"></span>getEnvBoolean</a></li>
     <li><a href="#getEnvNumber"><span class="symbol api"></span>getEnvNumber</a></li>
@@ -82,7 +85,7 @@ import * as f5bigip from "@pulumi/f5bigip";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="As3" data-link-title="As3">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L28">
         Resource <strong>As3</strong>
     </a>
 </h3>
@@ -110,7 +113,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
 ```
 
 <h4 class="pdoc-member-header" id="As3-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L77"> <b>constructor</b></a>
 </h4>
 
 
@@ -124,7 +127,7 @@ Create a As3 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="As3-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -135,14 +138,14 @@ Get an existing As3 resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="As3-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="As3-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -153,7 +156,7 @@ Returns true if the given object is an instance of As3.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="As3-applicationList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L59">property <b>applicationList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L59">property <b>applicationList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +164,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of Application
 
 <h4 class="pdoc-member-header" id="As3-as3Json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L63">property <b>as3Json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L63">property <b>as3Json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>as3Json: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +172,7 @@ Name of Application
 Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
 
 <h4 class="pdoc-member-header" id="As3-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -178,7 +181,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="As3-tenantFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L67">property <b>tenantFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L67">property <b>tenantFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +189,7 @@ deployments and may be missing (undefined) during planning phases.
 If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
 
 <h4 class="pdoc-member-header" id="As3-tenantList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L71">property <b>tenantList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L71">property <b>tenantList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +197,7 @@ If there are muntiple tenants in a json this attribute helps the user to set a p
 Name of Tenant
 
 <h4 class="pdoc-member-header" id="As3-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L77">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L77">property <b>tenantName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -206,7 +209,7 @@ this attribute is no longer in use
 Name of Tenant
 
 <h4 class="pdoc-member-header" id="As3-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -215,14 +218,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BigIqAs3" data-link-title="BigIqAs3">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L7">
         Resource <strong>BigIqAs3</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BigIqAs3</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="BigIqAs3-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -236,7 +239,7 @@ Create a BigIqAs3 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BigIqAs3-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -247,14 +250,14 @@ Get an existing BigIqAs3 resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BigIqAs3-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BigIqAs3-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -265,7 +268,7 @@ Returns true if the given object is an instance of BigIqAs3.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BigIqAs3-as3Json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L38">property <b>as3Json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L38">property <b>as3Json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>as3Json: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +276,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 AS3 json
 
 <h4 class="pdoc-member-header" id="BigIqAs3-bigiqAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L42">property <b>bigiqAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L42">property <b>bigiqAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +284,7 @@ AS3 json
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3-bigiqLoginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L46">property <b>bigiqLoginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L46">property <b>bigiqLoginRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqLoginRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +292,7 @@ The registration key pool to use
 Login reference for token authentication (see BIG-IQ REST docs for details)
 
 <h4 class="pdoc-member-header" id="BigIqAs3-bigiqPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L50">property <b>bigiqPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L50">property <b>bigiqPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +300,7 @@ Login reference for token authentication (see BIG-IQ REST docs for details)
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3-bigiqPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L54">property <b>bigiqPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L54">property <b>bigiqPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -305,7 +308,7 @@ The registration key pool to use
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3-bigiqTokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L58">property <b>bigiqTokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L58">property <b>bigiqTokenAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqTokenAuth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -313,7 +316,7 @@ The registration key pool to use
 Enable to use an external authentication source (LDAP, TACACS, etc)
 
 <h4 class="pdoc-member-header" id="BigIqAs3-bigiqUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L62">property <b>bigiqUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L62">property <b>bigiqUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqUser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -321,7 +324,7 @@ Enable to use an external authentication source (LDAP, TACACS, etc)
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -330,7 +333,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BigIqAs3-tenantList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L66">property <b>tenantList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L66">property <b>tenantList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +341,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of Tenant
 
 <h4 class="pdoc-member-header" id="BigIqAs3-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -347,7 +350,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Command" data-link-title="Command">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L24">
         Resource <strong>Command</strong>
     </a>
 </h3>
@@ -371,7 +374,7 @@ const test_command = new f5bigip.Command("test-command", {
 ```
 
 <h4 class="pdoc-member-header" id="Command-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L60"> <b>constructor</b></a>
 </h4>
 
 
@@ -385,7 +388,7 @@ Create a Command resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Command-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -396,14 +399,14 @@ Get an existing Command resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Command-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Command-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -414,7 +417,7 @@ Returns true if the given object is an instance of Command.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Command-commandResults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L55">property <b>commandResults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L55">property <b>commandResults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commandResults: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -422,7 +425,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The resulting output from the `commands` executed
 
 <h4 class="pdoc-member-header" id="Command-commands">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L59">property <b>commands</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L59">property <b>commands</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commands: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -430,7 +433,7 @@ The resulting output from the `commands` executed
 The commands to send to the remote BIG-IP device over the configured provider. The resulting output from the command is returned and added to `commandResult`
 
 <h4 class="pdoc-member-header" id="Command-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -439,7 +442,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Command-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -448,12 +451,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Command-when">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L60">property <b>when</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L60">property <b>when</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>when: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="CommonLicenseManageBigIq" data-link-title="CommonLicenseManageBigIq">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L70">
         Resource <strong>CommonLicenseManageBigIq</strong>
     </a>
 </h3>
@@ -504,10 +507,26 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
     macAddress: "FA:16:3E:1B:6D:32",
     hypervisor: "azure",
 });
+// MANAGED Purchased Pool
+const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq2 = new f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2", {
+    bigiqAddress: _var.bigiq,
+    bigiqUser: _var.bigiq_un,
+    bigiqPassword: _var.bigiq_pw,
+    licensePoolname: "purchased_pool_name",
+    assignmentType: "MANAGED",
+});
+// UNMANAGED Purchased Pool
+const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 = new f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3", {
+    bigiqAddress: _var.bigiq,
+    bigiqUser: _var.bigiq_un,
+    bigiqPassword: _var.bigiq_pw,
+    licensePoolname: "purchased_pool_name",
+    assignmentType: "UNMANAGED",
+});
 ```
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L145"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L161"> <b>constructor</b></a>
 </h4>
 
 
@@ -521,7 +540,7 @@ Create a CommonLicenseManageBigIq resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L80">method <b>get</b></a>
 </h4>
 
 
@@ -532,14 +551,14 @@ Get an existing CommonLicenseManageBigIq resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L70">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L91">method <b>isInstance</b></a>
 </h4>
 
 
@@ -550,7 +569,7 @@ Returns true if the given object is an instance of CommonLicenseManageBigIq.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-assignmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L85">property <b>assignmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L101">property <b>assignmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assignmentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +577,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-bigiqAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L89">property <b>bigiqAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L105">property <b>bigiqAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +585,7 @@ The type of assignment, which is determined by whether the BIG-IP is unreachable
 BIGIQ License Manager IP Address, variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-bigiqLoginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L93">property <b>bigiqLoginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L109">property <b>bigiqLoginRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqLoginRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +593,7 @@ BIGIQ License Manager IP Address, variable type `string`
 BIGIQ Login reference for token authentication
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-bigiqPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L97">property <b>bigiqPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L113">property <b>bigiqPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +601,7 @@ BIGIQ Login reference for token authentication
 BIGIQ License Manager password.  variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-bigiqPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L101">property <b>bigiqPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L117">property <b>bigiqPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -590,7 +609,7 @@ BIGIQ License Manager password.  variable type `string`
 type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-bigiqTokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L105">property <b>bigiqTokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L121">property <b>bigiqTokenAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqTokenAuth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -598,7 +617,7 @@ type `int`, BIGIQ License Manager Port number, specify if port is other than `44
 type `bool`, if set to `true` enables Token based Authentication,default is `false`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-bigiqUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L109">property <b>bigiqUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L125">property <b>bigiqUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigiqUser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -606,7 +625,7 @@ type `bool`, if set to `true` enables Token based Authentication,default is `fal
 BIGIQ License Manager username, variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-deviceLicenseStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L113">property <b>deviceLicenseStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L129">property <b>deviceLicenseStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deviceLicenseStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -614,7 +633,7 @@ BIGIQ License Manager username, variable type `string`
 Status of Licence Assignment
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-hypervisor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L117">property <b>hypervisor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L133">property <b>hypervisor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hypervisor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -622,7 +641,7 @@ Status of Licence Assignment
 Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -631,7 +650,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L121">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L137">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -639,7 +658,7 @@ deployments and may be missing (undefined) during planning phases.
 License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-licensePoolname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L125">property <b>licensePoolname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L141">property <b>licensePoolname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licensePoolname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +666,7 @@ License Assignment is done with specified `key`, supported only with RegKeypool 
 A name given to the license pool. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L129">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L145">property <b>macAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>macAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -655,7 +674,7 @@ A name given to the license pool. type `string`
 MAC address of the BIG-IP. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-skukeyword1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L133">property <b>skukeyword1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L149">property <b>skukeyword1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skukeyword1: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -663,7 +682,7 @@ MAC address of the BIG-IP. type `string`
 An optional offering name. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-skukeyword2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L137">property <b>skukeyword2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L153">property <b>skukeyword2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skukeyword2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -671,7 +690,7 @@ An optional offering name. type `string`
 An optional offering name. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L141">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L157">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -679,7 +698,7 @@ An optional offering name. type `string`
 For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-unitOfMeasure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L145">property <b>unitOfMeasure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L161">property <b>unitOfMeasure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>unitOfMeasure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -687,7 +706,7 @@ For an unreachable BIG-IP, you can provide an optional description for the assig
 The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIq-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L70">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -696,7 +715,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Do" data-link-title="Do">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L24">
         Resource <strong>Do</strong>
     </a>
 </h3>
@@ -720,7 +739,7 @@ const do_example = new f5bigip.Do("do-example", {
 ```
 
 <h4 class="pdoc-member-header" id="Do-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -734,7 +753,7 @@ Create a Do resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Do-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -745,14 +764,14 @@ Get an existing Do resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Do-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Do-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -763,7 +782,7 @@ Returns true if the given object is an instance of Do.  This is designed to work
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Do-doJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L55">property <b>doJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L55">property <b>doJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>doJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -771,7 +790,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the of the Declarative DO JSON file
 
 <h4 class="pdoc-member-header" id="Do-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -780,7 +799,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Do-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L61">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L61">property <b>tenantName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -792,7 +811,7 @@ this attribute is no longer in use
 unique identifier for DO resource
 
 <h4 class="pdoc-member-header" id="Do-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L65">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L65">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -800,7 +819,88 @@ unique identifier for DO resource
 DO json
 
 <h4 class="pdoc-member-header" id="Do-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L24">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="EventServiceDiscovery" data-link-title="EventServiceDiscovery">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L8">
+        Resource <strong>EventServiceDiscovery</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventServiceDiscovery</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L40"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EventServiceDiscovery(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventServiceDiscoveryArgs'>EventServiceDiscoveryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a EventServiceDiscovery resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L18">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventServiceDiscoveryState'>EventServiceDiscoveryState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventServiceDiscovery'>EventServiceDiscovery</a></code></pre>
+
+
+Get an existing EventServiceDiscovery resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L8">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L29">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventServiceDiscovery</code></pre>
+
+
+Returns true if the given object is an instance of EventServiceDiscovery.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L8">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-nodes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L36">property <b>nodes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#EventServiceDiscoveryNode'>EventServiceDiscoveryNode</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-taskid">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L40">property <b>taskid</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>taskid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Name of the partition/tenant
+
+<h4 class="pdoc-member-header" id="EventServiceDiscovery-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L8">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -809,7 +909,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -822,7 +922,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -836,14 +936,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -854,14 +954,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -870,7 +970,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -882,7 +982,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="As3Args" data-link-title="As3Args">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L149">
         interface <strong>As3Args</strong>
     </a>
 </h3>
@@ -892,7 +992,7 @@ deployments.
 The set of arguments for constructing a As3 resource.
 
 <h4 class="pdoc-member-header" id="As3Args-applicationList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L153">property <b>applicationList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L153">property <b>applicationList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -900,7 +1000,7 @@ The set of arguments for constructing a As3 resource.
 Name of Application
 
 <h4 class="pdoc-member-header" id="As3Args-as3Json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L157">property <b>as3Json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L157">property <b>as3Json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>as3Json: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -908,7 +1008,7 @@ Name of Application
 Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
 
 <h4 class="pdoc-member-header" id="As3Args-tenantFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L161">property <b>tenantFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L161">property <b>tenantFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -916,7 +1016,7 @@ Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```
 If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
 
 <h4 class="pdoc-member-header" id="As3Args-tenantList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L165">property <b>tenantList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L165">property <b>tenantList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -924,7 +1024,7 @@ If there are muntiple tenants in a json this attribute helps the user to set a p
 Name of Tenant
 
 <h4 class="pdoc-member-header" id="As3Args-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L171">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L171">property <b>tenantName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -936,7 +1036,7 @@ this attribute is no longer in use
 Name of Tenant
 
 <h3 class="pdoc-module-header" id="As3State" data-link-title="As3State">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L121">
         interface <strong>As3State</strong>
     </a>
 </h3>
@@ -946,7 +1046,7 @@ Name of Tenant
 Input properties used for looking up and filtering As3 resources.
 
 <h4 class="pdoc-member-header" id="As3State-applicationList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L125">property <b>applicationList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L125">property <b>applicationList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -954,7 +1054,7 @@ Input properties used for looking up and filtering As3 resources.
 Name of Application
 
 <h4 class="pdoc-member-header" id="As3State-as3Json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L129">property <b>as3Json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L129">property <b>as3Json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>as3Json?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -962,7 +1062,7 @@ Name of Application
 Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
 
 <h4 class="pdoc-member-header" id="As3State-tenantFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L133">property <b>tenantFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L133">property <b>tenantFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -970,7 +1070,7 @@ Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```
 If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
 
 <h4 class="pdoc-member-header" id="As3State-tenantList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L137">property <b>tenantList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L137">property <b>tenantList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -978,7 +1078,7 @@ If there are muntiple tenants in a json this attribute helps the user to set a p
 Name of Tenant
 
 <h4 class="pdoc-member-header" id="As3State-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/as3.ts#L143">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/as3.ts#L143">property <b>tenantName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -990,7 +1090,7 @@ this attribute is no longer in use
 Name of Tenant
 
 <h3 class="pdoc-module-header" id="BigIqAs3Args" data-link-title="BigIqAs3Args">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L163">
         interface <strong>BigIqAs3Args</strong>
     </a>
 </h3>
@@ -1000,7 +1100,7 @@ Name of Tenant
 The set of arguments for constructing a BigIqAs3 resource.
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-as3Json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L167">property <b>as3Json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L167">property <b>as3Json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>as3Json: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1008,7 +1108,7 @@ The set of arguments for constructing a BigIqAs3 resource.
 AS3 json
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-bigiqAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L171">property <b>bigiqAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L171">property <b>bigiqAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1016,7 +1116,7 @@ AS3 json
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-bigiqLoginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L175">property <b>bigiqLoginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L175">property <b>bigiqLoginRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqLoginRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1124,7 @@ The registration key pool to use
 Login reference for token authentication (see BIG-IQ REST docs for details)
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-bigiqPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L179">property <b>bigiqPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L179">property <b>bigiqPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1132,7 @@ Login reference for token authentication (see BIG-IQ REST docs for details)
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-bigiqPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L183">property <b>bigiqPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L183">property <b>bigiqPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1040,7 +1140,7 @@ The registration key pool to use
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-bigiqTokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L187">property <b>bigiqTokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L187">property <b>bigiqTokenAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqTokenAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1048,7 +1148,7 @@ The registration key pool to use
 Enable to use an external authentication source (LDAP, TACACS, etc)
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-bigiqUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L191">property <b>bigiqUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L191">property <b>bigiqUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqUser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1056,7 +1156,7 @@ Enable to use an external authentication source (LDAP, TACACS, etc)
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3Args-tenantList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L195">property <b>tenantList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L195">property <b>tenantList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1064,7 +1164,7 @@ The registration key pool to use
 Name of Tenant
 
 <h3 class="pdoc-module-header" id="BigIqAs3State" data-link-title="BigIqAs3State">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L125">
         interface <strong>BigIqAs3State</strong>
     </a>
 </h3>
@@ -1074,7 +1174,7 @@ Name of Tenant
 Input properties used for looking up and filtering BigIqAs3 resources.
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-as3Json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L129">property <b>as3Json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L129">property <b>as3Json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>as3Json?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1082,7 +1182,7 @@ Input properties used for looking up and filtering BigIqAs3 resources.
 AS3 json
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-bigiqAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L133">property <b>bigiqAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L133">property <b>bigiqAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1190,7 @@ AS3 json
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-bigiqLoginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L137">property <b>bigiqLoginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L137">property <b>bigiqLoginRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqLoginRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1198,7 @@ The registration key pool to use
 Login reference for token authentication (see BIG-IQ REST docs for details)
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-bigiqPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L141">property <b>bigiqPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L141">property <b>bigiqPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1106,7 +1206,7 @@ Login reference for token authentication (see BIG-IQ REST docs for details)
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-bigiqPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L145">property <b>bigiqPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L145">property <b>bigiqPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1114,7 +1214,7 @@ The registration key pool to use
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-bigiqTokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L149">property <b>bigiqTokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L149">property <b>bigiqTokenAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqTokenAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1122,7 +1222,7 @@ The registration key pool to use
 Enable to use an external authentication source (LDAP, TACACS, etc)
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-bigiqUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L153">property <b>bigiqUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L153">property <b>bigiqUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1130,7 +1230,7 @@ Enable to use an external authentication source (LDAP, TACACS, etc)
 The registration key pool to use
 
 <h4 class="pdoc-member-header" id="BigIqAs3State-tenantList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/bigIqAs3.ts#L157">property <b>tenantList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/bigIqAs3.ts#L157">property <b>tenantList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1138,7 +1238,7 @@ The registration key pool to use
 Name of Tenant
 
 <h3 class="pdoc-module-header" id="CommandArgs" data-link-title="CommandArgs">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L115">
         interface <strong>CommandArgs</strong>
     </a>
 </h3>
@@ -1148,7 +1248,7 @@ Name of Tenant
 The set of arguments for constructing a Command resource.
 
 <h4 class="pdoc-member-header" id="CommandArgs-commandResults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L119">property <b>commandResults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L119">property <b>commandResults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commandResults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1156,7 +1256,7 @@ The set of arguments for constructing a Command resource.
 The resulting output from the `commands` executed
 
 <h4 class="pdoc-member-header" id="CommandArgs-commands">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L123">property <b>commands</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L123">property <b>commands</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commands: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1164,12 +1264,12 @@ The resulting output from the `commands` executed
 The commands to send to the remote BIG-IP device over the configured provider. The resulting output from the command is returned and added to `commandResult`
 
 <h4 class="pdoc-member-header" id="CommandArgs-when">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L124">property <b>when</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L124">property <b>when</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>when?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="CommandState" data-link-title="CommandState">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L100">
         interface <strong>CommandState</strong>
     </a>
 </h3>
@@ -1179,7 +1279,7 @@ The commands to send to the remote BIG-IP device over the configured provider. T
 Input properties used for looking up and filtering Command resources.
 
 <h4 class="pdoc-member-header" id="CommandState-commandResults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L104">property <b>commandResults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L104">property <b>commandResults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commandResults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1187,7 +1287,7 @@ Input properties used for looking up and filtering Command resources.
 The resulting output from the `commands` executed
 
 <h4 class="pdoc-member-header" id="CommandState-commands">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L108">property <b>commands</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L108">property <b>commands</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commands?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1195,12 +1295,12 @@ The resulting output from the `commands` executed
 The commands to send to the remote BIG-IP device over the configured provider. The resulting output from the command is returned and added to `commandResult`
 
 <h4 class="pdoc-member-header" id="CommandState-when">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/command.ts#L109">property <b>when</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/command.ts#L109">property <b>when</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>when?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="CommonLicenseManageBigIqArgs" data-link-title="CommonLicenseManageBigIqArgs">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L293">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L309">
         interface <strong>CommonLicenseManageBigIqArgs</strong>
     </a>
 </h3>
@@ -1210,7 +1310,7 @@ The commands to send to the remote BIG-IP device over the configured provider. T
 The set of arguments for constructing a CommonLicenseManageBigIq resource.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-assignmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L297">property <b>assignmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L313">property <b>assignmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignmentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1218,7 +1318,7 @@ The set of arguments for constructing a CommonLicenseManageBigIq resource.
 The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-bigiqAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L301">property <b>bigiqAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L317">property <b>bigiqAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1226,7 +1326,7 @@ The type of assignment, which is determined by whether the BIG-IP is unreachable
 BIGIQ License Manager IP Address, variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-bigiqLoginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L305">property <b>bigiqLoginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L321">property <b>bigiqLoginRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqLoginRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1234,7 +1334,7 @@ BIGIQ License Manager IP Address, variable type `string`
 BIGIQ Login reference for token authentication
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-bigiqPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L309">property <b>bigiqPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L325">property <b>bigiqPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1242,7 +1342,7 @@ BIGIQ Login reference for token authentication
 BIGIQ License Manager password.  variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-bigiqPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L313">property <b>bigiqPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L329">property <b>bigiqPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1250,7 +1350,7 @@ BIGIQ License Manager password.  variable type `string`
 type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-bigiqTokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L317">property <b>bigiqTokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L333">property <b>bigiqTokenAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqTokenAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1258,7 +1358,7 @@ type `int`, BIGIQ License Manager Port number, specify if port is other than `44
 type `bool`, if set to `true` enables Token based Authentication,default is `false`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-bigiqUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L321">property <b>bigiqUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L337">property <b>bigiqUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqUser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1266,7 +1366,7 @@ type `bool`, if set to `true` enables Token based Authentication,default is `fal
 BIGIQ License Manager username, variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-deviceLicenseStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L325">property <b>deviceLicenseStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L341">property <b>deviceLicenseStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceLicenseStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1374,7 @@ BIGIQ License Manager username, variable type `string`
 Status of Licence Assignment
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-hypervisor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L329">property <b>hypervisor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L345">property <b>hypervisor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hypervisor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1282,7 +1382,7 @@ Status of Licence Assignment
 Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L333">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L349">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1290,7 +1390,7 @@ Identifies the platform running the BIG-IP VE. Possible values: “aws”, “az
 License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-licensePoolname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L337">property <b>licensePoolname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L353">property <b>licensePoolname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licensePoolname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1298,7 +1398,7 @@ License Assignment is done with specified `key`, supported only with RegKeypool 
 A name given to the license pool. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L341">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L357">property <b>macAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>macAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1306,7 +1406,7 @@ A name given to the license pool. type `string`
 MAC address of the BIG-IP. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-skukeyword1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L345">property <b>skukeyword1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L361">property <b>skukeyword1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skukeyword1?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1314,7 +1414,7 @@ MAC address of the BIG-IP. type `string`
 An optional offering name. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-skukeyword2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L349">property <b>skukeyword2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L365">property <b>skukeyword2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skukeyword2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1322,7 +1422,7 @@ An optional offering name. type `string`
 An optional offering name. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L353">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L369">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1330,7 +1430,7 @@ An optional offering name. type `string`
 For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqArgs-unitOfMeasure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L357">property <b>unitOfMeasure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L373">property <b>unitOfMeasure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unitOfMeasure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1338,7 +1438,7 @@ For an unreachable BIG-IP, you can provide an optional description for the assig
 The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 
 <h3 class="pdoc-module-header" id="CommonLicenseManageBigIqState" data-link-title="CommonLicenseManageBigIqState">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L239">
         interface <strong>CommonLicenseManageBigIqState</strong>
     </a>
 </h3>
@@ -1348,7 +1448,7 @@ The units used to measure billing. For example, “hourly” or “daily”. Typ
 Input properties used for looking up and filtering CommonLicenseManageBigIq resources.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-assignmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L227">property <b>assignmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L243">property <b>assignmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignmentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1356,7 +1456,7 @@ Input properties used for looking up and filtering CommonLicenseManageBigIq reso
 The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-bigiqAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L231">property <b>bigiqAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L247">property <b>bigiqAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1364,7 +1464,7 @@ The type of assignment, which is determined by whether the BIG-IP is unreachable
 BIGIQ License Manager IP Address, variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-bigiqLoginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L235">property <b>bigiqLoginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L251">property <b>bigiqLoginRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqLoginRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1372,7 +1472,7 @@ BIGIQ License Manager IP Address, variable type `string`
 BIGIQ Login reference for token authentication
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-bigiqPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L239">property <b>bigiqPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L255">property <b>bigiqPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1380,7 +1480,7 @@ BIGIQ Login reference for token authentication
 BIGIQ License Manager password.  variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-bigiqPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L243">property <b>bigiqPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L259">property <b>bigiqPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1388,7 +1488,7 @@ BIGIQ License Manager password.  variable type `string`
 type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-bigiqTokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L247">property <b>bigiqTokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L263">property <b>bigiqTokenAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqTokenAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1396,7 +1496,7 @@ type `int`, BIGIQ License Manager Port number, specify if port is other than `44
 type `bool`, if set to `true` enables Token based Authentication,default is `false`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-bigiqUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L251">property <b>bigiqUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L267">property <b>bigiqUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigiqUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1404,7 +1504,7 @@ type `bool`, if set to `true` enables Token based Authentication,default is `fal
 BIGIQ License Manager username, variable type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-deviceLicenseStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L255">property <b>deviceLicenseStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L271">property <b>deviceLicenseStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceLicenseStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1412,7 +1512,7 @@ BIGIQ License Manager username, variable type `string`
 Status of Licence Assignment
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-hypervisor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L259">property <b>hypervisor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L275">property <b>hypervisor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hypervisor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1420,7 +1520,7 @@ Status of Licence Assignment
 Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L263">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L279">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1428,7 +1528,7 @@ Identifies the platform running the BIG-IP VE. Possible values: “aws”, “az
 License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-licensePoolname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L267">property <b>licensePoolname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L283">property <b>licensePoolname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licensePoolname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1436,7 +1536,7 @@ License Assignment is done with specified `key`, supported only with RegKeypool 
 A name given to the license pool. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L271">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L287">property <b>macAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>macAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1444,7 +1544,7 @@ A name given to the license pool. type `string`
 MAC address of the BIG-IP. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-skukeyword1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L275">property <b>skukeyword1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L291">property <b>skukeyword1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skukeyword1?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1452,7 +1552,7 @@ MAC address of the BIG-IP. type `string`
 An optional offering name. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-skukeyword2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L279">property <b>skukeyword2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L295">property <b>skukeyword2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skukeyword2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1460,7 +1560,7 @@ An optional offering name. type `string`
 An optional offering name. type `string`
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L283">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L299">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1468,7 +1568,7 @@ An optional offering name. type `string`
 For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 
 <h4 class="pdoc-member-header" id="CommonLicenseManageBigIqState-unitOfMeasure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/commonLicenseManageBigIq.ts#L287">property <b>unitOfMeasure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/commonLicenseManageBigIq.ts#L303">property <b>unitOfMeasure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unitOfMeasure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1476,7 +1576,7 @@ For an unreachable BIG-IP, you can provide an optional description for the assig
 The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 
 <h3 class="pdoc-module-header" id="DoArgs" data-link-title="DoArgs">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L125">
         interface <strong>DoArgs</strong>
     </a>
 </h3>
@@ -1486,7 +1586,7 @@ The units used to measure billing. For example, “hourly” or “daily”. Typ
 The set of arguments for constructing a Do resource.
 
 <h4 class="pdoc-member-header" id="DoArgs-doJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L129">property <b>doJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L129">property <b>doJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>doJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1494,7 +1594,7 @@ The set of arguments for constructing a Do resource.
 Name of the of the Declarative DO JSON file
 
 <h4 class="pdoc-member-header" id="DoArgs-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L135">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L135">property <b>tenantName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1506,7 +1606,7 @@ this attribute is no longer in use
 unique identifier for DO resource
 
 <h4 class="pdoc-member-header" id="DoArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L139">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L139">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1514,7 +1614,7 @@ unique identifier for DO resource
 DO json
 
 <h3 class="pdoc-module-header" id="DoState" data-link-title="DoState">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L105">
         interface <strong>DoState</strong>
     </a>
 </h3>
@@ -1524,7 +1624,7 @@ DO json
 Input properties used for looking up and filtering Do resources.
 
 <h4 class="pdoc-member-header" id="DoState-doJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L109">property <b>doJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L109">property <b>doJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>doJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1532,7 +1632,7 @@ Input properties used for looking up and filtering Do resources.
 Name of the of the Declarative DO JSON file
 
 <h4 class="pdoc-member-header" id="DoState-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L115">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L115">property <b>tenantName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1544,15 +1644,61 @@ this attribute is no longer in use
 unique identifier for DO resource
 
 <h4 class="pdoc-member-header" id="DoState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/do.ts#L119">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/do.ts#L119">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
 DO json
 
+<h3 class="pdoc-module-header" id="EventServiceDiscoveryArgs" data-link-title="EventServiceDiscoveryArgs">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L89">
+        interface <strong>EventServiceDiscoveryArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventServiceDiscoveryArgs</span></code></pre>
+
+The set of arguments for constructing a EventServiceDiscovery resource.
+
+<h4 class="pdoc-member-header" id="EventServiceDiscoveryArgs-nodes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L90">property <b>nodes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#EventServiceDiscoveryNode'>EventServiceDiscoveryNode</a>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EventServiceDiscoveryArgs-taskid">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L94">property <b>taskid</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>taskid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Name of the partition/tenant
+
+<h3 class="pdoc-module-header" id="EventServiceDiscoveryState" data-link-title="EventServiceDiscoveryState">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L78">
+        interface <strong>EventServiceDiscoveryState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventServiceDiscoveryState</span></code></pre>
+
+Input properties used for looking up and filtering EventServiceDiscovery resources.
+
+<h4 class="pdoc-member-header" id="EventServiceDiscoveryState-nodes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L79">property <b>nodes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#EventServiceDiscoveryNode'>EventServiceDiscoveryNode</a>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EventServiceDiscoveryState-taskid">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/eventServiceDiscovery.ts#L83">property <b>taskid</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>taskid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Name of the partition/tenant
+
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -1561,7 +1707,7 @@ DO json
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -1570,7 +1716,7 @@ DO json
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -1579,7 +1725,7 @@ DO json
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -1588,7 +1734,7 @@ DO json
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L70">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -1598,7 +1744,7 @@ DO json
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L74">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L74">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1606,7 +1752,7 @@ The set of arguments for constructing a Provider resource.
 Domain name/IP of the BigIP
 
 <h4 class="pdoc-member-header" id="ProviderArgs-loginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L78">property <b>loginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L78">property <b>loginRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1614,7 +1760,7 @@ Domain name/IP of the BigIP
 Login reference for token authentication (see BIG-IP REST docs for details)
 
 <h4 class="pdoc-member-header" id="ProviderArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L82">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L82">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1622,7 +1768,7 @@ Login reference for token authentication (see BIG-IP REST docs for details)
 The user's password
 
 <h4 class="pdoc-member-header" id="ProviderArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L86">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L86">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1630,7 +1776,7 @@ The user's password
 Management Port to connect to Bigip
 
 <h4 class="pdoc-member-header" id="ProviderArgs-teemDisable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L90">property <b>teemDisable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L90">property <b>teemDisable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teemDisable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1638,7 +1784,7 @@ Management Port to connect to Bigip
 If this flag set to true,sending telemetry data to TEEM will be disabled
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L94">property <b>tokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L94">property <b>tokenAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1646,7 +1792,7 @@ If this flag set to true,sending telemetry data to TEEM will be disabled
 Enable to use an external authentication source (LDAP, TACACS, etc)
 
 <h4 class="pdoc-member-header" id="ProviderArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/f0e6cd308eb59ccd4382e8fb9671c454494aa67c/sdk/nodejs/provider.ts#L98">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/fd146340288aa457ef916992718f831e3049b5ce/sdk/nodejs/provider.ts#L98">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

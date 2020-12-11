@@ -1,7 +1,7 @@
 
 ---
 title: "SecretVersion"
-title_tag: "Resource SecretVersion | Module secretsmanager | Package AWS"
+title_tag: "aws.secretsmanager.SecretVersion"
 meta_desc: "Explore the SecretVersion resource of the secretsmanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS Secrets Manager secret version including its secret value. To manage secret metadata, see the `aws.secretsmanager.Secret` resource."
 ---
 

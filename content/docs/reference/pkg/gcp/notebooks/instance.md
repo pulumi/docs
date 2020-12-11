@@ -22,6 +22,518 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Notebook Instance Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Notebooks.Instance("instance", new Gcp.Notebooks.InstanceArgs
+        {
+            Location = "us-west1-a",
+            MachineType = "e2-medium",
+            VmImage = new Gcp.Notebooks.Inputs.InstanceVmImageArgs
+            {
+                Project = "deeplearning-platform-release",
+                ImageFamily = "tf-latest-cpu",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/notebooks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := notebooks.NewInstance(ctx, "instance", &notebooks.InstanceArgs{
+			Location:    pulumi.String("us-west1-a"),
+			MachineType: pulumi.String("e2-medium"),
+			VmImage: &notebooks.InstanceVmImageArgs{
+				Project:     pulumi.String("deeplearning-platform-release"),
+				ImageFamily: pulumi.String("tf-latest-cpu"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.notebooks.Instance("instance",
+    location="us-west1-a",
+    machine_type="e2-medium",
+    vm_image=gcp.notebooks.InstanceVmImageArgs(
+        project="deeplearning-platform-release",
+        image_family="tf-latest-cpu",
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.notebooks.Instance("instance", {
+    location: "us-west1-a",
+    machineType: "e2-medium",
+    vmImage: {
+        project: "deeplearning-platform-release",
+        imageFamily: "tf-latest-cpu",
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Notebook Instance Basic Container
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Notebooks.Instance("instance", new Gcp.Notebooks.InstanceArgs
+        {
+            Location = "us-west1-a",
+            MachineType = "e2-medium",
+            Metadata = 
+            {
+                { "proxy-mode", "service_account" },
+            },
+            ContainerImage = new Gcp.Notebooks.Inputs.InstanceContainerImageArgs
+            {
+                Repository = "gcr.io/deeplearning-platform-release/base-cpu",
+                Tag = "latest",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/notebooks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := notebooks.NewInstance(ctx, "instance", &notebooks.InstanceArgs{
+			Location:    pulumi.String("us-west1-a"),
+			MachineType: pulumi.String("e2-medium"),
+			Metadata: pulumi.StringMap{
+				"proxy-mode": pulumi.String("service_account"),
+			},
+			ContainerImage: &notebooks.InstanceContainerImageArgs{
+				Repository: pulumi.String("gcr.io/deeplearning-platform-release/base-cpu"),
+				Tag:        pulumi.String("latest"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.notebooks.Instance("instance",
+    location="us-west1-a",
+    machine_type="e2-medium",
+    metadata={
+        "proxy-mode": "service_account",
+    },
+    container_image=gcp.notebooks.InstanceContainerImageArgs(
+        repository="gcr.io/deeplearning-platform-release/base-cpu",
+        tag="latest",
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.notebooks.Instance("instance", {
+    location: "us-west1-a",
+    machineType: "e2-medium",
+    metadata: {
+        "proxy-mode": "service_account",
+    },
+    containerImage: {
+        repository: "gcr.io/deeplearning-platform-release/base-cpu",
+        tag: "latest",
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Notebook Instance Basic Gpu
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Notebooks.Instance("instance", new Gcp.Notebooks.InstanceArgs
+        {
+            Location = "us-west1-a",
+            MachineType = "n1-standard-1",
+            InstallGpuDriver = true,
+            AcceleratorConfig = new Gcp.Notebooks.Inputs.InstanceAcceleratorConfigArgs
+            {
+                Type = "NVIDIA_TESLA_T4",
+                CoreCount = 1,
+            },
+            VmImage = new Gcp.Notebooks.Inputs.InstanceVmImageArgs
+            {
+                Project = "deeplearning-platform-release",
+                ImageFamily = "tf-latest-gpu",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/notebooks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := notebooks.NewInstance(ctx, "instance", &notebooks.InstanceArgs{
+			Location:         pulumi.String("us-west1-a"),
+			MachineType:      pulumi.String("n1-standard-1"),
+			InstallGpuDriver: pulumi.Bool(true),
+			AcceleratorConfig: &notebooks.InstanceAcceleratorConfigArgs{
+				Type:      pulumi.String("NVIDIA_TESLA_T4"),
+				CoreCount: pulumi.Int(1),
+			},
+			VmImage: &notebooks.InstanceVmImageArgs{
+				Project:     pulumi.String("deeplearning-platform-release"),
+				ImageFamily: pulumi.String("tf-latest-gpu"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.notebooks.Instance("instance",
+    location="us-west1-a",
+    machine_type="n1-standard-1",
+    install_gpu_driver=True,
+    accelerator_config=gcp.notebooks.InstanceAcceleratorConfigArgs(
+        type="NVIDIA_TESLA_T4",
+        core_count=1,
+    ),
+    vm_image=gcp.notebooks.InstanceVmImageArgs(
+        project="deeplearning-platform-release",
+        image_family="tf-latest-gpu",
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.notebooks.Instance("instance", {
+    location: "us-west1-a",
+    machineType: "n1-standard-1",
+    installGpuDriver: true,
+    acceleratorConfig: {
+        type: "NVIDIA_TESLA_T4",
+        coreCount: 1,
+    },
+    vmImage: {
+        project: "deeplearning-platform-release",
+        imageFamily: "tf-latest-gpu",
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Notebook Instance Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myNetwork = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+        {
+            Name = "default",
+        }));
+        var mySubnetwork = Output.Create(Gcp.Compute.GetSubnetwork.InvokeAsync(new Gcp.Compute.GetSubnetworkArgs
+        {
+            Name = "default",
+            Region = "us-central1",
+        }));
+        var instance = new Gcp.Notebooks.Instance("instance", new Gcp.Notebooks.InstanceArgs
+        {
+            Location = "us-central1-a",
+            MachineType = "e2-medium",
+            VmImage = new Gcp.Notebooks.Inputs.InstanceVmImageArgs
+            {
+                Project = "deeplearning-platform-release",
+                ImageFamily = "tf-latest-cpu",
+            },
+            InstanceOwners = 
+            {
+                "admin@hashicorptest.com",
+            },
+            ServiceAccount = "emailAddress:my@service-account.com",
+            InstallGpuDriver = true,
+            BootDiskType = "PD_SSD",
+            BootDiskSizeGb = 110,
+            NoPublicIp = true,
+            NoProxyAccess = true,
+            Network = myNetwork.Apply(myNetwork => myNetwork.Id),
+            Subnet = mySubnetwork.Apply(mySubnetwork => mySubnetwork.Id),
+            Labels = 
+            {
+                { "k", "val" },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/notebooks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myNetwork, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+			Name: "default",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt0 := "default"
+		opt1 := "us-central1"
+		mySubnetwork, err := compute.LookupSubnetwork(ctx, &compute.LookupSubnetworkArgs{
+			Name:   &opt0,
+			Region: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = notebooks.NewInstance(ctx, "instance", &notebooks.InstanceArgs{
+			Location:    pulumi.String("us-central1-a"),
+			MachineType: pulumi.String("e2-medium"),
+			VmImage: &notebooks.InstanceVmImageArgs{
+				Project:     pulumi.String("deeplearning-platform-release"),
+				ImageFamily: pulumi.String("tf-latest-cpu"),
+			},
+			InstanceOwners: pulumi.String(pulumi.String{
+				pulumi.String("admin@hashicorptest.com"),
+			}),
+			ServiceAccount:   pulumi.String("emailAddress:my@service-account.com"),
+			InstallGpuDriver: pulumi.Bool(true),
+			BootDiskType:     pulumi.String("PD_SSD"),
+			BootDiskSizeGb:   pulumi.Int(110),
+			NoPublicIp:       pulumi.Bool(true),
+			NoProxyAccess:    pulumi.Bool(true),
+			Network:          pulumi.String(myNetwork.Id),
+			Subnet:           pulumi.String(mySubnetwork.Id),
+			Labels: pulumi.StringMap{
+				"k": pulumi.String("val"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_network = gcp.compute.get_network(name="default")
+my_subnetwork = gcp.compute.get_subnetwork(name="default",
+    region="us-central1")
+instance = gcp.notebooks.Instance("instance",
+    location="us-central1-a",
+    machine_type="e2-medium",
+    vm_image=gcp.notebooks.InstanceVmImageArgs(
+        project="deeplearning-platform-release",
+        image_family="tf-latest-cpu",
+    ),
+    instance_owners=["admin@hashicorptest.com"],
+    service_account="emailAddress:my@service-account.com",
+    install_gpu_driver=True,
+    boot_disk_type="PD_SSD",
+    boot_disk_size_gb=110,
+    no_public_ip=True,
+    no_proxy_access=True,
+    network=my_network.id,
+    subnet=my_subnetwork.id,
+    labels={
+        "k": "val",
+    },
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myNetwork = gcp.compute.getNetwork({
+    name: "default",
+});
+const mySubnetwork = gcp.compute.getSubnetwork({
+    name: "default",
+    region: "us-central1",
+});
+const instance = new gcp.notebooks.Instance("instance", {
+    location: "us-central1-a",
+    machineType: "e2-medium",
+    vmImage: {
+        project: "deeplearning-platform-release",
+        imageFamily: "tf-latest-cpu",
+    },
+    instanceOwners: ["admin@hashicorptest.com"],
+    serviceAccount: "emailAddress:my@service-account.com",
+    installGpuDriver: true,
+    bootDiskType: "PD_SSD",
+    bootDiskSizeGb: 110,
+    noPublicIp: true,
+    noProxyAccess: true,
+    network: myNetwork.then(myNetwork => myNetwork.id),
+    subnet: mySubnetwork.then(mySubnetwork => mySubnetwork.id),
+    labels: {
+        k: "val",
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -3743,6 +4255,24 @@ Format: projects/{project_id}
 
 
 
+
+
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:notebooks/instance:Instance default projects/{{project}}/locations/{{location}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:notebooks/instance:Instance default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:notebooks/instance:Instance default {{location}}/{{name}}
+```
 
 
 

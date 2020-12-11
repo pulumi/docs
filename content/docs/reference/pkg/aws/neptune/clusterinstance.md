@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterInstance"
-title_tag: "Resource ClusterInstance | Module neptune | Package AWS"
+title_tag: "aws.neptune.ClusterInstance"
 meta_desc: "Explore the ClusterInstance resource of the neptune module, including examples, input properties, output properties, lookup functions, and supporting types. A Cluster Instance Resource defines attributes that are specific to a single instance in a Neptune Cluster."
 ---
 

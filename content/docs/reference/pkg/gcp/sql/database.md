@@ -13,6 +13,109 @@ meta_desc: "Explore the Database resource of the sql module, including examples,
 Represents a SQL database inside the Cloud SQL instance, hosted in
 Google's cloud.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Sql Database Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            Region = "us-central1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+            DeletionProtection = true,
+        });
+        var database = new Gcp.Sql.Database("database", new Gcp.Sql.DatabaseArgs
+        {
+            Instance = instance.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			Region: pulumi.String("us-central1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+			DeletionProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			Instance: instance.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.DatabaseInstance("instance",
+    region="us-central1",
+    settings=gcp.sql.DatabaseInstanceSettingsArgs(
+        tier="db-f1-micro",
+    ),
+    deletion_protection=True)
+database = gcp.sql.Database("database", instance=instance.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+});
+const database = new gcp.sql.Database("database", {instance: instance.name});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}
@@ -1078,6 +1181,32 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Database can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:sql/database:Database default projects/{{project}}/instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default {{project}}/{{instance}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default {{instance}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default {{name}}
+```
 
 
 

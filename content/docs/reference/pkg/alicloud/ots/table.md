@@ -1,7 +1,7 @@
 
 ---
 title: "Table"
-title_tag: "Resource Table | Module ots | Package AliCloud"
+title_tag: "alicloud.ots.Table"
 meta_desc: "Explore the Table resource of the ots module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OTS table resource."
 ---
 

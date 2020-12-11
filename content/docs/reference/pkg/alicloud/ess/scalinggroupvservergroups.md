@@ -1,7 +1,7 @@
 
 ---
 title: "ScalingGroupVServerGroups"
-title_tag: "Resource ScalingGroupVServerGroups | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.ScalingGroupVServerGroups"
 meta_desc: "Explore the ScalingGroupVServerGroups resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches/Detaches vserver groups to a specified scaling group."
 ---
 

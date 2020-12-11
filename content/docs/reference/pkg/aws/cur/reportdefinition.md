@@ -1,7 +1,7 @@
 
 ---
 title: "ReportDefinition"
-title_tag: "Resource ReportDefinition | Module cur | Package AWS"
+title_tag: "aws.cur.ReportDefinition"
 meta_desc: "Explore the ReportDefinition resource of the cur module, including examples, input properties, output properties, lookup functions, and supporting types. Manages Cost and Usage Report Definitions."
 ---
 

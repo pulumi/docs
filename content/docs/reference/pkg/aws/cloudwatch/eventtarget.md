@@ -1,7 +1,7 @@
 
 ---
 title: "EventTarget"
-title_tag: "Resource EventTarget | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.EventTarget"
 meta_desc: "Explore the EventTarget resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EventBridge Target resource."
 ---
 

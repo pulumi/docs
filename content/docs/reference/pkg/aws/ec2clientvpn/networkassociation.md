@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkAssociation"
-title_tag: "Resource NetworkAssociation | Module ec2clientvpn | Package AWS"
+title_tag: "aws.ec2clientvpn.NetworkAssociation"
 meta_desc: "Explore the NetworkAssociation resource of the ec2clientvpn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides network associations for AWS Client VPN endpoints. For more information on usage, please see the"
 ---
 

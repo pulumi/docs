@@ -1,7 +1,7 @@
 
 ---
 title: "GroupPolicyAttachment"
-title_tag: "Resource GroupPolicyAttachment | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.GroupPolicyAttachment"
 meta_desc: "Explore the GroupPolicyAttachment resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM Group Policy attachment resource. "
 ---
 

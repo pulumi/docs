@@ -1,7 +1,7 @@
 
 ---
 title: "QueuePolicy"
-title_tag: "Resource QueuePolicy | Module sqs | Package AWS"
+title_tag: "aws.sqs.QueuePolicy"
 meta_desc: "Explore the QueuePolicy resource of the sqs module, including examples, input properties, output properties, lookup functions, and supporting types. Allows you to set a policy of an SQS Queue"
 ---
 

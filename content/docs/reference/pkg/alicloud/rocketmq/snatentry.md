@@ -1,7 +1,7 @@
 
 ---
 title: "SnatEntry"
-title_tag: "Resource SnatEntry | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.SnatEntry"
 meta_desc: "Explore the SnatEntry resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag SnatEntry resource. This topic describes how to add a SNAT entry to enable the SNAT function. The SNAT function can hide internal IP addresses and resolve private IP address conflicts. With this function, on-premises sites can access internal IP addresses, but cannot be accessed by internal IP addresses. If you do not add a SNAT entry, on-premises sites can access each other only when all related IP addresses do not conflict."
 ---
 

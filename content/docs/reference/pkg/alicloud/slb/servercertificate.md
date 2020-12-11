@@ -1,7 +1,7 @@
 
 ---
 title: "ServerCertificate"
-title_tag: "Resource ServerCertificate | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.ServerCertificate"
 meta_desc: "Explore the ServerCertificate resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. A Load Balancer Server Certificate is an ssl Certificate used by the listener of the protocol https."
 ---
 

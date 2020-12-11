@@ -17,6 +17,79 @@ for a project.
 For more information, see,
 [the Project API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/projects/setDefaultNetworkTier).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.ProjectDefaultNetworkTier("default", new Gcp.Compute.ProjectDefaultNetworkTierArgs
+        {
+            NetworkTier = "PREMIUM",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewProjectDefaultNetworkTier(ctx, "_default", &compute.ProjectDefaultNetworkTierArgs{
+			NetworkTier: pulumi.String("PREMIUM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.ProjectDefaultNetworkTier("default", network_tier="PREMIUM")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultProjectDefaultNetworkTier = new gcp.compute.ProjectDefaultNetworkTier("default", {
+    networkTier: "PREMIUM",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProjectDefaultNetworkTier Resource {#create}
@@ -658,6 +731,16 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+This resource can be imported using the project ID
+
+```sh
+ $ pulumi import gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier default project-id`
+```
 
 
 

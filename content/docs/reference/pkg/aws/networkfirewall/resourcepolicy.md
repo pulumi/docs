@@ -1,7 +1,7 @@
 
 ---
 title: "ResourcePolicy"
-title_tag: "Resource ResourcePolicy | Module networkfirewall | Package AWS"
+title_tag: "aws.networkfirewall.ResourcePolicy"
 meta_desc: "Explore the ResourcePolicy resource of the networkfirewall module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Network Firewall Resource Policy Resource for a rule group or firewall policy."
 ---
 

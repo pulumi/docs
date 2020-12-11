@@ -259,6 +259,7 @@ function getDefaultExcludedKeywords() {
         "https://gitlab.com/profile/applications",
         "https://blog.coinbase.com/",
         "https://www.netfilter.org/",
+        "https://codepen.io",
     ];
 }
 

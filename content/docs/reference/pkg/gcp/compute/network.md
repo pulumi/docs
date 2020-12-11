@@ -18,6 +18,142 @@ To get more information about Network, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Network Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpcNetwork = new Gcp.Compute.Network("vpcNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "vpcNetwork", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vpc_network = gcp.compute.Network("vpcNetwork")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vpcNetwork = new gcp.compute.Network("vpc_network", {});
+```
+
+{{% /example %}}
+
+### Network Custom Mtu
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpcNetwork = new Gcp.Compute.Network("vpcNetwork", new Gcp.Compute.NetworkArgs
+        {
+            Mtu = 1500,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "vpcNetwork", &compute.NetworkArgs{
+			Mtu: pulumi.Int(1500),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vpc_network = gcp.compute.Network("vpcNetwork", mtu=1500)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vpcNetwork = new gcp.compute.Network("vpc_network", {
+    mtu: 1500,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Network Resource {#create}
@@ -1411,6 +1547,24 @@ Possible values are `REGIONAL` and `GLOBAL`.
 
 
 
+
+
+## Import
+
+
+Network can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/network:Network default projects/{{project}}/global/networks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/network:Network default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/network:Network default {{name}}
+```
 
 
 

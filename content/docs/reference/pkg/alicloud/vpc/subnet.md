@@ -1,7 +1,7 @@
 
 ---
 title: "Subnet"
-title_tag: "Resource Subnet | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.Subnet"
 meta_desc: "Explore the Subnet resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

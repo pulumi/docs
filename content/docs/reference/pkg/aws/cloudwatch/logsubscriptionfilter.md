@@ -1,7 +1,7 @@
 
 ---
 title: "LogSubscriptionFilter"
-title_tag: "Resource LogSubscriptionFilter | Module cloudwatch | Package AWS"
+title_tag: "aws.cloudwatch.LogSubscriptionFilter"
 meta_desc: "Explore the LogSubscriptionFilter resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Logs subscription filter resource."
 ---
 

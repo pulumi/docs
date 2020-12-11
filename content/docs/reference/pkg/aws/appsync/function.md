@@ -1,7 +1,7 @@
 
 ---
 title: "Function"
-title_tag: "Resource Function | Module appsync | Package AWS"
+title_tag: "aws.appsync.Function"
 meta_desc: "Explore the Function resource of the appsync module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AppSync Function."
 ---
 

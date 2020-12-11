@@ -1,7 +1,7 @@
 
 ---
 title: "MemcachedLayer"
-title_tag: "Resource MemcachedLayer | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.MemcachedLayer"
 meta_desc: "Explore the MemcachedLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks memcached layer resource."
 ---
 

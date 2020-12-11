@@ -21,6 +21,331 @@ To get more information about StandardAppVersion, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### App Engine Standard App Version
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+        });
+        var myappV1 = new Gcp.AppEngine.StandardAppVersion("myappV1", new Gcp.AppEngine.StandardAppVersionArgs
+        {
+            VersionId = "v1",
+            Service = "myapp",
+            Runtime = "nodejs10",
+            Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+                    }),
+                },
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            AutomaticScaling = new Gcp.AppEngine.Inputs.StandardAppVersionAutomaticScalingArgs
+            {
+                MaxConcurrentRequests = 10,
+                MinIdleInstances = 1,
+                MaxIdleInstances = 3,
+                MinPendingLatency = "1s",
+                MaxPendingLatency = "5s",
+                StandardSchedulerSettings = new Gcp.AppEngine.Inputs.StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs
+                {
+                    TargetCpuUtilization = 0.5,
+                    TargetThroughputUtilization = 0.75,
+                    MinInstances = 2,
+                    MaxInstances = 10,
+                },
+            },
+            DeleteServiceOnDestroy = true,
+        });
+        var myappV2 = new Gcp.AppEngine.StandardAppVersion("myappV2", new Gcp.AppEngine.StandardAppVersionArgs
+        {
+            VersionId = "v2",
+            Service = "myapp",
+            Runtime = "nodejs10",
+            Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+                    }),
+                },
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            BasicScaling = new Gcp.AppEngine.Inputs.StandardAppVersionBasicScalingArgs
+            {
+                MaxInstances = 5,
+            },
+            NoopOnDestroy = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		object, err := storage.NewBucketObject(ctx, "object", &storage.BucketObjectArgs{
+			Bucket: bucket.Name,
+			Source: pulumi.NewFileAsset("./test-fixtures/appengine/hello-world.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appengine.NewStandardAppVersion(ctx, "myappV1", &appengine.StandardAppVersionArgs{
+			VersionId: pulumi.String("v1"),
+			Service:   pulumi.String("myapp"),
+			Runtime:   pulumi.String("nodejs10"),
+			Entrypoint: &appengine.StandardAppVersionEntrypointArgs{
+				Shell: pulumi.String("node ./app.js"),
+			},
+			Deployment: &appengine.StandardAppVersionDeploymentArgs{
+				Zip: &appengine.StandardAppVersionDeploymentZipArgs{
+					SourceUrl: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+						bucketName := _args[0].(string)
+						objectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", bucketName, "/", objectName), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			EnvVariables: pulumi.StringMap{
+				"port": pulumi.String("8080"),
+			},
+			AutomaticScaling: &appengine.StandardAppVersionAutomaticScalingArgs{
+				MaxConcurrentRequests: pulumi.Int(10),
+				MinIdleInstances:      pulumi.Int(1),
+				MaxIdleInstances:      pulumi.Int(3),
+				MinPendingLatency:     pulumi.String("1s"),
+				MaxPendingLatency:     pulumi.String("5s"),
+				StandardSchedulerSettings: &appengine.StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs{
+					TargetCpuUtilization:        pulumi.Float64(0.5),
+					TargetThroughputUtilization: pulumi.Float64(0.75),
+					MinInstances:                pulumi.Int(2),
+					MaxInstances:                pulumi.Int(10),
+				},
+			},
+			DeleteServiceOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appengine.NewStandardAppVersion(ctx, "myappV2", &appengine.StandardAppVersionArgs{
+			VersionId: pulumi.String("v2"),
+			Service:   pulumi.String("myapp"),
+			Runtime:   pulumi.String("nodejs10"),
+			Entrypoint: &appengine.StandardAppVersionEntrypointArgs{
+				Shell: pulumi.String("node ./app.js"),
+			},
+			Deployment: &appengine.StandardAppVersionDeploymentArgs{
+				Zip: &appengine.StandardAppVersionDeploymentZipArgs{
+					SourceUrl: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+						bucketName := _args[0].(string)
+						objectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", bucketName, "/", objectName), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			EnvVariables: pulumi.StringMap{
+				"port": pulumi.String("8080"),
+			},
+			BasicScaling: &appengine.StandardAppVersionBasicScalingArgs{
+				MaxInstances: pulumi.Int(5),
+			},
+			NoopOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp_v1 = gcp.appengine.StandardAppVersion("myappV1",
+    version_id="v1",
+    service="myapp",
+    runtime="nodejs10",
+    entrypoint=gcp.appengine.StandardAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.StandardAppVersionDeploymentArgs(
+        zip=gcp.appengine.StandardAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
+    env_variables={
+        "port": "8080",
+    },
+    automatic_scaling=gcp.appengine.StandardAppVersionAutomaticScalingArgs(
+        max_concurrent_requests=10,
+        min_idle_instances=1,
+        max_idle_instances=3,
+        min_pending_latency="1s",
+        max_pending_latency="5s",
+        standard_scheduler_settings=gcp.appengine.StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs(
+            target_cpu_utilization=0.5,
+            target_throughput_utilization=0.75,
+            min_instances=2,
+            max_instances=10,
+        ),
+    ),
+    delete_service_on_destroy=True)
+myapp_v2 = gcp.appengine.StandardAppVersion("myappV2",
+    version_id="v2",
+    service="myapp",
+    runtime="nodejs10",
+    entrypoint=gcp.appengine.StandardAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.StandardAppVersionDeploymentArgs(
+        zip=gcp.appengine.StandardAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
+    env_variables={
+        "port": "8080",
+    },
+    basic_scaling=gcp.appengine.StandardAppVersionBasicScalingArgs(
+        max_instances=5,
+    ),
+    noop_on_destroy=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myappV1 = new gcp.appengine.StandardAppVersion("myappV1", {
+    versionId: "v1",
+    service: "myapp",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    automaticScaling: {
+        maxConcurrentRequests: 10,
+        minIdleInstances: 1,
+        maxIdleInstances: 3,
+        minPendingLatency: "1s",
+        maxPendingLatency: "5s",
+        standardSchedulerSettings: {
+            targetCpuUtilization: 0.5,
+            targetThroughputUtilization: 0.75,
+            minInstances: 2,
+            maxInstances: 10,
+        },
+    },
+    deleteServiceOnDestroy: true,
+});
+const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
+    versionId: "v2",
+    service: "myapp",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    basicScaling: {
+        maxInstances: 5,
+    },
+    noopOnDestroy: true,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StandardAppVersion Resource {#create}
@@ -4762,6 +5087,24 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 
 
+
+
+## Import
+
+
+StandardAppVersion can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/standardAppVersion:StandardAppVersion default apps/{{project}}/services/{{service}}/versions/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/standardAppVersion:StandardAppVersion default {{project}}/{{service}}/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/standardAppVersion:StandardAppVersion default {{service}}/{{version_id}}
+```
 
 
 

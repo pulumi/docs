@@ -1,7 +1,7 @@
 
 ---
 title: "DocumentationPart"
-title_tag: "Resource DocumentationPart | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.DocumentationPart"
 meta_desc: "Explore the DocumentationPart resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a settings of an API Gateway Documentation Part."
 ---
 

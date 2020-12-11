@@ -1,7 +1,7 @@
 
 ---
 title: "RegistryEnterpriseSyncRule"
-title_tag: "Resource RegistryEnterpriseSyncRule | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.RegistryEnterpriseSyncRule"
 meta_desc: "Explore the RegistryEnterpriseSyncRule resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager Container Registry Enterprise Edition sync rules."
 ---
 

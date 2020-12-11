@@ -1,7 +1,7 @@
 
 ---
 title: "ZoneAttachment"
-title_tag: "Resource ZoneAttachment | Module pvtz | Package AliCloud"
+title_tag: "alicloud.pvtz.ZoneAttachment"
 meta_desc: "Explore the ZoneAttachment resource of the pvtz module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

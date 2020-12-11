@@ -18,6 +18,365 @@ To get more information about Dashboards, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/dashboards)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Monitoring Dashboard Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dashboard = new Gcp.Monitoring.Dashboard("dashboard", new Gcp.Monitoring.DashboardArgs
+        {
+            DashboardJson = @"{
+  ""displayName"": ""Demo Dashboard"",
+  ""gridLayout"": {
+    ""widgets"": [
+      {
+        ""blank"": {}
+      }
+    ]
+  }
+}
+
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := monitoring.NewDashboard(ctx, "dashboard", &monitoring.DashboardArgs{
+			DashboardJson: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"displayName\": \"Demo Dashboard\",\n", "  \"gridLayout\": {\n", "    \"widgets\": [\n", "      {\n", "        \"blank\": {}\n", "      }\n", "    ]\n", "  }\n", "}\n", "\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dashboard = gcp.monitoring.Dashboard("dashboard", dashboard_json="""{
+  "displayName": "Demo Dashboard",
+  "gridLayout": {
+    "widgets": [
+      {
+        "blank": {}
+      }
+    ]
+  }
+}
+
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dashboard = new gcp.monitoring.Dashboard("dashboard", {
+    dashboardJson: `{
+  "displayName": "Demo Dashboard",
+  "gridLayout": {
+    "widgets": [
+      {
+        "blank": {}
+      }
+    ]
+  }
+}
+
+`,
+});
+```
+
+{{% /example %}}
+
+### Monitoring Dashboard GridLayout
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dashboard = new Gcp.Monitoring.Dashboard("dashboard", new Gcp.Monitoring.DashboardArgs
+        {
+            DashboardJson = @"{
+  ""displayName"": ""Grid Layout Example"",
+  ""gridLayout"": {
+    ""columns"": ""2"",
+    ""widgets"": [
+      {
+        ""title"": ""Widget 1"",
+        ""xyChart"": {
+          ""dataSets"": [{
+            ""timeSeriesQuery"": {
+              ""timeSeriesFilter"": {
+                ""filter"": ""metric.type=\""agent.googleapis.com/nginx/connections/accepted_count\"""",
+                ""aggregation"": {
+                  ""perSeriesAligner"": ""ALIGN_RATE""
+                }
+              },
+              ""unitOverride"": ""1""
+            },
+            ""plotType"": ""LINE""
+          }],
+          ""timeshiftDuration"": ""0s"",
+          ""yAxis"": {
+            ""label"": ""y1Axis"",
+            ""scale"": ""LINEAR""
+          }
+        }
+      },
+      {
+        ""text"": {
+          ""content"": ""Widget 2"",
+          ""format"": ""MARKDOWN""
+        }
+      },
+      {
+        ""title"": ""Widget 3"",
+        ""xyChart"": {
+          ""dataSets"": [{
+            ""timeSeriesQuery"": {
+              ""timeSeriesFilter"": {
+                ""filter"": ""metric.type=\""agent.googleapis.com/nginx/connections/accepted_count\"""",
+                ""aggregation"": {
+                  ""perSeriesAligner"": ""ALIGN_RATE""
+                }
+              },
+              ""unitOverride"": ""1""
+            },
+            ""plotType"": ""STACKED_BAR""
+          }],
+          ""timeshiftDuration"": ""0s"",
+          ""yAxis"": {
+            ""label"": ""y1Axis"",
+            ""scale"": ""LINEAR""
+          }
+        }
+      }
+    ]
+  }
+}
+
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := monitoring.NewDashboard(ctx, "dashboard", &monitoring.DashboardArgs{
+			DashboardJson: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"displayName\": \"Grid Layout Example\",\n", "  \"gridLayout\": {\n", "    \"columns\": \"2\",\n", "    \"widgets\": [\n", "      {\n", "        \"title\": \"Widget 1\",\n", "        \"xyChart\": {\n", "          \"dataSets\": [{\n", "            \"timeSeriesQuery\": {\n", "              \"timeSeriesFilter\": {\n", "                \"filter\": \"metric.type=\\\"agent.googleapis.com/nginx/connections/accepted_count\\\"\",\n", "                \"aggregation\": {\n", "                  \"perSeriesAligner\": \"ALIGN_RATE\"\n", "                }\n", "              },\n", "              \"unitOverride\": \"1\"\n", "            },\n", "            \"plotType\": \"LINE\"\n", "          }],\n", "          \"timeshiftDuration\": \"0s\",\n", "          \"yAxis\": {\n", "            \"label\": \"y1Axis\",\n", "            \"scale\": \"LINEAR\"\n", "          }\n", "        }\n", "      },\n", "      {\n", "        \"text\": {\n", "          \"content\": \"Widget 2\",\n", "          \"format\": \"MARKDOWN\"\n", "        }\n", "      },\n", "      {\n", "        \"title\": \"Widget 3\",\n", "        \"xyChart\": {\n", "          \"dataSets\": [{\n", "            \"timeSeriesQuery\": {\n", "              \"timeSeriesFilter\": {\n", "                \"filter\": \"metric.type=\\\"agent.googleapis.com/nginx/connections/accepted_count\\\"\",\n", "                \"aggregation\": {\n", "                  \"perSeriesAligner\": \"ALIGN_RATE\"\n", "                }\n", "              },\n", "              \"unitOverride\": \"1\"\n", "            },\n", "            \"plotType\": \"STACKED_BAR\"\n", "          }],\n", "          \"timeshiftDuration\": \"0s\",\n", "          \"yAxis\": {\n", "            \"label\": \"y1Axis\",\n", "            \"scale\": \"LINEAR\"\n", "          }\n", "        }\n", "      }\n", "    ]\n", "  }\n", "}\n", "\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dashboard = gcp.monitoring.Dashboard("dashboard", dashboard_json="""{
+  "displayName": "Grid Layout Example",
+  "gridLayout": {
+    "columns": "2",
+    "widgets": [
+      {
+        "title": "Widget 1",
+        "xyChart": {
+          "dataSets": [{
+            "timeSeriesQuery": {
+              "timeSeriesFilter": {
+                "filter": "metric.type=\"agent.googleapis.com/nginx/connections/accepted_count\"",
+                "aggregation": {
+                  "perSeriesAligner": "ALIGN_RATE"
+                }
+              },
+              "unitOverride": "1"
+            },
+            "plotType": "LINE"
+          }],
+          "timeshiftDuration": "0s",
+          "yAxis": {
+            "label": "y1Axis",
+            "scale": "LINEAR"
+          }
+        }
+      },
+      {
+        "text": {
+          "content": "Widget 2",
+          "format": "MARKDOWN"
+        }
+      },
+      {
+        "title": "Widget 3",
+        "xyChart": {
+          "dataSets": [{
+            "timeSeriesQuery": {
+              "timeSeriesFilter": {
+                "filter": "metric.type=\"agent.googleapis.com/nginx/connections/accepted_count\"",
+                "aggregation": {
+                  "perSeriesAligner": "ALIGN_RATE"
+                }
+              },
+              "unitOverride": "1"
+            },
+            "plotType": "STACKED_BAR"
+          }],
+          "timeshiftDuration": "0s",
+          "yAxis": {
+            "label": "y1Axis",
+            "scale": "LINEAR"
+          }
+        }
+      }
+    ]
+  }
+}
+
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dashboard = new gcp.monitoring.Dashboard("dashboard", {
+    dashboardJson: `{
+  "displayName": "Grid Layout Example",
+  "gridLayout": {
+    "columns": "2",
+    "widgets": [
+      {
+        "title": "Widget 1",
+        "xyChart": {
+          "dataSets": [{
+            "timeSeriesQuery": {
+              "timeSeriesFilter": {
+                "filter": "metric.type=\\"agent.googleapis.com/nginx/connections/accepted_count\\"",
+                "aggregation": {
+                  "perSeriesAligner": "ALIGN_RATE"
+                }
+              },
+              "unitOverride": "1"
+            },
+            "plotType": "LINE"
+          }],
+          "timeshiftDuration": "0s",
+          "yAxis": {
+            "label": "y1Axis",
+            "scale": "LINEAR"
+          }
+        }
+      },
+      {
+        "text": {
+          "content": "Widget 2",
+          "format": "MARKDOWN"
+        }
+      },
+      {
+        "title": "Widget 3",
+        "xyChart": {
+          "dataSets": [{
+            "timeSeriesQuery": {
+              "timeSeriesFilter": {
+                "filter": "metric.type=\\"agent.googleapis.com/nginx/connections/accepted_count\\"",
+                "aggregation": {
+                  "perSeriesAligner": "ALIGN_RATE"
+                }
+              },
+              "unitOverride": "1"
+            },
+            "plotType": "STACKED_BAR"
+          }],
+          "timeshiftDuration": "0s",
+          "yAxis": {
+            "label": "y1Axis",
+            "scale": "LINEAR"
+          }
+        }
+      }
+    ]
+  }
+}
+
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Dashboard Resource {#create}
@@ -659,6 +1018,20 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Dashboard can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/dashboard:Dashboard default project/{{project}}/dashboards/{{dashboard_id}}
+```
+
+```sh
+ $ pulumi import gcp:monitoring/dashboard:Dashboard default {{dashboard_id}}
+```
 
 
 

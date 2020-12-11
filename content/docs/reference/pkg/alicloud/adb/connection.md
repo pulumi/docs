@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module adb | Package AliCloud"
+title_tag: "alicloud.adb.Connection"
 meta_desc: "Explore the Connection resource of the adb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ADB connection resource to allocate an Internet connection string for ADB cluster."
 ---
 

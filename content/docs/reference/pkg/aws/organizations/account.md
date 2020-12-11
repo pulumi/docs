@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module organizations | Package AWS"
+title_tag: "aws.organizations.Account"
 meta_desc: "Explore the Account resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a member account in the current organization."
 ---
 

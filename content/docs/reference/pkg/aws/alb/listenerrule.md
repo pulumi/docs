@@ -1,7 +1,7 @@
 
 ---
 title: "ListenerRule"
-title_tag: "Resource ListenerRule | Module alb | Package AWS"
+title_tag: "aws.alb.ListenerRule"
 meta_desc: "Explore the ListenerRule resource of the alb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Load Balancer Listener Rule resource."
 ---
 

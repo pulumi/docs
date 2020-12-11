@@ -1,7 +1,7 @@
 
 ---
 title: "VpcEndpoint"
-title_tag: "Resource VpcEndpoint | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcEndpoint"
 meta_desc: "Explore the VpcEndpoint resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC Endpoint resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "TransitGateway"
-title_tag: "Resource TransitGateway | Module ec2transitgateway | Package AWS"
+title_tag: "aws.ec2transitgateway.TransitGateway"
 meta_desc: "Explore the TransitGateway resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Transit Gateway."
 ---
 

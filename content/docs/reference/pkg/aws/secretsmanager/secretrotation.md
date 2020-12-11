@@ -1,7 +1,7 @@
 
 ---
 title: "SecretRotation"
-title_tag: "Resource SecretRotation | Module secretsmanager | Package AWS"
+title_tag: "aws.secretsmanager.SecretRotation"
 meta_desc: "Explore the SecretRotation resource of the secretsmanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS Secrets Manager secret rotation. To manage a secret, see the [`aws.secretsmanager.Secret` resource](https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret.html). To manage a secret value, see the [`aws.secretsmanager.SecretVersion` resource](https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html)."
 ---
 

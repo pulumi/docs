@@ -1,7 +1,7 @@
 
 ---
 title: "Api"
-title_tag: "Resource Api | Module apigatewayv2 | Package AWS"
+title_tag: "aws.apigatewayv2.Api"
 meta_desc: "Explore the Api resource of the apigatewayv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon API Gateway Version 2 API."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "VpcEndpointRouteTableAssociation"
-title_tag: "Resource VpcEndpointRouteTableAssociation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcEndpointRouteTableAssociation"
 meta_desc: "Explore the VpcEndpointRouteTableAssociation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a VPC Endpoint Route Table Association"
 ---
 

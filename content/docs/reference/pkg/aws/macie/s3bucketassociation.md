@@ -1,7 +1,7 @@
 
 ---
 title: "S3BucketAssociation"
-title_tag: "Resource S3BucketAssociation | Module macie | Package AWS"
+title_tag: "aws.macie.S3BucketAssociation"
 meta_desc: "Explore the S3BucketAssociation resource of the macie module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **NOTE:** This resource interacts with [Amazon Macie Classic](https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html). Macie Classic cannot be activated in new accounts. See the [FAQ](https://aws.amazon.com/macie/classic-faqs/) for more details."
 ---
 

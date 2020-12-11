@@ -1,7 +1,7 @@
 
 ---
 title: "Rule"
-title_tag: "Resource Rule | Module slb | Package AliCloud"
+title_tag: "alicloud.slb.Rule"
 meta_desc: "Explore the Rule resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. A forwarding rule is configured in `HTTP`/`HTTPS` listener and it used to listen a list of backend servers which in one specified virtual backend server group."
 ---
 

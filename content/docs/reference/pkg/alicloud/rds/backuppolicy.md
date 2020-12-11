@@ -1,7 +1,7 @@
 
 ---
 title: "BackupPolicy"
-title_tag: "Resource BackupPolicy | Module rds | Package AliCloud"
+title_tag: "alicloud.rds.BackupPolicy"
 meta_desc: "Explore the BackupPolicy resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS instance backup policy resource and used to configure instance backup policy."
 ---
 

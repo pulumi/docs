@@ -1,7 +1,7 @@
 
 ---
 title: "Notification"
-title_tag: "Resource Notification | Module ess | Package AliCloud"
+title_tag: "alicloud.ess.Notification"
 meta_desc: "Explore the Notification resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a ESS notification resource. More about Ess notification, see [Autoscaling Notification](https://www.alibabacloud.com/help/doc-detail/71114.htm)."
 ---
 

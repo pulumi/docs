@@ -1,7 +1,7 @@
 
 ---
 title: "AccountPasswordPolicy"
-title_tag: "Resource AccountPasswordPolicy | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.AccountPasswordPolicy"
 meta_desc: "Explore the AccountPasswordPolicy resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

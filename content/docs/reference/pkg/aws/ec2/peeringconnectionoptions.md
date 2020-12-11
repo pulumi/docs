@@ -1,7 +1,7 @@
 
 ---
 title: "PeeringConnectionOptions"
-title_tag: "Resource PeeringConnectionOptions | Module ec2 | Package AWS"
+title_tag: "aws.ec2.PeeringConnectionOptions"
 meta_desc: "Explore the PeeringConnectionOptions resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage VPC peering connection options."
 ---
 

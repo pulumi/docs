@@ -1,7 +1,7 @@
 
 ---
 title: "IdentityProvider"
-title_tag: "Resource IdentityProvider | Module cognito | Package AWS"
+title_tag: "aws.cognito.IdentityProvider"
 meta_desc: "Explore the IdentityProvider resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cognito User Identity Provider resource."
 ---
 

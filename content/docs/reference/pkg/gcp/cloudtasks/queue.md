@@ -12,6 +12,233 @@ meta_desc: "Explore the Queue resource of the cloudtasks module, including examp
 
 A named resource to which messages are sent by publishers.
 
+> **Warning:** This resource requires an App Engine application to be created on the
+project you're provisioning it on. If you haven't already enabled it, you
+can create a `gcp.appengine.Application` resource to do so. This
+resource's location will be the same as the App Engine location specified.
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Queue Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudTasks.Queue("default", new Gcp.CloudTasks.QueueArgs
+        {
+            Location = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudtasks.NewQueue(ctx, "_default", &cloudtasks.QueueArgs{
+			Location: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudtasks.Queue("default", location="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultQueue = new gcp.cloudtasks.Queue("default", {
+    location: "us-central1",
+});
+```
+
+{{% /example %}}
+
+### Cloud Tasks Queue Advanced
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var advancedConfiguration = new Gcp.CloudTasks.Queue("advancedConfiguration", new Gcp.CloudTasks.QueueArgs
+        {
+            AppEngineRoutingOverride = new Gcp.CloudTasks.Inputs.QueueAppEngineRoutingOverrideArgs
+            {
+                Instance = "test",
+                Service = "worker",
+                Version = "1.0",
+            },
+            Location = "us-central1",
+            RateLimits = new Gcp.CloudTasks.Inputs.QueueRateLimitsArgs
+            {
+                MaxConcurrentDispatches = 3,
+                MaxDispatchesPerSecond = 2,
+            },
+            RetryConfig = new Gcp.CloudTasks.Inputs.QueueRetryConfigArgs
+            {
+                MaxAttempts = 5,
+                MaxBackoff = "3s",
+                MaxDoublings = 1,
+                MaxRetryDuration = "4s",
+                MinBackoff = "2s",
+            },
+            StackdriverLoggingConfig = new Gcp.CloudTasks.Inputs.QueueStackdriverLoggingConfigArgs
+            {
+                SamplingRatio = 0.9,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudtasks.NewQueue(ctx, "advancedConfiguration", &cloudtasks.QueueArgs{
+			AppEngineRoutingOverride: &cloudtasks.QueueAppEngineRoutingOverrideArgs{
+				Instance: pulumi.String("test"),
+				Service:  pulumi.String("worker"),
+				Version:  pulumi.String("1.0"),
+			},
+			Location: pulumi.String("us-central1"),
+			RateLimits: &cloudtasks.QueueRateLimitsArgs{
+				MaxConcurrentDispatches: pulumi.Int(3),
+				MaxDispatchesPerSecond:  pulumi.Float64(2),
+			},
+			RetryConfig: &cloudtasks.QueueRetryConfigArgs{
+				MaxAttempts:      pulumi.Int(5),
+				MaxBackoff:       pulumi.String("3s"),
+				MaxDoublings:     pulumi.Int(1),
+				MaxRetryDuration: pulumi.String("4s"),
+				MinBackoff:       pulumi.String("2s"),
+			},
+			StackdriverLoggingConfig: &cloudtasks.QueueStackdriverLoggingConfigArgs{
+				SamplingRatio: pulumi.Float64(0.9),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+advanced_configuration = gcp.cloudtasks.Queue("advancedConfiguration",
+    app_engine_routing_override=gcp.cloudtasks.QueueAppEngineRoutingOverrideArgs(
+        instance="test",
+        service="worker",
+        version="1.0",
+    ),
+    location="us-central1",
+    rate_limits=gcp.cloudtasks.QueueRateLimitsArgs(
+        max_concurrent_dispatches=3,
+        max_dispatches_per_second=2,
+    ),
+    retry_config=gcp.cloudtasks.QueueRetryConfigArgs(
+        max_attempts=5,
+        max_backoff="3s",
+        max_doublings=1,
+        max_retry_duration="4s",
+        min_backoff="2s",
+    ),
+    stackdriver_logging_config=gcp.cloudtasks.QueueStackdriverLoggingConfigArgs(
+        sampling_ratio=0.9,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const advancedConfiguration = new gcp.cloudtasks.Queue("advanced_configuration", {
+    appEngineRoutingOverride: {
+        instance: "test",
+        service: "worker",
+        version: "1.0",
+    },
+    location: "us-central1",
+    rateLimits: {
+        maxConcurrentDispatches: 3,
+        maxDispatchesPerSecond: 2,
+    },
+    retryConfig: {
+        maxAttempts: 5,
+        maxBackoff: "3s",
+        maxDoublings: 1,
+        maxRetryDuration: "4s",
+        minBackoff: "2s",
+    },
+    stackdriverLoggingConfig: {
+        samplingRatio: 0.9,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Queue Resource {#create}
@@ -2067,6 +2294,24 @@ default and means that no operations are logged.
 
 
 
+
+
+## Import
+
+
+Queue can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default projects/{{project}}/locations/{{location}}/queues/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default {{location}}/{{name}}
+```
 
 
 

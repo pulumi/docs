@@ -1,7 +1,7 @@
 
 ---
 title: "PeeringAttachment"
-title_tag: "Resource PeeringAttachment | Module ec2transitgateway | Package AWS"
+title_tag: "aws.ec2transitgateway.PeeringAttachment"
 meta_desc: "Explore the PeeringAttachment resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EC2 Transit Gateway Peering Attachment."
 ---
 

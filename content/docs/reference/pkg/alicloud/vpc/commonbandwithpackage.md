@@ -1,7 +1,7 @@
 
 ---
 title: "CommonBandwithPackage"
-title_tag: "Resource CommonBandwithPackage | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.CommonBandwithPackage"
 meta_desc: "Explore the CommonBandwithPackage resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

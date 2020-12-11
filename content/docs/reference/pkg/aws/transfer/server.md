@@ -1,7 +1,7 @@
 
 ---
 title: "Server"
-title_tag: "Resource Server | Module transfer | Package AWS"
+title_tag: "aws.transfer.Server"
 meta_desc: "Explore the Server resource of the transfer module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a AWS Transfer Server resource."
 ---
 

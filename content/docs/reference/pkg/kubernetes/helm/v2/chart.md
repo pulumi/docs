@@ -1,7 +1,7 @@
 
 ---
 title: "Chart"
-title_tag: "Resource Chart | Module helm/v2 | Package Kubernetes"
+title_tag: "kubernetes.helm/v2.Chart"
 meta_desc: "Explore the Chart resource of the helm/v2 module, including examples, input properties, output properties, lookup functions, and supporting types. Chart is a component representing a collection of resources described by an arbitrary Helm Chart."
 ---
 
@@ -15,6 +15,7 @@ Chart is a component representing a collection of resources described by an arbi
 The Chart can be fetched from any source that is accessible to the `helm` command line. Values in the `values.yml` file can be overridden using `ChartOpts.values` (equivalent to `--set` or having multiple `values.yml` files). Objects can be transformed arbitrarily by supplying callbacks to `ChartOpts.transformations`.
 
 `Chart` does not use Tiller. The Chart specified is copied and expanded locally; the semantics are equivalent to running `helm template` and then using Pulumi to manage the resulting YAML manifests. Any values that would be retrieved in-cluster are assigned fake values, and none of Tiller's server-side validity testing is executed.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1141,7 +1142,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd>
 <a href="#fetch_opts_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>opts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fetchopts">Dict[Fetch<wbr>Opts]</a></span>
+        <span class="property-type"><a href="#fetchopts">Fetch<wbr>Opts<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional options to customize the fetching of the Helm chart.{{% /md %}}</dd>
 
@@ -1195,7 +1196,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd>
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}Optional array of transformations to apply to resources that will be created by this chart prior to creation. Allows customization of the chart behaviour without directly modifying the chart itself.{{% /md %}}</dd>
 
@@ -1205,7 +1206,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Overrides for chart values.{{% /md %}}</dd>
 
@@ -2032,6 +2033,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

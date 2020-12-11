@@ -1,7 +1,7 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Module sns | Package AWS"
+title_tag: "aws.sns.Topic"
 meta_desc: "Explore the Topic resource of the sns module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SNS topic resource"
 ---
 

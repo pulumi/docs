@@ -1,7 +1,7 @@
 
 ---
 title: "ImageCopy"
-title_tag: "Resource ImageCopy | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.ImageCopy"
 meta_desc: "Explore the ImageCopy resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Copies a custom image from one region to another. You can use copied images to perform operations in the target region, such as creating instances (RunInstances) and replacing system disks (ReplaceSystemDisk)."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Key"
-title_tag: "Resource Key | Module kms | Package AWS"
+title_tag: "aws.kms.Key"
 meta_desc: "Explore the Key resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a KMS customer master key."
 ---
 

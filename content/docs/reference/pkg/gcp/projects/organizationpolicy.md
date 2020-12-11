@@ -15,6 +15,97 @@ Allows management of Organization policies for a Google Project. For more inform
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serialPortPolicy = new Gcp.Projects.OrganizationPolicy("serialPortPolicy", new Gcp.Projects.OrganizationPolicyArgs
+        {
+            BooleanPolicy = new Gcp.Projects.Inputs.OrganizationPolicyBooleanPolicyArgs
+            {
+                Enforced = true,
+            },
+            Constraint = "compute.disableSerialPortAccess",
+            Project = "your-project-id",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewOrganizationPolicy(ctx, "serialPortPolicy", &projects.OrganizationPolicyArgs{
+			BooleanPolicy: &projects.OrganizationPolicyBooleanPolicyArgs{
+				Enforced: pulumi.Bool(true),
+			},
+			Constraint: pulumi.String("compute.disableSerialPortAccess"),
+			Project:    pulumi.String("your-project-id"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+serial_port_policy = gcp.projects.OrganizationPolicy("serialPortPolicy",
+    boolean_policy=gcp.projects.OrganizationPolicyBooleanPolicyArgs(
+        enforced=True,
+    ),
+    constraint="compute.disableSerialPortAccess",
+    project="your-project-id")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serialPortPolicy = new gcp.projects.OrganizationPolicy("serial_port_policy", {
+    booleanPolicy: {
+        enforced: true,
+    },
+    constraint: "compute.disableSerialPortAccess",
+    project: "your-project-id",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OrganizationPolicy Resource {#create}
@@ -1844,6 +1935,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
 
 
 
+
+
+## Import
+
+
+Project organization policies can be imported using any of the follow formats
+
+```sh
+ $ pulumi import gcp:projects/organizationPolicy:OrganizationPolicy policy projects/test-project:constraints/serviceuser.services
+```
+
+```sh
+ $ pulumi import gcp:projects/organizationPolicy:OrganizationPolicy policy test-project:constraints/serviceuser.services
+```
+
+```sh
+ $ pulumi import gcp:projects/organizationPolicy:OrganizationPolicy policy test-project:serviceuser.services
+```
 
 
 

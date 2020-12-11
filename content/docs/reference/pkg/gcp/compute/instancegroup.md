@@ -14,6 +14,444 @@ Creates a group of dissimilar Compute Engine virtual machine instances.
 For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Empty Instance Group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Gcp.Compute.InstanceGroup("test", new Gcp.Compute.InstanceGroupArgs
+        {
+            Description = "Test instance group",
+            Zone = "us-central1-a",
+            Network = google_compute_network.Default.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewInstanceGroup(ctx, "test", &compute.InstanceGroupArgs{
+			Description: pulumi.String("Test instance group"),
+			Zone:        pulumi.String("us-central1-a"),
+			Network:     pulumi.Any(google_compute_network.Default.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test = gcp.compute.InstanceGroup("test",
+    description="Test instance group",
+    zone="us-central1-a",
+    network=google_compute_network["default"]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.compute.InstanceGroup("test", {
+    description: "Test instance group",
+    zone: "us-central1-a",
+    network: google_compute_network["default"].id,
+});
+```
+
+{{% /example %}}
+
+### Example Usage - With instances and named ports
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webservers = new Gcp.Compute.InstanceGroup("webservers", new Gcp.Compute.InstanceGroupArgs
+        {
+            Description = "Test instance group",
+            Instances = 
+            {
+                google_compute_instance.Test.Id,
+                google_compute_instance.Test2.Id,
+            },
+            NamedPorts = 
+            {
+                new Gcp.Compute.Inputs.InstanceGroupNamedPortArgs
+                {
+                    Name = "http",
+                    Port = 8080,
+                },
+                new Gcp.Compute.Inputs.InstanceGroupNamedPortArgs
+                {
+                    Name = "https",
+                    Port = 8443,
+                },
+            },
+            Zone = "us-central1-a",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+webservers = gcp.compute.InstanceGroup("webservers",
+    description="Test instance group",
+    instances=[
+        google_compute_instance["test"]["id"],
+        google_compute_instance["test2"]["id"],
+    ],
+    named_ports=[
+        gcp.compute.InstanceGroupNamedPortArgs(
+            name="http",
+            port=8080,
+        ),
+        gcp.compute.InstanceGroupNamedPortArgs(
+            name="https",
+            port=8443,
+        ),
+    ],
+    zone="us-central1-a")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const webservers = new gcp.compute.InstanceGroup("webservers", {
+    description: "Test instance group",
+    instances: [
+        google_compute_instance.test.id,
+        google_compute_instance.test2.id,
+    ],
+    namedPorts: [
+        {
+            name: "http",
+            port: "8080",
+        },
+        {
+            name: "https",
+            port: "8443",
+        },
+    ],
+    zone: "us-central1-a",
+});
+```
+
+{{% /example %}}
+
+### Example Usage - Recreating an instance group in use
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debianImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var stagingVm = new Gcp.Compute.Instance("stagingVm", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            Zone = "us-central1-c",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = debianImage.Apply(debianImage => debianImage.SelfLink),
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = "default",
+                },
+            },
+        });
+        var stagingGroup = new Gcp.Compute.InstanceGroup("stagingGroup", new Gcp.Compute.InstanceGroupArgs
+        {
+            Zone = "us-central1-c",
+            Instances = 
+            {
+                stagingVm.Id,
+            },
+            NamedPorts = 
+            {
+                new Gcp.Compute.Inputs.InstanceGroupNamedPortArgs
+                {
+                    Name = "http",
+                    Port = 8080,
+                },
+                new Gcp.Compute.Inputs.InstanceGroupNamedPortArgs
+                {
+                    Name = "https",
+                    Port = 8443,
+                },
+            },
+        });
+        var stagingHealth = new Gcp.Compute.HttpsHealthCheck("stagingHealth", new Gcp.Compute.HttpsHealthCheckArgs
+        {
+            RequestPath = "/health_check",
+        });
+        var stagingService = new Gcp.Compute.BackendService("stagingService", new Gcp.Compute.BackendServiceArgs
+        {
+            PortName = "https",
+            Protocol = "HTTPS",
+            Backends = 
+            {
+                new Gcp.Compute.Inputs.BackendServiceBackendArgs
+                {
+                    Group = stagingGroup.Id,
+                },
+            },
+            HealthChecks = 
+            {
+                stagingHealth.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debianImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		stagingVm, err := compute.NewInstance(ctx, "stagingVm", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			Zone:        pulumi.String("us-central1-c"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String(debianImage.SelfLink),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		stagingGroup, err := compute.NewInstanceGroup(ctx, "stagingGroup", &compute.InstanceGroupArgs{
+			Zone: pulumi.String("us-central1-c"),
+			Instances: pulumi.StringArray{
+				stagingVm.ID(),
+			},
+			NamedPorts: compute.InstanceGroupNamedPortArray{
+				&compute.InstanceGroupNamedPortArgs{
+					Name: pulumi.String("http"),
+					Port: pulumi.Int(8080),
+				},
+				&compute.InstanceGroupNamedPortArgs{
+					Name: pulumi.String("https"),
+					Port: pulumi.Int(8443),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		stagingHealth, err := compute.NewHttpsHealthCheck(ctx, "stagingHealth", &compute.HttpsHealthCheckArgs{
+			RequestPath: pulumi.String("/health_check"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendService(ctx, "stagingService", &compute.BackendServiceArgs{
+			PortName: pulumi.String("https"),
+			Protocol: pulumi.String("HTTPS"),
+			Backends: compute.BackendServiceBackendArray{
+				&compute.BackendServiceBackendArgs{
+					Group: stagingGroup.ID(),
+				},
+			},
+			HealthChecks: pulumi.String(pulumi.String{
+				stagingHealth.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+staging_vm = gcp.compute.Instance("stagingVm",
+    machine_type="e2-medium",
+    zone="us-central1-c",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image=debian_image.self_link,
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network="default",
+    )])
+staging_group = gcp.compute.InstanceGroup("stagingGroup",
+    zone="us-central1-c",
+    instances=[staging_vm.id],
+    named_ports=[
+        gcp.compute.InstanceGroupNamedPortArgs(
+            name="http",
+            port=8080,
+        ),
+        gcp.compute.InstanceGroupNamedPortArgs(
+            name="https",
+            port=8443,
+        ),
+    ])
+staging_health = gcp.compute.HttpsHealthCheck("stagingHealth", request_path="/health_check")
+staging_service = gcp.compute.BackendService("stagingService",
+    port_name="https",
+    protocol="HTTPS",
+    backends=[gcp.compute.BackendServiceBackendArgs(
+        group=staging_group.id,
+    )],
+    health_checks=[staging_health.id])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const stagingVm = new gcp.compute.Instance("stagingVm", {
+    machineType: "e2-medium",
+    zone: "us-central1-c",
+    bootDisk: {
+        initializeParams: {
+            image: debianImage.then(debianImage => debianImage.selfLink),
+        },
+    },
+    networkInterfaces: [{
+        network: "default",
+    }],
+});
+const stagingGroup = new gcp.compute.InstanceGroup("stagingGroup", {
+    zone: "us-central1-c",
+    instances: [stagingVm.id],
+    namedPorts: [
+        {
+            name: "http",
+            port: "8080",
+        },
+        {
+            name: "https",
+            port: "8443",
+        },
+    ],
+});
+const stagingHealth = new gcp.compute.HttpsHealthCheck("stagingHealth", {requestPath: "/health_check"});
+const stagingService = new gcp.compute.BackendService("stagingService", {
+    portName: "https",
+    protocol: "HTTPS",
+    backends: [{
+        group: stagingGroup.id,
+    }],
+    healthChecks: [stagingHealth.id],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InstanceGroup Resource {#create}
@@ -1459,6 +1897,24 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Instance group can be imported using the `zone` and `name` with an optional `project`, e.g.
+
+```sh
+ $ pulumi import gcp:compute/instanceGroup:InstanceGroup webservers us-central1-a/terraform-webservers
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroup:InstanceGroup webservers big-project/us-central1-a/terraform-webservers
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroup:InstanceGroup webservers projects/big-project/zones/us-central1-a/instanceGroups/terraform-webservers
+```
 
 
 

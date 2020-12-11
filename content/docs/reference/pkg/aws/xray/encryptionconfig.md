@@ -1,7 +1,7 @@
 
 ---
 title: "EncryptionConfig"
-title_tag: "Resource EncryptionConfig | Module xray | Package AWS"
+title_tag: "aws.xray.EncryptionConfig"
 meta_desc: "Explore the EncryptionConfig resource of the xray module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

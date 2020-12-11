@@ -1,7 +1,7 @@
 
 ---
 title: "GameSessionQueue"
-title_tag: "Resource GameSessionQueue | Module gamelift | Package AWS"
+title_tag: "aws.gamelift.GameSessionQueue"
 meta_desc: "Explore the GameSessionQueue resource of the gamelift module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Gamelift Game Session Queue resource."
 ---
 

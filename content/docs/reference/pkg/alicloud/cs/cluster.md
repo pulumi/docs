@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module cs | Package AliCloud"
+title_tag: "alicloud.cs.Cluster"
 meta_desc: "Explore the Cluster resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

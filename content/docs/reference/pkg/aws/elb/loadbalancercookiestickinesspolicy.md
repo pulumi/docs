@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancerCookieStickinessPolicy"
-title_tag: "Resource LoadBalancerCookieStickinessPolicy | Module elb | Package AWS"
+title_tag: "aws.elb.LoadBalancerCookieStickinessPolicy"
 meta_desc: "Explore the LoadBalancerCookieStickinessPolicy resource of the elb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser."
 ---
 

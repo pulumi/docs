@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceClusterAttachment"
-title_tag: "Resource InstanceClusterAttachment | Module edas | Package AliCloud"
+title_tag: "alicloud.edas.InstanceClusterAttachment"
 meta_desc: "Explore the InstanceClusterAttachment resource of the edas module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EDAS instance cluster attachment resource."
 ---
 

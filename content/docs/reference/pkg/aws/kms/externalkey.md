@@ -1,7 +1,7 @@
 
 ---
 title: "ExternalKey"
-title_tag: "Resource ExternalKey | Module kms | Package AWS"
+title_tag: "aws.kms.ExternalKey"
 meta_desc: "Explore the ExternalKey resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a KMS Customer Master Key that uses external key material. To instead manage a KMS Customer Master Key where AWS automatically generates and potentially rotates key material, see the `aws.kms.Key` resource."
 ---
 

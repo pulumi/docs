@@ -12,6 +12,7 @@ meta_desc: "Explore the Rule resource of the Auth0 package, including examples, 
 
 With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage rules. You can create global variable for use with rules by using the auth0.RuleConfig resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -914,6 +915,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

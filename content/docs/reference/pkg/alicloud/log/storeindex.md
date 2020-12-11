@@ -1,7 +1,7 @@
 
 ---
 title: "StoreIndex"
-title_tag: "Resource StoreIndex | Module log | Package AliCloud"
+title_tag: "alicloud.log.StoreIndex"
 meta_desc: "Explore the StoreIndex resource of the log module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

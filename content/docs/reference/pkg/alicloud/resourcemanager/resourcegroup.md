@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceGroup"
-title_tag: "Resource ResourceGroup | Module resourcemanager | Package AliCloud"
+title_tag: "alicloud.resourcemanager.ResourceGroup"
 meta_desc: "Explore the ResourceGroup resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Manager Resource Group resource. If you need to group cloud resources according to business departments, projects, and other dimensions, you can create resource groups."
 ---
 

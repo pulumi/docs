@@ -1,7 +1,7 @@
 
 ---
 title: "FlowLog"
-title_tag: "Resource FlowLog | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.FlowLog"
 meta_desc: "Explore the FlowLog resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. This resource used to create a flow log function in Cloud Enterprise Network (CEN). "
 ---
 

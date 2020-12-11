@@ -1,7 +1,7 @@
 
 ---
 title: "RouteEntry"
-title_tag: "Resource RouteEntry | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.RouteEntry"
 meta_desc: "Explore the RouteEntry resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

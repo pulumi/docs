@@ -1,7 +1,7 @@
 
 ---
 title: "DefaultNetworkAcl"
-title_tag: "Resource DefaultNetworkAcl | Module ec2 | Package AWS"
+title_tag: "aws.ec2.DefaultNetworkAcl"
 meta_desc: "Explore the DefaultNetworkAcl resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage the default AWS Network ACL. VPC Only."
 ---
 

@@ -38,7 +38,7 @@ class MyStack : Stack
             FinwaitTimeout = 300,
             IdleTimeout = 200,
             KeepaliveInterval = 1700,
-            Name = "sanjose-tcp-lan-profile",
+            Name = "/Common/sanjose-tcp-lan-profile",
         });
     }
 
@@ -66,7 +66,7 @@ func main() {
 			FinwaitTimeout:    pulumi.Int(300),
 			IdleTimeout:       pulumi.Int(200),
 			KeepaliveInterval: pulumi.Int(1700),
-			Name:              pulumi.String("sanjose-tcp-lan-profile"),
+			Name:              pulumi.String("/Common/sanjose-tcp-lan-profile"),
 		})
 		if err != nil {
 			return err
@@ -91,7 +91,7 @@ sanjose_tcp_lan_profile = f5bigip.ltm.ProfileTcp("sanjose-tcp-lan-profile",
     finwait_timeout=300,
     idle_timeout=200,
     keepalive_interval=1700,
-    name="sanjose-tcp-lan-profile")
+    name="/Common/sanjose-tcp-lan-profile")
 ```
 
 {{% /example %}}
@@ -110,7 +110,7 @@ const sanjose_tcp_lan_profile = new f5bigip.ltm.ProfileTcp("sanjose-tcp-lan-prof
     finwaitTimeout: 300,
     idleTimeout: 200,
     keepaliveInterval: 1700,
-    name: "sanjose-tcp-lan-profile",
+    name: "/Common/sanjose-tcp-lan-profile",
 });
 ```
 

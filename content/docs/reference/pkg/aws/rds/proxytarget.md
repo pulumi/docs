@@ -1,7 +1,7 @@
 
 ---
 title: "ProxyTarget"
-title_tag: "Resource ProxyTarget | Module rds | Package AWS"
+title_tag: "aws.rds.ProxyTarget"
 meta_desc: "Explore the ProxyTarget resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS DB proxy target resource."
 ---
 

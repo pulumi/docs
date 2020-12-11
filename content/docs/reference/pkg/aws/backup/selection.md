@@ -1,7 +1,7 @@
 
 ---
 title: "Selection"
-title_tag: "Resource Selection | Module backup | Package AWS"
+title_tag: "aws.backup.Selection"
 meta_desc: "Explore the Selection resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Manages selection conditions for AWS Backup plan resources."
 ---
 

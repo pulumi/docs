@@ -15,6 +15,79 @@ For more information see
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+        this.ProjectNumber = project.Apply(project => project.Number);
+    }
+
+    [Output("projectNumber")]
+    public Output<string> ProjectNumber { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := organizations.LookupProject(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("projectNumber", project.Number)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.organizations.get_project()
+pulumi.export("projectNumber", project.number)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = gcp.organizations.getProject({});
+export const projectNumber = project.then(project => project.number);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetProject {#using}
 

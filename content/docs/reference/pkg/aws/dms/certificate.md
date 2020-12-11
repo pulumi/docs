@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module dms | Package AWS"
+title_tag: "aws.dms.Certificate"
 meta_desc: "Explore the Certificate resource of the dms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DMS (Data Migration Service) certificate resource. DMS certificates can be created, deleted, and imported."
 ---
 

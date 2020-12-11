@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkInterfaceAttachment"
-title_tag: "Resource NetworkInterfaceAttachment | Module ec2 | Package AWS"
+title_tag: "aws.ec2.NetworkInterfaceAttachment"
 meta_desc: "Explore the NetworkInterfaceAttachment resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Attach an Elastic network interface (ENI) resource with EC2 instance."
 ---
 

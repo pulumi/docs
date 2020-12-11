@@ -1,7 +1,7 @@
 
 ---
 title: "RouterInterfaceConnection"
-title_tag: "Resource RouterInterfaceConnection | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.RouterInterfaceConnection"
 meta_desc: "Explore the RouterInterfaceConnection resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC router interface connection resource to connect two router interfaces which are in two different VPCs."
 ---
 

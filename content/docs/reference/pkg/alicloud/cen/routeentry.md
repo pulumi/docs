@@ -1,7 +1,7 @@
 
 ---
 title: "RouteEntry"
-title_tag: "Resource RouteEntry | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.RouteEntry"
 meta_desc: "Explore the RouteEntry resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN route entry resource. Cloud Enterprise Network (CEN) supports publishing and withdrawing route entries of attached networks. You can publish a route entry of an attached VPC or VBR to a CEN instance, then other attached networks can learn the route if there is no route conflict. You can withdraw a published route entry when CEN does not need it any more."
 ---
 

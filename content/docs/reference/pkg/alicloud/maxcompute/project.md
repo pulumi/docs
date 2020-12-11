@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module maxcompute | Package AliCloud"
+title_tag: "alicloud.maxcompute.Project"
 meta_desc: "Explore the Project resource of the maxcompute module, including examples, input properties, output properties, lookup functions, and supporting types. The project is the basic unit of operation in maxcompute. It is similar to the concept of Database or Schema in traditional databases, and sets the boundary for maxcompute multi-user isolation and access control. [Refer to details](https://www.alibabacloud.com/help/doc-detail/27818.html)."
 ---
 

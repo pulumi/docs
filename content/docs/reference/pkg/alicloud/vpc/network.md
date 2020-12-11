@@ -1,7 +1,7 @@
 
 ---
 title: "Network"
-title_tag: "Resource Network | Module vpc | Package AliCloud"
+title_tag: "alicloud.vpc.Network"
 meta_desc: "Explore the Network resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

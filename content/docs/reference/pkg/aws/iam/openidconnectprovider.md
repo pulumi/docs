@@ -1,7 +1,7 @@
 
 ---
 title: "OpenIdConnectProvider"
-title_tag: "Resource OpenIdConnectProvider | Module iam | Package AWS"
+title_tag: "aws.iam.OpenIdConnectProvider"
 meta_desc: "Explore the OpenIdConnectProvider resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM OpenID Connect provider."
 ---
 

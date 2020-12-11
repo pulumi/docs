@@ -1,7 +1,7 @@
 
 ---
 title: "AutoProvisioningGroup"
-title_tag: "Resource AutoProvisioningGroup | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.AutoProvisioningGroup"
 meta_desc: "Explore the AutoProvisioningGroup resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a ECS auto provisioning group resource which is a solution that uses preemptive instances and pay_as_you_go instances to rapidly deploy clusters."
 ---
 

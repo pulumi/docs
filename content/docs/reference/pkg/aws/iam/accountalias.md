@@ -1,7 +1,7 @@
 
 ---
 title: "AccountAlias"
-title_tag: "Resource AccountAlias | Module iam | Package AWS"
+title_tag: "aws.iam.AccountAlias"
 meta_desc: "Explore the AccountAlias resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **Note:** There is only a single account alias per AWS account."
 ---
 

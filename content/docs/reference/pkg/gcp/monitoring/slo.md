@@ -25,6 +25,271 @@ To get more information about Slo, see:
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Monitoring Slo Appengine
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Monitoring.GetAppEngineService.InvokeAsync(new Gcp.Monitoring.GetAppEngineServiceArgs
+        {
+            ModuleId = "default",
+        }));
+        var appengSlo = new Gcp.Monitoring.Slo("appengSlo", new Gcp.Monitoring.SloArgs
+        {
+            Service = @default.Apply(@default => @default.ServiceId),
+            SloId = "ae-slo",
+            DisplayName = "Test SLO for App Engine",
+            Goal = 0.9,
+            CalendarPeriod = "DAY",
+            BasicSli = new Gcp.Monitoring.Inputs.SloBasicSliArgs
+            {
+                Latency = new Gcp.Monitoring.Inputs.SloBasicSliLatencyArgs
+                {
+                    Threshold = "1s",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_default, err := monitoring.GetAppEngineService(ctx, &monitoring.GetAppEngineServiceArgs{
+			ModuleId: "default",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = monitoring.NewSlo(ctx, "appengSlo", &monitoring.SloArgs{
+			Service:        pulumi.String(_default.ServiceId),
+			SloId:          pulumi.String("ae-slo"),
+			DisplayName:    pulumi.String("Test SLO for App Engine"),
+			Goal:           pulumi.Float64(0.9),
+			CalendarPeriod: pulumi.String("DAY"),
+			BasicSli: &monitoring.SloBasicSliArgs{
+				Latency: &monitoring.SloBasicSliLatencyArgs{
+					Threshold: pulumi.String("1s"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.monitoring.get_app_engine_service(module_id="default")
+appeng_slo = gcp.monitoring.Slo("appengSlo",
+    service=default.service_id,
+    slo_id="ae-slo",
+    display_name="Test SLO for App Engine",
+    goal=0.9,
+    calendar_period="DAY",
+    basic_sli=gcp.monitoring.SloBasicSliArgs(
+        latency=gcp.monitoring.SloBasicSliLatencyArgs(
+            threshold="1s",
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.monitoring.getAppEngineService({
+    moduleId: "default",
+});
+const appengSlo = new gcp.monitoring.Slo("appengSlo", {
+    service: _default.then(_default => _default.serviceId),
+    sloId: "ae-slo",
+    displayName: "Test SLO for App Engine",
+    goal: 0.9,
+    calendarPeriod: "DAY",
+    basicSli: {
+        latency: {
+            threshold: "1s",
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Monitoring Slo Request Based
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customsrv = new Gcp.Monitoring.CustomService("customsrv", new Gcp.Monitoring.CustomServiceArgs
+        {
+            ServiceId = "custom-srv-request-slos",
+            DisplayName = "My Custom Service",
+        });
+        var requestBasedSlo = new Gcp.Monitoring.Slo("requestBasedSlo", new Gcp.Monitoring.SloArgs
+        {
+            Service = customsrv.ServiceId,
+            SloId = "consumed-api-slo",
+            DisplayName = "Test SLO with request based SLI (good total ratio)",
+            Goal = 0.9,
+            RollingPeriodDays = 30,
+            RequestBasedSli = new Gcp.Monitoring.Inputs.SloRequestBasedSliArgs
+            {
+                DistributionCut = new Gcp.Monitoring.Inputs.SloRequestBasedSliDistributionCutArgs
+                {
+                    DistributionFilter = "metric.type=\"serviceruntime.googleapis.com/api/request_latencies\" resource.type=\"api\"  ",
+                    Range = new Gcp.Monitoring.Inputs.SloRequestBasedSliDistributionCutRangeArgs
+                    {
+                        Max = 0.5,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		customsrv, err := monitoring.NewCustomService(ctx, "customsrv", &monitoring.CustomServiceArgs{
+			ServiceId:   pulumi.String("custom-srv-request-slos"),
+			DisplayName: pulumi.String("My Custom Service"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = monitoring.NewSlo(ctx, "requestBasedSlo", &monitoring.SloArgs{
+			Service:           customsrv.ServiceId,
+			SloId:             pulumi.String("consumed-api-slo"),
+			DisplayName:       pulumi.String("Test SLO with request based SLI (good total ratio)"),
+			Goal:              pulumi.Float64(0.9),
+			RollingPeriodDays: pulumi.Int(30),
+			RequestBasedSli: &monitoring.SloRequestBasedSliArgs{
+				DistributionCut: &monitoring.SloRequestBasedSliDistributionCutArgs{
+					DistributionFilter: pulumi.String("metric.type=\"serviceruntime.googleapis.com/api/request_latencies\" resource.type=\"api\"  "),
+					Range: &monitoring.SloRequestBasedSliDistributionCutRangeArgs{
+						Max: pulumi.Float64(0.5),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+customsrv = gcp.monitoring.CustomService("customsrv",
+    service_id="custom-srv-request-slos",
+    display_name="My Custom Service")
+request_based_slo = gcp.monitoring.Slo("requestBasedSlo",
+    service=customsrv.service_id,
+    slo_id="consumed-api-slo",
+    display_name="Test SLO with request based SLI (good total ratio)",
+    goal=0.9,
+    rolling_period_days=30,
+    request_based_sli=gcp.monitoring.SloRequestBasedSliArgs(
+        distribution_cut=gcp.monitoring.SloRequestBasedSliDistributionCutArgs(
+            distribution_filter="metric.type=\"serviceruntime.googleapis.com/api/request_latencies\" resource.type=\"api\"  ",
+            range=gcp.monitoring.SloRequestBasedSliDistributionCutRangeArgs(
+                max=0.5,
+            ),
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const customsrv = new gcp.monitoring.CustomService("customsrv", {
+    serviceId: "custom-srv-request-slos",
+    displayName: "My Custom Service",
+});
+const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
+    service: customsrv.serviceId,
+    sloId: "consumed-api-slo",
+    displayName: "Test SLO with request based SLI (good total ratio)",
+    goal: 0.9,
+    rollingPeriodDays: 30,
+    requestBasedSli: {
+        distributionCut: {
+            distributionFilter: "metric.type=\"serviceruntime.googleapis.com/api/request_latencies\" resource.type=\"api\"  ",
+            range: {
+                max: 0.5,
+            },
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Slo Resource {#create}
@@ -5132,6 +5397,16 @@ will be set to "-infinity", defining an open range
 
 
 
+
+
+## Import
+
+
+Slo can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/slo:Slo default {{name}}
+```
 
 
 

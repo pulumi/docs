@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module acm | Package AWS"
+title_tag: "aws.acm.Certificate"
 meta_desc: "Explore the Certificate resource of the acm module, including examples, input properties, output properties, lookup functions, and supporting types. The ACM certificate resource allows requesting and management of certificates"
 ---
 

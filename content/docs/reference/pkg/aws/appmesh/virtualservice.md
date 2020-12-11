@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualService"
-title_tag: "Resource VirtualService | Module appmesh | Package AWS"
+title_tag: "aws.appmesh.VirtualService"
 meta_desc: "Explore the VirtualService resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh virtual service resource."
 ---
 

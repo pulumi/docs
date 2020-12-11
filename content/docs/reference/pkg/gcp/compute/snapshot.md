@@ -32,6 +32,153 @@ To get more information about Snapshot, see:
 > **Warning:** All arguments including `snapshot_encryption_key.raw_key` and `source_disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Snapshot Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debian = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var persistent = new Gcp.Compute.Disk("persistent", new Gcp.Compute.DiskArgs
+        {
+            Image = debian.Apply(debian => debian.SelfLink),
+            Size = 10,
+            Type = "pd-ssd",
+            Zone = "us-central1-a",
+        });
+        var snapshot = new Gcp.Compute.Snapshot("snapshot", new Gcp.Compute.SnapshotArgs
+        {
+            SourceDisk = persistent.Name,
+            Zone = "us-central1-a",
+            Labels = 
+            {
+                { "my_label", "value" },
+            },
+            StorageLocations = 
+            {
+                "us-central1",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debian, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		persistent, err := compute.NewDisk(ctx, "persistent", &compute.DiskArgs{
+			Image: pulumi.String(debian.SelfLink),
+			Size:  pulumi.Int(10),
+			Type:  pulumi.String("pd-ssd"),
+			Zone:  pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
+			SourceDisk: persistent.Name,
+			Zone:       pulumi.String("us-central1-a"),
+			Labels: pulumi.StringMap{
+				"my_label": pulumi.String("value"),
+			},
+			StorageLocations: pulumi.StringArray{
+				pulumi.String("us-central1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+persistent = gcp.compute.Disk("persistent",
+    image=debian.self_link,
+    size=10,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapshot = gcp.compute.Snapshot("snapshot",
+    source_disk=persistent.name,
+    zone="us-central1-a",
+    labels={
+        "my_label": "value",
+    },
+    storage_locations=["us-central1"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const persistent = new gcp.compute.Disk("persistent", {
+    image: debian.then(debian => debian.selfLink),
+    size: 10,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapshot = new gcp.compute.Snapshot("snapshot", {
+    sourceDisk: persistent.name,
+    zone: "us-central1-a",
+    labels: {
+        my_label: "value",
+    },
+    storageLocations: ["us-central1"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Snapshot Resource {#create}
@@ -2483,6 +2630,24 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
 
 
 
+
+
+## Import
+
+
+Snapshot can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/snapshot:Snapshot default projects/{{project}}/global/snapshots/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/snapshot:Snapshot default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/snapshot:Snapshot default {{name}}
+```
 
 
 

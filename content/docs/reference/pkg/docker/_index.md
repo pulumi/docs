@@ -18,6 +18,7 @@ A Pulumi package for interacting with Docker in Pulumi programs
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="registryimage" title="RegistryImage"><span class="symbol resource"></span>RegistryImage</a></li>
     <li><a href="remoteimage" title="RemoteImage"><span class="symbol resource"></span>RemoteImage</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
@@ -40,7 +41,7 @@ A Pulumi package for interacting with Docker in Pulumi programs
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
 	<dt>Version</dt>
-	<dd>2.4.1</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

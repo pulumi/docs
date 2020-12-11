@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module polardb | Package AliCloud"
+title_tag: "alicloud.polardb.Account"
 meta_desc: "Explore the Account resource of the polardb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a PolarDB account resource and used to manage databases."
 ---
 

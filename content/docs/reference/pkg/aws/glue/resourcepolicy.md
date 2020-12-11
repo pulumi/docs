@@ -1,7 +1,7 @@
 
 ---
 title: "ResourcePolicy"
-title_tag: "Resource ResourcePolicy | Module glue | Package AWS"
+title_tag: "aws.glue.ResourcePolicy"
 meta_desc: "Explore the ResourcePolicy resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue resource policy. Only one can exist per region."
 ---
 

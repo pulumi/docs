@@ -1,7 +1,7 @@
 
 ---
 title: "SmsChannel"
-title_tag: "Resource SmsChannel | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.SmsChannel"
 meta_desc: "Explore the SmsChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint SMS Channel resource."
 ---
 

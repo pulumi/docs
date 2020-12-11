@@ -1,7 +1,7 @@
 
 ---
 title: "RouteMap"
-title_tag: "Resource RouteMap | Module cen | Package AliCloud"
+title_tag: "alicloud.cen.RouteMap"
 meta_desc: "Explore the RouteMap resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. This topic provides an overview of the route map function of Cloud Enterprise Networks (CENs)."
 ---
 

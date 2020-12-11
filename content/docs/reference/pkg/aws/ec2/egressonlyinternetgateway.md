@@ -1,7 +1,7 @@
 
 ---
 title: "EgressOnlyInternetGateway"
-title_tag: "Resource EgressOnlyInternetGateway | Module ec2 | Package AWS"
+title_tag: "aws.ec2.EgressOnlyInternetGateway"
 meta_desc: "Explore the EgressOnlyInternetGateway resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. [IPv6 only] Creates an egress-only Internet gateway for your VPC."
 ---
 

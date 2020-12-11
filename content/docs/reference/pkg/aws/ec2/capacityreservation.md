@@ -1,7 +1,7 @@
 
 ---
 title: "CapacityReservation"
-title_tag: "Resource CapacityReservation | Module ec2 | Package AWS"
+title_tag: "aws.ec2.CapacityReservation"
 meta_desc: "Explore the CapacityReservation resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration."
 ---
 

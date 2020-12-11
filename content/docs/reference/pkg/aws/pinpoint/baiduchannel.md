@@ -1,7 +1,7 @@
 
 ---
 title: "BaiduChannel"
-title_tag: "Resource BaiduChannel | Module pinpoint | Package AWS"
+title_tag: "aws.pinpoint.BaiduChannel"
 meta_desc: "Explore the BaiduChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint Baidu Channel resource."
 ---
 

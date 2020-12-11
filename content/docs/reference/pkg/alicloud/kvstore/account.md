@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module kvstore | Package AliCloud"
+title_tag: "alicloud.kvstore.Account"
 meta_desc: "Explore the Account resource of the kvstore module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a KVStore Account resource."
 ---
 

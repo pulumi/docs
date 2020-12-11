@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module opsworks | Package AWS"
+title_tag: "aws.opsworks.Application"
 meta_desc: "Explore the Application resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks application resource."
 ---
 

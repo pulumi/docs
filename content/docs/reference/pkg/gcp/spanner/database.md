@@ -20,6 +20,120 @@ To get more information about Database, see:
 
 > **Warning:** It is strongly recommended to set `lifecycle { prevent_destroy = true }` on databases in order to prevent accidental data loss.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Spanner Database Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Gcp.Spanner.Instance("main", new Gcp.Spanner.InstanceArgs
+        {
+            Config = "regional-europe-west1",
+            DisplayName = "main-instance",
+        });
+        var database = new Gcp.Spanner.Database("database", new Gcp.Spanner.DatabaseArgs
+        {
+            Instance = main.Name,
+            Ddls = 
+            {
+                "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+                "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+            },
+            DeletionProtection = false,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		main, err := spanner.NewInstance(ctx, "main", &spanner.InstanceArgs{
+			Config:      pulumi.String("regional-europe-west1"),
+			DisplayName: pulumi.String("main-instance"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = spanner.NewDatabase(ctx, "database", &spanner.DatabaseArgs{
+			Instance: main.Name,
+			Ddls: pulumi.StringArray{
+				pulumi.String("CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)"),
+				pulumi.String("CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)"),
+			},
+			DeletionProtection: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+main = gcp.spanner.Instance("main",
+    config="regional-europe-west1",
+    display_name="main-instance")
+database = gcp.spanner.Database("database",
+    instance=main.name,
+    ddls=[
+        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+    ],
+    deletion_protection=False)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const main = new gcp.spanner.Instance("main", {
+    config: "regional-europe-west1",
+    displayName: "main-instance",
+});
+const database = new gcp.spanner.Database("database", {
+    instance: main.name,
+    ddls: [
+        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+    ],
+    deletionProtection: false,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}
@@ -1029,6 +1143,28 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Database can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default projects/{{project}}/instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default {{project}}/{{instance}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:spanner/database:Database default {{instance}}/{{name}}
+```
 
 
 

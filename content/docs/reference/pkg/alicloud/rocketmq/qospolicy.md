@@ -1,7 +1,7 @@
 
 ---
 title: "QosPolicy"
-title_tag: "Resource QosPolicy | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.QosPolicy"
 meta_desc: "Explore the QosPolicy resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag qos policy resource. "
 ---
 

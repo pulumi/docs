@@ -1,7 +1,7 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Module apigatewayv2 | Package AWS"
+title_tag: "aws.apigatewayv2.Route"
 meta_desc: "Explore the Route resource of the apigatewayv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon API Gateway Version 2 route."
 ---
 

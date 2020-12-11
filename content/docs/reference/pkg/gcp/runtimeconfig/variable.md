@@ -1050,6 +1050,22 @@ Example: "2016-10-09T12:33:37.578138407Z".
 
 
 
+## Import
+
+
+Runtime Config Variables can be imported using the `name` or full variable name, e.g.
+
+```sh
+ $ pulumi import gcp:runtimeconfig/variable:Variable myvariable myconfig/myvariable
+```
+
+```sh
+ $ pulumi import gcp:runtimeconfig/variable:Variable myvariable projects/my-gcp-project/configs/myconfig/variables/myvariable
+```
+
+ When importing using only the name, the provider project must be set.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

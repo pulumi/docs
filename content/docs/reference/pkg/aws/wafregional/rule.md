@@ -1,7 +1,7 @@
 
 ---
 title: "Rule"
-title_tag: "Resource Rule | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.Rule"
 meta_desc: "Explore the Rule resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an WAF Regional Rule Resource for use with Application Load Balancer."
 ---
 

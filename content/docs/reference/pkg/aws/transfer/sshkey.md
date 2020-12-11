@@ -1,7 +1,7 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Module transfer | Package AWS"
+title_tag: "aws.transfer.SshKey"
 meta_desc: "Explore the SshKey resource of the transfer module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a AWS Transfer User SSH Key resource."
 ---
 

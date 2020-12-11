@@ -1,7 +1,7 @@
 
 ---
 title: "ClientCertificate"
-title_tag: "Resource ClientCertificate | Module apigateway | Package AWS"
+title_tag: "aws.apigateway.ClientCertificate"
 meta_desc: "Explore the ClientCertificate resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Client Certificate."
 ---
 

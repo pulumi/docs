@@ -1,7 +1,7 @@
 
 ---
 title: "VpcEndpointServiceAllowedPrinciple"
-title_tag: "Resource VpcEndpointServiceAllowedPrinciple | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcEndpointServiceAllowedPrinciple"
 meta_desc: "Explore the VpcEndpointServiceAllowedPrinciple resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to allow a principal to discover a VPC endpoint service."
 ---
 

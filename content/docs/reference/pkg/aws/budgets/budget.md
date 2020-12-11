@@ -1,7 +1,7 @@
 
 ---
 title: "Budget"
-title_tag: "Resource Budget | Module budgets | Package AWS"
+title_tag: "aws.budgets.Budget"
 meta_desc: "Explore the Budget resource of the budgets module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "EnvironmentEC2"
-title_tag: "Resource EnvironmentEC2 | Module cloud9 | Package AWS"
+title_tag: "aws.cloud9.EnvironmentEC2"
 meta_desc: "Explore the EnvironmentEC2 resource of the cloud9 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloud9 EC2 Development Environment."
 ---
 

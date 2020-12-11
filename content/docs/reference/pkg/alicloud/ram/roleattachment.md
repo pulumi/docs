@@ -1,7 +1,7 @@
 
 ---
 title: "RoleAttachment"
-title_tag: "Resource RoleAttachment | Module ram | Package AliCloud"
+title_tag: "alicloud.ram.RoleAttachment"
 meta_desc: "Explore the RoleAttachment resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a RAM role attachment resource to bind role for several ECS instances."
 ---
 

@@ -24,6 +24,92 @@ deployments in preview as recreate-only for any update operation other
 than actually deploying an in-preview deployment (i.e. `preview=true` to
 `preview=false`).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Deployment Manager Deployment Basic
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deployment = new Gcp.DeploymentManager.Deployment("deployment", new Gcp.DeploymentManager.DeploymentArgs
+        {
+            Target = new Gcp.DeploymentManager.Inputs.DeploymentTargetArgs
+            {
+                Config = new Gcp.DeploymentManager.Inputs.DeploymentTargetConfigArgs
+                {
+                    Content = File.ReadAllText("path/to/config.yml"),
+                },
+            },
+            Labels = 
+            {
+                new Gcp.DeploymentManager.Inputs.DeploymentLabelArgs
+                {
+                    Key = "foo",
+                    Value = "bar",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+deployment = gcp.deploymentmanager.Deployment("deployment",
+    target=gcp.deploymentmanager.DeploymentTargetArgs(
+        config=gcp.deploymentmanager.DeploymentTargetConfigArgs(
+            content=(lambda path: open(path).read())("path/to/config.yml"),
+        ),
+    ),
+    labels=[gcp.deploymentmanager.DeploymentLabelArgs(
+        key="foo",
+        value="bar",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const deployment = new gcp.deploymentmanager.Deployment("deployment", {
+    target: {
+        config: {
+            content: fs.readFileSync("path/to/config.yml"),
+        },
+    },
+    labels: [{
+        key: "foo",
+        value: "bar",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Deployment Resource {#create}
@@ -2159,6 +2245,24 @@ configuration.
 
 
 
+
+
+## Import
+
+
+Deployment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default projects/{{project}}/deployments/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{name}}
+```
 
 
 

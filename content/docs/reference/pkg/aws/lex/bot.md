@@ -1,7 +1,7 @@
 
 ---
 title: "Bot"
-title_tag: "Resource Bot | Module lex | Package AWS"
+title_tag: "aws.lex.Bot"
 meta_desc: "Explore the Bot resource of the lex module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Amazon Lex Bot resource. For more information see"
 ---
 

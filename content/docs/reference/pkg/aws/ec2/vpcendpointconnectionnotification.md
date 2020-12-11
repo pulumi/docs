@@ -1,7 +1,7 @@
 
 ---
 title: "VpcEndpointConnectionNotification"
-title_tag: "Resource VpcEndpointConnectionNotification | Module ec2 | Package AWS"
+title_tag: "aws.ec2.VpcEndpointConnectionNotification"
 meta_desc: "Explore the VpcEndpointConnectionNotification resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC Endpoint connection notification resource."
 ---
 

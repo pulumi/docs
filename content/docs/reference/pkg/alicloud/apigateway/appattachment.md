@@ -1,7 +1,7 @@
 
 ---
 title: "AppAttachment"
-title_tag: "Resource AppAttachment | Module apigateway | Package AliCloud"
+title_tag: "alicloud.apigateway.AppAttachment"
 meta_desc: "Explore the AppAttachment resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

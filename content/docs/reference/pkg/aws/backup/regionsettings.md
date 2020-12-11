@@ -1,7 +1,7 @@
 
 ---
 title: "RegionSettings"
-title_tag: "Resource RegionSettings | Module backup | Package AWS"
+title_tag: "aws.backup.RegionSettings"
 meta_desc: "Explore the RegionSettings resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Backup Region Settings resource."
 ---
 

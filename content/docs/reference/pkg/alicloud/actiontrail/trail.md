@@ -1,7 +1,7 @@
 
 ---
 title: "Trail"
-title_tag: "Resource Trail | Module actiontrail | Package AliCloud"
+title_tag: "alicloud.actiontrail.Trail"
 meta_desc: "Explore the Trail resource of the actiontrail module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a ActionTrail Trail resource. For information about alicloud actiontrail trail and how to use it, see [What is Resource Alicloud ActionTrail Trail](https://www.alibabacloud.com/help/doc-detail/28804.htm)."
 ---
 

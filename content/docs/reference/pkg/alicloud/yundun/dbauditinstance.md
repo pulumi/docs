@@ -1,7 +1,7 @@
 
 ---
 title: "DBAuditInstance"
-title_tag: "Resource DBAuditInstance | Module yundun | Package AliCloud"
+title_tag: "alicloud.yundun.DBAuditInstance"
 meta_desc: "Explore the DBAuditInstance resource of the yundun module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud DBaudit instance resource (&#34;Yundun_dbaudit&#34; is the short term of this product)."
 ---
 

@@ -41,6 +41,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
     <li><a href="fc/" title="fc"><span class="symbol module"></span>fc</a></li>
+    <li><a href="fnf/" title="fnf"><span class="symbol module"></span>fnf</a></li>
     <li><a href="gpdb/" title="gpdb"><span class="symbol module"></span>gpdb</a></li>
     <li><a href="hbase/" title="hbase"><span class="symbol module"></span>hbase</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
@@ -92,7 +93,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.26.0</dd>
+	<dd>2.27.0</dd>
 </dl>
 
 

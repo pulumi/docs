@@ -19,6 +19,74 @@ To get more information about GlobalAddress, see:
 * How-to Guides
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Global Address Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.GlobalAddress("default", new Gcp.Compute.GlobalAddressArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGlobalAddress(ctx, "_default", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.GlobalAddress("default")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GlobalAddress Resource {#create}
@@ -1788,6 +1856,24 @@ Possible values are `VPC_PEERING`.
 
 
 
+
+
+## Import
+
+
+GlobalAddress can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/globalAddress:GlobalAddress default projects/{{project}}/global/addresses/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalAddress:GlobalAddress default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalAddress:GlobalAddress default {{name}}
+```
 
 
 

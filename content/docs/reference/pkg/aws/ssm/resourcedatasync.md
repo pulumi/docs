@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceDataSync"
-title_tag: "Resource ResourceDataSync | Module ssm | Package AWS"
+title_tag: "aws.ssm.ResourceDataSync"
 meta_desc: "Explore the ResourceDataSync resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SSM resource data sync."
 ---
 

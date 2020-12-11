@@ -1,7 +1,7 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.Topic"
 meta_desc: "Explore the Topic resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ONS topic resource."
 ---
 

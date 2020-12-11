@@ -13,6 +13,98 @@ meta_desc: "Explore the GetInstance function of the redis module, including exam
 Get info about a Google Cloud Redis instance.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myInstance = Output.Create(Gcp.Redis.GetInstance.InvokeAsync(new Gcp.Redis.GetInstanceArgs
+        {
+            Name = "my-redis-instance",
+        }));
+        this.InstanceMemorySizeGb = myInstance.Apply(myInstance => myInstance.MemorySizeGb);
+        this.InstanceConnectMode = myInstance.Apply(myInstance => myInstance.ConnectMode);
+        this.InstanceAuthorizedNetwork = myInstance.Apply(myInstance => myInstance.AuthorizedNetwork);
+    }
+
+    [Output("instanceMemorySizeGb")]
+    public Output<string> InstanceMemorySizeGb { get; set; }
+    [Output("instanceConnectMode")]
+    public Output<string> InstanceConnectMode { get; set; }
+    [Output("instanceAuthorizedNetwork")]
+    public Output<string> InstanceAuthorizedNetwork { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myInstance, err := redis.LookupInstance(ctx, &redis.LookupInstanceArgs{
+			Name: "my-redis-instance",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("instanceMemorySizeGb", myInstance.MemorySizeGb)
+		ctx.Export("instanceConnectMode", myInstance.ConnectMode)
+		ctx.Export("instanceAuthorizedNetwork", myInstance.AuthorizedNetwork)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_instance = gcp.redis.get_instance(name="my-redis-instance")
+pulumi.export("instanceMemorySizeGb", my_instance.memory_size_gb)
+pulumi.export("instanceConnectMode", my_instance.connect_mode)
+pulumi.export("instanceAuthorizedNetwork", my_instance.authorized_network)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myInstance = gcp.redis.getInstance({
+    name: "my-redis-instance",
+});
+export const instanceMemorySizeGb = myInstance.then(myInstance => myInstance.memorySizeGb);
+export const instanceConnectMode = myInstance.then(myInstance => myInstance.connectMode);
+export const instanceAuthorizedNetwork = myInstance.then(myInstance => myInstance.authorizedNetwork);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetInstance {#using}
 

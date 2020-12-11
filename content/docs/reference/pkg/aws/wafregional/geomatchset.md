@@ -1,7 +1,7 @@
 
 ---
 title: "GeoMatchSet"
-title_tag: "Resource GeoMatchSet | Module wafregional | Package AWS"
+title_tag: "aws.wafregional.GeoMatchSet"
 meta_desc: "Explore the GeoMatchSet resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regional Geo Match Set Resource"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SiteMonitor"
-title_tag: "Resource SiteMonitor | Module cms | Package AliCloud"
+title_tag: "alicloud.cms.SiteMonitor"
 meta_desc: "Explore the SiteMonitor resource of the cms module, including examples, input properties, output properties, lookup functions, and supporting types. This resource provides a site monitor resource and it can be used to monitor public endpoints and websites."
 ---
 

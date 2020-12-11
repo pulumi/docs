@@ -1,7 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module rds | Package AliCloud"
+title_tag: "alicloud.rds.Instance"
 meta_desc: "Explore the Instance resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS instance resource. A DB instance is an isolated database environment in the cloud. A DB instance can contain multiple user-created databases."
 ---
 

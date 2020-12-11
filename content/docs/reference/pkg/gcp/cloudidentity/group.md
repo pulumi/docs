@@ -18,6 +18,110 @@ in the provider configuration. Otherwise the Cloud Identity API will return a 40
 Your account must have the `serviceusage.services.use` permission on the
 `billing_project` you defined.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloud Identity Groups Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cloudIdentityGroupBasic = new Gcp.CloudIdentity.Group("cloudIdentityGroupBasic", new Gcp.CloudIdentity.GroupArgs
+        {
+            DisplayName = "my-identity-group",
+            GroupKey = new Gcp.CloudIdentity.Inputs.GroupGroupKeyArgs
+            {
+                Id = "my-identity-group@example.com",
+            },
+            Labels = 
+            {
+                { "cloudidentity.googleapis.com/groups.discussion_forum", "" },
+            },
+            Parent = "customers/A01b123xz",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudidentity.NewGroup(ctx, "cloudIdentityGroupBasic", &cloudidentity.GroupArgs{
+			DisplayName: pulumi.String("my-identity-group"),
+			GroupKey: &cloudidentity.GroupGroupKeyArgs{
+				Id: pulumi.String("my-identity-group@example.com"),
+			},
+			Labels: pulumi.StringMap{
+				"cloudidentity.googleapis.com/groups.discussion_forum": pulumi.String(""),
+			},
+			Parent: pulumi.String("customers/A01b123xz"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+cloud_identity_group_basic = gcp.cloudidentity.Group("cloudIdentityGroupBasic",
+    display_name="my-identity-group",
+    group_key=gcp.cloudidentity.GroupGroupKeyArgs(
+        id="my-identity-group@example.com",
+    ),
+    labels={
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    },
+    parent="customers/A01b123xz")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cloudIdentityGroupBasic = new gcp.cloudidentity.Group("cloud_identity_group_basic", {
+    displayName: "my-identity-group",
+    groupKey: {
+        id: "my-identity-group@example.com",
+    },
+    labels: {
+        "cloudidentity.googleapis.com/groups.discussion_forum": "",
+    },
+    parent: "customers/A01b123xz",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}
@@ -1415,6 +1519,16 @@ and must be in the form of `identitysources/{identity_source_id}`.
 
 
 
+
+
+## Import
+
+
+Group can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudidentity/group:Group default {{name}}
+```
 
 
 

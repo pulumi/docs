@@ -1,7 +1,7 @@
 
 ---
 title: "ClientUser"
-title_tag: "Resource ClientUser | Module rocketmq | Package AliCloud"
+title_tag: "alicloud.rocketmq.ClientUser"
 meta_desc: "Explore the ClientUser resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag ClientUser resource. This topic describes how to manage accounts as an administrator. After you configure the network, you can create multiple accounts and distribute them to end users so that clients can access Alibaba Cloud."
 ---
 

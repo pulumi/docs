@@ -1,7 +1,7 @@
 
 ---
 title: "AlidnsInstance"
-title_tag: "Resource AlidnsInstance | Module dns | Package AliCloud"
+title_tag: "alicloud.dns.AlidnsInstance"
 meta_desc: "Explore the AlidnsInstance resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. Create an Alidns Instance resource."
 ---
 

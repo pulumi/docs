@@ -12,6 +12,282 @@ meta_desc: "Explore the AppProfile resource of the bigquery module, including ex
 
 App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application.
 
+To get more information about AppProfile, see:
+
+* [API documentation](https://cloud.google.com/bigtable/docs/reference/admin/rest/v2/projects.instances.appProfiles)
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bigtable App Profile Multicluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+        {
+            Clusters = 
+            {
+                new Gcp.BigTable.Inputs.InstanceClusterArgs
+                {
+                    ClusterId = "bt-instance",
+                    Zone = "us-central1-b",
+                    NumNodes = 3,
+                    StorageType = "HDD",
+                },
+            },
+            DeletionProtection = true,
+        });
+        var ap = new Gcp.BigQuery.AppProfile("ap", new Gcp.BigQuery.AppProfileArgs
+        {
+            Instance = instance.Name,
+            AppProfileId = "bt-profile",
+            MultiClusterRoutingUseAny = true,
+            IgnoreWarnings = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+			Clusters: bigtable.InstanceClusterArray{
+				&bigtable.InstanceClusterArgs{
+					ClusterId:   pulumi.String("bt-instance"),
+					Zone:        pulumi.String("us-central1-b"),
+					NumNodes:    pulumi.Int(3),
+					StorageType: pulumi.String("HDD"),
+				},
+			},
+			DeletionProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewAppProfile(ctx, "ap", &bigquery.AppProfileArgs{
+			Instance:                  instance.Name,
+			AppProfileId:              pulumi.String("bt-profile"),
+			MultiClusterRoutingUseAny: pulumi.Bool(true),
+			IgnoreWarnings:            pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance",
+    clusters=[gcp.bigtable.InstanceClusterArgs(
+        cluster_id="bt-instance",
+        zone="us-central1-b",
+        num_nodes=3,
+        storage_type="HDD",
+    )],
+    deletion_protection=True)
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    multi_cluster_routing_use_any=True,
+    ignore_warnings=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {
+    clusters: [{
+        clusterId: "bt-instance",
+        zone: "us-central1-b",
+        numNodes: 3,
+        storageType: "HDD",
+    }],
+    deletionProtection: "true",
+});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    multiClusterRoutingUseAny: true,
+    ignoreWarnings: true,
+});
+```
+
+{{% /example %}}
+
+### Bigtable App Profile Singlecluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+        {
+            Clusters = 
+            {
+                new Gcp.BigTable.Inputs.InstanceClusterArgs
+                {
+                    ClusterId = "bt-instance",
+                    Zone = "us-central1-b",
+                    NumNodes = 3,
+                    StorageType = "HDD",
+                },
+            },
+            DeletionProtection = true,
+        });
+        var ap = new Gcp.BigQuery.AppProfile("ap", new Gcp.BigQuery.AppProfileArgs
+        {
+            Instance = instance.Name,
+            AppProfileId = "bt-profile",
+            SingleClusterRouting = new Gcp.BigQuery.Inputs.AppProfileSingleClusterRoutingArgs
+            {
+                ClusterId = "bt-instance",
+                AllowTransactionalWrites = true,
+            },
+            IgnoreWarnings = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+			Clusters: bigtable.InstanceClusterArray{
+				&bigtable.InstanceClusterArgs{
+					ClusterId:   pulumi.String("bt-instance"),
+					Zone:        pulumi.String("us-central1-b"),
+					NumNodes:    pulumi.Int(3),
+					StorageType: pulumi.String("HDD"),
+				},
+			},
+			DeletionProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewAppProfile(ctx, "ap", &bigquery.AppProfileArgs{
+			Instance:     instance.Name,
+			AppProfileId: pulumi.String("bt-profile"),
+			SingleClusterRouting: &bigquery.AppProfileSingleClusterRoutingArgs{
+				ClusterId:                pulumi.String("bt-instance"),
+				AllowTransactionalWrites: pulumi.Bool(true),
+			},
+			IgnoreWarnings: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance",
+    clusters=[gcp.bigtable.InstanceClusterArgs(
+        cluster_id="bt-instance",
+        zone="us-central1-b",
+        num_nodes=3,
+        storage_type="HDD",
+    )],
+    deletion_protection=True)
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    single_cluster_routing=gcp.bigquery.AppProfileSingleClusterRoutingArgs(
+        cluster_id="bt-instance",
+        allow_transactional_writes=True,
+    ),
+    ignore_warnings=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {
+    clusters: [{
+        clusterId: "bt-instance",
+        zone: "us-central1-b",
+        numNodes: 3,
+        storageType: "HDD",
+    }],
+    deletionProtection: "true",
+});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    singleClusterRouting: {
+        clusterId: "bt-instance",
+        allowTransactionalWrites: true,
+    },
+    ignoreWarnings: true,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AppProfile Resource {#create}
@@ -1349,6 +1625,24 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
 
 
 
+
+
+## Import
+
+
+AppProfile can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default projects/{{project}}/instances/{{instance}}/appProfiles/{{app_profile_id}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default {{project}}/{{instance}}/{{app_profile_id}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default {{instance}}/{{app_profile_id}}
+```
 
 
 

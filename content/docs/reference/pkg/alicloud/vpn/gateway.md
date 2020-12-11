@@ -1,7 +1,7 @@
 
 ---
 title: "Gateway"
-title_tag: "Resource Gateway | Module vpn | Package AliCloud"
+title_tag: "alicloud.vpn.Gateway"
 meta_desc: "Explore the Gateway resource of the vpn module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

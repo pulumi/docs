@@ -24,6 +24,378 @@ To get more information about FlexibleAppVersion, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/flexible)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### App Engine Flexible App Version
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "appeng-flex",
+            OrgId = "123456789",
+            BillingAccount = "000000-0000000-0000000-000000",
+        });
+        var app = new Gcp.AppEngine.Application("app", new Gcp.AppEngine.ApplicationArgs
+        {
+            Project = myProject.ProjectId,
+            LocationId = "us-central",
+        });
+        var service = new Gcp.Projects.Service("service", new Gcp.Projects.ServiceArgs
+        {
+            Project = myProject.ProjectId,
+            Service = "appengineflex.googleapis.com",
+            DisableDependentServices = false,
+        });
+        var gaeApi = new Gcp.Projects.IAMMember("gaeApi", new Gcp.Projects.IAMMemberArgs
+        {
+            Project = service.Project,
+            Role = "roles/compute.networkUser",
+            Member = myProject.Number.Apply(number => $"serviceAccount:service-{number}@gae-api-prod.google.com.iam.gserviceaccount.com"),
+        });
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+            Project = myProject.ProjectId,
+        });
+        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+        });
+        var myappV1 = new Gcp.AppEngine.FlexibleAppVersion("myappV1", new Gcp.AppEngine.FlexibleAppVersionArgs
+        {
+            VersionId = "v1",
+            Project = gaeApi.Project,
+            Service = "default",
+            Runtime = "nodejs",
+            Entrypoint = new Gcp.AppEngine.Inputs.FlexibleAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+                    }),
+                },
+            },
+            LivenessCheck = new Gcp.AppEngine.Inputs.FlexibleAppVersionLivenessCheckArgs
+            {
+                Path = "/",
+            },
+            ReadinessCheck = new Gcp.AppEngine.Inputs.FlexibleAppVersionReadinessCheckArgs
+            {
+                Path = "/",
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            Handlers = 
+            {
+                new Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerArgs
+                {
+                    UrlRegex = ".*\\/my-path\\/*",
+                    SecurityLevel = "SECURE_ALWAYS",
+                    Login = "LOGIN_REQUIRED",
+                    AuthFailAction = "AUTH_FAIL_ACTION_REDIRECT",
+                    StaticFiles = new Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerStaticFilesArgs
+                    {
+                        Path = "my-other-path",
+                        UploadPathRegex = ".*\\/my-path\\/*",
+                    },
+                },
+            },
+            AutomaticScaling = new Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingArgs
+            {
+                CoolDownPeriod = "120s",
+                CpuUtilization = new Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs
+                {
+                    TargetUtilization = 0.5,
+                },
+            },
+            NoopOnDestroy = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+			ProjectId:      pulumi.String("appeng-flex"),
+			OrgId:          pulumi.String("123456789"),
+			BillingAccount: pulumi.String("000000-0000000-0000000-000000"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
+			Project:    myProject.ProjectId,
+			LocationId: pulumi.String("us-central"),
+		})
+		if err != nil {
+			return err
+		}
+		service, err := projects.NewService(ctx, "service", &projects.ServiceArgs{
+			Project:                  myProject.ProjectId,
+			Service:                  pulumi.String("appengineflex.googleapis.com"),
+			DisableDependentServices: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		gaeApi, err := projects.NewIAMMember(ctx, "gaeApi", &projects.IAMMemberArgs{
+			Project: service.Project,
+			Role:    pulumi.String("roles/compute.networkUser"),
+			Member: myProject.Number.ApplyT(func(number string) (string, error) {
+				return fmt.Sprintf("%v%v%v", "serviceAccount:service-", number, "@gae-api-prod.google.com.iam.gserviceaccount.com"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+			Project: myProject.ProjectId,
+		})
+		if err != nil {
+			return err
+		}
+		object, err := storage.NewBucketObject(ctx, "object", &storage.BucketObjectArgs{
+			Bucket: bucket.Name,
+			Source: pulumi.NewFileAsset("./test-fixtures/appengine/hello-world.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appengine.NewFlexibleAppVersion(ctx, "myappV1", &appengine.FlexibleAppVersionArgs{
+			VersionId: pulumi.String("v1"),
+			Project:   gaeApi.Project,
+			Service:   pulumi.String("default"),
+			Runtime:   pulumi.String("nodejs"),
+			Entrypoint: &appengine.FlexibleAppVersionEntrypointArgs{
+				Shell: pulumi.String("node ./app.js"),
+			},
+			Deployment: &appengine.FlexibleAppVersionDeploymentArgs{
+				Zip: &appengine.FlexibleAppVersionDeploymentZipArgs{
+					SourceUrl: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+						bucketName := _args[0].(string)
+						objectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", bucketName, "/", objectName), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			LivenessCheck: &appengine.FlexibleAppVersionLivenessCheckArgs{
+				Path: pulumi.String("/"),
+			},
+			ReadinessCheck: &appengine.FlexibleAppVersionReadinessCheckArgs{
+				Path: pulumi.String("/"),
+			},
+			EnvVariables: pulumi.StringMap{
+				"port": pulumi.String("8080"),
+			},
+			Handlers: appengine.FlexibleAppVersionHandlerArray{
+				&appengine.FlexibleAppVersionHandlerArgs{
+					UrlRegex:       pulumi.String(".*\\/my-path\\/*"),
+					SecurityLevel:  pulumi.String("SECURE_ALWAYS"),
+					Login:          pulumi.String("LOGIN_REQUIRED"),
+					AuthFailAction: pulumi.String("AUTH_FAIL_ACTION_REDIRECT"),
+					StaticFiles: &appengine.FlexibleAppVersionHandlerStaticFilesArgs{
+						Path:            pulumi.String("my-other-path"),
+						UploadPathRegex: pulumi.String(".*\\/my-path\\/*"),
+					},
+				},
+			},
+			AutomaticScaling: &appengine.FlexibleAppVersionAutomaticScalingArgs{
+				CoolDownPeriod: pulumi.String("120s"),
+				CpuUtilization: &appengine.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs{
+					TargetUtilization: pulumi.Float64(0.5),
+				},
+			},
+			NoopOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="appeng-flex",
+    org_id="123456789",
+    billing_account="000000-0000000-0000000-000000")
+app = gcp.appengine.Application("app",
+    project=my_project.project_id,
+    location_id="us-central")
+service = gcp.projects.Service("service",
+    project=my_project.project_id,
+    service="appengineflex.googleapis.com",
+    disable_dependent_services=False)
+gae_api = gcp.projects.IAMMember("gaeApi",
+    project=service.project,
+    role="roles/compute.networkUser",
+    member=my_project.number.apply(lambda number: f"serviceAccount:service-{number}@gae-api-prod.google.com.iam.gserviceaccount.com"))
+bucket = gcp.storage.Bucket("bucket", project=my_project.project_id)
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp_v1 = gcp.appengine.FlexibleAppVersion("myappV1",
+    version_id="v1",
+    project=gae_api.project,
+    service="default",
+    runtime="nodejs",
+    entrypoint=gcp.appengine.FlexibleAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.FlexibleAppVersionDeploymentArgs(
+        zip=gcp.appengine.FlexibleAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
+    liveness_check=gcp.appengine.FlexibleAppVersionLivenessCheckArgs(
+        path="/",
+    ),
+    readiness_check=gcp.appengine.FlexibleAppVersionReadinessCheckArgs(
+        path="/",
+    ),
+    env_variables={
+        "port": "8080",
+    },
+    handlers=[gcp.appengine.FlexibleAppVersionHandlerArgs(
+        url_regex=".*\\/my-path\\/*",
+        security_level="SECURE_ALWAYS",
+        login="LOGIN_REQUIRED",
+        auth_fail_action="AUTH_FAIL_ACTION_REDIRECT",
+        static_files=gcp.appengine.FlexibleAppVersionHandlerStaticFilesArgs(
+            path="my-other-path",
+            upload_path_regex=".*\\/my-path\\/*",
+        ),
+    )],
+    automatic_scaling=gcp.appengine.FlexibleAppVersionAutomaticScalingArgs(
+        cool_down_period="120s",
+        cpu_utilization=gcp.appengine.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs(
+            target_utilization=0.5,
+        ),
+    ),
+    noop_on_destroy=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "appeng-flex",
+    orgId: "123456789",
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const app = new gcp.appengine.Application("app", {
+    project: myProject.projectId,
+    locationId: "us-central",
+});
+const service = new gcp.projects.Service("service", {
+    project: myProject.projectId,
+    service: "appengineflex.googleapis.com",
+    disableDependentServices: false,
+});
+const gaeApi = new gcp.projects.IAMMember("gaeApi", {
+    project: service.project,
+    role: "roles/compute.networkUser",
+    member: pulumi.interpolate`serviceAccount:service-${myProject.number}@gae-api-prod.google.com.iam.gserviceaccount.com`,
+});
+const bucket = new gcp.storage.Bucket("bucket", {project: myProject.projectId});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
+    versionId: "v1",
+    project: gaeApi.project,
+    service: "default",
+    runtime: "nodejs",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    livenessCheck: {
+        path: "/",
+    },
+    readinessCheck: {
+        path: "/",
+    },
+    envVariables: {
+        port: "8080",
+    },
+    handlers: [{
+        urlRegex: ".*\\/my-path\\/*",
+        securityLevel: "SECURE_ALWAYS",
+        login: "LOGIN_REQUIRED",
+        authFailAction: "AUTH_FAIL_ACTION_REDIRECT",
+        staticFiles: {
+            path: "my-other-path",
+            uploadPathRegex: ".*\\/my-path\\/*",
+        },
+    }],
+    automaticScaling: {
+        coolDownPeriod: "120s",
+        cpuUtilization: {
+            targetUtilization: 0.5,
+        },
+    },
+    noopOnDestroy: true,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FlexibleAppVersion Resource {#create}
@@ -8397,6 +8769,24 @@ Structure is documented below.
 
 
 
+
+
+## Import
+
+
+FlexibleAppVersion can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default apps/{{project}}/services/{{service}}/versions/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default {{project}}/{{service}}/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default {{service}}/{{version_id}}
+```
 
 
 

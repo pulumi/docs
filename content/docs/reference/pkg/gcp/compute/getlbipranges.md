@@ -15,6 +15,135 @@ Use this data source to access IP ranges in your firewall rules.
 https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ranges = Output.Create(Gcp.Compute.GetLBIPRanges.InvokeAsync());
+        var lb = new Gcp.Compute.Firewall("lb", new Gcp.Compute.FirewallArgs
+        {
+            Network = google_compute_network.Main.Name,
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "80",
+                    },
+                },
+            },
+            SourceRanges = ranges.Apply(ranges => ranges.Networks),
+            TargetTags = 
+            {
+                "InstanceBehindLoadBalancer",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ranges, err := compute.GetLBIPRanges(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFirewall(ctx, "lb", &compute.FirewallArgs{
+			Network: pulumi.Any(google_compute_network.Main.Name),
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+					},
+				},
+			},
+			SourceRanges: toPulumiStringArray(ranges.Networks),
+			TargetTags: pulumi.StringArray{
+				pulumi.String("InstanceBehindLoadBalancer"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+func toPulumiStringArray(arr []string) pulumi.StringArray {
+	var pulumiArr pulumi.StringArray
+	for _, v := range arr {
+		pulumiArr = append(pulumiArr, pulumi.String(v))
+	}
+	return pulumiArr
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ranges = gcp.compute.get_lbip_ranges()
+lb = gcp.compute.Firewall("lb",
+    network=google_compute_network["main"]["name"],
+    allows=[gcp.compute.FirewallAllowArgs(
+        protocol="tcp",
+        ports=["80"],
+    )],
+    source_ranges=ranges.networks,
+    target_tags=["InstanceBehindLoadBalancer"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ranges = gcp.compute.getLBIPRanges({});
+const lb = new gcp.compute.Firewall("lb", {
+    network: google_compute_network.main.name,
+    allows: [{
+        protocol: "tcp",
+        ports: ["80"],
+    }],
+    sourceRanges: ranges.then(ranges => ranges.networks),
+    targetTags: ["InstanceBehindLoadBalancer"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetLBIPRanges {#using}
 

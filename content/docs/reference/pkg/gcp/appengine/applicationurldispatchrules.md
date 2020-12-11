@@ -16,6 +16,239 @@ To get more information about ApplicationUrlDispatchRules, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps#UrlDispatchRule)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### App Engine Application Url Dispatch Rules Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+        });
+        var adminV3 = new Gcp.AppEngine.StandardAppVersion("adminV3", new Gcp.AppEngine.StandardAppVersionArgs
+        {
+            VersionId = "v3",
+            Service = "admin",
+            Runtime = "nodejs10",
+            Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+                    }),
+                },
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            NoopOnDestroy = true,
+        });
+        var webService = new Gcp.AppEngine.ApplicationUrlDispatchRules("webService", new Gcp.AppEngine.ApplicationUrlDispatchRulesArgs
+        {
+            DispatchRules = 
+            {
+                new Gcp.AppEngine.Inputs.ApplicationUrlDispatchRulesDispatchRuleArgs
+                {
+                    Domain = "*",
+                    Path = "/*",
+                    Service = "default",
+                },
+                new Gcp.AppEngine.Inputs.ApplicationUrlDispatchRulesDispatchRuleArgs
+                {
+                    Domain = "*",
+                    Path = "/admin/*",
+                    Service = adminV3.Service,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		object, err := storage.NewBucketObject(ctx, "object", &storage.BucketObjectArgs{
+			Bucket: bucket.Name,
+			Source: pulumi.NewFileAsset("./test-fixtures/appengine/hello-world.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		adminV3, err := appengine.NewStandardAppVersion(ctx, "adminV3", &appengine.StandardAppVersionArgs{
+			VersionId: pulumi.String("v3"),
+			Service:   pulumi.String("admin"),
+			Runtime:   pulumi.String("nodejs10"),
+			Entrypoint: &appengine.StandardAppVersionEntrypointArgs{
+				Shell: pulumi.String("node ./app.js"),
+			},
+			Deployment: &appengine.StandardAppVersionDeploymentArgs{
+				Zip: &appengine.StandardAppVersionDeploymentZipArgs{
+					SourceUrl: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+						bucketName := _args[0].(string)
+						objectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", bucketName, "/", objectName), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			EnvVariables: pulumi.StringMap{
+				"port": pulumi.String("8080"),
+			},
+			NoopOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appengine.NewApplicationUrlDispatchRules(ctx, "webService", &appengine.ApplicationUrlDispatchRulesArgs{
+			DispatchRules: appengine.ApplicationUrlDispatchRulesDispatchRuleArray{
+				&appengine.ApplicationUrlDispatchRulesDispatchRuleArgs{
+					Domain:  pulumi.String("*"),
+					Path:    pulumi.String("/*"),
+					Service: pulumi.String("default"),
+				},
+				&appengine.ApplicationUrlDispatchRulesDispatchRuleArgs{
+					Domain:  pulumi.String("*"),
+					Path:    pulumi.String("/admin/*"),
+					Service: adminV3.Service,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+admin_v3 = gcp.appengine.StandardAppVersion("adminV3",
+    version_id="v3",
+    service="admin",
+    runtime="nodejs10",
+    entrypoint=gcp.appengine.StandardAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.StandardAppVersionDeploymentArgs(
+        zip=gcp.appengine.StandardAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
+    env_variables={
+        "port": "8080",
+    },
+    noop_on_destroy=True)
+web_service = gcp.appengine.ApplicationUrlDispatchRules("webService", dispatch_rules=[
+    gcp.appengine.ApplicationUrlDispatchRulesDispatchRuleArgs(
+        domain="*",
+        path="/*",
+        service="default",
+    ),
+    gcp.appengine.ApplicationUrlDispatchRulesDispatchRuleArgs(
+        domain="*",
+        path="/admin/*",
+        service=admin_v3.service,
+    ),
+])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const adminV3 = new gcp.appengine.StandardAppVersion("adminV3", {
+    versionId: "v3",
+    service: "admin",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    noopOnDestroy: true,
+});
+const webService = new gcp.appengine.ApplicationUrlDispatchRules("webService", {dispatchRules: [
+    {
+        domain: "*",
+        path: "/*",
+        service: "default",
+    },
+    {
+        domain: "*",
+        path: "/admin/*",
+        service: adminV3.service,
+    },
+]});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationUrlDispatchRules Resource {#create}
@@ -853,6 +1086,16 @@ Defaults to matching all domains: "*".
 
 
 
+
+
+## Import
+
+
+ApplicationUrlDispatchRules can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules default {{project}}
+```
 
 
 

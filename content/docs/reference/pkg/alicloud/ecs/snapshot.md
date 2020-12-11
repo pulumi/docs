@@ -1,7 +1,7 @@
 
 ---
 title: "Snapshot"
-title_tag: "Resource Snapshot | Module ecs | Package AliCloud"
+title_tag: "alicloud.ecs.Snapshot"
 meta_desc: "Explore the Snapshot resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS snapshot resource."
 ---
 

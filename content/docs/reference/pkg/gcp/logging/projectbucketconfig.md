@@ -16,6 +16,112 @@ Manages a project-level logging bucket config. For more information see
 
 > **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are "_Default" and "_Required".
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Organizations.Project("default", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "your-project-id",
+            OrgId = "123456789",
+        });
+        var basic = new Gcp.Logging.ProjectBucketConfig("basic", new Gcp.Logging.ProjectBucketConfigArgs
+        {
+            Project = @default.Name,
+            Location = "global",
+            RetentionDays = 30,
+            BucketId = "_Default",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := organizations.NewProject(ctx, "_default", &organizations.ProjectArgs{
+			ProjectId: pulumi.String("your-project-id"),
+			OrgId:     pulumi.String("123456789"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = logging.NewProjectBucketConfig(ctx, "basic", &logging.ProjectBucketConfigArgs{
+			Project:       _default.Name,
+			Location:      pulumi.String("global"),
+			RetentionDays: pulumi.Int(30),
+			BucketId:      pulumi.String("_Default"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.organizations.Project("default",
+    project_id="your-project-id",
+    org_id="123456789")
+basic = gcp.logging.ProjectBucketConfig("basic",
+    project=default.name,
+    location="global",
+    retention_days=30,
+    bucket_id="_Default")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.organizations.Project("default", {
+    projectId: "your-project-id",
+    orgId: "123456789",
+});
+const basic = new gcp.logging.ProjectBucketConfig("basic", {
+    project: _default.name,
+    location: "global",
+    retentionDays: 30,
+    bucketId: "_Default",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProjectBucketConfig Resource {#create}
@@ -1081,6 +1187,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+This resource can be imported using the following format
+
+```sh
+ $ pulumi import gcp:logging/projectBucketConfig:ProjectBucketConfig default projects/{{project}}/locations/{{location}}/buckets/{{bucket_id}}
+```
 
 
 
