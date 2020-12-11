@@ -304,7 +304,6 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -312,137 +311,124 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="buildid_csharp">
 <a href="#buildid_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ec2instancetype_csharp">
 <a href="#ec2instancetype_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ec2inboundpermissions_csharp">
 <a href="#ec2inboundpermissions_csharp" style="color: inherit; text-decoration: inherit;">Ec2Inbound<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">List&lt;Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fleettype_csharp">
 <a href="#fleettype_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancerolearn_csharp">
 <a href="#instancerolearn_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricgroups_csharp">
 <a href="#metricgroups_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="newgamesessionprotectionpolicy_csharp">
 <a href="#newgamesessionprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcecreationlimitpolicy_csharp">
 <a href="#resourcecreationlimitpolicy_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimeconfiguration_csharp">
 <a href="#runtimeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -451,137 +437,124 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="buildid_go">
 <a href="#buildid_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ec2instancetype_go">
 <a href="#ec2instancetype_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ec2inboundpermissions_go">
 <a href="#ec2inboundpermissions_go" style="color: inherit; text-decoration: inherit;">Ec2Inbound<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fleettype_go">
 <a href="#fleettype_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancerolearn_go">
 <a href="#instancerolearn_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricgroups_go">
 <a href="#metricgroups_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="newgamesessionprotectionpolicy_go">
 <a href="#newgamesessionprotectionpolicy_go" style="color: inherit; text-decoration: inherit;">New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcecreationlimitpolicy_go">
 <a href="#resourcecreationlimitpolicy_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimeconfiguration_go">
 <a href="#runtimeconfiguration_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -590,137 +563,124 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="buildid_nodejs">
 <a href="#buildid_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ec2instancetype_nodejs">
 <a href="#ec2instancetype_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ec2inboundpermissions_nodejs">
 <a href="#ec2inboundpermissions_nodejs" style="color: inherit; text-decoration: inherit;">ec2Inbound<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">Fleet<wbr>Ec2Inbound<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fleettype_nodejs">
 <a href="#fleettype_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancerolearn_nodejs">
 <a href="#instancerolearn_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricgroups_nodejs">
 <a href="#metricgroups_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="newgamesessionprotectionpolicy_nodejs">
 <a href="#newgamesessionprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcecreationlimitpolicy_nodejs">
 <a href="#resourcecreationlimitpolicy_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimeconfiguration_nodejs">
 <a href="#runtimeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -729,146 +689,129 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="build_id_python">
 <a href="#build_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ec2_instance_type_python">
 <a href="#ec2_instance_type_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ec2_inbound_permissions_python">
 <a href="#ec2_inbound_permissions_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>inbound_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">Sequence[Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fleet_type_python">
 <a href="#fleet_type_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_role_arn_python">
 <a href="#instance_role_arn_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metric_groups_python">
 <a href="#metric_groups_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="new_game_session_protection_policy_python">
 <a href="#new_game_session_protection_policy_python" style="color: inherit; text-decoration: inherit;">new_<wbr>game_<wbr>session_<wbr>protection_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_creation_limit_policy_python">
 <a href="#resource_creation_limit_policy_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>creation_<wbr>limit_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtime_configuration_python">
 <a href="#runtime_configuration_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Fleet resource produces the following output properties:
-
 
 
 
@@ -879,47 +822,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="logpaths_csharp">
 <a href="#logpaths_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -928,47 +866,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="logpaths_go">
 <a href="#logpaths_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -977,47 +910,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="logpaths_nodejs">
 <a href="#logpaths_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1026,50 +954,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="log_paths_python">
 <a href="#log_paths_python" style="color: inherit; text-decoration: inherit;">log_<wbr>paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1194,7 +1114,6 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1202,169 +1121,153 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_buildid_csharp">
 <a href="#state_buildid_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2inboundpermissions_csharp">
 <a href="#state_ec2inboundpermissions_csharp" style="color: inherit; text-decoration: inherit;">Ec2Inbound<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">List&lt;Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2instancetype_csharp">
 <a href="#state_ec2instancetype_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_csharp">
 <a href="#state_fleettype_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancerolearn_csharp">
 <a href="#state_instancerolearn_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logpaths_csharp">
 <a href="#state_logpaths_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metricgroups_csharp">
 <a href="#state_metricgroups_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_newgamesessionprotectionpolicy_csharp">
 <a href="#state_newgamesessionprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_csharp">
 <a href="#state_operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcecreationlimitpolicy_csharp">
 <a href="#state_resourcecreationlimitpolicy_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeconfiguration_csharp">
 <a href="#state_runtimeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1373,169 +1276,153 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_buildid_go">
 <a href="#state_buildid_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2inboundpermissions_go">
 <a href="#state_ec2inboundpermissions_go" style="color: inherit; text-decoration: inherit;">Ec2Inbound<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2instancetype_go">
 <a href="#state_ec2instancetype_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_go">
 <a href="#state_fleettype_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancerolearn_go">
 <a href="#state_instancerolearn_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logpaths_go">
 <a href="#state_logpaths_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metricgroups_go">
 <a href="#state_metricgroups_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_newgamesessionprotectionpolicy_go">
 <a href="#state_newgamesessionprotectionpolicy_go" style="color: inherit; text-decoration: inherit;">New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_go">
 <a href="#state_operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcecreationlimitpolicy_go">
 <a href="#state_resourcecreationlimitpolicy_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeconfiguration_go">
 <a href="#state_runtimeconfiguration_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1544,169 +1431,153 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_buildid_nodejs">
 <a href="#state_buildid_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2inboundpermissions_nodejs">
 <a href="#state_ec2inboundpermissions_nodejs" style="color: inherit; text-decoration: inherit;">ec2Inbound<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">Fleet<wbr>Ec2Inbound<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2instancetype_nodejs">
 <a href="#state_ec2instancetype_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_nodejs">
 <a href="#state_fleettype_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancerolearn_nodejs">
 <a href="#state_instancerolearn_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logpaths_nodejs">
 <a href="#state_logpaths_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metricgroups_nodejs">
 <a href="#state_metricgroups_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_newgamesessionprotectionpolicy_nodejs">
 <a href="#state_newgamesessionprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_nodejs">
 <a href="#state_operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcecreationlimitpolicy_nodejs">
 <a href="#state_resourcecreationlimitpolicy_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeconfiguration_nodejs">
 <a href="#state_runtimeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1715,166 +1586,151 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_build_id_python">
 <a href="#state_build_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2_inbound_permissions_python">
 <a href="#state_ec2_inbound_permissions_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>inbound_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetec2inboundpermission">Sequence[Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ec2_instance_type_python">
 <a href="#state_ec2_instance_type_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleet_type_python">
 <a href="#state_fleet_type_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_role_arn_python">
 <a href="#state_instance_role_arn_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_log_paths_python">
 <a href="#state_log_paths_python" style="color: inherit; text-decoration: inherit;">log_<wbr>paths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metric_groups_python">
 <a href="#state_metric_groups_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_new_game_session_protection_policy_python">
 <a href="#state_new_game_session_protection_policy_python" style="color: inherit; text-decoration: inherit;">new_<wbr>game_<wbr>session_<wbr>protection_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_operating_system_python">
 <a href="#state_operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_creation_limit_policy_python">
 <a href="#state_resource_creation_limit_policy_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>creation_<wbr>limit_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_configuration_python">
 <a href="#state_runtime_configuration_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1883,11 +1739,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="fleetec2inboundpermission">Fleet<wbr>Ec2Inbound<wbr>Permission</h4>
@@ -1898,11 +1751,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetEc2InboundPermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetEc2InboundPermissionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Inputs.FleetEc2InboundPermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Outputs.FleetEc2InboundPermission.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1912,49 +1764,44 @@ The following state arguments are supported:
             title="Required">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iprange_csharp">
 <a href="#iprange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1963,49 +1810,44 @@ The following state arguments are supported:
             title="Required">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iprange_go">
 <a href="#iprange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2014,49 +1856,44 @@ The following state arguments are supported:
             title="Required">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iprange_nodejs">
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2065,52 +1902,44 @@ The following state arguments are supported:
             title="Required">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ip_range_python">
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</h4>
 {{% choosable language nodejs %}}
@@ -2120,11 +1949,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetResourceCreationLimitPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetResourceCreationLimitPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Inputs.FleetResourceCreationLimitPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Outputs.FleetResourceCreationLimitPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2134,27 +1962,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="newgamesessionspercreator_csharp">
 <a href="#newgamesessionspercreator_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyperiodinminutes_csharp">
 <a href="#policyperiodinminutes_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Period<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2163,27 +1988,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="newgamesessionspercreator_go">
 <a href="#newgamesessionspercreator_go" style="color: inherit; text-decoration: inherit;">New<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyperiodinminutes_go">
 <a href="#policyperiodinminutes_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Period<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2192,27 +2014,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="newgamesessionspercreator_nodejs">
 <a href="#newgamesessionspercreator_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyperiodinminutes_nodejs">
 <a href="#policyperiodinminutes_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Period<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2221,30 +2040,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="new_game_sessions_per_creator_python">
 <a href="#new_game_sessions_per_creator_python" style="color: inherit; text-decoration: inherit;">new_<wbr>game_<wbr>sessions_<wbr>per_<wbr>creator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_period_in_minutes_python">
 <a href="#policy_period_in_minutes_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>period_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
@@ -2254,11 +2067,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Inputs.FleetRuntimeConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Outputs.FleetRuntimeConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2268,38 +2080,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="gamesessionactivationtimeoutseconds_csharp">
 <a href="#gamesessionactivationtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentgamesessionactivations_csharp">
 <a href="#maxconcurrentgamesessionactivations_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverprocesses_csharp">
 <a href="#serverprocesses_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Processes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">List&lt;Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2308,38 +2116,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="gamesessionactivationtimeoutseconds_go">
 <a href="#gamesessionactivationtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentgamesessionactivations_go">
 <a href="#maxconcurrentgamesessionactivations_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverprocesses_go">
 <a href="#serverprocesses_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Processes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">[]Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2348,38 +2152,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="gamesessionactivationtimeoutseconds_nodejs">
 <a href="#gamesessionactivationtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentgamesessionactivations_nodejs">
 <a href="#maxconcurrentgamesessionactivations_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverprocesses_nodejs">
 <a href="#serverprocesses_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Processes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2388,41 +2188,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="game_session_activation_timeout_seconds_python">
 <a href="#game_session_activation_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">game_<wbr>session_<wbr>activation_<wbr>timeout_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_game_session_activations_python">
 <a href="#max_concurrent_game_session_activations_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>game_<wbr>session_<wbr>activations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_processes_python">
 <a href="#server_processes_python" style="color: inherit; text-decoration: inherit;">server_<wbr>processes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">Sequence[Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="fleetruntimeconfigurationserverprocess">Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process</h4>
 {{% choosable language nodejs %}}
@@ -2432,11 +2225,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationServerProcessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationServerProcessOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Inputs.FleetRuntimeConfigurationServerProcessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Outputs.FleetRuntimeConfigurationServerProcess.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2446,38 +2238,34 @@ The following state arguments are supported:
             title="Required">
         <span id="concurrentexecutions_csharp">
 <a href="#concurrentexecutions_csharp" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Executions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="launchpath_csharp">
 <a href="#launchpath_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2486,38 +2274,34 @@ The following state arguments are supported:
             title="Required">
         <span id="concurrentexecutions_go">
 <a href="#concurrentexecutions_go" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Executions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="launchpath_go">
 <a href="#launchpath_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2526,38 +2310,34 @@ The following state arguments are supported:
             title="Required">
         <span id="concurrentexecutions_nodejs">
 <a href="#concurrentexecutions_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Executions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="launchpath_nodejs">
 <a href="#launchpath_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2566,46 +2346,34 @@ The following state arguments are supported:
             title="Required">
         <span id="concurrent_executions_python">
 <a href="#concurrent_executions_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>executions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="launch_path_python">
 <a href="#launch_path_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

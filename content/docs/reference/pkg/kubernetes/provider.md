@@ -192,7 +192,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -200,27 +199,25 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledryrun_csharp">
 <a href="#enabledryrun_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dry<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -230,22 +227,20 @@ This feature is in developer preview, and is disabled by default.
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
 2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -255,12 +250,11 @@ A namespace can be specified in multiple places, and the precedence is as follow
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
 3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="renderyamltodirectory_csharp">
 <a href="#renderyamltodirectory_csharp" style="color: inherit; text-decoration: inherit;">Render<wbr>Yaml<wbr>To<wbr>Directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,12 +266,11 @@ Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
 used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppressdeprecationwarnings_csharp">
 <a href="#suppressdeprecationwarnings_csharp" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Deprecation<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -286,10 +279,8 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
 2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -298,27 +289,25 @@ This config can be specified in the following ways, using this precedence:
             title="Optional">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledryrun_go">
 <a href="#enabledryrun_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dry<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -328,22 +317,20 @@ This feature is in developer preview, and is disabled by default.
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
 2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -353,12 +340,11 @@ A namespace can be specified in multiple places, and the precedence is as follow
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
 3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="renderyamltodirectory_go">
 <a href="#renderyamltodirectory_go" style="color: inherit; text-decoration: inherit;">Render<wbr>Yaml<wbr>To<wbr>Directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,12 +356,11 @@ Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
 used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppressdeprecationwarnings_go">
 <a href="#suppressdeprecationwarnings_go" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Deprecation<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -384,10 +369,8 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
 2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -396,27 +379,25 @@ This config can be specified in the following ways, using this precedence:
             title="Optional">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledryrun_nodejs">
 <a href="#enabledryrun_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dry<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -426,22 +407,20 @@ This feature is in developer preview, and is disabled by default.
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
 2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,12 +430,11 @@ A namespace can be specified in multiple places, and the precedence is as follow
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
 3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="renderyamltodirectory_nodejs">
 <a href="#renderyamltodirectory_nodejs" style="color: inherit; text-decoration: inherit;">render<wbr>Yaml<wbr>To<wbr>Directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -468,12 +446,11 @@ Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
 used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppressdeprecationwarnings_nodejs">
 <a href="#suppressdeprecationwarnings_nodejs" style="color: inherit; text-decoration: inherit;">suppress<wbr>Deprecation<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -482,10 +459,8 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
 2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -494,27 +469,25 @@ This config can be specified in the following ways, using this precedence:
             title="Optional">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_dry_run_python">
 <a href="#enable_dry_run_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dry_<wbr>run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -524,22 +497,20 @@ This feature is in developer preview, and is disabled by default.
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
 2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_python">
 <a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -549,12 +520,11 @@ A namespace can be specified in multiple places, and the precedence is as follow
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
 3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="render_yaml_to_directory_python">
 <a href="#render_yaml_to_directory_python" style="color: inherit; text-decoration: inherit;">render_<wbr>yaml_<wbr>to_<wbr>directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -566,12 +536,11 @@ Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
 used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppress_deprecation_warnings_python">
 <a href="#suppress_deprecation_warnings_python" style="color: inherit; text-decoration: inherit;">suppress_<wbr>deprecation_<wbr>warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -580,19 +549,13 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
 2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Provider resource produces the following output properties:
-
 
 
 
@@ -603,15 +566,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -620,15 +581,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -637,15 +596,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -654,20 +611,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

@@ -307,7 +307,6 @@ The OrganizationAdminAccount resource accepts the following [input]({{< relref "
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -315,16 +314,14 @@ The OrganizationAdminAccount resource accepts the following [input]({{< relref "
             title="Required">
         <span id="adminaccountid_csharp">
 <a href="#adminaccountid_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -333,16 +330,14 @@ The OrganizationAdminAccount resource accepts the following [input]({{< relref "
             title="Required">
         <span id="adminaccountid_go">
 <a href="#adminaccountid_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -351,16 +346,14 @@ The OrganizationAdminAccount resource accepts the following [input]({{< relref "
             title="Required">
         <span id="adminaccountid_nodejs">
 <a href="#adminaccountid_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -369,25 +362,19 @@ The OrganizationAdminAccount resource accepts the following [input]({{< relref "
             title="Required">
         <span id="admin_account_id_python">
 <a href="#admin_account_id_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the OrganizationAdminAccount resource produces the following output properties:
-
 
 
 
@@ -398,15 +385,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -415,15 +400,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -432,15 +415,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -449,18 +430,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -585,7 +561,6 @@ Get an existing OrganizationAdminAccount resource's state with the given name, I
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -593,16 +568,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adminaccountid_csharp">
 <a href="#state_adminaccountid_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -611,16 +584,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adminaccountid_go">
 <a href="#state_adminaccountid_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -629,16 +600,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adminaccountid_nodejs">
 <a href="#state_adminaccountid_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -647,21 +616,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_admin_account_id_python">
 <a href="#state_admin_account_id_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS account identifier to designate as a delegated administrator for GuardDuty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

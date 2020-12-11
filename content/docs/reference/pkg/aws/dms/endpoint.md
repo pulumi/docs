@@ -327,7 +327,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -335,214 +334,194 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="endpointid_csharp">
 <a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enginename_csharp">
 <a href="#enginename_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatearn_csharp">
 <a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchsettings_csharp">
 <a href="#elasticsearchsettings_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extraconnectionattributes_csharp">
 <a href="#extraconnectionattributes_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Connection<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkasettings_csharp">
 <a href="#kafkasettings_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kinesissettings_csharp">
 <a href="#kinesissettings_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_csharp">
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mongodbsettings_csharp">
 <a href="#mongodbsettings_csharp" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="s3settings_csharp">
 <a href="#s3settings_csharp" style="color: inherit; text-decoration: inherit;">S3Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrole_csharp">
 <a href="#serviceaccessrole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sslmode_csharp">
 <a href="#sslmode_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -551,214 +530,194 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="endpointid_go">
 <a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enginename_go">
 <a href="#enginename_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatearn_go">
 <a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchsettings_go">
 <a href="#elasticsearchsettings_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extraconnectionattributes_go">
 <a href="#extraconnectionattributes_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Connection<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkasettings_go">
 <a href="#kafkasettings_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kinesissettings_go">
 <a href="#kinesissettings_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_go">
 <a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mongodbsettings_go">
 <a href="#mongodbsettings_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="s3settings_go">
 <a href="#s3settings_go" style="color: inherit; text-decoration: inherit;">S3Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrole_go">
 <a href="#serviceaccessrole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sslmode_go">
 <a href="#sslmode_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -767,214 +726,194 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="endpointid_nodejs">
 <a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enginename_nodejs">
 <a href="#enginename_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatearn_nodejs">
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchsettings_nodejs">
 <a href="#elasticsearchsettings_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extraconnectionattributes_nodejs">
 <a href="#extraconnectionattributes_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Connection<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkasettings_nodejs">
 <a href="#kafkasettings_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kinesissettings_nodejs">
 <a href="#kinesissettings_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_nodejs">
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mongodbsettings_nodejs">
 <a href="#mongodbsettings_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="s3settings_nodejs">
 <a href="#s3settings_nodejs" style="color: inherit; text-decoration: inherit;">s3Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrole_nodejs">
 <a href="#serviceaccessrole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sslmode_nodejs">
 <a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -983,223 +922,199 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="endpoint_id_python">
 <a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="engine_name_python">
 <a href="#engine_name_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificate_arn_python">
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_settings_python">
 <a href="#elasticsearch_settings_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extra_connection_attributes_python">
 <a href="#extra_connection_attributes_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>connection_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_settings_python">
 <a href="#kafka_settings_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kinesis_settings_python">
 <a href="#kinesis_settings_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kms_key_arn_python">
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mongodb_settings_python">
 <a href="#mongodb_settings_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="s3_settings_python">
 <a href="#s3_settings_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_access_role_python">
 <a href="#service_access_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_mode_python">
 <a href="#ssl_mode_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Endpoint resource produces the following output properties:
-
 
 
 
@@ -1210,26 +1125,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpointarn_csharp">
 <a href="#endpointarn_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1238,26 +1150,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpointarn_go">
 <a href="#endpointarn_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1266,26 +1175,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpointarn_nodejs">
 <a href="#endpointarn_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1294,29 +1200,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpoint_arn_python">
 <a href="#endpoint_arn_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1441,7 +1341,6 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1449,225 +1348,204 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_certificatearn_csharp">
 <a href="#state_certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearchsettings_csharp">
 <a href="#state_elasticsearchsettings_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointarn_csharp">
 <a href="#state_endpointarn_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointid_csharp">
 <a href="#state_endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_csharp">
 <a href="#state_endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enginename_csharp">
 <a href="#state_enginename_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extraconnectionattributes_csharp">
 <a href="#state_extraconnectionattributes_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Connection<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkasettings_csharp">
 <a href="#state_kafkasettings_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kinesissettings_csharp">
 <a href="#state_kinesissettings_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_csharp">
 <a href="#state_kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mongodbsettings_csharp">
 <a href="#state_mongodbsettings_csharp" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3settings_csharp">
 <a href="#state_s3settings_csharp" style="color: inherit; text-decoration: inherit;">S3Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servername_csharp">
 <a href="#state_servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccessrole_csharp">
 <a href="#state_serviceaccessrole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sslmode_csharp">
 <a href="#state_sslmode_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1676,225 +1554,204 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_certificatearn_go">
 <a href="#state_certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearchsettings_go">
 <a href="#state_elasticsearchsettings_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointarn_go">
 <a href="#state_endpointarn_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointid_go">
 <a href="#state_endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_go">
 <a href="#state_endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enginename_go">
 <a href="#state_enginename_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extraconnectionattributes_go">
 <a href="#state_extraconnectionattributes_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Connection<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkasettings_go">
 <a href="#state_kafkasettings_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kinesissettings_go">
 <a href="#state_kinesissettings_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_go">
 <a href="#state_kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mongodbsettings_go">
 <a href="#state_mongodbsettings_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3settings_go">
 <a href="#state_s3settings_go" style="color: inherit; text-decoration: inherit;">S3Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servername_go">
 <a href="#state_servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccessrole_go">
 <a href="#state_serviceaccessrole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sslmode_go">
 <a href="#state_sslmode_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1903,225 +1760,204 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_certificatearn_nodejs">
 <a href="#state_certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearchsettings_nodejs">
 <a href="#state_elasticsearchsettings_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointarn_nodejs">
 <a href="#state_endpointarn_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointid_nodejs">
 <a href="#state_endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_nodejs">
 <a href="#state_endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enginename_nodejs">
 <a href="#state_enginename_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extraconnectionattributes_nodejs">
 <a href="#state_extraconnectionattributes_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Connection<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkasettings_nodejs">
 <a href="#state_kafkasettings_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kinesissettings_nodejs">
 <a href="#state_kinesissettings_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_nodejs">
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mongodbsettings_nodejs">
 <a href="#state_mongodbsettings_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3settings_nodejs">
 <a href="#state_s3settings_nodejs" style="color: inherit; text-decoration: inherit;">s3Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servername_nodejs">
 <a href="#state_servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccessrole_nodejs">
 <a href="#state_serviceaccessrole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sslmode_nodejs">
 <a href="#state_sslmode_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2130,222 +1966,202 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_certificate_arn_python">
 <a href="#state_certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearch_settings_python">
 <a href="#state_elasticsearch_settings_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_arn_python">
 <a href="#state_endpoint_arn_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_id_python">
 <a href="#state_endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_type_python">
 <a href="#state_endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_engine_name_python">
 <a href="#state_engine_name_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extra_connection_attributes_python">
 <a href="#state_extra_connection_attributes_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>connection_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafka_settings_python">
 <a href="#state_kafka_settings_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kinesis_settings_python">
 <a href="#state_kinesis_settings_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_arn_python">
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mongodb_settings_python">
 <a href="#state_mongodb_settings_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3_settings_python">
 <a href="#state_s3_settings_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_server_name_python">
 <a href="#state_server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_access_role_python">
 <a href="#state_service_access_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ssl_mode_python">
 <a href="#state_ssl_mode_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2354,11 +2170,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</h4>
@@ -2369,11 +2182,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointElasticsearchSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointElasticsearchSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointElasticsearchSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointElasticsearchSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2383,49 +2195,44 @@ The following state arguments are supported:
             title="Required">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccessrolearn_csharp">
 <a href="#serviceaccessrolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="errorretryduration_csharp">
 <a href="#errorretryduration_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Retry<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullloaderrorpercentage_csharp">
 <a href="#fullloaderrorpercentage_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Error<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2434,49 +2241,44 @@ The following state arguments are supported:
             title="Required">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccessrolearn_go">
 <a href="#serviceaccessrolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="errorretryduration_go">
 <a href="#errorretryduration_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Retry<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullloaderrorpercentage_go">
 <a href="#fullloaderrorpercentage_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Error<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2485,49 +2287,44 @@ The following state arguments are supported:
             title="Required">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccessrolearn_nodejs">
 <a href="#serviceaccessrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="errorretryduration_nodejs">
 <a href="#errorretryduration_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Retry<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullloaderrorpercentage_nodejs">
 <a href="#fullloaderrorpercentage_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Error<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2536,52 +2333,44 @@ The following state arguments are supported:
             title="Required">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_access_role_arn_python">
 <a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="error_retry_duration_python">
 <a href="#error_retry_duration_python" style="color: inherit; text-decoration: inherit;">error_<wbr>retry_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="full_load_error_percentage_python">
 <a href="#full_load_error_percentage_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>error_<wbr>percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</h4>
 {{% choosable language nodejs %}}
@@ -2591,11 +2380,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointKafkaSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointKafkaSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointKafkaSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointKafkaSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2605,27 +2393,24 @@ The following state arguments are supported:
             title="Required">
         <span id="broker_csharp">
 <a href="#broker_csharp" style="color: inherit; text-decoration: inherit;">Broker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2634,27 +2419,24 @@ The following state arguments are supported:
             title="Required">
         <span id="broker_go">
 <a href="#broker_go" style="color: inherit; text-decoration: inherit;">Broker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2663,27 +2445,24 @@ The following state arguments are supported:
             title="Required">
         <span id="broker_nodejs">
 <a href="#broker_nodejs" style="color: inherit; text-decoration: inherit;">broker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2692,30 +2471,24 @@ The following state arguments are supported:
             title="Required">
         <span id="broker_python">
 <a href="#broker_python" style="color: inherit; text-decoration: inherit;">broker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</h4>
 {{% choosable language nodejs %}}
@@ -2725,11 +2498,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointKinesisSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointKinesisSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointKinesisSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointKinesisSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2739,38 +2511,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="messageformat_csharp">
 <a href="#messageformat_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_csharp">
 <a href="#serviceaccessrolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streamarn_csharp">
 <a href="#streamarn_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2779,38 +2547,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="messageformat_go">
 <a href="#messageformat_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_go">
 <a href="#serviceaccessrolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streamarn_go">
 <a href="#streamarn_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2819,38 +2583,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="messageformat_nodejs">
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_nodejs">
 <a href="#serviceaccessrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streamarn_nodejs">
 <a href="#streamarn_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2859,41 +2619,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="message_format_python">
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_access_role_arn_python">
 <a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stream_arn_python">
 <a href="#stream_arn_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</h4>
 {{% choosable language nodejs %}}
@@ -2903,11 +2656,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointMongodbSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointMongodbSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointMongodbSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointMongodbSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2917,71 +2669,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="authmechanism_csharp">
 <a href="#authmechanism_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Mechanism</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authsource_csharp">
 <a href="#authsource_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authtype_csharp">
 <a href="#authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="docstoinvestigate_csharp">
 <a href="#docstoinvestigate_csharp" style="color: inherit; text-decoration: inherit;">Docs<wbr>To<wbr>Investigate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extractdocid_csharp">
 <a href="#extractdocid_csharp" style="color: inherit; text-decoration: inherit;">Extract<wbr>Doc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nestinglevel_csharp">
 <a href="#nestinglevel_csharp" style="color: inherit; text-decoration: inherit;">Nesting<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2990,71 +2735,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="authmechanism_go">
 <a href="#authmechanism_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Mechanism</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authsource_go">
 <a href="#authsource_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authtype_go">
 <a href="#authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="docstoinvestigate_go">
 <a href="#docstoinvestigate_go" style="color: inherit; text-decoration: inherit;">Docs<wbr>To<wbr>Investigate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extractdocid_go">
 <a href="#extractdocid_go" style="color: inherit; text-decoration: inherit;">Extract<wbr>Doc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nestinglevel_go">
 <a href="#nestinglevel_go" style="color: inherit; text-decoration: inherit;">Nesting<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3063,71 +2801,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="authmechanism_nodejs">
 <a href="#authmechanism_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Mechanism</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authsource_nodejs">
 <a href="#authsource_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authtype_nodejs">
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="docstoinvestigate_nodejs">
 <a href="#docstoinvestigate_nodejs" style="color: inherit; text-decoration: inherit;">docs<wbr>To<wbr>Investigate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extractdocid_nodejs">
 <a href="#extractdocid_nodejs" style="color: inherit; text-decoration: inherit;">extract<wbr>Doc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nestinglevel_nodejs">
 <a href="#nestinglevel_nodejs" style="color: inherit; text-decoration: inherit;">nesting<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3136,74 +2867,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="auth_mechanism_python">
 <a href="#auth_mechanism_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>mechanism</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_source_python">
 <a href="#auth_source_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_type_python">
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="docs_to_investigate_python">
 <a href="#docs_to_investigate_python" style="color: inherit; text-decoration: inherit;">docs_<wbr>to_<wbr>investigate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extract_doc_id_python">
 <a href="#extract_doc_id_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>doc_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nesting_level_python">
 <a href="#nesting_level_python" style="color: inherit; text-decoration: inherit;">nesting_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="endpoints3settings">Endpoint<wbr>S3Settings</h4>
 {{% choosable language nodejs %}}
@@ -3213,11 +2934,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointS3SettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms?tab=doc#EndpointS3SettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointS3SettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointS3Settings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3227,82 +2947,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucketfolder_csharp">
 <a href="#bucketfolder_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket Object prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compressiontype_csharp">
 <a href="#compressiontype_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csvdelimiter_csharp">
 <a href="#csvdelimiter_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csvrowdelimiter_csharp">
 <a href="#csvrowdelimiter_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Row<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="externaltabledefinition_csharp">
 <a href="#externaltabledefinition_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Table<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_csharp">
 <a href="#serviceaccessrolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3311,82 +3023,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucketfolder_go">
 <a href="#bucketfolder_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket Object prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compressiontype_go">
 <a href="#compressiontype_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csvdelimiter_go">
 <a href="#csvdelimiter_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csvrowdelimiter_go">
 <a href="#csvrowdelimiter_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Row<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="externaltabledefinition_go">
 <a href="#externaltabledefinition_go" style="color: inherit; text-decoration: inherit;">External<wbr>Table<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_go">
 <a href="#serviceaccessrolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3395,82 +3099,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucketfolder_nodejs">
 <a href="#bucketfolder_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket Object prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compressiontype_nodejs">
 <a href="#compressiontype_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csvdelimiter_nodejs">
 <a href="#csvdelimiter_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csvrowdelimiter_nodejs">
 <a href="#csvrowdelimiter_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Row<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="externaltabledefinition_nodejs">
 <a href="#externaltabledefinition_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Table<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_nodejs">
 <a href="#serviceaccessrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3479,90 +3175,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_folder_python">
 <a href="#bucket_folder_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket Object prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compression_type_python">
 <a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_delimiter_python">
 <a href="#csv_delimiter_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_row_delimiter_python">
 <a href="#csv_row_delimiter_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>row_<wbr>delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="external_table_definition_python">
 <a href="#external_table_definition_python" style="color: inherit; text-decoration: inherit;">external_<wbr>table_<wbr>definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_access_role_arn_python">
 <a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 
