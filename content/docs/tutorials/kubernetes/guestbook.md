@@ -103,8 +103,8 @@ $ pulumi new kubernetes-csharp
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 
-// Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-// running on minikube, and if so, create only services of type ClusterIP.
+// Create only services of type `ClusterIP`
+// for clusters that don't support `LoadBalancer` services
 const config = new pulumi.Config();
 const useLoadBalancer = config.getBoolean("useLoadBalancer");
 
@@ -212,7 +212,7 @@ const frontendService = new k8s.core.v1.Service("frontend", {
         name: "frontend",
     },
     spec: {
-        type: useLoadBalancer ? "ClusterIP" : "LoadBalancer",
+        type: useLoadBalancer ? "LoadBalancer" : "ClusterIP",
         ports: [{ port: 80 }],
         selector: frontendDeployment.spec.template.metadata.labels,
     },
@@ -221,9 +221,9 @@ const frontendService = new k8s.core.v1.Service("frontend", {
 // Export the frontend IP.
 export let frontendIp: pulumi.Output<string>;
 if (useLoadBalancer) {
-    frontendIp = frontendService.spec.clusterIP;
+    frontendIp = frontendService.status.loadBalancer.ingress[0].ip;    
 } else {
-    frontendIp = frontendService.status.loadBalancer.ingress[0].ip;
+    frontendIp = frontendService.spec.clusterIP;    
 }
 ```
 
@@ -238,8 +238,8 @@ import pulumi
 from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service, Namespace
 
-# Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-# running on minikube, and if so, create only services of type ClusterIP.
+# Create only services of type `ClusterIP`
+# for clusters that don't support `LoadBalancer` services
 config = pulumi.Config()
 useLoadBalancer = config.get_bool("useLoadBalancer")
 
@@ -394,7 +394,7 @@ frontend_service = Service(
         "labels": frontend_labels,
     },
     spec={
-        "type": "ClusterIP" if useLoadBalancer else "LoadBalancer",
+        "type": "LoadBalancer" if useLoadBalancer else "ClusterIP",
         "ports": [{
             "port": 80
         }],
@@ -403,10 +403,10 @@ frontend_service = Service(
 
 frontend_ip = ""
 if useLoadBalancer:
-    frontend_ip = frontend_service.spec.apply(lambda spec: spec.get("cluster_ip", ""))
-else:
     ingress = frontend_service.status.apply(lambda status: status["load_balancer"]["ingress"][0])
     frontend_ip = ingress.apply(lambda ingress: ingress.get("ip", ingress.get("hostname", "")))
+else:
+    frontend_ip = frontend_service.spec.apply(lambda spec: spec.get("cluster_ip", ""))
 pulumi.export("frontend_ip", frontend_ip)
 ```
 
@@ -433,8 +433,8 @@ func main() {
         // Initialize config
         conf := config.New(ctx, "")
 
-        // Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-        // running on minikube, and if so, create only services of type ClusterIP.
+        // Create only services of type `ClusterIP`
+        // for clusters that don't support `LoadBalancer` services
         useLoadBalancer := conf.GetBool("useLoadBalancer")
 
         redisLeaderLabels := pulumi.StringMap{
@@ -620,9 +620,9 @@ func main() {
         // Frontend Service
         var frontendServiceType string
         if useLoadBalancer {
-            frontendServiceType = "ClusterIP"
-        } else {
             frontendServiceType = "LoadBalancer"
+        } else {
+            frontendServiceType = "ClusterIP"
         }
         frontendService, err := corev1.NewService(ctx, "frontend", &corev1.ServiceArgs{
             Metadata: &metav1.ObjectMetaArgs{
@@ -644,10 +644,6 @@ func main() {
         }
 
         if useLoadBalancer {
-            ctx.Export("frontendIP", frontendService.Spec.ApplyT(func(spec *corev1.ServiceSpec) *string {
-                return spec.ClusterIP
-            }))
-        } else {
             ctx.Export("frontendIP", frontendService.Status.ApplyT(func(status *corev1.ServiceStatus) *string {
                 ingress := status.LoadBalancer.Ingress[0]
                 if ingress.Hostname != nil {
@@ -655,6 +651,10 @@ func main() {
                 }
                 return ingress.Ip
             }))
+        } else {
+            ctx.Export("frontendIP", frontendService.Spec.ApplyT(func(spec *corev1.ServiceSpec) *string {
+                return spec.ClusterIP
+            }))            
         }
 
         return nil
@@ -678,9 +678,8 @@ class Guestbook : Stack
 {
     public Guestbook()
     {
-        // Minikube does not implement services of type `LoadBalancer`; require the user to
-        // specify if we're running on minikube, and if so, create only services of type
-        // ClusterIP.
+        // Create only services of type `ClusterIP`
+        // for clusters that don't support `LoadBalancer` services
         var config = new Config();
         var useLoadBalancer = config.GetBoolean("useLoadBalancer") ?? false;
 
@@ -906,7 +905,7 @@ class Guestbook : Stack
             },
             Spec = new ServiceSpecArgs
             {
-                Type = useLoadBalancer ? "ClusterIP" : "LoadBalancer",
+                Type = useLoadBalancer ? "LoadBalancer" : "ClusterIP",
                 Ports =
                 {
                     new ServicePortArgs
@@ -921,11 +920,11 @@ class Guestbook : Stack
 
         if (useLoadBalancer)
         {
-            this.FrontendIp = frontendService.Spec.Apply(spec => spec.ClusterIP);
+            this.FrontendIp = frontendService.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip ?? status.LoadBalancer.Ingress[0].Hostname);            
         }
         else
         {
-            this.FrontendIp = frontendService.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip ?? status.LoadBalancer.Ingress[0].Hostname);
+            this.FrontendIp = frontendService.Spec.Apply(spec => spec.ClusterIP);
         }
     }
 
@@ -940,9 +939,7 @@ class Guestbook : Stack
     This code creates three Kubernetes Services, each with an associated Deployment. The full Kubernetes object model is
     available to us, giving us the full power of Kubernetes right away.
 
-1. (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube, but for most
-    production Kubernetes clusters, we will want it to be of type `LoadBalancer`, ensuring that a load balancer in your
-    target cloud environment is allocated.
+1. (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube and similar dev/local clusters; however, for most production Kubernetes clusters, we'll want a `LoadBalancer` Service to ensure a load balancer gets allocated in your target cloud environment.
 
     The above code uses [configuration]({{< relref "/docs/intro/concepts/config" >}}) to make this parameterizable.
     If you'd like our program to use a load balancer, simply run:
@@ -1055,10 +1052,10 @@ class Guestbook : Stack
 
     ![Guestbook in browser](/images/docs/quickstart/kubernetes/guestbook.png)
 
-    **No Load Balancer (Minikube):**
+    **Without a `LoadBalancer`**
 
-    Because Minikube doesn't support the `LoadBalancer` type, our example above uses `ClusterIP`. In order to
-    browse to it, we will first need to forward a port on `localhost` to it. To do so, run:
+    As our example above uses `ClusterIP`, in order to access it in a browswer over HTTP,
+    we must first forward a port local port on `localhost` to it . To do so, run:
 
     ```shell
     $ kubectl port-forward svc/frontend 8765:80
@@ -1080,9 +1077,9 @@ class Guestbook : Stack
     </html>
     ```
 
-    **Using a Load Balancer:**
+    **With a `LoadBalancer`**
 
-    If you are instead running this program in a real cluster, and set `useLoadBalancer` to `true` in step 3,
+    If you are instead running this program in a full-featured production cluster, and set `useLoadBalancer` to `true` in step 3,
     then you can simply access your guestbook application with:
 
     ```shell
