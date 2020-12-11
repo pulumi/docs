@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceRunner"
-title_tag: "Resource ServiceRunner | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.ServiceRunner"
 meta_desc: "Explore the ServiceRunner resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A container for a managed identity to execute DevTest lab services."
 ---
 

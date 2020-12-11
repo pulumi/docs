@@ -1,7 +1,7 @@
 
 ---
 title: "SecretValue"
-title_tag: "Resource SecretValue | Module servicefabricmesh | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabricmesh.SecretValue"
 meta_desc: "Explore the SecretValue resource of the servicefabricmesh module, including examples, input properties, output properties, lookup functions, and supporting types. This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value."
 ---
 

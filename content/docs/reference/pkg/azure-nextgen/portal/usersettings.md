@@ -1,7 +1,7 @@
 
 ---
 title: "UserSettings"
-title_tag: "Resource UserSettings | Module portal | Package Azure NextGen"
+title_tag: "azure-nextgen.portal.UserSettings"
 meta_desc: "Explore the UserSettings resource of the portal module, including examples, input properties, output properties, lookup functions, and supporting types. Response to get user settings"
 ---
 
@@ -866,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontsize_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Font<wbr>Size</span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
 
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontstyle_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Font<wbr>Style</span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
 
@@ -893,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontsize_go" style="color: inherit; text-decoration: inherit;">Font<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
 
@@ -903,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontstyle_go" style="color: inherit; text-decoration: inherit;">Font<wbr>Style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
 
@@ -920,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontsize_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Font<wbr>Size</span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
 
@@ -930,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontstyle_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Font<wbr>Style</span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
 
@@ -947,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#font_size_python" style="color: inherit; text-decoration: inherit;">font_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Font<wbr>Size</span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
 
@@ -957,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#font_style_python" style="color: inherit; text-decoration: inherit;">font_<wbr>style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Font<wbr>Style</span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
 
@@ -1114,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredostype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Os<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
 
@@ -1124,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredshelltype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shell<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Shell<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
 
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredostype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
 
@@ -1181,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredshelltype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shell<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
 
@@ -1228,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredostype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Os<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
 
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredshelltype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shell<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Shell<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
 
@@ -1285,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_os_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Os<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
 
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_shell_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shell_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Shell<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
 

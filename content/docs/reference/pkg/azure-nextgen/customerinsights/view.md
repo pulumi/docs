@@ -1,7 +1,7 @@
 
 ---
 title: "View"
-title_tag: "Resource View | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.View"
 meta_desc: "Explore the View resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The view resource format."
 ---
 

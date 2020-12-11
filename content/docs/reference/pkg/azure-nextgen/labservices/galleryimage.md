@@ -1,7 +1,7 @@
 
 ---
 title: "GalleryImage"
-title_tag: "Resource GalleryImage | Module labservices | Package Azure NextGen"
+title_tag: "azure-nextgen.labservices.GalleryImage"
 meta_desc: "Explore the GalleryImage resource of the labservices module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an image from the Azure Marketplace"
 ---
 

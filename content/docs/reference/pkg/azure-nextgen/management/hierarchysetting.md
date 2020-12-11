@@ -1,7 +1,7 @@
 
 ---
 title: "HierarchySetting"
-title_tag: "Resource HierarchySetting | Module management | Package Azure NextGen"
+title_tag: "azure-nextgen.management.HierarchySetting"
 meta_desc: "Explore the HierarchySetting resource of the management module, including examples, input properties, output properties, lookup functions, and supporting types. Settings defined at the Management Group scope."
 ---
 

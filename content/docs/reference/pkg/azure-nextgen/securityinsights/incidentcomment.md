@@ -1,7 +1,7 @@
 
 ---
 title: "IncidentComment"
-title_tag: "Resource IncidentComment | Module securityinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.securityinsights.IncidentComment"
 meta_desc: "Explore the IncidentComment resource of the securityinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an incident comment"
 ---
 

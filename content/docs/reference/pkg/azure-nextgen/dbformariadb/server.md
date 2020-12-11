@@ -1,7 +1,7 @@
 
 ---
 title: "Server"
-title_tag: "Resource Server | Module dbformariadb | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformariadb.Server"
 meta_desc: "Explore the Server resource of the dbformariadb module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server."
 ---
 
@@ -137,7 +137,7 @@ class MyStack : Stack
             Properties = 
             {
                 { "administratorLogin", "cloudsa" },
-                { "administratorLoginPassword", "pass$w0rd" },
+                { "administratorLoginPassword", "<administratorLoginPassword>" },
                 { "createMode", "Default" },
                 { "sslEnforcement", "Enabled" },
                 { "storageProfile", new AzureNextGen.DBforMariaDB.Latest.Inputs.StorageProfileArgs
@@ -183,7 +183,7 @@ server = azure_nextgen.dbformariadb.latest.Server("server",
     location="westus",
     properties={
         "administratorLogin": "cloudsa",
-        "administratorLoginPassword": "pass$w0rd",
+        "administratorLoginPassword": "<administratorLoginPassword>",
         "createMode": "Default",
         "sslEnforcement": "Enabled",
         "storageProfile": azure_nextgen.dbformariadb.latest.StorageProfileArgs(
@@ -218,7 +218,7 @@ const server = new azure_nextgen.dbformariadb.latest.Server("server", {
     location: "westus",
     properties: {
         administratorLogin: "cloudsa",
-        administratorLoginPassword: `pass$w0rd`,
+        administratorLoginPassword: "<administratorLoginPassword>",
         createMode: "Default",
         sslEnforcement: "Enabled",
         storageProfile: {
@@ -617,7 +617,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforgeorestore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforreplica">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforrestore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
 
@@ -684,7 +684,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
 
@@ -751,7 +751,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create | Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore | Server<wbr>Properties<wbr>For<wbr>Replica | Server<wbr>Properties<wbr>For<wbr>Restore</span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
 
@@ -818,7 +818,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args, Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args, Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args, Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args]</span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
 
@@ -2070,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2080,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2137,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2147,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2167,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2204,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2214,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2234,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2271,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2281,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2301,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2339,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2349,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2369,7 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2396,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2406,7 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2426,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2453,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2463,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2483,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2510,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2520,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2540,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2578,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2608,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2635,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2645,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2665,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2692,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2702,7 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2722,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2749,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2759,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2779,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2827,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2837,7 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2857,7 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2894,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2904,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2924,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -2961,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -2971,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -2991,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -3028,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Public<wbr>Network<wbr>Access<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
 
@@ -3038,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Ssl<wbr>Enforcement<wbr>Enum</span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
 
@@ -3058,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
@@ -3126,7 +3126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
 
@@ -3183,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
 
@@ -3240,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
 
@@ -3297,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
 
@@ -3574,7 +3574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#georedundantbackup_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Redundant<wbr>Backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Geo<wbr>Redundant<wbr>Backup</span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
 
@@ -3584,7 +3584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautogrow_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Autogrow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Storage<wbr>Autogrow</span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
 
@@ -3621,7 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#georedundantbackup_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Redundant<wbr>Backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
 
@@ -3631,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautogrow_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Autogrow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
 
@@ -3668,7 +3668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#georedundantbackup_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Redundant<wbr>Backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Geo<wbr>Redundant<wbr>Backup</span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
 
@@ -3678,7 +3678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautogrow_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Autogrow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Autogrow</span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
 
@@ -3715,7 +3715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_redundant_backup_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>redundant_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Geo<wbr>Redundant<wbr>Backup</span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
 
@@ -3725,7 +3725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_autogrow_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>autogrow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Autogrow</span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
 

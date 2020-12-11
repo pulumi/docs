@@ -1,7 +1,7 @@
 
 ---
 title: "RecordSet"
-title_tag: "Resource RecordSet | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.RecordSet"
 meta_desc: "Explore the RecordSet resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AdaptiveApplicationControl"
-title_tag: "Resource AdaptiveApplicationControl | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.AdaptiveApplicationControl"
 meta_desc: "Explore the AdaptiveApplicationControl resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

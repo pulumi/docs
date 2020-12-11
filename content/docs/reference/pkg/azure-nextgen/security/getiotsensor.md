@@ -174,6 +174,56 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="connectivitytime_csharp">
+<a href="#connectivitytime_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="creationtime_csharp">
+<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dynamiclearning_csharp">
+<a href="#dynamiclearning_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Learning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="learningmode_csharp">
+<a href="#learningmode_csharp" style="color: inherit; text-decoration: inherit;">Learning<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -181,6 +231,46 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sensorstatus_csharp">
+<a href="#sensorstatus_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sensorversion_csharp">
+<a href="#sensorversion_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tistatus_csharp">
+<a href="#tistatus_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tiversion_csharp">
+<a href="#tiversion_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -192,12 +282,82 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="tiautomaticupdates_csharp">
+<a href="#tiautomaticupdates_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="connectivitytime_go">
+<a href="#connectivitytime_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="creationtime_go">
+<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dynamiclearning_go">
+<a href="#dynamiclearning_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Learning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="learningmode_go">
+<a href="#learningmode_go" style="color: inherit; text-decoration: inherit;">Learning<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -211,6 +371,46 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sensorstatus_go">
+<a href="#sensorstatus_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sensorversion_go">
+<a href="#sensorversion_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tistatus_go">
+<a href="#tistatus_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tiversion_go">
+<a href="#tiversion_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -219,12 +419,82 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="tiautomaticupdates_go">
+<a href="#tiautomaticupdates_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="connectivitytime_nodejs">
+<a href="#connectivitytime_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="creationtime_nodejs">
+<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dynamiclearning_nodejs">
+<a href="#dynamiclearning_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Learning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="learningmode_nodejs">
+<a href="#learningmode_nodejs" style="color: inherit; text-decoration: inherit;">learning<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -238,6 +508,46 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sensorstatus_nodejs">
+<a href="#sensorstatus_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sensorversion_nodejs">
+<a href="#sensorversion_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tistatus_nodejs">
+<a href="#tistatus_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tiversion_nodejs">
+<a href="#tiversion_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -246,12 +556,82 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="tiautomaticupdates_nodejs">
+<a href="#tiautomaticupdates_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Automatic<wbr>Updates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="connectivity_time_python">
+<a href="#connectivity_time_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="creation_time_python">
+<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dynamic_learning_python">
+<a href="#dynamic_learning_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>learning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="learning_mode_python">
+<a href="#learning_mode_python" style="color: inherit; text-decoration: inherit;">learning_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -265,6 +645,46 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sensor_status_python">
+<a href="#sensor_status_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sensor_version_python">
+<a href="#sensor_version_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ti_status_python">
+<a href="#ti_status_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ti_version_python">
+<a href="#ti_version_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -272,6 +692,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ti_automatic_updates_python">
+<a href="#ti_automatic_updates_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>automatic_<wbr>updates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

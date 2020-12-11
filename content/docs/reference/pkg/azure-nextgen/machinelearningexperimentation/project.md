@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module machinelearningexperimentation | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningexperimentation.Project"
 meta_desc: "Explore the Project resource of the machinelearningexperimentation module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a machine learning project."
 ---
 

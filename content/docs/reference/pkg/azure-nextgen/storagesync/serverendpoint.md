@@ -1,7 +1,7 @@
 
 ---
 title: "ServerEndpoint"
-title_tag: "Resource ServerEndpoint | Module storagesync | Package Azure NextGen"
+title_tag: "azure-nextgen.storagesync.ServerEndpoint"
 meta_desc: "Explore the ServerEndpoint resource of the storagesync module, including examples, input properties, output properties, lookup functions, and supporting types. Server Endpoint object."
 ---
 
@@ -152,7 +152,7 @@ const serverEndpoint = new azure_nextgen.storagesync.latest.ServerEndpoint("serv
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, InitialDownloadPolicy]]</span> = None<span class="p">, </span><span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, LocalCacheMode]]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +370,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cloudtiering_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Feature<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
 
@@ -390,7 +390,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initialdownloadpolicy_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Download<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Initial<wbr>Download<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
 
@@ -400,7 +400,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#localcachemode_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Cache<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Local<wbr>Cache<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
 
@@ -410,7 +410,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offlinedatatransfer_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Feature<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
 
@@ -517,7 +517,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cloudtiering_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
 
@@ -537,7 +537,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initialdownloadpolicy_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Download<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#localcachemode_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Cache<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
 
@@ -557,7 +557,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offlinedatatransfer_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
 
@@ -664,7 +664,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cloudtiering_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Tiering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Feature<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
 
@@ -684,7 +684,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initialdownloadpolicy_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Download<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Initial<wbr>Download<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#localcachemode_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Cache<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Local<wbr>Cache<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offlinedatatransfer_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Feature<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
 
@@ -811,7 +811,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cloud_tiering_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>tiering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Feature<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
 
@@ -831,7 +831,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initial_download_policy_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>download_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Initial<wbr>Download<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
 
@@ -841,7 +841,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#local_cache_mode_python" style="color: inherit; text-decoration: inherit;">local_<wbr>cache_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Local<wbr>Cache<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
 
@@ -851,7 +851,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offline_data_transfer_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Feature<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
 

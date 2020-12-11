@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module machinelearning | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearning.Workspace"
 meta_desc: "Explore the Workspace resource of the machinelearning module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a machine learning workspace."
 ---
 

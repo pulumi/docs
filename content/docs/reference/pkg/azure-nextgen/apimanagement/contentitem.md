@@ -1,7 +1,7 @@
 
 ---
 title: "ContentItem"
-title_tag: "Resource ContentItem | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ContentItem"
 meta_desc: "Explore the ContentItem resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Content type contract details."
 ---
 

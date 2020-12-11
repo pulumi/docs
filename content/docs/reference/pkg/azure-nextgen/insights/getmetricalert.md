@@ -178,7 +178,7 @@ The following output properties are available:
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response&gt;&gt;</span>
+        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteriaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#metricalertsingleresourcemultiplemetriccriteriaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webtestlocationavailabilitycriteriaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
 
@@ -211,6 +211,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}how often the metric alert is evaluated represented in ISO 8601 duration format.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -345,7 +355,7 @@ The following output properties are available:
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#metricalertsingleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webtestlocationavailabilitycriteriaresponse">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
 
@@ -378,6 +388,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}how often the metric alert is evaluated represented in ISO 8601 duration format.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -512,7 +532,7 @@ The following output properties are available:
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response | Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</span>
+        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#metricalertsingleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webtestlocationavailabilitycriteriaresponse">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
 
@@ -545,6 +565,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}how often the metric alert is evaluated represented in ISO 8601 duration format.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -679,7 +709,7 @@ The following output properties are available:
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#metricalertsingleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webtestlocationavailabilitycriteriaresponse">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
 
@@ -712,6 +742,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}how often the metric alert is evaluated represented in ISO 8601 duration format.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

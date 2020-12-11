@@ -1,7 +1,7 @@
 
 ---
 title: "IscsiServer"
-title_tag: "Resource IscsiServer | Module storsimple | Package Azure NextGen"
+title_tag: "azure-nextgen.storsimple.IscsiServer"
 meta_desc: "Explore the IscsiServer resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. The iSCSI server."
 ---
 

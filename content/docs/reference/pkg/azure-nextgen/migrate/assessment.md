@@ -1,7 +1,7 @@
 
 ---
 title: "Assessment"
-title_tag: "Resource Assessment | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.Assessment"
 meta_desc: "Explore the Assessment resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. An assessment created for a group in the Migration project."
 ---
 
@@ -888,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredisktype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Disk<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
 
@@ -898,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurehybridusebenefit_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
 
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Location</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
 
@@ -918,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureoffercode_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Offer<wbr>Code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Offer<wbr>Code</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
 
@@ -928,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepricingtier_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Pricing<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Pricing<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
 
@@ -938,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Redundancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Storage<wbr>Redundancy</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
 
@@ -948,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmfamilies_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Vm<wbr>Family&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
 
@@ -958,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_csharp" style="color: inherit; text-decoration: inherit;">Currency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Currency</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
 
@@ -978,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_csharp" style="color: inherit; text-decoration: inherit;">Percentile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Percentile</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
 
@@ -988,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservedinstance_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Reserved<wbr>Instance</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
 
@@ -1008,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizingcriterion_csharp" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Criterion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Sizing<wbr>Criterion</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
 
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Stage</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
 
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Time<wbr>Range</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
 
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredisktype_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
 
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurehybridusebenefit_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
 
@@ -1075,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
 
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureoffercode_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Offer<wbr>Code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
 
@@ -1095,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepricingtier_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Pricing<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
 
@@ -1105,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestorageredundancy_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Redundancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
 
@@ -1115,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmfamilies_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
 
@@ -1125,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_go" style="color: inherit; text-decoration: inherit;">Currency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
 
@@ -1145,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_go" style="color: inherit; text-decoration: inherit;">Percentile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
 
@@ -1155,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservedinstance_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
 
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizingcriterion_go" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Criterion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
 
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
 
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
 
@@ -1222,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredisktype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Disk<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Disk<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
 
@@ -1232,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurehybridusebenefit_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
 
@@ -1242,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Location</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
 
@@ -1252,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureoffercode_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Offer<wbr>Code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Offer<wbr>Code</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
 
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepricingtier_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Pricing<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Pricing<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
 
@@ -1272,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Redundancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Storage<wbr>Redundancy</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
 
@@ -1282,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmfamilies_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vm<wbr>Families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Azure<wbr>Vm<wbr>Family[]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
 
@@ -1292,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_nodejs" style="color: inherit; text-decoration: inherit;">currency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Currency</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
 
@@ -1312,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_nodejs" style="color: inherit; text-decoration: inherit;">percentile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Percentile</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
 
@@ -1322,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservedinstance_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Reserved<wbr>Instance</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizingcriterion_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Criterion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Assessment<wbr>Sizing<wbr>Criterion</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
 
@@ -1352,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Assessment<wbr>Stage</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
 
@@ -1362,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Time<wbr>Range</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
 
@@ -1389,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_disk_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Disk<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
 
@@ -1399,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_hybrid_use_benefit_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>hybrid_<wbr>use_<wbr>benefit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
 
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Location</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
 
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_offer_code_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>offer_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Offer<wbr>Code</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
 
@@ -1429,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_pricing_tier_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>pricing_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Pricing<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
 
@@ -1439,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>redundancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Storage<wbr>Redundancy</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
 
@@ -1449,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Azure<wbr>Vm<wbr>Family]]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_python" style="color: inherit; text-decoration: inherit;">currency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Currency</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
 
@@ -1479,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_python" style="color: inherit; text-decoration: inherit;">percentile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Percentile</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
 
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_instance_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Reserved<wbr>Instance</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
 
@@ -1509,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizing_criterion_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>criterion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Assessment<wbr>Sizing<wbr>Criterion</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
 
@@ -1519,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Assessment<wbr>Stage</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
 
@@ -1529,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Time<wbr>Range</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "P2sVpnGateway"
-title_tag: "Resource P2sVpnGateway | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.P2sVpnGateway"
 meta_desc: "Explore the P2sVpnGateway resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. P2SVpnGateway Resource."
 ---
 

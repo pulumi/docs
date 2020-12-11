@@ -1,7 +1,7 @@
 
 ---
 title: "QueryPack"
-title_tag: "Resource QueryPack | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.QueryPack"
 meta_desc: "Explore the QueryPack resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An Log Analytics QueryPack definition."
 ---
 

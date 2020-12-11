@@ -1,7 +1,7 @@
 
 ---
 title: "RegisteredAsn"
-title_tag: "Resource RegisteredAsn | Module peering | Package Azure NextGen"
+title_tag: "azure-nextgen.peering.RegisteredAsn"
 meta_desc: "Explore the RegisteredAsn resource of the peering module, including examples, input properties, output properties, lookup functions, and supporting types. The customer&#39;s ASN that is registered by the peering service provider."
 ---
 

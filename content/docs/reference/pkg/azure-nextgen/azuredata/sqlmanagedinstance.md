@@ -1,7 +1,7 @@
 
 ---
 title: "SqlManagedInstance"
-title_tag: "Resource SqlManagedInstance | Module azuredata | Package Azure NextGen"
+title_tag: "azure-nextgen.azuredata.SqlManagedInstance"
 meta_desc: "Explore the SqlManagedInstance resource of the azuredata module, including examples, input properties, output properties, lookup functions, and supporting types. A SqlManagedInstance."
 ---
 

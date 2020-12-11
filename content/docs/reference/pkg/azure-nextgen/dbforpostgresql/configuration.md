@@ -1,7 +1,7 @@
 
 ---
 title: "Configuration"
-title_tag: "Resource Configuration | Module dbforpostgresql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbforpostgresql.Configuration"
 meta_desc: "Explore the Configuration resource of the dbforpostgresql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Configuration."
 ---
 

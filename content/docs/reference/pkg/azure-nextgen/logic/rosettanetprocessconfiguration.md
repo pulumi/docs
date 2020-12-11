@@ -1,7 +1,7 @@
 
 ---
 title: "RosettaNetProcessConfiguration"
-title_tag: "Resource RosettaNetProcessConfiguration | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.RosettaNetProcessConfiguration"
 meta_desc: "Explore the RosettaNetProcessConfiguration resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account RosettaNet process configuration."
 ---
 
@@ -114,16 +114,16 @@ func main() {
 					TimeToAcknowledgeInSeconds: pulumi.Int(600),
 				},
 				ActivityBehavior: &logic.RosettaNetPipActivityBehaviorArgs{
-					ActionType:                       pulumi.String("DoubleAction"),
+					ActionType:                       "DoubleAction",
 					IsAuthorizationRequired:          pulumi.Bool(false),
 					IsSecuredTransportRequired:       pulumi.Bool(false),
 					NonRepudiationOfOriginAndContent: pulumi.Bool(false),
-					PersistentConfidentialityScope:   pulumi.String("None"),
-					ResponseType:                     pulumi.String("Async"),
+					PersistentConfidentialityScope:   "None",
+					ResponseType:                     "Async",
 					RetryCount:                       pulumi.Int(2),
 					TimeToPerformInSeconds:           pulumi.Int(7200),
 				},
-				ActivityType: pulumi.String("RequestResponse"),
+				ActivityType: "RequestResponse",
 			},
 			Description: pulumi.String("Test description"),
 			InitiatorRoleSettings: &logic.RosettaNetPipRoleSettingsArgs{
@@ -135,7 +135,7 @@ func main() {
 				},
 				Description:           pulumi.String("This partner role creates a demand for a product or service."),
 				Role:                  pulumi.String("Buyer"),
-				RoleType:              pulumi.String("Functional"),
+				RoleType:              "Functional",
 				Service:               pulumi.String("Buyer Service"),
 				ServiceClassification: pulumi.String("Business Service"),
 			},
@@ -153,7 +153,7 @@ func main() {
 				},
 				Description:           pulumi.String("An organization that sells products to partners in the supply chain."),
 				Role:                  pulumi.String("Seller"),
-				RoleType:              pulumi.String("Organizational"),
+				RoleType:              "Organizational",
 				Service:               pulumi.String("Seller Service"),
 				ServiceClassification: pulumi.String("Business Service"),
 			},
@@ -1530,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
 
@@ -1570,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentconfidentialityscope_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Confidentiality<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
 
@@ -1580,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetype_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Response<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
 
@@ -1617,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
 
@@ -1657,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentconfidentialityscope_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Confidentiality<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
 
@@ -1667,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetype_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
 
@@ -1704,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rosetta<wbr>Net<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
 
@@ -1744,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentconfidentialityscope_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Confidentiality<wbr>Scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
 
@@ -1754,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetype_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rosetta<wbr>Net<wbr>Response<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
 
@@ -1791,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rosetta<wbr>Net<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
 
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_confidentiality_scope_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>confidentiality_<wbr>scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope</span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
 
@@ -1841,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_type_python" style="color: inherit; text-decoration: inherit;">response_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rosetta<wbr>Net<wbr>Response<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
 
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitytype_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
 
@@ -2305,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitytype_go" style="color: inherit; text-decoration: inherit;">Activity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
 
@@ -2342,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitytype_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
 
@@ -2379,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_type_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
 
@@ -2914,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
 
@@ -2991,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
 
@@ -3068,7 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
 
@@ -3145,7 +3145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
 

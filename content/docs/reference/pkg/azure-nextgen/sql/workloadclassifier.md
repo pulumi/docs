@@ -1,7 +1,7 @@
 
 ---
 title: "WorkloadClassifier"
-title_tag: "Resource WorkloadClassifier | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.WorkloadClassifier"
 meta_desc: "Explore the WorkloadClassifier resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Workload classifier operations for a data warehouse"
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.V20190601Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20190601Preview.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql.V20200801Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20200801Preview.WorkloadClassifierArgs
         {
             Context = "test_context",
             DatabaseName = "testdb",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier",
     context="test_context",
     database_name="testdb",
     end_time="14:00",
@@ -114,7 +114,7 @@ workload_classifier = azure_nextgen.sql.v20190601preview.WorkloadClassifier("wor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier", {
     context: "test_context",
     databaseName: "testdb",
     endTime: "14:00",
@@ -142,7 +142,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.V20190601Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20190601Preview.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql.V20200801Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20200801Preview.WorkloadClassifierArgs
         {
             DatabaseName = "testdb",
             MemberName = "dbo",
@@ -165,7 +165,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -196,7 +196,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier",
     database_name="testdb",
     member_name="dbo",
     resource_group_name="Default-SQL-SouthEastAsia",
@@ -214,7 +214,7 @@ workload_classifier = azure_nextgen.sql.v20190601preview.WorkloadClassifier("wor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier", {
     databaseName: "testdb",
     memberName: "dbo",
     resourceGroupName: "Default-SQL-SouthEastAsia",

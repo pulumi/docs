@@ -1,7 +1,7 @@
 
 ---
 title: "ContentKeyPolicy"
-title_tag: "Resource ContentKeyPolicy | Module media | Package Azure NextGen"
+title_tag: "azure-nextgen.media.ContentKeyPolicy"
 meta_desc: "Explore the ContentKeyPolicy resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. A Content Key Policy resource."
 ---
 
@@ -1401,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalandleasekeytype_csharp" style="color: inherit; text-decoration: inherit;">Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd>
 
@@ -1468,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalandleasekeytype_go" style="color: inherit; text-decoration: inherit;">Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd>
 
@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalandleasekeytype_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd>
 
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rental_and_lease_key_type_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>and_<wbr>lease_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd>
 
@@ -2245,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2255,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_csharp" style="color: inherit; text-decoration: inherit;">Restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2282,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfiguration">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfiguration">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2292,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_go" style="color: inherit; text-decoration: inherit;">Restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestriction">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2319,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration | Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration | Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration | Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration | Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfiguration">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfiguration">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2329,7 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_nodejs" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction | Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction | Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestriction">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2356,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfiguration">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfiguration">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2366,7 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestriction">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2404,7 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2424,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_csharp" style="color: inherit; text-decoration: inherit;">Restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2451,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2471,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_go" style="color: inherit; text-decoration: inherit;">Restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2498,7 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2518,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_nodejs" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2545,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2565,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -3325,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -3335,7 +3335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd>
 
@@ -3345,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -3432,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -3442,7 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd>
 
@@ -3452,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -3539,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header | Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -3549,7 +3549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd>
 
@@ -3559,7 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -3646,7 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_key_location_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -3656,7 +3656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd>
 
@@ -3666,7 +3666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
 
@@ -3764,7 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -3871,7 +3871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -3978,7 +3978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -4085,7 +4085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_key_location_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -4193,7 +4193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpassingvideocontenttounknownoutput_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd>
 
@@ -4330,7 +4330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpassingvideocontenttounknownoutput_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd>
 
@@ -4467,7 +4467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpassingvideocontenttounknownoutput_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd>
 
@@ -4604,7 +4604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_passing_video_content_to_unknown_output_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>passing_<wbr>video_<wbr>content_<wbr>to_<wbr>unknown_<wbr>output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd>
 
@@ -5965,7 +5965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Verification<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
@@ -5975,7 +5975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictiontokentype_csharp" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Token<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd>
 
@@ -6042,7 +6042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Verification<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkey">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkey">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
@@ -6052,7 +6052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictiontokentype_go" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Token<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd>
 
@@ -6119,7 +6119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkey">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkey">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
@@ -6129,7 +6129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictiontokentype_nodejs" style="color: inherit; text-decoration: inherit;">restriction<wbr>Token<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd>
 
@@ -6196,7 +6196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_verification_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>verification_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkey">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkey">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
@@ -6206,7 +6206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_token_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>token_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd>
 
@@ -6284,7 +6284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Verification<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
@@ -6361,7 +6361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Verification<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
@@ -6438,7 +6438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
@@ -6515,7 +6515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_verification_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>verification_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 

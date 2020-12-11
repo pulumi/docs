@@ -1,7 +1,7 @@
 
 ---
 title: "DeviceSecurityGroup"
-title_tag: "Resource DeviceSecurityGroup | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.DeviceSecurityGroup"
 meta_desc: "Explore the DeviceSecurityGroup resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. The device security group resource"
 ---
 

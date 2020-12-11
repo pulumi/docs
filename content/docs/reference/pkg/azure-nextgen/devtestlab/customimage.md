@@ -1,7 +1,7 @@
 
 ---
 title: "CustomImage"
-title_tag: "Resource CustomImage | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.CustomImage"
 meta_desc: "Explore the CustomImage resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A custom image."
 ---
 
@@ -1049,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Custom<wbr>Image<wbr>Os<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
 
@@ -1086,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
 
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Custom<wbr>Image<wbr>Os<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
 
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Custom<wbr>Image<wbr>Os<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
 
@@ -2013,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
 
@@ -2040,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
 
@@ -2067,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
 
@@ -2094,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
 
@@ -2241,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosstate_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Linux<wbr>Os<wbr>State</span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
 
@@ -2258,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosstate_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
 
@@ -2275,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosstate_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Linux<wbr>Os<wbr>State</span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
 
@@ -2292,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_state_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Linux<wbr>Os<wbr>State</span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
 
@@ -2399,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosstate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Windows<wbr>Os<wbr>State</span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
 
@@ -2416,7 +2416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosstate_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
 
@@ -2433,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosstate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Windows<wbr>Os<wbr>State</span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
 
@@ -2450,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_state_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Windows<wbr>Os<wbr>State</span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
 

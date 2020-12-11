@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualHub"
-title_tag: "Resource VirtualHub | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualHub"
 meta_desc: "Explore the VirtualHub resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. VirtualHub Resource."
 ---
 

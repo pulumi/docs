@@ -1,7 +1,7 @@
 
 ---
 title: "MediaGraph"
-title_tag: "Resource MediaGraph | Module media | Package Azure NextGen"
+title_tag: "azure-nextgen.media.MediaGraph"
 meta_desc: "Explore the MediaGraph resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. The Media Graph."
 ---
 
@@ -1847,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_csharp" style="color: inherit; text-decoration: inherit;">Transport</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Media<wbr>Graph<wbr>Rtsp<wbr>Transport</span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
 
@@ -1884,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -1904,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_go" style="color: inherit; text-decoration: inherit;">Transport</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
 
@@ -1921,7 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Media<wbr>Graph<wbr>Clear<wbr>Endpoint | Media<wbr>Graph<wbr>Tls<wbr>Endpoint</span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -1941,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_nodejs" style="color: inherit; text-decoration: inherit;">transport</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Media<wbr>Graph<wbr>Rtsp<wbr>Transport</span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
 
@@ -1958,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args, Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args]</span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -1978,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_python" style="color: inherit; text-decoration: inherit;">transport</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Media<wbr>Graph<wbr>Rtsp<wbr>Transport</span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
 
@@ -2006,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -2043,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -2080,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response | Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -2117,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args, Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 

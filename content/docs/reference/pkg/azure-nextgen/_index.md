@@ -84,6 +84,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="hanaonazure/" title="hanaonazure"><span class="symbol module"></span>hanaonazure</a></li>
     <li><a href="hardwaresecuritymodules/" title="hardwaresecuritymodules"><span class="symbol module"></span>hardwaresecuritymodules</a></li>
     <li><a href="hdinsight/" title="hdinsight"><span class="symbol module"></span>hdinsight</a></li>
+    <li><a href="healthbot/" title="healthbot"><span class="symbol module"></span>healthbot</a></li>
     <li><a href="healthcareapis/" title="healthcareapis"><span class="symbol module"></span>healthcareapis</a></li>
     <li><a href="hybridcompute/" title="hybridcompute"><span class="symbol module"></span>hybridcompute</a></li>
     <li><a href="hybriddata/" title="hybriddata"><span class="symbol module"></span>hybriddata</a></li>
@@ -126,11 +127,13 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="powerbi/" title="powerbi"><span class="symbol module"></span>powerbi</a></li>
     <li><a href="powerbidedicated/" title="powerbidedicated"><span class="symbol module"></span>powerbidedicated</a></li>
     <li><a href="powerplatform/" title="powerplatform"><span class="symbol module"></span>powerplatform</a></li>
+    <li><a href="providerhub/" title="providerhub"><span class="symbol module"></span>providerhub</a></li>
     <li><a href="recoveryservices/" title="recoveryservices"><span class="symbol module"></span>recoveryservices</a></li>
     <li><a href="redhatopenshift/" title="redhatopenshift"><span class="symbol module"></span>redhatopenshift</a></li>
     <li><a href="relay/" title="relay"><span class="symbol module"></span>relay</a></li>
     <li><a href="resourcegraph/" title="resourcegraph"><span class="symbol module"></span>resourcegraph</a></li>
     <li><a href="resources/" title="resources"><span class="symbol module"></span>resources</a></li>
+    <li><a href="saas/" title="saas"><span class="symbol module"></span>saas</a></li>
     <li><a href="scheduler/" title="scheduler"><span class="symbol module"></span>scheduler</a></li>
     <li><a href="search/" title="search"><span class="symbol module"></span>search</a></li>
     <li><a href="security/" title="security"><span class="symbol module"></span>security</a></li>
@@ -172,7 +175,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.8</dd>
+	<dd>0.3.0</dd>
 </dl>
 
 

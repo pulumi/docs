@@ -1,7 +1,7 @@
 
 ---
 title: "ConnectionType"
-title_tag: "Resource ConnectionType | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.ConnectionType"
 meta_desc: "Explore the ConnectionType resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the connection type."
 ---
 

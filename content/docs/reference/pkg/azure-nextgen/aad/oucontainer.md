@@ -1,7 +1,7 @@
 
 ---
 title: "OuContainer"
-title_tag: "Resource OuContainer | Module aad | Package Azure NextGen"
+title_tag: "azure-nextgen.aad.OuContainer"
 meta_desc: "Explore the OuContainer resource of the aad module, including examples, input properties, output properties, lookup functions, and supporting types. Resource for OuContainer."
 ---
 
@@ -32,7 +32,7 @@ class MyStack : Stack
             AccountName = "AccountName1",
             DomainServiceName = "OuContainer.com",
             OuContainerName = "OuContainer1",
-            Password = "Password1",
+            Password = "<password>",
             ResourceGroupName = "OuContainerResourceGroup",
             Spn = "Spn1",
         });
@@ -60,7 +60,7 @@ func main() {
 			AccountName:       pulumi.String("AccountName1"),
 			DomainServiceName: pulumi.String("OuContainer.com"),
 			OuContainerName:   pulumi.String("OuContainer1"),
-			Password:          pulumi.String("Password1"),
+			Password:          pulumi.String("<password>"),
 			ResourceGroupName: pulumi.String("OuContainerResourceGroup"),
 			Spn:               pulumi.String("Spn1"),
 		})
@@ -85,7 +85,7 @@ ou_container = azure_nextgen.aad.latest.OuContainer("ouContainer",
     account_name="AccountName1",
     domain_service_name="OuContainer.com",
     ou_container_name="OuContainer1",
-    password="Password1",
+    password="<password>",
     resource_group_name="OuContainerResourceGroup",
     spn="Spn1")
 
@@ -103,7 +103,7 @@ const ouContainer = new azure_nextgen.aad.latest.OuContainer("ouContainer", {
     accountName: "AccountName1",
     domainServiceName: "OuContainer.com",
     ouContainerName: "OuContainer1",
-    password: "Password1",
+    password: "<password>",
     resourceGroupName: "OuContainerResourceGroup",
     spn: "Spn1",
 });

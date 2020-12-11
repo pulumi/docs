@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkRule"
-title_tag: "Resource VirtualNetworkRule | Module datalakestore | Package Azure NextGen"
+title_tag: "azure-nextgen.datalakestore.VirtualNetworkRule"
 meta_desc: "Explore the VirtualNetworkRule resource of the datalakestore module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Store virtual network rule information."
 ---
 

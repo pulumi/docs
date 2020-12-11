@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationGatewayPrivateEndpointConnection"
-title_tag: "Resource ApplicationGatewayPrivateEndpointConnection | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.ApplicationGatewayPrivateEndpointConnection"
 meta_desc: "Explore the ApplicationGatewayPrivateEndpointConnection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Private Endpoint connection on an application gateway."
 ---
 

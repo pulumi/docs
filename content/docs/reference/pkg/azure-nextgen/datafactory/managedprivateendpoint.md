@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedPrivateEndpoint"
-title_tag: "Resource ManagedPrivateEndpoint | Module datafactory | Package Azure NextGen"
+title_tag: "azure-nextgen.datafactory.ManagedPrivateEndpoint"
 meta_desc: "Explore the ManagedPrivateEndpoint resource of the datafactory module, including examples, input properties, output properties, lookup functions, and supporting types. Managed private endpoint resource type."
 ---
 

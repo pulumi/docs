@@ -1,7 +1,7 @@
 
 ---
 title: "TenantConfiguration"
-title_tag: "Resource TenantConfiguration | Module portal | Package Azure NextGen"
+title_tag: "azure-nextgen.portal.TenantConfiguration"
 meta_desc: "Explore the TenantConfiguration resource of the portal module, including examples, input properties, output properties, lookup functions, and supporting types. Tenant configuration."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountCertificate"
-title_tag: "Resource IntegrationAccountCertificate | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationAccountCertificate"
 meta_desc: "Explore the IntegrationAccountCertificate resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account certificate."
 ---
 

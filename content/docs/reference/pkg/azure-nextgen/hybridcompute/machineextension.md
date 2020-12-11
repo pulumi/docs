@@ -1,7 +1,7 @@
 
 ---
 title: "MachineExtension"
-title_tag: "Resource MachineExtension | Module hybridcompute | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridcompute.MachineExtension"
 meta_desc: "Explore the MachineExtension resource of the hybridcompute module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Machine Extension."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedInstanceAzureADOnlyAuthentication"
-title_tag: "Resource ManagedInstanceAzureADOnlyAuthentication | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ManagedInstanceAzureADOnlyAuthentication"
 meta_desc: "Explore the ManagedInstanceAzureADOnlyAuthentication resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Azure Active Directory only authentication."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAzureADOnlyAuthentication = new AzureNextGen.Sql.V20200202Preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", new AzureNextGen.Sql.V20200202Preview.ManagedInstanceAzureADOnlyAuthenticationArgs
+        var managedInstanceAzureADOnlyAuthentication = new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAzureADOnlyAuthenticationArgs
         {
             AuthenticationName = "Default",
             AzureADOnlyAuthentication = false,
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_azure_ad_only_authentication = azure_nextgen.sql.v20200202preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication",
+managed_instance_azure_ad_only_authentication = azure_nextgen.sql.v20200801preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication",
     authentication_name="Default",
     azure_ad_only_authentication=False,
     managed_instance_name="managedInstance",
@@ -93,7 +93,7 @@ managed_instance_azure_ad_only_authentication = azure_nextgen.sql.v20200202previ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstanceAzureADOnlyAuthentication = new azure_nextgen.sql.v20200202preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", {
+const managedInstanceAzureADOnlyAuthentication = new azure_nextgen.sql.v20200801preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", {
     authenticationName: "Default",
     azureADOnlyAuthentication: false,
     managedInstanceName: "managedInstance",

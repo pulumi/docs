@@ -1,7 +1,7 @@
 
 ---
 title: "WebTest"
-title_tag: "Resource WebTest | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.WebTest"
 meta_desc: "Explore the WebTest resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights web test definition."
 ---
 
@@ -79,7 +79,7 @@ func main() {
 			Description: pulumi.String("Ping web test alert for mytestwebapp"),
 			Enabled:     pulumi.Bool(true),
 			Frequency:   pulumi.Int(900),
-			Kind:        pulumi.String("ping"),
+			Kind:        "ping",
 			Location:    pulumi.String("South Central US"),
 			Locations: insights.WebTestGeolocationArray{
 				&insights.WebTestGeolocationArgs{
@@ -90,7 +90,7 @@ func main() {
 			RetryEnabled:       pulumi.Bool(true),
 			SyntheticMonitorId: pulumi.String("my-webtest-my-component"),
 			Timeout:            pulumi.Int(120),
-			WebTestKind:        pulumi.String("ping"),
+			WebTestKind:        "ping",
 			WebTestName:        pulumi.String("my-webtest-my-component"),
 		})
 		if err != nil {
@@ -224,7 +224,7 @@ func main() {
 				WebTest: pulumi.String("<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>"),
 			},
 			Frequency: pulumi.Int(600),
-			Kind:      pulumi.String("ping"),
+			Kind:      "ping",
 			Location:  pulumi.String("South Central US"),
 			Locations: insights.WebTestGeolocationArray{
 				&insights.WebTestGeolocationArgs{
@@ -237,7 +237,7 @@ func main() {
 			ResourceGroupName:  pulumi.String("my-resource-group"),
 			SyntheticMonitorId: pulumi.String("my-webtest-my-component"),
 			Timeout:            pulumi.Int(30),
-			WebTestKind:        pulumi.String("ping"),
+			WebTestKind:        "ping",
 			WebTestName:        pulumi.String("my-webtest-my-component"),
 		})
 		if err != nil {
@@ -326,7 +326,7 @@ const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[WebTestPropertiesConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebTestGeolocationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">synthetic_monitor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">web_test_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_test_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[WebTestPropertiesConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[WebTestKind]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebTestGeolocationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">synthetic_monitor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">web_test_kind</span><span class="p">:</span> <span class="nx">Optional[WebTestKind]</span> = None<span class="p">, </span><span class="nx">web_test_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -544,7 +544,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#webtestkind_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Web<wbr>Test<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
 
@@ -604,7 +604,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Web<wbr>Test<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
 
@@ -691,7 +691,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#webtestkind_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
 
@@ -751,7 +751,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
 
@@ -838,7 +838,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#webtestkind_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Web<wbr>Test<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
 
@@ -898,7 +898,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Web<wbr>Test<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
 
@@ -985,7 +985,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#web_test_kind_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Web<wbr>Test<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
 
@@ -1045,7 +1045,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Web<wbr>Test<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
 

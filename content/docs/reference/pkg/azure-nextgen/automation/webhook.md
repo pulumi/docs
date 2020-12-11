@@ -1,7 +1,7 @@
 
 ---
 title: "Webhook"
-title_tag: "Resource Webhook | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.Webhook"
 meta_desc: "Explore the Webhook resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the webhook type."
 ---
 
@@ -38,7 +38,7 @@ class MyStack : Stack
             {
                 Name = "TestRunbook",
             },
-            Uri = "https://s1events.azure-automation.net/webhooks?token=7u3KfQvM1vUPWaDMFRv2%2fAA4Jqx8QwS8aBuyO6Xsdcw%3d",
+            Uri = "<uri>",
             WebhookName = "TestWebhook",
         });
     }
@@ -55,8 +55,6 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
-
 	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -72,7 +70,7 @@ func main() {
 			Runbook: &automation.RunbookAssociationPropertyArgs{
 				Name: pulumi.String("TestRunbook"),
 			},
-			Uri:         pulumi.String(fmt.Sprintf("%v%v%v%v%v", "https://s1events.azure-automation.net/webhooks?token=7u3KfQvM1vUPWaDMFRv2", "%", "2fAA4Jqx8QwS8aBuyO6Xsdcw", "%", "3d")),
+			Uri:         pulumi.String("<uri>"),
 			WebhookName: pulumi.String("TestWebhook"),
 		})
 		if err != nil {
@@ -101,7 +99,7 @@ webhook = azure_nextgen.automation.latest.Webhook("webhook",
     runbook=azure_nextgen.automation.latest.RunbookAssociationPropertyArgs(
         name="TestRunbook",
     ),
-    uri="https://s1events.azure-automation.net/webhooks?token=7u3KfQvM1vUPWaDMFRv2%2fAA4Jqx8QwS8aBuyO6Xsdcw%3d",
+    uri="<uri>",
     webhook_name="TestWebhook")
 
 ```
@@ -123,7 +121,7 @@ const webhook = new azure_nextgen.automation.latest.Webhook("webhook", {
     runbook: {
         name: "TestRunbook",
     },
-    uri: `https://s1events.azure-automation.net/webhooks?token=7u3KfQvM1vUPWaDMFRv2%2fAA4Jqx8QwS8aBuyO6Xsdcw%3d`,
+    uri: "<uri>",
     webhookName: "TestWebhook",
 });
 

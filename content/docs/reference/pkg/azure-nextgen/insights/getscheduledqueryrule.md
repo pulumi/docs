@@ -178,9 +178,19 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Alerting<wbr>Action<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response&gt;</span>
+        <span class="property-type"><a href="#alertingactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -295,9 +305,19 @@ The following output properties are available:
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -412,9 +432,19 @@ The following output properties are available:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Alerting<wbr>Action<wbr>Response | Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</span>
+        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -529,9 +559,19 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

@@ -1,7 +1,7 @@
 
 ---
 title: "AlertRuleAction"
-title_tag: "Resource AlertRuleAction | Module securityinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.securityinsights.AlertRuleAction"
 meta_desc: "Explore the AlertRuleAction resource of the securityinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Action for alert rule."
 ---
 

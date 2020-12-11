@@ -1,7 +1,7 @@
 
 ---
 title: "Hub"
-title_tag: "Resource Hub | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.Hub"
 meta_desc: "Explore the Hub resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Hub resource."
 ---
 

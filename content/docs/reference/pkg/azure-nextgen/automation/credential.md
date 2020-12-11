@@ -1,7 +1,7 @@
 
 ---
 title: "Credential"
-title_tag: "Resource Credential | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.Credential"
 meta_desc: "Explore the Credential resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the credential."
 ---
 
@@ -33,7 +33,7 @@ class MyStack : Stack
             CredentialName = "myCredential",
             Description = "my description goes here",
             Name = "myCredential",
-            Password = "myPassw0rd",
+            Password = "<password>",
             ResourceGroupName = "rg",
             UserName = "mylingaiah",
         });
@@ -62,7 +62,7 @@ func main() {
 			CredentialName:        pulumi.String("myCredential"),
 			Description:           pulumi.String("my description goes here"),
 			Name:                  pulumi.String("myCredential"),
-			Password:              pulumi.String("myPassw0rd"),
+			Password:              pulumi.String("<password>"),
 			ResourceGroupName:     pulumi.String("rg"),
 			UserName:              pulumi.String("mylingaiah"),
 		})
@@ -88,7 +88,7 @@ credential = azure_nextgen.automation.latest.Credential("credential",
     credential_name="myCredential",
     description="my description goes here",
     name="myCredential",
-    password="myPassw0rd",
+    password="<password>",
     resource_group_name="rg",
     user_name="mylingaiah")
 
@@ -107,7 +107,7 @@ const credential = new azure_nextgen.automation.latest.Credential("credential", 
     credentialName: "myCredential",
     description: "my description goes here",
     name: "myCredential",
-    password: "myPassw0rd",
+    password: "<password>",
     resourceGroupName: "rg",
     userName: "mylingaiah",
 });

@@ -1,7 +1,7 @@
 
 ---
 title: "Step"
-title_tag: "Resource Step | Module deploymentmanager | Package Azure NextGen"
+title_tag: "azure-nextgen.deploymentmanager.Step"
 meta_desc: "Explore the Step resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. The resource representation of a rollout step."
 ---
 
@@ -562,7 +562,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -676,7 +676,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Health<wbr>Check<wbr>Step<wbr>Properties | Wait<wbr>Step<wbr>Properties</span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -733,7 +733,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args, Wait<wbr>Step<wbr>Properties<wbr>Args]</span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -959,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_csharp" style="color: inherit; text-decoration: inherit;">In</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Rest<wbr>Auth<wbr>Location</span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd>
 
@@ -996,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_go" style="color: inherit; text-decoration: inherit;">In</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd>
 
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rest<wbr>Auth<wbr>Location</span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd>
 
@@ -1070,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rest<wbr>Auth<wbr>Location</span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd>
 
@@ -2151,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#apikeyauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2161,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Rest<wbr>Request<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd>
 
@@ -2188,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2198,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd>
 
@@ -2225,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Api<wbr>Key<wbr>Authentication | Rollout<wbr>Identity<wbr>Authentication</span>
+        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2235,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rest<wbr>Request<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd>
 
@@ -2262,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Api<wbr>Key<wbr>Authentication<wbr>Args, Rollout<wbr>Identity<wbr>Authentication<wbr>Args]</span>
+        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2272,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rest<wbr>Request<wbr>Method</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd>
 
@@ -2310,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2347,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2384,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Api<wbr>Key<wbr>Authentication<wbr>Response | Rollout<wbr>Identity<wbr>Authentication<wbr>Response</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2421,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args, Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchquantifier_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Quantifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Rest<wbr>Match<wbr>Quantifier</span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd>
 
@@ -2615,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchquantifier_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Quantifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd>
 
@@ -2642,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchquantifier_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Quantifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Rest<wbr>Match<wbr>Quantifier</span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd>
 
@@ -2669,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_quantifier_python" style="color: inherit; text-decoration: inherit;">match_<wbr>quantifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Rest<wbr>Match<wbr>Quantifier</span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd>
 

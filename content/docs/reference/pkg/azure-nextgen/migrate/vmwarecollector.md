@@ -1,7 +1,7 @@
 
 ---
 title: "VMwareCollector"
-title_tag: "Resource VMwareCollector | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.VMwareCollector"
 meta_desc: "Explore the VMwareCollector resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

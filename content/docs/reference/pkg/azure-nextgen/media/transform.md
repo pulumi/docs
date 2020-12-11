@@ -1,7 +1,7 @@
 
 ---
 title: "Transform"
-title_tag: "Resource Transform | Module media | Package Azure NextGen"
+title_tag: "azure-nextgen.media.Transform"
 meta_desc: "Explore the Transform resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs."
 ---
 
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Audio<wbr>Analysis<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
 
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
 
@@ -1072,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Audio<wbr>Analysis<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Audio<wbr>Analysis<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
 
@@ -2053,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presetname_csharp" style="color: inherit; text-decoration: inherit;">Preset<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Encoder<wbr>Named<wbr>Preset</span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
 
@@ -2070,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presetname_go" style="color: inherit; text-decoration: inherit;">Preset<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
 
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presetname_nodejs" style="color: inherit; text-decoration: inherit;">preset<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Encoder<wbr>Named<wbr>Preset</span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
 
@@ -2104,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_name_python" style="color: inherit; text-decoration: inherit;">preset_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Encoder<wbr>Named<wbr>Preset</span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
 
@@ -2527,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Deinterlace<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
 
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_csharp" style="color: inherit; text-decoration: inherit;">Parity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Deinterlace<wbr>Parity</span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
 
@@ -2554,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
 
@@ -2564,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_go" style="color: inherit; text-decoration: inherit;">Parity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
 
@@ -2581,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Deinterlace<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
 
@@ -2591,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_nodejs" style="color: inherit; text-decoration: inherit;">parity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Deinterlace<wbr>Parity</span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
 
@@ -2608,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Deinterlace<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
 
@@ -2618,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_python" style="color: inherit; text-decoration: inherit;">parity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Deinterlace<wbr>Parity</span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
 
@@ -2775,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Analysis<wbr>Resolution</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
 
@@ -2802,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
 
@@ -2829,7 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Analysis<wbr>Resolution</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
 
@@ -2856,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Analysis<wbr>Resolution</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
 
@@ -3033,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_csharp" style="color: inherit; text-decoration: inherit;">Rotation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Rotation</span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
 
@@ -3080,7 +3080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_go" style="color: inherit; text-decoration: inherit;">Rotation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
 
@@ -3127,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_nodejs" style="color: inherit; text-decoration: inherit;">rotation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Rotation</span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
 
@@ -3174,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_python" style="color: inherit; text-decoration: inherit;">rotation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Rotation</span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
 
@@ -4671,7 +4671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -4681,7 +4681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerror_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>On<wbr>Error<wbr>Type</span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
 
@@ -4691,7 +4691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepriority_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
 
@@ -4708,7 +4708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_go" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -4718,7 +4718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerror_go" style="color: inherit; text-decoration: inherit;">On<wbr>Error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
 
@@ -4728,7 +4728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepriority_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
 
@@ -4745,7 +4745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Analyzer<wbr>Preset | Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset | Face<wbr>Detector<wbr>Preset | Standard<wbr>Encoder<wbr>Preset</span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -4755,7 +4755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerror_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>On<wbr>Error<wbr>Type</span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
 
@@ -4765,7 +4765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepriority_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Priority</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
 
@@ -4782,7 +4782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Audio<wbr>Analyzer<wbr>Preset<wbr>Args, Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args, Face<wbr>Detector<wbr>Preset<wbr>Args, Standard<wbr>Encoder<wbr>Preset<wbr>Args]</span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -4792,7 +4792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_error_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">On<wbr>Error<wbr>Type</span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
 
@@ -4802,7 +4802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_priority_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Priority</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
 
@@ -4830,7 +4830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -4867,7 +4867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_go" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -4904,7 +4904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Analyzer<wbr>Preset<wbr>Response | Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response | Face<wbr>Detector<wbr>Preset<wbr>Response | Standard<wbr>Encoder<wbr>Preset<wbr>Response</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -4941,7 +4941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args, Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args, Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args, Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
@@ -5009,7 +5009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
 
@@ -5019,7 +5019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 
@@ -5056,7 +5056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
 
@@ -5066,7 +5066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 
@@ -5103,7 +5103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Stretch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
 
@@ -5113,7 +5113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Video<wbr>Sync<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 
@@ -5150,7 +5150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Stretch<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
 
@@ -5160,7 +5160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Video<wbr>Sync<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "HyperVCollector"
-title_tag: "Resource HyperVCollector | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.HyperVCollector"
 meta_desc: "Explore the HyperVCollector resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

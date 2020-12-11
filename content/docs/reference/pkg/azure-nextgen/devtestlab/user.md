@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.User"
 meta_desc: "Explore the User resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. Profile of a lab user."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ContainerService"
-title_tag: "Resource ContainerService | Module containerservice | Package Azure NextGen"
+title_tag: "azure-nextgen.containerservice.ContainerService"
 meta_desc: "Explore the ContainerService resource of the containerservice module, including examples, input properties, output properties, lookup functions, and supporting types. Container service."
 ---
 
@@ -1047,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -1141,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -1188,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Service<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
@@ -2287,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 
@@ -2304,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 
@@ -2321,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 
@@ -2338,7 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Container<wbr>Service<wbr>Orchestrator<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 

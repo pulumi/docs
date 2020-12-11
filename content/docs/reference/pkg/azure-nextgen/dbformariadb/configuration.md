@@ -1,7 +1,7 @@
 
 ---
 title: "Configuration"
-title_tag: "Resource Configuration | Module dbformariadb | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformariadb.Configuration"
 meta_desc: "Explore the Configuration resource of the dbformariadb module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Configuration."
 ---
 

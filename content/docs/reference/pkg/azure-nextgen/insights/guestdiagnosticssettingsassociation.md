@@ -1,7 +1,7 @@
 
 ---
 title: "GuestDiagnosticsSettingsAssociation"
-title_tag: "Resource GuestDiagnosticsSettingsAssociation | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.GuestDiagnosticsSettingsAssociation"
 meta_desc: "Explore the GuestDiagnosticsSettingsAssociation resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual machine guest diagnostic settings resource."
 ---
 

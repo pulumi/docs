@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedInstanceKey"
-title_tag: "Resource ManagedInstanceKey | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ManagedInstanceKey"
 meta_desc: "Explore the ManagedInstanceKey resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A managed instance key."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceKey = new AzureNextGen.Sql.V20171001Preview.ManagedInstanceKey("managedInstanceKey", new AzureNextGen.Sql.V20171001Preview.ManagedInstanceKeyArgs
+        var managedInstanceKey = new AzureNextGen.Sql.V20200801Preview.ManagedInstanceKey("managedInstanceKey", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ManagedInstanceName = "sqlcrudtest-4645",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20171001preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_key = azure_nextgen.sql.v20171001preview.ManagedInstanceKey("managedInstanceKey",
+managed_instance_key = azure_nextgen.sql.v20200801preview.ManagedInstanceKey("managedInstanceKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     managed_instance_name="sqlcrudtest-4645",
     resource_group_name="sqlcrudtest-7398",
@@ -96,7 +96,7 @@ managed_instance_key = azure_nextgen.sql.v20171001preview.ManagedInstanceKey("ma
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstanceKey = new azure_nextgen.sql.v20171001preview.ManagedInstanceKey("managedInstanceKey", {
+const managedInstanceKey = new azure_nextgen.sql.v20200801preview.ManagedInstanceKey("managedInstanceKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     managedInstanceName: "sqlcrudtest-4645",
     resourceGroupName: "sqlcrudtest-7398",
@@ -120,7 +120,7 @@ const managedInstanceKey = new azure_nextgen.sql.v20171001preview.ManagedInstanc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstanceKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstanceKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_key_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServerKeyType]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,7 +328,7 @@ The ManagedInstanceKey resource accepts the following [input]({{< relref "/docs/
 <a href="#serverkeytype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Server<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 
@@ -385,7 +385,7 @@ The ManagedInstanceKey resource accepts the following [input]({{< relref "/docs/
 <a href="#serverkeytype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 
@@ -442,7 +442,7 @@ The ManagedInstanceKey resource accepts the following [input]({{< relref "/docs/
 <a href="#serverkeytype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Key<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The ManagedInstanceKey resource accepts the following [input]({{< relref "/docs/
 <a href="#server_key_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Key<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
 

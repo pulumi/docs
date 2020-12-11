@@ -1,7 +1,7 @@
 
 ---
 title: "DomainService"
-title_tag: "Resource DomainService | Module aad | Package Azure NextGen"
+title_tag: "azure-nextgen.aad.DomainService"
 meta_desc: "Explore the DomainService resource of the aad module, including examples, input properties, output properties, lookup functions, and supporting types. Domain service."
 ---
 
@@ -43,7 +43,7 @@ class MyStack : Stack
                 ExternalAccess = "Enabled",
                 Ldaps = "Enabled",
                 PfxCertificate = "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
-                PfxCertificatePassword = "Password01",
+                PfxCertificatePassword = "<pfxCertificatePassword>",
             },
             Location = "West US",
             NotificationSettings = new AzureNextGen.Aad.Latest.Inputs.NotificationSettingsArgs
@@ -99,7 +99,7 @@ func main() {
 				ExternalAccess:         pulumi.String("Enabled"),
 				Ldaps:                  pulumi.String("Enabled"),
 				PfxCertificate:         pulumi.String("MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w..."),
-				PfxCertificatePassword: pulumi.String("Password01"),
+				PfxCertificatePassword: pulumi.String("<pfxCertificatePassword>"),
 			},
 			Location: pulumi.String("West US"),
 			NotificationSettings: &aad.NotificationSettingsArgs{
@@ -148,7 +148,7 @@ domain_service = azure_nextgen.aad.latest.DomainService("domainService",
         external_access="Enabled",
         ldaps="Enabled",
         pfx_certificate="MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
-        pfx_certificate_password="Password01",
+        pfx_certificate_password="<pfxCertificatePassword>",
     ),
     location="West US",
     notification_settings=azure_nextgen.aad.latest.NotificationSettingsArgs(
@@ -188,7 +188,7 @@ const domainService = new azure_nextgen.aad.latest.DomainService("domainService"
         externalAccess: "Enabled",
         ldaps: "Enabled",
         pfxCertificate: "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
-        pfxCertificatePassword: "Password01",
+        pfxCertificatePassword: "<pfxCertificatePassword>",
     },
     location: "West US",
     notificationSettings: {
@@ -222,7 +222,7 @@ const domainService = new azure_nextgen.aad.latest.DomainService("domainService"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_configuration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_security_settings</span><span class="p">:</span> <span class="nx">Optional[DomainSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filtered_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ldaps_settings</span><span class="p">:</span> <span class="nx">Optional[LdapsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[NotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">replica_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicaSetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_forest_settings</span><span class="p">:</span> <span class="nx">Optional[ResourceForestSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_configuration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_security_settings</span><span class="p">:</span> <span class="nx">Optional[DomainSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filtered_sync</span><span class="p">:</span> <span class="nx">Optional[Union[str, FilteredSync]]</span> = None<span class="p">, </span><span class="nx">ldaps_settings</span><span class="p">:</span> <span class="nx">Optional[LdapsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migration_properties</span><span class="p">:</span> <span class="nx">Optional[MigrationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[NotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">replica_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicaSetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_forest_settings</span><span class="p">:</span> <span class="nx">Optional[ResourceForestSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -460,7 +460,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filteredsync_csharp" style="color: inherit; text-decoration: inherit;">Filtered<wbr>Sync</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Filtered<wbr>Sync</span>
     </dt>
     <dd>{{% md %}}Enabled or Disabled flag to turn on Group-based filtered sync{{% /md %}}</dd>
 
@@ -483,6 +483,16 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationproperties_csharp">
+<a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -607,7 +617,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filteredsync_go" style="color: inherit; text-decoration: inherit;">Filtered<wbr>Sync</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabled or Disabled flag to turn on Group-based filtered sync{{% /md %}}</dd>
 
@@ -630,6 +640,16 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationproperties_go">
+<a href="#migrationproperties_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationproperties">Migration<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -754,7 +774,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filteredsync_nodejs" style="color: inherit; text-decoration: inherit;">filtered<wbr>Sync</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Filtered<wbr>Sync</span>
     </dt>
     <dd>{{% md %}}Enabled or Disabled flag to turn on Group-based filtered sync{{% /md %}}</dd>
 
@@ -777,6 +797,16 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationproperties_nodejs">
+<a href="#migrationproperties_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationproperties">Migration<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -901,7 +931,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filtered_sync_python" style="color: inherit; text-decoration: inherit;">filtered_<wbr>sync</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Filtered<wbr>Sync</span>
     </dt>
     <dd>{{% md %}}Enabled or Disabled flag to turn on Group-based filtered sync{{% /md %}}</dd>
 
@@ -924,6 +954,16 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migration_properties_python">
+<a href="#migration_properties_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationproperties">Migration<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntlmv1_csharp" style="color: inherit; text-decoration: inherit;">Ntlm<wbr>V1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Ntlm<wbr>V1</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -1377,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synckerberospasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Kerberos<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Sync<wbr>Kerberos<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1387,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncntlmpasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Ntlm<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Sync<wbr>Ntlm<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1397,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synconprempasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>On<wbr>Prem<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Sync<wbr>On<wbr>Prem<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1407,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tlsv1_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>V1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Tls<wbr>V1</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -1424,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntlmv1_go" style="color: inherit; text-decoration: inherit;">Ntlm<wbr>V1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -1434,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synckerberospasswords_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Kerberos<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1444,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncntlmpasswords_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Ntlm<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1454,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synconprempasswords_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>On<wbr>Prem<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1464,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tlsv1_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>V1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -1481,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntlmv1_nodejs" style="color: inherit; text-decoration: inherit;">ntlm<wbr>V1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ntlm<wbr>V1</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -1491,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synckerberospasswords_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Kerberos<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sync<wbr>Kerberos<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1501,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncntlmpasswords_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Ntlm<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sync<wbr>Ntlm<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1511,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synconprempasswords_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>On<wbr>Prem<wbr>Passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sync<wbr>On<wbr>Prem<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1521,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tlsv1_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>V1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Tls<wbr>V1</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -1538,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntlm_v1_python" style="color: inherit; text-decoration: inherit;">ntlm_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ntlm<wbr>V1</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -1548,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_kerberos_passwords_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>kerberos_<wbr>passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sync<wbr>Kerberos<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1558,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_ntlm_passwords_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>ntlm_<wbr>passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sync<wbr>Ntlm<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1568,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_on_prem_passwords_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>on_<wbr>prem_<wbr>passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sync<wbr>On<wbr>Prem<wbr>Passwords</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
 
@@ -1578,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_v1_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Tls<wbr>V1</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
 
@@ -2801,7 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalaccess_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>External<wbr>Access</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
 
@@ -2811,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldaps_csharp" style="color: inherit; text-decoration: inherit;">Ldaps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Ldaps</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
 
@@ -2848,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalaccess_go" style="color: inherit; text-decoration: inherit;">External<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
 
@@ -2858,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldaps_go" style="color: inherit; text-decoration: inherit;">Ldaps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
 
@@ -2895,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalaccess_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>External<wbr>Access</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
 
@@ -2905,7 +2945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldaps_nodejs" style="color: inherit; text-decoration: inherit;">ldaps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ldaps</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
 
@@ -2942,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_access_python" style="color: inherit; text-decoration: inherit;">external_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">External<wbr>Access</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
 
@@ -2952,7 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldaps_python" style="color: inherit; text-decoration: inherit;">ldaps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ldaps</span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
 
@@ -3302,6 +3342,562 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="migrationprogress">Migration<wbr>Progress</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_csharp">
+<a href="#completionpercentage_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_csharp">
+<a href="#progressmessage_csharp" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_go">
+<a href="#completionpercentage_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_go">
+<a href="#progressmessage_go" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_nodejs">
+<a href="#completionpercentage_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_nodejs">
+<a href="#progressmessage_nodejs" style="color: inherit; text-decoration: inherit;">progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completion_percentage_python">
+<a href="#completion_percentage_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progress_message_python">
+<a href="#progress_message_python" style="color: inherit; text-decoration: inherit;">progress_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="migrationprogressresponse">Migration<wbr>Progress<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_csharp">
+<a href="#completionpercentage_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_csharp">
+<a href="#progressmessage_csharp" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_go">
+<a href="#completionpercentage_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_go">
+<a href="#progressmessage_go" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completionpercentage_nodejs">
+<a href="#completionpercentage_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progressmessage_nodejs">
+<a href="#progressmessage_nodejs" style="color: inherit; text-decoration: inherit;">progress<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="completion_percentage_python">
+<a href="#completion_percentage_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="progress_message_python">
+<a href="#progress_message_python" style="color: inherit; text-decoration: inherit;">progress_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="migrationproperties">Migration<wbr>Properties</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_csharp">
+<a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_csharp">
+<a href="#oldsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_csharp">
+<a href="#oldvnetsiteid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_go">
+<a href="#migrationprogress_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogress">Migration<wbr>Progress</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_go">
+<a href="#oldsubnetid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_go">
+<a href="#oldvnetsiteid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_nodejs">
+<a href="#migrationprogress_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogress">Migration<wbr>Progress</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_nodejs">
+<a href="#oldsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_nodejs">
+<a href="#oldvnetsiteid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migration_progress_python">
+<a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogress">Migration<wbr>Progress<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="old_subnet_id_python">
+<a href="#old_subnet_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="old_vnet_site_id_python">
+<a href="#old_vnet_site_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>vnet_<wbr>site_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_csharp">
+<a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_csharp">
+<a href="#oldsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_csharp">
+<a href="#oldvnetsiteid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_go">
+<a href="#migrationprogress_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_go">
+<a href="#oldsubnetid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_go">
+<a href="#oldvnetsiteid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationprogress_nodejs">
+<a href="#migrationprogress_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldsubnetid_nodejs">
+<a href="#oldsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oldvnetsiteid_nodejs">
+<a href="#oldvnetsiteid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migration_progress_python">
+<a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="old_subnet_id_python">
+<a href="#old_subnet_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="old_vnet_site_id_python">
+<a href="#old_vnet_site_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>vnet_<wbr>site_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="notificationsettings">Notification<wbr>Settings</h4>
 
 
@@ -3329,7 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifydcadmins_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Dc<wbr>Admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Notify<wbr>Dc<wbr>Admins</span>
     </dt>
     <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
 
@@ -3339,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifyglobaladmins_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Global<wbr>Admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Notify<wbr>Global<wbr>Admins</span>
     </dt>
     <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
 
@@ -3366,7 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifydcadmins_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Dc<wbr>Admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
 
@@ -3376,7 +3972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifyglobaladmins_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Global<wbr>Admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
 
@@ -3403,7 +3999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifydcadmins_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Dc<wbr>Admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Notify<wbr>Dc<wbr>Admins</span>
     </dt>
     <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
 
@@ -3413,7 +4009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifyglobaladmins_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Global<wbr>Admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Notify<wbr>Global<wbr>Admins</span>
     </dt>
     <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
 
@@ -3440,7 +4036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notify_dc_admins_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>dc_<wbr>admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Notify<wbr>Dc<wbr>Admins</span>
     </dt>
     <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
 
@@ -3450,7 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notify_global_admins_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>global_<wbr>admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Notify<wbr>Global<wbr>Admins</span>
     </dt>
     <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
 

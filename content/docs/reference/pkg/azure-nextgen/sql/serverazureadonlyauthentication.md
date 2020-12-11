@@ -1,7 +1,7 @@
 
 ---
 title: "ServerAzureADOnlyAuthentication"
-title_tag: "Resource ServerAzureADOnlyAuthentication | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ServerAzureADOnlyAuthentication"
 meta_desc: "Explore the ServerAzureADOnlyAuthentication resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Azure Active Directory only authentication."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverAzureADOnlyAuthentication = new AzureNextGen.Sql.V20200202Preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", new AzureNextGen.Sql.V20200202Preview.ServerAzureADOnlyAuthenticationArgs
+        var serverAzureADOnlyAuthentication = new AzureNextGen.Sql.V20200801Preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", new AzureNextGen.Sql.V20200801Preview.ServerAzureADOnlyAuthenticationArgs
         {
             AuthenticationName = "Default",
             AzureADOnlyAuthentication = false,
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_azure_ad_only_authentication = azure_nextgen.sql.v20200202preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication",
+server_azure_ad_only_authentication = azure_nextgen.sql.v20200801preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication",
     authentication_name="Default",
     azure_ad_only_authentication=False,
     resource_group_name="sqlcrudtest-4799",
@@ -93,7 +93,7 @@ server_azure_ad_only_authentication = azure_nextgen.sql.v20200202preview.ServerA
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverAzureADOnlyAuthentication = new azure_nextgen.sql.v20200202preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", {
+const serverAzureADOnlyAuthentication = new azure_nextgen.sql.v20200801preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", {
     authenticationName: "Default",
     azureADOnlyAuthentication: false,
     resourceGroupName: "sqlcrudtest-4799",

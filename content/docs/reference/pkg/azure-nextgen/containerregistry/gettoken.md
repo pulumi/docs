@@ -224,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -308,6 +318,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation date of scope map.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -398,6 +418,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -485,6 +515,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -564,125 +604,6 @@ The following output properties are available:
 
 
 ## Supporting Types
-
-
-<h4 id="activedirectoryobjectresponse">Active<wbr>Directory<wbr>Object<wbr>Response</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="objectid_csharp">
-<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The user/group/application object ID for Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_csharp">
-<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of user/group/application object Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="objectid_go">
-<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The user/group/application object ID for Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_go">
-<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of user/group/application object Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="objectid_nodejs">
-<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The user/group/application object ID for Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_nodejs">
-<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of user/group/application object Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="object_id_python">
-<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The user/group/application object ID for Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenant_id_python">
-<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of user/group/application object Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
 
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -1176,16 +1097,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activedirectoryobject_csharp">
-<a href="#activedirectoryobject_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Object</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Object<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span> 
@@ -1210,16 +1121,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="activedirectoryobject_go">
-<a href="#activedirectoryobject_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Object</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryobjectresponse">Active<wbr>Directory<wbr>Object<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1250,16 +1151,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activedirectoryobject_nodejs">
-<a href="#activedirectoryobject_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Object</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryobjectresponse">Active<wbr>Directory<wbr>Object<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
@@ -1284,16 +1175,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="active_directory_object_python">
-<a href="#active_directory_object_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>object</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryobjectresponse">Active<wbr>Directory<wbr>Object<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -174,6 +174,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy assignment.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -181,6 +191,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -254,6 +274,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="noncompliancemessages_csharp">
+<a href="#noncompliancemessages_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Compliance<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#noncompliancemessageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Outputs.<wbr>Non<wbr>Compliance<wbr>Message<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="notscopes_csharp">
 <a href="#notscopes_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Scopes</a>
 </span> 
@@ -282,32 +312,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="scope_csharp">
-<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Outputs.<wbr>Policy<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku. This property is optional, obsolete, and will be ignored.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy assignment.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -318,6 +338,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -391,6 +421,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="noncompliancemessages_go">
+<a href="#noncompliancemessages_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Compliance<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#noncompliancemessageresponse">[]Non<wbr>Compliance<wbr>Message<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="notscopes_go">
 <a href="#notscopes_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Scopes</a>
 </span> 
@@ -419,32 +459,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="scope_go">
-<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyskuresponse">Policy<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku. This property is optional, obsolete, and will be ignored.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy assignment.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -455,6 +485,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -528,6 +568,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="noncompliancemessages_nodejs">
+<a href="#noncompliancemessages_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Compliance<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#noncompliancemessageresponse">Non<wbr>Compliance<wbr>Message<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="notscopes_nodejs">
 <a href="#notscopes_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Scopes</a>
 </span> 
@@ -556,32 +606,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="scope_nodejs">
-<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyskuresponse">Policy<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku. This property is optional, obsolete, and will be ignored.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy assignment.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -592,6 +632,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -665,6 +715,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="non_compliance_messages_python">
+<a href="#non_compliance_messages_python" style="color: inherit; text-decoration: inherit;">non_<wbr>compliance_<wbr>messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#noncompliancemessageresponse">Sequence[Non<wbr>Compliance<wbr>Message<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="not_scopes_python">
 <a href="#not_scopes_python" style="color: inherit; text-decoration: inherit;">not_<wbr>scopes</a>
 </span> 
@@ -692,26 +752,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="scope_python">
-<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The scope for the policy assignment.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyskuresponse">Policy<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku. This property is optional, obsolete, and will be ignored.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -885,6 +925,125 @@ The following output properties are available:
 
 
 
+<h4 id="noncompliancemessageresponse">Non<wbr>Compliance<wbr>Message<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydefinitionreferenceid_csharp">
+<a href="#policydefinitionreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydefinitionreferenceid_go">
+<a href="#policydefinitionreferenceid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydefinitionreferenceid_nodejs">
+<a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_definition_reference_id_python">
+<a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="parametervaluesvalueresponse">Parameter<wbr>Values<wbr>Value<wbr>Response</h4>
 
 
@@ -956,125 +1115,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="policyskuresponse">Policy<wbr>Sku<wbr>Response</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the policy sku. Possible values are A0 and A1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku tier. Possible values are Free and Standard.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the policy sku. Possible values are A0 and A1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku tier. Possible values are Free and Standard.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the policy sku. Possible values are A0 and A1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku tier. Possible values are Free and Standard.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the policy sku. Possible values are A0 and A1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The policy sku tier. Possible values are Free and Standard.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module avs | Package Azure NextGen"
+title_tag: "azure-nextgen.avs.Cluster"
 meta_desc: "Explore the Cluster resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. A cluster resource"
 ---
 

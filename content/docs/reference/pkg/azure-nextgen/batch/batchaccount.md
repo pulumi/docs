@@ -1,7 +1,7 @@
 
 ---
 title: "BatchAccount"
-title_tag: "Resource BatchAccount | Module batch | Package Azure NextGen"
+title_tag: "azure-nextgen.batch.BatchAccount"
 meta_desc: "Explore the BatchAccount resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Contains information about an Azure Batch account."
 ---
 
@@ -73,7 +73,7 @@ func main() {
 				Url: pulumi.String("http://sample.vault.azure.net/"),
 			},
 			Location:           pulumi.String("japaneast"),
-			PoolAllocationMode: pulumi.String("UserSubscription"),
+			PoolAllocationMode: "UserSubscription",
 			ResourceGroupName:  pulumi.String("default-azurebatch-japaneast"),
 		})
 		if err != nil {
@@ -280,7 +280,7 @@ func main() {
 				StorageAccountId: pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage"),
 			},
 			Identity: &batch.BatchAccountIdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
+				Type: "SystemAssigned",
 			},
 			Location:          pulumi.String("japaneast"),
 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
@@ -395,7 +395,7 @@ func main() {
 				Url: pulumi.String("http://sample.vault.azure.net/"),
 			},
 			Location:            pulumi.String("japaneast"),
-			PublicNetworkAccess: pulumi.String("Disabled"),
+			PublicNetworkAccess: "Disabled",
 			ResourceGroupName:   pulumi.String("default-azurebatch-japaneast"),
 		})
 		if err != nil {
@@ -468,7 +468,7 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_storage</span><span class="p">:</span> <span class="nx">Optional[AutoStorageBasePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[BatchAccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_reference</span><span class="p">:</span> <span class="nx">Optional[KeyVaultReferenceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_allocation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_storage</span><span class="p">:</span> <span class="nx">Optional[AutoStorageBasePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[BatchAccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_reference</span><span class="p">:</span> <span class="nx">Optional[KeyVaultReferenceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_allocation_mode</span><span class="p">:</span> <span class="nx">Optional[PoolAllocationMode]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[PublicNetworkAccessType]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -716,7 +716,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#poolallocationmode_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Allocation<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Pool<wbr>Allocation<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.{{% /md %}}</dd>
 
@@ -726,7 +726,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Public<wbr>Network<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
 
@@ -823,7 +823,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#poolallocationmode_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Allocation<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
 
@@ -930,7 +930,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#poolallocationmode_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Allocation<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Pool<wbr>Allocation<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.{{% /md %}}</dd>
 
@@ -940,7 +940,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Public<wbr>Network<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
 
@@ -1037,7 +1037,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#pool_allocation_mode_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>allocation_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Pool<wbr>Allocation<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.{{% /md %}}</dd>
 
@@ -1047,7 +1047,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Public<wbr>Network<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
 
@@ -1811,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
 
@@ -1828,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
 
@@ -1845,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
 
@@ -1862,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
 
@@ -2049,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
 
@@ -2076,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
 
@@ -2103,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
 
@@ -2130,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Key<wbr>Source</span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
 

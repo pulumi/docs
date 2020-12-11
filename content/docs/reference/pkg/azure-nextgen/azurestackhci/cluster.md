@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module azurestackhci | Package Azure NextGen"
+title_tag: "azure-nextgen.azurestackhci.Cluster"
 meta_desc: "Explore the Cluster resource of the azurestackhci module, including examples, input properties, output properties, lookup functions, and supporting types. Cluster details."
 ---
 
@@ -17,7 +17,7 @@ Cluster details.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### GetClusters
+### Create cluster
 {{% example csharp %}}
 ```csharp
 using Pulumi;

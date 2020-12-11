@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module datamigration | Package Azure NextGen"
+title_tag: "azure-nextgen.datamigration.Project"
 meta_desc: "Explore the Project resource of the datamigration module, including examples, input properties, output properties, lookup functions, and supporting types. A project resource"
 ---
 
@@ -124,7 +124,7 @@ const project = new azure_nextgen.datamigration.latest.Project("project", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases_info</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInfoArgs]]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_connection_info</span><span class="p">:</span> <span class="nx">Optional[Union[MiSqlConnectionInfoArgs, MySqlConnectionInfoArgs, PostgreSqlConnectionInfoArgs, SqlConnectionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">source_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_connection_info</span><span class="p">:</span> <span class="nx">Optional[Union[MiSqlConnectionInfoArgs, MySqlConnectionInfoArgs, PostgreSqlConnectionInfoArgs, SqlConnectionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">target_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases_info</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInfoArgs]]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_connection_info</span><span class="p">:</span> <span class="nx">Optional[Union[MiSqlConnectionInfoArgs, MySqlConnectionInfoArgs, PostgreSqlConnectionInfoArgs, SqlConnectionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">source_platform</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProjectSourcePlatform]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_connection_info</span><span class="p">:</span> <span class="nx">Optional[Union[MiSqlConnectionInfoArgs, MySqlConnectionInfoArgs, PostgreSqlConnectionInfoArgs, SqlConnectionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">target_platform</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProjectTargetPlatform]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -342,7 +342,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceplatform_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Project<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Source platform for the project{{% /md %}}</dd>
 
@@ -352,7 +352,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetplatform_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Project<wbr>Target<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Target platform for the project{{% /md %}}</dd>
 
@@ -372,7 +372,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -392,7 +392,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -449,7 +449,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceplatform_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source platform for the project{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetplatform_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target platform for the project{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceconnectioninfo_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetconnectioninfo_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -556,7 +556,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceplatform_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Project<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Source platform for the project{{% /md %}}</dd>
 
@@ -566,7 +566,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetplatform_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Project<wbr>Target<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Target platform for the project{{% /md %}}</dd>
 
@@ -586,7 +586,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mi<wbr>Sql<wbr>Connection<wbr>Info | My<wbr>Sql<wbr>Connection<wbr>Info | Postgre<wbr>Sql<wbr>Connection<wbr>Info | Sql<wbr>Connection<wbr>Info</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -606,7 +606,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mi<wbr>Sql<wbr>Connection<wbr>Info | My<wbr>Sql<wbr>Connection<wbr>Info | Postgre<wbr>Sql<wbr>Connection<wbr>Info | Sql<wbr>Connection<wbr>Info</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -663,7 +663,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_platform_python" style="color: inherit; text-decoration: inherit;">source_<wbr>platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Project<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Source platform for the project{{% /md %}}</dd>
 
@@ -673,7 +673,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#target_platform_python" style="color: inherit; text-decoration: inherit;">target_<wbr>platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Project<wbr>Target<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Target platform for the project{{% /md %}}</dd>
 
@@ -693,7 +693,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Sql<wbr>Connection<wbr>Info<wbr>Args]</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -713,7 +713,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Sql<wbr>Connection<wbr>Info<wbr>Args]</span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Sql<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 
@@ -2448,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -2478,7 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 
@@ -2535,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -2565,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sql<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 
@@ -2622,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Authentication<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
 
@@ -2652,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sql<wbr>Source<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
 

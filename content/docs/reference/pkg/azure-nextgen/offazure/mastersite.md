@@ -1,7 +1,7 @@
 
 ---
 title: "MasterSite"
-title_tag: "Resource MasterSite | Module offazure | Package Azure NextGen"
+title_tag: "azure-nextgen.offazure.MasterSite"
 meta_desc: "Explore the MasterSite resource of the offazure module, including examples, input properties, output properties, lookup functions, and supporting types. Site REST Resource."
 ---
 

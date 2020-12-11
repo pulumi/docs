@@ -1,7 +1,7 @@
 
 ---
 title: "Association"
-title_tag: "Resource Association | Module customproviders | Package Azure NextGen"
+title_tag: "azure-nextgen.customproviders.Association"
 meta_desc: "Explore the Association resource of the customproviders module, including examples, input properties, output properties, lookup functions, and supporting types. The resource definition of this association."
 ---
 

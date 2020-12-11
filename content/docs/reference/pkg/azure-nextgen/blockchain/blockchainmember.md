@@ -1,7 +1,7 @@
 
 ---
 title: "BlockchainMember"
-title_tag: "Resource BlockchainMember | Module blockchain | Package Azure NextGen"
+title_tag: "azure-nextgen.blockchain.BlockchainMember"
 meta_desc: "Explore the BlockchainMember resource of the blockchain module, including examples, input properties, output properties, lookup functions, and supporting types. Payload of the blockchain member which is exposed in the request/response of the resource provider."
 ---
 
@@ -31,9 +31,9 @@ class MyStack : Stack
         {
             BlockchainMemberName = "contosemember1",
             Consortium = "ContoseConsortium",
-            ConsortiumManagementAccountPassword = "1234abcdEFG1",
+            ConsortiumManagementAccountPassword = "<consortiumManagementAccountPassword>",
             Location = "southeastasia",
-            Password = "1234abcdEFG1",
+            Password = "<password>",
             Protocol = "Quorum",
             ResourceGroupName = "mygroup",
             ValidatorNodesSku = new AzureNextGen.Blockchain.V20180601Preview.Inputs.BlockchainMemberNodesSkuArgs
@@ -64,9 +64,9 @@ func main() {
 		_, err := blockchain.NewBlockchainMember(ctx, "blockchainMember", &blockchain.BlockchainMemberArgs{
 			BlockchainMemberName:                pulumi.String("contosemember1"),
 			Consortium:                          pulumi.String("ContoseConsortium"),
-			ConsortiumManagementAccountPassword: pulumi.String("1234abcdEFG1"),
+			ConsortiumManagementAccountPassword: pulumi.String("<consortiumManagementAccountPassword>"),
 			Location:                            pulumi.String("southeastasia"),
-			Password:                            pulumi.String("1234abcdEFG1"),
+			Password:                            pulumi.String("<password>"),
 			Protocol:                            pulumi.String("Quorum"),
 			ResourceGroupName:                   pulumi.String("mygroup"),
 			ValidatorNodesSku: &blockchain.BlockchainMemberNodesSkuArgs{
@@ -93,9 +93,9 @@ import pulumi_azure_nextgen as azure_nextgen
 blockchain_member = azure_nextgen.blockchain.v20180601preview.BlockchainMember("blockchainMember",
     blockchain_member_name="contosemember1",
     consortium="ContoseConsortium",
-    consortium_management_account_password="1234abcdEFG1",
+    consortium_management_account_password="<consortiumManagementAccountPassword>",
     location="southeastasia",
-    password="1234abcdEFG1",
+    password="<password>",
     protocol="Quorum",
     resource_group_name="mygroup",
     validator_nodes_sku=azure_nextgen.blockchain.v20180601preview.BlockchainMemberNodesSkuArgs(
@@ -115,9 +115,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const blockchainMember = new azure_nextgen.blockchain.v20180601preview.BlockchainMember("blockchainMember", {
     blockchainMemberName: "contosemember1",
     consortium: "ContoseConsortium",
-    consortiumManagementAccountPassword: "1234abcdEFG1",
+    consortiumManagementAccountPassword: "<consortiumManagementAccountPassword>",
     location: "southeastasia",
-    password: "1234abcdEFG1",
+    password: "<password>",
     protocol: "Quorum",
     resourceGroupName: "mygroup",
     validatorNodesSku: {
@@ -141,7 +141,7 @@ const blockchainMember = new azure_nextgen.blockchain.v20180601preview.Blockchai
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blockchain_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_management_account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_member_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validator_nodes_sku</span><span class="p">:</span> <span class="nx">Optional[BlockchainMemberNodesSkuArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blockchain_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_management_account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_member_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, BlockchainProtocol]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validator_nodes_sku</span><span class="p">:</span> <span class="nx">Optional[BlockchainMemberNodesSkuArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +409,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Blockchain<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain protocol.{{% /md %}}</dd>
 
@@ -546,7 +546,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain protocol.{{% /md %}}</dd>
 
@@ -683,7 +683,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Blockchain<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain protocol.{{% /md %}}</dd>
 
@@ -820,7 +820,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Blockchain<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain protocol.{{% /md %}}</dd>
 

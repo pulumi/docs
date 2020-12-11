@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkFunction"
-title_tag: "Resource NetworkFunction | Module hybridnetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridnetwork.NetworkFunction"
 meta_desc: "Explore the NetworkFunction resource of the hybridnetwork module, including examples, input properties, output properties, lookup functions, and supporting types. Network function resource response."
 ---
 
@@ -1849,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmswitchtype_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>VMSwitch<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
@@ -1896,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmswitchtype_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmswitchtype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Switch<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>VMSwitch<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
@@ -1990,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_switch_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>switch_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">VMSwitch<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
@@ -2048,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
 
@@ -2058,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
 
@@ -2115,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
 
@@ -2125,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
 
@@ -2182,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
 
@@ -2192,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>IPVersion</span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
 
@@ -2249,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPAllocation<wbr>Method</span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
 
@@ -2259,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">IPVersion</span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
 

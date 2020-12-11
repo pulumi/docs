@@ -1,7 +1,7 @@
 
 ---
 title: "HubRouteTable"
-title_tag: "Resource HubRouteTable | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.HubRouteTable"
 meta_desc: "Explore the HubRouteTable resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. RouteTable resource in a virtual hub."
 ---
 

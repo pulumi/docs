@@ -1,7 +1,7 @@
 
 ---
 title: "DatabaseAccount"
-title_tag: "Resource DatabaseAccount | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.DatabaseAccount"
 meta_desc: "Explore the DatabaseAccount resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB database account."
 ---
 
@@ -289,7 +289,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
 			AccountName:              pulumi.String("ddb1"),
-			DatabaseAccountOfferType: pulumi.String("Standard"),
+			DatabaseAccountOfferType: "Standard",
 			Location:                 pulumi.String("westus"),
 			Locations: documentdb.LocationArray{
 				&documentdb.LocationArgs{
@@ -366,7 +366,7 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -554,7 +554,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#databaseaccountoffertype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Account<wbr>Offer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Database<wbr>Account<wbr>Offer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The offer type for the database{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#periodicmodebackuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
@@ -614,7 +614,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#connectoroffer_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Offer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Connector<wbr>Offer</span>
     </dt>
     <dd>{{% md %}}The cassandra connector offer type for the Cosmos DB database C* account.{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Database<wbr>Account<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Indicates the type of database account. This can only be set at database account creation.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#databaseaccountoffertype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Account<wbr>Offer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer type for the database{{% /md %}}</dd>
 
@@ -831,7 +831,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backuppolicy_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy</a></span><span class="property-type"> | </span><span class="property-type"><a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
@@ -851,7 +851,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#connectoroffer_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Offer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cassandra connector offer type for the Cosmos DB database C* account.{{% /md %}}</dd>
 
@@ -971,7 +971,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of database account. This can only be set at database account creation.{{% /md %}}</dd>
 
@@ -1028,7 +1028,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#databaseaccountoffertype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Account<wbr>Offer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Database<wbr>Account<wbr>Offer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The offer type for the database{{% /md %}}</dd>
 
@@ -1068,7 +1068,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Continuous<wbr>Mode<wbr>Backup<wbr>Policy | Periodic<wbr>Mode<wbr>Backup<wbr>Policy</span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy</a></span><span class="property-type"> | </span><span class="property-type"><a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
@@ -1088,7 +1088,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#connectoroffer_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Offer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Connector<wbr>Offer</span>
     </dt>
     <dd>{{% md %}}The cassandra connector offer type for the Cosmos DB database C* account.{{% /md %}}</dd>
 
@@ -1208,7 +1208,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Database<wbr>Account<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Indicates the type of database account. This can only be set at database account creation.{{% /md %}}</dd>
 
@@ -1265,7 +1265,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#database_account_offer_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>account_<wbr>offer_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Database<wbr>Account<wbr>Offer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The offer type for the database{{% /md %}}</dd>
 
@@ -1305,7 +1305,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backup_policy_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args, Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args]</span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
@@ -1325,7 +1325,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#connector_offer_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>offer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Connector<wbr>Offer</span>
     </dt>
     <dd>{{% md %}}The cassandra connector offer type for the Cosmos DB database C* account.{{% /md %}}</dd>
 
@@ -1445,7 +1445,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Database<wbr>Account<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}Indicates the type of database account. This can only be set at database account creation.{{% /md %}}</dd>
 
@@ -1951,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverversion_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd>
 
@@ -1968,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverversion_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd>
 
@@ -1985,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverversion_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd>
 
@@ -2002,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_version_python" style="color: inherit; text-decoration: inherit;">server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd>
 
@@ -2267,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultconsistencylevel_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Consistency<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Default<wbr>Consistency<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd>
 
@@ -2304,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultconsistencylevel_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Consistency<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd>
 
@@ -2341,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultconsistencylevel_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Consistency<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Default<wbr>Consistency<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd>
 
@@ -2378,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_consistency_level_python" style="color: inherit; text-decoration: inherit;">default_<wbr>consistency_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Default<wbr>Consistency<wbr>Level</span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd>
 

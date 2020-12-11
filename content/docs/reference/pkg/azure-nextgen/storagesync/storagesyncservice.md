@@ -1,7 +1,7 @@
 
 ---
 title: "StorageSyncService"
-title_tag: "Resource StorageSyncService | Module storagesync | Package Azure NextGen"
+title_tag: "azure-nextgen.storagesync.StorageSyncService"
 meta_desc: "Explore the StorageSyncService resource of the storagesync module, including examples, input properties, output properties, lookup functions, and supporting types. Storage Sync Service object."
 ---
 
@@ -120,7 +120,7 @@ const storageSyncService = new azure_nextgen.storagesync.latest.StorageSyncServi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageSyncService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">incoming_traffic_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageSyncService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">incoming_traffic_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncomingTrafficPolicy]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,7 +328,7 @@ The StorageSyncService resource accepts the following [input]({{< relref "/docs/
 <a href="#incomingtrafficpolicy_csharp" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Traffic<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Incoming<wbr>Traffic<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Incoming Traffic Policy{{% /md %}}</dd>
 
@@ -385,7 +385,7 @@ The StorageSyncService resource accepts the following [input]({{< relref "/docs/
 <a href="#incomingtrafficpolicy_go" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Traffic<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incoming Traffic Policy{{% /md %}}</dd>
 
@@ -442,7 +442,7 @@ The StorageSyncService resource accepts the following [input]({{< relref "/docs/
 <a href="#incomingtrafficpolicy_nodejs" style="color: inherit; text-decoration: inherit;">incoming<wbr>Traffic<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incoming<wbr>Traffic<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Incoming Traffic Policy{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The StorageSyncService resource accepts the following [input]({{< relref "/docs/
 <a href="#incoming_traffic_policy_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>traffic_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incoming<wbr>Traffic<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Incoming Traffic Policy{{% /md %}}</dd>
 

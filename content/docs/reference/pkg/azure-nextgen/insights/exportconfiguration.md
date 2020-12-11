@@ -1,7 +1,7 @@
 
 ---
 title: "ExportConfiguration"
-title_tag: "Resource ExportConfiguration | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.ExportConfiguration"
 meta_desc: "Explore the ExportConfiguration resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. Properties that define a Continuous Export configuration."
 ---
 

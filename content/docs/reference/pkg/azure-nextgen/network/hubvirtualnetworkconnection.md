@@ -1,7 +1,7 @@
 
 ---
 title: "HubVirtualNetworkConnection"
-title_tag: "Resource HubVirtualNetworkConnection | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.HubVirtualNetworkConnection"
 meta_desc: "Explore the HubVirtualNetworkConnection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. HubVirtualNetworkConnection Resource."
 ---
 

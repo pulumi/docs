@@ -1,7 +1,7 @@
 
 ---
 title: "TableServiceProperties"
-title_tag: "Resource TableServiceProperties | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.TableServiceProperties"
 meta_desc: "Explore the TableServiceProperties resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The properties of a storage account’s Table service."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ContentType"
-title_tag: "Resource ContentType | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ContentType"
 meta_desc: "Explore the ContentType resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Content type contract details."
 ---
 

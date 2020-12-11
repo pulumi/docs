@@ -1,7 +1,7 @@
 
 ---
 title: "Rollout"
-title_tag: "Resource Rollout | Module deploymentmanager | Package Azure NextGen"
+title_tag: "azure-nextgen.deploymentmanager.Rollout"
 meta_desc: "Explore the Rollout resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. Defines the PUT rollout request body."
 ---
 

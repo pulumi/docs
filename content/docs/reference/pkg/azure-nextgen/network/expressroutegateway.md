@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRouteGateway"
-title_tag: "Resource ExpressRouteGateway | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.ExpressRouteGateway"
 meta_desc: "Explore the ExpressRouteGateway resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. ExpressRoute gateway resource."
 ---
 

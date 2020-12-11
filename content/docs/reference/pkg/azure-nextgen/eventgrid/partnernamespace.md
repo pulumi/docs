@@ -1,7 +1,7 @@
 
 ---
 title: "PartnerNamespace"
-title_tag: "Resource PartnerNamespace | Module eventgrid | Package Azure NextGen"
+title_tag: "azure-nextgen.eventgrid.PartnerNamespace"
 meta_desc: "Explore the PartnerNamespace resource of the eventgrid module, including examples, input properties, output properties, lookup functions, and supporting types. EventGrid Partner Namespace."
 ---
 

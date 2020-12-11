@@ -154,6 +154,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="lastupdatedon_csharp">
 <a href="#lastupdatedon_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>On</a>
 </span> 
@@ -258,6 +268,16 @@ The following output properties are available:
         <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -368,6 +388,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="lastupdatedon_nodejs">
 <a href="#lastupdatedon_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>On</a>
 </span> 
@@ -472,6 +502,16 @@ The following output properties are available:
         <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

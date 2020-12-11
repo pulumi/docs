@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallPolicyRuleGroup"
-title_tag: "Resource FirewallPolicyRuleGroup | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.FirewallPolicyRuleGroup"
 meta_desc: "Explore the FirewallPolicyRuleGroup resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Rule Group resource."
 ---
 
@@ -165,9 +165,9 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", 
+                    { "action", new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
-                        { "type", "Deny" },
+                        Type = "Deny",
                     } },
                     { "name", "Example-Filter-Rule" },
                     { "ruleConditions", 
@@ -222,9 +222,9 @@ firewall_policy_rule_group = azure_nextgen.network.latest.FirewallPolicyRuleGrou
     resource_group_name="rg1",
     rule_group_name="ruleGroup1",
     rules=[{
-        "action": {
-            "type": "Deny",
-        },
+        "action": azure_nextgen.network.latest.FirewallPolicyFilterRuleActionArgs(
+            type="Deny",
+        ),
         "name": "Example-Filter-Rule",
         "ruleConditions": [{
             "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
@@ -1907,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -1924,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -1941,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -1958,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -2294,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#applicationrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2428,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition | Nat<wbr>Rule<wbr>Condition | Network<wbr>Rule<wbr>Condition</span>
+        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2495,7 +2495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Application<wbr>Rule<wbr>Condition<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Args]</span>
+        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2543,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -2560,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -2577,7 +2577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -2594,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 
@@ -2731,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2798,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2865,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2932,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd>
 
@@ -2990,7 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
 
@@ -3017,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
 
@@ -3044,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
 
@@ -3071,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
 
@@ -3248,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 
@@ -3325,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 
@@ -3402,7 +3402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 
@@ -3479,7 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 
@@ -3896,7 +3896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 
@@ -3983,7 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 
@@ -4070,7 +4070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 
@@ -4157,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Replication"
-title_tag: "Resource Replication | Module containerregistry | Package Azure NextGen"
+title_tag: "azure-nextgen.containerregistry.Replication"
 meta_desc: "Explore the Replication resource of the containerregistry module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a replication for a container registry."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "RemediationAtResource"
-title_tag: "Resource RemediationAtResource | Module policyinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.policyinsights.RemediationAtResource"
 meta_desc: "Explore the RemediationAtResource resource of the policyinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The remediation definition."
 ---
 
@@ -112,7 +112,7 @@ const remediationAtResource = new azure_nextgen.policyinsights.latest.Remediatio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RemediationAtResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[RemediationFiltersArgs]</span> = None<span class="p">, </span><span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_discovery_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RemediationAtResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[RemediationFiltersArgs]</span> = None<span class="p">, </span><span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_discovery_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ResourceDiscoveryMode]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -340,7 +340,7 @@ The RemediationAtResource resource accepts the following [input]({{< relref "/do
 <a href="#resourcediscoverymode_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Discovery<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights.<wbr>Resource<wbr>Discovery<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
 
@@ -407,7 +407,7 @@ The RemediationAtResource resource accepts the following [input]({{< relref "/do
 <a href="#resourcediscoverymode_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Discovery<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
 
@@ -474,7 +474,7 @@ The RemediationAtResource resource accepts the following [input]({{< relref "/do
 <a href="#resourcediscoverymode_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Discovery<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Resource<wbr>Discovery<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
 
@@ -541,7 +541,7 @@ The RemediationAtResource resource accepts the following [input]({{< relref "/do
 <a href="#resource_discovery_mode_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>discovery_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Resource<wbr>Discovery<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module windowsiot | Package Azure NextGen"
+title_tag: "azure-nextgen.windowsiot.Service"
 meta_desc: "Explore the Service resource of the windowsiot module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the Windows IoT Device Service."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkLink"
-title_tag: "Resource VirtualNetworkLink | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualNetworkLink"
 meta_desc: "Explore the VirtualNetworkLink resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a link to virtual network for a Private DNS zone."
 ---
 

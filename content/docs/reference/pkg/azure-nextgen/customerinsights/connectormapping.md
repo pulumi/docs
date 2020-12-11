@@ -1,7 +1,7 @@
 
 ---
 title: "ConnectorMapping"
-title_tag: "Resource ConnectorMapping | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.ConnectorMapping"
 meta_desc: "Explore the ConnectorMapping resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The connector mapping resource format."
 ---
 
@@ -103,28 +103,28 @@ func main() {
 			ConnectorName:  pulumi.String("testConnector8858"),
 			Description:    pulumi.String("Test mapping"),
 			DisplayName:    pulumi.String("testMapping12491"),
-			EntityType:     pulumi.String("Interaction"),
+			EntityType:     "Interaction",
 			EntityTypeName: pulumi.String("TestInteractionType2967"),
 			HubName:        pulumi.String("sdkTestHub"),
 			MappingName:    pulumi.String("testMapping12491"),
 			MappingProperties: &customerinsights.ConnectorMappingPropertiesArgs{
 				Availability: &customerinsights.ConnectorMappingAvailabilityArgs{
-					Frequency: pulumi.String("Hour"),
+					Frequency: "Hour",
 					Interval:  pulumi.Int(5),
 				},
 				CompleteOperation: &customerinsights.ConnectorMappingCompleteOperationArgs{
-					CompletionOperationType: pulumi.String("DeleteFile"),
+					CompletionOperationType: "DeleteFile",
 					DestinationFolder:       pulumi.String("fakePath"),
 				},
 				ErrorManagement: &customerinsights.ConnectorMappingErrorManagementArgs{
 					ErrorLimit:          pulumi.Int(10),
-					ErrorManagementType: pulumi.String("StopImport"),
+					ErrorManagementType: "StopImport",
 				},
 				FileFilter: pulumi.String("unknown"),
 				FolderPath: pulumi.String("http://sample.dne/file"),
 				Format: &customerinsights.ConnectorMappingFormatArgs{
 					ColumnDelimiter: pulumi.String("|"),
-					FormatType:      pulumi.String("TextFormat"),
+					FormatType:      "TextFormat",
 				},
 				HasHeader: pulumi.Bool(false),
 				Structure: customerinsights.ConnectorMappingStructureArray{
@@ -272,7 +272,7 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connector_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_properties</span><span class="p">:</span> <span class="nx">Optional[ConnectorMappingPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connector_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorTypes]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityTypes]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_properties</span><span class="p">:</span> <span class="nx">Optional[ConnectorMappingPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -460,7 +460,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
 
@@ -520,7 +520,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectortype_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Connector<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
 
@@ -567,7 +567,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
 
@@ -627,7 +627,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectortype_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Entity<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectortype_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Connector<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
 
@@ -781,7 +781,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Entity<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
 
@@ -841,7 +841,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#connector_type_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Connector<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
 
@@ -1387,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Frequency<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
 
@@ -1414,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
 
@@ -1441,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Frequency<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
 
@@ -1468,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Frequency<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
 
@@ -1615,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completionoperationtype_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Completion<wbr>Operation<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
 
@@ -1642,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completionoperationtype_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
 
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completionoperationtype_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Completion<wbr>Operation<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
 
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completion_operation_type_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>operation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Completion<wbr>Operation<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
 
@@ -1853,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Error<wbr>Management<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
 
@@ -1880,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagementtype_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
 
@@ -1907,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Management<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Error<wbr>Management<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
 
@@ -1934,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_management_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Error<wbr>Management<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
 
@@ -2091,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formattype_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Format<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
 
@@ -2158,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formattype_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
 
@@ -2225,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formattype_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Format<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
 
@@ -2292,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_type_python" style="color: inherit; text-decoration: inherit;">format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Format<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Creator"
-title_tag: "Resource Creator | Module maps | Package Azure NextGen"
+title_tag: "azure-nextgen.maps.Creator"
 meta_desc: "Explore the Creator resource of the maps module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure resource which represents Maps Creator product and provides ability to manage private location data."
 ---
 

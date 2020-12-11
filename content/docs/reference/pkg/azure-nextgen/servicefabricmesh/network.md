@@ -1,7 +1,7 @@
 
 ---
 title: "Network"
-title_tag: "Resource Network | Module servicefabricmesh | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabricmesh.Network"
 meta_desc: "Explore the Network resource of the servicefabricmesh module, including examples, input properties, output properties, lookup functions, and supporting types. This type describes a network resource."
 ---
 

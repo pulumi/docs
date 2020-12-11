@@ -1,7 +1,7 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Module servicefabricmesh | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabricmesh.Secret"
 meta_desc: "Explore the Secret resource of the servicefabricmesh module, including examples, input properties, output properties, lookup functions, and supporting types. This type describes a secret resource."
 ---
 

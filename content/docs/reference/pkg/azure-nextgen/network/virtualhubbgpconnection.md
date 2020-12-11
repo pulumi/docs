@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualHubBgpConnection"
-title_tag: "Resource VirtualHubBgpConnection | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualHubBgpConnection"
 meta_desc: "Explore the VirtualHubBgpConnection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Appliance Site resource."
 ---
 

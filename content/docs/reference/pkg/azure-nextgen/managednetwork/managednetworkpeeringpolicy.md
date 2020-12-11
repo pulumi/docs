@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedNetworkPeeringPolicy"
-title_tag: "Resource ManagedNetworkPeeringPolicy | Module managednetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.managednetwork.ManagedNetworkPeeringPolicy"
 meta_desc: "Explore the ManagedNetworkPeeringPolicy resource of the managednetwork module, including examples, input properties, output properties, lookup functions, and supporting types. The Managed Network Peering Policy resource"
 ---
 
@@ -741,7 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
 
@@ -788,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
 
@@ -835,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
 
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Type</span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
 

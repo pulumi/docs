@@ -1,7 +1,7 @@
 
 ---
 title: "IpFirewallRule"
-title_tag: "Resource IpFirewallRule | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.IpFirewallRule"
 meta_desc: "Explore the IpFirewallRule resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. IP firewall rule"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "RoleDefinition"
-title_tag: "Resource RoleDefinition | Module authorization | Package Azure NextGen"
+title_tag: "azure-nextgen.authorization.RoleDefinition"
 meta_desc: "Explore the RoleDefinition resource of the authorization module, including examples, input properties, output properties, lookup functions, and supporting types. Role definition."
 ---
 

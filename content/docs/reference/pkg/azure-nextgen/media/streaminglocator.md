@@ -1,7 +1,7 @@
 
 ---
 title: "StreamingLocator"
-title_tag: "Resource StreamingLocator | Module media | Package Azure NextGen"
+title_tag: "azure-nextgen.media.StreamingLocator"
 meta_desc: "Explore the StreamingLocator resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. A Streaming Locator resource"
 ---
 

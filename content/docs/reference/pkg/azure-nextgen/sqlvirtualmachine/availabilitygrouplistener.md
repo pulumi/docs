@@ -1,7 +1,7 @@
 
 ---
 title: "AvailabilityGroupListener"
-title_tag: "Resource AvailabilityGroupListener | Module sqlvirtualmachine | Package Azure NextGen"
+title_tag: "azure-nextgen.sqlvirtualmachine.AvailabilityGroupListener"
 meta_desc: "Explore the AvailabilityGroupListener resource of the sqlvirtualmachine module, including examples, input properties, output properties, lookup functions, and supporting types. A SQL Server availability group listener."
 ---
 

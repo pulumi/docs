@@ -1,7 +1,7 @@
 
 ---
 title: "ScalingPlan"
-title_tag: "Resource ScalingPlan | Module desktopvirtualization | Package Azure NextGen"
+title_tag: "azure-nextgen.desktopvirtualization.ScalingPlan"
 meta_desc: "Explore the ScalingPlan resource of the desktopvirtualization module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a scaling plan definition."
 ---
 
@@ -278,7 +278,7 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20201110preview.Sca
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusion_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingHostPoolReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusion_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingHostPoolReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, HostPoolType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,7 +526,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#hostpooltype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Host<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
 
@@ -643,7 +643,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#hostpooltype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
 
@@ -760,7 +760,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#hostpooltype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Host<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
 
@@ -877,7 +877,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#host_pool_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Host<wbr>Pool<wbr>Type</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
 
@@ -1361,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offpeakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
 
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
 
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
 
@@ -1471,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownstophostswhen_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Stop<wbr>Hosts<wbr>When</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
 
@@ -1481,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampupalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
 
@@ -1548,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offpeakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
 
@@ -1568,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
 
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
 
@@ -1658,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownstophostswhen_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
 
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampupalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
 
@@ -1735,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offpeakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
 
@@ -1755,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
 
@@ -1795,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
 
@@ -1845,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownstophostswhen_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Stop<wbr>Hosts<wbr>When</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
 
@@ -1855,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampupalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
 
@@ -1922,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#off_peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">off_<wbr>peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
 
@@ -1942,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
 
@@ -1982,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ramp_down_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
 
@@ -2032,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ramp_down_stop_hosts_when_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>stop_<wbr>hosts_<wbr>when</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Stop<wbr>Hosts<wbr>When</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
 
@@ -2042,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ramp_up_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
 

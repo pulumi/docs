@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module autonomousdevelopmentplatform | Package Azure NextGen"
+title_tag: "azure-nextgen.autonomousdevelopmentplatform.Account"
 meta_desc: "Explore the Account resource of the autonomousdevelopmentplatform module, including examples, input properties, output properties, lookup functions, and supporting types. An ADP account."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PipelineRun"
-title_tag: "Resource PipelineRun | Module containerregistry | Package Azure NextGen"
+title_tag: "azure-nextgen.containerregistry.PipelineRun"
 meta_desc: "Explore the PipelineRun resource of the containerregistry module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a pipeline run for a container registry."
 ---
 
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRunArgs
         {
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunRequestArgs
             {
                 Artifacts = 
                 {
@@ -39,7 +39,7 @@ class MyStack : Stack
                     "sourceRepository2@sha256:00000000000000000000000000000000000",
                 },
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-                Target = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunTargetPropertiesArgs
+                Target = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunTargetPropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20191201preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,16 +100,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request=azure_nextgen.containerregistry.v20191201preview.PipelineRunRequestArgs(
+    request=azure_nextgen.containerregistry.v20201101preview.PipelineRunRequestArgs(
         artifacts=[
             "sourceRepository/hello-world",
             "sourceRepository2@sha256:00000000000000000000000000000000000",
         ],
         pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-        target=azure_nextgen.containerregistry.v20191201preview.PipelineRunTargetPropertiesArgs(
+        target=azure_nextgen.containerregistry.v20201101preview.PipelineRunTargetPropertiesArgs(
             name="myblob.tar.gz",
             type="AzureStorageBlob",
         ),
@@ -126,7 +126,7 @@ pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun", {
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",
     request: {
@@ -157,16 +157,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRunArgs
         {
             ForceUpdateTag = "2020-03-04T17:23:21.9261521+00:00",
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunRequestArgs
             {
                 CatalogDigest = "sha256@",
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-                Source = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunSourcePropertiesArgs
+                Source = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunSourcePropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -188,7 +188,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20191201preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -225,14 +225,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun",
     force_update_tag="2020-03-04T17:23:21.9261521+00:00",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request=azure_nextgen.containerregistry.v20191201preview.PipelineRunRequestArgs(
+    request=azure_nextgen.containerregistry.v20201101preview.PipelineRunRequestArgs(
         catalog_digest="sha256@",
         pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-        source=azure_nextgen.containerregistry.v20191201preview.PipelineRunSourcePropertiesArgs(
+        source=azure_nextgen.containerregistry.v20201101preview.PipelineRunSourcePropertiesArgs(
             name="myblob.tar.gz",
             type="AzureStorageBlob",
         ),
@@ -249,7 +249,7 @@ pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun", {
     forceUpdateTag: "2020-03-04T17:23:21.9261521+00:00",
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",
@@ -2270,7 +2270,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd>
 
@@ -2297,7 +2297,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd>
 
@@ -2324,7 +2324,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd>
 
@@ -2351,7 +2351,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Pipeline<wbr>Run<wbr>Source<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd>
 
@@ -2508,7 +2508,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd>
 
@@ -2535,7 +2535,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd>
 
@@ -2562,7 +2562,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd>
 
@@ -2589,7 +2589,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Pipeline<wbr>Run<wbr>Target<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd>
 

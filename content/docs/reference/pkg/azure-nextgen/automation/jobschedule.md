@@ -1,7 +1,7 @@
 
 ---
 title: "JobSchedule"
-title_tag: "Resource JobSchedule | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.JobSchedule"
 meta_desc: "Explore the JobSchedule resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the job schedule."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module netapp | Package Azure NextGen"
+title_tag: "azure-nextgen.netapp.Account"
 meta_desc: "Explore the Account resource of the netapp module, including examples, input properties, output properties, lookup functions, and supporting types. NetApp account resource"
 ---
 

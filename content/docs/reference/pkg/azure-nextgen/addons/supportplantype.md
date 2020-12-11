@@ -1,7 +1,7 @@
 
 ---
 title: "SupportPlanType"
-title_tag: "Resource SupportPlanType | Module addons | Package Azure NextGen"
+title_tag: "azure-nextgen.addons.SupportPlanType"
 meta_desc: "Explore the SupportPlanType resource of the addons module, including examples, input properties, output properties, lookup functions, and supporting types. The status of the Canonical support plan."
 ---
 

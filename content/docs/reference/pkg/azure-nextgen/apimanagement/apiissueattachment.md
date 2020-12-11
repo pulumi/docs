@@ -1,7 +1,7 @@
 
 ---
 title: "ApiIssueAttachment"
-title_tag: "Resource ApiIssueAttachment | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ApiIssueAttachment"
 meta_desc: "Explore the ApiIssueAttachment resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Issue Attachment Contract details."
 ---
 

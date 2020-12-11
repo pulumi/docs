@@ -1,7 +1,7 @@
 
 ---
 title: "DpsCertificate"
-title_tag: "Resource DpsCertificate | Module devices | Package Azure NextGen"
+title_tag: "azure-nextgen.devices.DpsCertificate"
 meta_desc: "Explore the DpsCertificate resource of the devices module, including examples, input properties, output properties, lookup functions, and supporting types. The X509 Certificate."
 ---
 

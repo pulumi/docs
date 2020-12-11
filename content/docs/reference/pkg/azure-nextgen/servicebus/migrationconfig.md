@@ -1,7 +1,7 @@
 
 ---
 title: "MigrationConfig"
-title_tag: "Resource MigrationConfig | Module servicebus | Package Azure NextGen"
+title_tag: "azure-nextgen.servicebus.MigrationConfig"
 meta_desc: "Explore the MigrationConfig resource of the servicebus module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in List or Get Migration Config operation"
 ---
 

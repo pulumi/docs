@@ -234,6 +234,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="jobid_csharp">
 <a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
 </span> 
@@ -468,6 +478,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current entity tag for the streaming job. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -708,6 +728,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="jobid_nodejs">
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span> 
@@ -942,6 +972,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current entity tag for the streaming job. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -5073,7 +5113,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5120,7 +5160,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5167,7 +5207,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Reference<wbr>Input<wbr>Properties<wbr>Response | Stream<wbr>Input<wbr>Properties<wbr>Response</span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5214,7 +5254,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args, Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5719,7 +5759,7 @@ The following output properties are available:
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaseoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretableoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#bloboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#documentdboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhuboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#powerbioutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopicoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5739,7 +5779,7 @@ The following output properties are available:
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5796,7 +5836,7 @@ The following output properties are available:
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5816,7 +5856,7 @@ The following output properties are available:
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5873,7 +5913,7 @@ The following output properties are available:
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response | Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response | Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response | Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response | Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response | Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response | Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response | Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response | Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response</span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5893,7 +5933,7 @@ The following output properties are available:
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Avro<wbr>Serialization<wbr>Response | Csv<wbr>Serialization<wbr>Response | Json<wbr>Serialization<wbr>Response</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5950,7 +5990,7 @@ The following output properties are available:
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -5970,7 +6010,7 @@ The following output properties are available:
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Response<wbr>Args, Csv<wbr>Serialization<wbr>Response<wbr>Args, Json<wbr>Serialization<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -6347,7 +6387,7 @@ The following output properties are available:
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -6394,7 +6434,7 @@ The following output properties are available:
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -6441,7 +6481,7 @@ The following output properties are available:
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Avro<wbr>Serialization<wbr>Response | Csv<wbr>Serialization<wbr>Response | Json<wbr>Serialization<wbr>Response</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -6488,7 +6528,7 @@ The following output properties are available:
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Response<wbr>Args, Csv<wbr>Serialization<wbr>Response<wbr>Args, Json<wbr>Serialization<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -6526,7 +6566,7 @@ The following output properties are available:
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -6573,7 +6613,7 @@ The following output properties are available:
 <a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -6620,7 +6660,7 @@ The following output properties are available:
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response | Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -6667,7 +6707,7 @@ The following output properties are available:
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args, Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -7411,7 +7451,7 @@ The following output properties are available:
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -7421,7 +7461,7 @@ The following output properties are available:
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -7458,7 +7498,7 @@ The following output properties are available:
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -7468,7 +7508,7 @@ The following output properties are available:
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -7505,7 +7545,7 @@ The following output properties are available:
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response | Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response | Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -7515,7 +7555,7 @@ The following output properties are available:
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Avro<wbr>Serialization<wbr>Response | Csv<wbr>Serialization<wbr>Response | Json<wbr>Serialization<wbr>Response</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -7552,7 +7592,7 @@ The following output properties are available:
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -7562,7 +7602,7 @@ The following output properties are available:
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Response<wbr>Args, Csv<wbr>Serialization<wbr>Response<wbr>Args, Json<wbr>Serialization<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 

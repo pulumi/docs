@@ -1,7 +1,7 @@
 
 ---
 title: "StreamingEndpoint"
-title_tag: "Resource StreamingEndpoint | Module media | Package Azure NextGen"
+title_tag: "azure-nextgen.media.StreamingEndpoint"
 meta_desc: "Explore the StreamingEndpoint resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. The streaming endpoint."
 ---
 

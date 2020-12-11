@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachineScaleSetVMRunCommand"
-title_tag: "Resource VirtualMachineScaleSetVMRunCommand | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.VirtualMachineScaleSetVMRunCommand"
 meta_desc: "Explore the VirtualMachineScaleSetVMRunCommand resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Virtual Machine run command."
 ---
 
@@ -46,7 +46,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            RunAsPassword = "user1pwd",
+            RunAsPassword = "<runAsPassword>",
             RunAsUser = "user1",
             RunCommandName = "myRunCommand",
             Source = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineRunCommandScriptSourceArgs
@@ -91,7 +91,7 @@ func main() {
 				},
 			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
-			RunAsPassword:     pulumi.String("user1pwd"),
+			RunAsPassword:     pulumi.String("<runAsPassword>"),
 			RunAsUser:         pulumi.String("user1"),
 			RunCommandName:    pulumi.String("myRunCommand"),
 			Source: &compute.VirtualMachineRunCommandScriptSourceArgs{
@@ -132,7 +132,7 @@ virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.latest.VirtualM
         ),
     ],
     resource_group_name="myResourceGroup",
-    run_as_password="user1pwd",
+    run_as_password="<runAsPassword>",
     run_as_user="user1",
     run_command_name="myRunCommand",
     source=azure_nextgen.compute.latest.VirtualMachineRunCommandScriptSourceArgs(
@@ -166,7 +166,7 @@ const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.Virt
         },
     ],
     resourceGroupName: "myResourceGroup",
-    runAsPassword: "user1pwd",
+    runAsPassword: "<runAsPassword>",
     runAsUser: "user1",
     runCommandName: "myRunCommand",
     source: {

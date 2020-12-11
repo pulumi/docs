@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedWorkspace"
-title_tag: "Resource LinkedWorkspace | Module machinelearningservices | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningservices.LinkedWorkspace"
 meta_desc: "Explore the LinkedWorkspace resource of the machinelearningservices module, including examples, input properties, output properties, lookup functions, and supporting types. Linked workspace."
 ---
 

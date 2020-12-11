@@ -1,7 +1,7 @@
 
 ---
 title: "StorageInsightConfig"
-title_tag: "Resource StorageInsightConfig | Module operationalinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.operationalinsights.StorageInsightConfig"
 meta_desc: "Explore the StorageInsightConfig resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The top level storage insight resource container."
 ---
 

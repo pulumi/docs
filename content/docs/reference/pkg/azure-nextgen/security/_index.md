@@ -21,6 +21,7 @@ Explore the resources and functions of the security module in the Azure NextGen 
     <li><a href="iotdefendersetting" title="IotDefenderSetting"><span class="symbol resource"></span>IotDefenderSetting</a></li>
     <li><a href="iotsecuritysolution" title="IotSecuritySolution"><span class="symbol resource"></span>IotSecuritySolution</a></li>
     <li><a href="iotsensor" title="IotSensor"><span class="symbol resource"></span>IotSensor</a></li>
+    <li><a href="iotsite" title="IotSite"><span class="symbol resource"></span>IotSite</a></li>
     <li><a href="jitnetworkaccesspolicy" title="JitNetworkAccessPolicy"><span class="symbol resource"></span>JitNetworkAccessPolicy</a></li>
     <li><a href="onpremiseiotsensor" title="OnPremiseIotSensor"><span class="symbol resource"></span>OnPremiseIotSensor</a></li>
     <li><a href="securitycontact" title="SecurityContact"><span class="symbol resource"></span>SecurityContact</a></li>
@@ -41,6 +42,7 @@ Explore the resources and functions of the security module in the Azure NextGen 
     <li><a href="getiotdefendersetting" title="GetIotDefenderSetting"><span class="symbol function"></span>GetIotDefenderSetting</a></li>
     <li><a href="getiotsecuritysolution" title="GetIotSecuritySolution"><span class="symbol function"></span>GetIotSecuritySolution</a></li>
     <li><a href="getiotsensor" title="GetIotSensor"><span class="symbol function"></span>GetIotSensor</a></li>
+    <li><a href="getiotsite" title="GetIotSite"><span class="symbol function"></span>GetIotSite</a></li>
     <li><a href="getjitnetworkaccesspolicy" title="GetJitNetworkAccessPolicy"><span class="symbol function"></span>GetJitNetworkAccessPolicy</a></li>
     <li><a href="getonpremiseiotsensor" title="GetOnPremiseIotSensor"><span class="symbol function"></span>GetOnPremiseIotSensor</a></li>
     <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="symbol function"></span>GetSecurityContact</a></li>
@@ -56,7 +58,7 @@ Explore the resources and functions of the security module in the Azure NextGen 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.8</dd>
+	<dd>0.3.0</dd>
 </dl>
 
 

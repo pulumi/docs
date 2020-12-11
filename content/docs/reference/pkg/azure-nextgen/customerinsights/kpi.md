@@ -1,7 +1,7 @@
 
 ---
 title: "Kpi"
-title_tag: "Resource Kpi | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.Kpi"
 meta_desc: "Explore the Kpi resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The KPI resource format."
 ---
 
@@ -92,17 +92,17 @@ func main() {
 					Expression: pulumi.String("Id+4"),
 				},
 			},
-			CalculationWindow: pulumi.String("Day"),
+			CalculationWindow: "Day",
 			Description: pulumi.StringMap{
 				"en-us": pulumi.String("Kpi Description"),
 			},
 			DisplayName: pulumi.StringMap{
 				"en-us": pulumi.String("Kpi DisplayName"),
 			},
-			EntityType:     pulumi.String("Profile"),
+			EntityType:     "Profile",
 			EntityTypeName: pulumi.String("testProfile2327128"),
 			Expression:     pulumi.String("SavingAccountBalance"),
-			Function:       pulumi.String("Sum"),
+			Function:       "Sum",
 			GroupBy: pulumi.StringArray{
 				pulumi.String("SavingAccountBalance"),
 			},
@@ -214,7 +214,7 @@ const kpi = new azure_nextgen.customerinsights.latest.Kpi("kpi", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiAliasArgs]]</span> = None<span class="p">, </span><span class="nx">calculation_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">calculation_window_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extracts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiExtractArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_by</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kpi_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thres_holds</span><span class="p">:</span> <span class="nx">Optional[KpiThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiAliasArgs]]</span> = None<span class="p">, </span><span class="nx">calculation_window</span><span class="p">:</span> <span class="nx">Optional[CalculationWindowTypes]</span> = None<span class="p">, </span><span class="nx">calculation_window_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityTypes]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extracts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiExtractArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function</span><span class="p">:</span> <span class="nx">Optional[KpiFunctions]</span> = None<span class="p">, </span><span class="nx">group_by</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kpi_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thres_holds</span><span class="p">:</span> <span class="nx">Optional[KpiThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -392,7 +392,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculationwindow_csharp" style="color: inherit; text-decoration: inherit;">Calculation<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Calculation<wbr>Window<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
 
@@ -402,7 +402,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
 
@@ -432,7 +432,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Kpi<wbr>Functions</span>
     </dt>
     <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculationwindow_go" style="color: inherit; text-decoration: inherit;">Calculation<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
 
@@ -746,7 +746,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculationwindow_nodejs" style="color: inherit; text-decoration: inherit;">calculation<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Calculation<wbr>Window<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
 
@@ -756,7 +756,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Entity<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
 
@@ -786,7 +786,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Kpi<wbr>Functions</span>
     </dt>
     <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
 
@@ -923,7 +923,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculation_window_python" style="color: inherit; text-decoration: inherit;">calculation_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Calculation<wbr>Window<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
 
@@ -933,7 +933,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Entity<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
 
@@ -963,7 +963,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Kpi<wbr>Functions</span>
     </dt>
     <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
 

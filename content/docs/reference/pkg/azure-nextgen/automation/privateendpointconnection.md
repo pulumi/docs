@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "JobAgent"
-title_tag: "Resource JobAgent | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.JobAgent"
 meta_desc: "Explore the JobAgent resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL job agent."
 ---
 
@@ -17,7 +17,7 @@ An Azure SQL job agent.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a job agent with all properties
+### Create or update a job agent
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -27,128 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobAgent = new AzureNextGen.Sql.V20170301Preview.JobAgent("jobAgent", new AzureNextGen.Sql.V20170301Preview.JobAgentArgs
-        {
-            DatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
-            JobAgentName = "agent1",
-            Location = "southeastasia",
-            ResourceGroupName = "group1",
-            ServerName = "server1",
-            Sku = new AzureNextGen.Sql.V20170301Preview.Inputs.SkuArgs
-            {
-                Capacity = 100,
-                Name = "Agent",
-            },
-            Tags = 
-            {
-                { "octopus", "agent" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewJobAgent(ctx, "jobAgent", &sql.JobAgentArgs{
-			DatabaseId:        pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1"),
-			JobAgentName:      pulumi.String("agent1"),
-			Location:          pulumi.String("southeastasia"),
-			ResourceGroupName: pulumi.String("group1"),
-			ServerName:        pulumi.String("server1"),
-			Sku: &sql.SkuArgs{
-				Capacity: pulumi.Int(100),
-				Name:     pulumi.String("Agent"),
-			},
-			Tags: pulumi.StringMap{
-				"octopus": pulumi.String("agent"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-job_agent = azure_nextgen.sql.v20170301preview.JobAgent("jobAgent",
-    database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
-    job_agent_name="agent1",
-    location="southeastasia",
-    resource_group_name="group1",
-    server_name="server1",
-    sku=azure_nextgen.sql.v20170301preview.SkuArgs(
-        capacity=100,
-        name="Agent",
-    ),
-    tags={
-        "octopus": "agent",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const jobAgent = new azure_nextgen.sql.v20170301preview.JobAgent("jobAgent", {
-    databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
-    jobAgentName: "agent1",
-    location: "southeastasia",
-    resourceGroupName: "group1",
-    serverName: "server1",
-    sku: {
-        capacity: 100,
-        name: "Agent",
-    },
-    tags: {
-        octopus: "agent",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create or update a job agent with minimum properties
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var jobAgent = new AzureNextGen.Sql.V20170301Preview.JobAgent("jobAgent", new AzureNextGen.Sql.V20170301Preview.JobAgentArgs
+        var jobAgent = new AzureNextGen.Sql.V20200801Preview.JobAgent("jobAgent", new AzureNextGen.Sql.V20200801Preview.JobAgentArgs
         {
             DatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
             JobAgentName = "agent1",
@@ -170,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -200,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_agent = azure_nextgen.sql.v20170301preview.JobAgent("jobAgent",
+job_agent = azure_nextgen.sql.v20200801preview.JobAgent("jobAgent",
     database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     job_agent_name="agent1",
     location="southeastasia",
@@ -217,7 +96,7 @@ job_agent = azure_nextgen.sql.v20170301preview.JobAgent("jobAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobAgent = new azure_nextgen.sql.v20170301preview.JobAgent("jobAgent", {
+const jobAgent = new azure_nextgen.sql.v20200801preview.JobAgent("jobAgent", {
     databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     jobAgentName: "agent1",
     location: "southeastasia",

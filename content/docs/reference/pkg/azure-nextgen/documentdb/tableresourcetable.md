@@ -1,7 +1,7 @@
 
 ---
 title: "TableResourceTable"
-title_tag: "Resource TableResourceTable | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.TableResourceTable"
 meta_desc: "Explore the TableResourceTable resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Table."
 ---
 

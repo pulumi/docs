@@ -1,7 +1,7 @@
 
 ---
 title: "DataManager"
-title_tag: "Resource DataManager | Module hybriddata | Package Azure NextGen"
+title_tag: "azure-nextgen.hybriddata.DataManager"
 meta_desc: "Explore the DataManager resource of the hybriddata module, including examples, input properties, output properties, lookup functions, and supporting types. The DataManager resource."
 ---
 

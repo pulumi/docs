@@ -1,7 +1,7 @@
 
 ---
 title: "Trigger"
-title_tag: "Resource Trigger | Module datafactory | Package Azure NextGen"
+title_tag: "azure-nextgen.datafactory.Trigger"
 meta_desc: "Explore the Trigger resource of the datafactory module, including examples, input properties, output properties, lookup functions, and supporting types. Trigger resource type."
 ---
 
@@ -488,7 +488,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Chaining<wbr>Trigger<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#chainingtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Chaining<wbr>Trigger<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -535,7 +535,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#chainingtrigger">Chaining<wbr>Trigger</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -582,7 +582,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Chaining<wbr>Trigger | Multiple<wbr>Pipeline<wbr>Trigger | Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger | Tumbling<wbr>Window<wbr>Trigger</span>
+        <span class="property-type"><a href="#chainingtrigger">Chaining<wbr>Trigger</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Chaining<wbr>Trigger<wbr>Args, Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args, Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Args]</span>
+        <span class="property-type"><a href="#chainingtrigger">Chaining<wbr>Trigger<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -3787,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Tumbling<wbr>Window<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
 
@@ -3904,7 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
 
@@ -4021,7 +4021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Tumbling<wbr>Window<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
 
@@ -4138,7 +4138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Tumbling<wbr>Window<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module labservices | Package Azure NextGen"
+title_tag: "azure-nextgen.labservices.User"
 meta_desc: "Explore the User resource of the labservices module, including examples, input properties, output properties, lookup functions, and supporting types. The User registered to a lab"
 ---
 

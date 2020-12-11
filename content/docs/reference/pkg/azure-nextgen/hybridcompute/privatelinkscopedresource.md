@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkScopedResource"
-title_tag: "Resource PrivateLinkScopedResource | Module hybridcompute | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridcompute.PrivateLinkScopedResource"
 meta_desc: "Explore the PrivateLinkScopedResource resource of the hybridcompute module, including examples, input properties, output properties, lookup functions, and supporting types. A private link scoped resource"
 ---
 

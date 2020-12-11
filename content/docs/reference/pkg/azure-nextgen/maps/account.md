@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module maps | Package Azure NextGen"
+title_tag: "azure-nextgen.maps.Account"
 meta_desc: "Explore the Account resource of the maps module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure resource which represents access to a suite of Maps REST APIs."
 ---
 

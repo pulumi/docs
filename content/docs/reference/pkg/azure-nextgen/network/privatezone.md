@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateZone"
-title_tag: "Resource PrivateZone | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.PrivateZone"
 meta_desc: "Explore the PrivateZone resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Private DNS zone."
 ---
 

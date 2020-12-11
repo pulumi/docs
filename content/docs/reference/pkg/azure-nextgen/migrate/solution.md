@@ -1,7 +1,7 @@
 
 ---
 title: "Solution"
-title_tag: "Resource Solution | Module migrate | Package Azure NextGen"
+title_tag: "azure-nextgen.migrate.Solution"
 meta_desc: "Explore the Solution resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. Solution REST Resource."
 ---
 
@@ -1763,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
 
@@ -1840,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
 
@@ -1917,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Databases<wbr>Solution<wbr>Summary<wbr>Response | Servers<wbr>Solution<wbr>Summary<wbr>Response</span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
 
@@ -1994,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args, Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
 

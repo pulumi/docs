@@ -1,7 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.Job"
 meta_desc: "Explore the Job resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A job."
 ---
 
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Sql.V20170301Preview.Job("job", new AzureNextGen.Sql.V20170301Preview.JobArgs
+        var job = new AzureNextGen.Sql.V20200801Preview.Job("job", new AzureNextGen.Sql.V20200801Preview.JobArgs
         {
             Description = "my favourite job",
             JobAgentName = "agent1",
             JobName = "job1",
             ResourceGroupName = "group1",
-            Schedule = new AzureNextGen.Sql.V20170301Preview.Inputs.JobScheduleArgs
+            Schedule = new AzureNextGen.Sql.V20200801Preview.Inputs.JobScheduleArgs
             {
                 Enabled = true,
                 EndTime = "2015-09-24T23:59:59Z",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 				EndTime:   pulumi.String("2015-09-24T23:59:59Z"),
 				Interval:  pulumi.String("PT5M"),
 				StartTime: pulumi.String("2015-09-24T18:30:01Z"),
-				Type:      pulumi.String("Recurring"),
+				Type:      "Recurring",
 			},
 			ServerName: pulumi.String("server1"),
 		})
@@ -94,12 +94,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.sql.v20170301preview.Job("job",
+job = azure_nextgen.sql.v20200801preview.Job("job",
     description="my favourite job",
     job_agent_name="agent1",
     job_name="job1",
     resource_group_name="group1",
-    schedule=azure_nextgen.sql.v20170301preview.JobScheduleArgs(
+    schedule=azure_nextgen.sql.v20200801preview.JobScheduleArgs(
         enabled=True,
         end_time="2015-09-24T23:59:59Z",
         interval="PT5M",
@@ -118,7 +118,7 @@ job = azure_nextgen.sql.v20170301preview.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.sql.v20170301preview.Job("job", {
+const job = new azure_nextgen.sql.v20200801preview.Job("job", {
     description: "my favourite job",
     jobAgentName: "agent1",
     jobName: "job1",
@@ -147,7 +147,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Sql.V20170301Preview.Job("job", new AzureNextGen.Sql.V20170301Preview.JobArgs
+        var job = new AzureNextGen.Sql.V20200801Preview.Job("job", new AzureNextGen.Sql.V20200801Preview.JobArgs
         {
             JobAgentName = "agent1",
             JobName = "job1",
@@ -168,7 +168,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -197,7 +197,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.sql.v20170301preview.Job("job",
+job = azure_nextgen.sql.v20200801preview.Job("job",
     job_agent_name="agent1",
     job_name="job1",
     resource_group_name="group1",
@@ -213,7 +213,7 @@ job = azure_nextgen.sql.v20170301preview.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.sql.v20170301preview.Job("job", {
+const job = new azure_nextgen.sql.v20200801preview.Job("job", {
     jobAgentName: "agent1",
     jobName: "job1",
     resourceGroupName: "group1",
@@ -923,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Schedule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Schedule interval type{{% /md %}}</dd>
 
@@ -980,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule interval type{{% /md %}}</dd>
 
@@ -1037,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Job<wbr>Schedule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Schedule interval type{{% /md %}}</dd>
 
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1112,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Job<wbr>Schedule<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Schedule interval type{{% /md %}}</dd>
 
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1276,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

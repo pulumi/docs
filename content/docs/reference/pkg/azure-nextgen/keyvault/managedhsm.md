@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedHsm"
-title_tag: "Resource ManagedHsm | Module keyvault | Package Azure NextGen"
+title_tag: "azure-nextgen.keyvault.ManagedHsm"
 meta_desc: "Explore the ManagedHsm resource of the keyvault module, including examples, input properties, output properties, lookup functions, and supporting types. Resource information with extended details."
 ---
 
@@ -89,7 +89,7 @@ func main() {
 			ResourceGroupName: pulumi.String("hsm-group"),
 			Sku: &keyvault.ManagedHsmSkuArgs{
 				Family: pulumi.String("B"),
-				Name:   pulumi.String("Standard_B1"),
+				Name:   "Standard_B1",
 			},
 			Tags: pulumi.StringMap{
 				"Dept":        pulumi.String("hsm"),
@@ -765,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
 
@@ -842,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
 
@@ -996,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
 
@@ -1483,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Family</span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
 
@@ -1493,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
 
@@ -1510,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
 
@@ -1520,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
 
@@ -1537,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Family</span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
 
@@ -1547,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
 
@@ -1564,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Hsm<wbr>Sku<wbr>Family</span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
 
@@ -1574,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Managed<wbr>Hsm<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
 

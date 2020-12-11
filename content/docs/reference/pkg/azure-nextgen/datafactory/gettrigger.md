@@ -224,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -238,7 +248,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Chaining<wbr>Trigger<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#chainingtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Chaining<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -271,6 +281,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -285,7 +305,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#chainingtriggerresponse">Chaining<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetriggerresponse">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtriggerresponse">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtriggerresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -318,6 +338,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -332,7 +362,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Chaining<wbr>Trigger<wbr>Response | Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response | Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Response</span>
+        <span class="property-type"><a href="#chainingtriggerresponse">Chaining<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetriggerresponse">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtriggerresponse">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtriggerresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -365,6 +395,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -379,7 +419,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#chainingtriggerresponse">Chaining<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#multiplepipelinetriggerresponse">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#reruntumblingwindowtriggerresponse">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#tumblingwindowtriggerresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 

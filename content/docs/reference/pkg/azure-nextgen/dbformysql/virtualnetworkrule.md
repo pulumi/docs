@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkRule"
-title_tag: "Resource VirtualNetworkRule | Module dbformysql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformysql.VirtualNetworkRule"
 meta_desc: "Explore the VirtualNetworkRule resource of the dbformysql module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network rule."
 ---
 

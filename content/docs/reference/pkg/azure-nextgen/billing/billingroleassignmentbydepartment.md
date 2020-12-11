@@ -1,7 +1,7 @@
 
 ---
 title: "BillingRoleAssignmentByDepartment"
-title_tag: "Resource BillingRoleAssignmentByDepartment | Module billing | Package Azure NextGen"
+title_tag: "azure-nextgen.billing.BillingRoleAssignmentByDepartment"
 meta_desc: "Explore the BillingRoleAssignmentByDepartment resource of the billing module, including examples, input properties, output properties, lookup functions, and supporting types. The role assignment"
 ---
 

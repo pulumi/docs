@@ -1,7 +1,7 @@
 
 ---
 title: "SqlPoolWorkloadClassifier"
-title_tag: "Resource SqlPoolWorkloadClassifier | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.SqlPoolWorkloadClassifier"
 meta_desc: "Explore the SqlPoolWorkloadClassifier resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. Workload classifier operations for a data warehouse"
 ---
 

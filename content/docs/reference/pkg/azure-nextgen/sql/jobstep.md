@@ -1,7 +1,7 @@
 
 ---
 title: "JobStep"
-title_tag: "Resource JobStep | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.JobStep"
 meta_desc: "Explore the JobStep resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A job step."
 ---
 
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobStep = new AzureNextGen.Sql.V20170301Preview.JobStep("jobStep", new AzureNextGen.Sql.V20170301Preview.JobStepArgs
+        var jobStep = new AzureNextGen.Sql.V20200801Preview.JobStep("jobStep", new AzureNextGen.Sql.V20200801Preview.JobStepArgs
         {
-            Action = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepActionArgs
+            Action = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepActionArgs
             {
                 Source = "Inline",
                 Type = "TSql",
                 Value = "select 2",
             },
             Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
-            ExecutionOptions = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepExecutionOptionsArgs
+            ExecutionOptions = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepExecutionOptionsArgs
             {
                 InitialRetryIntervalSeconds = 11,
                 MaximumRetryIntervalSeconds = 222,
@@ -46,7 +46,7 @@ class MyStack : Stack
             },
             JobAgentName = "agent1",
             JobName = "job1",
-            Output = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepOutputArgs
+            Output = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepOutputArgs
             {
                 Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
                 DatabaseName = "database3",
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -132,14 +132,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
-    action=azure_nextgen.sql.v20170301preview.JobStepActionArgs(
+job_step = azure_nextgen.sql.v20200801preview.JobStep("jobStep",
+    action=azure_nextgen.sql.v20200801preview.JobStepActionArgs(
         source="Inline",
         type="TSql",
         value="select 2",
     ),
     credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
-    execution_options=azure_nextgen.sql.v20170301preview.JobStepExecutionOptionsArgs(
+    execution_options=azure_nextgen.sql.v20200801preview.JobStepExecutionOptionsArgs(
         initial_retry_interval_seconds=11,
         maximum_retry_interval_seconds=222,
         retry_attempts=42,
@@ -148,7 +148,7 @@ job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
     ),
     job_agent_name="agent1",
     job_name="job1",
-    output=azure_nextgen.sql.v20170301preview.JobStepOutputArgs(
+    output=azure_nextgen.sql.v20200801preview.JobStepOutputArgs(
         credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
         database_name="database3",
         resource_group_name="group3",
@@ -174,7 +174,7 @@ job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobStep = new azure_nextgen.sql.v20170301preview.JobStep("jobStep", {
+const jobStep = new azure_nextgen.sql.v20200801preview.JobStep("jobStep", {
     action: {
         source: "Inline",
         type: "TSql",
@@ -221,9 +221,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobStep = new AzureNextGen.Sql.V20170301Preview.JobStep("jobStep", new AzureNextGen.Sql.V20170301Preview.JobStepArgs
+        var jobStep = new AzureNextGen.Sql.V20200801Preview.JobStep("jobStep", new AzureNextGen.Sql.V20200801Preview.JobStepArgs
         {
-            Action = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepActionArgs
+            Action = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepActionArgs
             {
                 Value = "select 1",
             },
@@ -249,7 +249,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -284,8 +284,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
-    action=azure_nextgen.sql.v20170301preview.JobStepActionArgs(
+job_step = azure_nextgen.sql.v20200801preview.JobStep("jobStep",
+    action=azure_nextgen.sql.v20200801preview.JobStepActionArgs(
         value="select 1",
     ),
     credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
@@ -306,7 +306,7 @@ job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobStep = new azure_nextgen.sql.v20170301preview.JobStep("jobStep", {
+const jobStep = new azure_nextgen.sql.v20200801preview.JobStep("jobStep", {
     action: {
         value: "select 1",
     },
@@ -1170,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Action<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
 
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
 
@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
 
@@ -1217,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
 
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Job<wbr>Step<wbr>Action<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
 
@@ -1254,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Job<wbr>Step<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
 
@@ -1281,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Job<wbr>Step<wbr>Action<wbr>Source</span>
     </dt>
     <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
 
@@ -1291,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Job<wbr>Step<wbr>Action<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
 
@@ -2026,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Output<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
 
@@ -2113,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
 
@@ -2200,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Job<wbr>Step<wbr>Output<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
 
@@ -2287,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Job<wbr>Step<wbr>Output<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
 

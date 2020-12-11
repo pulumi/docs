@@ -1,7 +1,7 @@
 
 ---
 title: "TrafficManagerUserMetricsKey"
-title_tag: "Resource TrafficManagerUserMetricsKey | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.TrafficManagerUserMetricsKey"
 meta_desc: "Explore the TrafficManagerUserMetricsKey resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Class representing Traffic Manager User Metrics."
 ---
 

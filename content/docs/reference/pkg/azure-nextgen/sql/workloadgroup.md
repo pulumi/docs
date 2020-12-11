@@ -1,7 +1,7 @@
 
 ---
 title: "WorkloadGroup"
-title_tag: "Resource WorkloadGroup | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.WorkloadGroup"
 meta_desc: "Explore the WorkloadGroup resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Workload group operations for a data warehouse"
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadGroup = new AzureNextGen.Sql.V20190601Preview.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.V20190601Preview.WorkloadGroupArgs
+        var workloadGroup = new AzureNextGen.Sql.V20200801Preview.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.V20200801Preview.WorkloadGroupArgs
         {
             DatabaseName = "testdb",
             Importance = "normal",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +89,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup",
+workload_group = azure_nextgen.sql.v20200801preview.WorkloadGroup("workloadGroup",
     database_name="testdb",
     importance="normal",
     max_resource_percent=100,
@@ -111,7 +111,7 @@ workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadGroup = new azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup", {
+const workloadGroup = new azure_nextgen.sql.v20200801preview.WorkloadGroup("workloadGroup", {
     databaseName: "testdb",
     importance: "normal",
     maxResourcePercent: 100,
@@ -138,7 +138,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadGroup = new AzureNextGen.Sql.V20190601Preview.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.V20190601Preview.WorkloadGroupArgs
+        var workloadGroup = new AzureNextGen.Sql.V20200801Preview.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.V20200801Preview.WorkloadGroupArgs
         {
             DatabaseName = "testdb",
             MaxResourcePercent = 100,
@@ -162,7 +162,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -194,7 +194,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup",
+workload_group = azure_nextgen.sql.v20200801preview.WorkloadGroup("workloadGroup",
     database_name="testdb",
     max_resource_percent=100,
     min_resource_percent=0,
@@ -213,7 +213,7 @@ workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadGroup = new azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup", {
+const workloadGroup = new azure_nextgen.sql.v20200801preview.WorkloadGroup("workloadGroup", {
     databaseName: "testdb",
     maxResourcePercent: 100,
     minResourcePercent: 0,

@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkScope"
-title_tag: "Resource PrivateLinkScope | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.PrivateLinkScope"
 meta_desc: "Explore the PrivateLinkScope resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Monitor PrivateLinkScope definition."
 ---
 

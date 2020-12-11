@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlRoleAssignment"
-title_tag: "Resource SqlResourceSqlRoleAssignment | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.SqlResourceSqlRoleAssignment"
 meta_desc: "Explore the SqlResourceSqlRoleAssignment resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Role Assignment"
 ---
 

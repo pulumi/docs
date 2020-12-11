@@ -1,7 +1,7 @@
 
 ---
 title: "SoftwareUpdateConfigurationByName"
-title_tag: "Resource SoftwareUpdateConfigurationByName | Module automation | Package Azure NextGen"
+title_tag: "azure-nextgen.automation.SoftwareUpdateConfigurationByName"
 meta_desc: "Explore the SoftwareUpdateConfigurationByName resource of the automation module, including examples, input properties, output properties, lookup functions, and supporting types. Software update configuration properties."
 ---
 
@@ -1398,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Schedule<wbr>Day</span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -1425,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -1452,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Schedule<wbr>Day</span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -1479,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Schedule<wbr>Day</span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
 
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpackageclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Linux<wbr>Update<wbr>Classes</span>
     </dt>
     <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
 
@@ -2408,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpackageclassifications_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
 
@@ -2455,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpackageclassifications_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Package<wbr>Classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Linux<wbr>Update<wbr>Classes</span>
     </dt>
     <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
 
@@ -2502,7 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_package_classifications_python" style="color: inherit; text-decoration: inherit;">included_<wbr>package_<wbr>classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Linux<wbr>Update<wbr>Classes</span>
     </dt>
     <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
 
@@ -3037,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Schedule<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
 
@@ -3174,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
 
@@ -3311,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Schedule<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
 
@@ -3448,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Schedule<wbr>Frequency</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
 
@@ -4383,7 +4383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteroperator_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Tag<wbr>Operators</span>
     </dt>
     <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
 
@@ -4410,7 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteroperator_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
 
@@ -4437,7 +4437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteroperator_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Tag<wbr>Operators</span>
     </dt>
     <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
 
@@ -4464,7 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_operator_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Tag<wbr>Operators</span>
     </dt>
     <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
 
@@ -5097,7 +5097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Operating<wbr>System<wbr>Type</span>
     </dt>
     <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
 
@@ -5174,7 +5174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
 
@@ -5251,7 +5251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Operating<wbr>System<wbr>Type</span>
     </dt>
     <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
 
@@ -5328,7 +5328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Operating<wbr>System<wbr>Type</span>
     </dt>
     <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
 
@@ -5755,7 +5755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedupdateclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Update<wbr>Classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Windows<wbr>Update<wbr>Classes</span>
     </dt>
     <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
 
@@ -5802,7 +5802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedupdateclassifications_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Update<wbr>Classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
 
@@ -5849,7 +5849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedupdateclassifications_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Update<wbr>Classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Windows<wbr>Update<wbr>Classes</span>
     </dt>
     <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
 
@@ -5896,7 +5896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_update_classifications_python" style="color: inherit; text-decoration: inherit;">included_<wbr>update_<wbr>classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Windows<wbr>Update<wbr>Classes</span>
     </dt>
     <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
 

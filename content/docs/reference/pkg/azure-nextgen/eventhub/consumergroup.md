@@ -1,7 +1,7 @@
 
 ---
 title: "ConsumerGroup"
-title_tag: "Resource ConsumerGroup | Module eventhub | Package Azure NextGen"
+title_tag: "azure-nextgen.eventhub.ConsumerGroup"
 meta_desc: "Explore the ConsumerGroup resource of the eventhub module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in List or Get Consumer group operation"
 ---
 

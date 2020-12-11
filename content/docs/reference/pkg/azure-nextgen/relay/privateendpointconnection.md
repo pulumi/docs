@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module relay | Package Azure NextGen"
+title_tag: "azure-nextgen.relay.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the relay module, including examples, input properties, output properties, lookup functions, and supporting types. Private endpoint connection resource."
 ---
 
@@ -30,10 +30,10 @@ class MyStack : Stack
         var privateEndpointConnection = new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnectionArgs
         {
             Location = "South Central US",
-            NamespaceName = "sdk-Namespace-5849",
+            NamespaceName = "example-RelayNamespace-5849",
             PrivateEndpoint = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateEndpointArgs
             {
-                Id = "/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+                Id = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
             },
             PrivateEndpointConnectionName = "{privateEndpointConnection name}",
             PrivateLinkServiceConnectionState = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateLinkServiceConnectionStateArgs
@@ -41,7 +41,7 @@ class MyStack : Stack
                 Description = "You may pass",
                 Status = "Approved",
             },
-            ResourceGroupName = "ArunMonocle",
+            ResourceGroupName = "resourcegroup",
         });
     }
 
@@ -65,16 +65,16 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := relay.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &relay.PrivateEndpointConnectionArgs{
 			Location:      pulumi.String("South Central US"),
-			NamespaceName: pulumi.String("sdk-Namespace-5849"),
+			NamespaceName: pulumi.String("example-RelayNamespace-5849"),
 			PrivateEndpoint: &relay.PrivateEndpointArgs{
-				Id: pulumi.String("/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1"),
+				Id: pulumi.String("/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1"),
 			},
 			PrivateEndpointConnectionName: pulumi.String("{privateEndpointConnection name}"),
 			PrivateLinkServiceConnectionState: &relay.PrivateLinkServiceConnectionStateArgs{
 				Description: pulumi.String("You may pass"),
 				Status:      pulumi.String("Approved"),
 			},
-			ResourceGroupName: pulumi.String("ArunMonocle"),
+			ResourceGroupName: pulumi.String("resourcegroup"),
 		})
 		if err != nil {
 			return err
@@ -95,16 +95,16 @@ import pulumi_azure_nextgen as azure_nextgen
 
 private_endpoint_connection = azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
     location="South Central US",
-    namespace_name="sdk-Namespace-5849",
+    namespace_name="example-RelayNamespace-5849",
     private_endpoint=azure_nextgen.relay.v20180101preview.PrivateEndpointArgs(
-        id="/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+        id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
     ),
     private_endpoint_connection_name="{privateEndpointConnection name}",
     private_link_service_connection_state=azure_nextgen.relay.v20180101preview.PrivateLinkServiceConnectionStateArgs(
         description="You may pass",
         status="Approved",
     ),
-    resource_group_name="ArunMonocle")
+    resource_group_name="resourcegroup")
 
 ```
 
@@ -118,16 +118,16 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
     location: "South Central US",
-    namespaceName: "sdk-Namespace-5849",
+    namespaceName: "example-RelayNamespace-5849",
     privateEndpoint: {
-        id: "/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+        id: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
     },
     privateEndpointConnectionName: "{privateEndpointConnection name}",
     privateLinkServiceConnectionState: {
         description: "You may pass",
         status: "Approved",
     },
-    resourceGroupName: "ArunMonocle",
+    resourceGroupName: "resourcegroup",
 });
 
 ```
@@ -1029,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.{{% /md %}}</dd>
 
@@ -1066,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.{{% /md %}}</dd>
 
@@ -1103,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.{{% /md %}}</dd>
 
@@ -1140,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.{{% /md %}}</dd>
 

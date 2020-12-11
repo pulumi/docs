@@ -1,7 +1,7 @@
 
 ---
 title: "HcxEnterpriseSite"
-title_tag: "Resource HcxEnterpriseSite | Module avs | Package Azure NextGen"
+title_tag: "azure-nextgen.avs.HcxEnterpriseSite"
 meta_desc: "Explore the HcxEnterpriseSite resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. An HCX Enterprise Site resource"
 ---
 

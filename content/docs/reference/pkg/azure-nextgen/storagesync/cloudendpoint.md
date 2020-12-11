@@ -1,7 +1,7 @@
 
 ---
 title: "CloudEndpoint"
-title_tag: "Resource CloudEndpoint | Module storagesync | Package Azure NextGen"
+title_tag: "azure-nextgen.storagesync.CloudEndpoint"
 meta_desc: "Explore the CloudEndpoint resource of the storagesync module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud Endpoint object."
 ---
 

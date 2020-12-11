@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module desktopvirtualization | Package Azure NextGen"
+title_tag: "azure-nextgen.desktopvirtualization.Workspace"
 meta_desc: "Explore the Workspace resource of the desktopvirtualization module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Workspace definition."
 ---
 

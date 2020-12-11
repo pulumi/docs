@@ -18,6 +18,8 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="elasticpool" title="ElasticPool"><span class="symbol resource"></span>ElasticPool</a></li>
     <li><a href="failovergroup" title="FailoverGroup"><span class="symbol resource"></span>FailoverGroup</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="geobackuppolicy" title="GeoBackupPolicy"><span class="symbol resource"></span>GeoBackupPolicy</a></li>
+    <li><a href="hybridlink" title="HybridLink"><span class="symbol resource"></span>HybridLink</a></li>
     <li><a href="instancefailovergroup" title="InstanceFailoverGroup"><span class="symbol resource"></span>InstanceFailoverGroup</a></li>
     <li><a href="instancepool" title="InstancePool"><span class="symbol resource"></span>InstancePool</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
@@ -33,6 +35,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="managedinstanceadministrator" title="ManagedInstanceAdministrator"><span class="symbol resource"></span>ManagedInstanceAdministrator</a></li>
     <li><a href="managedinstanceazureadonlyauthentication" title="ManagedInstanceAzureADOnlyAuthentication"><span class="symbol resource"></span>ManagedInstanceAzureADOnlyAuthentication</a></li>
     <li><a href="managedinstancekey" title="ManagedInstanceKey"><span class="symbol resource"></span>ManagedInstanceKey</a></li>
+    <li><a href="managedinstanceprivateendpointconnection" title="ManagedInstancePrivateEndpointConnection"><span class="symbol resource"></span>ManagedInstancePrivateEndpointConnection</a></li>
     <li><a href="managedinstancevulnerabilityassessment" title="ManagedInstanceVulnerabilityAssessment"><span class="symbol resource"></span>ManagedInstanceVulnerabilityAssessment</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="sensitivitylabel" title="SensitivityLabel"><span class="symbol resource"></span>SensitivityLabel</a></li>
@@ -62,6 +65,8 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="getelasticpool" title="GetElasticPool"><span class="symbol function"></span>GetElasticPool</a></li>
     <li><a href="getfailovergroup" title="GetFailoverGroup"><span class="symbol function"></span>GetFailoverGroup</a></li>
     <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
+    <li><a href="getgeobackuppolicy" title="GetGeoBackupPolicy"><span class="symbol function"></span>GetGeoBackupPolicy</a></li>
+    <li><a href="gethybridlink" title="GetHybridLink"><span class="symbol function"></span>GetHybridLink</a></li>
     <li><a href="getinstancefailovergroup" title="GetInstanceFailoverGroup"><span class="symbol function"></span>GetInstanceFailoverGroup</a></li>
     <li><a href="getinstancepool" title="GetInstancePool"><span class="symbol function"></span>GetInstancePool</a></li>
     <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
@@ -77,6 +82,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="getmanagedinstanceadministrator" title="GetManagedInstanceAdministrator"><span class="symbol function"></span>GetManagedInstanceAdministrator</a></li>
     <li><a href="getmanagedinstanceazureadonlyauthentication" title="GetManagedInstanceAzureADOnlyAuthentication"><span class="symbol function"></span>GetManagedInstanceAzureADOnlyAuthentication</a></li>
     <li><a href="getmanagedinstancekey" title="GetManagedInstanceKey"><span class="symbol function"></span>GetManagedInstanceKey</a></li>
+    <li><a href="getmanagedinstanceprivateendpointconnection" title="GetManagedInstancePrivateEndpointConnection"><span class="symbol function"></span>GetManagedInstancePrivateEndpointConnection</a></li>
     <li><a href="getmanagedinstancevulnerabilityassessment" title="GetManagedInstanceVulnerabilityAssessment"><span class="symbol function"></span>GetManagedInstanceVulnerabilityAssessment</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getsensitivitylabel" title="GetSensitivityLabel"><span class="symbol function"></span>GetSensitivityLabel</a></li>
@@ -104,7 +110,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.8</dd>
+	<dd>0.3.0</dd>
 </dl>
 
 

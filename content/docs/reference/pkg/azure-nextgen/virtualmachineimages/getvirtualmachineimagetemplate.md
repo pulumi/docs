@@ -184,6 +184,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
@@ -248,7 +258,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response&gt;&gt;</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -321,6 +331,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
@@ -385,7 +405,7 @@ The following output properties are available:
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesourceresponse">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesourceresponse">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsourceresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -458,6 +478,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
@@ -522,7 +552,7 @@ The following output properties are available:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response | Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response | Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesourceresponse">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesourceresponse">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsourceresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -595,6 +625,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
@@ -659,7 +699,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesourceresponse">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesourceresponse">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsourceresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 

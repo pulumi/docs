@@ -1,7 +1,7 @@
 
 ---
 title: "Binding"
-title_tag: "Resource Binding | Module appplatform | Package Azure NextGen"
+title_tag: "azure-nextgen.appplatform.Binding"
 meta_desc: "Explore the Binding resource of the appplatform module, including examples, input properties, output properties, lookup functions, and supporting types. Binding resource payload"
 ---
 

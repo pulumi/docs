@@ -1,7 +1,7 @@
 
 ---
 title: "EventHub"
-title_tag: "Resource EventHub | Module eventhub | Package Azure NextGen"
+title_tag: "azure-nextgen.eventhub.EventHub"
 meta_desc: "Explore the EventHub resource of the eventhub module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in List or Get Event Hub operation"
 ---
 
@@ -79,7 +79,7 @@ func main() {
 					StorageAccountResourceId: pulumi.String("/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage"),
 				},
 				Enabled:           pulumi.Bool(true),
-				Encoding:          pulumi.String("Avro"),
+				Encoding:          "Avro",
 				IntervalInSeconds: pulumi.Int(120),
 				SizeLimitInBytes:  pulumi.Int(10485763),
 			},
@@ -88,7 +88,7 @@ func main() {
 			NamespaceName:          pulumi.String("sdk-Namespace-5357"),
 			PartitionCount:         pulumi.Int(4),
 			ResourceGroupName:      pulumi.String("Default-NotificationHubs-AustraliaEast"),
-			Status:                 pulumi.String("Active"),
+			Status:                 "Active",
 		})
 		if err != nil {
 			return err
@@ -174,7 +174,7 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[CaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[CaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[EntityStatus]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -412,7 +412,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Entity<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd>
 
@@ -566,7 +566,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Entity<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd>
 
@@ -643,7 +643,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Entity<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Encoding<wbr>Capture<wbr>Description</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd>
 
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd>
 
@@ -1113,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Encoding<wbr>Capture<wbr>Description</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd>
 
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Encoding<wbr>Capture<wbr>Description</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd>
 

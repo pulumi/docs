@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module batch | Package Azure NextGen"
+title_tag: "azure-nextgen.batch.Application"
 meta_desc: "Explore the Application resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Contains information about an application in a Batch account."
 ---
 

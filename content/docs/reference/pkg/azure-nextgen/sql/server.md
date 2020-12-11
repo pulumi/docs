@@ -1,7 +1,7 @@
 
 ---
 title: "Server"
-title_tag: "Resource Server | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.Server"
 meta_desc: "Explore the Server resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server."
 ---
 
@@ -30,7 +30,7 @@ class MyStack : Stack
         var server = new AzureNextGen.Sql.Latest.Server("server", new AzureNextGen.Sql.Latest.ServerArgs
         {
             AdministratorLogin = "dummylogin",
-            AdministratorLoginPassword = "Un53cuRE!",
+            AdministratorLoginPassword = "<administratorLoginPassword>",
             Location = "Japan East",
             ResourceGroupName = "sqlcrudtest-7398",
             ServerName = "sqlcrudtest-4645",
@@ -62,7 +62,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewServer(ctx, "server", &sql.ServerArgs{
 			AdministratorLogin:         pulumi.String("dummylogin"),
-			AdministratorLoginPassword: pulumi.String("Un53cuRE!"),
+			AdministratorLoginPassword: pulumi.String("<administratorLoginPassword>"),
 			Location:                   pulumi.String("Japan East"),
 			ResourceGroupName:          pulumi.String("sqlcrudtest-7398"),
 			ServerName:                 pulumi.String("sqlcrudtest-4645"),
@@ -90,7 +90,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.sql.latest.Server("server",
     administrator_login="dummylogin",
-    administrator_login_password="Un53cuRE!",
+    administrator_login_password="<administratorLoginPassword>",
     location="Japan East",
     resource_group_name="sqlcrudtest-7398",
     server_name="sqlcrudtest-4645",
@@ -111,7 +111,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.sql.latest.Server("server", {
     administratorLogin: "dummylogin",
-    administratorLoginPassword: "Un53cuRE!",
+    administratorLoginPassword: "<administratorLoginPassword>",
     location: "Japan East",
     resourceGroupName: "sqlcrudtest-7398",
     serverName: "sqlcrudtest-4645",
@@ -138,7 +138,7 @@ class MyStack : Stack
         var server = new AzureNextGen.Sql.Latest.Server("server", new AzureNextGen.Sql.Latest.ServerArgs
         {
             AdministratorLogin = "dummylogin",
-            AdministratorLoginPassword = "Un53cuRE!",
+            AdministratorLoginPassword = "<administratorLoginPassword>",
             Location = "Japan East",
             ResourceGroupName = "sqlcrudtest-7398",
             ServerName = "sqlcrudtest-4645",
@@ -165,7 +165,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewServer(ctx, "server", &sql.ServerArgs{
 			AdministratorLogin:         pulumi.String("dummylogin"),
-			AdministratorLoginPassword: pulumi.String("Un53cuRE!"),
+			AdministratorLoginPassword: pulumi.String("<administratorLoginPassword>"),
 			Location:                   pulumi.String("Japan East"),
 			ResourceGroupName:          pulumi.String("sqlcrudtest-7398"),
 			ServerName:                 pulumi.String("sqlcrudtest-4645"),
@@ -189,7 +189,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.sql.latest.Server("server",
     administrator_login="dummylogin",
-    administrator_login_password="Un53cuRE!",
+    administrator_login_password="<administratorLoginPassword>",
     location="Japan East",
     resource_group_name="sqlcrudtest-7398",
     server_name="sqlcrudtest-4645")
@@ -206,7 +206,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.sql.latest.Server("server", {
     administratorLogin: "dummylogin",
-    administratorLoginPassword: "Un53cuRE!",
+    administratorLoginPassword: "<administratorLoginPassword>",
     location: "Japan East",
     resourceGroupName: "sqlcrudtest-7398",
     serverName: "sqlcrudtest-4645",
@@ -228,7 +228,7 @@ const server = new azure_nextgen.sql.latest.Server("server", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServerVersion]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,7 +466,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}The version of the server.{{% /md %}}</dd>
 
@@ -543,7 +543,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the server.{{% /md %}}</dd>
 
@@ -620,7 +620,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}The version of the server.{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Server<wbr>Version</span>
     </dt>
     <dd>{{% md %}}The version of the server.{{% /md %}}</dd>
 

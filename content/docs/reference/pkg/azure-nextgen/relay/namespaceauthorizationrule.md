@@ -1,7 +1,7 @@
 
 ---
 title: "NamespaceAuthorizationRule"
-title_tag: "Resource NamespaceAuthorizationRule | Module relay | Package Azure NextGen"
+title_tag: "azure-nextgen.relay.NamespaceAuthorizationRule"
 meta_desc: "Explore the NamespaceAuthorizationRule resource of the relay module, including examples, input properties, output properties, lookup functions, and supporting types. Description of a namespace authorization rule."
 ---
 
@@ -29,9 +29,9 @@ class MyStack : Stack
     {
         var namespaceAuthorizationRule = new AzureNextGen.Relay.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Relay.Latest.NamespaceAuthorizationRuleArgs
         {
-            AuthorizationRuleName = "sdk-RelayAuthRules-01",
-            NamespaceName = "sdk-RelayNamespace-01",
-            ResourceGroupName = "RG-eg",
+            AuthorizationRuleName = "example-RelayAuthRules-01",
+            NamespaceName = "example-RelayNamespace-01",
+            ResourceGroupName = "resourcegroup",
             Rights = 
             {
                 "Listen",
@@ -47,35 +47,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := relay.NewNamespaceAuthorizationRule(ctx, "namespaceAuthorizationRule", &relay.NamespaceAuthorizationRuleArgs{
-			AuthorizationRuleName: pulumi.String("sdk-RelayAuthRules-01"),
-			NamespaceName:         pulumi.String("sdk-RelayNamespace-01"),
-			ResourceGroupName:     pulumi.String("RG-eg"),
-			Rights: pulumi.StringArray{
-				pulumi.String("Listen"),
-				pulumi.String("Send"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +57,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 namespace_authorization_rule = azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
-    authorization_rule_name="sdk-RelayAuthRules-01",
-    namespace_name="sdk-RelayNamespace-01",
-    resource_group_name="RG-eg",
+    authorization_rule_name="example-RelayAuthRules-01",
+    namespace_name="example-RelayNamespace-01",
+    resource_group_name="resourcegroup",
     rights=[
         "Listen",
         "Send",
@@ -104,9 +76,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
-    authorizationRuleName: "sdk-RelayAuthRules-01",
-    namespaceName: "sdk-RelayNamespace-01",
-    resourceGroupName: "RG-eg",
+    authorizationRuleName: "example-RelayAuthRules-01",
+    namespaceName: "example-RelayNamespace-01",
+    resourceGroupName: "resourcegroup",
     rights: [
         "Listen",
         "Send",
@@ -129,7 +101,7 @@ const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAutho
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessRights]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,7 +309,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Access<wbr>Rights&gt;</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -384,7 +356,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -431,7 +403,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Access<wbr>Rights[]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -478,7 +450,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Access<wbr>Rights]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 

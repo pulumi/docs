@@ -1,7 +1,7 @@
 
 ---
 title: "AttestationProvider"
-title_tag: "Resource AttestationProvider | Module attestation | Package Azure NextGen"
+title_tag: "azure-nextgen.attestation.AttestationProvider"
 meta_desc: "Explore the AttestationProvider resource of the attestation module, including examples, input properties, output properties, lookup functions, and supporting types. Attestation service response message."
 ---
 

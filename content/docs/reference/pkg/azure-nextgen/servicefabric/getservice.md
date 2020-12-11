@@ -264,6 +264,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -338,7 +348,7 @@ The following output properties are available:
 <a href="#partitiondescription_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response&gt;&gt;</span>
+        <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -431,6 +441,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -505,7 +525,7 @@ The following output properties are available:
 <a href="#partitiondescription_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescriptionresponse">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescriptionresponse">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -598,6 +618,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -672,7 +702,7 @@ The following output properties are available:
 <a href="#partitiondescription_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response | Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response | Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</span>
+        <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescriptionresponse">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescriptionresponse">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -765,6 +795,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -839,7 +879,7 @@ The following output properties are available:
 <a href="#partition_description_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescriptionresponse">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescriptionresponse">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 

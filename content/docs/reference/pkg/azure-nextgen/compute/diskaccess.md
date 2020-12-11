@@ -1,7 +1,7 @@
 
 ---
 title: "DiskAccess"
-title_tag: "Resource DiskAccess | Module compute | Package Azure NextGen"
+title_tag: "azure-nextgen.compute.DiskAccess"
 meta_desc: "Explore the DiskAccess resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. disk access resource."
 ---
 

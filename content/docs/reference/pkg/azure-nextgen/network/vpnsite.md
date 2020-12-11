@@ -1,7 +1,7 @@
 
 ---
 title: "VpnSite"
-title_tag: "Resource VpnSite | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VpnSite"
 meta_desc: "Explore the VpnSite resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. VpnSite Resource."
 ---
 

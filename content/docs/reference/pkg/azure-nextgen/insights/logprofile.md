@@ -1,7 +1,7 @@
 
 ---
 title: "LogProfile"
-title_tag: "Resource LogProfile | Module insights | Package Azure NextGen"
+title_tag: "azure-nextgen.insights.LogProfile"
 meta_desc: "Explore the LogProfile resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. The log profile resource."
 ---
 

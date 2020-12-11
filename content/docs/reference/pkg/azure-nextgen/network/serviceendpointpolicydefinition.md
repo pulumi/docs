@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceEndpointPolicyDefinition"
-title_tag: "Resource ServiceEndpointPolicyDefinition | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.ServiceEndpointPolicyDefinition"
 meta_desc: "Explore the ServiceEndpointPolicyDefinition resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Service Endpoint policy definitions."
 ---
 

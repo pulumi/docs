@@ -1,7 +1,7 @@
 
 ---
 title: "DataFlow"
-title_tag: "Resource DataFlow | Module datafactory | Package Azure NextGen"
+title_tag: "azure-nextgen.datafactory.DataFlow"
 meta_desc: "Explore the DataFlow resource of the datafactory module, including examples, input properties, output properties, lookup functions, and supporting types. Data flow resource type."
 ---
 

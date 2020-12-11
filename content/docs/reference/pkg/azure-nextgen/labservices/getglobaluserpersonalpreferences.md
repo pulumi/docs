@@ -24,7 +24,7 @@ meta_desc: "Explore the GetGlobalUserPersonalPreferences function of the labserv
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_global_user_personal_preferences(</span><span class="nx">add_remove</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_account_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGlobalUserPersonalPreferencesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_global_user_personal_preferences(</span><span class="nx">add_remove</span><span class="p">:</span> <span class="nx">Optional[Union[str, AddRemove]]</span> = None<span class="p">, </span><span class="nx">lab_account_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGlobalUserPersonalPreferencesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -65,7 +65,7 @@ The following arguments are supported:
 <a href="#addremove_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Remove</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Add<wbr>Remove</span>
     </dt>
     <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
 
@@ -112,7 +112,7 @@ The following arguments are supported:
 <a href="#addremove_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Remove</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
 
@@ -159,7 +159,7 @@ The following arguments are supported:
 <a href="#addremove_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Remove</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Add<wbr>Remove</span>
     </dt>
     <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
 
@@ -206,7 +206,7 @@ The following arguments are supported:
 <a href="#add_remove_python" style="color: inherit; text-decoration: inherit;">add_<wbr>remove</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Add<wbr>Remove</span>
     </dt>
     <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
 
@@ -260,6 +260,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -276,6 +286,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -294,6 +314,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -310,6 +340,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

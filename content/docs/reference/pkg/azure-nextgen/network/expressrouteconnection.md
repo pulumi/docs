@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRouteConnection"
-title_tag: "Resource ExpressRouteConnection | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.ExpressRouteConnection"
 meta_desc: "Explore the ExpressRouteConnection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. ExpressRouteConnection resource."
 ---
 

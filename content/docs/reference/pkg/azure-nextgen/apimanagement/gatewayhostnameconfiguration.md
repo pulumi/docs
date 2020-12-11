@@ -1,7 +1,7 @@
 
 ---
 title: "GatewayHostnameConfiguration"
-title_tag: "Resource GatewayHostnameConfiguration | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.GatewayHostnameConfiguration"
 meta_desc: "Explore the GatewayHostnameConfiguration resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Gateway hostname configuration details."
 ---
 

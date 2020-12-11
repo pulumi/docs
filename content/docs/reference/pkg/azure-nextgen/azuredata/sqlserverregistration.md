@@ -1,7 +1,7 @@
 
 ---
 title: "SqlServerRegistration"
-title_tag: "Resource SqlServerRegistration | Module azuredata | Package Azure NextGen"
+title_tag: "azure-nextgen.azuredata.SqlServerRegistration"
 meta_desc: "Explore the SqlServerRegistration resource of the azuredata module, including examples, input properties, output properties, lookup functions, and supporting types. A SQL server registration."
 ---
 

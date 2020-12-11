@@ -1,7 +1,7 @@
 
 ---
 title: "BigDataPool"
-title_tag: "Resource BigDataPool | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.BigDataPool"
 meta_desc: "Explore the BigDataPool resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. A Big Data pool"
 ---
 
@@ -208,7 +208,7 @@ const bigDataPool = new azure_nextgen.synapse.v20190601preview.BigDataPool("bigD
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[AutoPausePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[AutoScalePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">big_data_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">have_library_requirements_changed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_compute_isolation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">library_requirements</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_level_packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spark_config_properties</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[AutoPausePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[AutoScalePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">big_data_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">have_library_requirements_changed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_compute_isolation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">library_requirements</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[Union[str, NodeSize]]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[Union[str, NodeSizeFamily]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_level_packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spark_config_properties</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -516,7 +516,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Node<wbr>Size</span>
     </dt>
     <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
 
@@ -526,7 +526,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesizefamily_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Node<wbr>Size<wbr>Family</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
 
@@ -733,7 +733,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
 
@@ -743,7 +743,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesizefamily_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
 
@@ -950,7 +950,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Node<wbr>Size</span>
     </dt>
     <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
 
@@ -960,7 +960,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesizefamily_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size<wbr>Family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Node<wbr>Size<wbr>Family</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
 
@@ -1167,7 +1167,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Node<wbr>Size</span>
     </dt>
     <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
 
@@ -1177,7 +1177,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#node_size_family_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size_<wbr>family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Node<wbr>Size<wbr>Family</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
 

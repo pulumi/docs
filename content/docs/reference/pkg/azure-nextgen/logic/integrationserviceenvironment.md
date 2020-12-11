@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationServiceEnvironment"
-title_tag: "Resource IntegrationServiceEnvironment | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationServiceEnvironment"
 meta_desc: "Explore the IntegrationServiceEnvironment resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The integration service environment."
 ---
 
@@ -33,6 +33,18 @@ class MyStack : Stack
             Location = "brazilsouth",
             Properties = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentPropertiesArgs
             {
+                EncryptionConfiguration = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmenEncryptionConfigurationArgs
+                {
+                    EncryptionKeyReference = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs
+                    {
+                        KeyName = "testKeyName",
+                        KeyVault = new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        {
+                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
+                        },
+                        KeyVersion = "13b261d30b984753869902d7f47f4d55",
+                    },
+                },
                 NetworkConfiguration = new AzureNextGen.Logic.Latest.Inputs.NetworkConfigurationArgs
                 {
                     AccessEndpoint = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentAccessEndpointArgs
@@ -91,6 +103,15 @@ func main() {
 			IntegrationServiceEnvironmentName: pulumi.String("testIntegrationServiceEnvironment"),
 			Location:                          pulumi.String("brazilsouth"),
 			Properties: &logic.IntegrationServiceEnvironmentPropertiesArgs{
+				EncryptionConfiguration: &logic.IntegrationServiceEnvironmenEncryptionConfigurationArgs{
+					EncryptionKeyReference: &logic.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs{
+						KeyName: pulumi.String("testKeyName"),
+						KeyVault: &logic.ResourceReferenceArgs{
+							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault"),
+						},
+						KeyVersion: pulumi.String("13b261d30b984753869902d7f47f4d55"),
+					},
+				},
 				NetworkConfiguration: &logic.NetworkConfigurationArgs{
 					AccessEndpoint: &logic.IntegrationServiceEnvironmentAccessEndpointArgs{
 						Type: pulumi.String("Internal"),
@@ -138,6 +159,15 @@ integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceE
     integration_service_environment_name="testIntegrationServiceEnvironment",
     location="brazilsouth",
     properties=azure_nextgen.logic.latest.IntegrationServiceEnvironmentPropertiesArgs(
+        encryption_configuration=azure_nextgen.logic.latest.IntegrationServiceEnvironmenEncryptionConfigurationArgs(
+            encryption_key_reference=azure_nextgen.logic.latest.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(
+                key_name="testKeyName",
+                key_vault=azure_nextgen.logic.latest.ResourceReferenceArgs(
+                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
+                ),
+                key_version="13b261d30b984753869902d7f47f4d55",
+            ),
+        ),
         network_configuration=azure_nextgen.logic.latest.NetworkConfigurationArgs(
             access_endpoint=azure_nextgen.logic.latest.IntegrationServiceEnvironmentAccessEndpointArgs(
                 type="Internal",
@@ -178,6 +208,15 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     location: "brazilsouth",
     properties: {
+        encryptionConfiguration: {
+            encryptionKeyReference: {
+                keyName: "testKeyName",
+                keyVault: {
+                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
+                },
+                keyVersion: "13b261d30b984753869902d7f47f4d55",
+            },
+        },
         networkConfiguration: {
             accessEndpoint: {
                 type: "Internal",
@@ -1305,6 +1344,482 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="integrationserviceenvironmenencryptionconfiguration">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionkeyreference_csharp">
+<a href="#encryptionkeyreference_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionkeyreference_go">
+<a href="#encryptionkeyreference_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionkeyreference_nodejs">
+<a href="#encryptionkeyreference_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_key_reference_python">
+<a href="#encryption_key_reference_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionkeyreference_csharp">
+<a href="#encryptionkeyreference_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionkeyreference_go">
+<a href="#encryptionkeyreference_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionkeyreference_nodejs">
+<a href="#encryptionkeyreference_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_key_reference_python">
+<a href="#encryption_key_reference_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="integrationserviceenvironmenencryptionkeyreference">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvault_csharp">
+<a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_csharp">
+<a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvault_go">
+<a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_go">
+<a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvault_nodejs">
+<a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_nodejs">
+<a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_python">
+<a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_version_python">
+<a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvault_csharp">
+<a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_csharp">
+<a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvault_go">
+<a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_go">
+<a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvault_nodejs">
+<a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_nodejs">
+<a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_python">
+<a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_version_python">
+<a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="integrationserviceenvironmentaccessendpoint">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint</h4>
 
 
@@ -1322,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd>
 
@@ -1339,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd>
 
@@ -1356,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd>
 
@@ -1373,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd>
 
@@ -1476,6 +1991,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfiguration_csharp">
+<a href="#encryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="endpointsconfiguration_csharp">
 <a href="#endpointsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Configuration</a>
 </span> 
@@ -1510,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Workflow<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
@@ -1520,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Workflow<wbr>State</span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd>
 
@@ -1530,6 +2055,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfiguration_go">
+<a href="#encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1567,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
@@ -1577,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd>
 
@@ -1587,6 +2122,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfiguration_nodejs">
+<a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1624,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Workflow<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
@@ -1634,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Workflow<wbr>State</span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd>
 
@@ -1644,6 +2189,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_configuration_python">
+<a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1681,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Workflow<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
@@ -1691,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Workflow<wbr>State</span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd>
 
@@ -1712,6 +2267,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfiguration_csharp">
+<a href="#encryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1772,6 +2337,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfiguration_go">
+<a href="#encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="endpointsconfiguration_go">
 <a href="#endpointsconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Configuration</a>
 </span> 
@@ -1829,6 +2404,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfiguration_nodejs">
+<a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="endpointsconfiguration_nodejs">
 <a href="#endpointsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoints<wbr>Configuration</a>
 </span> 
@@ -1883,6 +2468,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_configuration_python">
+<a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1968,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 
@@ -1995,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 
@@ -2022,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 
@@ -2049,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 

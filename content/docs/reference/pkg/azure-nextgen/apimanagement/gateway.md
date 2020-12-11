@@ -1,7 +1,7 @@
 
 ---
 title: "Gateway"
-title_tag: "Resource Gateway | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Gateway"
 meta_desc: "Explore the Gateway resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Gateway details."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationRuntime"
-title_tag: "Resource IntegrationRuntime | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.IntegrationRuntime"
 meta_desc: "Explore the IntegrationRuntime resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. Integration runtime resource type."
 ---
 
@@ -289,7 +289,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#managedintegrationruntime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -336,7 +336,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -383,7 +383,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Integration<wbr>Runtime | Self<wbr>Hosted<wbr>Integration<wbr>Runtime</span>
+        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -430,7 +430,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Managed<wbr>Integration<wbr>Runtime<wbr>Args, Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args]</span>
+        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -1252,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
 
@@ -1279,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
 
@@ -1306,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
 
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
 
@@ -2514,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Data<wbr>Flow<wbr>Compute<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
 
@@ -2551,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computetype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
 
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Flow<wbr>Compute<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
 
@@ -2625,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Flow<wbr>Compute<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
 
@@ -3170,7 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogpricingtier_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Pricing<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
 
@@ -3217,7 +3217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogpricingtier_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Pricing<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
 
@@ -3264,7 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogpricingtier_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Pricing<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
 
@@ -3311,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_pricing_tier_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>pricing_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
 
@@ -3578,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Integration<wbr>Runtime<wbr>Edition</span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
 
@@ -3598,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Integration<wbr>Runtime<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
 
@@ -3645,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
 
@@ -3665,7 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
 
@@ -3712,7 +3712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Integration<wbr>Runtime<wbr>Edition</span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
 
@@ -3732,7 +3732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Integration<wbr>Runtime<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
 
@@ -3779,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Integration<wbr>Runtime<wbr>Edition</span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
 
@@ -3799,7 +3799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Integration<wbr>Runtime<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
 
@@ -5266,7 +5266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 
@@ -5293,7 +5293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 
@@ -5320,7 +5320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization | Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 
@@ -5347,7 +5347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args, Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args]</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 
@@ -5385,7 +5385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 
@@ -5412,7 +5412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 
@@ -5439,7 +5439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response | Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 
@@ -5466,7 +5466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args, Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 

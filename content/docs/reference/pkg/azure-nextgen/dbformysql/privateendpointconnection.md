@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module dbformysql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformysql.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the dbformysql module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

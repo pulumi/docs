@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlStoredProcedure"
-title_tag: "Resource SqlResourceSqlStoredProcedure | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.SqlResourceSqlStoredProcedure"
 meta_desc: "Explore the SqlResourceSqlStoredProcedure resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB storedProcedure."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AuthorizationServer"
-title_tag: "Resource AuthorizationServer | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.AuthorizationServer"
 meta_desc: "Explore the AuthorizationServer resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. External OAuth authorization server settings."
 ---
 
@@ -66,52 +66,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewAuthorizationServer(ctx, "authorizationServer", &apimanagement.AuthorizationServerArgs{
-			AuthorizationEndpoint: pulumi.String("https://www.contoso.com/oauth2/auth"),
-			AuthorizationMethods: pulumi.StringArray{
-				pulumi.String("GET"),
-			},
-			Authsid: pulumi.String("newauthServer"),
-			BearerTokenSendingMethods: pulumi.StringArray{
-				pulumi.String("authorizationHeader"),
-			},
-			ClientId:                   pulumi.String("1"),
-			ClientRegistrationEndpoint: pulumi.String("https://www.contoso.com/apps"),
-			ClientSecret:               pulumi.String("2"),
-			DefaultScope:               pulumi.String("read write"),
-			Description:                pulumi.String("test server"),
-			DisplayName:                pulumi.String("test2"),
-			GrantTypes: pulumi.StringArray{
-				pulumi.String("authorizationCode"),
-				pulumi.String("implicit"),
-			},
-			ResourceGroupName:     pulumi.String("rg1"),
-			ResourceOwnerPassword: pulumi.String("pwd"),
-			ResourceOwnerUsername: pulumi.String("un"),
-			ServiceName:           pulumi.String("apimService1"),
-			SupportState:          pulumi.Bool(true),
-			TokenEndpoint:         pulumi.String("https://www.contoso.com/oauth2/token"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -191,7 +146,7 @@ const authorizationServer = new azure_nextgen.apimanagement.latest.Authorization
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authsid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_authentication_method</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[TokenBodyParameterContractArgs]]</span> = None<span class="p">, </span><span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[AuthorizationMethod]]</span> = None<span class="p">, </span><span class="nx">authsid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, BearerTokenSendingMethod]]]</span> = None<span class="p">, </span><span class="nx">client_authentication_method</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ClientAuthenticationMethod]]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, GrantType]]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[TokenBodyParameterContractArgs]]</span> = None<span class="p">, </span><span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -419,7 +374,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#granttypes_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Grant<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
 
@@ -449,7 +404,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationmethods_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Authorization<wbr>Method&gt;</span>
     </dt>
     <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
 
@@ -459,7 +414,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Method&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
 
@@ -469,7 +424,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Client<wbr>Authentication<wbr>Method&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
 
@@ -616,7 +571,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#granttypes_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
 
@@ -646,7 +601,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationmethods_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
 
@@ -656,7 +611,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
 
@@ -666,7 +621,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
 
@@ -813,7 +768,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Grant<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
 
@@ -843,7 +798,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationmethods_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Authorization<wbr>Method[]</span>
     </dt>
     <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
 
@@ -853,7 +808,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Method[]</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
 
@@ -863,7 +818,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Client<wbr>Authentication<wbr>Method[]</span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
 
@@ -1010,7 +965,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Grant<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
 
@@ -1040,7 +995,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorization_methods_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Authorization<wbr>Method]</span>
     </dt>
     <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
 
@@ -1050,7 +1005,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Bearer<wbr>Token<wbr>Sending<wbr>Method]]</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
 
@@ -1060,7 +1015,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_authentication_method_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Client<wbr>Authentication<wbr>Method]]</span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
 

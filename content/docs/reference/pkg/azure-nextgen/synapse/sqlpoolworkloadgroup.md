@@ -1,7 +1,7 @@
 
 ---
 title: "SqlPoolWorkloadGroup"
-title_tag: "Resource SqlPoolWorkloadGroup | Module synapse | Package Azure NextGen"
+title_tag: "azure-nextgen.synapse.SqlPoolWorkloadGroup"
 meta_desc: "Explore the SqlPoolWorkloadGroup resource of the synapse module, including examples, input properties, output properties, lookup functions, and supporting types. Workload group operations for a sql pool"
 ---
 

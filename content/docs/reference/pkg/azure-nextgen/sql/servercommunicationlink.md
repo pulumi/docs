@@ -1,7 +1,7 @@
 
 ---
 title: "ServerCommunicationLink"
-title_tag: "Resource ServerCommunicationLink | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ServerCommunicationLink"
 meta_desc: "Explore the ServerCommunicationLink resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Server communication link."
 ---
 

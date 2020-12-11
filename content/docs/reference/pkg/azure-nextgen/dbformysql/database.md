@@ -1,7 +1,7 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Module dbformysql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformysql.Database"
 meta_desc: "Explore the Database resource of the dbformysql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Database."
 ---
 

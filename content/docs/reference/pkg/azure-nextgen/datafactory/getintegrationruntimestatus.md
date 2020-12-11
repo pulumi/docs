@@ -226,7 +226,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response&gt;</span>
+        <span class="property-type"><a href="#managedintegrationruntimestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntimestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -253,7 +253,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#managedintegrationruntimestatusresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntimestatusresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -280,7 +280,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response | Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</span>
+        <span class="property-type"><a href="#managedintegrationruntimestatusresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntimestatusresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#managedintegrationruntimestatusresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#selfhostedintegrationruntimestatusresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 

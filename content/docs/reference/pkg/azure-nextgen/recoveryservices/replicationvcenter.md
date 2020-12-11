@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationvCenter"
-title_tag: "Resource ReplicationvCenter | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ReplicationvCenter"
 meta_desc: "Explore the ReplicationvCenter resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. vCenter definition."
 ---
 

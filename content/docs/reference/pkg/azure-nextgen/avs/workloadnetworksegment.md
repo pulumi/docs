@@ -1,7 +1,7 @@
 
 ---
 title: "WorkloadNetworkSegment"
-title_tag: "Resource WorkloadNetworkSegment | Module avs | Package Azure NextGen"
+title_tag: "azure-nextgen.avs.WorkloadNetworkSegment"
 meta_desc: "Explore the WorkloadNetworkSegment resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. NSX Segment"
 ---
 

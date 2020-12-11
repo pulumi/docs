@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module appplatform | Package Azure NextGen"
+title_tag: "azure-nextgen.appplatform.Certificate"
 meta_desc: "Explore the Certificate resource of the appplatform module, including examples, input properties, output properties, lookup functions, and supporting types. Certificate resource payload."
 ---
 

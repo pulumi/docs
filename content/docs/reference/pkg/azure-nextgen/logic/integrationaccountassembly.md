@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountAssembly"
-title_tag: "Resource IntegrationAccountAssembly | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationAccountAssembly"
 meta_desc: "Explore the IntegrationAccountAssembly resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The assembly definition."
 ---
 

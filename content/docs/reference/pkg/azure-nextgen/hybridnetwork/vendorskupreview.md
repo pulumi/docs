@@ -1,7 +1,7 @@
 
 ---
 title: "VendorSkuPreview"
-title_tag: "Resource VendorSkuPreview | Module hybridnetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.hybridnetwork.VendorSkuPreview"
 meta_desc: "Explore the VendorSkuPreview resource of the hybridnetwork module, including examples, input properties, output properties, lookup functions, and supporting types. Customer subscription which can use a sku."
 ---
 

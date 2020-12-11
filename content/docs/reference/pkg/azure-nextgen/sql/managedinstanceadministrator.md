@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedInstanceAdministrator"
-title_tag: "Resource ManagedInstanceAdministrator | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ManagedInstanceAdministrator"
 meta_desc: "Explore the ManagedInstanceAdministrator resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL managed instance administrator."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAdministrator = new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministratorArgs
+        var managedInstanceAdministrator = new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministratorArgs
         {
             AdministratorName = "ActiveDirectory",
             AdministratorType = "ActiveDirectory",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
+managed_instance_administrator = azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
     administrator_name="ActiveDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -102,7 +102,7 @@ managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInsta
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstanceAdministrator = new azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+const managedInstanceAdministrator = new azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
@@ -126,7 +126,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAdministrator = new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministratorArgs
+        var managedInstanceAdministrator = new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministratorArgs
         {
             AdministratorName = "ActiveDirectory",
             AdministratorType = "ActiveDirectory",
@@ -150,7 +150,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20170301preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -182,7 +182,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
+managed_instance_administrator = azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
     administrator_name="ActiveDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -201,7 +201,7 @@ managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInsta
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstanceAdministrator = new azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+const managedInstanceAdministrator = new azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
@@ -227,7 +227,7 @@ const managedInstanceAdministrator = new azure_nextgen.sql.v20170301preview.Mana
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstanceAdministrator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstanceAdministrator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceAdministratorType]]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -407,7 +407,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The requested administrator name.{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -415,7 +415,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
 <a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Managed<wbr>Instance<wbr>Administrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
 
@@ -484,7 +484,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The requested administrator name.{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -492,7 +492,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
 <a href="#administratortype_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
 
@@ -561,7 +561,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The requested administrator name.{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -569,7 +569,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
 <a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Instance<wbr>Administrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
 
@@ -638,7 +638,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The requested administrator name.{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -646,7 +646,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
 <a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Instance<wbr>Administrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
 

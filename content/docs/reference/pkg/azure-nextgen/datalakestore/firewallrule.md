@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module datalakestore | Package Azure NextGen"
+title_tag: "azure-nextgen.datalakestore.FirewallRule"
 meta_desc: "Explore the FirewallRule resource of the datalakestore module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Store firewall rule information."
 ---
 

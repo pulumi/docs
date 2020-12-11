@@ -234,6 +234,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="iscancellable_csharp">
 <a href="#iscancellable_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Cancellable</a>
 </span> 
@@ -378,7 +388,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response&gt;&gt;</span>
+        <span class="property-type"><a href="#databoxdiskjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -428,6 +438,16 @@ The following output properties are available:
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -575,7 +595,7 @@ The following output properties are available:
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#databoxdiskjobdetailsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetailsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetailsresponse">Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -625,6 +645,16 @@ The following output properties are available:
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -772,7 +802,7 @@ The following output properties are available:
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#databoxdiskjobdetailsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetailsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetailsresponse">Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -822,6 +852,16 @@ The following output properties are available:
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -969,7 +1009,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#databoxdiskjobdetailsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobdetailsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobdetailsresponse">Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -5294,7 +5334,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -5331,7 +5371,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -5368,7 +5408,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Disk<wbr>Details<wbr>Response | Storage<wbr>Account<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -5405,7 +5445,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -5453,7 +5493,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -5470,7 +5510,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -5487,7 +5527,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Managed<wbr>Disk<wbr>Details<wbr>Response | Storage<wbr>Account<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
@@ -5504,7 +5544,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpoint"
-title_tag: "Resource PrivateEndpoint | Module streamanalytics | Package Azure NextGen"
+title_tag: "azure-nextgen.streamanalytics.PrivateEndpoint"
 meta_desc: "Explore the PrivateEndpoint resource of the streamanalytics module, including examples, input properties, output properties, lookup functions, and supporting types. Complete information about the private endpoint."
 ---
 

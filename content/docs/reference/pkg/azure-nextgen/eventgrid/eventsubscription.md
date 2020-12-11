@@ -1,7 +1,7 @@
 
 ---
 title: "EventSubscription"
-title_tag: "Resource EventSubscription | Module eventgrid | Package Azure NextGen"
+title_tag: "azure-nextgen.eventgrid.EventSubscription"
 meta_desc: "Explore the EventSubscription resource of the eventgrid module, including examples, input properties, output properties, lookup functions, and supporting types. Event Subscription"
 ---
 
@@ -669,7 +669,7 @@ const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[StorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFunctionEventSubscriptionDestinationArgs, EventHubEventSubscriptionDestinationArgs, HybridConnectionEventSubscriptionDestinationArgs, ServiceBusQueueEventSubscriptionDestinationArgs, ServiceBusTopicEventSubscriptionDestinationArgs, StorageQueueEventSubscriptionDestinationArgs, WebHookEventSubscriptionDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionFilterArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[RetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[StorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFunctionEventSubscriptionDestinationArgs, EventHubEventSubscriptionDestinationArgs, HybridConnectionEventSubscriptionDestinationArgs, ServiceBusQueueEventSubscriptionDestinationArgs, ServiceBusTopicEventSubscriptionDestinationArgs, StorageQueueEventSubscriptionDestinationArgs, WebHookEventSubscriptionDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[Union[str, EventDeliverySchema]]</span> = None<span class="p">, </span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionFilterArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[RetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -877,7 +877,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -887,7 +887,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventdeliveryschema_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Event<wbr>Delivery<wbr>Schema</span>
     </dt>
     <dd>{{% md %}}The event delivery schema for the event subscription.{{% /md %}}</dd>
 
@@ -974,7 +974,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -984,7 +984,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event delivery schema for the event subscription.{{% /md %}}</dd>
 
@@ -1071,7 +1071,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination | Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination | Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination | Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination | Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination | Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination | Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -1081,7 +1081,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Event<wbr>Delivery<wbr>Schema</span>
     </dt>
     <dd>{{% md %}}The event delivery schema for the event subscription.{{% /md %}}</dd>
 
@@ -1168,7 +1168,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -1178,7 +1178,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Event<wbr>Delivery<wbr>Schema</span>
     </dt>
     <dd>{{% md %}}The event delivery schema for the event subscription.{{% /md %}}</dd>
 

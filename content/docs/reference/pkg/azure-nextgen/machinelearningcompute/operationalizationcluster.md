@@ -1,7 +1,7 @@
 
 ---
 title: "OperationalizationCluster"
-title_tag: "Resource OperationalizationCluster | Module machinelearningcompute | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningcompute.OperationalizationCluster"
 meta_desc: "Explore the OperationalizationCluster resource of the machinelearningcompute module, including examples, input properties, output properties, lookup functions, and supporting types. Instance of an Azure ML Operationalization Cluster resource."
 ---
 
@@ -38,7 +38,7 @@ class MyStack : Stack
                     ServicePrincipal = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.ServicePrincipalPropertiesArgs
                     {
                         ClientId = "abcdefghijklmnopqrt",
-                        Secret = "uiuiwueiwuewiue",
+                        Secret = "<secret>",
                     },
                 },
                 OrchestratorType = "Kubernetes",
@@ -89,7 +89,7 @@ func main() {
 				OrchestratorProperties: &machinelearningcompute.KubernetesClusterPropertiesArgs{
 					ServicePrincipal: &machinelearningcompute.ServicePrincipalPropertiesArgs{
 						ClientId: pulumi.String("abcdefghijklmnopqrt"),
-						Secret:   pulumi.String("uiuiwueiwuewiue"),
+						Secret:   pulumi.String("<secret>"),
 					},
 				},
 				OrchestratorType: pulumi.String("Kubernetes"),
@@ -134,7 +134,7 @@ operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801previ
         orchestrator_properties=azure_nextgen.machinelearningcompute.v20170801preview.KubernetesClusterPropertiesArgs(
             service_principal=azure_nextgen.machinelearningcompute.v20170801preview.ServicePrincipalPropertiesArgs(
                 client_id="abcdefghijklmnopqrt",
-                secret="uiuiwueiwuewiue",
+                secret="<secret>",
             ),
         ),
         orchestrator_type="Kubernetes",
@@ -172,7 +172,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
         orchestratorProperties: {
             servicePrincipal: {
                 clientId: "abcdefghijklmnopqrt",
-                secret: "uiuiwueiwuewiue",
+                secret: "<secret>",
             },
         },
         orchestratorType: "Kubernetes",
@@ -210,7 +210,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_insights</span><span class="p">:</span> <span class="nx">Optional[AppInsightsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[ContainerRegistryPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">container_service</span><span class="p">:</span> <span class="nx">Optional[AcsClusterPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_service_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalServiceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[StorageAccountPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_insights</span><span class="p">:</span> <span class="nx">Optional[AppInsightsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ClusterType]]</span> = None<span class="p">, </span><span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[ContainerRegistryPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">container_service</span><span class="p">:</span> <span class="nx">Optional[AcsClusterPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_service_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalServiceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[StorageAccountPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -398,7 +398,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Cluster<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
 
@@ -515,7 +515,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
 
@@ -632,7 +632,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Cluster<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Cluster<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
 
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Orchestrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd>
 
@@ -1215,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentvmsize_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Agent<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd>
 
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd>
 
@@ -1282,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentvmsize_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd>
 
@@ -1329,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Orchestrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd>
 
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Agent<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd>
 
@@ -1396,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Orchestrator<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd>
 
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_vm_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>vm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Agent<wbr>VMSize<wbr>Types</span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd>
 
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd>
 
@@ -2038,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd>
 
@@ -2095,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Status</span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd>
 
@@ -2152,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Status</span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd>
 
@@ -4006,7 +4006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Status</span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd>
 
@@ -4053,7 +4053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd>
 
@@ -4100,7 +4100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Status</span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd>
 
@@ -4147,7 +4147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Status</span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd>
 
@@ -4532,7 +4532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservicetype_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>System<wbr>Service<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd>
 
@@ -4549,7 +4549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservicetype_go" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd>
 
@@ -4566,7 +4566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservicetype_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>System<wbr>Service<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd>
 
@@ -4583,7 +4583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">System<wbr>Service<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd>
 

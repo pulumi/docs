@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedHostingEnvironment"
-title_tag: "Resource ManagedHostingEnvironment | Module web | Package Azure NextGen"
+title_tag: "azure-nextgen.web.ManagedHostingEnvironment"
 meta_desc: "Explore the ManagedHostingEnvironment resource of the web module, including examples, input properties, output properties, lookup functions, and supporting types. Description of an hostingEnvironment (App Service Environment)"
 ---
 
@@ -24,7 +24,7 @@ Description of an hostingEnvironment (App Service Environment)
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedHostingEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_multi_sizes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_worker_sizes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[NameValuePairArgs]]</span> = None<span class="p">, </span><span class="nx">database_edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_service_objective</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_capacities</span><span class="p">:</span> <span class="nx">Optional[Sequence[StampCapacityArgs]]</span> = None<span class="p">, </span><span class="nx">environment_is_healthy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_load_balancing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipssl_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_action_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_number_of_machines</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multi_role_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multi_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_control_list</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAccessControlEntryArgs]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_domains</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vip_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualIPMappingArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_network</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">vnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerPoolArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedHostingEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_multi_sizes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_worker_sizes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[NameValuePairArgs]]</span> = None<span class="p">, </span><span class="nx">database_edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_service_objective</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_capacities</span><span class="p">:</span> <span class="nx">Optional[Sequence[StampCapacityArgs]]</span> = None<span class="p">, </span><span class="nx">environment_is_healthy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_load_balancing_mode</span><span class="p">:</span> <span class="nx">Optional[InternalLoadBalancingMode]</span> = None<span class="p">, </span><span class="nx">ipssl_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_action_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_number_of_machines</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multi_role_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multi_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_control_list</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAccessControlEntryArgs]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[ProvisioningState]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[HostingEnvironmentStatus]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_domains</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vip_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualIPMappingArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_network</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">vnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerPoolArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -232,7 +232,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Hosting<wbr>Environment<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -352,7 +352,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#internalloadbalancingmode_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Internal<wbr>Load<wbr>Balancing<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies which endpoints to serve internally in the hostingEnvironment's (App Service Environment) VNET{{% /md %}}</dd>
 
@@ -442,7 +442,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -610,7 +610,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current status of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -730,7 +730,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#internalloadbalancingmode_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which endpoints to serve internally in the hostingEnvironment's (App Service Environment) VNET{{% /md %}}</dd>
 
@@ -820,7 +820,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -988,7 +988,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Hosting<wbr>Environment<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -1108,7 +1108,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#internalloadbalancingmode_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Internal<wbr>Load<wbr>Balancing<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies which endpoints to serve internally in the hostingEnvironment's (App Service Environment) VNET{{% /md %}}</dd>
 
@@ -1198,7 +1198,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -1366,7 +1366,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Hosting<wbr>Environment<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -1486,7 +1486,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#internal_load_balancing_mode_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>load_<wbr>balancing_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Internal<wbr>Load<wbr>Balancing<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Specifies which endpoints to serve internally in the hostingEnvironment's (App Service Environment) VNET{{% /md %}}</dd>
 
@@ -1576,7 +1576,7 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Provisioning<wbr>State</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the hostingEnvironment (App Service Environment){{% /md %}}</dd>
 
@@ -2369,7 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Access<wbr>Control<wbr>Entry<wbr>Action</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2416,7 +2416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2463,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Access<wbr>Control<wbr>Entry<wbr>Action</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2510,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Access<wbr>Control<wbr>Entry<wbr>Action</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3893,7 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Compute<wbr>Mode<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
 
@@ -3964,7 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workersize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Worker<wbr>Size<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
 
@@ -4004,7 +4004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computemode_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
 
@@ -4075,7 +4075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workersize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
 
@@ -4115,7 +4115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computemode_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Compute<wbr>Mode<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
 
@@ -4186,7 +4186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workersize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Worker<wbr>Size<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
 
@@ -4226,7 +4226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_mode_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Compute<wbr>Mode<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
 
@@ -4297,7 +4297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Worker<wbr>Size<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
 
@@ -5599,7 +5599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Compute<wbr>Mode<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
 
@@ -5726,7 +5726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computemode_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
 
@@ -5853,7 +5853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computemode_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Compute<wbr>Mode<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
 
@@ -5980,7 +5980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_mode_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Compute<wbr>Mode<wbr>Options</span>
     </dt>
     <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
 

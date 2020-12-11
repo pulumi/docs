@@ -1,7 +1,7 @@
 
 ---
 title: "ScopeAssignment"
-title_tag: "Resource ScopeAssignment | Module managednetwork | Package Azure NextGen"
+title_tag: "azure-nextgen.managednetwork.ScopeAssignment"
 meta_desc: "Explore the ScopeAssignment resource of the managednetwork module, including examples, input properties, output properties, lookup functions, and supporting types. The Managed Network resource"
 ---
 

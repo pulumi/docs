@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceTopology"
-title_tag: "Resource ServiceTopology | Module deploymentmanager | Package Azure NextGen"
+title_tag: "azure-nextgen.deploymentmanager.ServiceTopology"
 meta_desc: "Explore the ServiceTopology resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. The resource representation of a service topology."
 ---
 

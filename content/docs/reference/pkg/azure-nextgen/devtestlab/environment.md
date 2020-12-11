@@ -1,7 +1,7 @@
 
 ---
 title: "Environment"
-title_tag: "Resource Environment | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.Environment"
 meta_desc: "Explore the Environment resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. An environment, which is essentially an ARM template deployment."
 ---
 

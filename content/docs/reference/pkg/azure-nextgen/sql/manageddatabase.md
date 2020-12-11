@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedDatabase"
-title_tag: "Resource ManagedDatabase | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ManagedDatabase"
 meta_desc: "Explore the ManagedDatabase resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A managed database resource."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200801Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseArgs
         {
             AutoCompleteRestore = true,
             Collation = "SQL_Latin1_General_CP1_CI_AS",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +89,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase",
     auto_complete_restore=True,
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="RestoreExternalBackup",
@@ -111,7 +111,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase", {
     autoCompleteRestore: true,
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "RestoreExternalBackup",
@@ -138,7 +138,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200801Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseArgs
         {
             CreateMode = "Recovery",
             DatabaseName = "testdb_recovered",
@@ -161,7 +161,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -192,7 +192,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase",
     create_mode="Recovery",
     database_name="testdb_recovered",
     location="southeastasia",
@@ -210,7 +210,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase", {
     createMode: "Recovery",
     databaseName: "testdb_recovered",
     location: "southeastasia",
@@ -233,7 +233,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200801Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseArgs
         {
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             CreateMode = "RestoreExternalBackup",
@@ -258,7 +258,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -291,7 +291,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase",
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="RestoreExternalBackup",
     database_name="managedDatabase",
@@ -311,7 +311,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "RestoreExternalBackup",
     databaseName: "managedDatabase",
@@ -336,7 +336,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200801Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseArgs
         {
             CreateMode = "PointInTimeRestore",
             DatabaseName = "managedDatabase",
@@ -360,7 +360,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -392,7 +392,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase",
     create_mode="PointInTimeRestore",
     database_name="managedDatabase",
     location="southeastasia",
@@ -411,7 +411,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase", {
     createMode: "PointInTimeRestore",
     databaseName: "managedDatabase",
     location: "southeastasia",
@@ -435,7 +435,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200801Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseArgs
         {
             DatabaseName = "managedDatabase",
             Location = "southeastasia",
@@ -460,7 +460,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -492,7 +492,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase",
     database_name="managedDatabase",
     location="southeastasia",
     managed_instance_name="managedInstance",
@@ -511,7 +511,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase", {
     databaseName: "managedDatabase",
     location: "southeastasia",
     managedInstanceName: "managedInstance",
@@ -535,7 +535,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200801Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseArgs
         {
             DatabaseName = "managedDatabase",
             Location = "southeastasia",
@@ -556,7 +556,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -585,7 +585,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase",
     database_name="managedDatabase",
     location="southeastasia",
     managed_instance_name="managedInstance",
@@ -601,7 +601,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200801preview.ManagedDatabase("managedDatabase", {
     databaseName: "managedDatabase",
     location: "southeastasia",
     managedInstanceName: "managedInstance",
@@ -624,7 +624,7 @@ const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedDatabase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_complete_restore</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">catalog_collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_backup_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_backup_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restorable_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_sas_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedDatabase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_complete_restore</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">catalog_collation</span><span class="p">:</span> <span class="nx">Optional[Union[str, CatalogCollationType]]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedDatabaseCreateMode]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_backup_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_backup_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restorable_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_sas_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -834,7 +834,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -852,7 +852,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#catalogcollation_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Collation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Catalog<wbr>Collation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
 
@@ -872,7 +872,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Managed<wbr>Database<wbr>Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
 
@@ -1011,7 +1011,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1029,7 +1029,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#catalogcollation_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Collation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
 
@@ -1049,7 +1049,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
 
@@ -1188,7 +1188,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1206,7 +1206,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#catalogcollation_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Collation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Catalog<wbr>Collation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
 
@@ -1226,7 +1226,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Database<wbr>Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
 
@@ -1365,7 +1365,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1383,7 +1383,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#catalog_collation_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>collation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Catalog<wbr>Collation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
 
@@ -1403,7 +1403,7 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Database<wbr>Create<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
 

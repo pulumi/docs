@@ -1,7 +1,7 @@
 
 ---
 title: "Snapshot"
-title_tag: "Resource Snapshot | Module netapp | Package Azure NextGen"
+title_tag: "azure-nextgen.netapp.Snapshot"
 meta_desc: "Explore the Snapshot resource of the netapp module, including examples, input properties, output properties, lookup functions, and supporting types. Snapshot of a Volume"
 ---
 

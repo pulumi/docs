@@ -1,7 +1,7 @@
 
 ---
 title: "FileServiceProperties"
-title_tag: "Resource FileServiceProperties | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.FileServiceProperties"
 meta_desc: "Explore the FileServiceProperties resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The properties of File services in storage account."
 ---
 

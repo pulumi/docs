@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountSession"
-title_tag: "Resource IntegrationAccountSession | Module logic | Package Azure NextGen"
+title_tag: "azure-nextgen.logic.IntegrationAccountSession"
 meta_desc: "Explore the IntegrationAccountSession resource of the logic module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account session."
 ---
 

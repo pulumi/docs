@@ -1,7 +1,7 @@
 
 ---
 title: "KeyValue"
-title_tag: "Resource KeyValue | Module appconfiguration | Package Azure NextGen"
+title_tag: "azure-nextgen.appconfiguration.KeyValue"
 meta_desc: "Explore the KeyValue resource of the appconfiguration module, including examples, input properties, output properties, lookup functions, and supporting types. The key-value resource along with all resource properties."
 ---
 

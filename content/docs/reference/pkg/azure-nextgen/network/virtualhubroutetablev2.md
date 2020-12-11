@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualHubRouteTableV2"
-title_tag: "Resource VirtualHubRouteTableV2 | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualHubRouteTableV2"
 meta_desc: "Explore the VirtualHubRouteTableV2 resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. VirtualHubRouteTableV2 Resource."
 ---
 

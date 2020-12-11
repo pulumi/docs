@@ -1,7 +1,7 @@
 
 ---
 title: "RelationshipLink"
-title_tag: "Resource RelationshipLink | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.RelationshipLink"
 meta_desc: "Explore the RelationshipLink resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The relationship link resource format."
 ---
 
@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Link<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 
@@ -1430,7 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 
@@ -1467,7 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Link<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Link<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 

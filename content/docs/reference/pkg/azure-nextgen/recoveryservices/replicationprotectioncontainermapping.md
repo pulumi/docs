@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationProtectionContainerMapping"
-title_tag: "Resource ReplicationProtectionContainerMapping | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ReplicationProtectionContainerMapping"
 meta_desc: "Explore the ReplicationProtectionContainerMapping resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Protection container mapping object."
 ---
 
@@ -806,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentautoupdatestatus_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Auto<wbr>Update<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Agent<wbr>Auto<wbr>Update<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the auto update is enabled.{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentautoupdatestatus_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Auto<wbr>Update<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the auto update is enabled.{{% /md %}}</dd>
 
@@ -860,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentautoupdatestatus_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Auto<wbr>Update<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Agent<wbr>Auto<wbr>Update<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the auto update is enabled.{{% /md %}}</dd>
 
@@ -887,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_auto_update_status_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>auto_<wbr>update_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Agent<wbr>Auto<wbr>Update<wbr>Status</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the auto update is enabled.{{% /md %}}</dd>
 
@@ -1134,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AContainer<wbr>Mapping<wbr>Input<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#a2acontainermappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AContainer<wbr>Mapping<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtcontainermappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd>
 
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#a2acontainermappinginput">A2AContainer<wbr>Mapping<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtcontainermappinginput">VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd>
 
@@ -1208,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2AContainer<wbr>Mapping<wbr>Input | VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input</span>
+        <span class="property-type"><a href="#a2acontainermappinginput">A2AContainer<wbr>Mapping<wbr>Input</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtcontainermappinginput">VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd>
 
@@ -1245,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[A2AContainer<wbr>Mapping<wbr>Input<wbr>Args, VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args]</span>
+        <span class="property-type"><a href="#a2acontainermappinginput">A2AContainer<wbr>Mapping<wbr>Input<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtcontainermappinginput">VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd>
 
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd>
 
@@ -2598,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd>
 
@@ -2715,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response | VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd>
 
@@ -2832,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args, VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd>
 

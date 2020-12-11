@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationStorageClassificationMapping"
-title_tag: "Resource ReplicationStorageClassificationMapping | Module recoveryservices | Package Azure NextGen"
+title_tag: "azure-nextgen.recoveryservices.ReplicationStorageClassificationMapping"
 meta_desc: "Explore the ReplicationStorageClassificationMapping resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Storage mapping object."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "FileShare"
-title_tag: "Resource FileShare | Module storage | Package Azure NextGen"
+title_tag: "azure-nextgen.storage.FileShare"
 meta_desc: "Explore the FileShare resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Properties of the file share, including Id, resource name, resource type, Etag."
 ---
 
@@ -286,7 +286,7 @@ const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_protocols</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShareAccessTier]]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_protocols</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnabledProtocols]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash</span><span class="p">:</span> <span class="nx">Optional[Union[str, RootSquashType]]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -494,7 +494,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Share<wbr>Access<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
 
@@ -504,7 +504,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Enabled<wbr>Protocols</span>
     </dt>
     <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
 
@@ -524,7 +524,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rootsquash_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Root<wbr>Squash<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
 
@@ -581,7 +581,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
 
@@ -591,7 +591,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
 
@@ -611,7 +611,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rootsquash_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
 
@@ -668,7 +668,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Share<wbr>Access<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
 
@@ -678,7 +678,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enabled<wbr>Protocols</span>
     </dt>
     <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
 
@@ -698,7 +698,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rootsquash_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Root<wbr>Squash<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
 
@@ -755,7 +755,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Share<wbr>Access<wbr>Tier</span>
     </dt>
     <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
 
@@ -765,7 +765,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enabled<wbr>Protocols</span>
     </dt>
     <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
 
@@ -785,7 +785,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#root_squash_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Root<wbr>Squash<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
 

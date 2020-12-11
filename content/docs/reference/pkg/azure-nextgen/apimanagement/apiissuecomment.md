@@ -1,7 +1,7 @@
 
 ---
 title: "ApiIssueComment"
-title_tag: "Resource ApiIssueComment | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.ApiIssueComment"
 meta_desc: "Explore the ApiIssueComment resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Issue Comment Contract details."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "TransactionNode"
-title_tag: "Resource TransactionNode | Module blockchain | Package Azure NextGen"
+title_tag: "azure-nextgen.blockchain.TransactionNode"
 meta_desc: "Explore the TransactionNode resource of the blockchain module, including examples, input properties, output properties, lookup functions, and supporting types. Payload of the transaction node which is the request/response of the resource provider."
 ---
 
@@ -31,7 +31,7 @@ class MyStack : Stack
         {
             BlockchainMemberName = "contosemember1",
             Location = "southeastasia",
-            Password = "1234abcdEFG1",
+            Password = "<password>",
             ResourceGroupName = "mygroup",
             TransactionNodeName = "txnode2",
         });
@@ -58,7 +58,7 @@ func main() {
 		_, err := blockchain.NewTransactionNode(ctx, "transactionNode", &blockchain.TransactionNodeArgs{
 			BlockchainMemberName: pulumi.String("contosemember1"),
 			Location:             pulumi.String("southeastasia"),
-			Password:             pulumi.String("1234abcdEFG1"),
+			Password:             pulumi.String("<password>"),
 			ResourceGroupName:    pulumi.String("mygroup"),
 			TransactionNodeName:  pulumi.String("txnode2"),
 		})
@@ -82,7 +82,7 @@ import pulumi_azure_nextgen as azure_nextgen
 transaction_node = azure_nextgen.blockchain.v20180601preview.TransactionNode("transactionNode",
     blockchain_member_name="contosemember1",
     location="southeastasia",
-    password="1234abcdEFG1",
+    password="<password>",
     resource_group_name="mygroup",
     transaction_node_name="txnode2")
 
@@ -99,7 +99,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const transactionNode = new azure_nextgen.blockchain.v20180601preview.TransactionNode("transactionNode", {
     blockchainMemberName: "contosemember1",
     location: "southeastasia",
-    password: "1234abcdEFG1",
+    password: "<password>",
     resourceGroupName: "mygroup",
     transactionNodeName: "txnode2",
 });

@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationProfilePreference"
-title_tag: "Resource ConfigurationProfilePreference | Module automanage | Package Azure NextGen"
+title_tag: "azure-nextgen.automanage.ConfigurationProfilePreference"
 meta_desc: "Explore the ConfigurationProfilePreference resource of the automanage module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the configuration profile preference."
 ---
 
@@ -745,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerealtimeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Enable<wbr>Real<wbr>Time<wbr>Protection</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
 
@@ -765,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runscheduledscan_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Run<wbr>Scheduled<wbr>Scan</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
 
@@ -795,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantype_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Scan<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerealtimeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runscheduledscan_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantype_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
 
@@ -879,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerealtimeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>Time<wbr>Protection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Real<wbr>Time<wbr>Protection</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runscheduledscan_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Scheduled<wbr>Scan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Run<wbr>Scheduled<wbr>Scan</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantype_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Scan<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
 
@@ -946,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_real_time_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>time_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Real<wbr>Time<wbr>Protection</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
 
@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_scheduled_scan_python" style="color: inherit; text-decoration: inherit;">run_<wbr>scheduled_<wbr>scan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Run<wbr>Scheduled<wbr>Scan</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
 
@@ -996,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scan_type_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Scan<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
 

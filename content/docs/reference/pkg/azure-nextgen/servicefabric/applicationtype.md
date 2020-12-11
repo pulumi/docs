@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationType"
-title_tag: "Resource ApplicationType | Module servicefabric | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabric.ApplicationType"
 meta_desc: "Explore the ApplicationType resource of the servicefabric module, including examples, input properties, output properties, lookup functions, and supporting types. The application type name resource"
 ---
 

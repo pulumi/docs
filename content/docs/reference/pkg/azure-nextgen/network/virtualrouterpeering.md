@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualRouterPeering"
-title_tag: "Resource VirtualRouterPeering | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.VirtualRouterPeering"
 meta_desc: "Explore the VirtualRouterPeering resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Router Peering resource."
 ---
 

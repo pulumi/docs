@@ -1,7 +1,7 @@
 
 ---
 title: "RoleAssignment"
-title_tag: "Resource RoleAssignment | Module authorization | Package Azure NextGen"
+title_tag: "azure-nextgen.authorization.RoleAssignment"
 meta_desc: "Explore the RoleAssignment resource of the authorization module, including examples, input properties, output properties, lookup functions, and supporting types. Role Assignments"
 ---
 

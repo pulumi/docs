@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkRule"
-title_tag: "Resource VirtualNetworkRule | Module dbformariadb | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformariadb.VirtualNetworkRule"
 meta_desc: "Explore the VirtualNetworkRule resource of the dbformariadb module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network rule."
 ---
 

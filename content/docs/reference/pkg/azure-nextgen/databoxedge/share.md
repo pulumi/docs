@@ -1,7 +1,7 @@
 
 ---
 title: "Share"
-title_tag: "Resource Share | Module databoxedge | Package Azure NextGen"
+title_tag: "azure-nextgen.databoxedge.Share"
 meta_desc: "Explore the Share resource of the databoxedge module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a share on the  Data Box Edge/Gateway device."
 ---
 
@@ -175,7 +175,7 @@ const share = new azure_nextgen.databoxedge.latest.Share("share", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_container_info</span><span class="p">:</span> <span class="nx">Optional[AzureContainerInfoArgs]</span> = None<span class="p">, </span><span class="nx">client_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_details</span><span class="p">:</span> <span class="nx">Optional[RefreshDetailsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccessRightArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShareAccessProtocol]]</span> = None<span class="p">, </span><span class="nx">azure_container_info</span><span class="p">:</span> <span class="nx">Optional[AzureContainerInfoArgs]</span> = None<span class="p">, </span><span class="nx">client_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, DataPolicy]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, MonitoringStatus]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_details</span><span class="p">:</span> <span class="nx">Optional[RefreshDetailsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShareStatus]]</span> = None<span class="p">, </span><span class="nx">user_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccessRightArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -353,7 +353,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accessprotocol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
 
@@ -373,7 +373,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
 
@@ -403,7 +403,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sharestatus_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
 
@@ -433,7 +433,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
 
@@ -480,7 +480,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accessprotocol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
 
@@ -500,7 +500,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sharestatus_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
 
@@ -560,7 +560,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#datapolicy_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
 
@@ -607,7 +607,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accessprotocol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Share<wbr>Access<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
 
@@ -627,7 +627,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
 
@@ -657,7 +657,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sharestatus_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Share<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
 
@@ -687,7 +687,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#datapolicy_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#access_protocol_python" style="color: inherit; text-decoration: inherit;">access_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Share<wbr>Access<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Monitoring<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#share_status_python" style="color: inherit; text-decoration: inherit;">share_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Share<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
 
@@ -814,7 +814,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#data_policy_python" style="color: inherit; text-decoration: inherit;">data_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
 
@@ -1050,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
 
@@ -1087,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
 
@@ -1124,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
 
@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Container<wbr>Data<wbr>Format</span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
 
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspermission_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Client<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
 
@@ -1385,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspermission_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
 
@@ -1412,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspermission_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Client<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
 
@@ -1439,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Client<wbr>Permission<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
 
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
 
@@ -2220,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
 
@@ -2247,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Share<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
 
@@ -2274,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Share<wbr>Access<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
 

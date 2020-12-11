@@ -1,7 +1,7 @@
 
 ---
 title: "MachineLearningDatastore"
-title_tag: "Resource MachineLearningDatastore | Module machinelearningservices | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningservices.MachineLearningDatastore"
 meta_desc: "Explore the MachineLearningDatastore resource of the machinelearningservices module, including examples, input properties, output properties, lookup functions, and supporting types. Machine Learning datastore object wrapped into ARM resource envelope."
 ---
 
@@ -527,7 +527,7 @@ class MyStack : Stack
             DataStoreType = "mysqldb",
             DatabaseName = "dataset",
             DatastoreName = "mySqlDatastore",
-            Password = "fefefefe#1234",
+            Password = "<password>",
             ResourceGroupName = "acjain-mleastUS2",
             ServerName = "dataset-mysql-srv",
             UserId = "demo_user@dataset-mysql-srv",
@@ -557,7 +557,7 @@ func main() {
 			DataStoreType:     pulumi.String("mysqldb"),
 			DatabaseName:      pulumi.String("dataset"),
 			DatastoreName:     pulumi.String("mySqlDatastore"),
-			Password:          pulumi.String("fefefefe#1234"),
+			Password:          pulumi.String("<password>"),
 			ResourceGroupName: pulumi.String("acjain-mleastUS2"),
 			ServerName:        pulumi.String("dataset-mysql-srv"),
 			UserId:            pulumi.String("demo_user@dataset-mysql-srv"),
@@ -584,7 +584,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
     data_store_type="mysqldb",
     database_name="dataset",
     datastore_name="mySqlDatastore",
-    password="fefefefe#1234",
+    password="<password>",
     resource_group_name="acjain-mleastUS2",
     server_name="dataset-mysql-srv",
     user_id="demo_user@dataset-mysql-srv",
@@ -604,7 +604,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
     dataStoreType: "mysqldb",
     databaseName: "dataset",
     datastoreName: "mySqlDatastore",
-    password: "fefefefe#1234",
+    password: "<password>",
     resourceGroupName: "acjain-mleastUS2",
     serverName: "dataset-mysql-srv",
     userId: "demo_user@dataset-mysql-srv",
@@ -630,7 +630,7 @@ class MyStack : Stack
             DataStoreType = "psqldb",
             DatabaseName = "dataset",
             DatastoreName = "postgreSqlDatastore",
-            Password = "swfwwfwf#1234",
+            Password = "<password>",
             ResourceGroupName = "acjain-mleastUS2",
             ServerName = "dataset-pgsql-srv",
             UserId = "demo_user@dataset-pgsql-srv",
@@ -660,7 +660,7 @@ func main() {
 			DataStoreType:     pulumi.String("psqldb"),
 			DatabaseName:      pulumi.String("dataset"),
 			DatastoreName:     pulumi.String("postgreSqlDatastore"),
-			Password:          pulumi.String("swfwwfwf#1234"),
+			Password:          pulumi.String("<password>"),
 			ResourceGroupName: pulumi.String("acjain-mleastUS2"),
 			ServerName:        pulumi.String("dataset-pgsql-srv"),
 			UserId:            pulumi.String("demo_user@dataset-pgsql-srv"),
@@ -687,7 +687,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
     data_store_type="psqldb",
     database_name="dataset",
     datastore_name="postgreSqlDatastore",
-    password="swfwwfwf#1234",
+    password="<password>",
     resource_group_name="acjain-mleastUS2",
     server_name="dataset-pgsql-srv",
     user_id="demo_user@dataset-pgsql-srv",
@@ -707,7 +707,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
     dataStoreType: "psqldb",
     databaseName: "dataset",
     datastoreName: "postgreSqlDatastore",
-    password: "swfwwfwf#1234",
+    password: "<password>",
     resourceGroupName: "acjain-mleastUS2",
     serverName: "dataset-pgsql-srv",
     userId: "demo_user@dataset-pgsql-srv",
@@ -733,7 +733,7 @@ class MyStack : Stack
             DataStoreType = "sqldb",
             DatabaseName = "dataset",
             DatastoreName = "sqlDatastore",
-            Password = "fwesfwfwf",
+            Password = "<password>",
             ResourceGroupName = "acjain-mleastUS2",
             ServerName = "dataset-azsql-srv",
             UserName = "demo_user",
@@ -763,7 +763,7 @@ func main() {
 			DataStoreType:     pulumi.String("sqldb"),
 			DatabaseName:      pulumi.String("dataset"),
 			DatastoreName:     pulumi.String("sqlDatastore"),
-			Password:          pulumi.String("fwesfwfwf"),
+			Password:          pulumi.String("<password>"),
 			ResourceGroupName: pulumi.String("acjain-mleastUS2"),
 			ServerName:        pulumi.String("dataset-azsql-srv"),
 			UserName:          pulumi.String("demo_user"),
@@ -790,7 +790,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
     data_store_type="sqldb",
     database_name="dataset",
     datastore_name="sqlDatastore",
-    password="fwesfwfwf",
+    password="<password>",
     resource_group_name="acjain-mleastUS2",
     server_name="dataset-azsql-srv",
     user_name="demo_user",
@@ -810,7 +810,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
     dataStoreType: "sqldb",
     databaseName: "dataset",
     datastoreName: "sqlDatastore",
-    password: "fwesfwfwf",
+    password: "<password>",
     resourceGroupName: "acjain-mleastUS2",
     serverName: "dataset-azsql-srv",
     userName: "demo_user",
@@ -833,7 +833,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adls_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adls_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authority_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_store_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">file_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sas_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_account_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">store_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_system_assigned_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adls_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adls_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authority_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_store_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatastoreTypeArm]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">file_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sas_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_account_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">store_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_system_assigned_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1011,7 +1011,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Datastore<wbr>Type<wbr>Arm</span>
     </dt>
     <dd>{{% md %}}Specifies datastore type.{{% /md %}}</dd>
 
@@ -1358,7 +1358,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#datastoretype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies datastore type.{{% /md %}}</dd>
 
@@ -1705,7 +1705,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Datastore<wbr>Type<wbr>Arm</span>
     </dt>
     <dd>{{% md %}}Specifies datastore type.{{% /md %}}</dd>
 
@@ -2052,7 +2052,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Datastore<wbr>Type<wbr>Arm</span>
     </dt>
     <dd>{{% md %}}Specifies datastore type.{{% /md %}}</dd>
 

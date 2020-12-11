@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module deploymentmanager | Package Azure NextGen"
+title_tag: "azure-nextgen.deploymentmanager.Service"
 meta_desc: "Explore the Service resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. The resource representation of a service in a service topology."
 ---
 

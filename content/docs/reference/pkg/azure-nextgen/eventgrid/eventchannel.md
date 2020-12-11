@@ -1,7 +1,7 @@
 
 ---
 title: "EventChannel"
-title_tag: "Resource EventChannel | Module eventgrid | Package Azure NextGen"
+title_tag: "azure-nextgen.eventgrid.EventChannel"
 meta_desc: "Explore the EventChannel resource of the eventgrid module, including examples, input properties, output properties, lookup functions, and supporting types. Event Channel."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkRule"
-title_tag: "Resource VirtualNetworkRule | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.VirtualNetworkRule"
 meta_desc: "Explore the VirtualNetworkRule resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network rule."
 ---
 
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.Sql.V20150501Preview.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql.V20150501Preview.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.Sql.V20200801Preview.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql.V20200801Preview.VirtualNetworkRuleArgs
         {
             IgnoreMissingVnetServiceEndpoint = false,
             ResourceGroupName = "Default",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20150501preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.sql.v20150501preview.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.sql.v20200801preview.VirtualNetworkRule("virtualNetworkRule",
     ignore_missing_vnet_service_endpoint=False,
     resource_group_name="Default",
     server_name="vnet-test-svr",
@@ -96,7 +96,7 @@ virtual_network_rule = azure_nextgen.sql.v20150501preview.VirtualNetworkRule("vi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkRule = new azure_nextgen.sql.v20150501preview.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,
     resourceGroupName: "Default",
     serverName: "vnet-test-svr",

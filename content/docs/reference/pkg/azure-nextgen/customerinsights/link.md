@@ -1,7 +1,7 @@
 
 ---
 title: "Link"
-title_tag: "Resource Link | Module customerinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.customerinsights.Link"
 meta_desc: "Explore the Link resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The link resource format."
 ---
 
@@ -93,7 +93,7 @@ func main() {
 			LinkName: pulumi.String("linkTest4806"),
 			Mappings: customerinsights.TypePropertiesMappingArray{
 				&customerinsights.TypePropertiesMappingArgs{
-					LinkType:           pulumi.String("UpdateAlways"),
+					LinkType:           "UpdateAlways",
 					SourcePropertyName: pulumi.String("testInteraction1949"),
 					TargetPropertyName: pulumi.String("testProfile1446"),
 				},
@@ -105,9 +105,9 @@ func main() {
 				},
 			},
 			ResourceGroupName:    pulumi.String("TestHubRG"),
-			SourceEntityType:     pulumi.String("Interaction"),
+			SourceEntityType:     "Interaction",
 			SourceEntityTypeName: pulumi.String("testInteraction1949"),
-			TargetEntityType:     pulumi.String("Profile"),
+			TargetEntityType:     "Profile",
 			TargetEntityTypeName: pulumi.String("testProfile1446"),
 		})
 		if err != nil {
@@ -202,7 +202,7 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Link</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[TypePropertiesMappingArgs]]</span> = None<span class="p">, </span><span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">participant_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantPropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">reference_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Link</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[TypePropertiesMappingArgs]]</span> = None<span class="p">, </span><span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[InstanceOperationType]</span> = None<span class="p">, </span><span class="nx">participant_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantPropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">reference_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityType]</span> = None<span class="p">, </span><span class="nx">source_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityType]</span> = None<span class="p">, </span><span class="nx">target_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -420,7 +420,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sourceentitytype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of source entity.{{% /md %}}</dd>
 
@@ -440,7 +440,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#targetentitytype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of target entity.{{% /md %}}</dd>
 
@@ -490,7 +490,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Instance<wbr>Operation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd>
 
@@ -557,7 +557,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sourceentitytype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of source entity.{{% /md %}}</dd>
 
@@ -577,7 +577,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#targetentitytype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of target entity.{{% /md %}}</dd>
 
@@ -627,7 +627,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sourceentitytype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Entity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of source entity.{{% /md %}}</dd>
 
@@ -714,7 +714,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#targetentitytype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Entity<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Entity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of target entity.{{% /md %}}</dd>
 
@@ -764,7 +764,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Instance<wbr>Operation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd>
 
@@ -831,7 +831,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#source_entity_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Entity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of source entity.{{% /md %}}</dd>
 
@@ -851,7 +851,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#target_entity_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>entity_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Entity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of target entity.{{% /md %}}</dd>
 
@@ -901,7 +901,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Instance<wbr>Operation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd>
 
@@ -1445,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Link<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 
@@ -1482,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 
@@ -1519,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Link<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Link<wbr>Types</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 

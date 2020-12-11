@@ -1,7 +1,7 @@
 
 ---
 title: "DataExport"
-title_tag: "Resource DataExport | Module operationalinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.operationalinsights.DataExport"
 meta_desc: "Explore the DataExport resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The top level data export resource container."
 ---
 

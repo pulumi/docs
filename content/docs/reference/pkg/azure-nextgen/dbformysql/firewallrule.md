@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module dbformysql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbformysql.FirewallRule"
 meta_desc: "Explore the FirewallRule resource of the dbformysql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server firewall rule."
 ---
 

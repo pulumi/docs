@@ -1,7 +1,7 @@
 
 ---
 title: "ServerTrustGroup"
-title_tag: "Resource ServerTrustGroup | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.ServerTrustGroup"
 meta_desc: "Explore the ServerTrustGroup resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A server trust group."
 ---
 
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverTrustGroup = new AzureNextGen.Sql.V20200202Preview.ServerTrustGroup("serverTrustGroup", new AzureNextGen.Sql.V20200202Preview.ServerTrustGroupArgs
+        var serverTrustGroup = new AzureNextGen.Sql.V20200801Preview.ServerTrustGroup("serverTrustGroup", new AzureNextGen.Sql.V20200801Preview.ServerTrustGroupArgs
         {
             GroupMembers = 
             {
-                new AzureNextGen.Sql.V20200202Preview.Inputs.ServerInfoArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.ServerInfoArgs
                 {
                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
                 },
-                new AzureNextGen.Sql.V20200202Preview.Inputs.ServerInfoArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.ServerInfoArgs
                 {
                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
                 },
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200202preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,12 +101,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_trust_group = azure_nextgen.sql.v20200202preview.ServerTrustGroup("serverTrustGroup",
+server_trust_group = azure_nextgen.sql.v20200801preview.ServerTrustGroup("serverTrustGroup",
     group_members=[
-        azure_nextgen.sql.v20200202preview.ServerInfoArgs(
+        azure_nextgen.sql.v20200801preview.ServerInfoArgs(
             server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
         ),
-        azure_nextgen.sql.v20200202preview.ServerInfoArgs(
+        azure_nextgen.sql.v20200801preview.ServerInfoArgs(
             server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
         ),
     ],
@@ -125,7 +125,7 @@ server_trust_group = azure_nextgen.sql.v20200202preview.ServerTrustGroup("server
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverTrustGroup = new azure_nextgen.sql.v20200202preview.ServerTrustGroup("serverTrustGroup", {
+const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup("serverTrustGroup", {
     groupMembers: [
         {
             serverId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",

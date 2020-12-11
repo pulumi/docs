@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module machinelearningexperimentation | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearningexperimentation.Account"
 meta_desc: "Explore the Account resource of the machinelearningexperimentation module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a machine learning team account."
 ---
 

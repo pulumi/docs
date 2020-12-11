@@ -1,7 +1,7 @@
 
 ---
 title: "SavedSearch"
-title_tag: "Resource SavedSearch | Module operationalinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.operationalinsights.SavedSearch"
 meta_desc: "Explore the SavedSearch resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Value object for saved search results."
 ---
 

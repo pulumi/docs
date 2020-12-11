@@ -1,7 +1,7 @@
 
 ---
 title: "CommitmentPlan"
-title_tag: "Resource CommitmentPlan | Module machinelearning | Package Azure NextGen"
+title_tag: "azure-nextgen.machinelearning.CommitmentPlan"
 meta_desc: "Explore the CommitmentPlan resource of the machinelearning module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure ML commitment plan resource."
 ---
 

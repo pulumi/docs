@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkForAzureAd"
-title_tag: "Resource PrivateLinkForAzureAd | Module aadiam | Package Azure NextGen"
+title_tag: "azure-nextgen.aadiam.PrivateLinkForAzureAd"
 meta_desc: "Explore the PrivateLinkForAzureAd resource of the aadiam module, including examples, input properties, output properties, lookup functions, and supporting types. PrivateLink Policy configuration object."
 ---
 

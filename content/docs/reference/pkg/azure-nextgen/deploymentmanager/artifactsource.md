@@ -1,7 +1,7 @@
 
 ---
 title: "ArtifactSource"
-title_tag: "Resource ArtifactSource | Module deploymentmanager | Package Azure NextGen"
+title_tag: "azure-nextgen.deploymentmanager.ArtifactSource"
 meta_desc: "Explore the ArtifactSource resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. The resource that defines the source location where the artifacts are located."
 ---
 

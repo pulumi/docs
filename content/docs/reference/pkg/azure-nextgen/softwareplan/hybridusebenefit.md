@@ -1,7 +1,7 @@
 
 ---
 title: "HybridUseBenefit"
-title_tag: "Resource HybridUseBenefit | Module softwareplan | Package Azure NextGen"
+title_tag: "azure-nextgen.softwareplan.HybridUseBenefit"
 meta_desc: "Explore the HybridUseBenefit resource of the softwareplan module, including examples, input properties, output properties, lookup functions, and supporting types. Response on GET of a hybrid use benefit"
 ---
 

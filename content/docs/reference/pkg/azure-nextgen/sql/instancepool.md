@@ -1,7 +1,7 @@
 
 ---
 title: "InstancePool"
-title_tag: "Resource InstancePool | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.InstancePool"
 meta_desc: "Explore the InstancePool resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL instance pool."
 ---
 
@@ -27,18 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancePool = new AzureNextGen.Sql.V20180601Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20180601Preview.InstancePoolArgs
+        var instancePool = new AzureNextGen.Sql.V20200801Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20200801Preview.InstancePoolArgs
         {
             InstancePoolName = "testIP",
             LicenseType = "LicenseIncluded",
+            Location = "japaneast",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Sql.V20180601Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
             {
                 Family = "Gen5",
                 Name = "GP_Gen5",
                 Tier = "GeneralPurpose",
             },
-            SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+            SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
             Tags = 
             {
                 { "a", "b" },
@@ -59,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20180601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -68,13 +69,14 @@ func main() {
 		_, err := sql.NewInstancePool(ctx, "instancePool", &sql.InstancePoolArgs{
 			InstancePoolName:  pulumi.String("testIP"),
 			LicenseType:       pulumi.String("LicenseIncluded"),
+			Location:          pulumi.String("japaneast"),
 			ResourceGroupName: pulumi.String("group1"),
 			Sku: &sql.SkuArgs{
 				Family: pulumi.String("Gen5"),
 				Name:   pulumi.String("GP_Gen5"),
 				Tier:   pulumi.String("GeneralPurpose"),
 			},
-			SubnetId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1"),
+			SubnetId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1"),
 			Tags: pulumi.StringMap{
 				"a": pulumi.String("b"),
 			},
@@ -97,16 +99,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_pool = azure_nextgen.sql.v20180601preview.InstancePool("instancePool",
+instance_pool = azure_nextgen.sql.v20200801preview.InstancePool("instancePool",
     instance_pool_name="testIP",
     license_type="LicenseIncluded",
+    location="japaneast",
     resource_group_name="group1",
-    sku=azure_nextgen.sql.v20180601preview.SkuArgs(
+    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
         family="Gen5",
         name="GP_Gen5",
         tier="GeneralPurpose",
     ),
-    subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
     tags={
         "a": "b",
     },
@@ -122,16 +125,17 @@ instance_pool = azure_nextgen.sql.v20180601preview.InstancePool("instancePool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const instancePool = new azure_nextgen.sql.v20180601preview.InstancePool("instancePool", {
+const instancePool = new azure_nextgen.sql.v20200801preview.InstancePool("instancePool", {
     instancePoolName: "testIP",
     licenseType: "LicenseIncluded",
+    location: "japaneast",
     resourceGroupName: "group1",
     sku: {
         family: "Gen5",
         name: "GP_Gen5",
         tier: "GeneralPurpose",
     },
-    subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
     tags: {
         a: "b",
     },
@@ -152,18 +156,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancePool = new AzureNextGen.Sql.V20180601Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20180601Preview.InstancePoolArgs
+        var instancePool = new AzureNextGen.Sql.V20200801Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20200801Preview.InstancePoolArgs
         {
             InstancePoolName = "testIP",
             LicenseType = "LicenseIncluded",
+            Location = "japaneast",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Sql.V20180601Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
             {
                 Family = "Gen5",
                 Name = "GP_Gen5",
                 Tier = "GeneralPurpose",
             },
-            SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+            SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
             VCores = 8,
         });
     }
@@ -180,7 +185,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20180601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -189,13 +194,14 @@ func main() {
 		_, err := sql.NewInstancePool(ctx, "instancePool", &sql.InstancePoolArgs{
 			InstancePoolName:  pulumi.String("testIP"),
 			LicenseType:       pulumi.String("LicenseIncluded"),
+			Location:          pulumi.String("japaneast"),
 			ResourceGroupName: pulumi.String("group1"),
 			Sku: &sql.SkuArgs{
 				Family: pulumi.String("Gen5"),
 				Name:   pulumi.String("GP_Gen5"),
 				Tier:   pulumi.String("GeneralPurpose"),
 			},
-			SubnetId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1"),
+			SubnetId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1"),
 			VCores:   pulumi.Int(8),
 		})
 		if err != nil {
@@ -215,16 +221,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_pool = azure_nextgen.sql.v20180601preview.InstancePool("instancePool",
+instance_pool = azure_nextgen.sql.v20200801preview.InstancePool("instancePool",
     instance_pool_name="testIP",
     license_type="LicenseIncluded",
+    location="japaneast",
     resource_group_name="group1",
-    sku=azure_nextgen.sql.v20180601preview.SkuArgs(
+    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
         family="Gen5",
         name="GP_Gen5",
         tier="GeneralPurpose",
     ),
-    subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
     v_cores=8)
 
 ```
@@ -237,16 +244,17 @@ instance_pool = azure_nextgen.sql.v20180601preview.InstancePool("instancePool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const instancePool = new azure_nextgen.sql.v20180601preview.InstancePool("instancePool", {
+const instancePool = new azure_nextgen.sql.v20200801preview.InstancePool("instancePool", {
     instancePoolName: "testIP",
     licenseType: "LicenseIncluded",
+    location: "japaneast",
     resourceGroupName: "group1",
     sku: {
         family: "Gen5",
         name: "GP_Gen5",
         tier: "GeneralPurpose",
     },
-    subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1",
     vCores: 8,
 });
 
@@ -266,7 +274,7 @@ const instancePool = new azure_nextgen.sql.v20180601preview.InstancePool("instan
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstancePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstancePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstancePoolLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -454,7 +462,7 @@ The InstancePool resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Instance<wbr>Pool<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).{{% /md %}}</dd>
 
@@ -541,7 +549,7 @@ The InstancePool resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).{{% /md %}}</dd>
 
@@ -628,7 +636,7 @@ The InstancePool resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Instance<wbr>Pool<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).{{% /md %}}</dd>
 
@@ -715,7 +723,7 @@ The InstancePool resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Instance<wbr>Pool<wbr>License<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).{{% /md %}}</dd>
 

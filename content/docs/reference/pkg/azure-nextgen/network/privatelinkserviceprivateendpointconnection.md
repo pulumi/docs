@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkServicePrivateEndpointConnection"
-title_tag: "Resource PrivateLinkServicePrivateEndpointConnection | Module network | Package Azure NextGen"
+title_tag: "azure-nextgen.network.PrivateLinkServicePrivateEndpointConnection"
 meta_desc: "Explore the PrivateLinkServicePrivateEndpointConnection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. PrivateEndpointConnection resource."
 ---
 

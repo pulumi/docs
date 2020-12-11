@@ -1,7 +1,7 @@
 
 ---
 title: "Partner"
-title_tag: "Resource Partner | Module managementpartner | Package Azure NextGen"
+title_tag: "azure-nextgen.managementpartner.Partner"
 meta_desc: "Explore the Partner resource of the managementpartner module, including examples, input properties, output properties, lookup functions, and supporting types. this is the management partner operations response"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "WCFRelay"
-title_tag: "Resource WCFRelay | Module relay | Package Azure NextGen"
+title_tag: "azure-nextgen.relay.WCFRelay"
 meta_desc: "Explore the WCFRelay resource of the relay module, including examples, input properties, output properties, lookup functions, and supporting types. Description of the WCF relay resource."
 ---
 
@@ -29,12 +29,12 @@ class MyStack : Stack
     {
         var wcfRelay = new AzureNextGen.Relay.Latest.WCFRelay("wcfRelay", new AzureNextGen.Relay.Latest.WCFRelayArgs
         {
-            NamespaceName = "sdk-RelayNamespace-9953",
-            RelayName = "sdk-Relay-Wcf-1194",
+            NamespaceName = "example-RelayNamespace-9953",
+            RelayName = "example-Relay-Wcf-1194",
             RelayType = "NetTcp",
             RequiresClientAuthorization = true,
             RequiresTransportSecurity = true,
-            ResourceGroupName = "RG-eg",
+            ResourceGroupName = "resourcegroup",
         });
     }
 
@@ -57,12 +57,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := relay.NewWCFRelay(ctx, "wcfRelay", &relay.WCFRelayArgs{
-			NamespaceName:               pulumi.String("sdk-RelayNamespace-9953"),
-			RelayName:                   pulumi.String("sdk-Relay-Wcf-1194"),
-			RelayType:                   pulumi.String("NetTcp"),
+			NamespaceName:               pulumi.String("example-RelayNamespace-9953"),
+			RelayName:                   pulumi.String("example-Relay-Wcf-1194"),
+			RelayType:                   "NetTcp",
 			RequiresClientAuthorization: pulumi.Bool(true),
 			RequiresTransportSecurity:   pulumi.Bool(true),
-			ResourceGroupName:           pulumi.String("RG-eg"),
+			ResourceGroupName:           pulumi.String("resourcegroup"),
 		})
 		if err != nil {
 			return err
@@ -82,12 +82,12 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 wcf_relay = azure_nextgen.relay.latest.WCFRelay("wcfRelay",
-    namespace_name="sdk-RelayNamespace-9953",
-    relay_name="sdk-Relay-Wcf-1194",
+    namespace_name="example-RelayNamespace-9953",
+    relay_name="example-Relay-Wcf-1194",
     relay_type="NetTcp",
     requires_client_authorization=True,
     requires_transport_security=True,
-    resource_group_name="RG-eg")
+    resource_group_name="resourcegroup")
 
 ```
 
@@ -100,12 +100,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const wcfRelay = new azure_nextgen.relay.latest.WCFRelay("wcfRelay", {
-    namespaceName: "sdk-RelayNamespace-9953",
-    relayName: "sdk-Relay-Wcf-1194",
+    namespaceName: "example-RelayNamespace-9953",
+    relayName: "example-Relay-Wcf-1194",
     relayType: "NetTcp",
     requiresClientAuthorization: true,
     requiresTransportSecurity: true,
-    resourceGroupName: "RG-eg",
+    resourceGroupName: "resourcegroup",
 });
 
 ```
@@ -124,7 +124,7 @@ const wcfRelay = new azure_nextgen.relay.latest.WCFRelay("wcfRelay", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WCFRelay</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relay_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires_client_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requires_transport_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WCFRelay</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relay_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relay_type</span><span class="p">:</span> <span class="nx">Optional[Relaytype]</span> = None<span class="p">, </span><span class="nx">requires_client_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requires_transport_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -332,7 +332,7 @@ The WCFRelay resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#relaytype_csharp" style="color: inherit; text-decoration: inherit;">Relay<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Relaytype</span>
     </dt>
     <dd>{{% md %}}WCF relay type.{{% /md %}}</dd>
 
@@ -409,7 +409,7 @@ The WCFRelay resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#relaytype_go" style="color: inherit; text-decoration: inherit;">Relay<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}WCF relay type.{{% /md %}}</dd>
 
@@ -486,7 +486,7 @@ The WCFRelay resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#relaytype_nodejs" style="color: inherit; text-decoration: inherit;">relay<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Relaytype</span>
     </dt>
     <dd>{{% md %}}WCF relay type.{{% /md %}}</dd>
 
@@ -563,7 +563,7 @@ The WCFRelay resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#relay_type_python" style="color: inherit; text-decoration: inherit;">relay_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Relaytype</span>
     </dt>
     <dd>{{% md %}}WCF relay type.{{% /md %}}</dd>
 

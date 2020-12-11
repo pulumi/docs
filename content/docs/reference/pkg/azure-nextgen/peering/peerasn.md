@@ -1,7 +1,7 @@
 
 ---
 title: "PeerAsn"
-title_tag: "Resource PeerAsn | Module peering | Package Azure NextGen"
+title_tag: "azure-nextgen.peering.PeerAsn"
 meta_desc: "Explore the PeerAsn resource of the peering module, including examples, input properties, output properties, lookup functions, and supporting types. The essential information related to the peer&#39;s ASN."
 ---
 
@@ -184,7 +184,7 @@ const peerAsn = new azure_nextgen.peering.latest.PeerAsn("peerAsn", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PeerAsn</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peer_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_contact_detail</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContactDetailArgs]]</span> = None<span class="p">, </span><span class="nx">peer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PeerAsn</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peer_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_contact_detail</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContactDetailArgs]]</span> = None<span class="p">, </span><span class="nx">peer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ValidationState]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +402,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#validationstate_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Validation<wbr>State</span>
     </dt>
     <dd>{{% md %}}The validation state of the ASN associated with the peer.{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#validationstate_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The validation state of the ASN associated with the peer.{{% /md %}}</dd>
 
@@ -516,7 +516,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#validationstate_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Validation<wbr>State</span>
     </dt>
     <dd>{{% md %}}The validation state of the ASN associated with the peer.{{% /md %}}</dd>
 
@@ -573,7 +573,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#validation_state_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Validation<wbr>State</span>
     </dt>
     <dd>{{% md %}}The validation state of the ASN associated with the peer.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Role</span>
     </dt>
     <dd>{{% md %}}The role of the contact.{{% /md %}}</dd>
 
@@ -866,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of the contact.{{% /md %}}</dd>
 
@@ -903,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Role</span>
     </dt>
     <dd>{{% md %}}The role of the contact.{{% /md %}}</dd>
 
@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Role</span>
     </dt>
     <dd>{{% md %}}The role of the contact.{{% /md %}}</dd>
 

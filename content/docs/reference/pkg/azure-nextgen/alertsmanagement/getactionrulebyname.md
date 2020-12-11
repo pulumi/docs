@@ -174,6 +174,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -198,7 +208,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Action<wbr>Group<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Diagnostics<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Suppression<wbr>Response&gt;&gt;</span>
+        <span class="property-type"><a href="#actiongroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Action<wbr>Group<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Diagnostics<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Suppression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -231,6 +241,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -255,7 +275,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppressionresponse">Suppression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -288,6 +308,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -312,7 +342,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Action<wbr>Group<wbr>Response | Diagnostics<wbr>Response | Suppression<wbr>Response</span>
+        <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppressionresponse">Suppression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -345,6 +375,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -369,7 +409,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppressionresponse">Suppression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 

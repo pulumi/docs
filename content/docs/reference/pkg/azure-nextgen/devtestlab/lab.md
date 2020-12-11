@@ -1,7 +1,7 @@
 
 ---
 title: "Lab"
-title_tag: "Resource Lab | Module devtestlab | Package Azure NextGen"
+title_tag: "azure-nextgen.devtestlab.Lab"
 meta_desc: "Explore the Lab resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A lab."
 ---
 
@@ -129,7 +129,7 @@ const lab = new azure_nextgen.devtestlab.latest.Lab("lab", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">announcement</span><span class="p">:</span> <span class="nx">Optional[LabAnnouncementPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">environment_permission</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lab_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mandatory_artifacts_resource_ids_linux</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mandatory_artifacts_resource_ids_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">premium_data_disks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support</span><span class="p">:</span> <span class="nx">Optional[LabSupportPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">announcement</span><span class="p">:</span> <span class="nx">Optional[LabAnnouncementPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">environment_permission</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnvironmentPermission]]</span> = None<span class="p">, </span><span class="nx">extended_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lab_storage_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mandatory_artifacts_resource_ids_linux</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mandatory_artifacts_resource_ids_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">premium_data_disks</span><span class="p">:</span> <span class="nx">Optional[Union[str, PremiumDataDisk]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support</span><span class="p">:</span> <span class="nx">Optional[LabSupportPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,7 +337,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environmentpermission_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Environment<wbr>Permission</span>
     </dt>
     <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
 
@@ -357,7 +357,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#labstoragetype_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Storage<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
 
@@ -397,7 +397,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#premiumdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Premium<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Premium<wbr>Data<wbr>Disk</span>
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
@@ -466,7 +466,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#environmentpermission_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
 
@@ -486,7 +486,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#labstoragetype_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Storage<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
 
@@ -526,7 +526,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#premiumdatadisks_go" style="color: inherit; text-decoration: inherit;">Premium<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
@@ -595,7 +595,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#environmentpermission_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Environment<wbr>Permission</span>
     </dt>
     <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
 
@@ -615,7 +615,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#labstoragetype_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Storage<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
 
@@ -655,7 +655,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#premiumdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">premium<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Premium<wbr>Data<wbr>Disk</span>
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
@@ -724,7 +724,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#environment_permission_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Environment<wbr>Permission</span>
     </dt>
     <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
 
@@ -744,7 +744,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#lab_storage_type_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>storage_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#premium_data_disks_python" style="color: inherit; text-decoration: inherit;">premium_<wbr>data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Premium<wbr>Data<wbr>Disk</span>
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
 
@@ -1499,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
 
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
 
@@ -1613,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
 
@@ -2000,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
 
@@ -2027,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
 
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
 
@@ -2081,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
 

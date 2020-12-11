@@ -1,7 +1,7 @@
 
 ---
 title: "CassandraResourceCassandraKeyspace"
-title_tag: "Resource CassandraResourceCassandraKeyspace | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.CassandraResourceCassandraKeyspace"
 meta_desc: "Explore the CassandraResourceCassandraKeyspace resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Cassandra keyspace."
 ---
 

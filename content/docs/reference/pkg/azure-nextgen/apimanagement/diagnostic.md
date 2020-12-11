@@ -1,7 +1,7 @@
 
 ---
 title: "Diagnostic"
-title_tag: "Resource Diagnostic | Module apimanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.apimanagement.Diagnostic"
 meta_desc: "Explore the Diagnostic resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Diagnostic details."
 ---
 
@@ -279,7 +279,7 @@ const diagnostic = new azure_nextgen.apimanagement.latest.Diagnostic("diagnostic
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Diagnostic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[PipelineDiagnosticSettingsArgs]</span> = None<span class="p">, </span><span class="nx">diagnostic_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend</span><span class="p">:</span> <span class="nx">Optional[PipelineDiagnosticSettingsArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sampling</span><span class="p">:</span> <span class="nx">Optional[SamplingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Diagnostic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log</span><span class="p">:</span> <span class="nx">Optional[Union[str, AlwaysLog]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[PipelineDiagnosticSettingsArgs]</span> = None<span class="p">, </span><span class="nx">diagnostic_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend</span><span class="p">:</span> <span class="nx">Optional[PipelineDiagnosticSettingsArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, HttpCorrelationProtocol]]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sampling</span><span class="p">:</span> <span class="nx">Optional[SamplingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[Union[str, Verbosity]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -497,7 +497,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alwayslog_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Always<wbr>Log</span>
     </dt>
     <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
 
@@ -527,7 +527,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Http<wbr>Correlation<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
 
@@ -557,7 +557,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Verbosity</span>
     </dt>
     <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
 
@@ -614,7 +614,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alwayslog_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Log</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
 
@@ -644,7 +644,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#httpcorrelationprotocol_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#verbosity_go" style="color: inherit; text-decoration: inherit;">Verbosity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
 
@@ -731,7 +731,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alwayslog_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Log</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Always<wbr>Log</span>
     </dt>
     <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
 
@@ -761,7 +761,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#httpcorrelationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Correlation<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Http<wbr>Correlation<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Verbosity</span>
     </dt>
     <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
 
@@ -848,7 +848,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#always_log_python" style="color: inherit; text-decoration: inherit;">always_<wbr>log</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Always<wbr>Log</span>
     </dt>
     <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
 
@@ -878,7 +878,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#http_correlation_protocol_python" style="color: inherit; text-decoration: inherit;">http_<wbr>correlation_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Http<wbr>Correlation<wbr>Protocol</span>
     </dt>
     <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
 
@@ -908,7 +908,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Verbosity</span>
     </dt>
     <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
 
@@ -1748,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingtype_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Sampling<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
 
@@ -1775,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingtype_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
 
@@ -1802,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingtype_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sampling<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
 
@@ -1829,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_type_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sampling<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
 

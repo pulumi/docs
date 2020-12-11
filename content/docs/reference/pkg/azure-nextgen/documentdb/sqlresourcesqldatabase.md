@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlDatabase"
-title_tag: "Resource SqlResourceSqlDatabase | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.SqlResourceSqlDatabase"
 meta_desc: "Explore the SqlResourceSqlDatabase resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB SQL database."
 ---
 

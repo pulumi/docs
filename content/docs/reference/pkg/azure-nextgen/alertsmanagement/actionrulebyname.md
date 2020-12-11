@@ -1,7 +1,7 @@
 
 ---
 title: "ActionRuleByName"
-title_tag: "Resource ActionRuleByName | Module alertsmanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.alertsmanagement.ActionRuleByName"
 meta_desc: "Explore the ActionRuleByName resource of the alertsmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Action rule object containing target scope, conditions and suppression logic"
 ---
 
@@ -445,7 +445,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Diagnostics<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#actiongroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Diagnostics<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -502,7 +502,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#actiongroup">Action<wbr>Group</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnostics">Diagnostics</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppression">Suppression</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -559,7 +559,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Action<wbr>Group | Diagnostics | Suppression</span>
+        <span class="property-type"><a href="#actiongroup">Action<wbr>Group</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnostics">Diagnostics</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppression">Suppression</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -616,7 +616,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Action<wbr>Group<wbr>Args, Diagnostics<wbr>Args, Suppression<wbr>Args]</span>
+        <span class="property-type"><a href="#actiongroup">Action<wbr>Group<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#diagnostics">Diagnostics<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#suppression">Suppression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -976,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -1460,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
 
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
 
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operator</span>
     </dt>
     <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
 
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operator</span>
     </dt>
     <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
 
@@ -2366,7 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -2413,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -2460,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -2507,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -2894,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scopetype_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Scope<wbr>Type</span>
     </dt>
     <dd>{{% md %}}type of target scope{{% /md %}}</dd>
 
@@ -2921,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scopetype_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of target scope{{% /md %}}</dd>
 
@@ -2948,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scopetype_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Scope<wbr>Type</span>
     </dt>
     <dd>{{% md %}}type of target scope{{% /md %}}</dd>
 
@@ -2975,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_type_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Scope<wbr>Type</span>
     </dt>
     <dd>{{% md %}}type of target scope{{% /md %}}</dd>
 
@@ -3172,7 +3172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -3229,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -3286,7 +3286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -3343,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Action<wbr>Rule<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 
@@ -3371,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Suppression<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
 
@@ -3398,7 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
 
@@ -3425,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Suppression<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
 
@@ -3452,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_type_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Suppression<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
 

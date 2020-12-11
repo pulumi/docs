@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module servicefabric | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabric.Service"
 meta_desc: "Explore the Service resource of the servicefabric module, including examples, input properties, output properties, lookup functions, and supporting types. The service resource."
 ---
 
@@ -232,7 +232,7 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorrelationDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[Union[NamedPartitionSchemeDescriptionArgs, SingletonPartitionSchemeDescriptionArgs, UniformInt64RangePartitionSchemeDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementPolicyDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorrelationDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[Union[str, MoveCost]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[Union[NamedPartitionSchemeDescriptionArgs, SingletonPartitionSchemeDescriptionArgs, UniformInt64RangePartitionSchemeDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceKind]]</span> = None<span class="p">, </span><span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ArmServicePackageActivationMode]]</span> = None<span class="p">, </span><span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementPolicyDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -440,7 +440,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicekind_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
 
@@ -470,7 +470,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultmovecost_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Move<wbr>Cost</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Move<wbr>Cost</span>
     </dt>
     <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
 
@@ -490,7 +490,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partitiondescription_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicepackageactivationmode_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Package<wbr>Activation<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -607,7 +607,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicekind_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
 
@@ -637,7 +637,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultmovecost_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Move<wbr>Cost</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
 
@@ -657,7 +657,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partitiondescription_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicepackageactivationmode_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Package<wbr>Activation<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -774,7 +774,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicekind_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Service<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
 
@@ -804,7 +804,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultmovecost_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Move<wbr>Cost</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Move<wbr>Cost</span>
     </dt>
     <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
 
@@ -824,7 +824,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partitiondescription_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Named<wbr>Partition<wbr>Scheme<wbr>Description | Singleton<wbr>Partition<wbr>Scheme<wbr>Description | Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description</span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -864,7 +864,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicepackageactivationmode_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Package<wbr>Activation<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -941,7 +941,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_kind_python" style="color: inherit; text-decoration: inherit;">service_<wbr>kind</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Service<wbr>Kind</span>
     </dt>
     <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
 
@@ -971,7 +971,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#default_move_cost_python" style="color: inherit; text-decoration: inherit;">default_<wbr>move_<wbr>cost</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Move<wbr>Cost</span>
     </dt>
     <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
 
@@ -991,7 +991,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partition_description_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args, Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args, Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args]</span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -1031,7 +1031,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_package_activation_mode_python" style="color: inherit; text-decoration: inherit;">service_<wbr>package_<wbr>activation_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
 
@@ -1575,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Correlation<wbr>Scheme</span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
 
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
 
@@ -1629,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Service<wbr>Correlation<wbr>Scheme</span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
 
@@ -1656,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Service<wbr>Correlation<wbr>Scheme</span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
 
@@ -1853,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Load<wbr>Metric<wbr>Weight</span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
 
@@ -1910,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
 
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Service<wbr>Load<wbr>Metric<wbr>Weight</span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
 
@@ -2024,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Service<wbr>Load<wbr>Metric<wbr>Weight</span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
 
@@ -2291,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
 
@@ -2308,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
 
@@ -2325,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
 
@@ -2342,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Service<wbr>Placement<wbr>Policy<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
 

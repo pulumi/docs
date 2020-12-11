@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceFailoverGroup"
-title_tag: "Resource InstanceFailoverGroup | Module sql | Package Azure NextGen"
+title_tag: "azure-nextgen.sql.InstanceFailoverGroup"
 meta_desc: "Explore the InstanceFailoverGroup resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. An instance failover group."
 ---
 
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instanceFailoverGroup = new AzureNextGen.Sql.V20171001Preview.InstanceFailoverGroup("instanceFailoverGroup", new AzureNextGen.Sql.V20171001Preview.InstanceFailoverGroupArgs
+        var instanceFailoverGroup = new AzureNextGen.Sql.V20200801Preview.InstanceFailoverGroup("instanceFailoverGroup", new AzureNextGen.Sql.V20200801Preview.InstanceFailoverGroupArgs
         {
             FailoverGroupName = "failover-group-test-3",
             LocationName = "Japan East",
             ManagedInstancePairs = 
             {
-                new AzureNextGen.Sql.V20171001Preview.Inputs.ManagedInstancePairInfoArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.ManagedInstancePairInfoArgs
                 {
                     PartnerManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
                     PrimaryManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
@@ -41,16 +41,16 @@ class MyStack : Stack
             },
             PartnerRegions = 
             {
-                new AzureNextGen.Sql.V20171001Preview.Inputs.PartnerRegionInfoArgs
+                new AzureNextGen.Sql.V20200801Preview.Inputs.PartnerRegionInfoArgs
                 {
                     Location = "Japan West",
                 },
             },
-            ReadOnlyEndpoint = new AzureNextGen.Sql.V20171001Preview.Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
+            ReadOnlyEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
             {
                 FailoverPolicy = "Disabled",
             },
-            ReadWriteEndpoint = new AzureNextGen.Sql.V20171001Preview.Inputs.InstanceFailoverGroupReadWriteEndpointArgs
+            ReadWriteEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.InstanceFailoverGroupReadWriteEndpointArgs
             {
                 FailoverPolicy = "Automatic",
                 FailoverWithDataLossGracePeriodMinutes = 480,
@@ -71,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20171001preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,20 +117,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_failover_group = azure_nextgen.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup",
+instance_failover_group = azure_nextgen.sql.v20200801preview.InstanceFailoverGroup("instanceFailoverGroup",
     failover_group_name="failover-group-test-3",
     location_name="Japan East",
-    managed_instance_pairs=[azure_nextgen.sql.v20171001preview.ManagedInstancePairInfoArgs(
+    managed_instance_pairs=[azure_nextgen.sql.v20200801preview.ManagedInstancePairInfoArgs(
         partner_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
         primary_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
     )],
-    partner_regions=[azure_nextgen.sql.v20171001preview.PartnerRegionInfoArgs(
+    partner_regions=[azure_nextgen.sql.v20200801preview.PartnerRegionInfoArgs(
         location="Japan West",
     )],
-    read_only_endpoint=azure_nextgen.sql.v20171001preview.InstanceFailoverGroupReadOnlyEndpointArgs(
+    read_only_endpoint=azure_nextgen.sql.v20200801preview.InstanceFailoverGroupReadOnlyEndpointArgs(
         failover_policy="Disabled",
     ),
-    read_write_endpoint=azure_nextgen.sql.v20171001preview.InstanceFailoverGroupReadWriteEndpointArgs(
+    read_write_endpoint=azure_nextgen.sql.v20200801preview.InstanceFailoverGroupReadWriteEndpointArgs(
         failover_policy="Automatic",
         failover_with_data_loss_grace_period_minutes=480,
     ),
@@ -146,7 +146,7 @@ instance_failover_group = azure_nextgen.sql.v20171001preview.InstanceFailoverGro
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const instanceFailoverGroup = new azure_nextgen.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup", {
+const instanceFailoverGroup = new azure_nextgen.sql.v20200801preview.InstanceFailoverGroup("instanceFailoverGroup", {
     failoverGroupName: "failover-group-test-3",
     locationName: "Japan East",
     managedInstancePairs: [{
@@ -927,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd>
 
@@ -944,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd>
 
@@ -961,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd>
 
@@ -978,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd>
 
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd>
 
@@ -1112,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd>
 
@@ -1166,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd>
 

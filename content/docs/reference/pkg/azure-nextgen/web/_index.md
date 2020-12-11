@@ -26,6 +26,7 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
     <li><a href="webappdeployment" title="WebAppDeployment"><span class="symbol resource"></span>WebAppDeployment</a></li>
     <li><a href="webappdeploymentslot" title="WebAppDeploymentSlot"><span class="symbol resource"></span>WebAppDeploymentSlot</a></li>
+    <li><a href="webappdiagnosticlogsconfiguration" title="WebAppDiagnosticLogsConfiguration"><span class="symbol resource"></span>WebAppDiagnosticLogsConfiguration</a></li>
     <li><a href="webappdomainownershipidentifier" title="WebAppDomainOwnershipIdentifier"><span class="symbol resource"></span>WebAppDomainOwnershipIdentifier</a></li>
     <li><a href="webappdomainownershipidentifierslot" title="WebAppDomainOwnershipIdentifierSlot"><span class="symbol resource"></span>WebAppDomainOwnershipIdentifierSlot</a></li>
     <li><a href="webappfunction" title="WebAppFunction"><span class="symbol resource"></span>WebAppFunction</a></li>
@@ -69,6 +70,7 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="getwebapp" title="GetWebApp"><span class="symbol function"></span>GetWebApp</a></li>
     <li><a href="getwebappdeployment" title="GetWebAppDeployment"><span class="symbol function"></span>GetWebAppDeployment</a></li>
     <li><a href="getwebappdeploymentslot" title="GetWebAppDeploymentSlot"><span class="symbol function"></span>GetWebAppDeploymentSlot</a></li>
+    <li><a href="getwebappdiagnosticlogsconfiguration" title="GetWebAppDiagnosticLogsConfiguration"><span class="symbol function"></span>GetWebAppDiagnosticLogsConfiguration</a></li>
     <li><a href="getwebappdomainownershipidentifier" title="GetWebAppDomainOwnershipIdentifier"><span class="symbol function"></span>GetWebAppDomainOwnershipIdentifier</a></li>
     <li><a href="getwebappdomainownershipidentifierslot" title="GetWebAppDomainOwnershipIdentifierSlot"><span class="symbol function"></span>GetWebAppDomainOwnershipIdentifierSlot</a></li>
     <li><a href="getwebappfunction" title="GetWebAppFunction"><span class="symbol function"></span>GetWebAppFunction</a></li>
@@ -142,7 +144,7 @@ Explore the resources and functions of the web module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.8</dd>
+	<dd>0.3.0</dd>
 </dl>
 
 

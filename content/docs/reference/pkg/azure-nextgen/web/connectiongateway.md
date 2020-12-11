@@ -1,7 +1,7 @@
 
 ---
 title: "ConnectionGateway"
-title_tag: "Resource ConnectionGateway | Module web | Package Azure NextGen"
+title_tag: "azure-nextgen.web.ConnectionGateway"
 meta_desc: "Explore the ConnectionGateway resource of the web module, including examples, input properties, output properties, lookup functions, and supporting types. The gateway definition"
 ---
 

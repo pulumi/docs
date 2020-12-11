@@ -1,7 +1,7 @@
 
 ---
 title: "DedicatedHsm"
-title_tag: "Resource DedicatedHsm | Module hardwaresecuritymodules | Package Azure NextGen"
+title_tag: "azure-nextgen.hardwaresecuritymodules.DedicatedHsm"
 meta_desc: "Explore the DedicatedHsm resource of the hardwaresecuritymodules module, including examples, input properties, output properties, lookup functions, and supporting types. Resource information with extended details."
 ---
 

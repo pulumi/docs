@@ -1,7 +1,7 @@
 
 ---
 title: "IotSecuritySolution"
-title_tag: "Resource IotSecuritySolution | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.IotSecuritySolution"
 meta_desc: "Explore the IotSecuritySolution resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. IoT Security solution configuration and resource information."
 ---
 
@@ -214,7 +214,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recommendations_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecommendationConfigurationPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">unmasked_ip_logging_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_resources</span><span class="p">:</span> <span class="nx">Optional[UserDefinedResourcesPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">workspace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, DataSource]]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ExportData]]]</span> = None<span class="p">, </span><span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recommendations_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecommendationConfigurationPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecuritySolutionStatus]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">unmasked_ip_logging_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, UnmaskedIpLoggingStatus]]</span> = None<span class="p">, </span><span class="nx">user_defined_resources</span><span class="p">:</span> <span class="nx">Optional[UserDefinedResourcesPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">workspace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -432,7 +432,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disableddatasources_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Data<wbr>Source&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
 
@@ -442,7 +442,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Export<wbr>Data&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
 
@@ -472,7 +472,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Security<wbr>Solution<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
 
@@ -492,7 +492,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#unmaskediploggingstatus_csharp" style="color: inherit; text-decoration: inherit;">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Unmasked<wbr>Ip<wbr>Logging<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disableddatasources_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_go" style="color: inherit; text-decoration: inherit;">Export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#unmaskediploggingstatus_go" style="color: inherit; text-decoration: inherit;">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
 
@@ -706,7 +706,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disableddatasources_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Data<wbr>Sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Data<wbr>Source[]</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
 
@@ -716,7 +716,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Export<wbr>Data[]</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
 
@@ -746,7 +746,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Solution<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
 
@@ -766,7 +766,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#unmaskediploggingstatus_nodejs" style="color: inherit; text-decoration: inherit;">unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Unmasked<wbr>Ip<wbr>Logging<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
 
@@ -843,7 +843,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disabled_data_sources_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Data<wbr>Source]]</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
 
@@ -853,7 +853,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Export<wbr>Data]]</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
 
@@ -883,7 +883,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Solution<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
 
@@ -903,7 +903,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#unmasked_ip_logging_status_python" style="color: inherit; text-decoration: inherit;">unmasked_<wbr>ip_<wbr>logging_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationtype_csharp" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Config<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
 
@@ -1186,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationtype_go" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
 
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
 
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationtype_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Recommendation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
 
@@ -1223,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Recommendation<wbr>Config<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
 
@@ -1240,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Recommendation<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
 
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Recommendation<wbr>Config<wbr>Status</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
 

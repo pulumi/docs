@@ -1,7 +1,7 @@
 
 ---
 title: "Connector"
-title_tag: "Resource Connector | Module security | Package Azure NextGen"
+title_tag: "azure-nextgen.security.Connector"
 meta_desc: "Explore the Connector resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. The connector setting"
 ---
 
@@ -49,7 +49,7 @@ class MyStack : Stack
                 ServicePrincipal = new AzureNextGen.Security.V20200101Preview.Inputs.ServicePrincipalPropertiesArgs
                 {
                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
-                    Secret = "x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
+                    Secret = "<secret>",
                 },
             },
         });
@@ -88,7 +88,7 @@ connector = azure_nextgen.security.v20200101preview.Connector("connector",
         resource_group_name="AwsConnectorRG",
         service_principal=azure_nextgen.security.v20200101preview.ServicePrincipalPropertiesArgs(
             application_id="ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
-            secret="x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
+            secret="<secret>",
         ),
     ))
 
@@ -119,7 +119,7 @@ const connector = new azure_nextgen.security.v20200101preview.Connector("connect
         resourceGroupName: "AwsConnectorRG",
         servicePrincipal: {
             applicationId: "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
-            secret: "x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
+            secret: "<secret>",
         },
     },
 });
@@ -144,7 +144,7 @@ class MyStack : Stack
             {
                 { "authenticationType", "awsCreds" },
                 { "awsAccessKeyId", "AKIARPZCNODDNAEQFSOE" },
-                { "awsSecretAccessKey", "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" },
+                { "awsSecretAccessKey", "<awsSecretAccessKey>" },
             },
             ConnectorName = "aws_dev1",
             HybridComputeSettings = new AzureNextGen.Security.V20200101Preview.Inputs.HybridComputeSettingsPropertiesArgs
@@ -160,7 +160,7 @@ class MyStack : Stack
                 ServicePrincipal = new AzureNextGen.Security.V20200101Preview.Inputs.ServicePrincipalPropertiesArgs
                 {
                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
-                    Secret = "x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
+                    Secret = "<secret>",
                 },
             },
         });
@@ -186,7 +186,7 @@ connector = azure_nextgen.security.v20200101preview.Connector("connector",
     authentication_details={
         "authenticationType": "awsCreds",
         "awsAccessKeyId": "AKIARPZCNODDNAEQFSOE",
-        "awsSecretAccessKey": "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",
+        "awsSecretAccessKey": "<awsSecretAccessKey>",
     },
     connector_name="aws_dev1",
     hybrid_compute_settings=azure_nextgen.security.v20200101preview.HybridComputeSettingsPropertiesArgs(
@@ -199,7 +199,7 @@ connector = azure_nextgen.security.v20200101preview.Connector("connector",
         resource_group_name="AwsConnectorRG",
         service_principal=azure_nextgen.security.v20200101preview.ServicePrincipalPropertiesArgs(
             application_id="ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
-            secret="x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
+            secret="<secret>",
         ),
     ))
 
@@ -217,7 +217,7 @@ const connector = new azure_nextgen.security.v20200101preview.Connector("connect
     authenticationDetails: {
         authenticationType: "awsCreds",
         awsAccessKeyId: "AKIARPZCNODDNAEQFSOE",
-        awsSecretAccessKey: "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",
+        awsSecretAccessKey: "<awsSecretAccessKey>",
     },
     connectorName: "aws_dev1",
     hybridComputeSettings: {
@@ -230,7 +230,7 @@ const connector = new azure_nextgen.security.v20200101preview.Connector("connect
         resourceGroupName: "AwsConnectorRG",
         servicePrincipal: {
             applicationId: "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
-            secret: "x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
+            secret: "<secret>",
         },
     },
 });
@@ -629,7 +629,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authenticationdetails_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 
@@ -666,7 +666,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authenticationdetails_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 
@@ -703,7 +703,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authenticationdetails_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties | Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties | Gcp<wbr>Credentials<wbr>Details<wbr>Properties</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 
@@ -740,7 +740,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authentication_details_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args, Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args, Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args]</span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
 
@@ -2700,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovision_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Auto<wbr>Provision</span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
 
@@ -2757,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovision_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
 
@@ -2814,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Auto<wbr>Provision</span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
 
@@ -2871,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Auto<wbr>Provision</span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
 

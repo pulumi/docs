@@ -1,7 +1,7 @@
 
 ---
 title: "NodeType"
-title_tag: "Resource NodeType | Module servicefabric | Package Azure NextGen"
+title_tag: "azure-nextgen.servicefabric.NodeType"
 meta_desc: "Explore the NodeType resource of the servicefabric module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a node type in the cluster, each node type represents sub set of nodes in the cluster."
 ---
 

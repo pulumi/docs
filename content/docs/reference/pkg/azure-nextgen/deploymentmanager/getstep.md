@@ -174,6 +174,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -198,7 +208,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Response&gt;</span>
+        <span class="property-type"><a href="#healthchecksteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitsteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -231,6 +241,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -255,7 +275,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#healthchecksteppropertiesresponse">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitsteppropertiesresponse">Wait<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -288,6 +308,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -312,7 +342,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response | Wait<wbr>Step<wbr>Properties<wbr>Response</span>
+        <span class="property-type"><a href="#healthchecksteppropertiesresponse">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitsteppropertiesresponse">Wait<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -345,6 +375,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -369,7 +409,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#healthchecksteppropertiesresponse">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#waitsteppropertiesresponse">Wait<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -1019,7 +1059,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -1056,7 +1096,7 @@ The following output properties are available:
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -1093,7 +1133,7 @@ The following output properties are available:
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Api<wbr>Key<wbr>Authentication<wbr>Response | Rollout<wbr>Identity<wbr>Authentication<wbr>Response</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -1130,7 +1170,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args, Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args]</span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 

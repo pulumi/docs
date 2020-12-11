@@ -1,7 +1,7 @@
 
 ---
 title: "CertificateCsr"
-title_tag: "Resource CertificateCsr | Module web | Package Azure NextGen"
+title_tag: "azure-nextgen.web.CertificateCsr"
 meta_desc: "Explore the CertificateCsr resource of the web module, including examples, input properties, output properties, lookup functions, and supporting types. Certificate signing request object"
 ---
 

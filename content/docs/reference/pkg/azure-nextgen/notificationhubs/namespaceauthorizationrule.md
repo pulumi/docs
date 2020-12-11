@@ -1,7 +1,7 @@
 
 ---
 title: "NamespaceAuthorizationRule"
-title_tag: "Resource NamespaceAuthorizationRule | Module notificationhubs | Package Azure NextGen"
+title_tag: "azure-nextgen.notificationhubs.NamespaceAuthorizationRule"
 meta_desc: "Explore the NamespaceAuthorizationRule resource of the notificationhubs module, including examples, input properties, output properties, lookup functions, and supporting types. Description of a Namespace AuthorizationRules."
 ---
 
@@ -50,37 +50,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := notificationhubs.NewNamespaceAuthorizationRule(ctx, "namespaceAuthorizationRule", &notificationhubs.NamespaceAuthorizationRuleArgs{
-			AuthorizationRuleName: pulumi.String("sdk-AuthRules-1788"),
-			NamespaceName:         pulumi.String("nh-sdk-ns"),
-			Properties: &notificationhubs.SharedAccessAuthorizationRulePropertiesArgs{
-				Rights: pulumi.StringArray{
-					pulumi.String("Listen"),
-					pulumi.String("Send"),
-				},
-			},
-			ResourceGroupName: pulumi.String("5ktrial"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -1163,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Access<wbr>Rights&gt;</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -1180,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -1197,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">enums.<wbr>Access<wbr>Rights[]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -1214,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Access<wbr>Rights]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 

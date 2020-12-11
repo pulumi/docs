@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlUserDefinedFunction"
-title_tag: "Resource SqlResourceSqlUserDefinedFunction | Module documentdb | Package Azure NextGen"
+title_tag: "azure-nextgen.documentdb.SqlResourceSqlUserDefinedFunction"
 meta_desc: "Explore the SqlResourceSqlUserDefinedFunction resource of the documentdb module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB userDefinedFunction."
 ---
 

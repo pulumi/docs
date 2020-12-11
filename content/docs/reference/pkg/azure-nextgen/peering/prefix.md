@@ -1,7 +1,7 @@
 
 ---
 title: "Prefix"
-title_tag: "Resource Prefix | Module peering | Package Azure NextGen"
+title_tag: "azure-nextgen.peering.Prefix"
 meta_desc: "Explore the Prefix resource of the peering module, including examples, input properties, output properties, lookup functions, and supporting types. The peering service prefix class."
 ---
 

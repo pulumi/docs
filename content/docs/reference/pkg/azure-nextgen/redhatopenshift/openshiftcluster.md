@@ -1,7 +1,7 @@
 
 ---
 title: "OpenShiftCluster"
-title_tag: "Resource OpenShiftCluster | Module redhatopenshift | Package Azure NextGen"
+title_tag: "azure-nextgen.redhatopenshift.OpenShiftCluster"
 meta_desc: "Explore the OpenShiftCluster resource of the redhatopenshift module, including examples, input properties, output properties, lookup functions, and supporting types. OpenShiftCluster represents an Azure Red Hat OpenShift cluster."
 ---
 

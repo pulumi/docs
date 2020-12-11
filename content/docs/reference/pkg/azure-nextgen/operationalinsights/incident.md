@@ -1,7 +1,7 @@
 
 ---
 title: "Incident"
-title_tag: "Resource Incident | Module operationalinsights | Package Azure NextGen"
+title_tag: "azure-nextgen.operationalinsights.Incident"
 meta_desc: "Explore the Incident resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an incident in Azure Security Insights."
 ---
 
@@ -165,7 +165,7 @@ const incident = new azure_nextgen.operationalinsights.latest.Incident("incident
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[IncidentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[IncidentOwnerInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassification]]</span> = None<span class="p">, </span><span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassificationReason]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[IncidentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[IncidentOwnerInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentSeverity]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentStatus]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -363,7 +363,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 
@@ -373,7 +373,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
 
@@ -403,7 +403,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_csharp" style="color: inherit; text-decoration: inherit;">Classification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Classification</span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
 
@@ -423,7 +423,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classificationreason_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Classification<wbr>Reason</span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
 
@@ -520,7 +520,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
 
@@ -560,7 +560,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_go" style="color: inherit; text-decoration: inherit;">Classification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
 
@@ -580,7 +580,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classificationreason_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
 
@@ -677,7 +677,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 
@@ -687,7 +687,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
 
@@ -717,7 +717,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Classification</span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
 
@@ -737,7 +737,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classificationreason_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Classification<wbr>Reason</span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
 
@@ -834,7 +834,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Severity</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
 
@@ -844,7 +844,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Status</span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
 
@@ -874,7 +874,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Classification</span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
 
@@ -894,7 +894,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_reason_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Classification<wbr>Reason</span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
 

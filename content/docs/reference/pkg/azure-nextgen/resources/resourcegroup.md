@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceGroup"
-title_tag: "Resource ResourceGroup | Module resources | Package Azure NextGen"
+title_tag: "azure-nextgen.resources.ResourceGroup"
 meta_desc: "Explore the ResourceGroup resource of the resources module, including examples, input properties, output properties, lookup functions, and supporting types. Resource group information."
 ---
 

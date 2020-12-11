@@ -1,7 +1,7 @@
 
 ---
 title: "GuestUsage"
-title_tag: "Resource GuestUsage | Module azureactivedirectory | Package Azure NextGen"
+title_tag: "azure-nextgen.azureactivedirectory.GuestUsage"
 meta_desc: "Explore the GuestUsage resource of the azureactivedirectory module, including examples, input properties, output properties, lookup functions, and supporting types. Guest Usages Resource"
 ---
 

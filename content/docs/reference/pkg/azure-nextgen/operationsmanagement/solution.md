@@ -1,7 +1,7 @@
 
 ---
 title: "Solution"
-title_tag: "Resource Solution | Module operationsmanagement | Package Azure NextGen"
+title_tag: "azure-nextgen.operationsmanagement.Solution"
 meta_desc: "Explore the Solution resource of the operationsmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. The container for solution."
 ---
 

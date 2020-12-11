@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module dbforpostgresql | Package Azure NextGen"
+title_tag: "azure-nextgen.dbforpostgresql.PrivateEndpointConnection"
 meta_desc: "Explore the PrivateEndpointConnection resource of the dbforpostgresql module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

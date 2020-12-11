@@ -1,7 +1,7 @@
 
 ---
 title: "ExportPipeline"
-title_tag: "Resource ExportPipeline | Module containerregistry | Package Azure NextGen"
+title_tag: "azure-nextgen.containerregistry.ExportPipeline"
 meta_desc: "Explore the ExportPipeline resource of the containerregistry module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents an export pipeline for a container registry."
 ---
 
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var exportPipeline = new AzureNextGen.ContainerRegistry.V20191201Preview.ExportPipeline("exportPipeline", new AzureNextGen.ContainerRegistry.V20191201Preview.ExportPipelineArgs
+        var exportPipeline = new AzureNextGen.ContainerRegistry.V20201101Preview.ExportPipeline("exportPipeline", new AzureNextGen.ContainerRegistry.V20201101Preview.ExportPipelineArgs
         {
             ExportPipelineName = "myExportPipeline",
-            Identity = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
@@ -41,7 +41,7 @@ class MyStack : Stack
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Target = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.ExportPipelineTargetPropertiesArgs
+            Target = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.ExportPipelineTargetPropertiesArgs
             {
                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrexportsas",
                 Type = "AzureStorageBlobContainer",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20191201preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -71,7 +71,7 @@ func main() {
 		_, err := containerregistry.NewExportPipeline(ctx, "exportPipeline", &containerregistry.ExportPipelineArgs{
 			ExportPipelineName: pulumi.String("myExportPipeline"),
 			Identity: &containerregistry.IdentityPropertiesArgs{
-				Type: pulumi.String("SystemAssigned"),
+				Type: "SystemAssigned",
 			},
 			Location: pulumi.String("westus"),
 			Options: pulumi.StringArray{
@@ -102,16 +102,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export_pipeline = azure_nextgen.containerregistry.v20191201preview.ExportPipeline("exportPipeline",
+export_pipeline = azure_nextgen.containerregistry.v20201101preview.ExportPipeline("exportPipeline",
     export_pipeline_name="myExportPipeline",
-    identity=azure_nextgen.containerregistry.v20191201preview.IdentityPropertiesArgs(
+    identity=azure_nextgen.containerregistry.v20201101preview.IdentityPropertiesArgs(
         type="SystemAssigned",
     ),
     location="westus",
     options=["OverwriteBlobs"],
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    target=azure_nextgen.containerregistry.v20191201preview.ExportPipelineTargetPropertiesArgs(
+    target=azure_nextgen.containerregistry.v20201101preview.ExportPipelineTargetPropertiesArgs(
         key_vault_uri="https://myvault.vault.azure.net/secrets/acrexportsas",
         type="AzureStorageBlobContainer",
         uri="https://accountname.blob.core.windows.net/containername",
@@ -127,7 +127,7 @@ export_pipeline = azure_nextgen.containerregistry.v20191201preview.ExportPipelin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const exportPipeline = new azure_nextgen.containerregistry.v20191201preview.ExportPipeline("exportPipeline", {
+const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.ExportPipeline("exportPipeline", {
     exportPipelineName: "myExportPipeline",
     identity: {
         type: "SystemAssigned",
@@ -159,7 +159,7 @@ const exportPipeline = new azure_nextgen.containerregistry.v20191201preview.Expo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[ExportPipelineTargetPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, PipelineOptions]]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[ExportPipelineTargetPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -397,7 +397,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Options&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -474,7 +474,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -551,7 +551,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | enums.<wbr>Pipeline<wbr>Options[]</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -628,7 +628,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Pipeline<wbr>Options]]</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -1258,7 +1258,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1308,7 +1308,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1358,7 +1358,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
@@ -1408,7 +1408,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 

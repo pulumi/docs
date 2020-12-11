@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachineImageTemplate"
-title_tag: "Resource VirtualMachineImageTemplate | Module virtualmachineimages | Package Azure NextGen"
+title_tag: "azure-nextgen.virtualmachineimages.VirtualMachineImageTemplate"
 meta_desc: "Explore the VirtualMachineImageTemplate resource of the virtualmachineimages module, including examples, input properties, output properties, lookup functions, and supporting types. Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider"
 ---
 
@@ -842,7 +842,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args&gt;&gt;</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -1056,7 +1056,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source | Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source | Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -1163,7 +1163,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union[Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args, Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args, Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args]</span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -1917,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
 
@@ -1944,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
 
@@ -1971,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">enums.<wbr>Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
 
@@ -1998,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Resource<wbr>Identity<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
 
@@ -4633,7 +4633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
 
@@ -4700,7 +4700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
 
@@ -4767,7 +4767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
 
@@ -4834,7 +4834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
 
