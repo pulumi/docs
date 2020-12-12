@@ -3,7 +3,7 @@ title: "Announcing Cross-Language Enum Support"
 date: 2020-12-11
 draft: true
 meta_desc: "Cross-language enum support provides a quality-of-life improvement to the development experience."
-meta_image: 
+meta_image: meta.png
 authors:
 - komal-ali
 tags:
