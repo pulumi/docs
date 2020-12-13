@@ -1,6 +1,6 @@
 ---
 title: "Announcing Cross-Language Enum Support"
-date: 2020-12-11
+date: 2020-12-12
 draft: true
 meta_desc: "Cross-language enum support provides a quality-of-life improvement to the development experience."
 meta_image: meta.png
@@ -8,6 +8,10 @@ authors:
 - komal-ali
 tags:
 - enums
+- python
+- go
+- c#
+- typescript
 ---
 
 Here at Pulumi, we believe in leveraging the best features of programming languages to create a delightful development experience for our users. Today, we continue our contributions in this area by announcing cross-language support for `enum` types in our provider SDKs.
@@ -16,7 +20,9 @@ Here at Pulumi, we believe in leveraging the best features of programming langua
 
 ## Enum types explained
 
-An enum (short for enumerated) type is a data type consisting of a set of named values. In the Pulumi resource model, a property is an enum type when its value can only be set to a finite number of predetermined values. For instance, consider a simple S3 bucket.
+An enum (short for enumerated) type is a data type consisting of a set of named values. In the Pulumi resource model, a property is an enum type when its value can only be set to a finite number of predetermined values. 
+
+For instance, consider a simple S3 bucket.
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
@@ -83,9 +89,13 @@ func main() {
 ```
 
 {{< /choosable >}}
+{{< /chooser >}}
 
-In the above code, the S3 bucket resource has an `acl` property, where we pass in the string `"private"`. However, as the [resource docs](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/#acl_nodejs) indicate, the `acl` property can only be set to one of a few different values, namely `"private"`, `"public-read"`, `"public-read-write"`, `"aws-exec-read"`, `"authenticated-read"` and `"log-delivery-write"`. The `acl` property is the perfect candidate for an enum type and is now emitted as one, so you can use the following code instead.
+In the above code, the S3 `Bucket` resource has a property called `acl`, where we pass in the string `private` to indicate that this is a private bucket. 
 
+If we look at the [resource docs](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/#acl_nodejs), we can see that the `acl` property can only be set to one of a few different values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read` and `log-delivery-write`. The `acl` property is the perfect candidate for an enum type and is now emitted as one, so you can use the following code instead.
+
+{{< chooser >}}
 {{< choosable language typescript >}}
 
 ```typescript
@@ -149,10 +159,36 @@ func main() {
 ```
 
 {{< /choosable >}}
+{{< /chooser >}}
 
-The enum properties provide discoverable and normalized constants that can be used in place of raw strings, allowing you to move faster with the added boosts of IDE tooling like type hints and autocomplete.
+## IDE Superpowers
 
-## Try it out
+Enum properties provide discoverable and normalized constants that can be used in place of raw strings, allowing you to move faster with the added boosts of IDE tooling like type hints and autocomplete.
+
+By using the provided constants, you can avoid having to refer back to documentation to remember the valid values and save precious moments in the development cycle that would be lost to debugging errors caused by typos.
+
+{{< chooser >}}
+{{< choosable language typescript >}}
+
+![ENUM_TYPESCRIPT](ts-enum.gif)
+
+{{< /choosable >}}
+{{< choosable language python >}}
+
+![ENUM_PYTHON](python-enum.gif)
+
+{{< /choosable >}}
+{{< choosable language csharp >}}
+
+![ENUM_CSHARP](csharp-enum.gif)
+
+{{< /choosable >}}
+{{< choosable language go >}}
+
+![ENUM_GO](go-enum.gif)
+
+{{< /choosable >}}
+{{< /chooser >}}
 
 Enum types are included in the latest releases of the AWS and azure next-gen providers.
 
