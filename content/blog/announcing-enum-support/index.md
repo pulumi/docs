@@ -20,7 +20,7 @@ Here at Pulumi, we believe in leveraging the best features of programming langua
 
 ## Enum types explained
 
-An enum (short for enumerated) type is a data type consisting of a set of named values. In the Pulumi resource model, a property is an enum type when its value can only be set to a finite number of predetermined values. 
+An enum (short for enumerated) type is a data type consisting of a set of named values. In the Pulumi resource model, a property is an enum type when its value can only be set to a finite number of predetermined values.
 
 For instance, consider a simple S3 bucket.
 
@@ -91,7 +91,7 @@ func main() {
 {{< /choosable >}}
 {{< /chooser >}}
 
-In the above code, the S3 `Bucket` resource has a property called `acl`, where we pass in the string `private` to indicate that this is a private bucket. 
+In the above code, the S3 `Bucket` resource has a property called `acl`, where we pass in the string `private` to indicate that this is a private bucket.
 
 If we look at the [resource docs](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/#acl_nodejs), we can see that the `acl` property can only be set to one of a few different values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read` and `log-delivery-write`. The `acl` property is the perfect candidate for an enum type and is now emitted as one, so you can use the following code instead.
 
@@ -190,6 +190,88 @@ By using the provided constants, you can avoid having to refer back to documenta
 {{< /choosable >}}
 {{< /chooser >}}
 
-Enum types are included in the latest releases of the AWS and azure next-gen providers.
+## Optimized for flexibility
 
-Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)!
+While some properties make sense as "strict" enums (i.e. the input value **must** be one of the enumerated values), there are times when it would be beneficial to have constants for commonly used values without restricting the input to **only** those values. We call this second category "relaxed" enums, and we model them a little differently in our schema.
+
+### "Strict" enums
+
+A property is a "strict" enum when the input value **must** be one of the enumerated values. In this case, the property type is specified as the enum type. Currently, only the Azure NextGen provider uses "strict" enums as the OpenAPI specification defines the properties as such.
+
+{{< chooser >}}
+{{< choosable language typescript >}}
+
+```typescript
+// Add lang-specific representation of a strict enum property
+```
+
+{{< /choosable >}}
+{{< choosable language python >}}
+
+```python
+# Add lang-specific representation of a strict enum property
+```
+
+{{< /choosable >}}
+{{< choosable language csharp >}}
+
+```csharp
+// Add lang-specific representation of a strict enum property
+```
+
+{{< /choosable >}}
+{{< choosable language go >}}
+
+```go
+// Add lang-specific representation of a strict enum property
+```
+
+{{< /choosable >}}
+{{< /chooser >}}
+
+### "Relaxed" enums
+
+When a property is a "relaxed" enum, the property type is specified as the `Union` of the enum type and the underlying primitive type. This means that you have the convenience of using the enum constants (i.e. `s3.CannedAcl.Private`), but you may also pass in the raw string (i.e. `"private"`).
+
+In the AWS provider (and other Terraform-based providers) we have opted for **only** using "relaxed" enums. The reasoning here is twofold. Allowing the primitive type maintains backwards compatibility and also allows users to use values which may not yet be represented in the Pulumi schema (e.g. a new Managed Policy ARN, EC2 Instance type, etc.).
+
+{{< chooser >}}
+{{< choosable language typescript >}}
+
+```typescript
+// Add lang-specific representation of a relaxed enum property
+```
+
+{{< /choosable >}}
+{{< choosable language python >}}
+
+```python
+# Add lang-specific representation of a relaxed enum property
+```
+
+{{< /choosable >}}
+{{< choosable language csharp >}}
+
+```csharp
+// Add lang-specific representation of a relaxed enum property
+```
+
+{{< /choosable >}}
+{{< choosable language go >}}
+
+```go
+// Add lang-specific representation of a relaxed enum property
+```
+
+{{< /choosable >}}
+{{< /chooser >}}
+
+## Try them out!
+
+You can find enum types integrated into v3.19.0 of the AWS provider, and v0.3.0 of the Azure NextGen provider.
+
+In the Azure NextGen provider, all properties labelled as enums in the OpenAPI spec are represented as such. On the other hand, the enums for the AWS provider are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375).
+
+We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types and IAM Managed Policies, and will continue to add more across our provider SDKs in the coming months.
+
+Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)! If there are properties that you would like to see represented as enums, let us know. Or even better, submit a PR to add them to the schema!
