@@ -65,7 +65,7 @@ jobs:
 
 ## Announcing the New Pulumi CI/CD Integration Assistant
 
-We often hear from developers who want to setup CI/CD automation for their stacks but don’t have the time to figure out how to configure a working pipeline. Today, we are happy to announce the launch of the [CI/CD Integration Assistant]({{ relref "/docs/intro/console/extensions/ci-cd-integration-assistant" >}}) to make setting up CI/CD automation more straightforward. You can easily get started using popular CI/CD services without the hassle of the initial setup.
+We often hear from developers who want to setup CI/CD automation for their stacks but don’t have the time to figure out how to configure a working pipeline. Today, we are happy to announce the launch of the [CI/CD Integration Assistant]({{< relref "/docs/intro/console/extensions/ci-cd-integration-assistant" >}}) to make setting up CI/CD automation more straightforward. You can easily get started using popular CI/CD services without the hassle of the initial setup.
 
 The integration assistant guides you with instructions based on your preferred CI/CD service and provides the customized pipeline configuration for CI/CD services that you can add to your Version Control System (VCS) repository.
 
