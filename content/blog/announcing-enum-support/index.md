@@ -196,38 +196,34 @@ While some properties make sense as "strict" enums (i.e., the input value **must
 
 ### "Strict" enums
 
-A property is a "strict" enum when the input value **must** be one of the enumerated values. In this case, the property type is specified as the enum type. Currently, only the Azure NextGen provider uses "strict" enums as the OpenAPI specification defines its properties.
+A property is a "strict" enum when the input value **must** be one of the enumerated values. In this case, the property type is specified as the enum type. Currently, only the Azure NextGen provider uses "strict" enums as the OpenAPI specification explicitly defines its properties as such.
 
-{{< chooser >}}
-{{< choosable language typescript >}}
-
-```typescript
-// Add lang-specific representation of a strict enum property
+```json5
+{
+  "resources": {
+    "azure-nextgen:storage/latest:StorageAccount": {
+      "inputProperties": {
+        "accessTier": {
+          "$ref": "#/types/azure-nextgen:storage/latest:AccessTier"
+        },
+      },
+    },
+  },
+  "types": {
+    "azure-nextgen:storage/latest:AccessTier": {
+      "type": "string",
+      "enum": [
+        {
+          "value": "Hot"
+        },
+        {
+          "value": "Cool"
+        }
+      ],
+    },
+  },
+}
 ```
-
-{{< /choosable >}}
-{{< choosable language python >}}
-
-```python
-# Add lang-specific representation of a strict enum property
-```
-
-{{< /choosable >}}
-{{< choosable language csharp >}}
-
-```csharp
-// Add lang-specific representation of a strict enum property
-```
-
-{{< /choosable >}}
-{{< choosable language go >}}
-
-```go
-// Add lang-specific representation of a strict enum property
-```
-
-{{< /choosable >}}
-{{< /chooser >}}
 
 ### "Relaxed" enums
 
@@ -235,43 +231,45 @@ When a property is a "relaxed" enum, the property type is specified as the `Unio
 
 In the AWS provider (and other Terraform-based providers), we have opted for **only** using "relaxed" enums. The reasoning here is twofold. Allowing the primitive type maintains backward compatibility and also allows users to use values that may not yet be represented in the Pulumi schema (e.g., a new Managed Policy ARN, EC2 Instance type, etc.).
 
-{{< chooser >}}
-{{< choosable language typescript >}}
-
-```typescript
-// Add lang-specific representation of a relaxed enum property
+```json5
+{
+  "resources": {
+    "aws:s3/bucket:Bucket": {
+      "inputProperties": {
+        "acl": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/types/aws:s3/CannedAcl:CannedAcl"
+            },
+          ]
+        },
+      },
+    },
+  },
+  "types": {
+    "aws:s3/CannedAcl:CannedAcl": {
+      "type": "string",
+      "enum": [
+        {
+          "name": "Private",
+          "value": "private"
+        },
+        ...
+      ],
+    },
+  },
+}
 ```
-
-{{< /choosable >}}
-{{< choosable language python >}}
-
-```python
-# Add lang-specific representation of a relaxed enum property
-```
-
-{{< /choosable >}}
-{{< choosable language csharp >}}
-
-```csharp
-// Add lang-specific representation of a relaxed enum property
-```
-
-{{< /choosable >}}
-{{< choosable language go >}}
-
-```go
-// Add lang-specific representation of a relaxed enum property
-```
-
-{{< /choosable >}}
-{{< /chooser >}}
 
 ## Try them out!
 
 You can find enum types integrated into v3.19.0 of the AWS provider and v0.3.0 of the Azure NextGen provider.
 
-In the Azure NextGen provider, all properties labeled as enums in the OpenAPI spec are represented as such. On the other hand, the AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375).
+**Azure NextGen**: In the Azure NextGen provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs.
 
-We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more across our provider SDKs in the coming months.
+**AWS**: The AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375). We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more across our provider SDKs in the coming months.
 
 Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)! If there are properties that you would like to see represented as enums, let us know. Or even better, submit a PR to add them to the schema!
