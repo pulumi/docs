@@ -122,7 +122,6 @@ const example = pulumi.output(aws.imagebuilder.getInfrastructureConfiguration({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -130,38 +129,34 @@ The following arguments are supported:
             title="Required">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetags_csharp">
 <a href="#resourcetags_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -170,38 +165,34 @@ The following arguments are supported:
             title="Required">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetags_go">
 <a href="#resourcetags_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -210,38 +201,34 @@ The following arguments are supported:
             title="Required">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetags_nodejs">
 <a href="#resourcetags_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -250,41 +237,34 @@ The following arguments are supported:
             title="Required">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_tags_python">
 <a href="#resource_tags_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -295,7 +275,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -303,179 +282,162 @@ The following output properties are available:
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="datecreated_csharp">
 <a href="#datecreated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the infrastructure configuration was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dateupdated_csharp">
 <a href="#dateupdated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceprofilename_csharp">
 <a href="#instanceprofilename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the IAM Instance Profile associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancetypes_csharp">
 <a href="#instancetypes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Instance Types associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keypair_csharp">
 <a href="#keypair_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EC2 Key Pair associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loggings_csharp">
 <a href="#loggings_csharp" style="color: inherit; text-decoration: inherit;">Loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationlogging">List&lt;Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested list of logging settings.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcetags_csharp">
 <a href="#resourcetags_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Security Group identifiers associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snstopicarn_csharp">
 <a href="#snstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SNS Topic associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Subnet associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="terminateinstanceonfailure_csharp">
 <a href="#terminateinstanceonfailure_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instance<wbr>On<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether instances are terminated on failure.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -484,179 +446,162 @@ The following output properties are available:
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="datecreated_go">
 <a href="#datecreated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the infrastructure configuration was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dateupdated_go">
 <a href="#dateupdated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceprofilename_go">
 <a href="#instanceprofilename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the IAM Instance Profile associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancetypes_go">
 <a href="#instancetypes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Instance Types associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keypair_go">
 <a href="#keypair_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EC2 Key Pair associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loggings_go">
 <a href="#loggings_go" style="color: inherit; text-decoration: inherit;">Loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationlogging">[]Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}Nested list of logging settings.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcetags_go">
 <a href="#resourcetags_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Security Group identifiers associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snstopicarn_go">
 <a href="#snstopicarn_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SNS Topic associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Subnet associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="terminateinstanceonfailure_go">
 <a href="#terminateinstanceonfailure_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instance<wbr>On<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether instances are terminated on failure.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -665,179 +610,162 @@ The following output properties are available:
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="datecreated_nodejs">
 <a href="#datecreated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the infrastructure configuration was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dateupdated_nodejs">
 <a href="#dateupdated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceprofilename_nodejs">
 <a href="#instanceprofilename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the IAM Instance Profile associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancetypes_nodejs">
 <a href="#instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Instance Types associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keypair_nodejs">
 <a href="#keypair_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EC2 Key Pair associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loggings_nodejs">
 <a href="#loggings_nodejs" style="color: inherit; text-decoration: inherit;">loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationlogging">Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging[]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of logging settings.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcetags_nodejs">
 <a href="#resourcetags_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Security Group identifiers associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snstopicarn_nodejs">
 <a href="#snstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Topic<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SNS Topic associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Subnet associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="terminateinstanceonfailure_nodejs">
 <a href="#terminateinstanceonfailure_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instance<wbr>On<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether instances are terminated on failure.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -846,182 +774,162 @@ The following output properties are available:
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="date_created_python">
 <a href="#date_created_python" style="color: inherit; text-decoration: inherit;">date_<wbr>created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the infrastructure configuration was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="date_updated_python">
 <a href="#date_updated_python" style="color: inherit; text-decoration: inherit;">date_<wbr>updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instance_profile_name_python">
 <a href="#instance_profile_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>profile_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the IAM Instance Profile associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instance_types_python">
 <a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Instance Types associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_pair_python">
 <a href="#key_pair_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the EC2 Key Pair associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loggings_python">
 <a href="#loggings_python" style="color: inherit; text-decoration: inherit;">loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationlogging">Sequence[Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of logging settings.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resource_tags_python">
 <a href="#resource_tags_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Security Group identifiers associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sns_topic_arn_python">
 <a href="#sns_topic_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>topic_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SNS Topic associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Subnet associated with the configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the infrastructure configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="terminate_instance_on_failure_python">
 <a href="#terminate_instance_on_failure_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instance_<wbr>on_<wbr>failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether instances are terminated on failure.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1043,7 +951,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1051,16 +958,14 @@ The following output properties are available:
             title="Required">
         <span id="s3logs_csharp">
 <a href="#s3logs_csharp" style="color: inherit; text-decoration: inherit;">S3Logs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationloggings3log">List&lt;Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Log<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested list of S3 logs settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1069,16 +974,14 @@ The following output properties are available:
             title="Required">
         <span id="s3logs_go">
 <a href="#s3logs_go" style="color: inherit; text-decoration: inherit;">S3Logs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationloggings3log">[]Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Log</a></span>
     </dt>
     <dd>{{% md %}}Nested list of S3 logs settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1087,16 +990,14 @@ The following output properties are available:
             title="Required">
         <span id="s3logs_nodejs">
 <a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationloggings3log">Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Log[]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of S3 logs settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1105,19 +1006,14 @@ The following output properties are available:
             title="Required">
         <span id="s3_logs_python">
 <a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinfrastructureconfigurationloggings3log">Sequence[Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Log<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of S3 logs settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getinfrastructureconfigurationloggings3log">Get<wbr>Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Log</h4>
 {{% choosable language nodejs %}}
@@ -1133,7 +1029,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1141,27 +1036,24 @@ The following output properties are available:
             title="Required">
         <span id="s3bucketname_csharp">
 <a href="#s3bucketname_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 Bucket for logging.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3keyprefix_csharp">
 <a href="#s3keyprefix_csharp" style="color: inherit; text-decoration: inherit;">S3Key<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key prefix for S3 Bucket logging.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1170,27 +1062,24 @@ The following output properties are available:
             title="Required">
         <span id="s3bucketname_go">
 <a href="#s3bucketname_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 Bucket for logging.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3keyprefix_go">
 <a href="#s3keyprefix_go" style="color: inherit; text-decoration: inherit;">S3Key<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key prefix for S3 Bucket logging.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1199,27 +1088,24 @@ The following output properties are available:
             title="Required">
         <span id="s3bucketname_nodejs">
 <a href="#s3bucketname_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 Bucket for logging.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3keyprefix_nodejs">
 <a href="#s3keyprefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Key<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key prefix for S3 Bucket logging.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1228,30 +1114,24 @@ The following output properties are available:
             title="Required">
         <span id="s3_bucket_name_python">
 <a href="#s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 Bucket for logging.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3_key_prefix_python">
 <a href="#s3_key_prefix_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key prefix for S3 Bucket logging.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

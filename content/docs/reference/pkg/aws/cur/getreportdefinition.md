@@ -126,7 +126,6 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -134,16 +133,14 @@ The following arguments are supported:
             title="Required">
         <span id="reportname_csharp">
 <a href="#reportname_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the report definition to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -152,16 +149,14 @@ The following arguments are supported:
             title="Required">
         <span id="reportname_go">
 <a href="#reportname_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the report definition to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -170,16 +165,14 @@ The following arguments are supported:
             title="Required">
         <span id="reportname_nodejs">
 <a href="#reportname_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the report definition to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -188,19 +181,14 @@ The following arguments are supported:
             title="Required">
         <span id="report_name_python">
 <a href="#report_name_python" style="color: inherit; text-decoration: inherit;">report_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the report definition to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -211,7 +199,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -219,136 +206,123 @@ The following output properties are available:
             title="">
         <span id="additionalartifacts_csharp">
 <a href="#additionalartifacts_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of additional artifacts.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="additionalschemaelements_csharp">
 <a href="#additionalschemaelements_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Schema<wbr>Elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of schema elements.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="compression_csharp">
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred compression format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="refreshclosedreports_csharp">
 <a href="#refreshclosedreports_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Closed<wbr>Reports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true reports are updated after they have been finalized.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reportname_csharp">
 <a href="#reportname_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reportversioning_csharp">
 <a href="#reportversioning_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3bucket_csharp">
 <a href="#s3bucket_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3prefix_csharp">
 <a href="#s3prefix_csharp" style="color: inherit; text-decoration: inherit;">S3Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred report path prefix.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3region_csharp">
 <a href="#s3region_csharp" style="color: inherit; text-decoration: inherit;">S3Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timeunit_csharp">
 <a href="#timeunit_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -357,136 +331,123 @@ The following output properties are available:
             title="">
         <span id="additionalartifacts_go">
 <a href="#additionalartifacts_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of additional artifacts.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="additionalschemaelements_go">
 <a href="#additionalschemaelements_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Schema<wbr>Elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of schema elements.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="compression_go">
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred compression format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="refreshclosedreports_go">
 <a href="#refreshclosedreports_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Closed<wbr>Reports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true reports are updated after they have been finalized.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reportname_go">
 <a href="#reportname_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reportversioning_go">
 <a href="#reportversioning_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3bucket_go">
 <a href="#s3bucket_go" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3prefix_go">
 <a href="#s3prefix_go" style="color: inherit; text-decoration: inherit;">S3Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred report path prefix.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3region_go">
 <a href="#s3region_go" style="color: inherit; text-decoration: inherit;">S3Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timeunit_go">
 <a href="#timeunit_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -495,136 +456,123 @@ The following output properties are available:
             title="">
         <span id="additionalartifacts_nodejs">
 <a href="#additionalartifacts_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of additional artifacts.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="additionalschemaelements_nodejs">
 <a href="#additionalschemaelements_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Schema<wbr>Elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of schema elements.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="compression_nodejs">
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred compression format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="refreshclosedreports_nodejs">
 <a href="#refreshclosedreports_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Closed<wbr>Reports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true reports are updated after they have been finalized.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reportname_nodejs">
 <a href="#reportname_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reportversioning_nodejs">
 <a href="#reportversioning_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3bucket_nodejs">
 <a href="#s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3prefix_nodejs">
 <a href="#s3prefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred report path prefix.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3region_nodejs">
 <a href="#s3region_nodejs" style="color: inherit; text-decoration: inherit;">s3Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timeunit_nodejs">
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -633,139 +581,123 @@ The following output properties are available:
             title="">
         <span id="additional_artifacts_python">
 <a href="#additional_artifacts_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of additional artifacts.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="additional_schema_elements_python">
 <a href="#additional_schema_elements_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>schema_<wbr>elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of schema elements.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="compression_python">
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Preferred format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Preferred compression format for report.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="refresh_closed_reports_python">
 <a href="#refresh_closed_reports_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>closed_<wbr>reports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true reports are updated after they have been finalized.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="report_name_python">
 <a href="#report_name_python" style="color: inherit; text-decoration: inherit;">report_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="report_versioning_python">
 <a href="#report_versioning_python" style="color: inherit; text-decoration: inherit;">report_<wbr>versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3_bucket_python">
 <a href="#s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3_prefix_python">
 <a href="#s3_prefix_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Preferred report path prefix.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3_region_python">
 <a href="#s3_region_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region of customer S3 bucket.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="time_unit_python">
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

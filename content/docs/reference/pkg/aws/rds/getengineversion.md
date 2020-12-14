@@ -141,7 +141,6 @@ const test = pulumi.output(aws.rds.getEngineVersion({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -149,49 +148,44 @@ The following arguments are supported:
             title="Required">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parametergroupfamily_csharp">
 <a href="#parametergroupfamily_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a specific DB parameter group family. Examples of parameter group families are `mysql8.0`, `mariadb10.4`, and `postgres12`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredversions_csharp">
 <a href="#preferredversions_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. For example, `5.7.22`, `10.1.34`, and `12.3`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -200,49 +194,44 @@ The following arguments are supported:
             title="Required">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parametergroupfamily_go">
 <a href="#parametergroupfamily_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a specific DB parameter group family. Examples of parameter group families are `mysql8.0`, `mariadb10.4`, and `postgres12`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredversions_go">
 <a href="#preferredversions_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. For example, `5.7.22`, `10.1.34`, and `12.3`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -251,49 +240,44 @@ The following arguments are supported:
             title="Required">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parametergroupfamily_nodejs">
 <a href="#parametergroupfamily_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a specific DB parameter group family. Examples of parameter group families are `mysql8.0`, `mariadb10.4`, and `postgres12`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredversions_nodejs">
 <a href="#preferredversions_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. For example, `5.7.22`, `10.1.34`, and `12.3`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -302,52 +286,44 @@ The following arguments are supported:
             title="Required">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameter_group_family_python">
 <a href="#parameter_group_family_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a specific DB parameter group family. Examples of parameter group families are `mysql8.0`, `mariadb10.4`, and `postgres12`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferred_versions_python">
 <a href="#preferred_versions_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. For example, `5.7.22`, `10.1.34`, and `12.3`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -358,7 +334,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -366,210 +341,190 @@ The following output properties are available:
             title="">
         <span id="defaultcharacterset_csharp">
 <a href="#defaultcharacterset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Character<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default character set for new instances of this engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginedescription_csharp">
 <a href="#enginedescription_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the database engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportablelogtypes_csharp">
 <a href="#exportablelogtypes_csharp" style="color: inherit; text-decoration: inherit;">Exportable<wbr>Log<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of log types that the database engine has available for export to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parametergroupfamily_csharp">
 <a href="#parametergroupfamily_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the DB engine version, either available or deprecated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedcharactersets_csharp">
 <a href="#supportedcharactersets_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Character<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of the character sets supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedfeaturenames_csharp">
 <a href="#supportedfeaturenames_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Feature<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of features supported by the DB engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedmodes_csharp">
 <a href="#supportedmodes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Modes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of the supported DB engine modes.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedtimezones_csharp">
 <a href="#supportedtimezones_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Timezones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of the time zones supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsglobaldatabases_csharp">
 <a href="#supportsglobaldatabases_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Global<wbr>Databases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora global databases with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportslogexportstocloudwatch_csharp">
 <a href="#supportslogexportstocloudwatch_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Log<wbr>Exports<wbr>To<wbr>Cloudwatch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsparallelquery_csharp">
 <a href="#supportsparallelquery_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Parallel<wbr>Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora parallel query with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsreadreplica_csharp">
 <a href="#supportsreadreplica_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Read<wbr>Replica</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the database engine version supports read replicas.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="validupgradetargets_csharp">
 <a href="#validupgradetargets_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Upgrade<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of engine versions that this database engine version can be upgraded to.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="versiondescription_csharp">
 <a href="#versiondescription_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the database engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferredversions_csharp">
 <a href="#preferredversions_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -578,210 +533,190 @@ The following output properties are available:
             title="">
         <span id="defaultcharacterset_go">
 <a href="#defaultcharacterset_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Character<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default character set for new instances of this engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginedescription_go">
 <a href="#enginedescription_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the database engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportablelogtypes_go">
 <a href="#exportablelogtypes_go" style="color: inherit; text-decoration: inherit;">Exportable<wbr>Log<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of log types that the database engine has available for export to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parametergroupfamily_go">
 <a href="#parametergroupfamily_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the DB engine version, either available or deprecated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedcharactersets_go">
 <a href="#supportedcharactersets_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Character<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of the character sets supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedfeaturenames_go">
 <a href="#supportedfeaturenames_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Feature<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of features supported by the DB engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedmodes_go">
 <a href="#supportedmodes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Modes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of the supported DB engine modes.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedtimezones_go">
 <a href="#supportedtimezones_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Timezones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of the time zones supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsglobaldatabases_go">
 <a href="#supportsglobaldatabases_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Global<wbr>Databases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora global databases with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportslogexportstocloudwatch_go">
 <a href="#supportslogexportstocloudwatch_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Log<wbr>Exports<wbr>To<wbr>Cloudwatch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsparallelquery_go">
 <a href="#supportsparallelquery_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Parallel<wbr>Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora parallel query with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsreadreplica_go">
 <a href="#supportsreadreplica_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Read<wbr>Replica</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the database engine version supports read replicas.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="validupgradetargets_go">
 <a href="#validupgradetargets_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Upgrade<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of engine versions that this database engine version can be upgraded to.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="versiondescription_go">
 <a href="#versiondescription_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the database engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferredversions_go">
 <a href="#preferredversions_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -790,210 +725,190 @@ The following output properties are available:
             title="">
         <span id="defaultcharacterset_nodejs">
 <a href="#defaultcharacterset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Character<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default character set for new instances of this engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginedescription_nodejs">
 <a href="#enginedescription_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the database engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportablelogtypes_nodejs">
 <a href="#exportablelogtypes_nodejs" style="color: inherit; text-decoration: inherit;">exportable<wbr>Log<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of log types that the database engine has available for export to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parametergroupfamily_nodejs">
 <a href="#parametergroupfamily_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the DB engine version, either available or deprecated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedcharactersets_nodejs">
 <a href="#supportedcharactersets_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Character<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of the character sets supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedfeaturenames_nodejs">
 <a href="#supportedfeaturenames_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Feature<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of features supported by the DB engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedmodes_nodejs">
 <a href="#supportedmodes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Modes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of the supported DB engine modes.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportedtimezones_nodejs">
 <a href="#supportedtimezones_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Timezones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of the time zones supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsglobaldatabases_nodejs">
 <a href="#supportsglobaldatabases_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Global<wbr>Databases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora global databases with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportslogexportstocloudwatch_nodejs">
 <a href="#supportslogexportstocloudwatch_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Log<wbr>Exports<wbr>To<wbr>Cloudwatch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsparallelquery_nodejs">
 <a href="#supportsparallelquery_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Parallel<wbr>Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora parallel query with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportsreadreplica_nodejs">
 <a href="#supportsreadreplica_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Read<wbr>Replica</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the database engine version supports read replicas.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="validupgradetargets_nodejs">
 <a href="#validupgradetargets_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Upgrade<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of engine versions that this database engine version can be upgraded to.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="versiondescription_nodejs">
 <a href="#versiondescription_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the database engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferredversions_nodejs">
 <a href="#preferredversions_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1002,213 +917,190 @@ The following output properties are available:
             title="">
         <span id="default_character_set_python">
 <a href="#default_character_set_python" style="color: inherit; text-decoration: inherit;">default_<wbr>character_<wbr>set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default character set for new instances of this engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_description_python">
 <a href="#engine_description_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the database engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportable_log_types_python">
 <a href="#exportable_log_types_python" style="color: inherit; text-decoration: inherit;">exportable_<wbr>log_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of log types that the database engine has available for export to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parameter_group_family_python">
 <a href="#parameter_group_family_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the DB engine version, either available or deprecated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supported_character_sets_python">
 <a href="#supported_character_sets_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>character_<wbr>sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of the character sets supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supported_feature_names_python">
 <a href="#supported_feature_names_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>feature_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of features supported by the DB engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supported_modes_python">
 <a href="#supported_modes_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>modes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of the supported DB engine modes.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supported_timezones_python">
 <a href="#supported_timezones_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>timezones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of the time zones supported by this engine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supports_global_databases_python">
 <a href="#supports_global_databases_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>global_<wbr>databases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora global databases with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supports_log_exports_to_cloudwatch_python">
 <a href="#supports_log_exports_to_cloudwatch_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>log_<wbr>exports_<wbr>to_<wbr>cloudwatch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supports_parallel_query_python">
 <a href="#supports_parallel_query_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>parallel_<wbr>query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you can use Aurora parallel query with a specific DB engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supports_read_replica_python">
 <a href="#supports_read_replica_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>read_<wbr>replica</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the database engine version supports read replicas.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="valid_upgrade_targets_python">
 <a href="#valid_upgrade_targets_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>upgrade_<wbr>targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of engine versions that this database engine version can be upgraded to.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_description_python">
 <a href="#version_description_python" style="color: inherit; text-decoration: inherit;">version_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the database engine version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferred_versions_python">
 <a href="#preferred_versions_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

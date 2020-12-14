@@ -165,7 +165,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#Budget">Budget</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#Budget">Budget</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -173,11 +173,11 @@ const ec2 = new aws.budgets.Budget("ec2", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#Budget">NewBudget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#Budget">NewBudget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Budget.html">Budget</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.BudgetArgs.html">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Budget.html">Budget</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.BudgetArgs.html">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,7 +188,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -257,7 +257,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -296,7 +296,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -337,7 +337,6 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -345,137 +344,124 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="budgettype_csharp">
 <a href="#budgettype_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limitamount_csharp">
 <a href="#limitamount_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limitunit_csharp">
 <a href="#limitunit_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeperiodstart_csharp">
 <a href="#timeperiodstart_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeunit_csharp">
 <a href="#timeunit_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="costfilters_csharp">
 <a href="#costfilters_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="costtypes_csharp">
 <a href="#costtypes_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_csharp">
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiodend_csharp">
 <a href="#timeperiodend_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -484,137 +470,124 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="budgettype_go">
 <a href="#budgettype_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limitamount_go">
 <a href="#limitamount_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limitunit_go">
 <a href="#limitunit_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeperiodstart_go">
 <a href="#timeperiodstart_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeunit_go">
 <a href="#timeunit_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="costfilters_go">
 <a href="#costfilters_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="costtypes_go">
 <a href="#costtypes_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_go">
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">[]Budget<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiodend_go">
 <a href="#timeperiodend_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -623,137 +596,124 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="budgettype_nodejs">
 <a href="#budgettype_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limitamount_nodejs">
 <a href="#limitamount_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limitunit_nodejs">
 <a href="#limitunit_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeperiodstart_nodejs">
 <a href="#timeperiodstart_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeunit_nodejs">
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="costfilters_nodejs">
 <a href="#costfilters_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="costtypes_nodejs">
 <a href="#costtypes_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_nodejs">
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiodend_nodejs">
 <a href="#timeperiodend_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -762,146 +722,129 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="budget_type_python">
 <a href="#budget_type_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limit_amount_python">
 <a href="#limit_amount_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limit_unit_python">
 <a href="#limit_unit_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="time_period_start_python">
 <a href="#time_period_start_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="time_unit_python">
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cost_filters_python">
 <a href="#cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cost_types_python">
 <a href="#cost_types_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_python">
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">Sequence[Budget<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_period_end_python">
 <a href="#time_period_end_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>end</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Budget resource produces the following output properties:
-
 
 
 
@@ -912,15 +855,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -929,15 +870,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -946,15 +885,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -963,18 +900,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -984,7 +916,7 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#Budget">Budget</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#Budget">Budget</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -993,11 +925,11 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Budget.html">Budget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.BudgetState.html">BudgetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Budget.html">Budget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.BudgetState.html">BudgetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1099,7 +1031,6 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1107,137 +1038,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budgettype_csharp">
 <a href="#state_budgettype_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_costfilters_csharp">
 <a href="#state_costfilters_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_costtypes_csharp">
 <a href="#state_costtypes_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limitamount_csharp">
 <a href="#state_limitamount_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limitunit_csharp">
 <a href="#state_limitunit_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_csharp">
 <a href="#state_notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeperiodend_csharp">
 <a href="#state_timeperiodend_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeperiodstart_csharp">
 <a href="#state_timeperiodstart_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeunit_csharp">
 <a href="#state_timeunit_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1246,137 +1164,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budgettype_go">
 <a href="#state_budgettype_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_costfilters_go">
 <a href="#state_costfilters_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_costtypes_go">
 <a href="#state_costtypes_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limitamount_go">
 <a href="#state_limitamount_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limitunit_go">
 <a href="#state_limitunit_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_go">
 <a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">[]Budget<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeperiodend_go">
 <a href="#state_timeperiodend_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeperiodstart_go">
 <a href="#state_timeperiodstart_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeunit_go">
 <a href="#state_timeunit_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1385,137 +1290,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budgettype_nodejs">
 <a href="#state_budgettype_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_costfilters_nodejs">
 <a href="#state_costfilters_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_costtypes_nodejs">
 <a href="#state_costtypes_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limitamount_nodejs">
 <a href="#state_limitamount_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limitunit_nodejs">
 <a href="#state_limitunit_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_nodejs">
 <a href="#state_notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeperiodend_nodejs">
 <a href="#state_timeperiodend_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeperiodstart_nodejs">
 <a href="#state_timeperiodstart_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeunit_nodejs">
 <a href="#state_timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1524,134 +1416,122 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budget_type_python">
 <a href="#state_budget_type_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cost_filters_python">
 <a href="#state_cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cost_types_python">
 <a href="#state_cost_types_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limit_amount_python">
 <a href="#state_limit_amount_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limit_unit_python">
 <a href="#state_limit_unit_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_python">
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetnotification">Sequence[Budget<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_time_period_end_python">
 <a href="#state_time_period_end_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>end</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_time_period_start_python">
 <a href="#state_time_period_start_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_time_unit_python">
 <a href="#state_time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1660,11 +1540,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="budgetcosttypes">Budget<wbr>Cost<wbr>Types</h4>
@@ -1675,11 +1552,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetCostTypesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetCostTypesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Inputs.BudgetCostTypesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Outputs.BudgetCostTypes.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1689,126 +1565,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="includecredit_csharp">
 <a href="#includecredit_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Credit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includediscount_csharp">
 <a href="#includediscount_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Discount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeothersubscription_csharp">
 <a href="#includeothersubscription_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Other<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includerecurring_csharp">
 <a href="#includerecurring_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Recurring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includerefund_csharp">
 <a href="#includerefund_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Refund</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includesubscription_csharp">
 <a href="#includesubscription_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includesupport_csharp">
 <a href="#includesupport_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includetax_csharp">
 <a href="#includetax_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Tax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeupfront_csharp">
 <a href="#includeupfront_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Upfront</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useamortized_csharp">
 <a href="#useamortized_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Amortized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useblended_csharp">
 <a href="#useblended_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Blended</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1817,126 +1681,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="includecredit_go">
 <a href="#includecredit_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Credit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includediscount_go">
 <a href="#includediscount_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Discount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeothersubscription_go">
 <a href="#includeothersubscription_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Other<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includerecurring_go">
 <a href="#includerecurring_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Recurring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includerefund_go">
 <a href="#includerefund_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Refund</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includesubscription_go">
 <a href="#includesubscription_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includesupport_go">
 <a href="#includesupport_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includetax_go">
 <a href="#includetax_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Tax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeupfront_go">
 <a href="#includeupfront_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Upfront</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useamortized_go">
 <a href="#useamortized_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Amortized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useblended_go">
 <a href="#useblended_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Blended</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1945,126 +1797,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="includecredit_nodejs">
 <a href="#includecredit_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Credit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includediscount_nodejs">
 <a href="#includediscount_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Discount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeothersubscription_nodejs">
 <a href="#includeothersubscription_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Other<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includerecurring_nodejs">
 <a href="#includerecurring_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Recurring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includerefund_nodejs">
 <a href="#includerefund_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Refund</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includesubscription_nodejs">
 <a href="#includesubscription_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includesupport_nodejs">
 <a href="#includesupport_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includetax_nodejs">
 <a href="#includetax_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeupfront_nodejs">
 <a href="#includeupfront_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Upfront</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useamortized_nodejs">
 <a href="#useamortized_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Amortized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useblended_nodejs">
 <a href="#useblended_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Blended</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2073,129 +1913,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="include_credit_python">
 <a href="#include_credit_python" style="color: inherit; text-decoration: inherit;">include_<wbr>credit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_discount_python">
 <a href="#include_discount_python" style="color: inherit; text-decoration: inherit;">include_<wbr>discount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_other_subscription_python">
 <a href="#include_other_subscription_python" style="color: inherit; text-decoration: inherit;">include_<wbr>other_<wbr>subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_recurring_python">
 <a href="#include_recurring_python" style="color: inherit; text-decoration: inherit;">include_<wbr>recurring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_refund_python">
 <a href="#include_refund_python" style="color: inherit; text-decoration: inherit;">include_<wbr>refund</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_subscription_python">
 <a href="#include_subscription_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_support_python">
 <a href="#include_support_python" style="color: inherit; text-decoration: inherit;">include_<wbr>support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_tax_python">
 <a href="#include_tax_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_upfront_python">
 <a href="#include_upfront_python" style="color: inherit; text-decoration: inherit;">include_<wbr>upfront</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_amortized_python">
 <a href="#use_amortized_python" style="color: inherit; text-decoration: inherit;">use_<wbr>amortized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_blended_python">
 <a href="#use_blended_python" style="color: inherit; text-decoration: inherit;">use_<wbr>blended</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="budgetnotification">Budget<wbr>Notification</h4>
 {{% choosable language nodejs %}}
@@ -2205,11 +2030,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets?tab=doc#BudgetNotificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Inputs.BudgetNotificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Outputs.BudgetNotification.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2219,71 +2043,64 @@ The following state arguments are supported:
             title="Required">
         <span id="comparisonoperator_csharp">
 <a href="#comparisonoperator_csharp" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="notificationtype_csharp">
 <a href="#notificationtype_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold when the notification should be sent.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdtype_csharp">
 <a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriberemailaddresses_csharp">
 <a href="#subscriberemailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Subscriber<wbr>Email<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscribersnstopicarns_csharp">
 <a href="#subscribersnstopicarns_csharp" style="color: inherit; text-decoration: inherit;">Subscriber<wbr>Sns<wbr>Topic<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2292,71 +2109,64 @@ The following state arguments are supported:
             title="Required">
         <span id="comparisonoperator_go">
 <a href="#comparisonoperator_go" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="notificationtype_go">
 <a href="#notificationtype_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold when the notification should be sent.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdtype_go">
 <a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriberemailaddresses_go">
 <a href="#subscriberemailaddresses_go" style="color: inherit; text-decoration: inherit;">Subscriber<wbr>Email<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscribersnstopicarns_go">
 <a href="#subscribersnstopicarns_go" style="color: inherit; text-decoration: inherit;">Subscriber<wbr>Sns<wbr>Topic<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2365,71 +2175,64 @@ The following state arguments are supported:
             title="Required">
         <span id="comparisonoperator_nodejs">
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="notificationtype_nodejs">
 <a href="#notificationtype_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold when the notification should be sent.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdtype_nodejs">
 <a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriberemailaddresses_nodejs">
 <a href="#subscriberemailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">subscriber<wbr>Email<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscribersnstopicarns_nodejs">
 <a href="#subscribersnstopicarns_nodejs" style="color: inherit; text-decoration: inherit;">subscriber<wbr>Sns<wbr>Topic<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2438,79 +2241,64 @@ The following state arguments are supported:
             title="Required">
         <span id="comparison_operator_python">
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="notification_type_python">
 <a href="#notification_type_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold when the notification should be sent.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_type_python">
 <a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriber_email_addresses_python">
 <a href="#subscriber_email_addresses_python" style="color: inherit; text-decoration: inherit;">subscriber_<wbr>email_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriber_sns_topic_arns_python">
 <a href="#subscriber_sns_topic_arns_python" style="color: inherit; text-decoration: inherit;">subscriber_<wbr>sns_<wbr>topic_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

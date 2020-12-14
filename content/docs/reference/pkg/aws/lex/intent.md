@@ -436,7 +436,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#Intent">Intent</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#Intent">Intent</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -444,11 +444,11 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">NewIntent</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">NewIntent</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Intent.html">Intent</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.IntentArgs.html">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Intent.html">Intent</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.IntentArgs.html">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -459,7 +459,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -528,7 +528,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -567,7 +567,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -608,7 +608,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -616,7 +615,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="fulfillmentactivity_csharp">
 <a href="#fulfillmentactivity_csharp" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
@@ -624,12 +623,11 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conclusionstatement_csharp">
 <a href="#conclusionstatement_csharp" style="color: inherit; text-decoration: inherit;">Conclusion<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -639,12 +637,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confirmationprompt_csharp">
 <a href="#confirmationprompt_csharp" style="color: inherit; text-decoration: inherit;">Confirmation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -652,47 +649,43 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createversion_csharp">
 <a href="#createversion_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dialogcodehook_csharp">
 <a href="#dialogcodehook_csharp" style="color: inherit; text-decoration: inherit;">Dialog<wbr>Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="followupprompt_csharp">
 <a href="#followupprompt_csharp" style="color: inherit; text-decoration: inherit;">Follow<wbr>Up<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -701,37 +694,34 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentintentsignature_csharp">
 <a href="#parentintentsignature_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Intent<wbr>Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rejectionstatement_csharp">
 <a href="#rejectionstatement_csharp" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -739,35 +729,31 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sampleutterances_csharp">
 <a href="#sampleutterances_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slots_csharp">
 <a href="#slots_csharp" style="color: inherit; text-decoration: inherit;">Slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">List&lt;Intent<wbr>Slot<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -776,7 +762,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
             title="Required">
         <span id="fulfillmentactivity_go">
 <a href="#fulfillmentactivity_go" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
     </dt>
@@ -784,12 +770,11 @@ from the user using prompts defined in the slots. Attributes are documented unde
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conclusionstatement_go">
 <a href="#conclusionstatement_go" style="color: inherit; text-decoration: inherit;">Conclusion<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
@@ -799,12 +784,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confirmationprompt_go">
 <a href="#confirmationprompt_go" style="color: inherit; text-decoration: inherit;">Confirmation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
     </dt>
@@ -812,47 +796,43 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createversion_go">
 <a href="#createversion_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dialogcodehook_go">
 <a href="#dialogcodehook_go" style="color: inherit; text-decoration: inherit;">Dialog<wbr>Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="followupprompt_go">
 <a href="#followupprompt_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Up<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
     </dt>
@@ -861,37 +841,34 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentintentsignature_go">
 <a href="#parentintentsignature_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Intent<wbr>Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rejectionstatement_go">
 <a href="#rejectionstatement_go" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
@@ -899,35 +876,31 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sampleutterances_go">
 <a href="#sampleutterances_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slots_go">
 <a href="#slots_go" style="color: inherit; text-decoration: inherit;">Slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">[]Intent<wbr>Slot</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -936,7 +909,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
             title="Required">
         <span id="fulfillmentactivity_nodejs">
 <a href="#fulfillmentactivity_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
     </dt>
@@ -944,12 +917,11 @@ from the user using prompts defined in the slots. Attributes are documented unde
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conclusionstatement_nodejs">
 <a href="#conclusionstatement_nodejs" style="color: inherit; text-decoration: inherit;">conclusion<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
@@ -959,12 +931,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confirmationprompt_nodejs">
 <a href="#confirmationprompt_nodejs" style="color: inherit; text-decoration: inherit;">confirmation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
     </dt>
@@ -972,47 +943,43 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createversion_nodejs">
 <a href="#createversion_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dialogcodehook_nodejs">
 <a href="#dialogcodehook_nodejs" style="color: inherit; text-decoration: inherit;">dialog<wbr>Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="followupprompt_nodejs">
 <a href="#followupprompt_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Up<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
     </dt>
@@ -1021,37 +988,34 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentintentsignature_nodejs">
 <a href="#parentintentsignature_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Intent<wbr>Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rejectionstatement_nodejs">
 <a href="#rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
@@ -1059,35 +1023,31 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sampleutterances_nodejs">
 <a href="#sampleutterances_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slots_nodejs">
 <a href="#slots_nodejs" style="color: inherit; text-decoration: inherit;">slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">Intent<wbr>Slot[]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1096,7 +1056,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
             title="Required">
         <span id="fulfillment_activity_python">
 <a href="#fulfillment_activity_python" style="color: inherit; text-decoration: inherit;">fulfillment_<wbr>activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
@@ -1104,12 +1064,11 @@ from the user using prompts defined in the slots. Attributes are documented unde
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conclusion_statement_python">
 <a href="#conclusion_statement_python" style="color: inherit; text-decoration: inherit;">conclusion_<wbr>statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -1119,12 +1078,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confirmation_prompt_python">
 <a href="#confirmation_prompt_python" style="color: inherit; text-decoration: inherit;">confirmation_<wbr>prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -1132,47 +1090,43 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_version_python">
 <a href="#create_version_python" style="color: inherit; text-decoration: inherit;">create_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dialog_code_hook_python">
 <a href="#dialog_code_hook_python" style="color: inherit; text-decoration: inherit;">dialog_<wbr>code_<wbr>hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="follow_up_prompt_python">
 <a href="#follow_up_prompt_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>up_<wbr>prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -1181,37 +1135,34 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_intent_signature_python">
 <a href="#parent_intent_signature_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>intent_<wbr>signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rejection_statement_python">
 <a href="#rejection_statement_python" style="color: inherit; text-decoration: inherit;">rejection_<wbr>statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -1219,44 +1170,36 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sample_utterances_python">
 <a href="#sample_utterances_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slots_python">
 <a href="#slots_python" style="color: inherit; text-decoration: inherit;">slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">Sequence[Intent<wbr>Slot<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Intent resource produces the following output properties:
-
 
 
 
@@ -1267,71 +1210,64 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="checksum_csharp">
 <a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_csharp">
 <a href="#lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1340,71 +1276,64 @@ included as an argument because the resource will add it automatically when upda
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="checksum_go">
 <a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_go">
 <a href="#lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1413,71 +1342,64 @@ included as an argument because the resource will add it automatically when upda
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="checksum_nodejs">
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_nodejs">
 <a href="#lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1486,74 +1408,64 @@ included as an argument because the resource will add it automatically when upda
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="checksum_python">
 <a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_updated_date_python">
 <a href="#last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1563,7 +1475,7 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#Intent">Intent</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#Intent">Intent</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1572,11 +1484,11 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Intent.html">Intent</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.IntentState.html">IntentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Intent.html">Intent</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.IntentState.html">IntentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1678,7 +1590,6 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1686,30 +1597,28 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_checksum_csharp">
 <a href="#state_checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conclusionstatement_csharp">
 <a href="#state_conclusionstatement_csharp" style="color: inherit; text-decoration: inherit;">Conclusion<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -1719,12 +1628,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confirmationprompt_csharp">
 <a href="#state_confirmationprompt_csharp" style="color: inherit; text-decoration: inherit;">Confirmation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -1732,58 +1640,53 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createversion_csharp">
 <a href="#state_createversion_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_csharp">
 <a href="#state_createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dialogcodehook_csharp">
 <a href="#state_dialogcodehook_csharp" style="color: inherit; text-decoration: inherit;">Dialog<wbr>Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_followupprompt_csharp">
 <a href="#state_followupprompt_csharp" style="color: inherit; text-decoration: inherit;">Follow<wbr>Up<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -1792,12 +1695,11 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fulfillmentactivity_csharp">
 <a href="#state_fulfillmentactivity_csharp" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
@@ -1805,48 +1707,44 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_csharp">
 <a href="#state_lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentintentsignature_csharp">
 <a href="#state_parentintentsignature_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Intent<wbr>Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rejectionstatement_csharp">
 <a href="#state_rejectionstatement_csharp" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -1854,46 +1752,41 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sampleutterances_csharp">
 <a href="#state_sampleutterances_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_slots_csharp">
 <a href="#state_slots_csharp" style="color: inherit; text-decoration: inherit;">Slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">List&lt;Intent<wbr>Slot<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1902,30 +1795,28 @@ from the user using prompts defined in the slots. Attributes are documented unde
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_checksum_go">
 <a href="#state_checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conclusionstatement_go">
 <a href="#state_conclusionstatement_go" style="color: inherit; text-decoration: inherit;">Conclusion<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
@@ -1935,12 +1826,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confirmationprompt_go">
 <a href="#state_confirmationprompt_go" style="color: inherit; text-decoration: inherit;">Confirmation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
     </dt>
@@ -1948,58 +1838,53 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createversion_go">
 <a href="#state_createversion_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_go">
 <a href="#state_createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dialogcodehook_go">
 <a href="#state_dialogcodehook_go" style="color: inherit; text-decoration: inherit;">Dialog<wbr>Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_followupprompt_go">
 <a href="#state_followupprompt_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Up<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
     </dt>
@@ -2008,12 +1893,11 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fulfillmentactivity_go">
 <a href="#state_fulfillmentactivity_go" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
     </dt>
@@ -2021,48 +1905,44 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_go">
 <a href="#state_lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentintentsignature_go">
 <a href="#state_parentintentsignature_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Intent<wbr>Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rejectionstatement_go">
 <a href="#state_rejectionstatement_go" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
@@ -2070,46 +1950,41 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sampleutterances_go">
 <a href="#state_sampleutterances_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_slots_go">
 <a href="#state_slots_go" style="color: inherit; text-decoration: inherit;">Slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">[]Intent<wbr>Slot</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2118,30 +1993,28 @@ from the user using prompts defined in the slots. Attributes are documented unde
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_checksum_nodejs">
 <a href="#state_checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conclusionstatement_nodejs">
 <a href="#state_conclusionstatement_nodejs" style="color: inherit; text-decoration: inherit;">conclusion<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
@@ -2151,12 +2024,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confirmationprompt_nodejs">
 <a href="#state_confirmationprompt_nodejs" style="color: inherit; text-decoration: inherit;">confirmation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
     </dt>
@@ -2164,58 +2036,53 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createversion_nodejs">
 <a href="#state_createversion_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_nodejs">
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dialogcodehook_nodejs">
 <a href="#state_dialogcodehook_nodejs" style="color: inherit; text-decoration: inherit;">dialog<wbr>Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_followupprompt_nodejs">
 <a href="#state_followupprompt_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Up<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
     </dt>
@@ -2224,12 +2091,11 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fulfillmentactivity_nodejs">
 <a href="#state_fulfillmentactivity_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
     </dt>
@@ -2237,48 +2103,44 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_nodejs">
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentintentsignature_nodejs">
 <a href="#state_parentintentsignature_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Intent<wbr>Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rejectionstatement_nodejs">
 <a href="#state_rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
@@ -2286,46 +2148,41 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sampleutterances_nodejs">
 <a href="#state_sampleutterances_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_slots_nodejs">
 <a href="#state_slots_nodejs" style="color: inherit; text-decoration: inherit;">slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">Intent<wbr>Slot[]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2334,30 +2191,28 @@ from the user using prompts defined in the slots. Attributes are documented unde
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_checksum_python">
 <a href="#state_checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conclusion_statement_python">
 <a href="#state_conclusion_statement_python" style="color: inherit; text-decoration: inherit;">conclusion_<wbr>statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -2367,12 +2222,11 @@ you provide a Lambda function in the `fulfillment_activity`. If you return the i
 application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confirmation_prompt_python">
 <a href="#state_confirmation_prompt_python" style="color: inherit; text-decoration: inherit;">confirmation_<wbr>prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -2380,58 +2234,53 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
 or neither. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_create_version_python">
 <a href="#state_create_version_python" style="color: inherit; text-decoration: inherit;">create_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_date_python">
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dialog_code_hook_python">
 <a href="#state_dialog_code_hook_python" style="color: inherit; text-decoration: inherit;">dialog_<wbr>code_<wbr>hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_follow_up_prompt_python">
 <a href="#state_follow_up_prompt_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>up_<wbr>prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
@@ -2440,12 +2289,11 @@ fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you
 user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fulfillment_activity_python">
 <a href="#state_fulfillment_activity_python" style="color: inherit; text-decoration: inherit;">fulfillment_<wbr>activity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
@@ -2453,48 +2301,44 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_last_updated_date_python">
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_intent_signature_python">
 <a href="#state_parent_intent_signature_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>intent_<wbr>signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
 [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
 in the Alexa Skills Kit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rejection_statement_python">
 <a href="#state_rejection_statement_python" style="color: inherit; text-decoration: inherit;">rejection_<wbr>statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -2502,43 +2346,39 @@ in the Alexa Skills Kit.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sample_utterances_python">
 <a href="#state_sample_utterances_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_slots_python">
 <a href="#state_slots_python" style="color: inherit; text-decoration: inherit;">slots</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslot">Sequence[Intent<wbr>Slot<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2547,11 +2387,8 @@ from the user using prompts defined in the slots. Attributes are documented unde
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</h4>
@@ -2562,11 +2399,10 @@ from the user using prompts defined in the slots. Attributes are documented unde
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConclusionStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConclusionStatement.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2576,7 +2412,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
             title="Required">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatementmessage">List&lt;Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args&gt;</a></span>
     </dt>
@@ -2584,23 +2420,20 @@ from the user using prompts defined in the slots. Attributes are documented unde
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_csharp">
 <a href="#responsecard_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2609,7 +2442,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatementmessage">[]Intent<wbr>Conclusion<wbr>Statement<wbr>Message</a></span>
     </dt>
@@ -2617,23 +2450,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_go">
 <a href="#responsecard_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2642,7 +2472,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message[]</a></span>
     </dt>
@@ -2650,23 +2480,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_nodejs">
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2675,7 +2502,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconclusionstatementmessage">Sequence[Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args]</a></span>
     </dt>
@@ -2683,26 +2510,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_card_python">
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message</h4>
 {{% choosable language nodejs %}}
@@ -2712,11 +2533,10 @@ slot values into the response card. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementMessageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConclusionStatementMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConclusionStatementMessage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2726,39 +2546,35 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_csharp">
 <a href="#groupnumber_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2767,39 +2583,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_go">
 <a href="#groupnumber_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2808,39 +2620,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_nodejs">
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2849,42 +2657,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_number_python">
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</h4>
 {{% choosable language nodejs %}}
@@ -2894,11 +2695,10 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConfirmationPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConfirmationPrompt.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2908,18 +2708,17 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="maxattempts_csharp">
 <a href="#maxattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationpromptmessage">List&lt;Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args&gt;</a></span>
     </dt>
@@ -2927,23 +2726,20 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_csharp">
 <a href="#responsecard_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2952,18 +2748,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="maxattempts_go">
 <a href="#maxattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationpromptmessage">[]Intent<wbr>Confirmation<wbr>Prompt<wbr>Message</a></span>
     </dt>
@@ -2971,23 +2766,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_go">
 <a href="#responsecard_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2996,18 +2788,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="maxattempts_nodejs">
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
@@ -3015,23 +2806,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_nodejs">
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3040,18 +2828,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="max_attempts_python">
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentconfirmationpromptmessage">Sequence[Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
     </dt>
@@ -3059,26 +2846,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_card_python">
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message</h4>
 {{% choosable language nodejs %}}
@@ -3088,11 +2869,10 @@ slot values into the response card. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptMessageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConfirmationPromptMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConfirmationPromptMessage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3102,39 +2882,35 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_csharp">
 <a href="#groupnumber_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3143,39 +2919,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_go">
 <a href="#groupnumber_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3184,39 +2956,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_nodejs">
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3225,42 +2993,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_number_python">
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</h4>
 {{% choosable language nodejs %}}
@@ -3270,11 +3031,10 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentDialogCodeHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentDialogCodeHookOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentDialogCodeHookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentDialogCodeHook.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3284,29 +3044,26 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="messageversion_csharp">
 <a href="#messageversion_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3315,29 +3072,26 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="messageversion_go">
 <a href="#messageversion_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3346,29 +3100,26 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="messageversion_nodejs">
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3377,32 +3128,26 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="message_version_python">
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</h4>
 {{% choosable language nodejs %}}
@@ -3412,11 +3157,10 @@ to invoke your Lambda function. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPrompt.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3426,18 +3170,17 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="prompt_csharp">
 <a href="#prompt_csharp" style="color: inherit; text-decoration: inherit;">Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rejectionstatement_csharp">
 <a href="#rejectionstatement_csharp" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -3445,10 +3188,8 @@ to invoke your Lambda function. For more information, see
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3457,18 +3198,17 @@ documented below under statement.
             title="Required">
         <span id="prompt_go">
 <a href="#prompt_go" style="color: inherit; text-decoration: inherit;">Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rejectionstatement_go">
 <a href="#rejectionstatement_go" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
     </dt>
@@ -3476,10 +3216,8 @@ documented below under statement.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3488,18 +3226,17 @@ documented below under statement.
             title="Required">
         <span id="prompt_nodejs">
 <a href="#prompt_nodejs" style="color: inherit; text-decoration: inherit;">prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rejectionstatement_nodejs">
 <a href="#rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
     </dt>
@@ -3507,10 +3244,8 @@ documented below under statement.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3519,18 +3254,17 @@ documented below under statement.
             title="Required">
         <span id="prompt_python">
 <a href="#prompt_python" style="color: inherit; text-decoration: inherit;">prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rejection_statement_python">
 <a href="#rejection_statement_python" style="color: inherit; text-decoration: inherit;">rejection_<wbr>statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
@@ -3538,13 +3272,8 @@ documented below under statement.
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
 documented below under statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</h4>
 {{% choosable language nodejs %}}
@@ -3554,11 +3283,10 @@ documented below under statement.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptPrompt.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3568,18 +3296,17 @@ documented below under statement.
             title="Required">
         <span id="maxattempts_csharp">
 <a href="#maxattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptpromptmessage">List&lt;Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args&gt;</a></span>
     </dt>
@@ -3587,23 +3314,20 @@ documented below under statement.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_csharp">
 <a href="#responsecard_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3612,18 +3336,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="maxattempts_go">
 <a href="#maxattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptpromptmessage">[]Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message</a></span>
     </dt>
@@ -3631,23 +3354,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_go">
 <a href="#responsecard_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3656,18 +3376,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="maxattempts_nodejs">
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
@@ -3675,23 +3394,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_nodejs">
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3700,18 +3416,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="max_attempts_python">
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
     </dt>
@@ -3719,26 +3434,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_card_python">
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message</h4>
 {{% choosable language nodejs %}}
@@ -3748,11 +3457,10 @@ slot values into the response card. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptMessageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptPromptMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptPromptMessage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3762,39 +3470,35 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_csharp">
 <a href="#groupnumber_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3803,39 +3507,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_go">
 <a href="#groupnumber_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3844,39 +3544,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_nodejs">
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3885,42 +3581,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_number_python">
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</h4>
 {{% choosable language nodejs %}}
@@ -3930,11 +3619,10 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptRejectionStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptRejectionStatement.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3944,7 +3632,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">List&lt;Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args&gt;</a></span>
     </dt>
@@ -3952,23 +3640,20 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_csharp">
 <a href="#responsecard_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3977,7 +3662,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">[]Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message</a></span>
     </dt>
@@ -3985,23 +3670,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_go">
 <a href="#responsecard_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4010,7 +3692,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
     </dt>
@@ -4018,23 +3700,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_nodejs">
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4043,7 +3722,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]</a></span>
     </dt>
@@ -4051,26 +3730,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_card_python">
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message</h4>
 {{% choosable language nodejs %}}
@@ -4080,11 +3753,10 @@ slot values into the response card. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementMessageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptRejectionStatementMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptRejectionStatementMessage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4094,39 +3766,35 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_csharp">
 <a href="#groupnumber_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4135,39 +3803,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_go">
 <a href="#groupnumber_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4176,39 +3840,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_nodejs">
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4217,42 +3877,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_number_python">
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</h4>
 {{% choosable language nodejs %}}
@@ -4262,11 +3915,10 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFulfillmentActivityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFulfillmentActivity.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4276,29 +3928,26 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the intent should be fulfilled, either by running a Lambda function or by
 returning the slot data to the client application.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codehook_csharp">
 <a href="#codehook_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4307,29 +3956,26 @@ Required if type is CodeHook. Attributes are documented under code_hook.
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the intent should be fulfilled, either by running a Lambda function or by
 returning the slot data to the client application.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codehook_go">
 <a href="#codehook_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4338,29 +3984,26 @@ Required if type is CodeHook. Attributes are documented under code_hook.
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the intent should be fulfilled, either by running a Lambda function or by
 returning the slot data to the client application.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codehook_nodejs">
 <a href="#codehook_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4369,32 +4012,26 @@ Required if type is CodeHook. Attributes are documented under code_hook.
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the intent should be fulfilled, either by running a Lambda function or by
 returning the slot data to the client application.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_hook_python">
 <a href="#code_hook_python" style="color: inherit; text-decoration: inherit;">code_<wbr>hook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</h4>
 {{% choosable language nodejs %}}
@@ -4404,11 +4041,10 @@ Required if type is CodeHook. Attributes are documented under code_hook.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityCodeHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityCodeHookOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFulfillmentActivityCodeHookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFulfillmentActivityCodeHook.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4418,29 +4054,26 @@ Required if type is CodeHook. Attributes are documented under code_hook.
             title="Required">
         <span id="messageversion_csharp">
 <a href="#messageversion_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4449,29 +4082,26 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="messageversion_go">
 <a href="#messageversion_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4480,29 +4110,26 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="messageversion_nodejs">
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4511,32 +4138,26 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="message_version_python">
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
 [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</h4>
 {{% choosable language nodejs %}}
@@ -4546,11 +4167,10 @@ to invoke your Lambda function. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentRejectionStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentRejectionStatement.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4560,7 +4180,7 @@ to invoke your Lambda function. For more information, see
             title="Required">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatementmessage">List&lt;Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args&gt;</a></span>
     </dt>
@@ -4568,23 +4188,20 @@ to invoke your Lambda function. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_csharp">
 <a href="#responsecard_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4593,7 +4210,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatementmessage">[]Intent<wbr>Rejection<wbr>Statement<wbr>Message</a></span>
     </dt>
@@ -4601,23 +4218,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_go">
 <a href="#responsecard_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4626,7 +4240,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
     </dt>
@@ -4634,23 +4248,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_nodejs">
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4659,7 +4270,7 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatementmessage">Sequence[Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]</a></span>
     </dt>
@@ -4667,26 +4278,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_card_python">
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message</h4>
 {{% choosable language nodejs %}}
@@ -4696,11 +4301,10 @@ slot values into the response card. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementMessageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentRejectionStatementMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentRejectionStatementMessage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4710,39 +4314,35 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_csharp">
 <a href="#groupnumber_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4751,39 +4351,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_go">
 <a href="#groupnumber_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4792,39 +4388,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_nodejs">
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4833,42 +4425,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_number_python">
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentslot">Intent<wbr>Slot</h4>
 {{% choosable language nodejs %}}
@@ -4878,11 +4463,10 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentSlotArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentSlot.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4892,113 +4476,103 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slotconstraint_csharp">
 <a href="#slotconstraint_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the slot is required or optional.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slottype_csharp">
 <a href="#slottype_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
 the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
 values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_csharp">
 <a href="#responsecard_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sampleutterances_csharp">
 <a href="#sampleutterances_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slottypeversion_csharp">
 <a href="#slottypeversion_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Type<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueelicitationprompt_csharp">
 <a href="#valueelicitationprompt_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Elicitation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5007,113 +4581,103 @@ from the user. Attributes are documented under prompt.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slotconstraint_go">
 <a href="#slotconstraint_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the slot is required or optional.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slottype_go">
 <a href="#slottype_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
 the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
 values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_go">
 <a href="#responsecard_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sampleutterances_go">
 <a href="#sampleutterances_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slottypeversion_go">
 <a href="#slottypeversion_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Type<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueelicitationprompt_go">
 <a href="#valueelicitationprompt_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Elicitation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5122,113 +4686,103 @@ from the user. Attributes are documented under prompt.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slotconstraint_nodejs">
 <a href="#slotconstraint_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the slot is required or optional.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slottype_nodejs">
 <a href="#slottype_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
 the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
 values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_nodejs">
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sampleutterances_nodejs">
 <a href="#sampleutterances_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slottypeversion_nodejs">
 <a href="#slottypeversion_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Type<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueelicitationprompt_nodejs">
 <a href="#valueelicitationprompt_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Elicitation<wbr>Prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5237,116 +4791,103 @@ from the user. Attributes are documented under prompt.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slot_constraint_python">
 <a href="#slot_constraint_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the slot is required or optional.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="slot_type_python">
 <a href="#slot_type_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
 the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
 values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_card_python">
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sample_utterances_python">
 <a href="#sample_utterances_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>utterances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
 is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="slot_type_version_python">
 <a href="#slot_type_version_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>type_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_elicitation_prompt_python">
 <a href="#value_elicitation_prompt_python" style="color: inherit; text-decoration: inherit;">value_<wbr>elicitation_<wbr>prompt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</h4>
 {{% choosable language nodejs %}}
@@ -5356,11 +4897,10 @@ from the user. Attributes are documented under prompt.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentSlotValueElicitationPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentSlotValueElicitationPrompt.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5370,18 +4910,17 @@ from the user. Attributes are documented under prompt.
             title="Required">
         <span id="maxattempts_csharp">
 <a href="#maxattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">List&lt;Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args&gt;</a></span>
     </dt>
@@ -5389,23 +4928,20 @@ from the user. Attributes are documented under prompt.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_csharp">
 <a href="#responsecard_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5414,18 +4950,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="maxattempts_go">
 <a href="#maxattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">[]Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message</a></span>
     </dt>
@@ -5433,23 +4968,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_go">
 <a href="#responsecard_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5458,18 +4990,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="maxattempts_nodejs">
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
@@ -5477,23 +5008,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsecard_nodejs">
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5502,18 +5030,17 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="max_attempts_python">
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Sequence[Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
     </dt>
@@ -5521,26 +5048,20 @@ slot values into the response card. For more information, see
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
 Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_card_python">
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
 [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message</h4>
 {{% choosable language nodejs %}}
@@ -5550,11 +5071,10 @@ slot values into the response card. For more information, see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptMessageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentSlotValueElicitationPromptMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentSlotValueElicitationPromptMessage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5564,39 +5084,35 @@ slot values into the response card. For more information, see
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_csharp">
 <a href="#groupnumber_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5605,39 +5121,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_go">
 <a href="#groupnumber_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5646,39 +5158,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupnumber_nodejs">
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5687,47 +5195,35 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_number_python">
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

@@ -412,7 +412,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -420,11 +420,11 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">NewDeploymentConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">NewDeploymentConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfigArgs.html">DeploymentConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfigArgs.html">DeploymentConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -435,7 +435,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -504,7 +504,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -543,7 +543,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -584,7 +584,6 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -592,49 +591,44 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="deploymentconfigname_csharp">
 <a href="#deploymentconfigname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeplatform_csharp">
 <a href="#computeplatform_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumhealthyhosts_csharp">
 <a href="#minimumhealthyhosts_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trafficroutingconfig_csharp">
 <a href="#trafficroutingconfig_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -643,49 +637,44 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="deploymentconfigname_go">
 <a href="#deploymentconfigname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeplatform_go">
 <a href="#computeplatform_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumhealthyhosts_go">
 <a href="#minimumhealthyhosts_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trafficroutingconfig_go">
 <a href="#trafficroutingconfig_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -694,49 +683,44 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="deploymentconfigname_nodejs">
 <a href="#deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeplatform_nodejs">
 <a href="#computeplatform_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumhealthyhosts_nodejs">
 <a href="#minimumhealthyhosts_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Healthy<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trafficroutingconfig_nodejs">
 <a href="#trafficroutingconfig_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -745,58 +729,49 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="deployment_config_name_python">
 <a href="#deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compute_platform_python">
 <a href="#compute_platform_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_healthy_hosts_python">
 <a href="#minimum_healthy_hosts_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>healthy_<wbr>hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="traffic_routing_config_python">
 <a href="#traffic_routing_config_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the DeploymentConfig resource produces the following output properties:
-
 
 
 
@@ -807,26 +782,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deploymentconfigid_csharp">
 <a href="#deploymentconfigid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -835,26 +807,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deploymentconfigid_go">
 <a href="#deploymentconfigid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -863,26 +832,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deploymentconfigid_nodejs">
 <a href="#deploymentconfigid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -891,29 +857,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deployment_config_id_python">
 <a href="#deployment_config_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -923,7 +883,7 @@ Get an existing DeploymentConfig resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -932,11 +892,11 @@ Get an existing DeploymentConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfigState.html">DeploymentConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfigState.html">DeploymentConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1038,7 +998,6 @@ Get an existing DeploymentConfig resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1046,60 +1005,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_computeplatform_csharp">
 <a href="#state_computeplatform_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigid_csharp">
 <a href="#state_deploymentconfigid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_csharp">
 <a href="#state_deploymentconfigname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimumhealthyhosts_csharp">
 <a href="#state_minimumhealthyhosts_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_trafficroutingconfig_csharp">
 <a href="#state_trafficroutingconfig_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1108,60 +1061,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_computeplatform_go">
 <a href="#state_computeplatform_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigid_go">
 <a href="#state_deploymentconfigid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_go">
 <a href="#state_deploymentconfigname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimumhealthyhosts_go">
 <a href="#state_minimumhealthyhosts_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_trafficroutingconfig_go">
 <a href="#state_trafficroutingconfig_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1170,60 +1117,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_computeplatform_nodejs">
 <a href="#state_computeplatform_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigid_nodejs">
 <a href="#state_deploymentconfigid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_nodejs">
 <a href="#state_deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimumhealthyhosts_nodejs">
 <a href="#state_minimumhealthyhosts_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Healthy<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_trafficroutingconfig_nodejs">
 <a href="#state_trafficroutingconfig_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1232,57 +1173,52 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_compute_platform_python">
 <a href="#state_compute_platform_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_config_id_python">
 <a href="#state_deployment_config_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_config_name_python">
 <a href="#state_deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimum_healthy_hosts_python">
 <a href="#state_minimum_healthy_hosts_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>healthy_<wbr>hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_traffic_routing_config_python">
 <a href="#state_traffic_routing_config_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1291,11 +1227,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</h4>
@@ -1306,11 +1239,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigMinimumHealthyHostsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigMinimumHealthyHosts.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1320,30 +1252,27 @@ The following state arguments are supported:
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1352,30 +1281,27 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1384,30 +1310,27 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1416,33 +1339,27 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1452,11 +1369,10 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1466,38 +1382,34 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="timebasedcanary_csharp">
 <a href="#timebasedcanary_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Canary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timebasedlinear_csharp">
 <a href="#timebasedlinear_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Linear</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1506,38 +1418,34 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="timebasedcanary_go">
 <a href="#timebasedcanary_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Canary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timebasedlinear_go">
 <a href="#timebasedlinear_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Linear</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1546,38 +1454,34 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="timebasedcanary_nodejs">
 <a href="#timebasedcanary_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Canary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timebasedlinear_nodejs">
 <a href="#timebasedlinear_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Linear</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1586,41 +1490,34 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="time_based_canary_python">
 <a href="#time_based_canary_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>canary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_based_linear_python">
 <a href="#time_based_linear_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>linear</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</h4>
 {{% choosable language nodejs %}}
@@ -1630,11 +1527,10 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanary.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1644,27 +1540,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1673,27 +1566,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1702,27 +1592,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1731,30 +1618,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</h4>
 {{% choosable language nodejs %}}
@@ -1764,11 +1645,10 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinear.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1778,27 +1658,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1807,27 +1684,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1836,27 +1710,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1865,35 +1736,24 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

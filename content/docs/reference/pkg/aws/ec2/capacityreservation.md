@@ -105,7 +105,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservation">CapacityReservation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservationArgs">CapacityReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservation">CapacityReservation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservationArgs">CapacityReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -113,11 +113,11 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservation">NewCapacityReservation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservationArgs">CapacityReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservation">NewCapacityReservation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservationArgs">CapacityReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservation.html">CapacityReservation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservationArgs.html">CapacityReservationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservation.html">CapacityReservation</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservationArgs.html">CapacityReservationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -128,7 +128,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -197,7 +197,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -236,7 +236,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -277,7 +277,6 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -285,126 +284,114 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancecount_csharp">
 <a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceplatform_csharp">
 <a href="#instanceplatform_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Platform&gt;</span>
+        <span class="property-type">string | <a href="#instanceplatform">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type&gt;</span>
+        <span class="property-type">string | <a href="#instancetype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_csharp">
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enddate_csharp">
 <a href="#enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enddatetype_csharp">
 <a href="#enddatetype_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ephemeralstorage_csharp">
 <a href="#ephemeralstorage_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancematchcriteria_csharp">
 <a href="#instancematchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Match<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenancy_csharp">
 <a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Tenancy&gt;</span>
+        <span class="property-type">string | <a href="#tenancy">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -413,126 +400,114 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancecount_go">
 <a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceplatform_go">
 <a href="#instanceplatform_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#instanceplatform">Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_go">
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enddate_go">
 <a href="#enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enddatetype_go">
 <a href="#enddatetype_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ephemeralstorage_go">
 <a href="#ephemeralstorage_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancematchcriteria_go">
 <a href="#instancematchcriteria_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Match<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenancy_go">
 <a href="#tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#tenancy">Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -541,126 +516,114 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancecount_nodejs">
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceplatform_nodejs">
 <a href="#instanceplatform_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Instance<wbr>Platform</span>
+        <span class="property-type">string | <a href="#instanceplatform">Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Instance<wbr>Type</span>
+        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_nodejs">
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enddate_nodejs">
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enddatetype_nodejs">
 <a href="#enddatetype_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ephemeralstorage_nodejs">
 <a href="#ephemeralstorage_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancematchcriteria_nodejs">
 <a href="#instancematchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Match<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenancy_nodejs">
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Tenancy</span>
+        <span class="property-type">string | <a href="#tenancy">Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -669,135 +632,119 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_count_python">
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_platform_python">
 <a href="#instance_platform_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Instance<wbr>Platform]</span>
+        <span class="property-type">str | <a href="#instanceplatform">Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Instance<wbr>Type]</span>
+        <span class="property-type">str | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ebs_optimized_python">
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="end_date_python">
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="end_date_type_python">
 <a href="#end_date_type_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ephemeral_storage_python">
 <a href="#ephemeral_storage_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_match_criteria_python">
 <a href="#instance_match_criteria_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>match_<wbr>criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenancy_python">
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Tenancy]</span>
+        <span class="property-type">str | <a href="#tenancy">Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the CapacityReservation resource produces the following output properties:
-
 
 
 
@@ -808,26 +755,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -836,26 +780,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -864,26 +805,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -892,29 +830,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -924,7 +856,7 @@ Get an existing CapacityReservation resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservationState">CapacityReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservation">CapacityReservation</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservationState">CapacityReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#CapacityReservation">CapacityReservation</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -933,11 +865,11 @@ Get an existing CapacityReservation resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityReservation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservationState">CapacityReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityReservation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservationState">CapacityReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservation.html">CapacityReservation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservationState.html">CapacityReservationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservation.html">CapacityReservation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.CapacityReservationState.html">CapacityReservationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1039,7 +971,6 @@ Get an existing CapacityReservation resource's state with the given name, ID, an
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1047,137 +978,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_csharp">
 <a href="#state_ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enddate_csharp">
 <a href="#state_enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enddatetype_csharp">
 <a href="#state_enddatetype_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralstorage_csharp">
 <a href="#state_ephemeralstorage_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancecount_csharp">
 <a href="#state_instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancematchcriteria_csharp">
 <a href="#state_instancematchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Match<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceplatform_csharp">
 <a href="#state_instanceplatform_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Platform&gt;</span>
+        <span class="property-type">string | <a href="#instanceplatform">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_csharp">
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type&gt;</span>
+        <span class="property-type">string | <a href="#instancetype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_csharp">
 <a href="#state_tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Tenancy&gt;</span>
+        <span class="property-type">string | <a href="#tenancy">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1186,137 +1104,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_go">
 <a href="#state_ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enddate_go">
 <a href="#state_enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enddatetype_go">
 <a href="#state_enddatetype_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralstorage_go">
 <a href="#state_ephemeralstorage_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancecount_go">
 <a href="#state_instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancematchcriteria_go">
 <a href="#state_instancematchcriteria_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Match<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceplatform_go">
 <a href="#state_instanceplatform_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#instanceplatform">Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_go">
 <a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_go">
 <a href="#state_tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#tenancy">Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1325,137 +1230,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_nodejs">
 <a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enddate_nodejs">
 <a href="#state_enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enddatetype_nodejs">
 <a href="#state_enddatetype_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralstorage_nodejs">
 <a href="#state_ephemeralstorage_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancecount_nodejs">
 <a href="#state_instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancematchcriteria_nodejs">
 <a href="#state_instancematchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Match<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceplatform_nodejs">
 <a href="#state_instanceplatform_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Instance<wbr>Platform</span>
+        <span class="property-type">string | <a href="#instanceplatform">Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_nodejs">
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Instance<wbr>Type</span>
+        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_nodejs">
 <a href="#state_tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Tenancy</span>
+        <span class="property-type">string | <a href="#tenancy">Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1464,134 +1356,122 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ebs_optimized_python">
 <a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_end_date_python">
 <a href="#state_end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_end_date_type_python">
 <a href="#state_end_date_type_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_storage_python">
 <a href="#state_ephemeral_storage_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_count_python">
 <a href="#state_instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_match_criteria_python">
 <a href="#state_instance_match_criteria_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>match_<wbr>criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_platform_python">
 <a href="#state_instance_platform_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Instance<wbr>Platform]</span>
+        <span class="property-type">str | <a href="#instanceplatform">Instance<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_type_python">
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Instance<wbr>Type]</span>
+        <span class="property-type">str | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_python">
 <a href="#state_tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union[str, Tenancy]</span>
+        <span class="property-type">str | <a href="#tenancy">Tenancy</a></span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1600,11 +1480,3155 @@ The following state arguments are supported:
 
 
 
+## Supporting Types
 
 
 
+<h4 id="instanceplatform">Instance<wbr>Platform</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Linux<wbr>Unix</dt>
+    <dd>Linux/UNIX</dd>
+    <dt>Red<wbr>Hat<wbr>Enterprise<wbr>Linux</dt>
+    <dd>Red Hat Enterprise Linux</dd>
+    <dt>Suse<wbr>Linux</dt>
+    <dd>SUSE Linux</dd>
+    <dt>Windows</dt>
+    <dd>Windows</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server</dt>
+    <dd>Windows with SQL Server</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Enterprise</dt>
+    <dd>Windows with SQL Server Enterprise</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Standard</dt>
+    <dd>Windows with SQL Server Standard</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Web</dt>
+    <dd>Windows with SQL Server Web</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Instance<wbr>Platform<wbr>Linux<wbr>Unix</dt>
+    <dd>Linux/UNIX</dd>
+    <dt>Instance<wbr>Platform<wbr>Red<wbr>Hat<wbr>Enterprise<wbr>Linux</dt>
+    <dd>Red Hat Enterprise Linux</dd>
+    <dt>Instance<wbr>Platform<wbr>Suse<wbr>Linux</dt>
+    <dd>SUSE Linux</dd>
+    <dt>Instance<wbr>Platform<wbr>Windows</dt>
+    <dd>Windows</dd>
+    <dt>Instance<wbr>Platform<wbr>Windows<wbr>With<wbr>Sql<wbr>Server</dt>
+    <dd>Windows with SQL Server</dd>
+    <dt>Instance<wbr>Platform<wbr>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Enterprise</dt>
+    <dd>Windows with SQL Server Enterprise</dd>
+    <dt>Instance<wbr>Platform<wbr>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Standard</dt>
+    <dd>Windows with SQL Server Standard</dd>
+    <dt>Instance<wbr>Platform<wbr>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Web</dt>
+    <dd>Windows with SQL Server Web</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Linux<wbr>Unix</dt>
+    <dd>Linux/UNIX</dd>
+    <dt>Red<wbr>Hat<wbr>Enterprise<wbr>Linux</dt>
+    <dd>Red Hat Enterprise Linux</dd>
+    <dt>Suse<wbr>Linux</dt>
+    <dd>SUSE Linux</dd>
+    <dt>Windows</dt>
+    <dd>Windows</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server</dt>
+    <dd>Windows with SQL Server</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Enterprise</dt>
+    <dd>Windows with SQL Server Enterprise</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Standard</dt>
+    <dd>Windows with SQL Server Standard</dd>
+    <dt>Windows<wbr>With<wbr>Sql<wbr>Server<wbr>Web</dt>
+    <dd>Windows with SQL Server Web</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>LINUX_UNIX</dt>
+    <dd>Linux/UNIX</dd>
+    <dt>RED_HAT_ENTERPRISE_LINUX</dt>
+    <dd>Red Hat Enterprise Linux</dd>
+    <dt>SUSE_LINUX</dt>
+    <dd>SUSE Linux</dd>
+    <dt>WINDOWS</dt>
+    <dd>Windows</dd>
+    <dt>WINDOWS_WITH_SQL_SERVER</dt>
+    <dd>Windows with SQL Server</dd>
+    <dt>WINDOWS_WITH_SQL_SERVER_ENTERPRISE</dt>
+    <dd>Windows with SQL Server Enterprise</dd>
+    <dt>WINDOWS_WITH_SQL_SERVER_STANDARD</dt>
+    <dd>Windows with SQL Server Standard</dd>
+    <dt>WINDOWS_WITH_SQL_SERVER_WEB</dt>
+    <dd>Windows with SQL Server Web</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="instancetype">Instance<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>A1_2XLarge</dt>
+    <dd>a1.2xlarge</dd>
+    <dt>A1_4XLarge</dt>
+    <dd>a1.4xlarge</dd>
+    <dt>A1_Large</dt>
+    <dd>a1.large</dd>
+    <dt>A1_Medium</dt>
+    <dd>a1.medium</dd>
+    <dt>A1_Metal</dt>
+    <dd>a1.metal</dd>
+    <dt>A1_XLarge</dt>
+    <dd>a1.xlarge</dd>
+    <dt>C1_Medium</dt>
+    <dd>c1.medium</dd>
+    <dt>C1_XLarge</dt>
+    <dd>c1.xlarge</dd>
+    <dt>C3_2XLarge</dt>
+    <dd>c3.2xlarge</dd>
+    <dt>C3_4XLarge</dt>
+    <dd>c3.4xlarge</dd>
+    <dt>C3_8XLarge</dt>
+    <dd>c3.8xlarge</dd>
+    <dt>C3_Large</dt>
+    <dd>c3.large</dd>
+    <dt>C3_XLarge</dt>
+    <dd>c3.xlarge</dd>
+    <dt>C4_2XLarge</dt>
+    <dd>c4.2xlarge</dd>
+    <dt>C4_4XLarge</dt>
+    <dd>c4.4xlarge</dd>
+    <dt>C4_8XLarge</dt>
+    <dd>c4.8xlarge</dd>
+    <dt>C4_Large</dt>
+    <dd>c4.large</dd>
+    <dt>C4_XLarge</dt>
+    <dd>c4.xlarge</dd>
+    <dt>C5_12XLarge</dt>
+    <dd>c5.12xlarge</dd>
+    <dt>C5_18XLarge</dt>
+    <dd>c5.18xlarge</dd>
+    <dt>C5_24XLarge</dt>
+    <dd>c5.24xlarge</dd>
+    <dt>C5_2XLarge</dt>
+    <dd>c5.2xlarge</dd>
+    <dt>C5_4XLarge</dt>
+    <dd>c5.4xlarge</dd>
+    <dt>C5_9XLarge</dt>
+    <dd>c5.9xlarge</dd>
+    <dt>C5_Large</dt>
+    <dd>c5.large</dd>
+    <dt>C5_Metal</dt>
+    <dd>c5.metal</dd>
+    <dt>C5_XLarge</dt>
+    <dd>c5.xlarge</dd>
+    <dt>C5a_12XLarge</dt>
+    <dd>c5a.12xlarge</dd>
+    <dt>C5a_16XLarge</dt>
+    <dd>c5a.16xlarge</dd>
+    <dt>C5a_24XLarge</dt>
+    <dd>c5a.24xlarge</dd>
+    <dt>C5a_2XLarge</dt>
+    <dd>c5a.2xlarge</dd>
+    <dt>C5a_4XLarge</dt>
+    <dd>c5a.4xlarge</dd>
+    <dt>C5a_8XLarge</dt>
+    <dd>c5a.8xlarge</dd>
+    <dt>C5a_Large</dt>
+    <dd>c5a.large</dd>
+    <dt>C5a_XLarge</dt>
+    <dd>c5a.xlarge</dd>
+    <dt>C5ad_12XLarge</dt>
+    <dd>c5ad.12xlarge</dd>
+    <dt>C5ad_16XLarge</dt>
+    <dd>c5ad.16xlarge</dd>
+    <dt>C5ad_24XLarge</dt>
+    <dd>c5ad.24xlarge</dd>
+    <dt>C5ad_2XLarge</dt>
+    <dd>c5ad.2xlarge</dd>
+    <dt>C5ad_4XLarge</dt>
+    <dd>c5ad.4xlarge</dd>
+    <dt>C5ad_8XLarge</dt>
+    <dd>c5ad.8xlarge</dd>
+    <dt>C5ad_Large</dt>
+    <dd>c5ad.large</dd>
+    <dt>C5ad_XLarge</dt>
+    <dd>c5ad.xlarge</dd>
+    <dt>C5d_12XLarge</dt>
+    <dd>c5d.12xlarge</dd>
+    <dt>C5d_18XLarge</dt>
+    <dd>c5d.18xlarge</dd>
+    <dt>C5d_24XLarge</dt>
+    <dd>c5d.24xlarge</dd>
+    <dt>C5d_2XLarge</dt>
+    <dd>c5d.2xlarge</dd>
+    <dt>C5d_4XLarge</dt>
+    <dd>c5d.4xlarge</dd>
+    <dt>C5d_9XLarge</dt>
+    <dd>c5d.9xlarge</dd>
+    <dt>C5d_Large</dt>
+    <dd>c5d.large</dd>
+    <dt>C5d_Metal</dt>
+    <dd>c5d.metal</dd>
+    <dt>C5d_XLarge</dt>
+    <dd>c5d.xlarge</dd>
+    <dt>C5n_18XLarge</dt>
+    <dd>c5n.18xlarge</dd>
+    <dt>C5n_2XLarge</dt>
+    <dd>c5n.2xlarge</dd>
+    <dt>C5n_4XLarge</dt>
+    <dd>c5n.4xlarge</dd>
+    <dt>C5n_9XLarge</dt>
+    <dd>c5n.9xlarge</dd>
+    <dt>C5n_Large</dt>
+    <dd>c5n.large</dd>
+    <dt>C5n_Metal</dt>
+    <dd>c5n.metal</dd>
+    <dt>C5n_XLarge</dt>
+    <dd>c5n.xlarge</dd>
+    <dt>C6g_12XLarge</dt>
+    <dd>c6g.12xlarge</dd>
+    <dt>C6g_16XLarge</dt>
+    <dd>c6g.16xlarge</dd>
+    <dt>C6g_2XLarge</dt>
+    <dd>c6g.2xlarge</dd>
+    <dt>C6g_4XLarge</dt>
+    <dd>c6g.4xlarge</dd>
+    <dt>C6g_8XLarge</dt>
+    <dd>c6g.8xlarge</dd>
+    <dt>C6g_Large</dt>
+    <dd>c6g.large</dd>
+    <dt>C6g_Medium</dt>
+    <dd>c6g.medium</dd>
+    <dt>C6g_Metal</dt>
+    <dd>c6g.metal</dd>
+    <dt>C6g_XLarge</dt>
+    <dd>c6g.xlarge</dd>
+    <dt>C6gd_12XLarge</dt>
+    <dd>c6gd.12xlarge</dd>
+    <dt>C6gd_16XLarge</dt>
+    <dd>c6gd.16xlarge</dd>
+    <dt>C6gd_2XLarge</dt>
+    <dd>c6gd.2xlarge</dd>
+    <dt>C6gd_4XLarge</dt>
+    <dd>c6gd.4xlarge</dd>
+    <dt>C6gd_8XLarge</dt>
+    <dd>c6gd.8xlarge</dd>
+    <dt>C6gd_Large</dt>
+    <dd>c6gd.large</dd>
+    <dt>C6gd_Medium</dt>
+    <dd>c6gd.medium</dd>
+    <dt>C6gd_Metal</dt>
+    <dd>c6gd.metal</dd>
+    <dt>C6gd_XLarge</dt>
+    <dd>c6gd.xlarge</dd>
+    <dt>Cc2_8XLarge</dt>
+    <dd>cc2.8xlarge</dd>
+    <dt>D2_2XLarge</dt>
+    <dd>d2.2xlarge</dd>
+    <dt>D2_4XLarge</dt>
+    <dd>d2.4xlarge</dd>
+    <dt>D2_8XLarge</dt>
+    <dd>d2.8xlarge</dd>
+    <dt>D2_XLarge</dt>
+    <dd>d2.xlarge</dd>
+    <dt>D3_2XLarge</dt>
+    <dd>d3.2xlarge</dd>
+    <dt>D3_4XLarge</dt>
+    <dd>d3.4xlarge</dd>
+    <dt>D3_8XLarge</dt>
+    <dd>d3.8xlarge</dd>
+    <dt>D3_XLarge</dt>
+    <dd>d3.xlarge</dd>
+    <dt>D3en_12XLarge</dt>
+    <dd>d3en.12xlarge</dd>
+    <dt>D3en_2XLarge</dt>
+    <dd>d3en.2xlarge</dd>
+    <dt>D3en_4XLarge</dt>
+    <dd>d3en.4xlarge</dd>
+    <dt>D3en_6XLarge</dt>
+    <dd>d3en.6xlarge</dd>
+    <dt>D3en_8XLarge</dt>
+    <dd>d3en.8xlarge</dd>
+    <dt>D3en_XLarge</dt>
+    <dd>d3en.xlarge</dd>
+    <dt>F1_16XLarge</dt>
+    <dd>f1.16xlarge</dd>
+    <dt>F1_2XLarge</dt>
+    <dd>f1.2xlarge</dd>
+    <dt>F1_4XLarge</dt>
+    <dd>f1.4xlarge</dd>
+    <dt>G2_2XLarge</dt>
+    <dd>g2.2xlarge</dd>
+    <dt>G2_8XLarge</dt>
+    <dd>g2.8xlarge</dd>
+    <dt>G3_16XLarge</dt>
+    <dd>g3.16xlarge</dd>
+    <dt>G3_4XLarge</dt>
+    <dd>g3.4xlarge</dd>
+    <dt>G3_8XLarge</dt>
+    <dd>g3.8xlarge</dd>
+    <dt>G3s_XLarge</dt>
+    <dd>g3s.xlarge</dd>
+    <dt>G4ad_16XLarge</dt>
+    <dd>g4ad.16xlarge</dd>
+    <dt>G4ad_4XLarge</dt>
+    <dd>g4ad.4xlarge</dd>
+    <dt>G4ad_8XLarge</dt>
+    <dd>g4ad.8xlarge</dd>
+    <dt>G4dn_12XLarge</dt>
+    <dd>g4dn.12xlarge</dd>
+    <dt>G4dn_16XLarge</dt>
+    <dd>g4dn.16xlarge</dd>
+    <dt>G4dn_2XLarge</dt>
+    <dd>g4dn.2xlarge</dd>
+    <dt>G4dn_4XLarge</dt>
+    <dd>g4dn.4xlarge</dd>
+    <dt>G4dn_8XLarge</dt>
+    <dd>g4dn.8xlarge</dd>
+    <dt>G4dn_Metal</dt>
+    <dd>g4dn.metal</dd>
+    <dt>G4dn_XLarge</dt>
+    <dd>g4dn.xlarge</dd>
+    <dt>H1_16XLarge</dt>
+    <dd>h1.16xlarge</dd>
+    <dt>H1_2XLarge</dt>
+    <dd>h1.2xlarge</dd>
+    <dt>H1_4XLarge</dt>
+    <dd>h1.4xlarge</dd>
+    <dt>H1_8XLarge</dt>
+    <dd>h1.8xlarge</dd>
+    <dt>I2_2XLarge</dt>
+    <dd>i2.2xlarge</dd>
+    <dt>I2_4XLarge</dt>
+    <dd>i2.4xlarge</dd>
+    <dt>I2_8XLarge</dt>
+    <dd>i2.8xlarge</dd>
+    <dt>I2_XLarge</dt>
+    <dd>i2.xlarge</dd>
+    <dt>I3_16XLarge</dt>
+    <dd>i3.16xlarge</dd>
+    <dt>I3_2XLarge</dt>
+    <dd>i3.2xlarge</dd>
+    <dt>I3_4XLarge</dt>
+    <dd>i3.4xlarge</dd>
+    <dt>I3_8XLarge</dt>
+    <dd>i3.8xlarge</dd>
+    <dt>I3_Large</dt>
+    <dd>i3.large</dd>
+    <dt>I3_XLarge</dt>
+    <dd>i3.xlarge</dd>
+    <dt>I3_Metal</dt>
+    <dd>i3.metal</dd>
+    <dt>I3en_12XLarge</dt>
+    <dd>i3en.12xlarge</dd>
+    <dt>I3en_24XLarge</dt>
+    <dd>i3en.24xlarge</dd>
+    <dt>I3en_2XLarge</dt>
+    <dd>i3en.2xlarge</dd>
+    <dt>I3en_3XLarge</dt>
+    <dd>i3en.3xlarge</dd>
+    <dt>I3en_6XLarge</dt>
+    <dd>i3en.6xlarge</dd>
+    <dt>I3en_Large</dt>
+    <dd>i3en.large</dd>
+    <dt>I3en_Metal</dt>
+    <dd>i3en.metal</dd>
+    <dt>I3en_XLarge</dt>
+    <dd>i3en.xlarge</dd>
+    <dt>Inf1_24XLarge</dt>
+    <dd>inf1.24xlarge</dd>
+    <dt>Inf1_2XLarge</dt>
+    <dd>inf1.2xlarge</dd>
+    <dt>Inf1_6XLarge</dt>
+    <dd>inf1.6xlarge</dd>
+    <dt>Inf1_XLarge</dt>
+    <dd>inf1.xlarge</dd>
+    <dt>M1_Large</dt>
+    <dd>m1.large</dd>
+    <dt>M1_Medium</dt>
+    <dd>m1.medium</dd>
+    <dt>M1_Small</dt>
+    <dd>m1.small</dd>
+    <dt>M1_XLarge</dt>
+    <dd>m1.xlarge</dd>
+    <dt>M2_2XLarge</dt>
+    <dd>m2.2xlarge</dd>
+    <dt>M2_4XLarge</dt>
+    <dd>m2.4xlarge</dd>
+    <dt>M2_XLarge</dt>
+    <dd>m2.xlarge</dd>
+    <dt>M3_2XLarge</dt>
+    <dd>m3.2xlarge</dd>
+    <dt>M3_Large</dt>
+    <dd>m3.large</dd>
+    <dt>M3_Medium</dt>
+    <dd>m3.medium</dd>
+    <dt>M3_XLarge</dt>
+    <dd>m3.xlarge</dd>
+    <dt>M4_10XLarge</dt>
+    <dd>m4.10xlarge</dd>
+    <dt>M4_16XLarge</dt>
+    <dd>m4.16xlarge</dd>
+    <dt>M4_2XLarge</dt>
+    <dd>m4.2xlarge</dd>
+    <dt>M4_4XLarge</dt>
+    <dd>m4.4xlarge</dd>
+    <dt>M4_Large</dt>
+    <dd>m4.large</dd>
+    <dt>M4_XLarge</dt>
+    <dd>m4.xlarge</dd>
+    <dt>M5_12XLarge</dt>
+    <dd>m5.12xlarge</dd>
+    <dt>M5_16XLarge</dt>
+    <dd>m5.16xlarge</dd>
+    <dt>M5_24XLarge</dt>
+    <dd>m5.24xlarge</dd>
+    <dt>M5_2XLarge</dt>
+    <dd>m5.2xlarge</dd>
+    <dt>M5_4XLarge</dt>
+    <dd>m5.4xlarge</dd>
+    <dt>M5_8XLarge</dt>
+    <dd>m5.8xlarge</dd>
+    <dt>M5_Large</dt>
+    <dd>m5.large</dd>
+    <dt>M5_Metal</dt>
+    <dd>m5.metal</dd>
+    <dt>M5_XLarge</dt>
+    <dd>m5.xlarge</dd>
+    <dt>M5a_12XLarge</dt>
+    <dd>m5a.12xlarge</dd>
+    <dt>M5a_16XLarge</dt>
+    <dd>m5a.16xlarge</dd>
+    <dt>M5a_24XLarge</dt>
+    <dd>m5a.24xlarge</dd>
+    <dt>M5a_2XLarge</dt>
+    <dd>m5a.2xlarge</dd>
+    <dt>M5a_4XLarge</dt>
+    <dd>m5a.4xlarge</dd>
+    <dt>M5a_8XLarge</dt>
+    <dd>m5a.8xlarge</dd>
+    <dt>M5a_Large</dt>
+    <dd>m5a.large</dd>
+    <dt>M5a_XLarge</dt>
+    <dd>m5a.xlarge</dd>
+    <dt>M5ad_12XLarge</dt>
+    <dd>m5ad.12xlarge</dd>
+    <dt>M5ad_16XLarge</dt>
+    <dd>m5ad.16xlarge</dd>
+    <dt>M5ad_24XLarge</dt>
+    <dd>m5ad.24xlarge</dd>
+    <dt>M5ad_2XLarge</dt>
+    <dd>m5ad.2xlarge</dd>
+    <dt>M5ad_4XLarge</dt>
+    <dd>m5ad.4xlarge</dd>
+    <dt>M5ad_8XLarge</dt>
+    <dd>m5ad.8xlarge</dd>
+    <dt>M5ad_Large</dt>
+    <dd>m5ad.large</dd>
+    <dt>M5as_XLarge</dt>
+    <dd>m5ad.xlarge</dd>
+    <dt>M5d_12XLarge</dt>
+    <dd>m5d.12xlarge</dd>
+    <dt>M5d_16XLarge</dt>
+    <dd>m5d.16xlarge</dd>
+    <dt>M5d_24XLarge</dt>
+    <dd>m5d.24xlarge</dd>
+    <dt>M5d_2XLarge</dt>
+    <dd>m5d.2xlarge</dd>
+    <dt>M5d_4XLarge</dt>
+    <dd>m5d.4xlarge</dd>
+    <dt>M5d_8XLarge</dt>
+    <dd>m5d.8xlarge</dd>
+    <dt>M5d_Large</dt>
+    <dd>m5d.large</dd>
+    <dt>M5d_Metal</dt>
+    <dd>m5d.metal</dd>
+    <dt>M5d_XLarge</dt>
+    <dd>m5d.xlarge</dd>
+    <dt>M5dn_12XLarge</dt>
+    <dd>m5dn.12xlarge</dd>
+    <dt>M5dn_16XLarge</dt>
+    <dd>m5dn.16xlarge</dd>
+    <dt>M5dn_24XLarge</dt>
+    <dd>m5dn.24xlarge</dd>
+    <dt>M5dn_2XLarge</dt>
+    <dd>m5dn.2xlarge</dd>
+    <dt>M5dn_4XLarge</dt>
+    <dd>m5dn.4xlarge</dd>
+    <dt>M5dn_8XLarge</dt>
+    <dd>m5dn.8xlarge</dd>
+    <dt>M5dn_Large</dt>
+    <dd>m5dn.large</dd>
+    <dt>M5dn_XLarge</dt>
+    <dd>m5dn.xlarge</dd>
+    <dt>M5n_12XLarge</dt>
+    <dd>m5n.12xlarge</dd>
+    <dt>M5n_16XLarge</dt>
+    <dd>m5n.16xlarge</dd>
+    <dt>M5n_24XLarge</dt>
+    <dd>m5n.24xlarge</dd>
+    <dt>M5n_2XLarge</dt>
+    <dd>m5n.2xlarge</dd>
+    <dt>M5n_4XLarge</dt>
+    <dd>m5n.4xlarge</dd>
+    <dt>M5n_8XLarge</dt>
+    <dd>m5n.8xlarge</dd>
+    <dt>M5n_Large</dt>
+    <dd>m5n.large</dd>
+    <dt>M5n_XLarge</dt>
+    <dd>m5n.xlarge</dd>
+    <dt>M5zn_12XLarge</dt>
+    <dd>m5zn.12xlarge</dd>
+    <dt>M5zn_2XLarge</dt>
+    <dd>m5zn.2xlarge</dd>
+    <dt>M5zn_3XLarge</dt>
+    <dd>m5zn.3xlarge</dd>
+    <dt>M5zn_6XLarge</dt>
+    <dd>m5zn.6xlarge</dd>
+    <dt>M5zn_Large</dt>
+    <dd>m5zn.large</dd>
+    <dt>M5zn_Metal</dt>
+    <dd>m5zn.metal</dd>
+    <dt>M5zn_XLarge</dt>
+    <dd>m5zn.xlarge</dd>
+    <dt>M6g_12XLarge</dt>
+    <dd>m6g.12xlarge</dd>
+    <dt>M6g_16XLarge</dt>
+    <dd>m6g.16xlarge</dd>
+    <dt>M6g_2XLarge</dt>
+    <dd>m6g.2xlarge</dd>
+    <dt>M6g_4XLarge</dt>
+    <dd>m6g.4xlarge</dd>
+    <dt>M6g_8XLarge</dt>
+    <dd>m6g.8xlarge</dd>
+    <dt>M6g_Large</dt>
+    <dd>m6g.large</dd>
+    <dt>M6g_Medium</dt>
+    <dd>m6g.medium</dd>
+    <dt>M6g_Metal</dt>
+    <dd>m6g.metal</dd>
+    <dt>M6g_XLarge</dt>
+    <dd>m6g.xlarge</dd>
+    <dt>M6gd_12XLarge</dt>
+    <dd>m6gd.12xlarge</dd>
+    <dt>M6gd_16XLarge</dt>
+    <dd>m6gd.16xlarge</dd>
+    <dt>M6gd_2XLarge</dt>
+    <dd>m6gd.2xlarge</dd>
+    <dt>M6gd_4XLarge</dt>
+    <dd>m6gd.4xlarge</dd>
+    <dt>M6gd_8XLarge</dt>
+    <dd>m6gd.8xlarge</dd>
+    <dt>M6gd_Large</dt>
+    <dd>m6gd.large</dd>
+    <dt>M6gd_Medium</dt>
+    <dd>m6gd.medium</dd>
+    <dt>M6gd_Metal</dt>
+    <dd>m6gd.metal</dd>
+    <dt>M6gd_XLarge</dt>
+    <dd>m6gd.xlarge</dd>
+    <dt>Mac1_Metal</dt>
+    <dd>mac1.metal</dd>
+    <dt>P2_16XLarge</dt>
+    <dd>p2.16xlarge</dd>
+    <dt>P2_8XLarge</dt>
+    <dd>p2.8xlarge</dd>
+    <dt>P2_XLarge</dt>
+    <dd>p2.xlarge</dd>
+    <dt>P3_16XLarge</dt>
+    <dd>p3.16xlarge</dd>
+    <dt>P3_2XLarge</dt>
+    <dd>p3.2xlarge</dd>
+    <dt>P3_8XLarge</dt>
+    <dd>p3.8xlarge</dd>
+    <dt>P3dn_24XLarge</dt>
+    <dd>p3dn.24xlarge</dd>
+    <dt>P4d_24XLarge</dt>
+    <dd>p4d.24xlarge</dd>
+    <dt>R3_2XLarge</dt>
+    <dd>r3.2xlarge</dd>
+    <dt>R3_4XLarge</dt>
+    <dd>r3.4xlarge</dd>
+    <dt>R3_8XLarge</dt>
+    <dd>r3.8xlarge</dd>
+    <dt>R3_Large</dt>
+    <dd>r3.large</dd>
+    <dt>R3_XLarge</dt>
+    <dd>r3.xlarge</dd>
+    <dt>R4_16XLarge</dt>
+    <dd>r4.16xlarge</dd>
+    <dt>R4_2XLarge</dt>
+    <dd>r4.2xlarge</dd>
+    <dt>R4_4XLarge</dt>
+    <dd>r4.4xlarge</dd>
+    <dt>R4_8XLarge</dt>
+    <dd>r4.8xlarge</dd>
+    <dt>R4_Large</dt>
+    <dd>r4.large</dd>
+    <dt>R4_XLarge</dt>
+    <dd>r4.xlarge</dd>
+    <dt>R5_12XLarge</dt>
+    <dd>r5.12xlarge</dd>
+    <dt>R5_16XLarge</dt>
+    <dd>r5.16xlarge</dd>
+    <dt>R5_24XLarge</dt>
+    <dd>r5.24xlarge</dd>
+    <dt>R5_2XLarge</dt>
+    <dd>r5.2xlarge</dd>
+    <dt>R5_4XLarge</dt>
+    <dd>r5.4xlarge</dd>
+    <dt>R5_8XLarge</dt>
+    <dd>r5.8xlarge</dd>
+    <dt>R5_Large</dt>
+    <dd>r5.large</dd>
+    <dt>R5_Metal</dt>
+    <dd>r5.metal</dd>
+    <dt>R5_XLarge</dt>
+    <dd>r5.xlarge</dd>
+    <dt>R5a_12XLarge</dt>
+    <dd>r5a.12xlarge</dd>
+    <dt>R5a_16XLarge</dt>
+    <dd>r5a.16xlarge</dd>
+    <dt>R5a_24XLarge</dt>
+    <dd>r5a.24xlarge</dd>
+    <dt>R5a_2XLarge</dt>
+    <dd>r5a.2xlarge</dd>
+    <dt>R5a_4XLarge</dt>
+    <dd>r5a.4xlarge</dd>
+    <dt>R5a_8XLarge</dt>
+    <dd>r5a.8xlarge</dd>
+    <dt>R5a_Large</dt>
+    <dd>r5a.large</dd>
+    <dt>R5a_XLarge</dt>
+    <dd>r5a.xlarge</dd>
+    <dt>R5ad_12XLarge</dt>
+    <dd>r5ad.12xlarge</dd>
+    <dt>R5ad_16XLarge</dt>
+    <dd>r5ad.16xlarge</dd>
+    <dt>R5ad_24XLarge</dt>
+    <dd>r5ad.24xlarge</dd>
+    <dt>R5ad_2XLarge</dt>
+    <dd>r5ad.2xlarge</dd>
+    <dt>R5ad_4XLarge</dt>
+    <dd>r5ad.4xlarge</dd>
+    <dt>R5ad_8XLarge</dt>
+    <dd>r5ad.8xlarge</dd>
+    <dt>R5ad_Large</dt>
+    <dd>r5ad.large</dd>
+    <dt>R5ad_XLarge</dt>
+    <dd>r5ad.xlarge</dd>
+    <dt>R5b_12XLarge</dt>
+    <dd>r5b.12xlarge</dd>
+    <dt>R5b_16XLarge</dt>
+    <dd>r5b.16xlarge</dd>
+    <dt>R5b_24XLarge</dt>
+    <dd>r5b.24xlarge</dd>
+    <dt>R5b_2XLarge</dt>
+    <dd>r5b.2xlarge</dd>
+    <dt>R5b_4XLarge</dt>
+    <dd>r5b.4xlarge</dd>
+    <dt>R5b_8XLarge</dt>
+    <dd>r5b.8xlarge</dd>
+    <dt>R5b_Large</dt>
+    <dd>r5b.large</dd>
+    <dt>R5b_Metal</dt>
+    <dd>r5b.metal</dd>
+    <dt>R5b_XLarge</dt>
+    <dd>r5b.xlarge</dd>
+    <dt>R5d_12XLarge</dt>
+    <dd>r5d.12xlarge</dd>
+    <dt>R5d_16XLarge</dt>
+    <dd>r5d.16xlarge</dd>
+    <dt>R5d_24XLarge</dt>
+    <dd>r5d.24xlarge</dd>
+    <dt>R5d_2XLarge</dt>
+    <dd>r5d.2xlarge</dd>
+    <dt>R5d_4XLarge</dt>
+    <dd>r5d.4xlarge</dd>
+    <dt>R5d_8XLarge</dt>
+    <dd>r5d.8xlarge</dd>
+    <dt>R5d_Large</dt>
+    <dd>r5d.large</dd>
+    <dt>R5d_Metal</dt>
+    <dd>r5d.metal</dd>
+    <dt>R5d_XLarge</dt>
+    <dd>r5d.xlarge</dd>
+    <dt>R5dn_12XLarge</dt>
+    <dd>r5dn.12xlarge</dd>
+    <dt>R5dn_16XLarge</dt>
+    <dd>r5dn.16xlarge</dd>
+    <dt>R5dn_24XLarge</dt>
+    <dd>r5dn.24xlarge</dd>
+    <dt>R5dn_2XLarge</dt>
+    <dd>r5dn.2xlarge</dd>
+    <dt>R5dn_4XLarge</dt>
+    <dd>r5dn.4xlarge</dd>
+    <dt>R5dn_8XLarge</dt>
+    <dd>r5dn.8xlarge</dd>
+    <dt>R5dn_Large</dt>
+    <dd>r5dn.large</dd>
+    <dt>R5dn_XLarge</dt>
+    <dd>r5dn.xlarge</dd>
+    <dt>R5n_12XLarge</dt>
+    <dd>r5n.12xlarge</dd>
+    <dt>R5n_16XLarge</dt>
+    <dd>r5n.16xlarge</dd>
+    <dt>R5n_24XLarge</dt>
+    <dd>r5n.24xlarge</dd>
+    <dt>R5n_2XLarge</dt>
+    <dd>r5n.2xlarge</dd>
+    <dt>R5n_4XLarge</dt>
+    <dd>r5n.4xlarge</dd>
+    <dt>R5n_8XLarge</dt>
+    <dd>r5n.8xlarge</dd>
+    <dt>R5n_Large</dt>
+    <dd>r5n.large</dd>
+    <dt>R5n_XLarge</dt>
+    <dd>r5n.xlarge</dd>
+    <dt>R6g_12XLarge</dt>
+    <dd>r6g.12xlarge</dd>
+    <dt>R6g_16XLarge</dt>
+    <dd>r6g.16xlarge</dd>
+    <dt>R6g_2XLarge</dt>
+    <dd>r6g.2xlarge</dd>
+    <dt>R6g_4XLarge</dt>
+    <dd>r6g.4xlarge</dd>
+    <dt>R6g_8XLarge</dt>
+    <dd>r6g.8xlarge</dd>
+    <dt>R6g_Large</dt>
+    <dd>r6g.large</dd>
+    <dt>R6g_Medium</dt>
+    <dd>r6g.medium</dd>
+    <dt>R6g_Metal</dt>
+    <dd>r6g.metal</dd>
+    <dt>R6g_XLarge</dt>
+    <dd>r6g.xlarge</dd>
+    <dt>R6gd_12XLarge</dt>
+    <dd>r6gd.12xlarge</dd>
+    <dt>R6gd_16XLarge</dt>
+    <dd>r6gd.16xlarge</dd>
+    <dt>R6gd_2XLarge</dt>
+    <dd>r6gd.2xlarge</dd>
+    <dt>R6gd_4XLarge</dt>
+    <dd>r6gd.4xlarge</dd>
+    <dt>R6gd_8XLarge</dt>
+    <dd>r6gd.8xlarge</dd>
+    <dt>R6gd_Large</dt>
+    <dd>r6gd.large</dd>
+    <dt>R6gd_Medium</dt>
+    <dd>r6gd.medium</dd>
+    <dt>R6gd_Metal</dt>
+    <dd>r6gd.metal</dd>
+    <dt>R6gd_XLarge</dt>
+    <dd>r6gd.xlarge</dd>
+    <dt>T1_Micro</dt>
+    <dd>t1.micro</dd>
+    <dt>T2_2XLarge</dt>
+    <dd>t2.2xlarge</dd>
+    <dt>T2_Large</dt>
+    <dd>t2.large</dd>
+    <dt>T2_Medium</dt>
+    <dd>t2.medium</dd>
+    <dt>T2_Micro</dt>
+    <dd>t2.micro</dd>
+    <dt>T2_Nano</dt>
+    <dd>t2.nano</dd>
+    <dt>T2_Small</dt>
+    <dd>t2.small</dd>
+    <dt>T2_XLarge</dt>
+    <dd>t2.xlarge</dd>
+    <dt>T3_2XLarge</dt>
+    <dd>t3.2xlarge</dd>
+    <dt>T3_Large</dt>
+    <dd>t3.large</dd>
+    <dt>T3_Medium</dt>
+    <dd>t3.medium</dd>
+    <dt>T3_Micro</dt>
+    <dd>t3.micro</dd>
+    <dt>T3_Nano</dt>
+    <dd>t3.nano</dd>
+    <dt>T3_Small</dt>
+    <dd>t3.small</dd>
+    <dt>T3_XLarge</dt>
+    <dd>t3.xlarge</dd>
+    <dt>T3a_2XLarge</dt>
+    <dd>t3a.2xlarge</dd>
+    <dt>T3a_Large</dt>
+    <dd>t3a.large</dd>
+    <dt>T3a_Medium</dt>
+    <dd>t3a.medium</dd>
+    <dt>T3a_Micro</dt>
+    <dd>t3a.micro</dd>
+    <dt>T3a_Nano</dt>
+    <dd>t3a.nano</dd>
+    <dt>T3a_Small</dt>
+    <dd>t3a.small</dd>
+    <dt>T3a_XLarge</dt>
+    <dd>t3a.xlarge</dd>
+    <dt>T4g_2XLarge</dt>
+    <dd>t4g.2xlarge</dd>
+    <dt>T4g_Large</dt>
+    <dd>t4g.large</dd>
+    <dt>T4g_Medium</dt>
+    <dd>t4g.medium</dd>
+    <dt>T4g_Micro</dt>
+    <dd>t4g.micro</dd>
+    <dt>T4g_Nano</dt>
+    <dd>t4g.nano</dd>
+    <dt>T4g_Small</dt>
+    <dd>t4g.small</dd>
+    <dt>T4g_XLarge</dt>
+    <dd>t4g.xlarge</dd>
+    <dt>X1_16XLarge</dt>
+    <dd>x1.16xlarge</dd>
+    <dt>X1_32XLarge</dt>
+    <dd>x1.32xlarge</dd>
+    <dt>X1e_16XLarge</dt>
+    <dd>x1e.16xlarge</dd>
+    <dt>X1e_2XLarge</dt>
+    <dd>x1e.2xlarge</dd>
+    <dt>X1e_32XLarge</dt>
+    <dd>x1e.32xlarge</dd>
+    <dt>X1e_4XLarge</dt>
+    <dd>x1e.4xlarge</dd>
+    <dt>X1e_8XLarge</dt>
+    <dd>x1e.8xlarge</dd>
+    <dt>X1e_XLarge</dt>
+    <dd>x1e.xlarge</dd>
+    <dt>Z1d_12XLarge</dt>
+    <dd>z1d.12xlarge</dd>
+    <dt>Z1d_2XLarge</dt>
+    <dd>z1d.2xlarge</dd>
+    <dt>Z1d_3XLarge</dt>
+    <dd>z1d.3xlarge</dd>
+    <dt>Z1d_6XLarge</dt>
+    <dd>z1d.6xlarge</dd>
+    <dt>Z1d_Large</dt>
+    <dd>z1d.large</dd>
+    <dt>Z1d_Metal</dt>
+    <dd>z1d.metal</dd>
+    <dt>Z1d_XLarge</dt>
+    <dd>z1d.xlarge</dd>
+    <dt>U_12tb1Metal</dt>
+    <dd>u-12tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>U_6tb1Metal</dt>
+    <dd>u-6tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>U_9tb1Metal</dt>
+    <dd>u-9tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>Hs1_8XLarge</dt>
+    <dd>hs1.8xlarge<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Instance<wbr>Type<wbr>A1_2XLarge</dt>
+    <dd>a1.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>A1_4XLarge</dt>
+    <dd>a1.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>A1_Large</dt>
+    <dd>a1.large</dd>
+    <dt>Instance<wbr>Type<wbr>A1_Medium</dt>
+    <dd>a1.medium</dd>
+    <dt>Instance<wbr>Type<wbr>A1_Metal</dt>
+    <dd>a1.metal</dd>
+    <dt>Instance<wbr>Type<wbr>A1_XLarge</dt>
+    <dd>a1.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C1_Medium</dt>
+    <dd>c1.medium</dd>
+    <dt>Instance<wbr>Type<wbr>C1_XLarge</dt>
+    <dd>c1.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C3_2XLarge</dt>
+    <dd>c3.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C3_4XLarge</dt>
+    <dd>c3.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C3_8XLarge</dt>
+    <dd>c3.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C3_Large</dt>
+    <dd>c3.large</dd>
+    <dt>Instance<wbr>Type<wbr>C3_XLarge</dt>
+    <dd>c3.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C4_2XLarge</dt>
+    <dd>c4.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C4_4XLarge</dt>
+    <dd>c4.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C4_8XLarge</dt>
+    <dd>c4.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C4_Large</dt>
+    <dd>c4.large</dd>
+    <dt>Instance<wbr>Type<wbr>C4_XLarge</dt>
+    <dd>c4.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5_12XLarge</dt>
+    <dd>c5.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5_18XLarge</dt>
+    <dd>c5.18xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5_24XLarge</dt>
+    <dd>c5.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5_2XLarge</dt>
+    <dd>c5.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5_4XLarge</dt>
+    <dd>c5.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5_9XLarge</dt>
+    <dd>c5.9xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5_Large</dt>
+    <dd>c5.large</dd>
+    <dt>Instance<wbr>Type<wbr>C5_Metal</dt>
+    <dd>c5.metal</dd>
+    <dt>Instance<wbr>Type<wbr>C5_XLarge</dt>
+    <dd>c5.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_12XLarge</dt>
+    <dd>c5a.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_16XLarge</dt>
+    <dd>c5a.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_24XLarge</dt>
+    <dd>c5a.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_2XLarge</dt>
+    <dd>c5a.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_4XLarge</dt>
+    <dd>c5a.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_8XLarge</dt>
+    <dd>c5a.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_Large</dt>
+    <dd>c5a.large</dd>
+    <dt>Instance<wbr>Type<wbr>C5a_XLarge</dt>
+    <dd>c5a.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_12XLarge</dt>
+    <dd>c5ad.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_16XLarge</dt>
+    <dd>c5ad.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_24XLarge</dt>
+    <dd>c5ad.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_2XLarge</dt>
+    <dd>c5ad.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_4XLarge</dt>
+    <dd>c5ad.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_8XLarge</dt>
+    <dd>c5ad.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_Large</dt>
+    <dd>c5ad.large</dd>
+    <dt>Instance<wbr>Type<wbr>C5ad_XLarge</dt>
+    <dd>c5ad.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_12XLarge</dt>
+    <dd>c5d.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_18XLarge</dt>
+    <dd>c5d.18xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_24XLarge</dt>
+    <dd>c5d.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_2XLarge</dt>
+    <dd>c5d.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_4XLarge</dt>
+    <dd>c5d.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_9XLarge</dt>
+    <dd>c5d.9xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_Large</dt>
+    <dd>c5d.large</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_Metal</dt>
+    <dd>c5d.metal</dd>
+    <dt>Instance<wbr>Type<wbr>C5d_XLarge</dt>
+    <dd>c5d.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5n_18XLarge</dt>
+    <dd>c5n.18xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5n_2XLarge</dt>
+    <dd>c5n.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5n_4XLarge</dt>
+    <dd>c5n.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5n_9XLarge</dt>
+    <dd>c5n.9xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C5n_Large</dt>
+    <dd>c5n.large</dd>
+    <dt>Instance<wbr>Type<wbr>C5n_Metal</dt>
+    <dd>c5n.metal</dd>
+    <dt>Instance<wbr>Type<wbr>C5n_XLarge</dt>
+    <dd>c5n.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_12XLarge</dt>
+    <dd>c6g.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_16XLarge</dt>
+    <dd>c6g.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_2XLarge</dt>
+    <dd>c6g.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_4XLarge</dt>
+    <dd>c6g.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_8XLarge</dt>
+    <dd>c6g.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_Large</dt>
+    <dd>c6g.large</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_Medium</dt>
+    <dd>c6g.medium</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_Metal</dt>
+    <dd>c6g.metal</dd>
+    <dt>Instance<wbr>Type<wbr>C6g_XLarge</dt>
+    <dd>c6g.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_12XLarge</dt>
+    <dd>c6gd.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_16XLarge</dt>
+    <dd>c6gd.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_2XLarge</dt>
+    <dd>c6gd.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_4XLarge</dt>
+    <dd>c6gd.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_8XLarge</dt>
+    <dd>c6gd.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_Large</dt>
+    <dd>c6gd.large</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_Medium</dt>
+    <dd>c6gd.medium</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_Metal</dt>
+    <dd>c6gd.metal</dd>
+    <dt>Instance<wbr>Type<wbr>C6gd_XLarge</dt>
+    <dd>c6gd.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Cc2_8XLarge</dt>
+    <dd>cc2.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D2_2XLarge</dt>
+    <dd>d2.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D2_4XLarge</dt>
+    <dd>d2.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D2_8XLarge</dt>
+    <dd>d2.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D2_XLarge</dt>
+    <dd>d2.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3_2XLarge</dt>
+    <dd>d3.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3_4XLarge</dt>
+    <dd>d3.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3_8XLarge</dt>
+    <dd>d3.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3_XLarge</dt>
+    <dd>d3.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3en_12XLarge</dt>
+    <dd>d3en.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3en_2XLarge</dt>
+    <dd>d3en.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3en_4XLarge</dt>
+    <dd>d3en.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3en_6XLarge</dt>
+    <dd>d3en.6xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3en_8XLarge</dt>
+    <dd>d3en.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>D3en_XLarge</dt>
+    <dd>d3en.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>F1_16XLarge</dt>
+    <dd>f1.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>F1_2XLarge</dt>
+    <dd>f1.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>F1_4XLarge</dt>
+    <dd>f1.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G2_2XLarge</dt>
+    <dd>g2.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G2_8XLarge</dt>
+    <dd>g2.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G3_16XLarge</dt>
+    <dd>g3.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G3_4XLarge</dt>
+    <dd>g3.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G3_8XLarge</dt>
+    <dd>g3.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G3s_XLarge</dt>
+    <dd>g3s.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4ad_16XLarge</dt>
+    <dd>g4ad.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4ad_4XLarge</dt>
+    <dd>g4ad.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4ad_8XLarge</dt>
+    <dd>g4ad.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4dn_12XLarge</dt>
+    <dd>g4dn.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4dn_16XLarge</dt>
+    <dd>g4dn.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4dn_2XLarge</dt>
+    <dd>g4dn.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4dn_4XLarge</dt>
+    <dd>g4dn.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4dn_8XLarge</dt>
+    <dd>g4dn.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>G4dn_Metal</dt>
+    <dd>g4dn.metal</dd>
+    <dt>Instance<wbr>Type<wbr>G4dn_XLarge</dt>
+    <dd>g4dn.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>H1_16XLarge</dt>
+    <dd>h1.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>H1_2XLarge</dt>
+    <dd>h1.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>H1_4XLarge</dt>
+    <dd>h1.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>H1_8XLarge</dt>
+    <dd>h1.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I2_2XLarge</dt>
+    <dd>i2.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I2_4XLarge</dt>
+    <dd>i2.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I2_8XLarge</dt>
+    <dd>i2.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I2_XLarge</dt>
+    <dd>i2.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3_16XLarge</dt>
+    <dd>i3.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3_2XLarge</dt>
+    <dd>i3.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3_4XLarge</dt>
+    <dd>i3.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3_8XLarge</dt>
+    <dd>i3.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3_Large</dt>
+    <dd>i3.large</dd>
+    <dt>Instance<wbr>Type<wbr>I3_XLarge</dt>
+    <dd>i3.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3_Metal</dt>
+    <dd>i3.metal</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_12XLarge</dt>
+    <dd>i3en.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_24XLarge</dt>
+    <dd>i3en.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_2XLarge</dt>
+    <dd>i3en.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_3XLarge</dt>
+    <dd>i3en.3xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_6XLarge</dt>
+    <dd>i3en.6xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_Large</dt>
+    <dd>i3en.large</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_Metal</dt>
+    <dd>i3en.metal</dd>
+    <dt>Instance<wbr>Type<wbr>I3en_XLarge</dt>
+    <dd>i3en.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Inf1_24XLarge</dt>
+    <dd>inf1.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Inf1_2XLarge</dt>
+    <dd>inf1.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Inf1_6XLarge</dt>
+    <dd>inf1.6xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Inf1_XLarge</dt>
+    <dd>inf1.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M1_Large</dt>
+    <dd>m1.large</dd>
+    <dt>Instance<wbr>Type<wbr>M1_Medium</dt>
+    <dd>m1.medium</dd>
+    <dt>Instance<wbr>Type<wbr>M1_Small</dt>
+    <dd>m1.small</dd>
+    <dt>Instance<wbr>Type<wbr>M1_XLarge</dt>
+    <dd>m1.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M2_2XLarge</dt>
+    <dd>m2.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M2_4XLarge</dt>
+    <dd>m2.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M2_XLarge</dt>
+    <dd>m2.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M3_2XLarge</dt>
+    <dd>m3.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M3_Large</dt>
+    <dd>m3.large</dd>
+    <dt>Instance<wbr>Type<wbr>M3_Medium</dt>
+    <dd>m3.medium</dd>
+    <dt>Instance<wbr>Type<wbr>M3_XLarge</dt>
+    <dd>m3.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M4_10XLarge</dt>
+    <dd>m4.10xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M4_16XLarge</dt>
+    <dd>m4.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M4_2XLarge</dt>
+    <dd>m4.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M4_4XLarge</dt>
+    <dd>m4.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M4_Large</dt>
+    <dd>m4.large</dd>
+    <dt>Instance<wbr>Type<wbr>M4_XLarge</dt>
+    <dd>m4.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5_12XLarge</dt>
+    <dd>m5.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5_16XLarge</dt>
+    <dd>m5.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5_24XLarge</dt>
+    <dd>m5.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5_2XLarge</dt>
+    <dd>m5.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5_4XLarge</dt>
+    <dd>m5.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5_8XLarge</dt>
+    <dd>m5.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5_Large</dt>
+    <dd>m5.large</dd>
+    <dt>Instance<wbr>Type<wbr>M5_Metal</dt>
+    <dd>m5.metal</dd>
+    <dt>Instance<wbr>Type<wbr>M5_XLarge</dt>
+    <dd>m5.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_12XLarge</dt>
+    <dd>m5a.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_16XLarge</dt>
+    <dd>m5a.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_24XLarge</dt>
+    <dd>m5a.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_2XLarge</dt>
+    <dd>m5a.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_4XLarge</dt>
+    <dd>m5a.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_8XLarge</dt>
+    <dd>m5a.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_Large</dt>
+    <dd>m5a.large</dd>
+    <dt>Instance<wbr>Type<wbr>M5a_XLarge</dt>
+    <dd>m5a.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5ad_12XLarge</dt>
+    <dd>m5ad.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5ad_16XLarge</dt>
+    <dd>m5ad.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5ad_24XLarge</dt>
+    <dd>m5ad.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5ad_2XLarge</dt>
+    <dd>m5ad.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5ad_4XLarge</dt>
+    <dd>m5ad.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5ad_8XLarge</dt>
+    <dd>m5ad.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5ad_Large</dt>
+    <dd>m5ad.large</dd>
+    <dt>Instance<wbr>Type<wbr>M5as_XLarge</dt>
+    <dd>m5ad.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_12XLarge</dt>
+    <dd>m5d.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_16XLarge</dt>
+    <dd>m5d.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_24XLarge</dt>
+    <dd>m5d.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_2XLarge</dt>
+    <dd>m5d.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_4XLarge</dt>
+    <dd>m5d.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_8XLarge</dt>
+    <dd>m5d.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_Large</dt>
+    <dd>m5d.large</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_Metal</dt>
+    <dd>m5d.metal</dd>
+    <dt>Instance<wbr>Type<wbr>M5d_XLarge</dt>
+    <dd>m5d.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_12XLarge</dt>
+    <dd>m5dn.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_16XLarge</dt>
+    <dd>m5dn.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_24XLarge</dt>
+    <dd>m5dn.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_2XLarge</dt>
+    <dd>m5dn.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_4XLarge</dt>
+    <dd>m5dn.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_8XLarge</dt>
+    <dd>m5dn.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_Large</dt>
+    <dd>m5dn.large</dd>
+    <dt>Instance<wbr>Type<wbr>M5dn_XLarge</dt>
+    <dd>m5dn.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_12XLarge</dt>
+    <dd>m5n.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_16XLarge</dt>
+    <dd>m5n.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_24XLarge</dt>
+    <dd>m5n.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_2XLarge</dt>
+    <dd>m5n.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_4XLarge</dt>
+    <dd>m5n.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_8XLarge</dt>
+    <dd>m5n.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_Large</dt>
+    <dd>m5n.large</dd>
+    <dt>Instance<wbr>Type<wbr>M5n_XLarge</dt>
+    <dd>m5n.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5zn_12XLarge</dt>
+    <dd>m5zn.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5zn_2XLarge</dt>
+    <dd>m5zn.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5zn_3XLarge</dt>
+    <dd>m5zn.3xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5zn_6XLarge</dt>
+    <dd>m5zn.6xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M5zn_Large</dt>
+    <dd>m5zn.large</dd>
+    <dt>Instance<wbr>Type<wbr>M5zn_Metal</dt>
+    <dd>m5zn.metal</dd>
+    <dt>Instance<wbr>Type<wbr>M5zn_XLarge</dt>
+    <dd>m5zn.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_12XLarge</dt>
+    <dd>m6g.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_16XLarge</dt>
+    <dd>m6g.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_2XLarge</dt>
+    <dd>m6g.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_4XLarge</dt>
+    <dd>m6g.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_8XLarge</dt>
+    <dd>m6g.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_Large</dt>
+    <dd>m6g.large</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_Medium</dt>
+    <dd>m6g.medium</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_Metal</dt>
+    <dd>m6g.metal</dd>
+    <dt>Instance<wbr>Type<wbr>M6g_XLarge</dt>
+    <dd>m6g.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_12XLarge</dt>
+    <dd>m6gd.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_16XLarge</dt>
+    <dd>m6gd.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_2XLarge</dt>
+    <dd>m6gd.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_4XLarge</dt>
+    <dd>m6gd.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_8XLarge</dt>
+    <dd>m6gd.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_Large</dt>
+    <dd>m6gd.large</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_Medium</dt>
+    <dd>m6gd.medium</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_Metal</dt>
+    <dd>m6gd.metal</dd>
+    <dt>Instance<wbr>Type<wbr>M6gd_XLarge</dt>
+    <dd>m6gd.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Mac1_Metal</dt>
+    <dd>mac1.metal</dd>
+    <dt>Instance<wbr>Type<wbr>P2_16XLarge</dt>
+    <dd>p2.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>P2_8XLarge</dt>
+    <dd>p2.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>P2_XLarge</dt>
+    <dd>p2.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>P3_16XLarge</dt>
+    <dd>p3.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>P3_2XLarge</dt>
+    <dd>p3.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>P3_8XLarge</dt>
+    <dd>p3.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>P3dn_24XLarge</dt>
+    <dd>p3dn.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>P4d_24XLarge</dt>
+    <dd>p4d.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R3_2XLarge</dt>
+    <dd>r3.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R3_4XLarge</dt>
+    <dd>r3.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R3_8XLarge</dt>
+    <dd>r3.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R3_Large</dt>
+    <dd>r3.large</dd>
+    <dt>Instance<wbr>Type<wbr>R3_XLarge</dt>
+    <dd>r3.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R4_16XLarge</dt>
+    <dd>r4.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R4_2XLarge</dt>
+    <dd>r4.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R4_4XLarge</dt>
+    <dd>r4.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R4_8XLarge</dt>
+    <dd>r4.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R4_Large</dt>
+    <dd>r4.large</dd>
+    <dt>Instance<wbr>Type<wbr>R4_XLarge</dt>
+    <dd>r4.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5_12XLarge</dt>
+    <dd>r5.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5_16XLarge</dt>
+    <dd>r5.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5_24XLarge</dt>
+    <dd>r5.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5_2XLarge</dt>
+    <dd>r5.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5_4XLarge</dt>
+    <dd>r5.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5_8XLarge</dt>
+    <dd>r5.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5_Large</dt>
+    <dd>r5.large</dd>
+    <dt>Instance<wbr>Type<wbr>R5_Metal</dt>
+    <dd>r5.metal</dd>
+    <dt>Instance<wbr>Type<wbr>R5_XLarge</dt>
+    <dd>r5.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_12XLarge</dt>
+    <dd>r5a.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_16XLarge</dt>
+    <dd>r5a.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_24XLarge</dt>
+    <dd>r5a.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_2XLarge</dt>
+    <dd>r5a.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_4XLarge</dt>
+    <dd>r5a.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_8XLarge</dt>
+    <dd>r5a.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_Large</dt>
+    <dd>r5a.large</dd>
+    <dt>Instance<wbr>Type<wbr>R5a_XLarge</dt>
+    <dd>r5a.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_12XLarge</dt>
+    <dd>r5ad.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_16XLarge</dt>
+    <dd>r5ad.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_24XLarge</dt>
+    <dd>r5ad.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_2XLarge</dt>
+    <dd>r5ad.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_4XLarge</dt>
+    <dd>r5ad.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_8XLarge</dt>
+    <dd>r5ad.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_Large</dt>
+    <dd>r5ad.large</dd>
+    <dt>Instance<wbr>Type<wbr>R5ad_XLarge</dt>
+    <dd>r5ad.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_12XLarge</dt>
+    <dd>r5b.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_16XLarge</dt>
+    <dd>r5b.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_24XLarge</dt>
+    <dd>r5b.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_2XLarge</dt>
+    <dd>r5b.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_4XLarge</dt>
+    <dd>r5b.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_8XLarge</dt>
+    <dd>r5b.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_Large</dt>
+    <dd>r5b.large</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_Metal</dt>
+    <dd>r5b.metal</dd>
+    <dt>Instance<wbr>Type<wbr>R5b_XLarge</dt>
+    <dd>r5b.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_12XLarge</dt>
+    <dd>r5d.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_16XLarge</dt>
+    <dd>r5d.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_24XLarge</dt>
+    <dd>r5d.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_2XLarge</dt>
+    <dd>r5d.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_4XLarge</dt>
+    <dd>r5d.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_8XLarge</dt>
+    <dd>r5d.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_Large</dt>
+    <dd>r5d.large</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_Metal</dt>
+    <dd>r5d.metal</dd>
+    <dt>Instance<wbr>Type<wbr>R5d_XLarge</dt>
+    <dd>r5d.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_12XLarge</dt>
+    <dd>r5dn.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_16XLarge</dt>
+    <dd>r5dn.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_24XLarge</dt>
+    <dd>r5dn.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_2XLarge</dt>
+    <dd>r5dn.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_4XLarge</dt>
+    <dd>r5dn.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_8XLarge</dt>
+    <dd>r5dn.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_Large</dt>
+    <dd>r5dn.large</dd>
+    <dt>Instance<wbr>Type<wbr>R5dn_XLarge</dt>
+    <dd>r5dn.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_12XLarge</dt>
+    <dd>r5n.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_16XLarge</dt>
+    <dd>r5n.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_24XLarge</dt>
+    <dd>r5n.24xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_2XLarge</dt>
+    <dd>r5n.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_4XLarge</dt>
+    <dd>r5n.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_8XLarge</dt>
+    <dd>r5n.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_Large</dt>
+    <dd>r5n.large</dd>
+    <dt>Instance<wbr>Type<wbr>R5n_XLarge</dt>
+    <dd>r5n.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_12XLarge</dt>
+    <dd>r6g.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_16XLarge</dt>
+    <dd>r6g.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_2XLarge</dt>
+    <dd>r6g.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_4XLarge</dt>
+    <dd>r6g.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_8XLarge</dt>
+    <dd>r6g.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_Large</dt>
+    <dd>r6g.large</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_Medium</dt>
+    <dd>r6g.medium</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_Metal</dt>
+    <dd>r6g.metal</dd>
+    <dt>Instance<wbr>Type<wbr>R6g_XLarge</dt>
+    <dd>r6g.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_12XLarge</dt>
+    <dd>r6gd.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_16XLarge</dt>
+    <dd>r6gd.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_2XLarge</dt>
+    <dd>r6gd.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_4XLarge</dt>
+    <dd>r6gd.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_8XLarge</dt>
+    <dd>r6gd.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_Large</dt>
+    <dd>r6gd.large</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_Medium</dt>
+    <dd>r6gd.medium</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_Metal</dt>
+    <dd>r6gd.metal</dd>
+    <dt>Instance<wbr>Type<wbr>R6gd_XLarge</dt>
+    <dd>r6gd.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T1_Micro</dt>
+    <dd>t1.micro</dd>
+    <dt>Instance<wbr>Type<wbr>T2_2XLarge</dt>
+    <dd>t2.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T2_Large</dt>
+    <dd>t2.large</dd>
+    <dt>Instance<wbr>Type<wbr>T2_Medium</dt>
+    <dd>t2.medium</dd>
+    <dt>Instance<wbr>Type<wbr>T2_Micro</dt>
+    <dd>t2.micro</dd>
+    <dt>Instance<wbr>Type<wbr>T2_Nano</dt>
+    <dd>t2.nano</dd>
+    <dt>Instance<wbr>Type<wbr>T2_Small</dt>
+    <dd>t2.small</dd>
+    <dt>Instance<wbr>Type<wbr>T2_XLarge</dt>
+    <dd>t2.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T3_2XLarge</dt>
+    <dd>t3.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T3_Large</dt>
+    <dd>t3.large</dd>
+    <dt>Instance<wbr>Type<wbr>T3_Medium</dt>
+    <dd>t3.medium</dd>
+    <dt>Instance<wbr>Type<wbr>T3_Micro</dt>
+    <dd>t3.micro</dd>
+    <dt>Instance<wbr>Type<wbr>T3_Nano</dt>
+    <dd>t3.nano</dd>
+    <dt>Instance<wbr>Type<wbr>T3_Small</dt>
+    <dd>t3.small</dd>
+    <dt>Instance<wbr>Type<wbr>T3_XLarge</dt>
+    <dd>t3.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T3a_2XLarge</dt>
+    <dd>t3a.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T3a_Large</dt>
+    <dd>t3a.large</dd>
+    <dt>Instance<wbr>Type<wbr>T3a_Medium</dt>
+    <dd>t3a.medium</dd>
+    <dt>Instance<wbr>Type<wbr>T3a_Micro</dt>
+    <dd>t3a.micro</dd>
+    <dt>Instance<wbr>Type<wbr>T3a_Nano</dt>
+    <dd>t3a.nano</dd>
+    <dt>Instance<wbr>Type<wbr>T3a_Small</dt>
+    <dd>t3a.small</dd>
+    <dt>Instance<wbr>Type<wbr>T3a_XLarge</dt>
+    <dd>t3a.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T4g_2XLarge</dt>
+    <dd>t4g.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>T4g_Large</dt>
+    <dd>t4g.large</dd>
+    <dt>Instance<wbr>Type<wbr>T4g_Medium</dt>
+    <dd>t4g.medium</dd>
+    <dt>Instance<wbr>Type<wbr>T4g_Micro</dt>
+    <dd>t4g.micro</dd>
+    <dt>Instance<wbr>Type<wbr>T4g_Nano</dt>
+    <dd>t4g.nano</dd>
+    <dt>Instance<wbr>Type<wbr>T4g_Small</dt>
+    <dd>t4g.small</dd>
+    <dt>Instance<wbr>Type<wbr>T4g_XLarge</dt>
+    <dd>t4g.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1_16XLarge</dt>
+    <dd>x1.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1_32XLarge</dt>
+    <dd>x1.32xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1e_16XLarge</dt>
+    <dd>x1e.16xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1e_2XLarge</dt>
+    <dd>x1e.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1e_32XLarge</dt>
+    <dd>x1e.32xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1e_4XLarge</dt>
+    <dd>x1e.4xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1e_8XLarge</dt>
+    <dd>x1e.8xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>X1e_XLarge</dt>
+    <dd>x1e.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Z1d_12XLarge</dt>
+    <dd>z1d.12xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Z1d_2XLarge</dt>
+    <dd>z1d.2xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Z1d_3XLarge</dt>
+    <dd>z1d.3xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Z1d_6XLarge</dt>
+    <dd>z1d.6xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>Z1d_Large</dt>
+    <dd>z1d.large</dd>
+    <dt>Instance<wbr>Type<wbr>Z1d_Metal</dt>
+    <dd>z1d.metal</dd>
+    <dt>Instance<wbr>Type<wbr>Z1d_XLarge</dt>
+    <dd>z1d.xlarge</dd>
+    <dt>Instance<wbr>Type<wbr>U_12tb1Metal</dt>
+    <dd>u-12tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>Instance<wbr>Type<wbr>U_6tb1Metal</dt>
+    <dd>u-6tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>Instance<wbr>Type<wbr>U_9tb1Metal</dt>
+    <dd>u-9tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>Instance<wbr>Type<wbr>Hs1_8XLarge</dt>
+    <dd>hs1.8xlarge<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>A1_2XLarge</dt>
+    <dd>a1.2xlarge</dd>
+    <dt>A1_4XLarge</dt>
+    <dd>a1.4xlarge</dd>
+    <dt>A1_Large</dt>
+    <dd>a1.large</dd>
+    <dt>A1_Medium</dt>
+    <dd>a1.medium</dd>
+    <dt>A1_Metal</dt>
+    <dd>a1.metal</dd>
+    <dt>A1_XLarge</dt>
+    <dd>a1.xlarge</dd>
+    <dt>C1_Medium</dt>
+    <dd>c1.medium</dd>
+    <dt>C1_XLarge</dt>
+    <dd>c1.xlarge</dd>
+    <dt>C3_2XLarge</dt>
+    <dd>c3.2xlarge</dd>
+    <dt>C3_4XLarge</dt>
+    <dd>c3.4xlarge</dd>
+    <dt>C3_8XLarge</dt>
+    <dd>c3.8xlarge</dd>
+    <dt>C3_Large</dt>
+    <dd>c3.large</dd>
+    <dt>C3_XLarge</dt>
+    <dd>c3.xlarge</dd>
+    <dt>C4_2XLarge</dt>
+    <dd>c4.2xlarge</dd>
+    <dt>C4_4XLarge</dt>
+    <dd>c4.4xlarge</dd>
+    <dt>C4_8XLarge</dt>
+    <dd>c4.8xlarge</dd>
+    <dt>C4_Large</dt>
+    <dd>c4.large</dd>
+    <dt>C4_XLarge</dt>
+    <dd>c4.xlarge</dd>
+    <dt>C5_12XLarge</dt>
+    <dd>c5.12xlarge</dd>
+    <dt>C5_18XLarge</dt>
+    <dd>c5.18xlarge</dd>
+    <dt>C5_24XLarge</dt>
+    <dd>c5.24xlarge</dd>
+    <dt>C5_2XLarge</dt>
+    <dd>c5.2xlarge</dd>
+    <dt>C5_4XLarge</dt>
+    <dd>c5.4xlarge</dd>
+    <dt>C5_9XLarge</dt>
+    <dd>c5.9xlarge</dd>
+    <dt>C5_Large</dt>
+    <dd>c5.large</dd>
+    <dt>C5_Metal</dt>
+    <dd>c5.metal</dd>
+    <dt>C5_XLarge</dt>
+    <dd>c5.xlarge</dd>
+    <dt>C5a_12XLarge</dt>
+    <dd>c5a.12xlarge</dd>
+    <dt>C5a_16XLarge</dt>
+    <dd>c5a.16xlarge</dd>
+    <dt>C5a_24XLarge</dt>
+    <dd>c5a.24xlarge</dd>
+    <dt>C5a_2XLarge</dt>
+    <dd>c5a.2xlarge</dd>
+    <dt>C5a_4XLarge</dt>
+    <dd>c5a.4xlarge</dd>
+    <dt>C5a_8XLarge</dt>
+    <dd>c5a.8xlarge</dd>
+    <dt>C5a_Large</dt>
+    <dd>c5a.large</dd>
+    <dt>C5a_XLarge</dt>
+    <dd>c5a.xlarge</dd>
+    <dt>C5ad_12XLarge</dt>
+    <dd>c5ad.12xlarge</dd>
+    <dt>C5ad_16XLarge</dt>
+    <dd>c5ad.16xlarge</dd>
+    <dt>C5ad_24XLarge</dt>
+    <dd>c5ad.24xlarge</dd>
+    <dt>C5ad_2XLarge</dt>
+    <dd>c5ad.2xlarge</dd>
+    <dt>C5ad_4XLarge</dt>
+    <dd>c5ad.4xlarge</dd>
+    <dt>C5ad_8XLarge</dt>
+    <dd>c5ad.8xlarge</dd>
+    <dt>C5ad_Large</dt>
+    <dd>c5ad.large</dd>
+    <dt>C5ad_XLarge</dt>
+    <dd>c5ad.xlarge</dd>
+    <dt>C5d_12XLarge</dt>
+    <dd>c5d.12xlarge</dd>
+    <dt>C5d_18XLarge</dt>
+    <dd>c5d.18xlarge</dd>
+    <dt>C5d_24XLarge</dt>
+    <dd>c5d.24xlarge</dd>
+    <dt>C5d_2XLarge</dt>
+    <dd>c5d.2xlarge</dd>
+    <dt>C5d_4XLarge</dt>
+    <dd>c5d.4xlarge</dd>
+    <dt>C5d_9XLarge</dt>
+    <dd>c5d.9xlarge</dd>
+    <dt>C5d_Large</dt>
+    <dd>c5d.large</dd>
+    <dt>C5d_Metal</dt>
+    <dd>c5d.metal</dd>
+    <dt>C5d_XLarge</dt>
+    <dd>c5d.xlarge</dd>
+    <dt>C5n_18XLarge</dt>
+    <dd>c5n.18xlarge</dd>
+    <dt>C5n_2XLarge</dt>
+    <dd>c5n.2xlarge</dd>
+    <dt>C5n_4XLarge</dt>
+    <dd>c5n.4xlarge</dd>
+    <dt>C5n_9XLarge</dt>
+    <dd>c5n.9xlarge</dd>
+    <dt>C5n_Large</dt>
+    <dd>c5n.large</dd>
+    <dt>C5n_Metal</dt>
+    <dd>c5n.metal</dd>
+    <dt>C5n_XLarge</dt>
+    <dd>c5n.xlarge</dd>
+    <dt>C6g_12XLarge</dt>
+    <dd>c6g.12xlarge</dd>
+    <dt>C6g_16XLarge</dt>
+    <dd>c6g.16xlarge</dd>
+    <dt>C6g_2XLarge</dt>
+    <dd>c6g.2xlarge</dd>
+    <dt>C6g_4XLarge</dt>
+    <dd>c6g.4xlarge</dd>
+    <dt>C6g_8XLarge</dt>
+    <dd>c6g.8xlarge</dd>
+    <dt>C6g_Large</dt>
+    <dd>c6g.large</dd>
+    <dt>C6g_Medium</dt>
+    <dd>c6g.medium</dd>
+    <dt>C6g_Metal</dt>
+    <dd>c6g.metal</dd>
+    <dt>C6g_XLarge</dt>
+    <dd>c6g.xlarge</dd>
+    <dt>C6gd_12XLarge</dt>
+    <dd>c6gd.12xlarge</dd>
+    <dt>C6gd_16XLarge</dt>
+    <dd>c6gd.16xlarge</dd>
+    <dt>C6gd_2XLarge</dt>
+    <dd>c6gd.2xlarge</dd>
+    <dt>C6gd_4XLarge</dt>
+    <dd>c6gd.4xlarge</dd>
+    <dt>C6gd_8XLarge</dt>
+    <dd>c6gd.8xlarge</dd>
+    <dt>C6gd_Large</dt>
+    <dd>c6gd.large</dd>
+    <dt>C6gd_Medium</dt>
+    <dd>c6gd.medium</dd>
+    <dt>C6gd_Metal</dt>
+    <dd>c6gd.metal</dd>
+    <dt>C6gd_XLarge</dt>
+    <dd>c6gd.xlarge</dd>
+    <dt>Cc2_8XLarge</dt>
+    <dd>cc2.8xlarge</dd>
+    <dt>D2_2XLarge</dt>
+    <dd>d2.2xlarge</dd>
+    <dt>D2_4XLarge</dt>
+    <dd>d2.4xlarge</dd>
+    <dt>D2_8XLarge</dt>
+    <dd>d2.8xlarge</dd>
+    <dt>D2_XLarge</dt>
+    <dd>d2.xlarge</dd>
+    <dt>D3_2XLarge</dt>
+    <dd>d3.2xlarge</dd>
+    <dt>D3_4XLarge</dt>
+    <dd>d3.4xlarge</dd>
+    <dt>D3_8XLarge</dt>
+    <dd>d3.8xlarge</dd>
+    <dt>D3_XLarge</dt>
+    <dd>d3.xlarge</dd>
+    <dt>D3en_12XLarge</dt>
+    <dd>d3en.12xlarge</dd>
+    <dt>D3en_2XLarge</dt>
+    <dd>d3en.2xlarge</dd>
+    <dt>D3en_4XLarge</dt>
+    <dd>d3en.4xlarge</dd>
+    <dt>D3en_6XLarge</dt>
+    <dd>d3en.6xlarge</dd>
+    <dt>D3en_8XLarge</dt>
+    <dd>d3en.8xlarge</dd>
+    <dt>D3en_XLarge</dt>
+    <dd>d3en.xlarge</dd>
+    <dt>F1_16XLarge</dt>
+    <dd>f1.16xlarge</dd>
+    <dt>F1_2XLarge</dt>
+    <dd>f1.2xlarge</dd>
+    <dt>F1_4XLarge</dt>
+    <dd>f1.4xlarge</dd>
+    <dt>G2_2XLarge</dt>
+    <dd>g2.2xlarge</dd>
+    <dt>G2_8XLarge</dt>
+    <dd>g2.8xlarge</dd>
+    <dt>G3_16XLarge</dt>
+    <dd>g3.16xlarge</dd>
+    <dt>G3_4XLarge</dt>
+    <dd>g3.4xlarge</dd>
+    <dt>G3_8XLarge</dt>
+    <dd>g3.8xlarge</dd>
+    <dt>G3s_XLarge</dt>
+    <dd>g3s.xlarge</dd>
+    <dt>G4ad_16XLarge</dt>
+    <dd>g4ad.16xlarge</dd>
+    <dt>G4ad_4XLarge</dt>
+    <dd>g4ad.4xlarge</dd>
+    <dt>G4ad_8XLarge</dt>
+    <dd>g4ad.8xlarge</dd>
+    <dt>G4dn_12XLarge</dt>
+    <dd>g4dn.12xlarge</dd>
+    <dt>G4dn_16XLarge</dt>
+    <dd>g4dn.16xlarge</dd>
+    <dt>G4dn_2XLarge</dt>
+    <dd>g4dn.2xlarge</dd>
+    <dt>G4dn_4XLarge</dt>
+    <dd>g4dn.4xlarge</dd>
+    <dt>G4dn_8XLarge</dt>
+    <dd>g4dn.8xlarge</dd>
+    <dt>G4dn_Metal</dt>
+    <dd>g4dn.metal</dd>
+    <dt>G4dn_XLarge</dt>
+    <dd>g4dn.xlarge</dd>
+    <dt>H1_16XLarge</dt>
+    <dd>h1.16xlarge</dd>
+    <dt>H1_2XLarge</dt>
+    <dd>h1.2xlarge</dd>
+    <dt>H1_4XLarge</dt>
+    <dd>h1.4xlarge</dd>
+    <dt>H1_8XLarge</dt>
+    <dd>h1.8xlarge</dd>
+    <dt>I2_2XLarge</dt>
+    <dd>i2.2xlarge</dd>
+    <dt>I2_4XLarge</dt>
+    <dd>i2.4xlarge</dd>
+    <dt>I2_8XLarge</dt>
+    <dd>i2.8xlarge</dd>
+    <dt>I2_XLarge</dt>
+    <dd>i2.xlarge</dd>
+    <dt>I3_16XLarge</dt>
+    <dd>i3.16xlarge</dd>
+    <dt>I3_2XLarge</dt>
+    <dd>i3.2xlarge</dd>
+    <dt>I3_4XLarge</dt>
+    <dd>i3.4xlarge</dd>
+    <dt>I3_8XLarge</dt>
+    <dd>i3.8xlarge</dd>
+    <dt>I3_Large</dt>
+    <dd>i3.large</dd>
+    <dt>I3_XLarge</dt>
+    <dd>i3.xlarge</dd>
+    <dt>I3_Metal</dt>
+    <dd>i3.metal</dd>
+    <dt>I3en_12XLarge</dt>
+    <dd>i3en.12xlarge</dd>
+    <dt>I3en_24XLarge</dt>
+    <dd>i3en.24xlarge</dd>
+    <dt>I3en_2XLarge</dt>
+    <dd>i3en.2xlarge</dd>
+    <dt>I3en_3XLarge</dt>
+    <dd>i3en.3xlarge</dd>
+    <dt>I3en_6XLarge</dt>
+    <dd>i3en.6xlarge</dd>
+    <dt>I3en_Large</dt>
+    <dd>i3en.large</dd>
+    <dt>I3en_Metal</dt>
+    <dd>i3en.metal</dd>
+    <dt>I3en_XLarge</dt>
+    <dd>i3en.xlarge</dd>
+    <dt>Inf1_24XLarge</dt>
+    <dd>inf1.24xlarge</dd>
+    <dt>Inf1_2XLarge</dt>
+    <dd>inf1.2xlarge</dd>
+    <dt>Inf1_6XLarge</dt>
+    <dd>inf1.6xlarge</dd>
+    <dt>Inf1_XLarge</dt>
+    <dd>inf1.xlarge</dd>
+    <dt>M1_Large</dt>
+    <dd>m1.large</dd>
+    <dt>M1_Medium</dt>
+    <dd>m1.medium</dd>
+    <dt>M1_Small</dt>
+    <dd>m1.small</dd>
+    <dt>M1_XLarge</dt>
+    <dd>m1.xlarge</dd>
+    <dt>M2_2XLarge</dt>
+    <dd>m2.2xlarge</dd>
+    <dt>M2_4XLarge</dt>
+    <dd>m2.4xlarge</dd>
+    <dt>M2_XLarge</dt>
+    <dd>m2.xlarge</dd>
+    <dt>M3_2XLarge</dt>
+    <dd>m3.2xlarge</dd>
+    <dt>M3_Large</dt>
+    <dd>m3.large</dd>
+    <dt>M3_Medium</dt>
+    <dd>m3.medium</dd>
+    <dt>M3_XLarge</dt>
+    <dd>m3.xlarge</dd>
+    <dt>M4_10XLarge</dt>
+    <dd>m4.10xlarge</dd>
+    <dt>M4_16XLarge</dt>
+    <dd>m4.16xlarge</dd>
+    <dt>M4_2XLarge</dt>
+    <dd>m4.2xlarge</dd>
+    <dt>M4_4XLarge</dt>
+    <dd>m4.4xlarge</dd>
+    <dt>M4_Large</dt>
+    <dd>m4.large</dd>
+    <dt>M4_XLarge</dt>
+    <dd>m4.xlarge</dd>
+    <dt>M5_12XLarge</dt>
+    <dd>m5.12xlarge</dd>
+    <dt>M5_16XLarge</dt>
+    <dd>m5.16xlarge</dd>
+    <dt>M5_24XLarge</dt>
+    <dd>m5.24xlarge</dd>
+    <dt>M5_2XLarge</dt>
+    <dd>m5.2xlarge</dd>
+    <dt>M5_4XLarge</dt>
+    <dd>m5.4xlarge</dd>
+    <dt>M5_8XLarge</dt>
+    <dd>m5.8xlarge</dd>
+    <dt>M5_Large</dt>
+    <dd>m5.large</dd>
+    <dt>M5_Metal</dt>
+    <dd>m5.metal</dd>
+    <dt>M5_XLarge</dt>
+    <dd>m5.xlarge</dd>
+    <dt>M5a_12XLarge</dt>
+    <dd>m5a.12xlarge</dd>
+    <dt>M5a_16XLarge</dt>
+    <dd>m5a.16xlarge</dd>
+    <dt>M5a_24XLarge</dt>
+    <dd>m5a.24xlarge</dd>
+    <dt>M5a_2XLarge</dt>
+    <dd>m5a.2xlarge</dd>
+    <dt>M5a_4XLarge</dt>
+    <dd>m5a.4xlarge</dd>
+    <dt>M5a_8XLarge</dt>
+    <dd>m5a.8xlarge</dd>
+    <dt>M5a_Large</dt>
+    <dd>m5a.large</dd>
+    <dt>M5a_XLarge</dt>
+    <dd>m5a.xlarge</dd>
+    <dt>M5ad_12XLarge</dt>
+    <dd>m5ad.12xlarge</dd>
+    <dt>M5ad_16XLarge</dt>
+    <dd>m5ad.16xlarge</dd>
+    <dt>M5ad_24XLarge</dt>
+    <dd>m5ad.24xlarge</dd>
+    <dt>M5ad_2XLarge</dt>
+    <dd>m5ad.2xlarge</dd>
+    <dt>M5ad_4XLarge</dt>
+    <dd>m5ad.4xlarge</dd>
+    <dt>M5ad_8XLarge</dt>
+    <dd>m5ad.8xlarge</dd>
+    <dt>M5ad_Large</dt>
+    <dd>m5ad.large</dd>
+    <dt>M5as_XLarge</dt>
+    <dd>m5ad.xlarge</dd>
+    <dt>M5d_12XLarge</dt>
+    <dd>m5d.12xlarge</dd>
+    <dt>M5d_16XLarge</dt>
+    <dd>m5d.16xlarge</dd>
+    <dt>M5d_24XLarge</dt>
+    <dd>m5d.24xlarge</dd>
+    <dt>M5d_2XLarge</dt>
+    <dd>m5d.2xlarge</dd>
+    <dt>M5d_4XLarge</dt>
+    <dd>m5d.4xlarge</dd>
+    <dt>M5d_8XLarge</dt>
+    <dd>m5d.8xlarge</dd>
+    <dt>M5d_Large</dt>
+    <dd>m5d.large</dd>
+    <dt>M5d_Metal</dt>
+    <dd>m5d.metal</dd>
+    <dt>M5d_XLarge</dt>
+    <dd>m5d.xlarge</dd>
+    <dt>M5dn_12XLarge</dt>
+    <dd>m5dn.12xlarge</dd>
+    <dt>M5dn_16XLarge</dt>
+    <dd>m5dn.16xlarge</dd>
+    <dt>M5dn_24XLarge</dt>
+    <dd>m5dn.24xlarge</dd>
+    <dt>M5dn_2XLarge</dt>
+    <dd>m5dn.2xlarge</dd>
+    <dt>M5dn_4XLarge</dt>
+    <dd>m5dn.4xlarge</dd>
+    <dt>M5dn_8XLarge</dt>
+    <dd>m5dn.8xlarge</dd>
+    <dt>M5dn_Large</dt>
+    <dd>m5dn.large</dd>
+    <dt>M5dn_XLarge</dt>
+    <dd>m5dn.xlarge</dd>
+    <dt>M5n_12XLarge</dt>
+    <dd>m5n.12xlarge</dd>
+    <dt>M5n_16XLarge</dt>
+    <dd>m5n.16xlarge</dd>
+    <dt>M5n_24XLarge</dt>
+    <dd>m5n.24xlarge</dd>
+    <dt>M5n_2XLarge</dt>
+    <dd>m5n.2xlarge</dd>
+    <dt>M5n_4XLarge</dt>
+    <dd>m5n.4xlarge</dd>
+    <dt>M5n_8XLarge</dt>
+    <dd>m5n.8xlarge</dd>
+    <dt>M5n_Large</dt>
+    <dd>m5n.large</dd>
+    <dt>M5n_XLarge</dt>
+    <dd>m5n.xlarge</dd>
+    <dt>M5zn_12XLarge</dt>
+    <dd>m5zn.12xlarge</dd>
+    <dt>M5zn_2XLarge</dt>
+    <dd>m5zn.2xlarge</dd>
+    <dt>M5zn_3XLarge</dt>
+    <dd>m5zn.3xlarge</dd>
+    <dt>M5zn_6XLarge</dt>
+    <dd>m5zn.6xlarge</dd>
+    <dt>M5zn_Large</dt>
+    <dd>m5zn.large</dd>
+    <dt>M5zn_Metal</dt>
+    <dd>m5zn.metal</dd>
+    <dt>M5zn_XLarge</dt>
+    <dd>m5zn.xlarge</dd>
+    <dt>M6g_12XLarge</dt>
+    <dd>m6g.12xlarge</dd>
+    <dt>M6g_16XLarge</dt>
+    <dd>m6g.16xlarge</dd>
+    <dt>M6g_2XLarge</dt>
+    <dd>m6g.2xlarge</dd>
+    <dt>M6g_4XLarge</dt>
+    <dd>m6g.4xlarge</dd>
+    <dt>M6g_8XLarge</dt>
+    <dd>m6g.8xlarge</dd>
+    <dt>M6g_Large</dt>
+    <dd>m6g.large</dd>
+    <dt>M6g_Medium</dt>
+    <dd>m6g.medium</dd>
+    <dt>M6g_Metal</dt>
+    <dd>m6g.metal</dd>
+    <dt>M6g_XLarge</dt>
+    <dd>m6g.xlarge</dd>
+    <dt>M6gd_12XLarge</dt>
+    <dd>m6gd.12xlarge</dd>
+    <dt>M6gd_16XLarge</dt>
+    <dd>m6gd.16xlarge</dd>
+    <dt>M6gd_2XLarge</dt>
+    <dd>m6gd.2xlarge</dd>
+    <dt>M6gd_4XLarge</dt>
+    <dd>m6gd.4xlarge</dd>
+    <dt>M6gd_8XLarge</dt>
+    <dd>m6gd.8xlarge</dd>
+    <dt>M6gd_Large</dt>
+    <dd>m6gd.large</dd>
+    <dt>M6gd_Medium</dt>
+    <dd>m6gd.medium</dd>
+    <dt>M6gd_Metal</dt>
+    <dd>m6gd.metal</dd>
+    <dt>M6gd_XLarge</dt>
+    <dd>m6gd.xlarge</dd>
+    <dt>Mac1_Metal</dt>
+    <dd>mac1.metal</dd>
+    <dt>P2_16XLarge</dt>
+    <dd>p2.16xlarge</dd>
+    <dt>P2_8XLarge</dt>
+    <dd>p2.8xlarge</dd>
+    <dt>P2_XLarge</dt>
+    <dd>p2.xlarge</dd>
+    <dt>P3_16XLarge</dt>
+    <dd>p3.16xlarge</dd>
+    <dt>P3_2XLarge</dt>
+    <dd>p3.2xlarge</dd>
+    <dt>P3_8XLarge</dt>
+    <dd>p3.8xlarge</dd>
+    <dt>P3dn_24XLarge</dt>
+    <dd>p3dn.24xlarge</dd>
+    <dt>P4d_24XLarge</dt>
+    <dd>p4d.24xlarge</dd>
+    <dt>R3_2XLarge</dt>
+    <dd>r3.2xlarge</dd>
+    <dt>R3_4XLarge</dt>
+    <dd>r3.4xlarge</dd>
+    <dt>R3_8XLarge</dt>
+    <dd>r3.8xlarge</dd>
+    <dt>R3_Large</dt>
+    <dd>r3.large</dd>
+    <dt>R3_XLarge</dt>
+    <dd>r3.xlarge</dd>
+    <dt>R4_16XLarge</dt>
+    <dd>r4.16xlarge</dd>
+    <dt>R4_2XLarge</dt>
+    <dd>r4.2xlarge</dd>
+    <dt>R4_4XLarge</dt>
+    <dd>r4.4xlarge</dd>
+    <dt>R4_8XLarge</dt>
+    <dd>r4.8xlarge</dd>
+    <dt>R4_Large</dt>
+    <dd>r4.large</dd>
+    <dt>R4_XLarge</dt>
+    <dd>r4.xlarge</dd>
+    <dt>R5_12XLarge</dt>
+    <dd>r5.12xlarge</dd>
+    <dt>R5_16XLarge</dt>
+    <dd>r5.16xlarge</dd>
+    <dt>R5_24XLarge</dt>
+    <dd>r5.24xlarge</dd>
+    <dt>R5_2XLarge</dt>
+    <dd>r5.2xlarge</dd>
+    <dt>R5_4XLarge</dt>
+    <dd>r5.4xlarge</dd>
+    <dt>R5_8XLarge</dt>
+    <dd>r5.8xlarge</dd>
+    <dt>R5_Large</dt>
+    <dd>r5.large</dd>
+    <dt>R5_Metal</dt>
+    <dd>r5.metal</dd>
+    <dt>R5_XLarge</dt>
+    <dd>r5.xlarge</dd>
+    <dt>R5a_12XLarge</dt>
+    <dd>r5a.12xlarge</dd>
+    <dt>R5a_16XLarge</dt>
+    <dd>r5a.16xlarge</dd>
+    <dt>R5a_24XLarge</dt>
+    <dd>r5a.24xlarge</dd>
+    <dt>R5a_2XLarge</dt>
+    <dd>r5a.2xlarge</dd>
+    <dt>R5a_4XLarge</dt>
+    <dd>r5a.4xlarge</dd>
+    <dt>R5a_8XLarge</dt>
+    <dd>r5a.8xlarge</dd>
+    <dt>R5a_Large</dt>
+    <dd>r5a.large</dd>
+    <dt>R5a_XLarge</dt>
+    <dd>r5a.xlarge</dd>
+    <dt>R5ad_12XLarge</dt>
+    <dd>r5ad.12xlarge</dd>
+    <dt>R5ad_16XLarge</dt>
+    <dd>r5ad.16xlarge</dd>
+    <dt>R5ad_24XLarge</dt>
+    <dd>r5ad.24xlarge</dd>
+    <dt>R5ad_2XLarge</dt>
+    <dd>r5ad.2xlarge</dd>
+    <dt>R5ad_4XLarge</dt>
+    <dd>r5ad.4xlarge</dd>
+    <dt>R5ad_8XLarge</dt>
+    <dd>r5ad.8xlarge</dd>
+    <dt>R5ad_Large</dt>
+    <dd>r5ad.large</dd>
+    <dt>R5ad_XLarge</dt>
+    <dd>r5ad.xlarge</dd>
+    <dt>R5b_12XLarge</dt>
+    <dd>r5b.12xlarge</dd>
+    <dt>R5b_16XLarge</dt>
+    <dd>r5b.16xlarge</dd>
+    <dt>R5b_24XLarge</dt>
+    <dd>r5b.24xlarge</dd>
+    <dt>R5b_2XLarge</dt>
+    <dd>r5b.2xlarge</dd>
+    <dt>R5b_4XLarge</dt>
+    <dd>r5b.4xlarge</dd>
+    <dt>R5b_8XLarge</dt>
+    <dd>r5b.8xlarge</dd>
+    <dt>R5b_Large</dt>
+    <dd>r5b.large</dd>
+    <dt>R5b_Metal</dt>
+    <dd>r5b.metal</dd>
+    <dt>R5b_XLarge</dt>
+    <dd>r5b.xlarge</dd>
+    <dt>R5d_12XLarge</dt>
+    <dd>r5d.12xlarge</dd>
+    <dt>R5d_16XLarge</dt>
+    <dd>r5d.16xlarge</dd>
+    <dt>R5d_24XLarge</dt>
+    <dd>r5d.24xlarge</dd>
+    <dt>R5d_2XLarge</dt>
+    <dd>r5d.2xlarge</dd>
+    <dt>R5d_4XLarge</dt>
+    <dd>r5d.4xlarge</dd>
+    <dt>R5d_8XLarge</dt>
+    <dd>r5d.8xlarge</dd>
+    <dt>R5d_Large</dt>
+    <dd>r5d.large</dd>
+    <dt>R5d_Metal</dt>
+    <dd>r5d.metal</dd>
+    <dt>R5d_XLarge</dt>
+    <dd>r5d.xlarge</dd>
+    <dt>R5dn_12XLarge</dt>
+    <dd>r5dn.12xlarge</dd>
+    <dt>R5dn_16XLarge</dt>
+    <dd>r5dn.16xlarge</dd>
+    <dt>R5dn_24XLarge</dt>
+    <dd>r5dn.24xlarge</dd>
+    <dt>R5dn_2XLarge</dt>
+    <dd>r5dn.2xlarge</dd>
+    <dt>R5dn_4XLarge</dt>
+    <dd>r5dn.4xlarge</dd>
+    <dt>R5dn_8XLarge</dt>
+    <dd>r5dn.8xlarge</dd>
+    <dt>R5dn_Large</dt>
+    <dd>r5dn.large</dd>
+    <dt>R5dn_XLarge</dt>
+    <dd>r5dn.xlarge</dd>
+    <dt>R5n_12XLarge</dt>
+    <dd>r5n.12xlarge</dd>
+    <dt>R5n_16XLarge</dt>
+    <dd>r5n.16xlarge</dd>
+    <dt>R5n_24XLarge</dt>
+    <dd>r5n.24xlarge</dd>
+    <dt>R5n_2XLarge</dt>
+    <dd>r5n.2xlarge</dd>
+    <dt>R5n_4XLarge</dt>
+    <dd>r5n.4xlarge</dd>
+    <dt>R5n_8XLarge</dt>
+    <dd>r5n.8xlarge</dd>
+    <dt>R5n_Large</dt>
+    <dd>r5n.large</dd>
+    <dt>R5n_XLarge</dt>
+    <dd>r5n.xlarge</dd>
+    <dt>R6g_12XLarge</dt>
+    <dd>r6g.12xlarge</dd>
+    <dt>R6g_16XLarge</dt>
+    <dd>r6g.16xlarge</dd>
+    <dt>R6g_2XLarge</dt>
+    <dd>r6g.2xlarge</dd>
+    <dt>R6g_4XLarge</dt>
+    <dd>r6g.4xlarge</dd>
+    <dt>R6g_8XLarge</dt>
+    <dd>r6g.8xlarge</dd>
+    <dt>R6g_Large</dt>
+    <dd>r6g.large</dd>
+    <dt>R6g_Medium</dt>
+    <dd>r6g.medium</dd>
+    <dt>R6g_Metal</dt>
+    <dd>r6g.metal</dd>
+    <dt>R6g_XLarge</dt>
+    <dd>r6g.xlarge</dd>
+    <dt>R6gd_12XLarge</dt>
+    <dd>r6gd.12xlarge</dd>
+    <dt>R6gd_16XLarge</dt>
+    <dd>r6gd.16xlarge</dd>
+    <dt>R6gd_2XLarge</dt>
+    <dd>r6gd.2xlarge</dd>
+    <dt>R6gd_4XLarge</dt>
+    <dd>r6gd.4xlarge</dd>
+    <dt>R6gd_8XLarge</dt>
+    <dd>r6gd.8xlarge</dd>
+    <dt>R6gd_Large</dt>
+    <dd>r6gd.large</dd>
+    <dt>R6gd_Medium</dt>
+    <dd>r6gd.medium</dd>
+    <dt>R6gd_Metal</dt>
+    <dd>r6gd.metal</dd>
+    <dt>R6gd_XLarge</dt>
+    <dd>r6gd.xlarge</dd>
+    <dt>T1_Micro</dt>
+    <dd>t1.micro</dd>
+    <dt>T2_2XLarge</dt>
+    <dd>t2.2xlarge</dd>
+    <dt>T2_Large</dt>
+    <dd>t2.large</dd>
+    <dt>T2_Medium</dt>
+    <dd>t2.medium</dd>
+    <dt>T2_Micro</dt>
+    <dd>t2.micro</dd>
+    <dt>T2_Nano</dt>
+    <dd>t2.nano</dd>
+    <dt>T2_Small</dt>
+    <dd>t2.small</dd>
+    <dt>T2_XLarge</dt>
+    <dd>t2.xlarge</dd>
+    <dt>T3_2XLarge</dt>
+    <dd>t3.2xlarge</dd>
+    <dt>T3_Large</dt>
+    <dd>t3.large</dd>
+    <dt>T3_Medium</dt>
+    <dd>t3.medium</dd>
+    <dt>T3_Micro</dt>
+    <dd>t3.micro</dd>
+    <dt>T3_Nano</dt>
+    <dd>t3.nano</dd>
+    <dt>T3_Small</dt>
+    <dd>t3.small</dd>
+    <dt>T3_XLarge</dt>
+    <dd>t3.xlarge</dd>
+    <dt>T3a_2XLarge</dt>
+    <dd>t3a.2xlarge</dd>
+    <dt>T3a_Large</dt>
+    <dd>t3a.large</dd>
+    <dt>T3a_Medium</dt>
+    <dd>t3a.medium</dd>
+    <dt>T3a_Micro</dt>
+    <dd>t3a.micro</dd>
+    <dt>T3a_Nano</dt>
+    <dd>t3a.nano</dd>
+    <dt>T3a_Small</dt>
+    <dd>t3a.small</dd>
+    <dt>T3a_XLarge</dt>
+    <dd>t3a.xlarge</dd>
+    <dt>T4g_2XLarge</dt>
+    <dd>t4g.2xlarge</dd>
+    <dt>T4g_Large</dt>
+    <dd>t4g.large</dd>
+    <dt>T4g_Medium</dt>
+    <dd>t4g.medium</dd>
+    <dt>T4g_Micro</dt>
+    <dd>t4g.micro</dd>
+    <dt>T4g_Nano</dt>
+    <dd>t4g.nano</dd>
+    <dt>T4g_Small</dt>
+    <dd>t4g.small</dd>
+    <dt>T4g_XLarge</dt>
+    <dd>t4g.xlarge</dd>
+    <dt>X1_16XLarge</dt>
+    <dd>x1.16xlarge</dd>
+    <dt>X1_32XLarge</dt>
+    <dd>x1.32xlarge</dd>
+    <dt>X1e_16XLarge</dt>
+    <dd>x1e.16xlarge</dd>
+    <dt>X1e_2XLarge</dt>
+    <dd>x1e.2xlarge</dd>
+    <dt>X1e_32XLarge</dt>
+    <dd>x1e.32xlarge</dd>
+    <dt>X1e_4XLarge</dt>
+    <dd>x1e.4xlarge</dd>
+    <dt>X1e_8XLarge</dt>
+    <dd>x1e.8xlarge</dd>
+    <dt>X1e_XLarge</dt>
+    <dd>x1e.xlarge</dd>
+    <dt>Z1d_12XLarge</dt>
+    <dd>z1d.12xlarge</dd>
+    <dt>Z1d_2XLarge</dt>
+    <dd>z1d.2xlarge</dd>
+    <dt>Z1d_3XLarge</dt>
+    <dd>z1d.3xlarge</dd>
+    <dt>Z1d_6XLarge</dt>
+    <dd>z1d.6xlarge</dd>
+    <dt>Z1d_Large</dt>
+    <dd>z1d.large</dd>
+    <dt>Z1d_Metal</dt>
+    <dd>z1d.metal</dd>
+    <dt>Z1d_XLarge</dt>
+    <dd>z1d.xlarge</dd>
+    <dt>U_12tb1Metal</dt>
+    <dd>u-12tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>U_6tb1Metal</dt>
+    <dd>u-6tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>U_9tb1Metal</dt>
+    <dd>u-9tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>Hs1_8XLarge</dt>
+    <dd>hs1.8xlarge<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>A1_2_X_LARGE</dt>
+    <dd>a1.2xlarge</dd>
+    <dt>A1_4_X_LARGE</dt>
+    <dd>a1.4xlarge</dd>
+    <dt>A1_LARGE</dt>
+    <dd>a1.large</dd>
+    <dt>A1_MEDIUM</dt>
+    <dd>a1.medium</dd>
+    <dt>A1_METAL</dt>
+    <dd>a1.metal</dd>
+    <dt>A1_X_LARGE</dt>
+    <dd>a1.xlarge</dd>
+    <dt>C1_MEDIUM</dt>
+    <dd>c1.medium</dd>
+    <dt>C1_X_LARGE</dt>
+    <dd>c1.xlarge</dd>
+    <dt>C3_2_X_LARGE</dt>
+    <dd>c3.2xlarge</dd>
+    <dt>C3_4_X_LARGE</dt>
+    <dd>c3.4xlarge</dd>
+    <dt>C3_8_X_LARGE</dt>
+    <dd>c3.8xlarge</dd>
+    <dt>C3_LARGE</dt>
+    <dd>c3.large</dd>
+    <dt>C3_X_LARGE</dt>
+    <dd>c3.xlarge</dd>
+    <dt>C4_2_X_LARGE</dt>
+    <dd>c4.2xlarge</dd>
+    <dt>C4_4_X_LARGE</dt>
+    <dd>c4.4xlarge</dd>
+    <dt>C4_8_X_LARGE</dt>
+    <dd>c4.8xlarge</dd>
+    <dt>C4_LARGE</dt>
+    <dd>c4.large</dd>
+    <dt>C4_X_LARGE</dt>
+    <dd>c4.xlarge</dd>
+    <dt>C5_12_X_LARGE</dt>
+    <dd>c5.12xlarge</dd>
+    <dt>C5_18_X_LARGE</dt>
+    <dd>c5.18xlarge</dd>
+    <dt>C5_24_X_LARGE</dt>
+    <dd>c5.24xlarge</dd>
+    <dt>C5_2_X_LARGE</dt>
+    <dd>c5.2xlarge</dd>
+    <dt>C5_4_X_LARGE</dt>
+    <dd>c5.4xlarge</dd>
+    <dt>C5_9_X_LARGE</dt>
+    <dd>c5.9xlarge</dd>
+    <dt>C5_LARGE</dt>
+    <dd>c5.large</dd>
+    <dt>C5_METAL</dt>
+    <dd>c5.metal</dd>
+    <dt>C5_X_LARGE</dt>
+    <dd>c5.xlarge</dd>
+    <dt>C5A_12_X_LARGE</dt>
+    <dd>c5a.12xlarge</dd>
+    <dt>C5A_16_X_LARGE</dt>
+    <dd>c5a.16xlarge</dd>
+    <dt>C5A_24_X_LARGE</dt>
+    <dd>c5a.24xlarge</dd>
+    <dt>C5A_2_X_LARGE</dt>
+    <dd>c5a.2xlarge</dd>
+    <dt>C5A_4_X_LARGE</dt>
+    <dd>c5a.4xlarge</dd>
+    <dt>C5A_8_X_LARGE</dt>
+    <dd>c5a.8xlarge</dd>
+    <dt>C5A_LARGE</dt>
+    <dd>c5a.large</dd>
+    <dt>C5A_X_LARGE</dt>
+    <dd>c5a.xlarge</dd>
+    <dt>C5AD_12_X_LARGE</dt>
+    <dd>c5ad.12xlarge</dd>
+    <dt>C5AD_16_X_LARGE</dt>
+    <dd>c5ad.16xlarge</dd>
+    <dt>C5AD_24_X_LARGE</dt>
+    <dd>c5ad.24xlarge</dd>
+    <dt>C5AD_2_X_LARGE</dt>
+    <dd>c5ad.2xlarge</dd>
+    <dt>C5AD_4_X_LARGE</dt>
+    <dd>c5ad.4xlarge</dd>
+    <dt>C5AD_8_X_LARGE</dt>
+    <dd>c5ad.8xlarge</dd>
+    <dt>C5AD_LARGE</dt>
+    <dd>c5ad.large</dd>
+    <dt>C5AD_X_LARGE</dt>
+    <dd>c5ad.xlarge</dd>
+    <dt>C5D_12_X_LARGE</dt>
+    <dd>c5d.12xlarge</dd>
+    <dt>C5D_18_X_LARGE</dt>
+    <dd>c5d.18xlarge</dd>
+    <dt>C5D_24_X_LARGE</dt>
+    <dd>c5d.24xlarge</dd>
+    <dt>C5D_2_X_LARGE</dt>
+    <dd>c5d.2xlarge</dd>
+    <dt>C5D_4_X_LARGE</dt>
+    <dd>c5d.4xlarge</dd>
+    <dt>C5D_9_X_LARGE</dt>
+    <dd>c5d.9xlarge</dd>
+    <dt>C5D_LARGE</dt>
+    <dd>c5d.large</dd>
+    <dt>C5D_METAL</dt>
+    <dd>c5d.metal</dd>
+    <dt>C5D_X_LARGE</dt>
+    <dd>c5d.xlarge</dd>
+    <dt>C5N_18_X_LARGE</dt>
+    <dd>c5n.18xlarge</dd>
+    <dt>C5N_2_X_LARGE</dt>
+    <dd>c5n.2xlarge</dd>
+    <dt>C5N_4_X_LARGE</dt>
+    <dd>c5n.4xlarge</dd>
+    <dt>C5N_9_X_LARGE</dt>
+    <dd>c5n.9xlarge</dd>
+    <dt>C5N_LARGE</dt>
+    <dd>c5n.large</dd>
+    <dt>C5N_METAL</dt>
+    <dd>c5n.metal</dd>
+    <dt>C5N_X_LARGE</dt>
+    <dd>c5n.xlarge</dd>
+    <dt>C6G_12_X_LARGE</dt>
+    <dd>c6g.12xlarge</dd>
+    <dt>C6G_16_X_LARGE</dt>
+    <dd>c6g.16xlarge</dd>
+    <dt>C6G_2_X_LARGE</dt>
+    <dd>c6g.2xlarge</dd>
+    <dt>C6G_4_X_LARGE</dt>
+    <dd>c6g.4xlarge</dd>
+    <dt>C6G_8_X_LARGE</dt>
+    <dd>c6g.8xlarge</dd>
+    <dt>C6G_LARGE</dt>
+    <dd>c6g.large</dd>
+    <dt>C6G_MEDIUM</dt>
+    <dd>c6g.medium</dd>
+    <dt>C6G_METAL</dt>
+    <dd>c6g.metal</dd>
+    <dt>C6G_X_LARGE</dt>
+    <dd>c6g.xlarge</dd>
+    <dt>C6GD_12_X_LARGE</dt>
+    <dd>c6gd.12xlarge</dd>
+    <dt>C6GD_16_X_LARGE</dt>
+    <dd>c6gd.16xlarge</dd>
+    <dt>C6GD_2_X_LARGE</dt>
+    <dd>c6gd.2xlarge</dd>
+    <dt>C6GD_4_X_LARGE</dt>
+    <dd>c6gd.4xlarge</dd>
+    <dt>C6GD_8_X_LARGE</dt>
+    <dd>c6gd.8xlarge</dd>
+    <dt>C6GD_LARGE</dt>
+    <dd>c6gd.large</dd>
+    <dt>C6GD_MEDIUM</dt>
+    <dd>c6gd.medium</dd>
+    <dt>C6GD_METAL</dt>
+    <dd>c6gd.metal</dd>
+    <dt>C6GD_X_LARGE</dt>
+    <dd>c6gd.xlarge</dd>
+    <dt>CC2_8_X_LARGE</dt>
+    <dd>cc2.8xlarge</dd>
+    <dt>D2_2_X_LARGE</dt>
+    <dd>d2.2xlarge</dd>
+    <dt>D2_4_X_LARGE</dt>
+    <dd>d2.4xlarge</dd>
+    <dt>D2_8_X_LARGE</dt>
+    <dd>d2.8xlarge</dd>
+    <dt>D2_X_LARGE</dt>
+    <dd>d2.xlarge</dd>
+    <dt>D3_2_X_LARGE</dt>
+    <dd>d3.2xlarge</dd>
+    <dt>D3_4_X_LARGE</dt>
+    <dd>d3.4xlarge</dd>
+    <dt>D3_8_X_LARGE</dt>
+    <dd>d3.8xlarge</dd>
+    <dt>D3_X_LARGE</dt>
+    <dd>d3.xlarge</dd>
+    <dt>D3EN_12_X_LARGE</dt>
+    <dd>d3en.12xlarge</dd>
+    <dt>D3EN_2_X_LARGE</dt>
+    <dd>d3en.2xlarge</dd>
+    <dt>D3EN_4_X_LARGE</dt>
+    <dd>d3en.4xlarge</dd>
+    <dt>D3EN_6_X_LARGE</dt>
+    <dd>d3en.6xlarge</dd>
+    <dt>D3EN_8_X_LARGE</dt>
+    <dd>d3en.8xlarge</dd>
+    <dt>D3EN_X_LARGE</dt>
+    <dd>d3en.xlarge</dd>
+    <dt>F1_16_X_LARGE</dt>
+    <dd>f1.16xlarge</dd>
+    <dt>F1_2_X_LARGE</dt>
+    <dd>f1.2xlarge</dd>
+    <dt>F1_4_X_LARGE</dt>
+    <dd>f1.4xlarge</dd>
+    <dt>G2_2_X_LARGE</dt>
+    <dd>g2.2xlarge</dd>
+    <dt>G2_8_X_LARGE</dt>
+    <dd>g2.8xlarge</dd>
+    <dt>G3_16_X_LARGE</dt>
+    <dd>g3.16xlarge</dd>
+    <dt>G3_4_X_LARGE</dt>
+    <dd>g3.4xlarge</dd>
+    <dt>G3_8_X_LARGE</dt>
+    <dd>g3.8xlarge</dd>
+    <dt>G3S_X_LARGE</dt>
+    <dd>g3s.xlarge</dd>
+    <dt>G4AD_16_X_LARGE</dt>
+    <dd>g4ad.16xlarge</dd>
+    <dt>G4AD_4_X_LARGE</dt>
+    <dd>g4ad.4xlarge</dd>
+    <dt>G4AD_8_X_LARGE</dt>
+    <dd>g4ad.8xlarge</dd>
+    <dt>G4DN_12_X_LARGE</dt>
+    <dd>g4dn.12xlarge</dd>
+    <dt>G4DN_16_X_LARGE</dt>
+    <dd>g4dn.16xlarge</dd>
+    <dt>G4DN_2_X_LARGE</dt>
+    <dd>g4dn.2xlarge</dd>
+    <dt>G4DN_4_X_LARGE</dt>
+    <dd>g4dn.4xlarge</dd>
+    <dt>G4DN_8_X_LARGE</dt>
+    <dd>g4dn.8xlarge</dd>
+    <dt>G4DN_METAL</dt>
+    <dd>g4dn.metal</dd>
+    <dt>G4DN_X_LARGE</dt>
+    <dd>g4dn.xlarge</dd>
+    <dt>H1_16_X_LARGE</dt>
+    <dd>h1.16xlarge</dd>
+    <dt>H1_2_X_LARGE</dt>
+    <dd>h1.2xlarge</dd>
+    <dt>H1_4_X_LARGE</dt>
+    <dd>h1.4xlarge</dd>
+    <dt>H1_8_X_LARGE</dt>
+    <dd>h1.8xlarge</dd>
+    <dt>I2_2_X_LARGE</dt>
+    <dd>i2.2xlarge</dd>
+    <dt>I2_4_X_LARGE</dt>
+    <dd>i2.4xlarge</dd>
+    <dt>I2_8_X_LARGE</dt>
+    <dd>i2.8xlarge</dd>
+    <dt>I2_X_LARGE</dt>
+    <dd>i2.xlarge</dd>
+    <dt>I3_16_X_LARGE</dt>
+    <dd>i3.16xlarge</dd>
+    <dt>I3_2_X_LARGE</dt>
+    <dd>i3.2xlarge</dd>
+    <dt>I3_4_X_LARGE</dt>
+    <dd>i3.4xlarge</dd>
+    <dt>I3_8_X_LARGE</dt>
+    <dd>i3.8xlarge</dd>
+    <dt>I3_LARGE</dt>
+    <dd>i3.large</dd>
+    <dt>I3_X_LARGE</dt>
+    <dd>i3.xlarge</dd>
+    <dt>I3_METAL</dt>
+    <dd>i3.metal</dd>
+    <dt>I3EN_12_X_LARGE</dt>
+    <dd>i3en.12xlarge</dd>
+    <dt>I3EN_24_X_LARGE</dt>
+    <dd>i3en.24xlarge</dd>
+    <dt>I3EN_2_X_LARGE</dt>
+    <dd>i3en.2xlarge</dd>
+    <dt>I3EN_3_X_LARGE</dt>
+    <dd>i3en.3xlarge</dd>
+    <dt>I3EN_6_X_LARGE</dt>
+    <dd>i3en.6xlarge</dd>
+    <dt>I3EN_LARGE</dt>
+    <dd>i3en.large</dd>
+    <dt>I3EN_METAL</dt>
+    <dd>i3en.metal</dd>
+    <dt>I3EN_X_LARGE</dt>
+    <dd>i3en.xlarge</dd>
+    <dt>INF1_24_X_LARGE</dt>
+    <dd>inf1.24xlarge</dd>
+    <dt>INF1_2_X_LARGE</dt>
+    <dd>inf1.2xlarge</dd>
+    <dt>INF1_6_X_LARGE</dt>
+    <dd>inf1.6xlarge</dd>
+    <dt>INF1_X_LARGE</dt>
+    <dd>inf1.xlarge</dd>
+    <dt>M1_LARGE</dt>
+    <dd>m1.large</dd>
+    <dt>M1_MEDIUM</dt>
+    <dd>m1.medium</dd>
+    <dt>M1_SMALL</dt>
+    <dd>m1.small</dd>
+    <dt>M1_X_LARGE</dt>
+    <dd>m1.xlarge</dd>
+    <dt>M2_2_X_LARGE</dt>
+    <dd>m2.2xlarge</dd>
+    <dt>M2_4_X_LARGE</dt>
+    <dd>m2.4xlarge</dd>
+    <dt>M2_X_LARGE</dt>
+    <dd>m2.xlarge</dd>
+    <dt>M3_2_X_LARGE</dt>
+    <dd>m3.2xlarge</dd>
+    <dt>M3_LARGE</dt>
+    <dd>m3.large</dd>
+    <dt>M3_MEDIUM</dt>
+    <dd>m3.medium</dd>
+    <dt>M3_X_LARGE</dt>
+    <dd>m3.xlarge</dd>
+    <dt>M4_10_X_LARGE</dt>
+    <dd>m4.10xlarge</dd>
+    <dt>M4_16_X_LARGE</dt>
+    <dd>m4.16xlarge</dd>
+    <dt>M4_2_X_LARGE</dt>
+    <dd>m4.2xlarge</dd>
+    <dt>M4_4_X_LARGE</dt>
+    <dd>m4.4xlarge</dd>
+    <dt>M4_LARGE</dt>
+    <dd>m4.large</dd>
+    <dt>M4_X_LARGE</dt>
+    <dd>m4.xlarge</dd>
+    <dt>M5_12_X_LARGE</dt>
+    <dd>m5.12xlarge</dd>
+    <dt>M5_16_X_LARGE</dt>
+    <dd>m5.16xlarge</dd>
+    <dt>M5_24_X_LARGE</dt>
+    <dd>m5.24xlarge</dd>
+    <dt>M5_2_X_LARGE</dt>
+    <dd>m5.2xlarge</dd>
+    <dt>M5_4_X_LARGE</dt>
+    <dd>m5.4xlarge</dd>
+    <dt>M5_8_X_LARGE</dt>
+    <dd>m5.8xlarge</dd>
+    <dt>M5_LARGE</dt>
+    <dd>m5.large</dd>
+    <dt>M5_METAL</dt>
+    <dd>m5.metal</dd>
+    <dt>M5_X_LARGE</dt>
+    <dd>m5.xlarge</dd>
+    <dt>M5A_12_X_LARGE</dt>
+    <dd>m5a.12xlarge</dd>
+    <dt>M5A_16_X_LARGE</dt>
+    <dd>m5a.16xlarge</dd>
+    <dt>M5A_24_X_LARGE</dt>
+    <dd>m5a.24xlarge</dd>
+    <dt>M5A_2_X_LARGE</dt>
+    <dd>m5a.2xlarge</dd>
+    <dt>M5A_4_X_LARGE</dt>
+    <dd>m5a.4xlarge</dd>
+    <dt>M5A_8_X_LARGE</dt>
+    <dd>m5a.8xlarge</dd>
+    <dt>M5A_LARGE</dt>
+    <dd>m5a.large</dd>
+    <dt>M5A_X_LARGE</dt>
+    <dd>m5a.xlarge</dd>
+    <dt>M5AD_12_X_LARGE</dt>
+    <dd>m5ad.12xlarge</dd>
+    <dt>M5AD_16_X_LARGE</dt>
+    <dd>m5ad.16xlarge</dd>
+    <dt>M5AD_24_X_LARGE</dt>
+    <dd>m5ad.24xlarge</dd>
+    <dt>M5AD_2_X_LARGE</dt>
+    <dd>m5ad.2xlarge</dd>
+    <dt>M5AD_4_X_LARGE</dt>
+    <dd>m5ad.4xlarge</dd>
+    <dt>M5AD_8_X_LARGE</dt>
+    <dd>m5ad.8xlarge</dd>
+    <dt>M5AD_LARGE</dt>
+    <dd>m5ad.large</dd>
+    <dt>M5AS_X_LARGE</dt>
+    <dd>m5ad.xlarge</dd>
+    <dt>M5D_12_X_LARGE</dt>
+    <dd>m5d.12xlarge</dd>
+    <dt>M5D_16_X_LARGE</dt>
+    <dd>m5d.16xlarge</dd>
+    <dt>M5D_24_X_LARGE</dt>
+    <dd>m5d.24xlarge</dd>
+    <dt>M5D_2_X_LARGE</dt>
+    <dd>m5d.2xlarge</dd>
+    <dt>M5D_4_X_LARGE</dt>
+    <dd>m5d.4xlarge</dd>
+    <dt>M5D_8_X_LARGE</dt>
+    <dd>m5d.8xlarge</dd>
+    <dt>M5D_LARGE</dt>
+    <dd>m5d.large</dd>
+    <dt>M5D_METAL</dt>
+    <dd>m5d.metal</dd>
+    <dt>M5D_X_LARGE</dt>
+    <dd>m5d.xlarge</dd>
+    <dt>M5DN_12_X_LARGE</dt>
+    <dd>m5dn.12xlarge</dd>
+    <dt>M5DN_16_X_LARGE</dt>
+    <dd>m5dn.16xlarge</dd>
+    <dt>M5DN_24_X_LARGE</dt>
+    <dd>m5dn.24xlarge</dd>
+    <dt>M5DN_2_X_LARGE</dt>
+    <dd>m5dn.2xlarge</dd>
+    <dt>M5DN_4_X_LARGE</dt>
+    <dd>m5dn.4xlarge</dd>
+    <dt>M5DN_8_X_LARGE</dt>
+    <dd>m5dn.8xlarge</dd>
+    <dt>M5DN_LARGE</dt>
+    <dd>m5dn.large</dd>
+    <dt>M5DN_X_LARGE</dt>
+    <dd>m5dn.xlarge</dd>
+    <dt>M5N_12_X_LARGE</dt>
+    <dd>m5n.12xlarge</dd>
+    <dt>M5N_16_X_LARGE</dt>
+    <dd>m5n.16xlarge</dd>
+    <dt>M5N_24_X_LARGE</dt>
+    <dd>m5n.24xlarge</dd>
+    <dt>M5N_2_X_LARGE</dt>
+    <dd>m5n.2xlarge</dd>
+    <dt>M5N_4_X_LARGE</dt>
+    <dd>m5n.4xlarge</dd>
+    <dt>M5N_8_X_LARGE</dt>
+    <dd>m5n.8xlarge</dd>
+    <dt>M5N_LARGE</dt>
+    <dd>m5n.large</dd>
+    <dt>M5N_X_LARGE</dt>
+    <dd>m5n.xlarge</dd>
+    <dt>M5ZN_12_X_LARGE</dt>
+    <dd>m5zn.12xlarge</dd>
+    <dt>M5ZN_2_X_LARGE</dt>
+    <dd>m5zn.2xlarge</dd>
+    <dt>M5ZN_3_X_LARGE</dt>
+    <dd>m5zn.3xlarge</dd>
+    <dt>M5ZN_6_X_LARGE</dt>
+    <dd>m5zn.6xlarge</dd>
+    <dt>M5ZN_LARGE</dt>
+    <dd>m5zn.large</dd>
+    <dt>M5ZN_METAL</dt>
+    <dd>m5zn.metal</dd>
+    <dt>M5ZN_X_LARGE</dt>
+    <dd>m5zn.xlarge</dd>
+    <dt>M6G_12_X_LARGE</dt>
+    <dd>m6g.12xlarge</dd>
+    <dt>M6G_16_X_LARGE</dt>
+    <dd>m6g.16xlarge</dd>
+    <dt>M6G_2_X_LARGE</dt>
+    <dd>m6g.2xlarge</dd>
+    <dt>M6G_4_X_LARGE</dt>
+    <dd>m6g.4xlarge</dd>
+    <dt>M6G_8_X_LARGE</dt>
+    <dd>m6g.8xlarge</dd>
+    <dt>M6G_LARGE</dt>
+    <dd>m6g.large</dd>
+    <dt>M6G_MEDIUM</dt>
+    <dd>m6g.medium</dd>
+    <dt>M6G_METAL</dt>
+    <dd>m6g.metal</dd>
+    <dt>M6G_X_LARGE</dt>
+    <dd>m6g.xlarge</dd>
+    <dt>M6GD_12_X_LARGE</dt>
+    <dd>m6gd.12xlarge</dd>
+    <dt>M6GD_16_X_LARGE</dt>
+    <dd>m6gd.16xlarge</dd>
+    <dt>M6GD_2_X_LARGE</dt>
+    <dd>m6gd.2xlarge</dd>
+    <dt>M6GD_4_X_LARGE</dt>
+    <dd>m6gd.4xlarge</dd>
+    <dt>M6GD_8_X_LARGE</dt>
+    <dd>m6gd.8xlarge</dd>
+    <dt>M6GD_LARGE</dt>
+    <dd>m6gd.large</dd>
+    <dt>M6GD_MEDIUM</dt>
+    <dd>m6gd.medium</dd>
+    <dt>M6GD_METAL</dt>
+    <dd>m6gd.metal</dd>
+    <dt>M6GD_X_LARGE</dt>
+    <dd>m6gd.xlarge</dd>
+    <dt>MAC1_METAL</dt>
+    <dd>mac1.metal</dd>
+    <dt>P2_16_X_LARGE</dt>
+    <dd>p2.16xlarge</dd>
+    <dt>P2_8_X_LARGE</dt>
+    <dd>p2.8xlarge</dd>
+    <dt>P2_X_LARGE</dt>
+    <dd>p2.xlarge</dd>
+    <dt>P3_16_X_LARGE</dt>
+    <dd>p3.16xlarge</dd>
+    <dt>P3_2_X_LARGE</dt>
+    <dd>p3.2xlarge</dd>
+    <dt>P3_8_X_LARGE</dt>
+    <dd>p3.8xlarge</dd>
+    <dt>P3DN_24_X_LARGE</dt>
+    <dd>p3dn.24xlarge</dd>
+    <dt>P4D_24_X_LARGE</dt>
+    <dd>p4d.24xlarge</dd>
+    <dt>R3_2_X_LARGE</dt>
+    <dd>r3.2xlarge</dd>
+    <dt>R3_4_X_LARGE</dt>
+    <dd>r3.4xlarge</dd>
+    <dt>R3_8_X_LARGE</dt>
+    <dd>r3.8xlarge</dd>
+    <dt>R3_LARGE</dt>
+    <dd>r3.large</dd>
+    <dt>R3_X_LARGE</dt>
+    <dd>r3.xlarge</dd>
+    <dt>R4_16_X_LARGE</dt>
+    <dd>r4.16xlarge</dd>
+    <dt>R4_2_X_LARGE</dt>
+    <dd>r4.2xlarge</dd>
+    <dt>R4_4_X_LARGE</dt>
+    <dd>r4.4xlarge</dd>
+    <dt>R4_8_X_LARGE</dt>
+    <dd>r4.8xlarge</dd>
+    <dt>R4_LARGE</dt>
+    <dd>r4.large</dd>
+    <dt>R4_X_LARGE</dt>
+    <dd>r4.xlarge</dd>
+    <dt>R5_12_X_LARGE</dt>
+    <dd>r5.12xlarge</dd>
+    <dt>R5_16_X_LARGE</dt>
+    <dd>r5.16xlarge</dd>
+    <dt>R5_24_X_LARGE</dt>
+    <dd>r5.24xlarge</dd>
+    <dt>R5_2_X_LARGE</dt>
+    <dd>r5.2xlarge</dd>
+    <dt>R5_4_X_LARGE</dt>
+    <dd>r5.4xlarge</dd>
+    <dt>R5_8_X_LARGE</dt>
+    <dd>r5.8xlarge</dd>
+    <dt>R5_LARGE</dt>
+    <dd>r5.large</dd>
+    <dt>R5_METAL</dt>
+    <dd>r5.metal</dd>
+    <dt>R5_X_LARGE</dt>
+    <dd>r5.xlarge</dd>
+    <dt>R5A_12_X_LARGE</dt>
+    <dd>r5a.12xlarge</dd>
+    <dt>R5A_16_X_LARGE</dt>
+    <dd>r5a.16xlarge</dd>
+    <dt>R5A_24_X_LARGE</dt>
+    <dd>r5a.24xlarge</dd>
+    <dt>R5A_2_X_LARGE</dt>
+    <dd>r5a.2xlarge</dd>
+    <dt>R5A_4_X_LARGE</dt>
+    <dd>r5a.4xlarge</dd>
+    <dt>R5A_8_X_LARGE</dt>
+    <dd>r5a.8xlarge</dd>
+    <dt>R5A_LARGE</dt>
+    <dd>r5a.large</dd>
+    <dt>R5A_X_LARGE</dt>
+    <dd>r5a.xlarge</dd>
+    <dt>R5AD_12_X_LARGE</dt>
+    <dd>r5ad.12xlarge</dd>
+    <dt>R5AD_16_X_LARGE</dt>
+    <dd>r5ad.16xlarge</dd>
+    <dt>R5AD_24_X_LARGE</dt>
+    <dd>r5ad.24xlarge</dd>
+    <dt>R5AD_2_X_LARGE</dt>
+    <dd>r5ad.2xlarge</dd>
+    <dt>R5AD_4_X_LARGE</dt>
+    <dd>r5ad.4xlarge</dd>
+    <dt>R5AD_8_X_LARGE</dt>
+    <dd>r5ad.8xlarge</dd>
+    <dt>R5AD_LARGE</dt>
+    <dd>r5ad.large</dd>
+    <dt>R5AD_X_LARGE</dt>
+    <dd>r5ad.xlarge</dd>
+    <dt>R5B_12_X_LARGE</dt>
+    <dd>r5b.12xlarge</dd>
+    <dt>R5B_16_X_LARGE</dt>
+    <dd>r5b.16xlarge</dd>
+    <dt>R5B_24_X_LARGE</dt>
+    <dd>r5b.24xlarge</dd>
+    <dt>R5B_2_X_LARGE</dt>
+    <dd>r5b.2xlarge</dd>
+    <dt>R5B_4_X_LARGE</dt>
+    <dd>r5b.4xlarge</dd>
+    <dt>R5B_8_X_LARGE</dt>
+    <dd>r5b.8xlarge</dd>
+    <dt>R5B_LARGE</dt>
+    <dd>r5b.large</dd>
+    <dt>R5B_METAL</dt>
+    <dd>r5b.metal</dd>
+    <dt>R5B_X_LARGE</dt>
+    <dd>r5b.xlarge</dd>
+    <dt>R5D_12_X_LARGE</dt>
+    <dd>r5d.12xlarge</dd>
+    <dt>R5D_16_X_LARGE</dt>
+    <dd>r5d.16xlarge</dd>
+    <dt>R5D_24_X_LARGE</dt>
+    <dd>r5d.24xlarge</dd>
+    <dt>R5D_2_X_LARGE</dt>
+    <dd>r5d.2xlarge</dd>
+    <dt>R5D_4_X_LARGE</dt>
+    <dd>r5d.4xlarge</dd>
+    <dt>R5D_8_X_LARGE</dt>
+    <dd>r5d.8xlarge</dd>
+    <dt>R5D_LARGE</dt>
+    <dd>r5d.large</dd>
+    <dt>R5D_METAL</dt>
+    <dd>r5d.metal</dd>
+    <dt>R5D_X_LARGE</dt>
+    <dd>r5d.xlarge</dd>
+    <dt>R5DN_12_X_LARGE</dt>
+    <dd>r5dn.12xlarge</dd>
+    <dt>R5DN_16_X_LARGE</dt>
+    <dd>r5dn.16xlarge</dd>
+    <dt>R5DN_24_X_LARGE</dt>
+    <dd>r5dn.24xlarge</dd>
+    <dt>R5DN_2_X_LARGE</dt>
+    <dd>r5dn.2xlarge</dd>
+    <dt>R5DN_4_X_LARGE</dt>
+    <dd>r5dn.4xlarge</dd>
+    <dt>R5DN_8_X_LARGE</dt>
+    <dd>r5dn.8xlarge</dd>
+    <dt>R5DN_LARGE</dt>
+    <dd>r5dn.large</dd>
+    <dt>R5DN_X_LARGE</dt>
+    <dd>r5dn.xlarge</dd>
+    <dt>R5N_12_X_LARGE</dt>
+    <dd>r5n.12xlarge</dd>
+    <dt>R5N_16_X_LARGE</dt>
+    <dd>r5n.16xlarge</dd>
+    <dt>R5N_24_X_LARGE</dt>
+    <dd>r5n.24xlarge</dd>
+    <dt>R5N_2_X_LARGE</dt>
+    <dd>r5n.2xlarge</dd>
+    <dt>R5N_4_X_LARGE</dt>
+    <dd>r5n.4xlarge</dd>
+    <dt>R5N_8_X_LARGE</dt>
+    <dd>r5n.8xlarge</dd>
+    <dt>R5N_LARGE</dt>
+    <dd>r5n.large</dd>
+    <dt>R5N_X_LARGE</dt>
+    <dd>r5n.xlarge</dd>
+    <dt>R6G_12_X_LARGE</dt>
+    <dd>r6g.12xlarge</dd>
+    <dt>R6G_16_X_LARGE</dt>
+    <dd>r6g.16xlarge</dd>
+    <dt>R6G_2_X_LARGE</dt>
+    <dd>r6g.2xlarge</dd>
+    <dt>R6G_4_X_LARGE</dt>
+    <dd>r6g.4xlarge</dd>
+    <dt>R6G_8_X_LARGE</dt>
+    <dd>r6g.8xlarge</dd>
+    <dt>R6G_LARGE</dt>
+    <dd>r6g.large</dd>
+    <dt>R6G_MEDIUM</dt>
+    <dd>r6g.medium</dd>
+    <dt>R6G_METAL</dt>
+    <dd>r6g.metal</dd>
+    <dt>R6G_X_LARGE</dt>
+    <dd>r6g.xlarge</dd>
+    <dt>R6GD_12_X_LARGE</dt>
+    <dd>r6gd.12xlarge</dd>
+    <dt>R6GD_16_X_LARGE</dt>
+    <dd>r6gd.16xlarge</dd>
+    <dt>R6GD_2_X_LARGE</dt>
+    <dd>r6gd.2xlarge</dd>
+    <dt>R6GD_4_X_LARGE</dt>
+    <dd>r6gd.4xlarge</dd>
+    <dt>R6GD_8_X_LARGE</dt>
+    <dd>r6gd.8xlarge</dd>
+    <dt>R6GD_LARGE</dt>
+    <dd>r6gd.large</dd>
+    <dt>R6GD_MEDIUM</dt>
+    <dd>r6gd.medium</dd>
+    <dt>R6GD_METAL</dt>
+    <dd>r6gd.metal</dd>
+    <dt>R6GD_X_LARGE</dt>
+    <dd>r6gd.xlarge</dd>
+    <dt>T1_MICRO</dt>
+    <dd>t1.micro</dd>
+    <dt>T2_2_X_LARGE</dt>
+    <dd>t2.2xlarge</dd>
+    <dt>T2_LARGE</dt>
+    <dd>t2.large</dd>
+    <dt>T2_MEDIUM</dt>
+    <dd>t2.medium</dd>
+    <dt>T2_MICRO</dt>
+    <dd>t2.micro</dd>
+    <dt>T2_NANO</dt>
+    <dd>t2.nano</dd>
+    <dt>T2_SMALL</dt>
+    <dd>t2.small</dd>
+    <dt>T2_X_LARGE</dt>
+    <dd>t2.xlarge</dd>
+    <dt>T3_2_X_LARGE</dt>
+    <dd>t3.2xlarge</dd>
+    <dt>T3_LARGE</dt>
+    <dd>t3.large</dd>
+    <dt>T3_MEDIUM</dt>
+    <dd>t3.medium</dd>
+    <dt>T3_MICRO</dt>
+    <dd>t3.micro</dd>
+    <dt>T3_NANO</dt>
+    <dd>t3.nano</dd>
+    <dt>T3_SMALL</dt>
+    <dd>t3.small</dd>
+    <dt>T3_X_LARGE</dt>
+    <dd>t3.xlarge</dd>
+    <dt>T3A_2_X_LARGE</dt>
+    <dd>t3a.2xlarge</dd>
+    <dt>T3A_LARGE</dt>
+    <dd>t3a.large</dd>
+    <dt>T3A_MEDIUM</dt>
+    <dd>t3a.medium</dd>
+    <dt>T3A_MICRO</dt>
+    <dd>t3a.micro</dd>
+    <dt>T3A_NANO</dt>
+    <dd>t3a.nano</dd>
+    <dt>T3A_SMALL</dt>
+    <dd>t3a.small</dd>
+    <dt>T3A_X_LARGE</dt>
+    <dd>t3a.xlarge</dd>
+    <dt>T4G_2_X_LARGE</dt>
+    <dd>t4g.2xlarge</dd>
+    <dt>T4G_LARGE</dt>
+    <dd>t4g.large</dd>
+    <dt>T4G_MEDIUM</dt>
+    <dd>t4g.medium</dd>
+    <dt>T4G_MICRO</dt>
+    <dd>t4g.micro</dd>
+    <dt>T4G_NANO</dt>
+    <dd>t4g.nano</dd>
+    <dt>T4G_SMALL</dt>
+    <dd>t4g.small</dd>
+    <dt>T4G_X_LARGE</dt>
+    <dd>t4g.xlarge</dd>
+    <dt>X1_16_X_LARGE</dt>
+    <dd>x1.16xlarge</dd>
+    <dt>X1_32_X_LARGE</dt>
+    <dd>x1.32xlarge</dd>
+    <dt>X1E_16_X_LARGE</dt>
+    <dd>x1e.16xlarge</dd>
+    <dt>X1E_2_X_LARGE</dt>
+    <dd>x1e.2xlarge</dd>
+    <dt>X1E_32_X_LARGE</dt>
+    <dd>x1e.32xlarge</dd>
+    <dt>X1E_4_X_LARGE</dt>
+    <dd>x1e.4xlarge</dd>
+    <dt>X1E_8_X_LARGE</dt>
+    <dd>x1e.8xlarge</dd>
+    <dt>X1E_X_LARGE</dt>
+    <dd>x1e.xlarge</dd>
+    <dt>Z1D_12_X_LARGE</dt>
+    <dd>z1d.12xlarge</dd>
+    <dt>Z1D_2_X_LARGE</dt>
+    <dd>z1d.2xlarge</dd>
+    <dt>Z1D_3_X_LARGE</dt>
+    <dd>z1d.3xlarge</dd>
+    <dt>Z1D_6_X_LARGE</dt>
+    <dd>z1d.6xlarge</dd>
+    <dt>Z1D_LARGE</dt>
+    <dd>z1d.large</dd>
+    <dt>Z1D_METAL</dt>
+    <dd>z1d.metal</dd>
+    <dt>Z1D_X_LARGE</dt>
+    <dd>z1d.xlarge</dd>
+    <dt>U_12TB1_METAL</dt>
+    <dd>u-12tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>U_6TB1_METAL</dt>
+    <dd>u-6tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>U_9TB1_METAL</dt>
+    <dd>u-9tb1.metal<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+    <dt>HS1_8_X_LARGE</dt>
+    <dd>hs1.8xlarge<p class="property-message">Deprecated: {{% md %}}This instancetype has been deprecated{{% /md %}}</p></dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="tenancy">Tenancy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Default</dt>
+    <dd>default</dd>
+    <dt>Dedicated</dt>
+    <dd>dedicated</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Tenancy<wbr>Default</dt>
+    <dd>default</dd>
+    <dt>Tenancy<wbr>Dedicated</dt>
+    <dd>dedicated</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Default</dt>
+    <dd>default</dd>
+    <dt>Dedicated</dt>
+    <dd>dedicated</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DEFAULT</dt>
+    <dd>default</dd>
+    <dt>DEDICATED</dt>
+    <dd>dedicated</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
