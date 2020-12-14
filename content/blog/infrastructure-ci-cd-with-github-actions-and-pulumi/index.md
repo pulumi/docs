@@ -20,7 +20,7 @@ tags:
 
 Today, we’re pleased to announce that Pulumi is available as a verified [GitHub Action in the GitHub Marketplace](https://github.com/marketplace/actions/pulumi-cli-action). It’s now easier than ever to start automating your infrastructure deployments with Pulumi and GitHub Actions. [Our new guide shows you how to get started with GitHub Actions and Pulumi]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}).  Here are just a few great examples of how to use the Pulumi GitHub Action that will simplify your cloud engineering tasks:
 
-### Master Builds*
+### Master Builds
 
 ```yaml
 name: Pulumi
