@@ -2,7 +2,7 @@
 title: Before You Begin | GCP
 h1: Before You Begin
 linktitle: Before You Begin
-meta_desc: This page provides an overview on how to get started with Pulumi when starting an Google Cloud project.
+meta_desc: This page provides an overview on how to get started with Pulumi and Google Cloud.
 weight: 2
 menu:
   getstarted:
@@ -58,11 +58,11 @@ Finally, configure Pulumi with Google Cloud.
 
 ### Configure Pulumi to access your Google Cloud account
 
-Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user or service account that has **Programmatic access** with rights to deploy and manage resources handled through Pulumi. 
+Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user or service account that has **Programmatic access** with rights to deploy and manage your Google Cloud resources.
 
 In this guide, you will need an IAM user account with permissions that can create and populate a Cloud Storage bucket, such as those in the predefined Storage Admin (`roles/storage.admin`) or the Storage Legacy Bucket Owner (`roles/storage.legacyBucketOwner`) roles.
 
-When developing locally, we recommend that you install the [Google Cloud SDK](https://cloud.google.com/sdk/install) and login with the `gcloud` CLI tool as shown below.
+When developing locally, we recommend that you install the [Google Cloud SDK](https://cloud.google.com/sdk/install) and log in with the `gcloud` CLI tool as shown below.
 
 {{< chooser os "linux,macos,windows" >}}
 {{% choosable os linux %}}
