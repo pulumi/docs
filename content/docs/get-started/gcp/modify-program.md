@@ -12,119 +12,163 @@ menu:
 aliases: ["/docs/quickstart/gcp/modify-program/"]
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's add some labels to it.
+Now that your storage bucket is provisioned, let's add an object to it. First, create a new directory called `site`.
 
-Replace the entire contents of {{< langfile >}} with the following:
+```bash
+mkdir site
+```
+
+Next, create a new `index.html` file with some content in it.
+
+{{< chooser os "macos,linux,windows" / >}}
+
+{{% choosable os macos %}}
+
+```bash
+cat <<EOT > site/index.html
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+EOT
+```
+
+{{% /choosable %}}
+
+{{% choosable os linux %}}
+
+```bash
+cat <<EOT > site/index.html
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+EOT
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+```batch
+(
+@echo.^<html^>
+@echo.  ^<body^>
+@echo.      ^<h1^>Hello, Pulumi!^</h1^>
+@echo.  ^</body^>
+@echo.^</html^>
+) > site/index.html
+```
+
+{{% /choosable %}}
+
+Now that you have your new `index.html` with some content, open your IDE or text editor and modify your program to add the contents of your `index.html` file to your storage bucket.
+
+To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const gcp = require("@pulumi/gcp");
+const fs = require("fs");
+```
 
-// Create a GCP resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket", {
-    labels: { "environment": "dev" }
+Next you will create a new bucket object on the lines right after creating the bucket itself.
+
+```javascript
+const bucketObject = new gcp.storage.BucketObject("index.html", {
+    bucket: bucket.name,
+    content: fs.readFileSync("site/index.html").toString(),
 });
-
-// Export the DNS name of the bucket
-exports.bucketName = bucket.url;
 ```
 
 {{% /choosable %}}
+
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import * as fs from "fs";
+```
 
-// Create a GCP resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket", {
-    labels: { "environment": "dev" }
+Next you will create a new bucket object on the lines right after creating the bucket itself.
+
+```typescript
+const bucketObject = new gcp.storage.BucketObject("index.html", {
+    bucket: bucket.name,
+    content: fs.readFileSync("site/index.html").toString(),
 });
-
-// Export the DNS name of the bucket
-export const bucketName = bucket.url;
 ```
 
 {{% /choosable %}}
+
 {{% choosable language python %}}
 
+Next you will create a new bucket object on the lines right after creating the bucket itself.
+
 ```python
-import pulumi
-from pulumi_gcp import storage
-
-# Create a GCP resource (Storage Bucket)
-bucket = storage.Bucket('my-bucket',
-    labels={'environment': "dev"})
-
-# Export the DNS name of the bucket
-pulumi.export('bucket_name',  bucket.url)
+bucketObject = storage.BucketObject(
+    'index.html',
+    bucket=bucket,
+    content=open('site/index.html').read(),
+)
 ```
 
 {{% /choosable %}}
+
 {{% choosable language go %}}
 
 ```go
-package main
-
 import (
-    "github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "io/ioutil"
+    // Existing imports...
 )
+```
 
-func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create a GCP resource (Storage Bucket)
-        bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
-            Labels: pulumi.StringMap{
-                "environment": pulumi.String("dev"),
-            },
-        })
-        if err != nil {
-            return err
-        }
+Next you will create a new bucket object on the lines right after creating the bucket itself.
 
-        // Export the DNS name of the bucket
-        ctx.Export("bucketName", bucket.Url)
-        return nil
-    })
+```go
+htmlContent, err := ioutil.ReadFile("site/index.html")
+if err != nil {
+    return err
+}
+
+bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
+    Bucket:  bucket.Name,
+    Content: pulumi.String(string(htmlContent)),
+})
+if err != nil {
+    return err
 }
 ```
 
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
-using Pulumi;
-using Pulumi.Gcp.Storage;
+using System.IO;
+```
 
-class MyStack : Stack
+Next you will create a new bucket object on the lines right after creating the bucket itself.
+
+```csharp
+var filePath = Path.GetFullPath("./site/index.html");
+var htmlString = File.ReadAllText(filePath);
+
+var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
-    public MyStack()
-    {
-        // Create a GCP resource (Storage Bucket)
-        var bucket = new Bucket("my-bucket", new BucketArgs{
-            Labels =
-            {
-                { "environment", "dev" }
-            }
-        });
-
-        // Export the DNS name of the bucket
-        this.BucketName = bucket.Url;
-    }
-
-    [Output]
-    public Output<string> BucketName { get; set; }
-}
+    Bucket = bucket.Name,
+    Content = htmlString,
+});
 ```
 
 {{% /choosable %}}
 
-Next, we'll deploy the changes.
+Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what storage bucket the object should live in.
+
+Next, you'll deploy your changes.
 
 {{< get-started-stepper >}}

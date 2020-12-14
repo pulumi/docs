@@ -3,7 +3,7 @@ title: Next Steps | GCP
 h1: Next Steps
 linktitle: Next Steps
 meta_desc: This page provides a list of tutorials that take a deeper dive into
-            GCP cloud resources.
+            Google Cloud cloud resources.
 weight: 9
 menu:
   getstarted:
@@ -13,7 +13,7 @@ menu:
 aliases: ["/docs/quickstart/gcp/next-steps/"]
 ---
 
-We've seen how to quickly get started using Google Cloud with Pulumi.
+You've seen how to quickly get started using Google Cloud with Pulumi.
 
 From here, you can dive deeper with additional Google Cloud examples:
 
