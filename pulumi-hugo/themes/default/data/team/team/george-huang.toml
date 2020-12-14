@@ -1,0 +1,9 @@
+id = "george-huang"
+name = "George Huang"
+title = "Director of Product Marketing"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "huanggeorge"
