@@ -225,6 +225,16 @@ A property is a "strict" enum when the input value **must** be one of the enumer
 }
 ```
 
+{{< chooser >}}
+{{< choosable language typescript >}}
+
+**Note:** When using TypeScript, "strict" enums will accept both the constant (`AccessTier.Cool`) or the literal string (`"Cool"`). If there is an accidental spelling error in the literal, you are *immediately* alerted to the issue rather than having to wait until runtime.
+
+![ENUM_ERROR_TYPESCRIPT](ts-enum-spelling.png)
+
+{{< /choosable >}}
+{{< /chooser >}}
+
 ### "Relaxed" enums
 
 When a property is a "relaxed" enum, the property type is specified as the `Union` of the enum type and the underlying primitive type. This means that you have the convenience of using the enum constants (i.e., `s3.CannedAcl.Private`), but you may also pass in the raw string (i.e., `"private"`).
