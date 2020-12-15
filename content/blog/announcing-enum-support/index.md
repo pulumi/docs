@@ -14,7 +14,7 @@ tags:
 - typescript
 ---
 
-Here at Pulumi, we believe in leveraging the best features of programming languages to create a delightful development experience for our users. Today, we continue our contributions in this area by announcing cross-language support for `enum` types in our provider SDKs.
+Here at Pulumi, we believe in leveraging the best features of programming languages to create a delightful development experience for our users. Today, we continue our contributions in this area by announcing cross-language support for `enum` types in our provider SDKs, available in all Pulumi languages - Python, TypeScript, .NET and Go.
 
 <!--more-->
 
@@ -196,7 +196,9 @@ While some properties make sense as "strict" enums (i.e., the input value **must
 
 ### "Strict" enums
 
-A property is a "strict" enum when the input value **must** be one of the enumerated values. In this case, the property type is specified as the enum type. Currently, only the Azure NextGen provider uses "strict" enums as the OpenAPI specification explicitly defines its properties as such.
+A property is a "strict" enum when the input value **must** be one of the enumerated values. In this case, the property type is specified as the enum type.
+
+We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a specification provided by the cloud provider (like our [Azure NextGen](https://www.pulumi.com/blog/announcing-nextgen-azure-provider/) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
 
 ```json5
 {
@@ -276,10 +278,10 @@ In the AWS provider (and other Terraform-based providers), we have opted for **o
 
 ## Try them out!
 
-You can find enum types integrated into v3.19.0 of the AWS provider and v0.3.0 of the Azure NextGen provider.
+You can find enum types integrated into `v3.19.0` of the [AWS provider](https://www.pulumi.com/docs/reference/pkg/aws/) and `v0.3.0` of the [Azure NextGen provider](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/), and we will be adding enums to other providers in the coming weeks and months.
 
-**Azure NextGen**: In the Azure NextGen provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs.
+**Azure NextGen**: In the Azure NextGen provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs. The Azure NextGen provider uses "strict" enums since the OpenAPI specification explicitly defines its properties as such.
 
-**AWS**: The AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375). We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more across our provider SDKs in the coming months.
+**AWS**: The AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375). We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more in the coming months.
 
 Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)! If there are properties that you would like to see represented as enums, let us know. Or even better, submit a PR to add them to the schema!
