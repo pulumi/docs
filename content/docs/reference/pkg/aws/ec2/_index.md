@@ -18,6 +18,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="availabilityzonegroup" title="AvailabilityZoneGroup"><span class="symbol resource"></span>AvailabilityZoneGroup</a></li>
     <li><a href="capacityreservation" title="CapacityReservation"><span class="symbol resource"></span>CapacityReservation</a></li>
     <li><a href="customergateway" title="CustomerGateway"><span class="symbol resource"></span>CustomerGateway</a></li>
+    <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="defaultnetworkacl" title="DefaultNetworkAcl"><span class="symbol resource"></span>DefaultNetworkAcl</a></li>
     <li><a href="defaultroutetable" title="DefaultRouteTable"><span class="symbol resource"></span>DefaultRouteTable</a></li>
     <li><a href="defaultsecuritygroup" title="DefaultSecurityGroup"><span class="symbol resource"></span>DefaultSecurityGroup</a></li>
@@ -87,6 +88,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getcoippool" title="GetCoipPool"><span class="symbol function"></span>GetCoipPool</a></li>
     <li><a href="getcoippools" title="GetCoipPools"><span class="symbol function"></span>GetCoipPools</a></li>
     <li><a href="getcustomergateway" title="GetCustomerGateway"><span class="symbol function"></span>GetCustomerGateway</a></li>
+    <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getinstancetype" title="GetInstanceType"><span class="symbol function"></span>GetInstanceType</a></li>
     <li><a href="getinstancetypeoffering" title="GetInstanceTypeOffering"><span class="symbol function"></span>GetInstanceTypeOffering</a></li>
@@ -133,7 +135,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.19.2</dd>
+	<dd>3.20.0</dd>
 </dl>
 
 
