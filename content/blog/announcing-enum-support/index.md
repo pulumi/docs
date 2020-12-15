@@ -1,6 +1,6 @@
 ---
 title: "Announcing Cross-Language Enum Support"
-date: 2020-12-14
+date: 2020-12-15
 draft: true
 meta_desc: "Cross-language enum support provides a quality-of-life improvement to the development experience."
 meta_image: meta.png
@@ -342,6 +342,9 @@ name string, args *BucketArgs, ...) (*Bucket, error) {
     ...
 }
 
+// In Go, relaxed enums retain the type of the underlying primitive.
+// However, the CannedAcl constants may still be passed in, as they are
+// of the same underlying type.
 type BucketArgs struct {
     Acl pulumi.StringPtrInput
     ...
@@ -355,7 +358,7 @@ type BucketArgs struct {
 
 You can find enum types integrated into `v3.19.0` of the [AWS provider](https://www.pulumi.com/docs/reference/pkg/aws/) and `v0.3.0` of the [Azure NextGen provider](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/), and we will be adding enums to other providers in the coming weeks and months.
 
-**Azure NextGen**: In the Azure NextGen provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs. The Azure NextGen provider uses "strict" enums since the OpenAPI specification explicitly defines its properties as such.
+**Azure NextGen**: In the Azure NextGen provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs. The Azure NextGen provider uses both "strict" and "relaxed" enums since the OpenAPI specification explicitly defines its properties as such.
 
 **AWS**: The AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375). We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more in the coming months.
 
