@@ -34,10 +34,6 @@ for any stacks that don't have it.
 * The **Activity** page for a stack allows users to scan the page quickly and tell which of the updates were run from a
 CI/CD pipeline and which ones were not.
 
-In addition to the above features, the assistant also recognizes any "production" stacks created in your organization and emails
-the creator if VCS configuration is not detected for it. Updating production stacks from a developer machines is not recommended,
-although there are some exceptions for doing so. The reasons for exceptions are beyond the scope of this document.
-
 ## Using The Same Service For VCS and CI/CD
 
 There are several benefits for a team to choose a single service for all of their team collaboration needs.
