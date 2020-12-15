@@ -192,7 +192,7 @@ Using the provided constants, you can avoid referring back to the documentation 
 
 ## Optimized for flexibility
 
-While some properties make sense as "strict" enums (i.e., the input value **must** be one of the enumerated values), there are times when it would be beneficial to have constants for commonly used values without restricting the input to **only** those values. We call this second category "relaxed" enums, and we model them a little differently in our schema.
+While some properties make sense as "strict" enums (i.e., the input value **must** be one of the enumerated values), there are times when it would be beneficial to have constants for commonly used values without restricting the input to **only** those values. We call this second category "relaxed" enums, and we model them a little differently in our SDKs.
 
 ### "Strict" enums
 
@@ -200,32 +200,72 @@ A property is a "strict" enum when the input value **must** be one of the enumer
 
 We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a specification provided by the cloud provider (like our [Azure NextGen](https://www.pulumi.com/blog/announcing-nextgen-azure-provider/) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
 
-```json5
-{
-  "resources": {
-    "azure-nextgen:storage/latest:StorageAccount": {
-      "inputProperties": {
-        "accessTier": {
-          "$ref": "#/types/azure-nextgen:storage/latest:AccessTier"
-        },
-      },
-    },
-  },
-  "types": {
-    "azure-nextgen:storage/latest:AccessTier": {
-      "type": "string",
-      "enum": [
-        {
-          "value": "Hot"
-        },
-        {
-          "value": "Cool"
-        }
-      ],
-    },
-  },
+{{< chooser >}}
+{{< choosable language typescript >}}
+
+```typescript
+export class StorageAccount extends pulumi.CustomResource {
+    constructor(name: string, args: StorageAccountArgs, opts?: pulumi.CustomResourceOptions) {...}
+}
+
+export interface StorageAccountArgs {
+    readonly accessTier?: pulumi.Input<enums.storage.latest.AccessTier>;
+    ...
 }
 ```
+
+{{< /choosable >}}
+{{< choosable language python >}}
+
+```python
+class StorageAccount(pulumi.CustomResource):
+    def __init__(__self__,
+                 resource_name: str,
+                 access_tier: Optional[pulumi.Input['AccessTier']] = None,
+                ...):
+        ...
+```
+
+{{< /choosable >}}
+{{< choosable language csharp >}}
+
+```csharp
+namespace Pulumi.AzureNextGen.Storage.Latest
+{
+    public partial class StorageAccount : Pulumi.CustomResource
+    {
+        public StorageAccount(string name, StorageAccountArgs args, ...)
+        {
+        }
+    }
+
+    public sealed class StorageAccountArgs : Pulumi.ResourceArgs
+    {
+        [Input("accessTier")]
+        public Input<Pulumi.AzureNextGen.Storage.Latest.AccessTier>? AccessTier { get; set; }
+
+        ...
+    }
+}
+```
+
+{{< /choosable >}}
+{{< choosable language go >}}
+
+```go
+func NewStorageAccount(ctx *pulumi.Context,
+name string, args *StorageAccountArgs, ...) (*StorageAccount, error) {
+    ...
+}
+
+type StorageAccountArgs struct {
+    AccessTier AccessTier
+    ...
+}
+```
+
+{{< /choosable >}}
+{{< /chooser >}}
 
 {{< chooser >}}
 {{< choosable language typescript >}}
@@ -243,38 +283,73 @@ When a property is a "relaxed" enum, the property type is specified as the `Unio
 
 In the AWS provider (and other Terraform-based providers), we have opted for **only** using "relaxed" enums. The reasoning here is twofold. Allowing the primitive type maintains backward compatibility and also allows users to use values that may not yet be represented in the Pulumi schema (e.g., a new Managed Policy ARN, EC2 Instance type, etc.).
 
-```json5
-{
-  "resources": {
-    "aws:s3/bucket:Bucket": {
-      "inputProperties": {
-        "acl": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "$ref": "#/types/aws:s3/CannedAcl:CannedAcl"
-            },
-          ]
-        },
-      },
-    },
-  },
-  "types": {
-    "aws:s3/CannedAcl:CannedAcl": {
-      "type": "string",
-      "enum": [
-        {
-          "name": "Private",
-          "value": "private"
-        },
-        ...
-      ],
-    },
-  },
+{{< chooser >}}
+{{< choosable language typescript >}}
+
+```typescript
+export class Bucket extends pulumi.CustomResource {
+    constructor(name: string, args?: BucketArgs, opts?: pulumi.CustomResourceOptions) {...}
+}
+
+export interface BucketArgs {
+    readonly acl?: pulumi.Input<string | enums.s3.CannedAcl>;
+    ...
 }
 ```
+
+{{< /choosable >}}
+{{< choosable language python >}}
+
+```python
+class Bucket(pulumi.CustomResource):
+    def __init__(__self__,
+                 resource_name: str,
+                 acl: Optional[pulumi.Input[Union[str, 'CannedAcl']]] = None,
+                 ...):
+        ...
+
+```
+
+{{< /choosable >}}
+{{< choosable language csharp >}}
+
+```csharp
+namespace Pulumi.Aws.S3
+{
+    public partial class Bucket : Pulumi.CustomResource
+    {
+        public Bucket(string name, BucketArgs? args = null, ...)
+        {
+        }
+    }
+
+    public sealed class BucketArgs : Pulumi.ResourceArgs
+    {
+        [Input("acl")]
+        public InputUnion<string, Pulumi.Aws.S3.CannedAcl>? Acl { get; set; }
+
+        ...
+    }
+}
+```
+
+{{< /choosable >}}
+{{< choosable language go >}}
+
+```go
+func NewBucket(ctx *pulumi.Context,
+name string, args *BucketArgs, ...) (*Bucket, error) {
+    ...
+}
+
+type BucketArgs struct {
+    Acl pulumi.StringPtrInput
+    ...
+}
+```
+
+{{< /choosable >}}
+{{< /chooser >}}
 
 ## Try them out!
 
