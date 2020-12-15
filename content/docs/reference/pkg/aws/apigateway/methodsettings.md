@@ -465,7 +465,6 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -473,49 +472,44 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="methodpath_csharp">
 <a href="#methodpath_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restapi_csharp">
 <a href="#restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stagename_csharp">
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -524,49 +518,44 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="methodpath_go">
 <a href="#methodpath_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restapi_go">
 <a href="#restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stagename_go">
 <a href="#stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -575,49 +564,44 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="methodpath_nodejs">
 <a href="#methodpath_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restapi_nodejs">
 <a href="#restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Rest<wbr>Api</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stagename_nodejs">
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -626,58 +610,49 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="method_path_python">
 <a href="#method_path_python" style="color: inherit; text-decoration: inherit;">method_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rest_api_python">
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_name_python">
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the MethodSettings resource produces the following output properties:
-
 
 
 
@@ -688,15 +663,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -705,15 +678,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -722,15 +693,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -739,18 +708,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -875,7 +839,6 @@ Get an existing MethodSettings resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -883,49 +846,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_methodpath_csharp">
 <a href="#state_methodpath_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
 <a href="#state_restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stagename_csharp">
 <a href="#state_stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -934,49 +892,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_methodpath_go">
 <a href="#state_methodpath_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
 <a href="#state_restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a> | string</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stagename_go">
 <a href="#state_stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -985,49 +938,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_methodpath_nodejs">
 <a href="#state_methodpath_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
 <a href="#state_restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Rest<wbr>Api</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a> | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stagename_nodejs">
 <a href="#state_stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1036,46 +984,42 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_method_path_python">
 <a href="#state_method_path_python" style="color: inherit; text-decoration: inherit;">method_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a> | str</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stage_name_python">
 <a href="#state_stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1084,11 +1028,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="methodsettingssettings">Method<wbr>Settings<wbr>Settings</h4>
@@ -1099,11 +1040,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#MethodSettingsSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#MethodSettingsSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.MethodSettingsSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.MethodSettingsSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1113,115 +1053,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="cachedataencrypted_csharp">
 <a href="#cachedataencrypted_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Data<wbr>Encrypted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachettlinseconds_csharp">
 <a href="#cachettlinseconds_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachingenabled_csharp">
 <a href="#cachingenabled_csharp" style="color: inherit; text-decoration: inherit;">Caching<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_csharp">
 <a href="#datatraceenabled_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_csharp">
 <a href="#logginglevel_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_csharp">
 <a href="#metricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireauthorizationforcachecontrol_csharp">
 <a href="#requireauthorizationforcachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_csharp">
 <a href="#throttlingburstlimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_csharp">
 <a href="#throttlingratelimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unauthorizedcachecontrolheaderstrategy_csharp">
 <a href="#unauthorizedcachecontrolheaderstrategy_csharp" style="color: inherit; text-decoration: inherit;">Unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1230,115 +1159,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="cachedataencrypted_go">
 <a href="#cachedataencrypted_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Data<wbr>Encrypted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachettlinseconds_go">
 <a href="#cachettlinseconds_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachingenabled_go">
 <a href="#cachingenabled_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_go">
 <a href="#datatraceenabled_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_go">
 <a href="#logginglevel_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_go">
 <a href="#metricsenabled_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireauthorizationforcachecontrol_go">
 <a href="#requireauthorizationforcachecontrol_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_go">
 <a href="#throttlingburstlimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_go">
 <a href="#throttlingratelimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unauthorizedcachecontrolheaderstrategy_go">
 <a href="#unauthorizedcachecontrolheaderstrategy_go" style="color: inherit; text-decoration: inherit;">Unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1347,115 +1265,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="cachedataencrypted_nodejs">
 <a href="#cachedataencrypted_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Data<wbr>Encrypted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachettlinseconds_nodejs">
 <a href="#cachettlinseconds_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachingenabled_nodejs">
 <a href="#cachingenabled_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_nodejs">
 <a href="#datatraceenabled_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Trace<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_nodejs">
 <a href="#logginglevel_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_nodejs">
 <a href="#metricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireauthorizationforcachecontrol_nodejs">
 <a href="#requireauthorizationforcachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_nodejs">
 <a href="#throttlingburstlimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Burst<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_nodejs">
 <a href="#throttlingratelimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Rate<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unauthorizedcachecontrolheaderstrategy_nodejs">
 <a href="#unauthorizedcachecontrolheaderstrategy_nodejs" style="color: inherit; text-decoration: inherit;">unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1464,123 +1371,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="cache_data_encrypted_python">
 <a href="#cache_data_encrypted_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>data_<wbr>encrypted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cache_ttl_in_seconds_python">
 <a href="#cache_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>in_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_enabled_python">
 <a href="#caching_enabled_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_trace_enabled_python">
 <a href="#data_trace_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>trace_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logging_level_python">
 <a href="#logging_level_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metrics_enabled_python">
 <a href="#metrics_enabled_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="require_authorization_for_cache_control_python">
 <a href="#require_authorization_for_cache_control_python" style="color: inherit; text-decoration: inherit;">require_<wbr>authorization_<wbr>for_<wbr>cache_<wbr>control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttling_burst_limit_python">
 <a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttling_rate_limit_python">
 <a href="#throttling_rate_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rate_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unauthorized_cache_control_header_strategy_python">
 <a href="#unauthorized_cache_control_header_strategy_python" style="color: inherit; text-decoration: inherit;">unauthorized_<wbr>cache_<wbr>control_<wbr>header_<wbr>strategy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

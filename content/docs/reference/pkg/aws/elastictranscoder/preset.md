@@ -482,7 +482,6 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -490,114 +489,103 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audio_csharp">
 <a href="#audio_csharp" style="color: inherit; text-decoration: inherit;">Audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audiocodecoptions_csharp">
 <a href="#audiocodecoptions_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnails_csharp">
 <a href="#thumbnails_csharp" style="color: inherit; text-decoration: inherit;">Thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="video_csharp">
 <a href="#video_csharp" style="color: inherit; text-decoration: inherit;">Video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="videocodecoptions_csharp">
 <a href="#videocodecoptions_csharp" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="videowatermarks_csharp">
 <a href="#videowatermarks_csharp" style="color: inherit; text-decoration: inherit;">Video<wbr>Watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -606,114 +594,103 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audio_go">
 <a href="#audio_go" style="color: inherit; text-decoration: inherit;">Audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audiocodecoptions_go">
 <a href="#audiocodecoptions_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnails_go">
 <a href="#thumbnails_go" style="color: inherit; text-decoration: inherit;">Thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="video_go">
 <a href="#video_go" style="color: inherit; text-decoration: inherit;">Video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="videocodecoptions_go">
 <a href="#videocodecoptions_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="videowatermarks_go">
 <a href="#videowatermarks_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -722,114 +699,103 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audio_nodejs">
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audiocodecoptions_nodejs">
 <a href="#audiocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnails_nodejs">
 <a href="#thumbnails_nodejs" style="color: inherit; text-decoration: inherit;">thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="video_nodejs">
 <a href="#video_nodejs" style="color: inherit; text-decoration: inherit;">video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="videocodecoptions_nodejs">
 <a href="#videocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="videowatermarks_nodejs">
 <a href="#videowatermarks_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -838,123 +804,108 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audio_python">
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audio_codec_options_python">
 <a href="#audio_codec_options_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>codec_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnails_python">
 <a href="#thumbnails_python" style="color: inherit; text-decoration: inherit;">thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="video_python">
 <a href="#video_python" style="color: inherit; text-decoration: inherit;">video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="video_codec_options_python">
 <a href="#video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="video_watermarks_python">
 <a href="#video_watermarks_python" style="color: inherit; text-decoration: inherit;">video_<wbr>watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">Sequence[Preset<wbr>Video<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Preset resource produces the following output properties:
-
 
 
 
@@ -965,25 +916,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -992,25 +940,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1019,25 +964,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1046,28 +988,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1192,7 +1128,6 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1200,124 +1135,112 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audio_csharp">
 <a href="#state_audio_csharp" style="color: inherit; text-decoration: inherit;">Audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audiocodecoptions_csharp">
 <a href="#state_audiocodecoptions_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_container_csharp">
 <a href="#state_container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnails_csharp">
 <a href="#state_thumbnails_csharp" style="color: inherit; text-decoration: inherit;">Thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_video_csharp">
 <a href="#state_video_csharp" style="color: inherit; text-decoration: inherit;">Video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_videocodecoptions_csharp">
 <a href="#state_videocodecoptions_csharp" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_videowatermarks_csharp">
 <a href="#state_videowatermarks_csharp" style="color: inherit; text-decoration: inherit;">Video<wbr>Watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1326,124 +1249,112 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audio_go">
 <a href="#state_audio_go" style="color: inherit; text-decoration: inherit;">Audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audiocodecoptions_go">
 <a href="#state_audiocodecoptions_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_container_go">
 <a href="#state_container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnails_go">
 <a href="#state_thumbnails_go" style="color: inherit; text-decoration: inherit;">Thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_video_go">
 <a href="#state_video_go" style="color: inherit; text-decoration: inherit;">Video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_videocodecoptions_go">
 <a href="#state_videocodecoptions_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_videowatermarks_go">
 <a href="#state_videowatermarks_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1452,124 +1363,112 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audio_nodejs">
 <a href="#state_audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audiocodecoptions_nodejs">
 <a href="#state_audiocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_container_nodejs">
 <a href="#state_container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnails_nodejs">
 <a href="#state_thumbnails_nodejs" style="color: inherit; text-decoration: inherit;">thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_video_nodejs">
 <a href="#state_video_nodejs" style="color: inherit; text-decoration: inherit;">video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_videocodecoptions_nodejs">
 <a href="#state_videocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Codec<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_videowatermarks_nodejs">
 <a href="#state_videowatermarks_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1578,121 +1477,110 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audio_python">
 <a href="#state_audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_audio_codec_options_python">
 <a href="#state_audio_codec_options_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>codec_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_container_python">
 <a href="#state_container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnails_python">
 <a href="#state_thumbnails_python" style="color: inherit; text-decoration: inherit;">thumbnails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_video_python">
 <a href="#state_video_python" style="color: inherit; text-decoration: inherit;">video</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_video_codec_options_python">
 <a href="#state_video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_video_watermarks_python">
 <a href="#state_video_watermarks_python" style="color: inherit; text-decoration: inherit;">video_<wbr>watermarks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presetvideowatermark">Sequence[Preset<wbr>Video<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1701,11 +1589,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="presetaudio">Preset<wbr>Audio</h4>
@@ -1716,11 +1601,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetAudioArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetAudioOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetAudioArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetAudio.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1730,60 +1614,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="audiopackingmode_csharp">
 <a href="#audiopackingmode_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Packing<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitrate_csharp">
 <a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="channels_csharp">
 <a href="#channels_csharp" style="color: inherit; text-decoration: inherit;">Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The number of audio channels in the output file
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_csharp">
 <a href="#codec_csharp" style="color: inherit; text-decoration: inherit;">Codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplerate_csharp">
 <a href="#samplerate_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1792,60 +1670,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="audiopackingmode_go">
 <a href="#audiopackingmode_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Packing<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitrate_go">
 <a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="channels_go">
 <a href="#channels_go" style="color: inherit; text-decoration: inherit;">Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The number of audio channels in the output file
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_go">
 <a href="#codec_go" style="color: inherit; text-decoration: inherit;">Codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplerate_go">
 <a href="#samplerate_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1854,60 +1726,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="audiopackingmode_nodejs">
 <a href="#audiopackingmode_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Packing<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitrate_nodejs">
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="channels_nodejs">
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The number of audio channels in the output file
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_nodejs">
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplerate_nodejs">
 <a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1916,63 +1782,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="audio_packing_mode_python">
 <a href="#audio_packing_mode_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>packing_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bit_rate_python">
 <a href="#bit_rate_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="channels_python">
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The number of audio channels in the output file
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_python">
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sample_rate_python">
 <a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</h4>
 {{% choosable language nodejs %}}
@@ -1982,11 +1839,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetAudioCodecOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetAudioCodecOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetAudioCodecOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetAudioCodecOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1996,49 +1852,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="bitdepth_csharp">
 <a href="#bitdepth_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Depth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitorder_csharp">
 <a href="#bitorder_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The order the bits of a PCM sample are stored in. The supported value is LittleEndian. (PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profile_csharp">
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If you specified AAC for Audio:Codec, choose the AAC profile for the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signed_csharp">
 <a href="#signed_csharp" style="color: inherit; text-decoration: inherit;">Signed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether audio samples are represented with negative and positive numbers (signed) or only positive numbers (unsigned). The supported value is Signed. (PCM Only)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2047,49 +1898,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="bitdepth_go">
 <a href="#bitdepth_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Depth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitorder_go">
 <a href="#bitorder_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The order the bits of a PCM sample are stored in. The supported value is LittleEndian. (PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profile_go">
 <a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If you specified AAC for Audio:Codec, choose the AAC profile for the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signed_go">
 <a href="#signed_go" style="color: inherit; text-decoration: inherit;">Signed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether audio samples are represented with negative and positive numbers (signed) or only positive numbers (unsigned). The supported value is Signed. (PCM Only)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2098,49 +1944,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="bitdepth_nodejs">
 <a href="#bitdepth_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Depth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitorder_nodejs">
 <a href="#bitorder_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The order the bits of a PCM sample are stored in. The supported value is LittleEndian. (PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profile_nodejs">
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If you specified AAC for Audio:Codec, choose the AAC profile for the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signed_nodejs">
 <a href="#signed_nodejs" style="color: inherit; text-decoration: inherit;">signed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether audio samples are represented with negative and positive numbers (signed) or only positive numbers (unsigned). The supported value is Signed. (PCM Only)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2149,52 +1990,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="bit_depth_python">
 <a href="#bit_depth_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>depth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bit_order_python">
 <a href="#bit_order_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The order the bits of a PCM sample are stored in. The supported value is LittleEndian. (PCM Only)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profile_python">
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If you specified AAC for Audio:Codec, choose the AAC profile for the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signed_python">
 <a href="#signed_python" style="color: inherit; text-decoration: inherit;">signed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether audio samples are represented with negative and positive numbers (signed) or only positive numbers (unsigned). The supported value is Signed. (PCM Only)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="presetthumbnails">Preset<wbr>Thumbnails</h4>
 {{% choosable language nodejs %}}
@@ -2204,11 +2037,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetThumbnailsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetThumbnailsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetThumbnails.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2218,93 +2050,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspectratio_csharp">
 <a href="#aspectratio_csharp" style="color: inherit; text-decoration: inherit;">Aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The format of thumbnails, if any. Valid formats are jpg and png.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_csharp">
 <a href="#maxheight_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_csharp">
 <a href="#maxwidth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="paddingpolicy_csharp">
 <a href="#paddingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Padding<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_csharp">
 <a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_csharp">
 <a href="#sizingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2313,93 +2136,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspectratio_go">
 <a href="#aspectratio_go" style="color: inherit; text-decoration: inherit;">Aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The format of thumbnails, if any. Valid formats are jpg and png.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_go">
 <a href="#maxheight_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_go">
 <a href="#maxwidth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="paddingpolicy_go">
 <a href="#paddingpolicy_go" style="color: inherit; text-decoration: inherit;">Padding<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_go">
 <a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_go">
 <a href="#sizingpolicy_go" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2408,93 +2222,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspectratio_nodejs">
 <a href="#aspectratio_nodejs" style="color: inherit; text-decoration: inherit;">aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The format of thumbnails, if any. Valid formats are jpg and png.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_nodejs">
 <a href="#maxheight_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_nodejs">
 <a href="#maxwidth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="paddingpolicy_nodejs">
 <a href="#paddingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">padding<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_nodejs">
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_nodejs">
 <a href="#sizingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2503,96 +2308,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspect_ratio_python">
 <a href="#aspect_ratio_python" style="color: inherit; text-decoration: inherit;">aspect_<wbr>ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The format of thumbnails, if any. Valid formats are jpg and png.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_height_python">
 <a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_width_python">
 <a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="padding_policy_python">
 <a href="#padding_policy_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_python">
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizing_policy_python">
 <a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="presetvideo">Preset<wbr>Video</h4>
 {{% choosable language nodejs %}}
@@ -2602,11 +2395,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetVideoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetVideoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetVideoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetVideo.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2616,148 +2408,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspectratio_csharp">
 <a href="#aspectratio_csharp" style="color: inherit; text-decoration: inherit;">Aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display aspect ratio of the video in the output file. Valid values are: `auto`, `1:1`, `4:3`, `3:2`, `16:9`. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values `max_width`, `max_height`, `sizing_policy`, `padding_policy`, and `display_aspect_ratio` instead of `resolution` and `aspect_ratio`.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitrate_csharp">
 <a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the video stream in the output file, in kilobits/second. You can configure variable bit rate or constant bit rate encoding.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_csharp">
 <a href="#codec_csharp" style="color: inherit; text-decoration: inherit;">Codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `vp8`, and `vp9`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayaspectratio_csharp">
 <a href="#displayaspectratio_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value that Elastic Transcoder adds to the metadata in the output file. If you set DisplayAspectRatio to auto, Elastic Transcoder chooses an aspect ratio that ensures square pixels. If you specify another option, Elastic Transcoder sets that value in the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedgop_csharp">
 <a href="#fixedgop_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Gop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to use a fixed value for Video:FixedGOP. Not applicable for containers of type gif. Valid values are true and false. Also known as, Fixed Number of Frames Between Keyframes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="framerate_csharp">
 <a href="#framerate_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The frames per second for the video stream in the output file. The following values are valid: `auto`, `10`, `15`, `23.97`, `24`, `25`, `29.97`, `30`, `50`, `60`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyframesmaxdist_csharp">
 <a href="#keyframesmaxdist_csharp" style="color: inherit; text-decoration: inherit;">Keyframes<wbr>Max<wbr>Dist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of frames between key frames. Not applicable for containers of type gif.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxframerate_csharp">
 <a href="#maxframerate_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Frame<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the input video for the frame rate of the output video, up to the maximum frame rate. If you do not specify a MaxFrameRate, Elastic Transcoder will use a default of 30.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_csharp">
 <a href="#maxheight_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the output video in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 96 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_csharp">
 <a href="#maxwidth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the output video in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 128 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="paddingpolicy_csharp">
 <a href="#paddingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Padding<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of the output video to make the total size of the output video match the values that you specified for `max_width` and `max_height`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_csharp">
 <a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The width and height of the video in the output file, in pixels. Valid values are `auto` and `widthxheight`. (see note for `aspect_ratio`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_csharp">
 <a href="#sizingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the output video. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2766,148 +2544,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspectratio_go">
 <a href="#aspectratio_go" style="color: inherit; text-decoration: inherit;">Aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display aspect ratio of the video in the output file. Valid values are: `auto`, `1:1`, `4:3`, `3:2`, `16:9`. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values `max_width`, `max_height`, `sizing_policy`, `padding_policy`, and `display_aspect_ratio` instead of `resolution` and `aspect_ratio`.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitrate_go">
 <a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the video stream in the output file, in kilobits/second. You can configure variable bit rate or constant bit rate encoding.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_go">
 <a href="#codec_go" style="color: inherit; text-decoration: inherit;">Codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `vp8`, and `vp9`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayaspectratio_go">
 <a href="#displayaspectratio_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value that Elastic Transcoder adds to the metadata in the output file. If you set DisplayAspectRatio to auto, Elastic Transcoder chooses an aspect ratio that ensures square pixels. If you specify another option, Elastic Transcoder sets that value in the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedgop_go">
 <a href="#fixedgop_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Gop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to use a fixed value for Video:FixedGOP. Not applicable for containers of type gif. Valid values are true and false. Also known as, Fixed Number of Frames Between Keyframes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="framerate_go">
 <a href="#framerate_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The frames per second for the video stream in the output file. The following values are valid: `auto`, `10`, `15`, `23.97`, `24`, `25`, `29.97`, `30`, `50`, `60`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyframesmaxdist_go">
 <a href="#keyframesmaxdist_go" style="color: inherit; text-decoration: inherit;">Keyframes<wbr>Max<wbr>Dist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of frames between key frames. Not applicable for containers of type gif.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxframerate_go">
 <a href="#maxframerate_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Frame<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the input video for the frame rate of the output video, up to the maximum frame rate. If you do not specify a MaxFrameRate, Elastic Transcoder will use a default of 30.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_go">
 <a href="#maxheight_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the output video in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 96 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_go">
 <a href="#maxwidth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the output video in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 128 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="paddingpolicy_go">
 <a href="#paddingpolicy_go" style="color: inherit; text-decoration: inherit;">Padding<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of the output video to make the total size of the output video match the values that you specified for `max_width` and `max_height`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_go">
 <a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The width and height of the video in the output file, in pixels. Valid values are `auto` and `widthxheight`. (see note for `aspect_ratio`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_go">
 <a href="#sizingpolicy_go" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the output video. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2916,148 +2680,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspectratio_nodejs">
 <a href="#aspectratio_nodejs" style="color: inherit; text-decoration: inherit;">aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display aspect ratio of the video in the output file. Valid values are: `auto`, `1:1`, `4:3`, `3:2`, `16:9`. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values `max_width`, `max_height`, `sizing_policy`, `padding_policy`, and `display_aspect_ratio` instead of `resolution` and `aspect_ratio`.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bitrate_nodejs">
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the video stream in the output file, in kilobits/second. You can configure variable bit rate or constant bit rate encoding.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_nodejs">
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `vp8`, and `vp9`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayaspectratio_nodejs">
 <a href="#displayaspectratio_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Aspect<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value that Elastic Transcoder adds to the metadata in the output file. If you set DisplayAspectRatio to auto, Elastic Transcoder chooses an aspect ratio that ensures square pixels. If you specify another option, Elastic Transcoder sets that value in the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedgop_nodejs">
 <a href="#fixedgop_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Gop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to use a fixed value for Video:FixedGOP. Not applicable for containers of type gif. Valid values are true and false. Also known as, Fixed Number of Frames Between Keyframes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="framerate_nodejs">
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The frames per second for the video stream in the output file. The following values are valid: `auto`, `10`, `15`, `23.97`, `24`, `25`, `29.97`, `30`, `50`, `60`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyframesmaxdist_nodejs">
 <a href="#keyframesmaxdist_nodejs" style="color: inherit; text-decoration: inherit;">keyframes<wbr>Max<wbr>Dist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of frames between key frames. Not applicable for containers of type gif.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxframerate_nodejs">
 <a href="#maxframerate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Frame<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the input video for the frame rate of the output video, up to the maximum frame rate. If you do not specify a MaxFrameRate, Elastic Transcoder will use a default of 30.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_nodejs">
 <a href="#maxheight_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the output video in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 96 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_nodejs">
 <a href="#maxwidth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the output video in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 128 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="paddingpolicy_nodejs">
 <a href="#paddingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">padding<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of the output video to make the total size of the output video match the values that you specified for `max_width` and `max_height`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_nodejs">
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The width and height of the video in the output file, in pixels. Valid values are `auto` and `widthxheight`. (see note for `aspect_ratio`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_nodejs">
 <a href="#sizingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the output video. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3066,151 +2816,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="aspect_ratio_python">
 <a href="#aspect_ratio_python" style="color: inherit; text-decoration: inherit;">aspect_<wbr>ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display aspect ratio of the video in the output file. Valid values are: `auto`, `1:1`, `4:3`, `3:2`, `16:9`. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values `max_width`, `max_height`, `sizing_policy`, `padding_policy`, and `display_aspect_ratio` instead of `resolution` and `aspect_ratio`.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bit_rate_python">
 <a href="#bit_rate_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The bit rate of the video stream in the output file, in kilobits/second. You can configure variable bit rate or constant bit rate encoding.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codec_python">
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `vp8`, and `vp9`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_aspect_ratio_python">
 <a href="#display_aspect_ratio_python" style="color: inherit; text-decoration: inherit;">display_<wbr>aspect_<wbr>ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value that Elastic Transcoder adds to the metadata in the output file. If you set DisplayAspectRatio to auto, Elastic Transcoder chooses an aspect ratio that ensures square pixels. If you specify another option, Elastic Transcoder sets that value in the output file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_gop_python">
 <a href="#fixed_gop_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>gop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether to use a fixed value for Video:FixedGOP. Not applicable for containers of type gif. Valid values are true and false. Also known as, Fixed Number of Frames Between Keyframes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frame_rate_python">
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The frames per second for the video stream in the output file. The following values are valid: `auto`, `10`, `15`, `23.97`, `24`, `25`, `29.97`, `30`, `50`, `60`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyframes_max_dist_python">
 <a href="#keyframes_max_dist_python" style="color: inherit; text-decoration: inherit;">keyframes_<wbr>max_<wbr>dist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of frames between key frames. Not applicable for containers of type gif.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_frame_rate_python">
 <a href="#max_frame_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>frame_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the input video for the frame rate of the output video, up to the maximum frame rate. If you do not specify a MaxFrameRate, Elastic Transcoder will use a default of 30.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_height_python">
 <a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the output video in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 96 and 3072, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_width_python">
 <a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the output video in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 128 and 4096, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="padding_policy_python">
 <a href="#padding_policy_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of the output video to make the total size of the output video match the values that you specified for `max_width` and `max_height`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolution_python">
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The width and height of the video in the output file, in pixels. Valid values are `auto` and `widthxheight`. (see note for `aspect_ratio`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizing_policy_python">
 <a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the output video. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, `ShrinkToFill`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="presetvideowatermark">Preset<wbr>Video<wbr>Watermark</h4>
 {{% choosable language nodejs %}}
@@ -3220,11 +2953,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetVideoWatermarkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PresetVideoWatermarkOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetVideoWatermarkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetVideoWatermark.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3234,115 +2966,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="horizontalalign_csharp">
 <a href="#horizontalalign_csharp" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="horizontaloffset_csharp">
 <a href="#horizontaloffset_csharp" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the horizontal position of the watermark to be offset from the position specified by `horizontal_align`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_csharp">
 <a href="#maxheight_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_csharp">
 <a href="#maxwidth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="opacity_csharp">
 <a href="#opacity_csharp" style="color: inherit; text-decoration: inherit;">Opacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A percentage that indicates how much you want a watermark to obscure the video in the location where it appears.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_csharp">
 <a href="#sizingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretch`, `ShrinkToFit`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A value that determines how Elastic Transcoder interprets values that you specified for `video_watermarks.horizontal_offset`, `video_watermarks.vertical_offset`, `video_watermarks.max_width`, and `video_watermarks.max_height`. Valid values are `Content` and `Frame`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="verticalalign_csharp">
 <a href="#verticalalign_csharp" style="color: inherit; text-decoration: inherit;">Vertical<wbr>Align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The vertical position of the watermark unless you specify a nonzero value for `vertical_align`. Valid values are `Top`, `Bottom`, `Center`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="verticaloffset_csharp">
 <a href="#verticaloffset_csharp" style="color: inherit; text-decoration: inherit;">Vertical<wbr>Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the vertical position of the watermark to be offset from the position specified by `vertical_align`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3351,115 +3072,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="horizontalalign_go">
 <a href="#horizontalalign_go" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="horizontaloffset_go">
 <a href="#horizontaloffset_go" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the horizontal position of the watermark to be offset from the position specified by `horizontal_align`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_go">
 <a href="#maxheight_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_go">
 <a href="#maxwidth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="opacity_go">
 <a href="#opacity_go" style="color: inherit; text-decoration: inherit;">Opacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A percentage that indicates how much you want a watermark to obscure the video in the location where it appears.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_go">
 <a href="#sizingpolicy_go" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretch`, `ShrinkToFit`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that determines how Elastic Transcoder interprets values that you specified for `video_watermarks.horizontal_offset`, `video_watermarks.vertical_offset`, `video_watermarks.max_width`, and `video_watermarks.max_height`. Valid values are `Content` and `Frame`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="verticalalign_go">
 <a href="#verticalalign_go" style="color: inherit; text-decoration: inherit;">Vertical<wbr>Align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The vertical position of the watermark unless you specify a nonzero value for `vertical_align`. Valid values are `Top`, `Bottom`, `Center`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="verticaloffset_go">
 <a href="#verticaloffset_go" style="color: inherit; text-decoration: inherit;">Vertical<wbr>Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the vertical position of the watermark to be offset from the position specified by `vertical_align`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3468,115 +3178,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="horizontalalign_nodejs">
 <a href="#horizontalalign_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="horizontaloffset_nodejs">
 <a href="#horizontaloffset_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the horizontal position of the watermark to be offset from the position specified by `horizontal_align`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxheight_nodejs">
 <a href="#maxheight_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxwidth_nodejs">
 <a href="#maxwidth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="opacity_nodejs">
 <a href="#opacity_nodejs" style="color: inherit; text-decoration: inherit;">opacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A percentage that indicates how much you want a watermark to obscure the video in the location where it appears.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizingpolicy_nodejs">
 <a href="#sizingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretch`, `ShrinkToFit`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A value that determines how Elastic Transcoder interprets values that you specified for `video_watermarks.horizontal_offset`, `video_watermarks.vertical_offset`, `video_watermarks.max_width`, and `video_watermarks.max_height`. Valid values are `Content` and `Frame`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="verticalalign_nodejs">
 <a href="#verticalalign_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The vertical position of the watermark unless you specify a nonzero value for `vertical_align`. Valid values are `Top`, `Bottom`, `Center`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="verticaloffset_nodejs">
 <a href="#verticaloffset_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the vertical position of the watermark to be offset from the position specified by `vertical_align`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3585,123 +3284,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="horizontal_align_python">
 <a href="#horizontal_align_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="horizontal_offset_python">
 <a href="#horizontal_offset_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the horizontal position of the watermark to be offset from the position specified by `horizontal_align`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_height_python">
 <a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum height of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_width_python">
 <a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum width of the watermark.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="opacity_python">
 <a href="#opacity_python" style="color: inherit; text-decoration: inherit;">opacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A percentage that indicates how much you want a watermark to obscure the video in the location where it appears.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sizing_policy_python">
 <a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretch`, `ShrinkToFit`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A value that determines how Elastic Transcoder interprets values that you specified for `video_watermarks.horizontal_offset`, `video_watermarks.vertical_offset`, `video_watermarks.max_width`, and `video_watermarks.max_height`. Valid values are `Content` and `Frame`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vertical_align_python">
 <a href="#vertical_align_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>align</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The vertical position of the watermark unless you specify a nonzero value for `vertical_align`. Valid values are `Top`, `Bottom`, `Center`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vertical_offset_python">
 <a href="#vertical_offset_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The amount by which you want the vertical position of the watermark to be offset from the position specified by `vertical_align`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 
