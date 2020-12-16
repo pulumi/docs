@@ -9,7 +9,7 @@ tags:
     - Test Driven Development
 ---
 
-**Guest Article:** [Ringo De Smet](https://www.linkedin.com/in/ringodesmet/), Founder of [Cumundi](https://www.cumundi.cloud), standardizes on Pulumi for writing infrastructure as reusable code libraries for his customers. Pulumi enables him to rapidly iterate through the build-test-release cycle of these building blocks.
+**Guest Article:** [Ringo De Smet](https://www.linkedin.com/in/ringodesmet/), Founder of Cumundi, standardizes on Pulumi for writing infrastructure as reusable code libraries for his customers. Pulumi enables him to rapidly iterate through the build-test-release cycle of these building blocks.
 
 Cumundi helps companies adopt cloud infrastructure in a more integral way. It has found that 75% of companies’ needs are covered by ‘vanilla’ infrastructure patterns. However, due to a shortage of people and time, there has been limited investment to take full advantage of cloud-native configurations - which can lead to inefficiency, poor performance, and higher costs.
 

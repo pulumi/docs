@@ -340,7 +340,6 @@ The LogDestinationPolicy resource accepts the following [input]({{< relref "/doc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -348,27 +347,24 @@ The LogDestinationPolicy resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="accesspolicy_csharp">
 <a href="#accesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destinationname_csharp">
 <a href="#destinationname_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -377,27 +373,24 @@ The LogDestinationPolicy resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="accesspolicy_go">
 <a href="#accesspolicy_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destinationname_go">
 <a href="#destinationname_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -406,27 +399,24 @@ The LogDestinationPolicy resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="accesspolicy_nodejs">
 <a href="#accesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destinationname_nodejs">
 <a href="#destinationname_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -435,36 +425,29 @@ The LogDestinationPolicy resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="access_policy_python">
 <a href="#access_policy_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_name_python">
 <a href="#destination_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the LogDestinationPolicy resource produces the following output properties:
-
 
 
 
@@ -475,15 +458,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -492,15 +473,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -509,15 +488,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -526,18 +503,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -662,7 +634,6 @@ Get an existing LogDestinationPolicy resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -670,27 +641,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accesspolicy_csharp">
 <a href="#state_accesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationname_csharp">
 <a href="#state_destinationname_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -699,27 +667,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accesspolicy_go">
 <a href="#state_accesspolicy_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationname_go">
 <a href="#state_destinationname_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -728,27 +693,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accesspolicy_nodejs">
 <a href="#state_accesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationname_nodejs">
 <a href="#state_destinationname_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -757,32 +719,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_access_policy_python">
 <a href="#state_access_policy_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_name_python">
 <a href="#state_destination_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name for the subscription filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

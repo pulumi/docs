@@ -287,7 +287,6 @@ The S3BucketAssociation resource accepts the following [input]({{< relref "/docs
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -295,49 +294,44 @@ The S3BucketAssociation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationtype_csharp">
 <a href="#classificationtype_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memberaccountid_csharp">
 <a href="#memberaccountid_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -346,49 +340,44 @@ The S3BucketAssociation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationtype_go">
 <a href="#classificationtype_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memberaccountid_go">
 <a href="#memberaccountid_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -397,49 +386,44 @@ The S3BucketAssociation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationtype_nodejs">
 <a href="#classificationtype_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memberaccountid_nodejs">
 <a href="#memberaccountid_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -448,58 +432,49 @@ The S3BucketAssociation resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classification_type_python">
 <a href="#classification_type_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="member_account_id_python">
 <a href="#member_account_id_python" style="color: inherit; text-decoration: inherit;">member_<wbr>account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the S3BucketAssociation resource produces the following output properties:
-
 
 
 
@@ -510,15 +485,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -527,15 +500,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -544,15 +515,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -561,18 +530,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -697,7 +661,6 @@ Get an existing S3BucketAssociation resource's state with the given name, ID, an
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -705,49 +668,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucketname_csharp">
 <a href="#state_bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_classificationtype_csharp">
 <a href="#state_classificationtype_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memberaccountid_csharp">
 <a href="#state_memberaccountid_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_prefix_csharp">
 <a href="#state_prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -756,49 +714,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucketname_go">
 <a href="#state_bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_classificationtype_go">
 <a href="#state_classificationtype_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memberaccountid_go">
 <a href="#state_memberaccountid_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_prefix_go">
 <a href="#state_prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -807,49 +760,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucketname_nodejs">
 <a href="#state_bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_classificationtype_nodejs">
 <a href="#state_classificationtype_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memberaccountid_nodejs">
 <a href="#state_memberaccountid_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_prefix_nodejs">
 <a href="#state_prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -858,46 +806,42 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucket_name_python">
 <a href="#state_bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_classification_type_python">
 <a href="#state_classification_type_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_member_account_id_python">
 <a href="#state_member_account_id_python" style="color: inherit; text-decoration: inherit;">member_<wbr>account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_prefix_python">
 <a href="#state_prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -906,11 +850,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</h4>
@@ -921,11 +862,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Macie.Inputs.S3BucketAssociationClassificationTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Macie.Outputs.S3BucketAssociationClassificationType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -935,29 +875,26 @@ The following state arguments are supported:
             title="Optional">
         <span id="continuous_csharp">
 <a href="#continuous_csharp" style="color: inherit; text-decoration: inherit;">Continuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onetime_csharp">
 <a href="#onetime_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -966,29 +903,26 @@ Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie onl
             title="Optional">
         <span id="continuous_go">
 <a href="#continuous_go" style="color: inherit; text-decoration: inherit;">Continuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onetime_go">
 <a href="#onetime_go" style="color: inherit; text-decoration: inherit;">One<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -997,29 +931,26 @@ Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie onl
             title="Optional">
         <span id="continuous_nodejs">
 <a href="#continuous_nodejs" style="color: inherit; text-decoration: inherit;">continuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onetime_nodejs">
 <a href="#onetime_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1028,37 +959,26 @@ Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie onl
             title="Optional">
         <span id="continuous_python">
 <a href="#continuous_python" style="color: inherit; text-decoration: inherit;">continuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="one_time_python">
 <a href="#one_time_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

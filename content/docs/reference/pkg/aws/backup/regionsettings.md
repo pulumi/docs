@@ -301,7 +301,6 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -309,16 +308,14 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="resourcetypeoptinpreference_csharp">
 <a href="#resourcetypeoptinpreference_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -327,16 +324,14 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="resourcetypeoptinpreference_go">
 <a href="#resourcetypeoptinpreference_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]bool</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -345,16 +340,14 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="resourcetypeoptinpreference_nodejs">
 <a href="#resourcetypeoptinpreference_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: boolean}</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -363,25 +356,19 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="resource_type_opt_in_preference_python">
 <a href="#resource_type_opt_in_preference_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type_<wbr>opt_<wbr>in_<wbr>preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RegionSettings resource produces the following output properties:
-
 
 
 
@@ -392,15 +379,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -409,15 +394,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -426,15 +409,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -443,18 +424,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -579,7 +555,6 @@ Get an existing RegionSettings resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -587,16 +562,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resourcetypeoptinpreference_csharp">
 <a href="#state_resourcetypeoptinpreference_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -605,16 +578,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resourcetypeoptinpreference_go">
 <a href="#state_resourcetypeoptinpreference_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]bool</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -623,16 +594,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resourcetypeoptinpreference_nodejs">
 <a href="#state_resourcetypeoptinpreference_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: boolean}</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -641,21 +610,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resource_type_opt_in_preference_python">
 <a href="#state_resource_type_opt_in_preference_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type_<wbr>opt_<wbr>in_<wbr>preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

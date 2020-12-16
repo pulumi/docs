@@ -303,7 +303,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -311,115 +310,104 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="inputbucket_csharp">
 <a href="#inputbucket_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="awskmskeyarn_csharp">
 <a href="#awskmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentconfig_csharp">
 <a href="#contentconfig_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentconfigpermissions_csharp">
 <a href="#contentconfigpermissions_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_csharp">
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputbucket_csharp">
 <a href="#outputbucket_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnailconfig_csharp">
 <a href="#thumbnailconfig_csharp" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnailconfigpermissions_csharp">
 <a href="#thumbnailconfigpermissions_csharp" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -428,115 +416,104 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="inputbucket_go">
 <a href="#inputbucket_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="awskmskeyarn_go">
 <a href="#awskmskeyarn_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentconfig_go">
 <a href="#contentconfig_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentconfigpermissions_go">
 <a href="#contentconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_go">
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputbucket_go">
 <a href="#outputbucket_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnailconfig_go">
 <a href="#thumbnailconfig_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnailconfigpermissions_go">
 <a href="#thumbnailconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -545,115 +522,104 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="inputbucket_nodejs">
 <a href="#inputbucket_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="awskmskeyarn_nodejs">
 <a href="#awskmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentconfig_nodejs">
 <a href="#contentconfig_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentconfigpermissions_nodejs">
 <a href="#contentconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_nodejs">
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputbucket_nodejs">
 <a href="#outputbucket_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnailconfig_nodejs">
 <a href="#thumbnailconfig_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnailconfigpermissions_nodejs">
 <a href="#thumbnailconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -662,124 +628,109 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="input_bucket_python">
 <a href="#input_bucket_python" style="color: inherit; text-decoration: inherit;">input_<wbr>bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aws_kms_key_arn_python">
 <a href="#aws_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms_<wbr>key_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_config_python">
 <a href="#content_config_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_config_permissions_python">
 <a href="#content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">Sequence[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_python">
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_bucket_python">
 <a href="#output_bucket_python" style="color: inherit; text-decoration: inherit;">output_<wbr>bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnail_config_python">
 <a href="#thumbnail_config_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thumbnail_config_permissions_python">
 <a href="#thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Sequence[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Pipeline resource produces the following output properties:
-
 
 
 
@@ -790,25 +741,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -817,25 +765,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -844,25 +789,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -871,28 +813,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1017,7 +953,6 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1025,125 +960,113 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_awskmskeyarn_csharp">
 <a href="#state_awskmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_contentconfig_csharp">
 <a href="#state_contentconfig_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_contentconfigpermissions_csharp">
 <a href="#state_contentconfigpermissions_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inputbucket_csharp">
 <a href="#state_inputbucket_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_csharp">
 <a href="#state_notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_outputbucket_csharp">
 <a href="#state_outputbucket_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnailconfig_csharp">
 <a href="#state_thumbnailconfig_csharp" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnailconfigpermissions_csharp">
 <a href="#state_thumbnailconfigpermissions_csharp" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1152,125 +1075,113 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_awskmskeyarn_go">
 <a href="#state_awskmskeyarn_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_contentconfig_go">
 <a href="#state_contentconfig_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_contentconfigpermissions_go">
 <a href="#state_contentconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inputbucket_go">
 <a href="#state_inputbucket_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_go">
 <a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_outputbucket_go">
 <a href="#state_outputbucket_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnailconfig_go">
 <a href="#state_thumbnailconfig_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnailconfigpermissions_go">
 <a href="#state_thumbnailconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1279,125 +1190,113 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_awskmskeyarn_nodejs">
 <a href="#state_awskmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms<wbr>Key<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_contentconfig_nodejs">
 <a href="#state_contentconfig_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_contentconfigpermissions_nodejs">
 <a href="#state_contentconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inputbucket_nodejs">
 <a href="#state_inputbucket_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_nodejs">
 <a href="#state_notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_outputbucket_nodejs">
 <a href="#state_outputbucket_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnailconfig_nodejs">
 <a href="#state_thumbnailconfig_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnailconfigpermissions_nodejs">
 <a href="#state_thumbnailconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config<wbr>Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1406,122 +1305,111 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aws_kms_key_arn_python">
 <a href="#state_aws_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms_<wbr>key_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_content_config_python">
 <a href="#state_content_config_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_content_config_permissions_python">
 <a href="#state_content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinecontentconfigpermission">Sequence[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_input_bucket_python">
 <a href="#state_input_bucket_python" style="color: inherit; text-decoration: inherit;">input_<wbr>bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifications_python">
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_output_bucket_python">
 <a href="#state_output_bucket_python" style="color: inherit; text-decoration: inherit;">output_<wbr>bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnail_config_python">
 <a href="#state_thumbnail_config_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thumbnail_config_permissions_python">
 <a href="#state_thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Sequence[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1530,11 +1418,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</h4>
@@ -1545,11 +1430,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineContentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineContentConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PipelineContentConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PipelineContentConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1559,27 +1443,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1588,27 +1469,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1617,27 +1495,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1646,30 +1521,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission</h4>
 {{% choosable language nodejs %}}
@@ -1679,11 +1548,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineContentConfigPermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineContentConfigPermissionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PipelineContentConfigPermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PipelineContentConfigPermission.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1693,38 +1561,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_csharp">
 <a href="#accesses_csharp" style="color: inherit; text-decoration: inherit;">Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_csharp">
 <a href="#grantee_csharp" style="color: inherit; text-decoration: inherit;">Grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granteetype_csharp">
 <a href="#granteetype_csharp" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `content_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1733,38 +1597,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_go">
 <a href="#accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_go">
 <a href="#grantee_go" style="color: inherit; text-decoration: inherit;">Grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granteetype_go">
 <a href="#granteetype_go" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `content_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1773,38 +1633,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_nodejs">
 <a href="#accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_nodejs">
 <a href="#grantee_nodejs" style="color: inherit; text-decoration: inherit;">grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granteetype_nodejs">
 <a href="#granteetype_nodejs" style="color: inherit; text-decoration: inherit;">grantee<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `content_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1813,41 +1669,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_python">
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_python">
 <a href="#grantee_python" style="color: inherit; text-decoration: inherit;">grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to transcoded files and playlists.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_type_python">
 <a href="#grantee_type_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `content_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="pipelinenotifications">Pipeline<wbr>Notifications</h4>
 {{% choosable language nodejs %}}
@@ -1857,11 +1706,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineNotificationsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineNotificationsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PipelineNotificationsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PipelineNotifications.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1871,49 +1719,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="completed_csharp">
 <a href="#completed_csharp" style="color: inherit; text-decoration: inherit;">Completed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="progressing_csharp">
 <a href="#progressing_csharp" style="color: inherit; text-decoration: inherit;">Progressing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1922,49 +1765,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="completed_go">
 <a href="#completed_go" style="color: inherit; text-decoration: inherit;">Completed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="progressing_go">
 <a href="#progressing_go" style="color: inherit; text-decoration: inherit;">Progressing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1973,49 +1811,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="completed_nodejs">
 <a href="#completed_nodejs" style="color: inherit; text-decoration: inherit;">completed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="progressing_nodejs">
 <a href="#progressing_nodejs" style="color: inherit; text-decoration: inherit;">progressing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2024,52 +1857,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="completed_python">
 <a href="#completed_python" style="color: inherit; text-decoration: inherit;">completed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="progressing_python">
 <a href="#progressing_python" style="color: inherit; text-decoration: inherit;">progressing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -2079,11 +1904,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineThumbnailConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineThumbnailConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PipelineThumbnailConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PipelineThumbnailConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2093,27 +1917,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2122,27 +1943,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2151,27 +1969,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2180,30 +1995,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</h4>
 {{% choosable language nodejs %}}
@@ -2213,11 +2022,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineThumbnailConfigPermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder?tab=doc#PipelineThumbnailConfigPermissionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PipelineThumbnailConfigPermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PipelineThumbnailConfigPermission.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2227,38 +2035,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_csharp">
 <a href="#accesses_csharp" style="color: inherit; text-decoration: inherit;">Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_csharp">
 <a href="#grantee_csharp" style="color: inherit; text-decoration: inherit;">Grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granteetype_csharp">
 <a href="#granteetype_csharp" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2267,38 +2071,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_go">
 <a href="#accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_go">
 <a href="#grantee_go" style="color: inherit; text-decoration: inherit;">Grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granteetype_go">
 <a href="#granteetype_go" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2307,38 +2107,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_nodejs">
 <a href="#accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_nodejs">
 <a href="#grantee_nodejs" style="color: inherit; text-decoration: inherit;">grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granteetype_nodejs">
 <a href="#granteetype_nodejs" style="color: inherit; text-decoration: inherit;">grantee<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2347,46 +2143,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesses_python">
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_python">
 <a href="#grantee_python" style="color: inherit; text-decoration: inherit;">grantee</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to thumbnail files.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grantee_type_python">
 <a href="#grantee_type_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

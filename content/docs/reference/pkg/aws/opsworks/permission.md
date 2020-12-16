@@ -282,7 +282,6 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -290,60 +289,54 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="userarn_csharp">
 <a href="#userarn_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowssh_csharp">
 <a href="#allowssh_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsudo_csharp">
 <a href="#allowsudo_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stackid_csharp">
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -352,60 +345,54 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="userarn_go">
 <a href="#userarn_go" style="color: inherit; text-decoration: inherit;">User<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowssh_go">
 <a href="#allowssh_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsudo_go">
 <a href="#allowsudo_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stackid_go">
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -414,60 +401,54 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="userarn_nodejs">
 <a href="#userarn_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowssh_nodejs">
 <a href="#allowssh_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsudo_nodejs">
 <a href="#allowsudo_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stackid_nodejs">
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -476,69 +457,59 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="user_arn_python">
 <a href="#user_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_ssh_python">
 <a href="#allow_ssh_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_sudo_python">
 <a href="#allow_sudo_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stack_id_python">
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Permission resource produces the following output properties:
-
 
 
 
@@ -549,15 +520,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -566,15 +535,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -583,15 +550,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -600,18 +565,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -736,7 +696,6 @@ Get an existing Permission resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -744,60 +703,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allowssh_csharp">
 <a href="#state_allowssh_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowsudo_csharp">
 <a href="#state_allowsudo_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_level_csharp">
 <a href="#state_level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stackid_csharp">
 <a href="#state_stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userarn_csharp">
 <a href="#state_userarn_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -806,60 +759,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allowssh_go">
 <a href="#state_allowssh_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowsudo_go">
 <a href="#state_allowsudo_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_level_go">
 <a href="#state_level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stackid_go">
 <a href="#state_stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userarn_go">
 <a href="#state_userarn_go" style="color: inherit; text-decoration: inherit;">User<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -868,60 +815,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allowssh_nodejs">
 <a href="#state_allowssh_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowsudo_nodejs">
 <a href="#state_allowsudo_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_level_nodejs">
 <a href="#state_level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stackid_nodejs">
 <a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userarn_nodejs">
 <a href="#state_userarn_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -930,65 +871,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allow_ssh_python">
 <a href="#state_allow_ssh_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use SSH to communicate with the instance
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_sudo_python">
 <a href="#state_allow_sudo_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sudo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the user is allowed to use sudo to elevate privileges
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_level_python">
 <a href="#state_level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stack_id_python">
 <a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The stack to set the permissions for
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_arn_python">
 <a href="#state_user_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN to set permissions for
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

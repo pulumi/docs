@@ -939,7 +939,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -947,82 +946,74 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulegroupconfiguration_csharp">
 <a href="#rulegroupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1031,82 +1022,74 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulegroup_go">
 <a href="#rulegroup_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1115,82 +1098,74 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulegroup_nodejs">
 <a href="#rulegroup_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1199,91 +1174,79 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_group_python">
 <a href="#rule_group_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RuleGroup resource produces the following output properties:
-
 
 
 
@@ -1294,37 +1257,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetoken_csharp">
 <a href="#updatetoken_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1333,37 +1292,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetoken_go">
 <a href="#updatetoken_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1372,37 +1327,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetoken_nodejs">
 <a href="#updatetoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1411,40 +1362,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="update_token_python">
 <a href="#update_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1569,7 +1513,6 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1577,104 +1520,94 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_capacity_csharp">
 <a href="#state_capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rulegroupconfiguration_csharp">
 <a href="#state_rulegroupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_csharp">
 <a href="#state_updatetoken_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1683,104 +1616,94 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_capacity_go">
 <a href="#state_capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rulegroup_go">
 <a href="#state_rulegroup_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_go">
 <a href="#state_updatetoken_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1789,104 +1712,94 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_capacity_nodejs">
 <a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rulegroup_nodejs">
 <a href="#state_rulegroup_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_nodejs">
 <a href="#state_updatetoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1895,101 +1808,92 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_capacity_python">
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rule_group_python">
 <a href="#state_rule_group_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_update_token_python">
 <a href="#state_update_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1998,11 +1902,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</h4>
@@ -2013,11 +1914,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2027,27 +1927,24 @@ The following state arguments are supported:
             title="Required">
         <span id="rulessource_csharp">
 <a href="#rulessource_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulevariables_csharp">
 <a href="#rulevariables_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2056,27 +1953,24 @@ The following state arguments are supported:
             title="Required">
         <span id="rulessource_go">
 <a href="#rulessource_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulevariables_go">
 <a href="#rulevariables_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2085,27 +1979,24 @@ The following state arguments are supported:
             title="Required">
         <span id="rulessource_nodejs">
 <a href="#rulessource_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulevariables_nodejs">
 <a href="#rulevariables_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2114,30 +2005,24 @@ The following state arguments are supported:
             title="Required">
         <span id="rules_source_python">
 <a href="#rules_source_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_variables_python">
 <a href="#rule_variables_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</h4>
 {{% choosable language nodejs %}}
@@ -2147,11 +2032,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariables.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2161,27 +2045,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="ipsets_csharp">
 <a href="#ipsets_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portsets_csharp">
 <a href="#portsets_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2190,27 +2071,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="ipsets_go">
 <a href="#ipsets_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portsets_go">
 <a href="#portsets_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2219,27 +2097,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="ipsets_nodejs">
 <a href="#ipsets_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portsets_nodejs">
 <a href="#portsets_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2248,30 +2123,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="ip_sets_python">
 <a href="#ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_sets_python">
 <a href="#port_sets_python" style="color: inherit; text-decoration: inherit;">port_<wbr>sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -2281,11 +2150,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesIpSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2295,27 +2163,24 @@ The following state arguments are supported:
             title="Required">
         <span id="ipset_csharp">
 <a href="#ipset_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique alphanumeric string to identify the `ip_set`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2324,27 +2189,24 @@ The following state arguments are supported:
             title="Required">
         <span id="ipset_go">
 <a href="#ipset_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique alphanumeric string to identify the `ip_set`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2353,27 +2215,24 @@ The following state arguments are supported:
             title="Required">
         <span id="ipset_nodejs">
 <a href="#ipset_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique alphanumeric string to identify the `ip_set`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2382,30 +2241,24 @@ The following state arguments are supported:
             title="Required">
         <span id="ip_set_python">
 <a href="#ip_set_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique alphanumeric string to identify the `ip_set`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -2415,11 +2268,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetIpSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesIpSetIpSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2429,16 +2281,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_csharp">
 <a href="#definitions_csharp" style="color: inherit; text-decoration: inherit;">Definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses and address ranges, in CIDR notation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2447,16 +2297,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_go">
 <a href="#definitions_go" style="color: inherit; text-decoration: inherit;">Definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses and address ranges, in CIDR notation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2465,16 +2313,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_nodejs">
 <a href="#definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses and address ranges, in CIDR notation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2483,19 +2329,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_python">
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses and address ranges, in CIDR notation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -2505,11 +2346,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesPortSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2519,27 +2359,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An unique alphanumeric string to identify the `port_set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="portset_csharp">
 <a href="#portset_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2548,27 +2385,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An unique alphanumeric string to identify the `port_set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="portset_go">
 <a href="#portset_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2577,27 +2411,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An unique alphanumeric string to identify the `port_set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="portset_nodejs">
 <a href="#portset_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2606,30 +2437,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An unique alphanumeric string to identify the `port_set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_set_python">
 <a href="#port_set_python" style="color: inherit; text-decoration: inherit;">port_<wbr>set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -2639,11 +2464,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetPortSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesPortSetPortSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2653,16 +2477,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_csharp">
 <a href="#definitions_csharp" style="color: inherit; text-decoration: inherit;">Definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of port ranges.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2671,16 +2493,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_go">
 <a href="#definitions_go" style="color: inherit; text-decoration: inherit;">Definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of port ranges.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2689,16 +2509,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_nodejs">
 <a href="#definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of port ranges.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2707,19 +2525,14 @@ The following state arguments are supported:
             title="Required">
         <span id="definitions_python">
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of port ranges.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</h4>
 {{% choosable language nodejs %}}
@@ -2729,11 +2542,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSource.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2743,49 +2555,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="rulessourcelist_csharp">
 <a href="#rulessourcelist_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulesstring_csharp">
 <a href="#rulesstring_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statefulrules_csharp">
 <a href="#statefulrules_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statelessrulesandcustomactions_csharp">
 <a href="#statelessrulesandcustomactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2794,49 +2601,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="rulessourcelist_go">
 <a href="#rulessourcelist_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulesstring_go">
 <a href="#rulesstring_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statefulrules_go">
 <a href="#statefulrules_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statelessrulesandcustomactions_go">
 <a href="#statelessrulesandcustomactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2845,49 +2647,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="rulessourcelist_nodejs">
 <a href="#rulessourcelist_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulesstring_nodejs">
 <a href="#rulesstring_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statefulrules_nodejs">
 <a href="#statefulrules_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statelessrulesandcustomactions_nodejs">
 <a href="#statelessrulesandcustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2896,52 +2693,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="rules_source_list_python">
 <a href="#rules_source_list_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_string_python">
 <a href="#rules_string_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>string</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stateful_rules_python">
 <a href="#stateful_rules_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stateless_rules_and_custom_actions_python">
 <a href="#stateless_rules_and_custom_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rules_<wbr>and_<wbr>custom_<wbr>actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</h4>
 {{% choosable language nodejs %}}
@@ -2951,11 +2740,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceRulesSourceListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceRulesSourceListOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceRulesSourceListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceRulesSourceList.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2965,38 +2753,34 @@ The following state arguments are supported:
             title="Required">
         <span id="generatedrulestype_csharp">
 <a href="#generatedrulestype_csharp" style="color: inherit; text-decoration: inherit;">Generated<wbr>Rules<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targettypes_csharp">
 <a href="#targettypes_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targets_csharp">
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of domains that you want to inspect for in your traffic flows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3005,38 +2789,34 @@ The following state arguments are supported:
             title="Required">
         <span id="generatedrulestype_go">
 <a href="#generatedrulestype_go" style="color: inherit; text-decoration: inherit;">Generated<wbr>Rules<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targettypes_go">
 <a href="#targettypes_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targets_go">
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of domains that you want to inspect for in your traffic flows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3045,38 +2825,34 @@ The following state arguments are supported:
             title="Required">
         <span id="generatedrulestype_nodejs">
 <a href="#generatedrulestype_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Rules<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targettypes_nodejs">
 <a href="#targettypes_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targets_nodejs">
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of domains that you want to inspect for in your traffic flows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3085,41 +2861,34 @@ The following state arguments are supported:
             title="Required">
         <span id="generated_rules_type_python">
 <a href="#generated_rules_type_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>rules_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_types_python">
 <a href="#target_types_python" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targets_python">
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of domains that you want to inspect for in your traffic flows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -3129,11 +2898,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatefulRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatefulRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3143,38 +2911,34 @@ The following state arguments are supported:
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruleoptions_csharp">
 <a href="#ruleoptions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3183,38 +2947,34 @@ The following state arguments are supported:
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruleoptions_go">
 <a href="#ruleoptions_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3223,38 +2983,34 @@ The following state arguments are supported:
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruleoptions_nodejs">
 <a href="#ruleoptions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3263,41 +3019,34 @@ The following state arguments are supported:
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rule_options_python">
 <a href="#rule_options_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</h4>
 {{% choosable language nodejs %}}
@@ -3307,11 +3056,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeader.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3321,71 +3069,64 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destinationport_csharp">
 <a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceport_csharp">
 <a href="#sourceport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3394,71 +3135,64 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destinationport_go">
 <a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceport_go">
 <a href="#sourceport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3467,71 +3201,64 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destinationport_nodejs">
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceport_nodejs">
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3540,74 +3267,64 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_port_python">
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_port_python">
 <a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option</h4>
 {{% choosable language nodejs %}}
@@ -3617,11 +3334,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3631,28 +3347,25 @@ The following state arguments are supported:
             title="Required">
         <span id="keyword_csharp">
 <a href="#keyword_csharp" style="color: inherit; text-decoration: inherit;">Keyword</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
 See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of strings for additional settings to use in stateful rule inspection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3661,28 +3374,25 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="keyword_go">
 <a href="#keyword_go" style="color: inherit; text-decoration: inherit;">Keyword</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
 See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of strings for additional settings to use in stateful rule inspection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3691,28 +3401,25 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="keyword_nodejs">
 <a href="#keyword_nodejs" style="color: inherit; text-decoration: inherit;">keyword</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
 See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of strings for additional settings to use in stateful rule inspection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3721,31 +3428,25 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="keyword_python">
 <a href="#keyword_python" style="color: inherit; text-decoration: inherit;">keyword</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
 See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of strings for additional settings to use in stateful rule inspection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</h4>
 {{% choosable language nodejs %}}
@@ -3755,11 +3456,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3769,27 +3469,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="statelessrules_csharp">
 <a href="#statelessrules_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customactions_csharp">
 <a href="#customactions_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3798,27 +3495,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="statelessrules_go">
 <a href="#statelessrules_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customactions_go">
 <a href="#customactions_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3827,27 +3521,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="statelessrules_nodejs">
 <a href="#statelessrules_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customactions_nodejs">
 <a href="#customactions_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3856,30 +3547,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="stateless_rules_python">
 <a href="#stateless_rules_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_actions_python">
 <a href="#custom_actions_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action</h4>
 {{% choosable language nodejs %}}
@@ -3889,11 +3574,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3903,27 +3587,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="actiondefinition_csharp">
 <a href="#actiondefinition_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="actionname_csharp">
 <a href="#actionname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3932,27 +3613,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="actiondefinition_go">
 <a href="#actiondefinition_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="actionname_go">
 <a href="#actionname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3961,27 +3639,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="actiondefinition_nodejs">
 <a href="#actiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="actionname_nodejs">
 <a href="#actionname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3990,30 +3665,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="action_definition_python">
 <a href="#action_definition_python" style="color: inherit; text-decoration: inherit;">action_<wbr>definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="action_name_python">
 <a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</h4>
 {{% choosable language nodejs %}}
@@ -4023,11 +3692,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4037,16 +3705,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="publishmetricaction_csharp">
 <a href="#publishmetricaction_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Metric<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4055,16 +3721,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="publishmetricaction_go">
 <a href="#publishmetricaction_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Metric<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4073,16 +3737,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="publishmetricaction_nodejs">
 <a href="#publishmetricaction_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Metric<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4091,19 +3753,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="publish_metric_action_python">
 <a href="#publish_metric_action_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>metric_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</h4>
 {{% choosable language nodejs %}}
@@ -4113,11 +3770,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4127,16 +3783,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4145,16 +3799,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4163,16 +3815,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4181,19 +3831,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
@@ -4203,11 +3848,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4217,16 +3861,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value to use in the custom metric dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4235,16 +3877,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value to use in the custom metric dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4253,16 +3893,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value to use in the custom metric dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4271,19 +3909,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value to use in the custom metric dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -4293,11 +3926,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4307,27 +3939,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. AWS Network Firewall evaluates the rules in a rule group starting with the lowest priority setting.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruledefinition_csharp">
 <a href="#ruledefinition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4336,27 +3965,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. AWS Network Firewall evaluates the rules in a rule group starting with the lowest priority setting.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruledefinition_go">
 <a href="#ruledefinition_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4365,27 +3991,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. AWS Network Firewall evaluates the rules in a rule group starting with the lowest priority setting.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruledefinition_nodejs">
 <a href="#ruledefinition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4394,30 +4017,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. AWS Network Firewall evaluates the rules in a rule group starting with the lowest priority setting.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rule_definition_python">
 <a href="#rule_definition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</h4>
 {{% choosable language nodejs %}}
@@ -4427,11 +4044,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4441,27 +4057,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet that matches one of the stateless rule definition's `match_attributes`. For every rule you must specify 1 standard action, and you can add custom actions. Standard actions include: `aws:pass`, `aws:drop`, `aws:forward_to_sfe`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="matchattributes_csharp">
 <a href="#matchattributes_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4470,27 +4083,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet that matches one of the stateless rule definition's `match_attributes`. For every rule you must specify 1 standard action, and you can add custom actions. Standard actions include: `aws:pass`, `aws:drop`, `aws:forward_to_sfe`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="matchattributes_go">
 <a href="#matchattributes_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4499,27 +4109,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet that matches one of the stateless rule definition's `match_attributes`. For every rule you must specify 1 standard action, and you can add custom actions. Standard actions include: `aws:pass`, `aws:drop`, `aws:forward_to_sfe`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="matchattributes_nodejs">
 <a href="#matchattributes_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4528,30 +4135,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet that matches one of the stateless rule definition's `match_attributes`. For every rule you must specify 1 standard action, and you can add custom actions. Standard actions include: `aws:pass`, `aws:drop`, `aws:forward_to_sfe`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="match_attributes_python">
 <a href="#match_attributes_python" style="color: inherit; text-decoration: inherit;">match_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</h4>
 {{% choosable language nodejs %}}
@@ -4561,11 +4162,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4575,71 +4175,64 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Optional">
         <span id="destinationports_csharp">
 <a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinations_csharp">
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceports_csharp">
 <a href="#sourceports_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sources_csharp">
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcpflags_csharp">
 <a href="#tcpflags_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4648,71 +4241,64 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Optional">
         <span id="destinationports_go">
 <a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinations_go">
 <a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
     <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceports_go">
 <a href="#sourceports_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sources_go">
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcpflags_go">
 <a href="#tcpflags_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">[]Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4721,71 +4307,64 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Optional">
         <span id="destinationports_nodejs">
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinations_nodejs">
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
     <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceports_nodejs">
 <a href="#sourceports_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sources_nodejs">
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcpflags_nodejs">
 <a href="#tcpflags_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4794,74 +4373,64 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Optional">
         <span id="destination_ports_python">
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinations_python">
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_ports_python">
 <a href="#source_ports_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sources_python">
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcp_flags_python">
 <a href="#tcp_flags_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination</h4>
 {{% choosable language nodejs %}}
@@ -4871,11 +4440,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestination.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4885,16 +4453,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="addressdefinition_csharp">
 <a href="#addressdefinition_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4903,16 +4469,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="addressdefinition_go">
 <a href="#addressdefinition_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4921,16 +4485,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="addressdefinition_nodejs">
 <a href="#addressdefinition_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4939,19 +4501,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="address_definition_python">
 <a href="#address_definition_python" style="color: inherit; text-decoration: inherit;">address_<wbr>definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port</h4>
 {{% choosable language nodejs %}}
@@ -4961,11 +4518,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4975,27 +4531,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5004,27 +4557,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5033,27 +4583,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5062,30 +4609,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source</h4>
 {{% choosable language nodejs %}}
@@ -5095,11 +4636,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5109,16 +4649,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="addressdefinition_csharp">
 <a href="#addressdefinition_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5127,16 +4665,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="addressdefinition_go">
 <a href="#addressdefinition_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5145,16 +4681,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="addressdefinition_nodejs">
 <a href="#addressdefinition_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5163,19 +4697,14 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="address_definition_python">
 <a href="#address_definition_python" style="color: inherit; text-decoration: inherit;">address_<wbr>definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port</h4>
 {{% choosable language nodejs %}}
@@ -5185,11 +4714,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5199,27 +4727,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5228,27 +4753,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5257,27 +4779,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5286,30 +4805,24 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag</h4>
 {{% choosable language nodejs %}}
@@ -5319,11 +4832,10 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5333,29 +4845,26 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
             title="Required">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="masks_csharp">
 <a href="#masks_csharp" style="color: inherit; text-decoration: inherit;">Masks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5364,29 +4873,26 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
             title="Required">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="masks_go">
 <a href="#masks_go" style="color: inherit; text-decoration: inherit;">Masks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5395,29 +4901,26 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
             title="Required">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="masks_nodejs">
 <a href="#masks_nodejs" style="color: inherit; text-decoration: inherit;">masks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5426,37 +4929,26 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
             title="Required">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="masks_python">
 <a href="#masks_python" style="color: inherit; text-decoration: inherit;">masks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

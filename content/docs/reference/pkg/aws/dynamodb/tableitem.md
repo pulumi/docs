@@ -344,7 +344,6 @@ The TableItem resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -352,50 +351,45 @@ The TableItem resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="hashkey_csharp">
 <a href="#hashkey_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="item_csharp">
 <a href="#item_csharp" style="color: inherit; text-decoration: inherit;">Item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangekey_csharp">
 <a href="#rangekey_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -404,50 +398,45 @@ Only the primary key attributes are required; you can optionally provide other a
             title="Required">
         <span id="hashkey_go">
 <a href="#hashkey_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="item_go">
 <a href="#item_go" style="color: inherit; text-decoration: inherit;">Item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangekey_go">
 <a href="#rangekey_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -456,50 +445,45 @@ Only the primary key attributes are required; you can optionally provide other a
             title="Required">
         <span id="hashkey_nodejs">
 <a href="#hashkey_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="item_nodejs">
 <a href="#item_nodejs" style="color: inherit; text-decoration: inherit;">item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangekey_nodejs">
 <a href="#rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -508,59 +492,50 @@ Only the primary key attributes are required; you can optionally provide other a
             title="Required">
         <span id="hash_key_python">
 <a href="#hash_key_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="item_python">
 <a href="#item_python" style="color: inherit; text-decoration: inherit;">item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_key_python">
 <a href="#range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the TableItem resource produces the following output properties:
-
 
 
 
@@ -571,15 +546,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -588,15 +561,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -605,15 +576,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -622,18 +591,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -758,7 +722,6 @@ Get an existing TableItem resource's state with the given name, ID, and optional
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -766,50 +729,45 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_hashkey_csharp">
 <a href="#state_hashkey_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_item_csharp">
 <a href="#state_item_csharp" style="color: inherit; text-decoration: inherit;">Item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rangekey_csharp">
 <a href="#state_rangekey_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tablename_csharp">
 <a href="#state_tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -818,50 +776,45 @@ Only the primary key attributes are required; you can optionally provide other a
             title="Optional">
         <span id="state_hashkey_go">
 <a href="#state_hashkey_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_item_go">
 <a href="#state_item_go" style="color: inherit; text-decoration: inherit;">Item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rangekey_go">
 <a href="#state_rangekey_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tablename_go">
 <a href="#state_tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -870,50 +823,45 @@ Only the primary key attributes are required; you can optionally provide other a
             title="Optional">
         <span id="state_hashkey_nodejs">
 <a href="#state_hashkey_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_item_nodejs">
 <a href="#state_item_nodejs" style="color: inherit; text-decoration: inherit;">item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rangekey_nodejs">
 <a href="#state_rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tablename_nodejs">
 <a href="#state_tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -922,55 +870,45 @@ Only the primary key attributes are required; you can optionally provide other a
             title="Optional">
         <span id="state_hash_key_python">
 <a href="#state_hash_key_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_item_python">
 <a href="#state_item_python" style="color: inherit; text-decoration: inherit;">item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_range_key_python">
 <a href="#state_range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_table_name_python">
 <a href="#state_table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 
