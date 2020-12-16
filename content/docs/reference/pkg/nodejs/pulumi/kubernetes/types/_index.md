@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/kubernetes package."
-git_sha: "657aed0b110280d348eff68abb66faea6c1388a0"
+git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
 block_external_search_index: true
 ---
 
@@ -15,6 +15,7 @@ block_external_search_index: true
 
 <h3>Modules</h3>
 <ul class="api">
+    <li><a href="enums/core/v1/"><span class="symbol module"></span>types/enums/core/v1</a></li>
     <li><a href="input/"><span class="symbol module"></span>types/input</a></li>
     <li><a href="output/"><span class="symbol module"></span>types/output</a></li>
 </ul>
